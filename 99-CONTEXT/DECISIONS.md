@@ -51,6 +51,9 @@ Le plan d'affaires sera rédigé dans un ton professionnel, humain et accessible
 
 Jamais de jargon technique inutile.
 
+
+---
+
 ## Décision 008 — Titre professionnel
 
 **Décision**
@@ -66,3 +69,16 @@ Ce titre représente fidèlement le rôle exercé chez MAD DevOps.
 Il reflète une approche centrée sur la compréhension des besoins, la conception de solutions adaptées et l'accompagnement des clients, sans limiter les services offerts à une technologie ou à un type de projet particulier.
 
 Il demeure suffisamment large pour accompagner l'évolution du studio au fil des années.
+
+---
+
+Décision 009 — Vocabulaire de communication
+
+Dans les communications de MAD DevOps, nous privilégions un vocabulaire humain, simple et orienté vers l’accompagnement.
+
+Lorsque le contexte le permet, nous utiliserons des expressions telles que « les entreprises que nous accompagnons » plutôt que des termes plus transactionnels.
+
+Cette approche reflète notre volonté de bâtir des relations durables fondées sur l’écoute, la confiance et la collaboration.
+
+---
+
