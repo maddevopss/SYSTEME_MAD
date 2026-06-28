@@ -1,9 +1,11 @@
+--
 Projet : MAD DevOps
 Document : Mission, Vision et Valeurs
 Version : 1.0
 Dernière révision : 2026-06-28
-Statut : Brouillon
+Statut : Revisé
 Auteur : Marc-André Dufour
+--
 
 Objectif du document
 Définir la mission, la vision et les valeurs qui guideront les décisions de MAD DevOps et assureront la cohérence de son développement à long terme.
