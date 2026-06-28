@@ -1,11 +1,8 @@
 
-
-
-
 ⸻
 
 Projet : MAD DevOps
-Document : Playbook
+Document : Handbook
 Chapitre : 00 - Pourquoi ce guide existe
 Version : 1.0
 Dernière révision : 2026-06-28
@@ -14,7 +11,24 @@ Auteur : Marc-André Dufour
 
 Pourquoi ce guide existe
 
-Bienvenue dans le Playbook officiel de MAD DevOps.
+Bienvenue dans le Handbook officiel de MAD DevOps.
+
+
+
+Pourquoi ? Parce qu’un Handbook, c’est :
+
+* la culture;
+* les standards;
+* les décisions;
+* les processus;
+* la marque;
+* les contrats;
+* les guides;
+* la documentation officielle.
+
+GitLab, Stripe, Shopify.
+
+Beaucoup de grandes entreprises utilisent ce terme.
 
 Ce document ne décrit pas uniquement notre façon de développer des solutions numériques.
 
