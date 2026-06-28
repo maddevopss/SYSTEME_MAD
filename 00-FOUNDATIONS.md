@@ -249,6 +249,22 @@ Nous espérons bâtir une entreprise qui inspirera confiance, autant auprès de 
 
 ---
 
+# Ce que nous refusons de devenir
+
+Nous refusons de vendre des solutions inutiles.
+
+Nous refusons de promettre des résultats irréalistes.
+
+Nous refusons de proposer des projets plus complexes ou plus coûteux que nécessaire.
+
+Nous refusons de privilégier la technologie au détriment du besoin réel.
+
+Notre réputation sera toujours plus importante qu'une vente.
+
+---
+
+
+
 > **Des logiciels qui travaillent pour vous.**
 
 > **“Si un jour la croissance nous oblige à renoncer à ces principes, alors nous aurons perdu ce qui faisait la valeur de MAD DevOps.”** <
