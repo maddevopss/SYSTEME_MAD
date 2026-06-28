@@ -30,7 +30,7 @@ Notre ambition n’est pas de devenir la plus grande entreprise de développemen
 
 Nous privilégions une croissance durable qui nous permet de conserver une relation humaine avec chacun de nos clients tout en maintenant un niveau élevé de qualité.
 
-À long terme, nous souhaitons que MADSuite devienne une référence dans la conception de logiciels qui réduisent la charge cognitive, simplifient les processus de travail et permettent aux entrepreneurs de se concentrer sur ce qui compte réellement.
+À long terme, nous souhaitons que MADSuite devienne une référence dans la conception de logiciels qui réduisent la charge mentale, simplifient les processus de travail et permettent aux entrepreneurs de se concentrer sur ce qui compte réellement.
 
 Notre succès sera mesuré par la satisfaction de nos clients, la qualité de nos réalisations et la confiance que nous aurons su bâtir au fil des années.
 
