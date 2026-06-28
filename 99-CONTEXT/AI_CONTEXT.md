@@ -171,3 +171,12 @@ Le respect du temps des utilisateurs.
 Nous ne vendons pas des logiciels.
 
 Nous améliorons le quotidien des personnes qui les utilisent.
+
+
+---
+
+Les règles non officielles de MAD DevOps 😄
+
+Règle #0
+
+Si ça nous énerve comme utilisateurs… on ne le fera pas à nos clients.
