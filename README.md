@@ -1,4 +1,4 @@
-# brainstorm_MAD
+# MAD DevOps
 
 Ce dossier contient le plan d'affaires officiel de MAD DevOps.
 
