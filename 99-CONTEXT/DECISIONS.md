@@ -50,3 +50,19 @@ Décision :
 Le plan d'affaires sera rédigé dans un ton professionnel, humain et accessible.
 
 Jamais de jargon technique inutile.
+
+## Décision 008 — Titre professionnel
+
+**Décision**
+
+Le titre professionnel officiel utilisé dans les documents, les propositions, le site Web et les communications est :
+
+> **Concepteur de solutions numériques**
+
+**Pourquoi**
+
+Ce titre représente fidèlement le rôle exercé chez MAD DevOps.
+
+Il reflète une approche centrée sur la compréhension des besoins, la conception de solutions adaptées et l'accompagnement des clients, sans limiter les services offerts à une technologie ou à un type de projet particulier.
+
+Il demeure suffisamment large pour accompagner l'évolution du studio au fil des années.
