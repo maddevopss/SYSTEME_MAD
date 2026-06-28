@@ -6,165 +6,185 @@
 
 Projet : MAD DevOps
 Document : Playbook
-Chapitre : PLAY-001 - Premier contact
-Version : 1.0
+Chapitre : PLAY-001 – Premier contact
+Version : 2.0
 Dernière révision : 2026-06-28
 Statut : Officiel
 Auteur : Marc-André Dufour
 
 PLAY-001 — Premier contact
 
+Règle d’or
+
+Nous cherchons à comprendre avant de proposer.
+
+⸻
+
 Objectif
 
-Comprendre.
+Le premier contact a pour seul objectif de comprendre la réalité de l’entreprise.
 
-Jamais vendre.
+Il ne s’agit pas de vendre un projet, de convaincre un client ou de présenter nos compétences.
+
+Notre priorité est d’écouter, de comprendre et de déterminer si MAD DevOps est réellement en mesure d’apporter une valeur à l’entreprise.
 
 ⸻
 
 Pourquoi ce PLAY existe
 
-Le premier contact est souvent le moment où une entreprise décide si elle souhaite poursuivre la discussion avec nous.
+La qualité d’une solution dépend directement de la qualité de la compréhension du besoin.
 
-Notre objectif n’est pas de convaincre.
+Une entreprise qui se sent réellement écoutée développera plus facilement une relation de confiance.
 
-Notre objectif est de comprendre.
-
-Nous croyons qu’une bonne relation d’affaires commence par une écoute sincère et un échange respectueux.
+Cette confiance constitue la base de toutes les collaborations chez MAD DevOps.
 
 ⸻
 
-Résultat attendu
+Principes
 
-À la fin du premier contact :
+Durant le premier contact, nous privilégions toujours :
 
-* l’entreprise se sent écoutée;
-* MAD DevOps comprend suffisamment la situation pour déterminer les prochaines étapes;
-* aucune solution n’est proposée tant que le besoin réel n’est pas compris.
+* l’écoute avant les conseils;
+* les questions avant les réponses;
+* la compréhension avant les solutions;
+* la simplicité avant le jargon;
+* l’honnêteté avant la vente.
 
 ⸻
 
 Préparation
 
-Avant la rencontre :
+Avant toute rencontre :
 
 * prendre connaissance des informations déjà reçues;
-* consulter le site Web de l’entreprise, s’il y a lieu;
-* préparer un environnement calme et sans distraction;
-* prévoir suffisamment de temps pour ne pas précipiter l’échange.
+* consulter le site Web ou les réseaux sociaux de l’entreprise lorsque cela est pertinent;
+* prévoir suffisamment de temps afin de ne jamais précipiter la discussion;
+* éliminer les distractions pouvant nuire à la qualité de l’échange.
 
 ⸻
 
 Déroulement
 
-1. Créer un climat de confiance
+1. Accueillir
 
-Accueillir le client avec simplicité et professionnalisme.
+Créer un climat simple, professionnel et respectueux.
 
-Privilégier une discussion naturelle.
+La discussion doit demeurer naturelle.
 
-Éviter de parler immédiatement de technologie.
+Nous souhaitons que le client se sente à l’aise de raconter sa réalité.
 
 ⸻
 
-2. Comprendre la réalité
+2. Découvrir
 
-Laisser le client raconter son quotidien.
+Inviter le client à présenter :
 
-Chercher à comprendre :
-
-* son activité;
+* son entreprise;
+* son quotidien;
 * ses défis;
-* ses irritants;
-* ses objectifs;
-* les solutions déjà essayées.
+* les irritants rencontrés;
+* les objectifs qu’il souhaite atteindre.
 
-Poser des questions ouvertes.
-
-Écouter davantage que parler.
+Cette étape est principalement consacrée à l’écoute.
 
 ⸻
 
 3. Observer
 
-Être attentif aux éléments qui ne sont pas toujours exprimés directement.
+Être attentif aux détails.
 
-Par exemple :
+Les véritables besoins sont souvent cachés derrière le problème initial.
 
-* les tâches répétitives;
-* les pertes de temps;
-* les doubles saisies;
-* les oublis;
+Observer notamment :
+
 * les outils utilisés;
-* les méthodes de travail.
-
-Les véritables besoins se trouvent souvent derrière le problème exprimé.
+* les tâches répétitives;
+* les doubles saisies;
+* les pertes de temps;
+* les habitudes de travail;
+* les processus informels.
 
 ⸻
 
-4. Reformuler
+4. Comprendre
 
-Avant de proposer une orientation, reformuler la compréhension de la situation.
+Avant de parler d’une solution, reformuler ce qui a été compris.
 
 Par exemple :
 
 « Si je comprends bien, votre principal défi est… »
 
-Cette étape permet de valider que la compréhension est exacte.
+Cette étape permet de valider notre compréhension et d’éviter les mauvaises interprétations.
 
 ⸻
 
-5. Déterminer les prochaines étapes
+5. Orienter
 
-Si une analyse plus approfondie est nécessaire, l’expliquer clairement.
+À la fin de la rencontre, expliquer clairement les prochaines étapes.
 
-Ne jamais promettre une solution immédiate.
+Selon la situation, celles-ci peuvent comprendre :
 
-Le premier contact sert à comprendre.
+* une analyse plus approfondie;
+* une visite supplémentaire;
+* une proposition;
+* une soumission;
+* ou, dans certains cas, la recommandation d’une solution existante.
 
-La proposition viendra ensuite.
+MAD DevOps ne développe pas une solution sur mesure lorsque celle-ci n’est pas la meilleure réponse.
 
 ⸻
 
 Ce que nous faisons toujours
 
-* Nous écoutons sans interrompre inutilement.
-* Nous utilisons un langage simple.
-* Nous prenons des notes.
-* Nous respectons le rythme du client.
-* Nous expliquons honnêtement ce que nous savons et ce qui devra être validé.
+✔ Écouter davantage que parler.
+
+✔ Utiliser un langage simple.
+
+✔ Prendre des notes.
+
+✔ Respecter le rythme du client.
+
+✔ Être transparent lorsque certaines réponses nécessitent une validation.
+
+✔ Expliquer les prochaines étapes.
 
 ⸻
 
 Ce que nous évitons
 
-* Présenter une solution après quelques minutes.
-* Utiliser un jargon technique.
-* Critiquer les outils déjà en place.
-* Donner l’impression que tout doit être remplacé.
-* Faire des promesses impossibles à tenir.
+✘ Vendre dès les premières minutes.
+
+✘ Présenter une technologie avant d’avoir compris le besoin.
+
+✘ Critiquer les outils déjà utilisés.
+
+✘ Utiliser un vocabulaire destiné à impressionner.
+
+✘ Faire des promesses impossibles à tenir.
+
+✘ Donner une estimation sans avoir suffisamment d’information.
 
 ⸻
 
 Critères de réussite
 
-Le PLAY est considéré comme réussi lorsque :
+Le premier contact est considéré comme réussi lorsque :
 
 * le client repart avec le sentiment d’avoir été réellement écouté;
-* MAD DevOps comprend le contexte général de l’entreprise;
-* les prochaines étapes sont claires pour les deux parties;
+* MAD DevOps comprend la réalité générale de l’entreprise;
+* les besoins sont suffisamment clarifiés pour déterminer la suite;
 * une relation de confiance commence à s’établir.
 
 ⸻
 
-Rappel
+Astuce du Chief
 
-Le premier contact n’est pas une présentation de nos compétences.
+Lorsque cela est possible, privilégier une rencontre dans l’environnement de travail de l’entreprise.
 
-C’est une occasion de découvrir celles de l’entreprise que nous avons devant nous.
-
-Avant de proposer une solution, nous devons comprendre les personnes qui l’utiliseront.
+Observer le quotidien permet souvent d’identifier des besoins que ni un formulaire, ni une visioconférence ne permettent de révéler.
 
 ⸻
 
-Nous cherchons à comprendre avant de proposer.
+Citation
+
+Les meilleures solutions commencent rarement par une réponse. Elles commencent presque toujours par une bonne question.
