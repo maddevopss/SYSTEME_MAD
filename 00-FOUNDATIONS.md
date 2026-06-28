@@ -1,276 +1,120 @@
----
+
+
+
+
+⸻
+
 Projet : MAD DevOps
 Document : Fondations
 Version : 1.0
 Dernière révision : 2026-06-28
 Statut : Officiel
 Auteur : Marc-André Dufour
----
 
+Les principes fondamentaux
 
+Les principes suivants constituent les fondations de MAD DevOps.
 
-# MAD DevOps
+Ils guident chacune de nos décisions, chacune des solutions que nous concevons et chacune des relations que nous développons avec les entreprises que nous accompagnons.
 
-> **Les fondations de notre entreprise**
+Ces principes ne suivent pas les tendances du marché. Ils définissent notre identité et demeurent la référence pour l’ensemble de nos activités.
 
----
+⸻
 
-# Pourquoi MAD DevOps existe
+Nous cherchons à inspirer confiance.
 
-MAD DevOps est né d'une conviction simple.
+MAD DevOps ne cherche pas à impressionner.
 
-Les meilleurs professionnels ne sont pas ralentis par leur métier.
+Elle cherche à inspirer confiance.
 
-Ils sont ralentis par leurs outils.
+Chaque décision, chaque solution et chaque relation d’affaires doit refléter cette intention.
 
-Chaque journée perdue à rechercher une information, à recopier des données, à remplir des formulaires ou à tenter de se souvenir d'une tâche est une journée où l'on ne crée pas de valeur.
+⸻
 
-Nous croyons que la technologie devrait retirer ce poids des épaules des personnes qui l'utilisent.
+Nous comprenons avant de proposer.
 
-C'est pourquoi nous développons des logiciels qui simplifient réellement le quotidien.
+Nous prenons le temps de comprendre la réalité des entreprises que nous accompagnons avant de concevoir une solution.
 
----
+Nous croyons qu’une bonne compréhension du problème constitue toujours la première étape vers une solution durable.
 
-# Notre mission
+⸻
 
-Nous simplifions le quotidien grâce à des logiciels bien pensés.
+Nous concevons avant de développer.
 
-Notre travail ne consiste pas uniquement à développer des applications.
+Le développement n’est pas une finalité.
 
-Notre travail consiste à comprendre les problèmes réels des personnes afin de créer des solutions simples, durables et agréables à utiliser.
+Il représente l’étape où une solution prend vie.
 
----
+Notre véritable travail consiste à analyser, réfléchir et concevoir la solution la plus adaptée avant d’écrire la première ligne de code.
 
-# Notre vision
+⸻
 
-Nous voulons bâtir un studio logiciel reconnu pour la qualité de ses solutions, la confiance qu'il inspire et la relation qu'il entretient avec ses clients.
+Nous privilégions la simplicité.
 
-Nous ne cherchons pas à devenir la plus grande entreprise.
+Nous recherchons toujours la solution la plus simple capable de répondre efficacement au besoin.
 
-Nous voulons devenir une entreprise dont les clients parlent avec confiance.
+La technologie n’est jamais une fin en soi.
 
-Une entreprise qui privilégie la qualité à la quantité.
+Elle demeure un moyen au service des personnes qui utiliseront la solution.
 
-Une entreprise dont les solutions continueront d'apporter de la valeur plusieurs années après leur livraison.
+⸻
 
----
+Nous accompagnons le changement.
 
-# Notre slogan
+Nous ne cherchons pas à imposer le changement.
 
-> **Des logiciels qui travaillent pour vous.**
+Nous accompagnons les entreprises afin qu’elles puissent évoluer à leur rythme, avec confiance et sans bouleverser inutilement leurs méthodes de travail.
 
-Ce slogan représente notre promesse.
+⸻
 
-Chaque logiciel que nous développons doit retirer une partie de la charge de travail de son utilisateur.
+Nous privilégions la crédibilité avant le marketing.
 
----
+Nous préférons des affirmations précises, honnêtes et vérifiables plutôt que des promesses exagérées.
 
-# Notre conviction
+Notre réputation sera toujours plus importante qu’un slogan.
 
-Nous ne développons pas des logiciels pour suivre les tendances.
+⸻
 
-Nous développons des solutions qui règlent des problèmes concrets.
+Nous concevons des solutions humaines.
 
-Les technologies évoluent.
+Nous créons des solutions numériques qui respectent le temps, la réalité et les besoins des personnes qui les utilisent.
 
-Les besoins humains demeurent.
+La technologie doit s’adapter à l’humain, jamais l’inverse.
 
-Nous choisissons toujours les technologies en fonction des problèmes à résoudre, jamais l'inverse.
+⸻
 
----
+Nous proposons la solution appropriée.
 
-# Notre philosophie
+Une solution sur mesure n’est pas toujours la meilleure réponse.
 
-Nous croyons que les logiciels doivent s'adapter aux humains.
+Lorsque des outils existants répondent efficacement aux besoins d’une entreprise, nous le reconnaissons ouvertement.
 
-Les humains ne devraient jamais avoir à changer leur façon de travailler uniquement pour satisfaire un logiciel.
+Nous privilégions toujours la solution qui apporte le plus de valeur, qu’elle soit développée par MAD DevOps ou non.
 
-Chaque solution que nous concevons doit respecter la réalité des personnes qui l'utiliseront.
+⸻
 
-Nous privilégions une approche centrée sur la simplicité, la clarté et la réduction de la charge mentale.
+Nous bâtissons des relations durables.
 
----
+Nous ne recherchons pas une simple relation commerciale.
 
-# Notre façon de travailler
+Nous souhaitons accompagner les entreprises sur le long terme, en développant des relations fondées sur l’écoute, le respect, la transparence et la confiance.
 
-Avant d'écrire une seule ligne de code, nous cherchons à comprendre la personne.
+⸻
 
-Nous voulons connaître :
+Nous respectons nos valeurs.
 
-- son métier;
-- ses défis;
-- ses irritants;
-- sa réalité quotidienne;
-- ses objectifs.
+MAD DevOps se réserve le droit de refuser tout projet incompatible avec ses valeurs, avec les lois en vigueur ou avec les principes éthiques qui guident ses activités.
 
-Nous croyons que la meilleure technologie est celle qui devient presque invisible, parce qu'elle aide naturellement son utilisateur à accomplir son travail.
+Notre réputation sera toujours plus importante qu’un contrat.
 
----
+⸻
 
-# Notre définition de la réussite
+Préserver nos fondations
 
-Nous ne considérons pas un projet comme réussi lorsque le logiciel est livré.
+Ce document constitue la référence principale de MAD DevOps.
 
-Nous le considérons réussi lorsque notre client nous dit :
+Toute modification apportée à ces principes doit être mûrement réfléchie.
 
-> « Ma journée est plus simple qu'avant. »
+Ils ne doivent jamais évoluer sous l’effet des tendances, de la pression du marché ou d’une opportunité à court terme.
 
----
-
-# Nos règles d'or
-
-## Règle 1
-
-Nous développons des solutions.
-
-Pas des technologies.
-
----
-
-## Règle 2
-
-Nous parlons toujours le langage de nos clients.
-
-Jamais celui des développeurs.
-
----
-
-## Règle 3
-
-Chaque fonctionnalité doit éliminer un irritant réel.
-
-Si elle ajoute de la complexité, elle doit être remise en question.
-
----
-
-## Règle 4
-
-La simplicité est une fonctionnalité.
-
-Elle fait partie intégrante de la qualité.
-
----
-
-## Règle 5
-
-L'intelligence artificielle est un outil.
-
-Jamais une finalité.
-
-Si elle ne simplifie pas la vie de l'utilisateur, elle n'a pas sa place.
-
----
-
-## Règle 6
-
-Chaque clic doit avoir une raison d'exister.
-
----
-
-## Règle 7
-
-**Si ma mère ne comprend pas, on recommence.**
-
-Si une personne qui n'est pas du domaine ne comprend pas notre logiciel, notre documentation ou nos explications, ce n'est pas sa faute.
-
-C'est à nous de mieux concevoir.
-
----
-
-## Règle 8
-
-Le meilleur service à la clientèle est celui dont le client n'a jamais besoin.
-
-Notre objectif est de créer des solutions suffisamment intuitives pour permettre aux utilisateurs d'être autonomes.
-
----
-
-## Règle 9
-
-Quand un utilisateur ne comprend pas, nous remettons d'abord notre logiciel en question.
-
-Nous cherchons toujours à améliorer l'expérience avant de conclure que le problème vient de l'utilisateur.
-
----
-
-## Règle 10
-
-Nous respectons le temps des gens.
-
-Chaque minute économisée grâce à un logiciel est une minute qui peut être consacrée à ce qui compte vraiment.
-
----
-
-# Notre filtre de décision
-
-Avant d'ajouter une fonctionnalité, de choisir une technologie ou de prendre une décision importante, nous répondons à cinq questions.
-
-1. Est-ce que cela élimine un irritant réel ?
-
-2. Est-ce que cela simplifie réellement la vie de notre client ?
-
-3. Est-ce qu'une personne qui n'est pas en informatique comprendra facilement ?
-
-4. Est-ce que cette décision respecte notre mission ?
-
-5. Serons-nous encore fiers de cette décision dans cinq ans ?
-
-Si une réponse est négative, nous prenons le temps de revoir notre approche.
-
----
-
-# La méthode MAD
-
-Chaque projet débute par une question.
-
-**Quel problème essayons-nous réellement de résoudre ?**
-
-Jamais :
-
-> Quelle technologie allons-nous utiliser ?
-
-Nous croyons que les meilleures solutions naissent d'une compréhension profonde des personnes avant toute considération technique.
-
----
-
-# Notre héritage
-
-MAD DevOps n'est pas seulement un studio logiciel.
-
-C'est un engagement envers une façon différente de concevoir les logiciels.
-
-Une façon plus humaine.
-
-Plus simple.
-
-Plus durable.
-
-Nous espérons bâtir une entreprise qui inspirera confiance, autant auprès de ses clients que des générations qui poursuivront son histoire.
-
----
-
-# Ce que nous refusons de devenir
-
-Nous refusons de vendre des solutions inutiles.
-
-Nous refusons de promettre des résultats irréalistes.
-
-Nous refusons de proposer des projets plus complexes ou plus coûteux que nécessaire.
-
-Nous refusons de privilégier la technologie au détriment du besoin réel.
-
-Notre réputation sera toujours plus importante qu'une vente.
-
----
-
-
-
-> **Des logiciels qui travaillent pour vous.**
-
-> **“Si un jour la croissance nous oblige à renoncer à ces principes, alors nous aurons perdu ce qui faisait la valeur de MAD DevOps.”** <
-
-
-
-
-
-
+Ils peuvent évoluer uniquement lorsque notre compréhension de notre mission, de nos valeurs ou des entreprises que nous accompagnons évolue réellement.
