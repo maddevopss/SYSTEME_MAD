@@ -82,3 +82,12 @@ Cette approche reflète notre volonté de bâtir des relations durables fondées
 
 ---
 
+Décision 010 — La crédibilité avant le marketing
+
+Dans toute la documentation et les communications de MAD DevOps, nous privilégions des affirmations précises, vérifiables et honnêtes.
+
+Nous évitons les superlatifs et les promesses exagérées. Nous préférons inspirer confiance par la qualité de nos explications, de notre travail et de nos résultats plutôt que par des slogans ou des affirmations difficilement démontrables.
+
+---
+
+
