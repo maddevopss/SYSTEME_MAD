@@ -144,3 +144,13 @@ Chaque projet mérite d’être réalisé avec rigueur.
 Chaque relation mérite d’être bâtie sur la confiance.
 
 C’est cette vision qui guide MAD DevOps depuis sa création et qui continuera d’orienter son développement dans les années à venir.
+
+⸻
+
+## Nous traitons nos clients comme nous aimerions être traités.
+
+Chaque décision que nous prenons doit respecter ce principe.
+
+Nous privilégions l'écoute, la transparence, le respect et l'honnêteté.
+
+Nous croyons que la meilleure expérience client consiste à offrir celle que nous aimerions vivre nous-mêmes.
