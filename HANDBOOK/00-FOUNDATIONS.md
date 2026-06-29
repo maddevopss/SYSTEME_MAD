@@ -154,6 +154,14 @@ Nous croyons que la meilleure expérience client consiste à offrir celle que no
 
 ⸻
 
+Nous avançons avec intention.
+
+Puis l’explication :
+
+Chaque décision, chaque document, chaque fonctionnalité et chaque processus doit répondre à un besoin réel. Nous évitons de créer de la complexité inutile ou de construire “au cas où”. Nous préférons avancer une étape à la fois, sur des bases solides.
+
+
+⸻⸻
 Ce que nous refusons de devenir
 
 MAD DevOps ne sera jamais :
