@@ -1,7 +1,3 @@
-
-
-
-
 ⸻
 
 Projet : MAD DevOps
@@ -98,16 +94,17 @@ Nous souhaitons accompagner les entreprises dans leur évolution et demeurer un 
 
 ⸻
 
-Ce que nous refusons de devenir
+Bâtir sur des fondations solides
 
-MAD DevOps ne sera jamais :
+Chez MAD DevOps, nous croyons que toute solution durable repose sur des fondations solides.
 
-* un vendeur de promesses irréalistes;
-* une entreprise qui privilégie la technologie au détriment du besoin;
-* un studio qui développe une solution uniquement parce qu’elle est rentable;
-* une organisation qui sacrifie sa réputation pour conclure un contrat.
+Avant de construire, nous cherchons à comprendre.
+Avant de développer, nous concevons.
+Avant de livrer, nous validons.
 
-Notre réputation aura toujours plus de valeur qu’une vente.
+Cette philosophie guide chacune de nos décisions, qu’elles soient humaines, techniques ou organisationnelles.
+
+Nous investissons le temps nécessaire pour bien préparer un projet, car une fondation solide permet à une entreprise, à une solution et à une relation de grandir avec confiance.
 
 ⸻
 
@@ -154,3 +151,19 @@ Chaque décision que nous prenons doit respecter ce principe.
 Nous privilégions l'écoute, la transparence, le respect et l'honnêteté.
 
 Nous croyons que la meilleure expérience client consiste à offrir celle que nous aimerions vivre nous-mêmes.
+
+⸻
+
+Ce que nous refusons de devenir
+
+MAD DevOps ne sera jamais :
+
+* un vendeur de promesses irréalistes;
+* une entreprise qui privilégie la technologie au détriment du besoin;
+* un studio qui développe une solution uniquement parce qu’elle est rentable;
+* une organisation qui sacrifie sa réputation pour conclure un contrat.
+
+Notre réputation aura toujours plus de valeur qu’une vente.
+
+⸻
+
