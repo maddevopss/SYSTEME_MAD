@@ -8,6 +8,11 @@ Dernière révision : 2026-06-28
 Statut : Officiel
 Auteur : Marc-André Dufour
 
+> ⚠️ **Les Fondations constituent le cœur de MAD DevOps.**
+>
+> Elles évoluent rarement.
+> Toute modification devrait être mûrement réfléchie, car elles influencent l'ensemble du Handbook et de l'organisation.
+
 Les fondations
 
 Nous ne développons pas des logiciels. Nous résolvons des problèmes.
