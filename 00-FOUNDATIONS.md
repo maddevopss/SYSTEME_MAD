@@ -118,3 +118,10 @@ Toute modification apportée à ces principes doit être mûrement réfléchie.
 Ils ne doivent jamais évoluer sous l’effet des tendances, de la pression du marché ou d’une opportunité à court terme.
 
 Ils peuvent évoluer uniquement lorsque notre compréhension de notre mission, de nos valeurs ou des entreprises que nous accompagnons évolue réellement.
+
+
+⸻
+
+Principe d’autonomie
+
+Le Système MAD existe pour réduire notre dépendance à la recherche répétitive, standardiser nos décisions et capitaliser sur notre expérience. Nous continuons d’apprendre des autres, mais nous bâtissons progressivement notre propre référence.
