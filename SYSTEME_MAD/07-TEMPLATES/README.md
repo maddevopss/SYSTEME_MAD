@@ -1,31 +1,57 @@
 ---
+
 Projet: MAD DevOps
-Document: Index — 08-templates
-Version: 1.0
+Document: Index — Templates
+Version: 1.1
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
 
-# Index — 08-templates
+Index — Templates
 
-## Rôle du dossier
+Rôle du dossier
 
-Modèles réutilisables de documents et gabarits.
+Ce dossier contient les modèles réutilisables du Système MAD.
 
-## Documents
+Un template sert à accélérer la création d’un document, d’un cadrage ou d’un projet sans repartir de zéro.
 
-| Fichier | Statut | Rôle |
-|---|---|---|
-| tpl-001.md | Template | Modèle réutilisable |
-| tpl-002.md | Template | Modèle réutilisable |
-| tpl-003.md | Template | Modèle réutilisable |
-| tpl-004.md | Template | Modèle réutilisable |
+⸻
 
-## Notes
+Documents
 
-- Document canonique: voir les fichiers en statut Officiel.
-- Brouillon actif: voir les fichiers en statut Brouillon.
-- Archive: voir les fichiers en statut Archive.
-- Template: voir les fichiers en statut Template.
-- À valider: voir les fichiers en statut À valider.
+Fichier	Statut	Rôle
+starter-kit-projet-mad-devops.md	Template	Kit de démarrage pour projet MAD DevOps.
+tpl-001.md	Template	Modèle réutilisable existant.
+tpl-002.md	Template	Modèle réutilisable existant.
+tpl-003.md	Template	Modèle réutilisable existant.
+tpl-004.md	Template	Modèle réutilisable existant.
+
+⸻
+
+Template prioritaire
+
+Le template prioritaire est :
+
+SYSTEME_MAD/07-TEMPLATES/starter-kit-projet-mad-devops.md
+
+Il sert à démarrer un nouveau projet MAD DevOps avec une base claire.
+
+⸻
+
+Règles d’usage
+
+* Copier le template dans le projet cible avant adaptation.
+* Adapter le contenu au besoin réel.
+* Remplacer les placeholders avant une livraison.
+* Relier les templates aux standards et playbooks pertinents.
+* Garder les templates simples et maintenables.
+
+⸻
+
+Liens utiles
+
+* SYSTEME_MAD/MANIFEST.md
+* SYSTEME_MAD/03-STANDARDS/README.md
+* SYSTEME_MAD/05-PLAY/play-011-demarrage-projet-client.md
+* SYSTEME_MAD/09-CHECKLISTS/chk-003-livraison-client.md
