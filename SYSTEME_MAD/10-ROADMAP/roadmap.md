@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Roadmap MAD DevOps
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -9,9 +9,9 @@ Auteur: Marc-André Dufour
 
 # Roadmap MAD DevOps
 
-> **Notre objectif n'est pas d'aller vite.**
+> Notre objectif n'est pas d'aller vite.
 >
-> **Notre objectif est de construire des fondations solides, une brique à la fois.**
+> Notre objectif est de construire des fondations solides, une brique à la fois.
 
 ---
 
@@ -25,7 +25,7 @@ Les idées qui ne répondent pas à un besoin immédiat sont conservées dans l'
 
 ---
 
-# 🧱 Bloc 01 — Handbook
+# Bloc 01 — Handbook
 
 ## Fondations
 
@@ -35,11 +35,11 @@ Les idées qui ne répondent pas à un besoin immédiat sont conservées dans l'
 - [x] PLAY
 - [x] Manifeste
 
-Statut : ✅ Complété
+Statut : Complété
 
 ---
 
-# 🧱 Bloc 02 — Standards
+# Bloc 02 — Standards
 
 ## Développement
 
@@ -48,8 +48,9 @@ Statut : ✅ Complété
 - [x] STD-003
 - [x] STD-004
 - [x] STD-005
+- [x] STD-006
 
-Statut : ✅ Complété
+Statut : Complété
 
 ---
 
@@ -61,7 +62,7 @@ Statut : ✅ Complété
 - [x] STD-104
 - [x] STD-105
 
-Statut : ✅ Complété
+Statut : Complété
 
 ---
 
@@ -73,19 +74,19 @@ Statut : ✅ Complété
 - [ ] STD-204
 - [ ] STD-205
 
-Statut : 🚧 À faire
+Statut : À faire
 
 ---
 
 ## Qualité
 
-- [ ] STD-301
-- [ ] STD-302
-- [ ] STD-303
-- [ ] STD-304
-- [ ] STD-305
+- [x] STD-301
+- [x] STD-302
+- [x] STD-303
+- [x] STD-304
+- [x] STD-305
 
-Statut : 🚧 À faire
+Statut : Complété
 
 ---
 
@@ -97,7 +98,7 @@ Statut : 🚧 À faire
 - [ ] STD-404
 - [ ] STD-405
 
-Statut : 🚧 À faire
+Statut : À faire
 
 ---
 
@@ -109,7 +110,7 @@ Statut : 🚧 À faire
 - [ ] STD-504
 - [ ] STD-505
 
-Statut : 🚧 À faire
+Statut : À faire
 
 ---
 
@@ -121,19 +122,19 @@ Statut : 🚧 À faire
 - [ ] STD-604
 - [ ] STD-605
 
-Statut : 🚧 À faire
+Statut : À faire
 
 ---
 
-# 🧱 Bloc 03 — ADR
+# Bloc 03 — ADR
 
 Créer les ADR uniquement lorsqu'une décision importante est prise.
 
-Statut : ⏳ Au besoin
+Statut : Au besoin
 
 ---
 
-# 🧱 Bloc 04 — Knowledge Base
+# Bloc 04 — Knowledge Base
 
 Créer une fiche uniquement lorsqu'une information est recherchée plus d'une fois.
 
@@ -148,50 +149,12 @@ Exemples :
 - React
 - Electron
 
-Statut : 🚧 En évolution
+Statut : En évolution
 
 ---
 
-# 🧱 Bloc 05 — Checklists
+# Bloc 05 — Checklists
 
 Créer les checklists lorsqu'un processus devient répétitif.
 
-Statut : ⏳ Au besoin
-
----
-
-# 🧱 Bloc 06 — Templates
-
-Créer les modèles lorsque plusieurs projets utilisent la même structure.
-
-Statut : ⏳ Au besoin
-
----
-
-# 💡 Innovation Backlog
-
-Les idées innovantes sont conservées ici.
-
-Aucune idée n'est perdue.
-
-Elles seront développées lorsqu'elles répondront à un besoin réel.
-
-Statut : 📌 Vivant
-
----
-
-# Notre méthode
-
-🧱 Une seule brique à la fois.
-
-Chaque brique doit :
-
-- répondre à un besoin réel;
-- être terminée avant la suivante;
-- laisser MAD DevOps dans un meilleur état.
-
----
-
-# Citation
-
-> **Les grandes réalisations ne sont pas construites en une journée. Elles sont construites une brique à la fois.**
+Statut : Au besoin
