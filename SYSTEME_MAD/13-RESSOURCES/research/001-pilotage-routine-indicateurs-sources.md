@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Note de recherche — Pilotage, routine hebdomadaire et indicateurs
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-06-30
 Statut: Recherche à valider
 Auteur: Marc-André Dufour
@@ -312,7 +312,71 @@ Système MAD — templates, checklists, offres, décisions
 
 ---
 
-# 10. Matrice de validation
+# 10. Garde-fous d’usage des métriques
+
+## Principe
+
+Les métriques doivent servir à apprendre, orienter et améliorer le système.
+
+Elles ne doivent pas devenir un mécanisme de contrôle, de punition, de comparaison abusive ou de compétition interne.
+
+## Pièges à éviter
+
+| Piège | Risque | Règle MAD DevOps |
+|---|---|---|
+| Transformer les métriques en objectifs rigides | Goodhart : la mesure devient un jeu à optimiser plutôt qu’un signal utile. | Fixer des objectifs sur les capacités et améliorations du système, pas sur un chiffre absolu sorti du contexte. |
+| Comparer des contextes incompatibles | Un mandat simple, un système legacy, un projet réglementé et un MVP ne peuvent pas être comparés mécaniquement. | Comparer une ligne de service avec elle-même dans le temps. Construire une baseline interne. |
+| Mettre les équipes ou personnes en compétition | Les problèmes peuvent être cachés, les risques évités et la sécurité psychologique détruite. | Utiliser les métriques comme diagnostic collectif, jamais comme classement individuel. |
+| Utiliser les métriques comme outil de contrôle | Le tableau de bord devient une police du travail au lieu d’un outil d’amélioration. | Chaque alerte métrique doit déclencher une discussion, une clarification ou une action système. |
+| Mesurer au lieu d’améliorer | La précision de mesure devient plus importante que l’amélioration réelle. | Démarrer simple, discuter des frictions, agir, mesurer à nouveau. |
+
+## Formulation officielle recommandée
+
+```text
+Chez MAD DevOps, une métrique n’est pas une arme.
+C’est un signal pour mieux comprendre le système, réduire le flou et améliorer la prochaine action.
+```
+
+## Application aux services professionnels
+
+Un lead time élevé ne signifie pas automatiquement qu’une personne travaille mal.
+
+Il peut révéler :
+
+- une validation client trop lente;
+- un brief ambigu;
+- un accès manquant;
+- une dépendance externe;
+- un template incomplet;
+- une étape de qualité trop tardive;
+- une décision non documentée.
+
+Un taux de reprise élevé ne doit pas déclencher un blâme.
+
+Il doit déclencher une analyse :
+
+```text
+Le besoin était-il clair ?
+Le périmètre était-il compris ?
+Le template était-il suffisant ?
+La validation était-elle trop tardive ?
+Quelle amélioration système garde-t-on ?
+```
+
+## Culture visée
+
+MAD DevOps doit viser une culture générative :
+
+- les problèmes sont visibles;
+- les erreurs sont analysées;
+- les risques sont nommés tôt;
+- les métriques servent à apprendre;
+- les améliorations deviennent documentées;
+- la responsabilité est collective sans dilution de la rigueur.
+
+---
+
+# 11. Matrice de validation
 
 | Concept | Chiffre ou repère d’inspiration | Validation requise |
 |---|---|---|
@@ -325,10 +389,11 @@ Système MAD — templates, checklists, offres, décisions
 | EOS | Croissance associée à l’implantation. | Présenter comme donnée fournisseur ou retour d’expérience. |
 | Lean / Kaizen | Réduction du lead time selon les cas. | Vérifier les cas et le secteur. |
 | Services professionnels | Transposition DORA aux livrables. | Présenter comme adaptation MAD DevOps. |
+| Garde-fous métriques | Mesure comme compas d’amélioration. | Vérifier les formulations exactes DORA si citation publique. |
 
 ---
 
-# 11. Application recommandée dans MAD DevOps
+# 12. Application recommandée dans MAD DevOps
 
 ## À utiliser maintenant
 
@@ -338,6 +403,7 @@ Système MAD — templates, checklists, offres, décisions
 - santé globale Vert / Jaune / Rouge;
 - mini-rétrospective client pour mandats actifs;
 - fiche d’apprentissage pour opportunités sans suite;
+- garde-fous d’usage des métriques;
 - une amélioration système retenue par semaine maximum.
 
 ## À garder pour plus tard
@@ -351,11 +417,12 @@ Système MAD — templates, checklists, offres, décisions
 
 ---
 
-# 12. Prochaine recherche utile
+# 13. Prochaine recherche utile
 
 Pour solidifier cette note, les prochaines recherches devraient porter sur :
 
 - les définitions exactes du dernier cadre DORA;
+- les garde-fous officiels DORA sur l’usage des métriques;
 - la source primaire Project Aristotle sur re:Work;
 - les travaux académiques d’Amy Edmondson;
 - les méta-analyses sur sécurité psychologique et performance;
