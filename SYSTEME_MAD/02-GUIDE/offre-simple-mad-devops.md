@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Offre simple MAD DevOps
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -48,6 +48,17 @@ Nous simplifions le quotidien grâce à des logiciels bien pensés.
 ## Slogan
 
 Des logiciels qui travaillent pour vous.
+
+---
+
+## ADN MAD DevOps
+
+```text
+On ne vend pas du code.
+On aide les gens à régler ce qui les ralentit.
+```
+
+Cette formulation rappelle que MAD DevOps existe d’abord pour aider, comprendre, résoudre et simplifier.
 
 ---
 
