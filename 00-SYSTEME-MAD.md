@@ -142,6 +142,15 @@ Il évolue avec chaque projet, chaque client et chaque expérience.
 
 ---
 
+## Humilité intellectuelle
+
+Nous préférons une vérité inconfortable à une belle histoire.
+
+Nous sommes prêts à changer d’avis lorsque les preuves changent.
+
+
+---
+
 # Les composantes du Système MAD
 
 Le Système MAD est composé de plusieurs éléments qui travaillent ensemble.
