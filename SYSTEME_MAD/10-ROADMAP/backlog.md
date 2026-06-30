@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Backlog — Système MAD
-Version: 1.3
+Version: 1.4
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -25,16 +25,19 @@ Les fondations principales sont en place :
 - `README.md` racine révisé;
 - `MANIFEST.md` officiel;
 - `ADR-001` sur l’architecture du dépôt;
+- `ADR-002` sur le positionnement non médical de MADSuite;
 - standard qualité documentaire `STD-006`;
 - checklist documentaire `CHK-002`;
+- checklist de livraison client `CHK-003`;
 - playbook qualité documentaire `PLAY-010`;
+- playbook de démarrage projet client `PLAY-011`;
+- playbook de revue avant production `PLAY-012`;
 - 35 standards planifiés créés et officialisés;
 - index des standards créé;
 - index des ADR créé;
-- checklist de livraison client créée;
-- playbook de démarrage projet client créé;
-- playbook de revue avant production créé;
-- premières fiches Knowledge Base créées.
+- premières fiches Knowledge Base créées;
+- structure de classement recherche MADSuite créée;
+- cadrage de l’agent futur de génération projet créé.
 
 ---
 
@@ -80,8 +83,6 @@ SYSTEME_MAD/09-CHECKLISTS/chk-003-livraison-client.md
 
 ### TODO-004 — Créer le playbook de démarrage projet client
 
-**Objectif :** standardiser le lancement d’un projet MAD DevOps.
-
 **Livrable :**
 
 ```text
@@ -93,8 +94,6 @@ SYSTEME_MAD/05-PLAY/play-011-demarrage-projet-client.md
 ---
 
 ### TODO-005 — Créer le playbook de revue avant production
-
-**Objectif :** préparer une livraison ou mise en production sérieuse.
 
 **Livrable :**
 
@@ -109,8 +108,6 @@ SYSTEME_MAD/05-PLAY/play-012-revue-avant-production.md
 ## Priorité P1 — Knowledge Base
 
 ### TODO-006 — Créer les premières fiches Knowledge Base
-
-**Objectif :** transformer les connaissances récurrentes en fiches réutilisables.
 
 **Livrables :**
 
@@ -132,15 +129,16 @@ SYSTEME_MAD/06-KNOWLEDGE-BASE/007-railway-vercel-neon.md
 
 **Objectif :** séparer les documents de recherche actifs, brouillons, archives et ressources importées.
 
-**Action recommandée :** préparer une structure propre dans :
+**Livrables :**
 
 ```text
-SYSTEME_MAD/13-RESSOURCES/research/
+SYSTEME_MAD/13-RESSOURCES/research/README.md
+SYSTEME_MAD/13-RESSOURCES/research/00-index-sources.md
 ```
 
-**Attention :** les fichiers `.docx` et documents importés doivent être déplacés prudemment.
+**Note :** les fichiers `.docx`, PDF et documents importés devront être déplacés prudemment dans `04-imports-a-classer/` lors d’une passe de classement réelle.
 
-**Statut :** À faire plus tard.
+**Statut :** Complété pour la structure initiale.
 
 ---
 
@@ -148,21 +146,13 @@ SYSTEME_MAD/13-RESSOURCES/research/
 
 **Objectif :** officialiser la décision produit selon laquelle MADSuite est une assistance cognitive non médicale.
 
-**Action recommandée :** créer :
+**Livrable :**
 
 ```text
 SYSTEME_MAD/04-ADR/ADR-002-positionnement-non-medical-madsuite.md
 ```
 
-**À relier à :**
-
-- `STD-501 — IA responsable`;
-- `STD-503 — Données et confidentialité IA`;
-- `STD-505 — IA cognitive non médicale`;
-- charte éthique MADSuite;
-- documents MADPROOF.
-
-**Statut :** À faire.
+**Statut :** Complété.
 
 ---
 
@@ -172,24 +162,23 @@ SYSTEME_MAD/04-ADR/ADR-002-positionnement-non-medical-madsuite.md
 
 **Objectif :** réduire le temps de démarrage d’un nouveau projet.
 
-**Déclencheur :** quand les Starter Kits seront terminés.
+**Livrable de cadrage :**
 
-**Dépendances :**
+```text
+SYSTEME_MAD/12-INNOVATION/agent-generation-projet-systeme-mad.md
+```
 
-- standards complétés;
-- templates stabilisés;
-- playbooks projet client;
-- checklists livraison;
-- structure Knowledge Base enrichie.
-
-**Priorité :** Faible / future.
-
-**Statut :** En réflexion.
+**Statut :** Cadré comme piste future.
 
 ---
 
 ## Prochaine action recommandée
 
-Passer à `TODO-008 — Créer une ADR sur le positionnement non médical de MADSuite`.
+Faire une passe de validation finale du Système MAD :
 
-C’est la prochaine action structurante la plus importante, car elle officialise une décision produit centrale avant de classer les documents de recherche MADSuite.
+1. vérifier les index;
+2. vérifier les statuts YAML;
+3. vérifier les liens entre README, MANIFEST, ADR, standards, playbooks et backlog;
+4. créer au besoin une checklist finale de gouvernance documentaire.
+
+La TODO initiale P0 à P3 est complétée.
