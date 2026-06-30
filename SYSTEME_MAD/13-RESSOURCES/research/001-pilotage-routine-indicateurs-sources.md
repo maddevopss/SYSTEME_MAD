@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Note de recherche — Pilotage, routine hebdomadaire et indicateurs
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-06-30
 Statut: Recherche à valider
 Auteur: Marc-André Dufour
@@ -36,13 +36,14 @@ Dans le Système MAD, ils peuvent servir de repères internes pour concevoir une
 
 Les métriques DORA servent à observer la performance de livraison logicielle et à guider l’amélioration continue.
 
-Métriques de référence :
+Métriques de référence modernes :
 
-- fréquence de déploiement;
-- lead time for changes;
-- change failure rate;
-- temps de restauration ou récupération après incident;
-- fiabilité, selon les versions récentes du cadre.
+- change lead time;
+- deployment frequency;
+- failed deployment recovery time;
+- change fail rate;
+- deployment rework rate;
+- fiabilité, selon les rapports et cadres récents.
 
 ## Usage MAD DevOps
 
@@ -52,10 +53,11 @@ Exemples de transposition :
 
 | DORA | Adaptation MAD DevOps |
 |---|---|
-| Fréquence de déploiement | Fréquence de livraison utile au client. |
-| Lead time for changes | Délai entre une demande validée et une livraison utilisable. |
-| Change failure rate | Proportion de livrables nécessitant une reprise majeure. |
-| MTTR / récupération | Temps pour corriger un problème bloquant après livraison. |
+| Deployment frequency | Fréquence de livraison utile au client. |
+| Change lead time | Délai entre une demande validée et une livraison utilisable. |
+| Change fail rate | Proportion de livrables nécessitant une reprise majeure. |
+| Failed deployment recovery time | Temps pour corriger un problème bloquant après livraison. |
+| Deployment rework rate | Proportion de livraisons non planifiées causées par une correction urgente. |
 | Fiabilité | Respect des attentes d’usage, stabilité et continuité. |
 
 ## Prudence
@@ -66,7 +68,48 @@ Les seuils comme « moins d’une heure » doivent être vérifiés dans le dern
 
 ---
 
-# 2. Project Aristotle / sécurité psychologique
+# 2. Transposition DORA aux services professionnels
+
+## Pourquoi la transposition est pertinente
+
+Les métriques DORA viennent de la livraison logicielle, mais les principes sous-jacents sont utiles pour le travail de connaissance : flux, qualité, stabilité, rythme et apprentissage.
+
+Dans les services professionnels, le produit peut être :
+
+- un rapport;
+- une recommandation;
+- une analyse;
+- une proposition;
+- une configuration;
+- une automatisation;
+- un tableau de bord;
+- une version intermédiaire utile.
+
+## Adaptation pratique
+
+| Métrique DORA originale | Sens logiciel | Transposition services professionnels | Exemple MAD DevOps |
+|---|---|---|---|
+| Deployment frequency | Nombre de mises en production. | Fréquence de livraison client. | Remettre une version utile chaque semaine au lieu d’attendre une livraison finale trop grosse. |
+| Lead time for changes | Délai du commit à la production. | Délai entre demande validée et première version utile. | Demande client validée le lundi, première version utilisable remise le jeudi. |
+| Failed deployment recovery time | Temps pour récupérer après échec. | Temps pour corriger une non-conformité ou erreur bloquante. | Corriger rapidement un livrable contenant une erreur ou un écart critique. |
+| Change fail rate | Pourcentage de changements causant incident. | Taux de reprise immédiate. | Sur dix livraisons, combien nécessitent une reprise urgente non planifiée. |
+| Deployment rework rate | Déploiements non planifiés causés par incident. | Reprises non planifiées après livraison. | Correction urgente déclenchée par un défaut visible au client. |
+
+## Règle MAD DevOps
+
+Toute cible doit être construite à partir d’une ligne de base interne.
+
+Exemple : mesurer vingt livraisons ou dossiers, observer le délai réel, puis définir une amélioration réaliste.
+
+## Prudence
+
+Les chiffres externes servent uniquement d’inspiration.
+
+MAD DevOps doit éviter de copier les seuils DORA Elite pour des mandats clients sans contexte.
+
+---
+
+# 3. Project Aristotle / sécurité psychologique
 
 ## Concept robuste
 
@@ -87,15 +130,27 @@ MAD DevOps peut en retenir surtout :
 - la clarté des rôles et des prochaines actions;
 - l’amélioration continue après friction, erreur ou refus.
 
-## Prudence
+## Analyse critique des chiffres
 
-Les pourcentages souvent associés à la sécurité psychologique doivent être traités avec prudence.
+Les pourcentages souvent cités autour de la sécurité psychologique doivent être manipulés avec prudence.
 
-Ils doivent être rattachés à une source précise avant toute citation publique.
+Exemples de chiffres à ne pas publier sans source directe :
+
+- 17 % de productivité en plus;
+- 76 % d’engagement en plus;
+- 50 % de rétention en plus.
+
+Ces chiffres circulent souvent, mais ils ne doivent pas être attribués automatiquement à Project Aristotle sans preuve accessible.
+
+## Formulation prudente recommandée
+
+```text
+Les recherches sur la sécurité psychologique montrent un lien positif avec l’apprentissage, la performance d’équipe, le signalement des erreurs et l’innovation. Les chiffres précis varient selon les études, les contextes et les méthodes de mesure.
+```
 
 ---
 
-# 3. OKR et check-ins hebdomadaires
+# 4. OKR et check-ins hebdomadaires
 
 ## Concept robuste
 
@@ -122,7 +177,7 @@ Ils ne doivent pas être présentés comme des effets garantis.
 
 ---
 
-# 4. EOS / routine de gestion
+# 5. EOS / routine de gestion
 
 ## Concept robuste
 
@@ -147,7 +202,7 @@ Les chiffres de croissance associés à EOS doivent être cités comme retours d
 
 ---
 
-# 5. Amélioration continue / Lean / Kaizen / PDCA
+# 6. Amélioration continue / Lean / Kaizen / PDCA
 
 ## Concept robuste
 
@@ -170,7 +225,7 @@ Ils doivent être utilisés comme cas inspirants, pas comme promesses.
 
 ---
 
-# 6. Pipeline, CI/CD et services professionnels
+# 7. Pipeline, CI/CD et services professionnels
 
 ## Concept robuste
 
@@ -211,13 +266,60 @@ Elle ne doit pas être présentée comme un standard externe établi.
 
 ---
 
-# 7. Matrice de validation
+# 8. Modèle intégré des frameworks
+
+## Logique générale
+
+Les frameworks se renforcent lorsqu’ils sont utilisés chacun à leur bonne place.
+
+```text
+Culture
+→ Stratégie
+→ Exécution
+→ Métriques
+→ Feedback
+→ Amélioration
+```
+
+## Correspondance
+
+| Couche | Rôle | Frameworks utiles | Application MAD DevOps |
+|---|---|---|---|
+| Culture | Sécurité, droit à l’erreur, apprentissage. | Project Aristotle, Edmondson. | Posture sans blâme, risques nommés tôt, apprentissage documenté. |
+| Stratégie | Cap et priorités. | OKR, EOS Vision. | Objectifs simples, décisions de semaine, priorités client. |
+| Données | Mesure utile. | DORA, EOS Data, OKR Key Results. | Tableau de suivi, santé client, délai de livraison, reprises. |
+| Exécution | Rythme et résolution. | EOS Traction, IDS, Lean, PDCA. | Routine hebdomadaire, actions, corrections, amélioration système. |
+| Pipeline | Flux et qualité. | CI/CD, Value Stream, DORA. | Templates, checklists, automatisations, contrôles avant livraison. |
+| Feedback | Apprentissage réel. | Rétrospectives, postmortems, reviews. | Fiche projet, fiche apprentissage opportunité, mini-rétro client. |
+
+---
+
+# 9. Schéma textuel
+
+```text
+Culture — sécurité psychologique et clarté
+        ↓ rend possible
+Stratégie — objectifs simples et priorités
+        ↓ se traduit en
+Exécution — routine hebdomadaire, décisions, résolution
+        ↓ produit
+Métriques — flux, livraison, reprises, risques
+        ↓ nourrit
+Feedback — rétro, apprentissage, amélioration continue
+        ↓ améliore
+Système MAD — templates, checklists, offres, décisions
+```
+
+---
+
+# 10. Matrice de validation
 
 | Concept | Chiffre ou repère d’inspiration | Validation requise |
 |---|---|---|
 | DORA — fréquence de déploiement | Elite souvent associé à on-demand. | Vérifier dans le dernier rapport DORA. |
 | DORA — lead time | Elite souvent associé à moins d’une heure. | Vérifier les seuils actualisés. |
 | DORA — taux d’échec | Fourchettes variables selon les années. | Vérifier le rapport et le contexte. |
+| DORA — rework | Rework rate maintenant distingué dans les cadres récents. | Vérifier définition exacte et usage dans le rapport récent. |
 | Project Aristotle | Sécurité psychologique comme facteur central. | Utiliser surtout le concept, pas les pourcentages non sourcés. |
 | OKR | Gains de productivité souvent revendiqués. | Citer des études de cas précises, pas une moyenne universelle. |
 | EOS | Croissance associée à l’implantation. | Présenter comme donnée fournisseur ou retour d’expérience. |
@@ -226,7 +328,7 @@ Elle ne doit pas être présentée comme un standard externe établi.
 
 ---
 
-# 8. Application recommandée dans MAD DevOps
+# 11. Application recommandée dans MAD DevOps
 
 ## À utiliser maintenant
 
@@ -246,6 +348,19 @@ Elle ne doit pas être présentée comme un standard externe établi.
 - NPS consultant;
 - communauté de pratique formelle;
 - benchmarks avancés par rôle ou mission.
+
+---
+
+# 12. Prochaine recherche utile
+
+Pour solidifier cette note, les prochaines recherches devraient porter sur :
+
+- les définitions exactes du dernier cadre DORA;
+- la source primaire Project Aristotle sur re:Work;
+- les travaux académiques d’Amy Edmondson;
+- les méta-analyses sur sécurité psychologique et performance;
+- les cas documentés de transposition Lean/DORA au travail de connaissance;
+- les limites de l’usage des métriques comme objectifs.
 
 ---
 
