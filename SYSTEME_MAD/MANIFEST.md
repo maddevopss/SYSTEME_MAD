@@ -1,7 +1,7 @@
 ---
 Projet: Système MAD
 Document: Manifeste documentaire officiel
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -47,9 +47,19 @@ Les dossiers hors de `SYSTEME_MAD/` sont considérés comme périphériques, tra
 
 1. `SYSTEME_MAD/MANIFEST.md`
 2. `SYSTEME_MAD/00-SYSTEME-MAD/yaml-standard.md`
-3. Le dossier concerné par la modification
-4. Les standards applicables dans `SYSTEME_MAD/03-STANDARDS/`
-5. Les ADR applicables dans `SYSTEME_MAD/04-ADR/`
+3. `SYSTEME_MAD/03-STANDARDS/std-006.md`
+4. `SYSTEME_MAD/09-CHECKLISTS/chk-002-validation-documentaire.md`
+5. Le dossier concerné par la modification
+6. Les standards applicables dans `SYSTEME_MAD/03-STANDARDS/`
+7. Les ADR applicables dans `SYSTEME_MAD/04-ADR/`
+
+### Lecture pour une passe qualité documentaire
+
+1. `README.md`
+2. `SYSTEME_MAD/MANIFEST.md`
+3. `SYSTEME_MAD/03-STANDARDS/std-006.md`
+4. `SYSTEME_MAD/09-CHECKLISTS/chk-002-validation-documentaire.md`
+5. `SYSTEME_MAD/05-PLAY/play-010-passe-qualite-documentaire.md`
 
 ### Lecture pour travailler sur MADSuite
 
@@ -189,6 +199,7 @@ Un document archivé ne doit pas être utilisé comme source officielle sans men
 5. Ajouter une ADR lorsqu’une décision modifie la structure, les standards ou la gouvernance.
 6. Garder le langage clair, professionnel et accessible.
 7. Éviter les promesses exagérées, les superlatifs inutiles et les affirmations non vérifiées.
+8. Utiliser `STD-006` et `CHK-002` pour toute passe qualité documentaire.
 
 ---
 
@@ -199,11 +210,13 @@ Avant de produire, corriger ou réorganiser un document, un agent IA doit :
 1. Lire ce manifeste.
 2. Lire `SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md`.
 3. Lire `SYSTEME_MAD/00-SYSTEME-MAD/decisions.md` lorsque la tâche touche le positionnement, la communication ou les décisions du studio.
-4. Lire les standards applicables.
-5. Ne pas utiliser `99-ARCHIVES/` comme source principale.
-6. Respecter les statuts documentaires.
-7. Signaler les doublons au lieu de les amplifier.
-8. Préserver le ton MAD DevOps : professionnel, humain, simple et crédible.
+4. Lire les standards applicables, notamment `STD-006` pour les documents.
+5. Lire `CHK-002` lorsqu’il faut valider la qualité d’un document.
+6. Utiliser `PLAY-010` lorsqu’il faut effectuer une passe qualité documentaire.
+7. Ne pas utiliser `99-ARCHIVES/` comme source principale.
+8. Respecter les statuts documentaires.
+9. Signaler les doublons au lieu de les amplifier.
+10. Préserver le ton MAD DevOps : professionnel, humain, simple et crédible.
 
 ---
 
@@ -232,6 +245,9 @@ Les documents suivants sont prioritaires pour la cohérence du système :
 - `SYSTEME_MAD/00-SYSTEME-MAD/decisions.md`
 - `SYSTEME_MAD/00-SYSTEME-MAD/yaml-standard.md`
 - `SYSTEME_MAD/01-FONDATIONS/non-negociable.md`
+- `SYSTEME_MAD/03-STANDARDS/std-006.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-002-validation-documentaire.md`
+- `SYSTEME_MAD/05-PLAY/play-010-passe-qualite-documentaire.md`
 - `SYSTEME_MAD/03-STANDARDS/`
 - `SYSTEME_MAD/04-ADR/`
 
