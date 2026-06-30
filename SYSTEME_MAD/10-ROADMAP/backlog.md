@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Backlog — Système MAD
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -28,7 +28,10 @@ Les fondations principales sont en place :
 - standard qualité documentaire `STD-006`;
 - checklist documentaire `CHK-002`;
 - playbook qualité documentaire `PLAY-010`;
-- 35 standards planifiés créés et officialisés.
+- 35 standards planifiés créés et officialisés;
+- index des standards créé;
+- index des ADR créé;
+- checklist de livraison client créée.
 
 ---
 
@@ -38,20 +41,13 @@ Les fondations principales sont en place :
 
 **Objectif :** faciliter la navigation dans les 35 standards.
 
-**Action recommandée :** créer :
+**Livrable :**
 
 ```text
 SYSTEME_MAD/03-STANDARDS/README.md
 ```
 
-**Contenu attendu :**
-
-- liste des standards par famille;
-- rôle de chaque famille;
-- ordre de lecture recommandé;
-- liens vers les standards critiques.
-
-**Statut :** À faire.
+**Statut :** Complété.
 
 ---
 
@@ -59,21 +55,13 @@ SYSTEME_MAD/03-STANDARDS/README.md
 
 **Objectif :** préparer la croissance des décisions architecturales.
 
-**Action recommandée :** créer :
+**Livrable :**
 
 ```text
 SYSTEME_MAD/04-ADR/README.md
 ```
 
-**Contenu attendu :**
-
-- liste des ADR;
-- statut de chaque ADR;
-- date;
-- décision résumée;
-- lien vers les standards associés.
-
-**Statut :** À faire.
+**Statut :** Complété.
 
 ---
 
@@ -81,24 +69,13 @@ SYSTEME_MAD/04-ADR/README.md
 
 **Objectif :** transformer les standards qualité/devops en outil opérationnel.
 
-**Action recommandée :** créer :
+**Livrable :**
 
 ```text
 SYSTEME_MAD/09-CHECKLISTS/chk-003-livraison-client.md
 ```
 
-**À couvrir :**
-
-- besoin validé;
-- tests pertinents;
-- configuration;
-- sécurité;
-- UX;
-- documentation;
-- déploiement;
-- vérification après livraison.
-
-**Statut :** À faire.
+**Statut :** Complété.
 
 ---
 
@@ -238,6 +215,6 @@ SYSTEME_MAD/04-ADR/ADR-002-positionnement-non-medical-madsuite.md
 
 ## Prochaine action recommandée
 
-Commencer par `TODO-001 — Créer un index des standards`.
+Passer à `TODO-004 — Créer le playbook de démarrage projet client`.
 
-C’est la suite la plus logique, parce que les 35 standards existent maintenant, mais ils doivent être facilement navigables par un humain et par un agent IA.
+La P0 est complétée. La suite logique est de transformer les standards en procédures opérationnelles utilisables pour les projets clients.
