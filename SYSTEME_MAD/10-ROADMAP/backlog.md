@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Backlog — Système MAD
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -31,15 +31,16 @@ Les fondations principales sont en place :
 - 35 standards planifiés créés et officialisés;
 - index des standards créé;
 - index des ADR créé;
-- checklist de livraison client créée.
+- checklist de livraison client créée;
+- playbook de démarrage projet client créé;
+- playbook de revue avant production créé;
+- premières fiches Knowledge Base créées.
 
 ---
 
 ## Priorité P0 — Stabilisation documentaire
 
 ### TODO-001 — Créer un index des standards
-
-**Objectif :** faciliter la navigation dans les 35 standards.
 
 **Livrable :**
 
@@ -53,8 +54,6 @@ SYSTEME_MAD/03-STANDARDS/README.md
 
 ### TODO-002 — Créer un index des ADR
 
-**Objectif :** préparer la croissance des décisions architecturales.
-
 **Livrable :**
 
 ```text
@@ -66,8 +65,6 @@ SYSTEME_MAD/04-ADR/README.md
 ---
 
 ### TODO-003 — Créer une checklist de livraison client
-
-**Objectif :** transformer les standards qualité/devops en outil opérationnel.
 
 **Livrable :**
 
@@ -85,24 +82,13 @@ SYSTEME_MAD/09-CHECKLISTS/chk-003-livraison-client.md
 
 **Objectif :** standardiser le lancement d’un projet MAD DevOps.
 
-**Action recommandée :** créer :
+**Livrable :**
 
 ```text
 SYSTEME_MAD/05-PLAY/play-011-demarrage-projet-client.md
 ```
 
-**À couvrir :**
-
-- compréhension du besoin;
-- cadrage;
-- risques;
-- livrables;
-- stack;
-- environnement;
-- critères de réussite;
-- documentation initiale.
-
-**Statut :** À faire.
+**Statut :** Complété.
 
 ---
 
@@ -110,24 +96,13 @@ SYSTEME_MAD/05-PLAY/play-011-demarrage-projet-client.md
 
 **Objectif :** préparer une livraison ou mise en production sérieuse.
 
-**Action recommandée :** créer :
+**Livrable :**
 
 ```text
 SYSTEME_MAD/05-PLAY/play-012-revue-avant-production.md
 ```
 
-**À couvrir :**
-
-- tests;
-- sécurité;
-- données;
-- configuration;
-- observabilité;
-- rollback;
-- documentation;
-- communication client.
-
-**Statut :** À faire.
+**Statut :** Complété.
 
 ---
 
@@ -137,7 +112,7 @@ SYSTEME_MAD/05-PLAY/play-012-revue-avant-production.md
 
 **Objectif :** transformer les connaissances récurrentes en fiches réutilisables.
 
-**Fiches recommandées :**
+**Livrables :**
 
 ```text
 SYSTEME_MAD/06-KNOWLEDGE-BASE/003-postgresql.md
@@ -147,7 +122,7 @@ SYSTEME_MAD/06-KNOWLEDGE-BASE/006-electron.md
 SYSTEME_MAD/06-KNOWLEDGE-BASE/007-railway-vercel-neon.md
 ```
 
-**Statut :** À faire.
+**Statut :** Complété.
 
 ---
 
@@ -215,6 +190,6 @@ SYSTEME_MAD/04-ADR/ADR-002-positionnement-non-medical-madsuite.md
 
 ## Prochaine action recommandée
 
-Passer à `TODO-004 — Créer le playbook de démarrage projet client`.
+Passer à `TODO-008 — Créer une ADR sur le positionnement non médical de MADSuite`.
 
-La P0 est complétée. La suite logique est de transformer les standards en procédures opérationnelles utilisables pour les projets clients.
+C’est la prochaine action structurante la plus importante, car elle officialise une décision produit centrale avant de classer les documents de recherche MADSuite.
