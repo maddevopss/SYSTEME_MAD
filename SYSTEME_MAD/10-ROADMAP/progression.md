@@ -1,9 +1,9 @@
 ---
 Projet: MAD DevOps
 Document: Progression des Standards
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-06-30
-Statut: Brouillon
+Statut: Officiel
 Auteur: Marc-André Dufour
 ---
 
@@ -15,25 +15,25 @@ Auteur: Marc-André Dufour
 - [x] STD-001
 - [x] STD-002
 - [x] STD-003
-- [ ] STD-004
-- [ ] STD-005
+- [x] STD-004
+- [x] STD-005
 - [x] STD-006
 
 ## Architecture
 
-- [ ] STD-101
-- [ ] STD-102
-- [ ] STD-103
-- [ ] STD-104
-- [ ] STD-105
+- [x] STD-101
+- [x] STD-102
+- [x] STD-103
+- [x] STD-104
+- [x] STD-105
 
 ## Sécurité
 
-- [ ] STD-201
-- [ ] STD-202
-- [ ] STD-203
-- [ ] STD-204
-- [ ] STD-205
+- [x] STD-201
+- [x] STD-202
+- [x] STD-203
+- [x] STD-204
+- [x] STD-205
 
 ## Qualité
 
@@ -53,16 +53,20 @@ Auteur: Marc-André Dufour
 
 ## Intelligence artificielle
 
-- [ ] STD-501
-- [ ] STD-502
-- [ ] STD-503
-- [ ] STD-504
-- [ ] STD-505
+- [x] STD-501
+- [x] STD-502
+- [x] STD-503
+- [x] STD-504
+- [x] STD-505
 
 ## Documentation
 
-- [ ] STD-601
-- [ ] STD-602
-- [ ] STD-603
-- [ ] STD-604
-- [ ] STD-605
+- [x] STD-601
+- [x] STD-602
+- [x] STD-603
+- [x] STD-604
+- [x] STD-605
+
+## Statut global
+
+Les 35 standards planifiés sont créés et considérés comme base officielle du Système MAD.
