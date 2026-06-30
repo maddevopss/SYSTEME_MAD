@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression des Standards
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-06-30
 Statut: Brouillon
 Auteur: Marc-André Dufour
@@ -17,6 +17,7 @@ Auteur: Marc-André Dufour
 - [x] STD-003
 - [ ] STD-004
 - [ ] STD-005
+- [x] STD-006
 
 ## Architecture
 
@@ -36,11 +37,11 @@ Auteur: Marc-André Dufour
 
 ## Qualité
 
-- [ ] STD-301
-- [ ] STD-302
-- [ ] STD-303
-- [ ] STD-304
-- [ ] STD-305
+- [x] STD-301
+- [x] STD-302
+- [x] STD-303
+- [x] STD-304
+- [x] STD-305
 
 ## DevOps
 
