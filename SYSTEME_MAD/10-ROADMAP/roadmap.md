@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Roadmap MAD DevOps
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -92,13 +92,13 @@ Statut : Complété
 
 ## DevOps
 
-- [ ] STD-401
-- [ ] STD-402
-- [ ] STD-403
-- [ ] STD-404
-- [ ] STD-405
+- [x] STD-401
+- [x] STD-402
+- [x] STD-403
+- [x] STD-404
+- [x] STD-405
 
-Statut : À faire
+Statut : Complété
 
 ---
 
