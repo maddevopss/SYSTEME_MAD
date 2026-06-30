@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Kit terrain — Parcours client MAD DevOps
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -14,6 +14,12 @@ Auteur: Marc-André Dufour
 Ce kit sert à utiliser le parcours client MAD DevOps en situation réelle : premier échange, découverte, cadrage, proposition, livraison et suivi.
 
 Il regroupe les repères opérationnels nécessaires pour savoir quoi dire, quoi décider, quoi confirmer et quand ralentir.
+
+Les messages réutilisables à envoyer au client sont centralisés dans :
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-suivis-client-mad-devops.md
+```
 
 ---
 
@@ -74,6 +80,12 @@ Avant livraison : valider le périmètre livré, le parcours principal, les limi
 
 Après livraison : confirmer ce qui est livré, les accès ou instructions, les limites connues et la suite recommandée.
 
+Pour les formulations prêtes à adapter, utiliser :
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-suivis-client-mad-devops.md
+```
+
 ---
 
 ## Contrôle qualité terrain
@@ -98,6 +110,7 @@ Le risque principal est-il nommé ?
 - `SYSTEME_MAD/05-PLAY/play-013-parcours-client-mad-devops.md`
 - `SYSTEME_MAD/05-PLAY/play-014-decouverte-client-mad-devops.md`
 - `SYSTEME_MAD/05-PLAY/play-015-qualification-phase-0-client.md`
+- `SYSTEME_MAD/07-TEMPLATES/template-suivis-client-mad-devops.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-005-qualite-parcours-client.md`
 
 ---
