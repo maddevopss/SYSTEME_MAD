@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 5.1
+Version: 5.2
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -151,21 +151,28 @@ Statut : **Complété — qualification rapide des opportunités**
 
 ## Bloc 23 — Validation opportunité Machine à clients
 
+Statut : **Complété — garde-fou commercial actif**
+
+---
+
+## Bloc 24 — Routine hebdomadaire Machine à clients
+
 | Élément | Statut |
 |---|---|
-| CHK-021 validation opportunité Machine à clients | Créé — Officiel |
-| Index Checklists mis à jour | Complété |
-| Raccordement à la fiche opportunité | Complété |
+| PLAY-030 routine hebdomadaire Machine à clients | Créé — Officiel |
+| Index Playbooks mis à jour | Complété |
 | Raccordement au pipeline commercial | Complété |
 | Raccordement au tableau de bord Machine à clients | Complété |
+| Raccordement à la fiche opportunité | Complété |
+| Raccordement à CHK-021 | Complété |
 | Raccordement à PLAY-029 | Complété |
 
-Statut : **Complété — garde-fou commercial actif**
+Statut : **Complété — rituel d’exécution commerciale**
 
 ---
 
 ## Statut global
 
-Le Système MAD dispose maintenant d’une base documentaire complète, de BaseMAD, d’une base opérationnelle, de CerveauMAD, du registre, de la revue, des tableaux de bord, du snapshot de reprise, du pont commercial, du pipeline commercial, d’une fiche opportunité et d’une checklist de validation Machine à clients.
+Le Système MAD dispose maintenant d’une base documentaire complète, de BaseMAD, d’une base opérationnelle, de CerveauMAD, du registre, de la revue, des tableaux de bord, du snapshot de reprise, du pont commercial, du pipeline commercial, d’une fiche opportunité, d’une checklist de validation et d’une routine hebdomadaire Machine à clients.
 
-La priorité recommandée est de qualifier les opportunités avec la fiche, de les valider avec CHK-021, puis de les faire avancer dans le pipeline seulement lorsqu’elles sont claires et actionnables.
+La priorité recommandée est d’exécuter PLAY-030 chaque semaine pour maintenir les signaux, opportunités, suivis et propositions en mouvement.
