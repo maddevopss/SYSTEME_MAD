@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Template — Fiche projet client MAD DevOps
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-06-30
 Statut: Template
 Auteur: Marc-André Dufour
@@ -105,23 +105,51 @@ Mettre la fiche à jour chaque fois qu’un élément important change : périm�
 
 ---
 
-# 7. Accès, contenus et dépendances
+# 7. Accès requis avant démarrage
 
-## À recevoir du client
+Cette section sert à éviter qu’un mandat soit bloqué par un accès, un contenu ou une information manquante.
 
-- [Accès / contenu / information 1]
-- [Accès / contenu / information 2]
-- [Accès / contenu / information 3]
+Un accès requis doit être visible avant de considérer le mandat prêt à exécuter.
 
-## Dépendances
+| Accès / contenu / information | Responsable | Statut | Date cible | Impact si absent |
+|---|---|---|---|---|
+| [Accès 1] | [Client / MAD / Tiers] | [Requis / Demandé / Reçu / Validé / Bloquant] | [Date] | [Impact sur délai / livrable / qualité] |
+| [Accès 2] | [Client / MAD / Tiers] | [Requis / Demandé / Reçu / Validé / Bloquant] | [Date] | [Impact] |
+| [Accès 3] | [Client / MAD / Tiers] | [Requis / Demandé / Reçu / Validé / Bloquant] | [Date] | [Impact] |
 
-- [Dépendance 1]
-- [Dépendance 2]
-- [Dépendance 3]
+## Règle
+
+```text
+Un accès critique non confirmé est un risque projet, pas un détail technique.
+```
+
+## Prêt à démarrer ?
+
+- [ ] Tous les accès critiques sont identifiés.
+- [ ] Les responsables sont nommés.
+- [ ] Les dates cibles sont visibles.
+- [ ] Les impacts sont compris.
+- [ ] Aucun accès bloquant n’est ignoré.
 
 ---
 
-# 8. Décisions importantes
+# 8. Dépendances
+
+## Dépendances client
+
+- [Dépendance client 1]
+- [Dépendance client 2]
+- [Dépendance client 3]
+
+## Dépendances techniques ou externes
+
+- [Dépendance technique / fournisseur / outil 1]
+- [Dépendance technique / fournisseur / outil 2]
+- [Dépendance technique / fournisseur / outil 3]
+
+---
+
+# 9. Décisions importantes
 
 | Date | Décision | Validée par | Impact |
 |---|---|---|---|
@@ -129,7 +157,7 @@ Mettre la fiche à jour chaque fois qu’un élément important change : périm�
 
 ---
 
-# 9. Risques et blocages
+# 10. Risques et blocages
 
 | Risque ou blocage | Niveau | Action prévue | Statut |
 |---|---|---|---|
@@ -138,7 +166,7 @@ Mettre la fiche à jour chaque fois qu’un élément important change : périm�
 
 ---
 
-# 10. Changements de périmètre
+# 11. Changements de périmètre
 
 | Demande | Type | Décision |
 |---|---|---|
@@ -146,7 +174,7 @@ Mettre la fiche à jour chaque fois qu’un élément important change : périm�
 
 ---
 
-# 11. TODO active
+# 12. TODO active
 
 ## À faire maintenant
 
@@ -166,7 +194,7 @@ Mettre la fiche à jour chaque fois qu’un élément important change : périm�
 
 ---
 
-# 12. Prochaine action
+# 13. Prochaine action
 
 ```text
 [Une seule prochaine action claire.]
@@ -178,7 +206,7 @@ Responsable : [MAD DevOps / Client / Autre]
 
 ---
 
-# 13. Préparation livraison
+# 14. Préparation livraison
 
 - [ ] Le livrable correspond au périmètre accepté.
 - [ ] Le parcours principal fonctionne.
@@ -190,7 +218,7 @@ Responsable : [MAD DevOps / Client / Autre]
 
 ---
 
-# 14. Suivi après livraison
+# 15. Suivi après livraison
 
 ## État de la livraison
 
@@ -220,6 +248,7 @@ Cette fiche est réussie si elle permet de répondre rapidement :
 Où en est le projet ?
 Qu’est-ce qui est inclus ?
 Qu’est-ce qui est hors périmètre ?
+Quels accès ou dépendances peuvent bloquer ?
 Qu’est-ce qui bloque ?
 Quelle est la prochaine action ?
 ```
