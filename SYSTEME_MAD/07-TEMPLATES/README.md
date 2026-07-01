@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 1.8
+Version: 1.9
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -29,6 +29,7 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | `template-formulaire-contact-mad-devops.md` | Template | Formulaire de contact MAD DevOps. |
 | `template-reponse-demande-entrante-mad-devops.md` | Template | Réponse à une demande entrante. |
 | `template-fiche-qualification-demande-entrante-mad-devops.md` | Template | Qualification rapide d’une demande entrante. |
+| `template-tableau-pipeline-commercial-mad-devops.md` | Template | Tableau pipeline commercial MAD DevOps. |
 | `template-demande-temoignage-client-mad-devops.md` | Template | Demande de témoignage client. |
 | `template-autorisation-publication-projet-mad-devops.md` | Template | Autorisation de publication projet. |
 | `template-demande-reference-client-mad-devops.md` | Template | Demande de référence client. |
@@ -59,6 +60,12 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 SYSTEME_MAD/07-TEMPLATES/template-formulaire-contact-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-reponse-demande-entrante-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-qualification-demande-entrante-mad-devops.md
+```
+
+### Cockpit commercial
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-tableau-pipeline-commercial-mad-devops.md
 ```
 
 ### Présence Web
