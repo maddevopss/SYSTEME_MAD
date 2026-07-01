@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -26,6 +26,7 @@ Une checklist sert à valider qu’un processus, un livrable ou une démarche re
 | `chk-004-validation-systeme-mad.md` | Officiel | Validation globale du Système MAD. |
 | `chk-005-qualite-parcours-client.md` | Officiel | Contrôle qualité du parcours client, du premier contact au suivi. |
 | `chk-006-deploiement-pilotage-mad-devops.md` | Officiel | Validation rapide du déploiement du pilotage MAD DevOps. |
+| `chk-007-validation-bloc-pilotage-fondateur.md` | Officiel | Validation du bloc pilotage fondateur : fiche réflexe, routine courte, cockpit, exemples et boucle d’amélioration. |
 
 ---
 
@@ -44,6 +45,7 @@ Une checklist sert à valider qu’un processus, un livrable ou une démarche re
 ### Pilotage MAD DevOps
 
 - `chk-006-deploiement-pilotage-mad-devops.md`
+- `chk-007-validation-bloc-pilotage-fondateur.md`
 
 ---
 
@@ -64,3 +66,6 @@ Une checklist sert à valider qu’un processus, un livrable ou une démarche re
 - `SYSTEME_MAD/05-PLAY/README.md`
 - `SYSTEME_MAD/07-TEMPLATES/README.md`
 - `SYSTEME_MAD/05-PLAY/play-016-deploiement-demarche-pilotage-mad-devops.md`
+- `SYSTEME_MAD/02-GUIDE/fiche-reflexe-fondateur-mad-devops.md`
+- `SYSTEME_MAD/02-GUIDE/routine-courte-fondateur-lundi-vendredi.md`
+- `SYSTEME_MAD/02-GUIDE/cockpit-fondateur-mad-devops.md`
