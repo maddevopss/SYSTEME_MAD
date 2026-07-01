@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 1.6
+Version: 1.7
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -31,6 +31,8 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-009-validation-bloc-offre-commerciale.md` | Officiel | Bloc offre commerciale MAD DevOps. |
 | `chk-010-validation-bloc-projet-client-livraison.md` | Officiel | Bloc projet client et livraison. |
 | `chk-011-validation-bloc-amelioration-continue.md` | Officiel | Bloc amélioration continue MAD DevOps. |
+| `chk-012-validation-bloc-gouvernance-fiabilite-documentaire.md` | Officiel | Bloc gouvernance et fiabilité documentaire. |
+| `chk-013-validation-bloc-cockpit-commercial.md` | Officiel | Bloc cockpit commercial MAD DevOps. |
 
 ---
 
@@ -49,6 +51,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-008-validation-bloc-parcours-client.md`
 - `chk-009-validation-bloc-offre-commerciale.md`
 - `chk-010-validation-bloc-projet-client-livraison.md`
+- `chk-013-validation-bloc-cockpit-commercial.md`
 
 ### Pilotage et amélioration MAD DevOps
 
@@ -84,3 +87,4 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `SYSTEME_MAD/09-CHECKLISTS/chk-010-validation-bloc-projet-client-livraison.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-011-validation-bloc-amelioration-continue.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-012-validation-bloc-gouvernance-fiabilite-documentaire.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-013-validation-bloc-cockpit-commercial.md`
