@@ -1,9 +1,9 @@
 ---
 Projet: MAD DevOps
 Document: Index des sources — Recherche MADSuite
-Version: 1.0
-Dernière révision: 2026-06-30
-Statut: Brouillon
+Version: 1.1
+Dernière révision: 2026-07-01
+Statut: Officiel
 Auteur: Marc-André Dufour
 ---
 
@@ -13,7 +13,18 @@ Auteur: Marc-André Dufour
 
 Ce fichier sert à inventorier les sources, notes, documents importés et synthèses liés à la recherche MADSuite.
 
-Il doit aider à distinguer les sources solides, les hypothèses R&D, les documents à classer et les éléments archivés.
+Il doit aider à distinguer les sources solides, les hypothèses R&D, les documents à classer, les éléments MADPROOF et les archives.
+
+---
+
+## Principe MADPROOF
+
+```text
+Une source de recherche ne devient pas automatiquement une vérité produit.
+Une hypothèse utile ne devient pas automatiquement une promesse utilisateur.
+```
+
+Toute affirmation importante doit être classée selon son niveau de maturité et reformulée avec prudence avant d’être utilisée dans MADSuite.
 
 ---
 
@@ -33,24 +44,26 @@ Il doit aider à distinguer les sources solides, les hypothèses R&D, les docume
 
 ## Index initial
 
-| Sujet | Statut | Usage recommandé | Notes |
-|---|---|---|---|
-| Positionnement non médical MADSuite | MADPROOF-Fondation | Communication, produit, documentation | Voir ADR-002. |
-| Assistance cognitive non médicale | MADPROOF-Fondation | UX, fonctionnalités, documentation | Garder les formulations prudentes. |
-| Reprise de tâche / interruption | MADPROOF-R&D | Fil d’Ariane, snapshot de reprise | Effet produit à valider. |
-| Accessibilité cognitive | MADPROOF-Fondation | Design produit, UX | À relier aux standards UX/documentation. |
-| Context-aware sans caméra | MADPROOF-R&D | Architecture future | Exclure la caméra par défaut. |
-| Agents IA MADSuite | MADPROOF-R&D | Assistance, automatisation, documentation | Garder l’utilisateur en contrôle. |
+| ID | Sujet | Statut | Usage recommandé | Document lié |
+|---|---|---|---|---|
+| R-001 | Positionnement non médical MADSuite | MADPROOF-Fondation | Communication, produit, documentation | ADR-002 |
+| R-002 | Assistance cognitive non médicale | MADPROOF-Fondation | UX, fonctionnalités, documentation | `01-fondations-prudentes/001-assistance-cognitive-tdah.md` |
+| R-003 | Reprise de tâche / interruption | MADPROOF-R&D | Fil d’Ariane, snapshot de reprise | `02-rd-hypotheses/001-mad-ariane-snapshot-reprise.md` |
+| R-004 | Accessibilité cognitive | MADPROOF-Fondation | Design produit, UX | `01-fondations-prudentes/001-assistance-cognitive-tdah.md` |
+| R-005 | Context-aware sans caméra | MADPROOF-R&D | Architecture future | `02-rd-hypotheses/002-jitai-context-aware-sans-camera.md` |
+| R-006 | Agents IA MADSuite | MADPROOF-R&D | Assistance, automatisation, documentation | À classer |
+| R-007 | Synthèse cognitive MADSuite | À valider | Synthèse et arbitrage produit | `03-madproof/001-synthese-cognitive-madsuite.md` |
 
 ---
 
-## Documents à classer
-
-Ajouter ici les documents importés avant de les déplacer dans le bon dossier.
+## Documents à créer ou compléter
 
 | Document | Type | Statut | Destination recommandée |
 |---|---|---|---|
-| À compléter | `.docx`, PDF, note ou synthèse | À valider | À déterminer |
+| `001-assistance-cognitive-tdah.md` | Fondation prudente | À créer | `01-fondations-prudentes/` |
+| `001-mad-ariane-snapshot-reprise.md` | Hypothèse R&D | À créer | `02-rd-hypotheses/` |
+| `002-jitai-context-aware-sans-camera.md` | Hypothèse R&D | À créer | `02-rd-hypotheses/` |
+| `001-synthese-cognitive-madsuite.md` | Synthèse MADPROOF | À créer | `03-madproof/` |
 
 ---
 
@@ -61,16 +74,12 @@ Ajouter ici les documents importés avant de les déplacer dans le bon dossier.
 - Conserver les documents importés dans `04-imports-a-classer/` avant tri.
 - Déplacer les éléments remplacés dans `99-archives/`.
 - Ne pas utiliser d’archive comme source officielle sans mention explicite.
+- Ne pas présenter MADSuite comme un traitement médical.
+- Ne pas promettre de réduction clinique des symptômes TDAH.
+- Ne pas utiliser la caméra dans le MVP context-aware par défaut.
 
 ---
 
 ## Prochaine action
 
-Lors du classement réel des documents de recherche, compléter cet index avec :
-
-- nom du document;
-- type;
-- statut;
-- résumé court;
-- destination;
-- décision : garder, reformuler, remplacer, supprimer ou archiver.
+Créer les documents de fondation, d’hypothèse R&D et de synthèse MADPROOF liés à l’assistance cognitive MADSuite.
