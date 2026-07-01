@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 1.6
+Version: 1.7
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -26,6 +26,9 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | `template-proposition-client-mad-devops.md` | Template | Modèle de proposition client claire et professionnelle. |
 | `template-suivis-client-mad-devops.md` | Template | Messages de suivi client. |
 | `template-prospection-douce-mad-devops.md` | Template | Messages de prospection commerciale douce. |
+| `template-demande-temoignage-client-mad-devops.md` | Template | Demande de témoignage client. |
+| `template-autorisation-publication-projet-mad-devops.md` | Template | Autorisation de publication projet. |
+| `template-demande-reference-client-mad-devops.md` | Template | Demande de référence client. |
 | `template-page-accueil-mad-devops.md` | Template | Contenu de page d’accueil. |
 | `template-a-propos-mad-devops.md` | Template | Contenu de page À propos. |
 | `template-faq-site-web-mad-devops.md` | Template | FAQ site Web. |
@@ -55,6 +58,14 @@ SYSTEME_MAD/07-TEMPLATES/template-a-propos-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-faq-site-web-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-etude-de-cas-client-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-projet-public-mad-devops.md
+```
+
+### Références et témoignages
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-demande-temoignage-client-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-autorisation-publication-projet-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-demande-reference-client-mad-devops.md
 ```
 
 ### Acquisition et communication
