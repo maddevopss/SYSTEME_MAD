@@ -83,6 +83,15 @@ SYSTEME_MAD/07-TEMPLATES/template-fiche-apprentissage-opportunite-mad-devops.md
 
 Ces templates servent à transformer les irritants, apprentissages, opportunités sans suite et frictions récurrentes en améliorations système utiles.
 
+### Acquisition et communication
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-prospection-douce-mad-devops.md
+```
+
+
+
+
 ---
 
 ## Règles d’usage
