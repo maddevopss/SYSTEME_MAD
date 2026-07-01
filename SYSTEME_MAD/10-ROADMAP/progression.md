@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 3.6
+Version: 3.7
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -93,10 +93,12 @@ Statut : **En cours**
 | Index Templates mis à jour | Complété |
 | Index Playbooks mis à jour | Complété |
 | Index Checklists mis à jour | Complété |
-| Implémentation réelle du site | À faire |
+| Implémentation réelle du site | Complété — V1 prod déployée |
+| SEO / accessibilité / contact V1 | Complété |
 | Validation CHK-015 sur le site réel | À faire |
+| Validation CHK-019 sur le site réel | À faire |
 
-Statut : **En cours — prêt à reprendre**
+Statut : **En cours — V1 réelle publiée, validation finale à faire**
 
 ---
 
@@ -151,8 +153,22 @@ Statut : **Complété**
 
 ---
 
+## Bloc 13 — Base opérationnelle MAD DevOps
+
+| Élément | Statut |
+|---|---|
+| Base opérationnelle MAD DevOps | Complété — Officiel |
+| Index Guides mis à jour | Complété |
+| Raccordement au pilotage fondateur | Complété |
+| Raccordement à BaseMAD | Complété |
+| Raccordement aux règles de priorité | Complété |
+
+Statut : **Complété**
+
+---
+
 ## Statut global
 
-Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, préparation du site Web réel, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, lots d’implémentation MAD Ariane, checklist finale MVP, et BaseMAD comme couche centrale officielle de continuité, mémoire opérationnelle et gouvernance documentaire.
+Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, site Web réel V1, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, lots d’implémentation MAD Ariane, checklist finale MVP, BaseMAD comme couche centrale officielle de continuité, mémoire opérationnelle et gouvernance documentaire, et une base opérationnelle officielle pour guider le fonctionnement quotidien du studio MAD DevOps.
 
-La priorité recommandée est de reprendre le Bloc 10 — Site Web réel MAD DevOps, puis de revenir à l’implémentation MAD Ariane lorsque le repo backend applicatif est disponible.
+La priorité recommandée est de finaliser les validations CHK-015 et CHK-019 du site réel, puis de poursuivre la mise en usage commerciale et les actions opérationnelles reliées à la base MAD DevOps.
