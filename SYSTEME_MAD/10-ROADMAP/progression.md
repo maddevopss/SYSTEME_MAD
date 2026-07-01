@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 2.6
+Version: 2.7
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -201,7 +201,7 @@ Statut : **En cours — suspendu après préparation, à reprendre après MADPRO
 | Checklist CHK-016 créée | Complété |
 | Playbook PLAY-024 créé | Complété |
 | Première passe CHK-016 sur MAD Ariane | Complété — validé avec réserves |
-| Spécification MVP prudente MAD Ariane | À faire |
+| Spécification MVP prudente MAD Ariane | Complété — à spécifier techniquement |
 | Sources explicites à intégrer | À faire |
 
 Statut : **En cours — priorité actuelle**
@@ -210,6 +210,6 @@ Statut : **En cours — priorité actuelle**
 
 ## Statut global
 
-Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, préparation du site Web réel et base MADPROOF cognitive MADSuite.
+Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, préparation du site Web réel, base MADPROOF cognitive MADSuite et première spécification MVP prudente de MAD Ariane.
 
-La priorité actuelle est de transformer MAD Ariane en spécification MVP prudente avant toute communication externe forte ou implémentation publique du positionnement produit.
+La priorité actuelle est de durcir les sources explicites et de transformer le MVP MAD Ariane en spécification technique contrôlée.
