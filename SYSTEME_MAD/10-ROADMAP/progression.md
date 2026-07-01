@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 4.7
+Version: 4.8
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -269,8 +269,24 @@ Statut : **Complété — pont CerveauMAD vers exécution commerciale**
 
 ---
 
+## Bloc 20 — Pipeline commercial CerveauMAD
+
+| Élément | Statut |
+|---|---|
+| Pipeline commercial CerveauMAD | Créé — Actif |
+| Étapes du pipeline | Complété |
+| Première entrée interne | Complété |
+| Format d’ajout rapide | Complété |
+| Revue rapide | Complété |
+| Garde-fous commerciaux | Complété |
+| Raccordement à PLAY-029 | Complété |
+
+Statut : **Actif — suivi des opportunités commerciales**
+
+---
+
 ## Statut global
 
-Le Système MAD dispose maintenant d’une base documentaire complète, de BaseMAD, d’une base opérationnelle, de CerveauMAD, d’un registre actif, d’une revue, d’un tableau de bord, d’un snapshot de reprise et d’un pont vers l’exécution commerciale.
+Le Système MAD dispose maintenant d’une base documentaire complète, de BaseMAD, d’une base opérationnelle, de CerveauMAD, d’un registre actif, d’une revue, d’un tableau de bord, d’un snapshot de reprise, d’un pont vers l’exécution commerciale et d’un pipeline commercial actif.
 
-La priorité recommandée est d’utiliser le registre comme point d’entrée, le snapshot comme reprise rapide, puis PLAY-029 pour transformer les entrées pertinentes en actions commerciales concrètes.
+La priorité recommandée est d’utiliser le registre comme point d’entrée, PLAY-029 comme transformateur commercial et le pipeline commercial CerveauMAD comme suivi des opportunités concrètes.
