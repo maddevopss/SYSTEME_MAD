@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 2.4
+Version: 2.5
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -24,6 +24,7 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | `starter-kit-projet-mad-devops.md` | Template | Kit de démarrage pour projet MAD DevOps. |
 | `template-entree-cerveaumad.md` | Template | Entrée rapide CerveauMAD. |
 | `template-fiche-opportunite-machine-a-clients.md` | Template | Fiche courte pour qualifier une opportunité commerciale issue de CerveauMAD ou du pipeline. |
+| `template-message-offre-courte-mad-devops.md` | Template | Message court d’offre terrain après qualification d’une opportunité. |
 | `template-revue-machine-a-clients.md` | Template | Revue hebdomadaire courte de la machine à clients. |
 | `template-suivi-activation-7-jours-commerciale.md` | Template | Suivi jour par jour d’une activation commerciale de 7 jours. |
 | `template-cadrage-client-mad-devops.md` | Template | Modèle de cadrage client avant proposition. |
@@ -59,16 +60,11 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 
 ## Templates prioritaires
 
-### CerveauMAD
-
-```text
-SYSTEME_MAD/07-TEMPLATES/template-entree-cerveaumad.md
-```
-
 ### Machine à clients
 
 ```text
 SYSTEME_MAD/07-TEMPLATES/template-fiche-opportunite-machine-a-clients.md
+SYSTEME_MAD/07-TEMPLATES/template-message-offre-courte-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-revue-machine-a-clients.md
 SYSTEME_MAD/07-TEMPLATES/template-suivi-activation-7-jours-commerciale.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-qualification-demande-entrante-mad-devops.md
@@ -81,8 +77,15 @@ SYSTEME_MAD/07-TEMPLATES/template-suivis-client-mad-devops.md
 ```text
 SYSTEME_MAD/07-TEMPLATES/template-tableau-pipeline-commercial-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-opportunite-machine-a-clients.md
+SYSTEME_MAD/07-TEMPLATES/template-message-offre-courte-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-revue-machine-a-clients.md
 SYSTEME_MAD/07-TEMPLATES/template-suivi-activation-7-jours-commerciale.md
+```
+
+### CerveauMAD
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-entree-cerveaumad.md
 ```
 
 ### Site Web
@@ -111,6 +114,7 @@ SYSTEME_MAD/07-TEMPLATES/template-tableau-suivi-clients-mad-devops.md
 ```text
 SYSTEME_MAD/07-TEMPLATES/template-entree-cerveaumad.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-opportunite-machine-a-clients.md
+SYSTEME_MAD/07-TEMPLATES/template-message-offre-courte-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-revue-machine-a-clients.md
 SYSTEME_MAD/07-TEMPLATES/template-suivi-activation-7-jours-commerciale.md
 SYSTEME_MAD/07-TEMPLATES/template-revue-hebdomadaire-pilotage-mad-devops.md
