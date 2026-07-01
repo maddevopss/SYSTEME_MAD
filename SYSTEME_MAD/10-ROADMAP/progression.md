@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 4.5
+Version: 4.6
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -235,8 +235,27 @@ Statut : **Actif — pilotage du registre CerveauMAD**
 
 ---
 
+## Bloc 18 — Snapshot de reprise CerveauMAD
+
+| Élément | Statut |
+|---|---|
+| Snapshot de reprise CerveauMAD | Créé — Actif |
+| État actuel du système | Complété |
+| Dernier bloc complété | Complété |
+| Bloc actif recommandé | Complété |
+| Documents à ouvrir pour reprendre | Complété |
+| Risques / bruit à surveiller | Complété |
+| Prochaine action recommandée | Complété |
+| Raccordement à la progression | Complété |
+| Raccordement au registre | Complété |
+| Raccordement au tableau de bord | Complété |
+
+Statut : **Actif — point de reprise opérationnel**
+
+---
+
 ## Statut global
 
-Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, site Web réel V1, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, lots d’implémentation MAD Ariane, checklist finale MVP, BaseMAD comme couche centrale officielle de continuité, mémoire opérationnelle et gouvernance documentaire, une base opérationnelle officielle avec playbook d’application, CerveauMAD comme couche d’intelligence opérationnelle complète avec guide, playbook d’exécution, template d’entrée et checklist de validation, un registre actif pour capter les entrées, une routine de revue pour maintenir ce registre clair, utile et actionnable, ainsi qu’un tableau de bord actif pour piloter les priorités, les blocages, les décisions et les actions.
+Le Système MAD dispose maintenant d’une base documentaire complète, de BaseMAD, d’une base opérationnelle, de CerveauMAD, d’un registre actif, d’une revue, d’un tableau de bord et d’un snapshot de reprise.
 
-La priorité recommandée est d’utiliser le registre CerveauMAD comme point d’entrée unique, de faire une revue régulière avec PLAY-028, puis de maintenir le tableau de bord CerveauMAD comme vue rapide de pilotage.
+La priorité recommandée est d’utiliser le snapshot comme première lecture lors d’une reprise de chantier, puis de maintenir le registre, la revue et le tableau de bord à jour.
