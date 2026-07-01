@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 4.3
+Version: 4.4
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -203,8 +203,22 @@ Statut : **Actif — point d’entrée vivant**
 
 ---
 
+## Bloc 16 — Revue CerveauMAD
+
+| Élément | Statut |
+|---|---|
+| PLAY-028 revue du registre CerveauMAD | Complété — Officiel |
+| Index Playbooks mis à jour | Complété |
+| Raccordement au registre CerveauMAD | Complété |
+| Raccordement à PLAY-027 | Complété |
+| Raccordement à CHK-020 | Complété |
+
+Statut : **Complété — routine de maintien du registre**
+
+---
+
 ## Statut global
 
-Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, site Web réel V1, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, lots d’implémentation MAD Ariane, checklist finale MVP, BaseMAD comme couche centrale officielle de continuité, mémoire opérationnelle et gouvernance documentaire, une base opérationnelle officielle avec playbook d’application, CerveauMAD comme couche d’intelligence opérationnelle complète avec guide, playbook d’exécution, template d’entrée et checklist de validation, ainsi qu’un registre actif pour capter, classer, relier, prioriser, valider et transformer l’information en prochaine action claire.
+Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, site Web réel V1, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, lots d’implémentation MAD Ariane, checklist finale MVP, BaseMAD comme couche centrale officielle de continuité, mémoire opérationnelle et gouvernance documentaire, une base opérationnelle officielle avec playbook d’application, CerveauMAD comme couche d’intelligence opérationnelle complète avec guide, playbook d’exécution, template d’entrée et checklist de validation, un registre actif pour capter les entrées, ainsi qu’une routine de revue pour maintenir ce registre clair, utile et actionnable.
 
-La priorité recommandée est d’utiliser le registre CerveauMAD comme point d’entrée unique pour les nouvelles idées, demandes, risques, décisions et pistes de travail, tout en poursuivant la mise en usage commerciale de MAD DevOps.
+La priorité recommandée est d’utiliser le registre CerveauMAD comme point d’entrée unique pour les nouvelles idées, demandes, risques, décisions et pistes de travail, puis de faire une revue régulière avec PLAY-028 afin d’éviter l’accumulation de bruit.
