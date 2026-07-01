@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 1.9
-Dernière révision: 2026-06-30
+Version: 2.0
+Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -30,6 +30,7 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | `template-reponse-demande-entrante-mad-devops.md` | Template | Réponse à une demande entrante. |
 | `template-fiche-qualification-demande-entrante-mad-devops.md` | Template | Qualification rapide d’une demande entrante. |
 | `template-tableau-pipeline-commercial-mad-devops.md` | Template | Tableau pipeline commercial MAD DevOps. |
+| `template-contenu-site-complet-mad-devops.md` | Template | Contenu complet du site Web MAD DevOps. |
 | `template-demande-temoignage-client-mad-devops.md` | Template | Demande de témoignage client. |
 | `template-autorisation-publication-projet-mad-devops.md` | Template | Autorisation de publication projet. |
 | `template-demande-reference-client-mad-devops.md` | Template | Demande de référence client. |
@@ -54,6 +55,16 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 
 ## Templates prioritaires
 
+### Site Web
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-contenu-site-complet-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-page-accueil-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-a-propos-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-faq-site-web-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-formulaire-contact-mad-devops.md
+```
+
 ### Demandes entrantes
 
 ```text
@@ -71,9 +82,6 @@ SYSTEME_MAD/07-TEMPLATES/template-tableau-pipeline-commercial-mad-devops.md
 ### Présence Web
 
 ```text
-SYSTEME_MAD/07-TEMPLATES/template-page-accueil-mad-devops.md
-SYSTEME_MAD/07-TEMPLATES/template-a-propos-mad-devops.md
-SYSTEME_MAD/07-TEMPLATES/template-faq-site-web-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-etude-de-cas-client-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-projet-public-mad-devops.md
 ```
