@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 2.1
+Version: 2.2
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -30,6 +30,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `communication-commerciale-mad-devops.md` | Officiel | Communication commerciale. |
 | `message-site-web-mad-devops.md` | Officiel | Messages site Web. |
 | `acquisition-clients-mad-devops.md` | Officiel | Acquisition clients. |
+| `demandes-entrantes-mad-devops.md` | Officiel | Réception et orientation des demandes entrantes. |
 | `portfolio-mad-devops.md` | Officiel | Portfolio. |
 | `preuves-sociales-mad-devops.md` | Officiel | Preuves sociales. |
 | `temoignages-references-clients-mad-devops.md` | Officiel | Témoignages et références clients. |
@@ -65,6 +66,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `message-site-web-mad-devops.md`
 - `communication-commerciale-mad-devops.md`
 - `acquisition-clients-mad-devops.md`
+- `demandes-entrantes-mad-devops.md`
 - `portfolio-mad-devops.md`
 - `preuves-sociales-mad-devops.md`
 - `temoignages-references-clients-mad-devops.md`
