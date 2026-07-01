@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 3.4
+Version: 3.5
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -29,6 +29,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `communication-commerciale-mad-devops.md` | Officiel | Communication commerciale. |
 | `acquisition-clients-mad-devops.md` | Officiel | Acquisition clients. |
 | `demandes-entrantes-mad-devops.md` | Officiel | Réception et orientation des demandes entrantes. |
+| `page-guide-client-rapide-mad-devops.md` | Officiel | Cadrage d’une future page Web de consultation rapide client. |
 | `cockpit-commercial-mad-devops.md` | Officiel | Cockpit commercial et suivi du pipeline. |
 | `synthese-chaine-commerciale-mad-devops.md` | Officiel | Synthèse de la chaîne commerciale MAD DevOps. |
 | `routine-commerciale-hebdomadaire-mad-devops.md` | Officiel | Routine commerciale hebdomadaire MAD DevOps. |
@@ -63,6 +64,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ### Commercial, terrain et offres
 
+- `page-guide-client-rapide-mad-devops.md`
 - `offre-simple-mad-devops.md`
 - `offre-terrain-mad-devops.md`
 - `offres-packagees-mad-devops.md`
