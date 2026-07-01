@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 1.9
+Version: 2.0
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -22,27 +22,29 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | Fichier | Statut | Rôle |
 |---|---|---|
 | `vision-long-terme-mad-devops.md` | Officiel | Boussole stratégique long terme de MAD DevOps. |
-| `roadmap-strategique-2026-2027-mad-devops.md` | Officiel | Roadmap stratégique pour transformer la vision en priorités concrètes. |
-| `systeme-operatoire-mad-devops.md` | Officiel | Guide d’utilisation du système opératoire documentaire MAD DevOps. |
-| `decisions-long-terme-mad-devops.md` | Officiel | Guide de décision pour protéger la vision long terme. |
-| `evolution-repo-systeme-mad.md` | Officiel | Guide d’évolution du repo SYSTEME_MAD sans dérive documentaire. |
-| `presence-web-mad-devops.md` | Officiel | Guide de présence Web MAD DevOps. |
-| `communication-commerciale-mad-devops.md` | Officiel | Guide de communication commerciale simple et crédible. |
-| `message-site-web-mad-devops.md` | Officiel | Guide des messages de base du site Web MAD DevOps. |
-| `acquisition-clients-mad-devops.md` | Officiel | Guide d’acquisition clients simple, humaine et soutenable. |
-| `offre-simple-mad-devops.md` | Officiel | Guide de compréhension simple de l’offre MAD DevOps. |
-| `offres-packagees-mad-devops.md` | Officiel | Guide des portes d’entrée commerciales simples. |
-| `parcours-client-mad-devops.md` | Officiel | Cockpit central du parcours client MAD DevOps. |
-| `kit-terrain-parcours-client-mad-devops.md` | Officiel | Kit terrain pour appliquer le parcours client. |
-| `pilotage-client-mad-devops.md` | Officiel | Guide de pilotage client et suivi des prochaines actions. |
-| `routine-hebdomadaire-indicateurs-mad-devops.md` | Brouillon contrôlé | Routine hebdomadaire et indicateurs de pilotage. |
-| `principe-amelioration-continue-mad-devops.md` | Officiel | Principe d’amélioration continue MAD DevOps. |
-| `cockpit-fondateur-mad-devops.md` | Officiel | Point d’entrée opérationnel du fondateur. |
-| `routine-courte-fondateur-lundi-vendredi.md` | Officiel | Routine courte lundi/vendredi. |
-| `fiche-reflexe-fondateur-mad-devops.md` | Officiel | Fiche réflexe ultra-courte. |
-| `exemple-parcours-client-a-z.md` | Exemple | Exemple complet d’un parcours client fictif. |
-| `exemple-semaine-cockpit-fondateur-mad-devops.md` | Exemple | Exemple rempli d’une semaine cockpit fondateur. |
-| `exemple-fiche-reflexe-fondateur-mad-devops.md` | Exemple | Exemple d’utilisation de la fiche réflexe. |
+| `roadmap-strategique-2026-2027-mad-devops.md` | Officiel | Roadmap stratégique. |
+| `systeme-operatoire-mad-devops.md` | Officiel | Système opératoire documentaire. |
+| `decisions-long-terme-mad-devops.md` | Officiel | Décisions long terme. |
+| `evolution-repo-systeme-mad.md` | Officiel | Évolution du repo. |
+| `presence-web-mad-devops.md` | Officiel | Présence Web. |
+| `communication-commerciale-mad-devops.md` | Officiel | Communication commerciale. |
+| `message-site-web-mad-devops.md` | Officiel | Messages site Web. |
+| `acquisition-clients-mad-devops.md` | Officiel | Acquisition clients. |
+| `portfolio-mad-devops.md` | Officiel | Portfolio. |
+| `preuves-sociales-mad-devops.md` | Officiel | Preuves sociales. |
+| `offre-simple-mad-devops.md` | Officiel | Offre simple. |
+| `offres-packagees-mad-devops.md` | Officiel | Offres packagées. |
+| `parcours-client-mad-devops.md` | Officiel | Parcours client. |
+| `kit-terrain-parcours-client-mad-devops.md` | Officiel | Kit terrain parcours client. |
+| `pilotage-client-mad-devops.md` | Officiel | Pilotage client. |
+| `routine-hebdomadaire-indicateurs-mad-devops.md` | Brouillon contrôlé | Routine hebdomadaire. |
+| `principe-amelioration-continue-mad-devops.md` | Officiel | Amélioration continue. |
+| `cockpit-fondateur-mad-devops.md` | Officiel | Cockpit fondateur. |
+| `routine-courte-fondateur-lundi-vendredi.md` | Officiel | Routine courte. |
+| `fiche-reflexe-fondateur-mad-devops.md` | Officiel | Fiche réflexe. |
+| `exemple-parcours-client-a-z.md` | Exemple | Exemple parcours client. |
+| `exemple-semaine-cockpit-fondateur-mad-devops.md` | Exemple | Exemple cockpit fondateur. |
+| `exemple-fiche-reflexe-fondateur-mad-devops.md` | Exemple | Exemple fiche réflexe. |
 
 ---
 
@@ -62,6 +64,8 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `message-site-web-mad-devops.md`
 - `communication-commerciale-mad-devops.md`
 - `acquisition-clients-mad-devops.md`
+- `portfolio-mad-devops.md`
+- `preuves-sociales-mad-devops.md`
 
 ### Comprendre l’offre
 
@@ -82,12 +86,6 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `routine-hebdomadaire-indicateurs-mad-devops.md`
 - `principe-amelioration-continue-mad-devops.md`
 
-### Exemples
-
-- `exemple-parcours-client-a-z.md`
-- `exemple-semaine-cockpit-fondateur-mad-devops.md`
-- `exemple-fiche-reflexe-fondateur-mad-devops.md`
-
 ---
 
 ## Règles d’usage
@@ -95,7 +93,6 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - Lire un guide pour comprendre quelle démarche appliquer.
 - Utiliser ensuite les templates, playbooks et checklists liés.
 - Garder les guides courts lorsque l’objectif est opérationnel.
-- Si un guide devient trop détaillé, extraire les parties actionnables dans un template ou une checklist.
 
 ---
 
