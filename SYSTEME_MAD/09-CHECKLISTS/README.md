@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 1.5
+Version: 1.6
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -36,10 +36,11 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 
 ## Checklists prioritaires
 
-### Qualité documentaire
+### Qualité documentaire et gouvernance
 
 - `chk-002-validation-documentaire.md`
 - `chk-004-validation-systeme-mad.md`
+- `chk-012-validation-bloc-gouvernance-fiabilite-documentaire.md`
 
 ### Parcours, offre et livraison client
 
@@ -82,3 +83,4 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `SYSTEME_MAD/09-CHECKLISTS/chk-009-validation-bloc-offre-commerciale.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-010-validation-bloc-projet-client-livraison.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-011-validation-bloc-amelioration-continue.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-012-validation-bloc-gouvernance-fiabilite-documentaire.md`
