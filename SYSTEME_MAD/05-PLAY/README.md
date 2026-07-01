@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 1.6
+Version: 1.7
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -42,6 +42,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 | `play-019-transformer-livraison-en-preuve-client.md` | Officiel | Transformer une livraison réussie en preuve client. |
 | `play-020-traiter-demande-entrante-mad-devops.md` | Officiel | Traiter une demande entrante MAD DevOps. |
 | `play-021-revue-pipeline-commercial-mad-devops.md` | Officiel | Revue du pipeline commercial MAD DevOps. |
+| `play-022-audit-chaine-commerciale-mad-devops.md` | Officiel | Audit de la chaîne commerciale MAD DevOps. |
 
 ---
 
@@ -64,6 +65,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 ### Cockpit commercial
 
 - `play-021-revue-pipeline-commercial-mad-devops.md`
+- `play-022-audit-chaine-commerciale-mad-devops.md`
 
 ### Présence Web
 
