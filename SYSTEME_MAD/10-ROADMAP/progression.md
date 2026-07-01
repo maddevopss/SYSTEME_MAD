@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 3.7
+Version: 3.8
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -158,7 +158,9 @@ Statut : **Complété**
 | Élément | Statut |
 |---|---|
 | Base opérationnelle MAD DevOps | Complété — Officiel |
+| PLAY-026 appliquer la base opérationnelle | Complété — Officiel |
 | Index Guides mis à jour | Complété |
+| Index Playbooks mis à jour | Complété |
 | Raccordement au pilotage fondateur | Complété |
 | Raccordement à BaseMAD | Complété |
 | Raccordement aux règles de priorité | Complété |
@@ -169,6 +171,6 @@ Statut : **Complété**
 
 ## Statut global
 
-Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, site Web réel V1, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, lots d’implémentation MAD Ariane, checklist finale MVP, BaseMAD comme couche centrale officielle de continuité, mémoire opérationnelle et gouvernance documentaire, et une base opérationnelle officielle pour guider le fonctionnement quotidien du studio MAD DevOps.
+Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, site Web réel V1, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, lots d’implémentation MAD Ariane, checklist finale MVP, BaseMAD comme couche centrale officielle de continuité, mémoire opérationnelle et gouvernance documentaire, ainsi qu’une base opérationnelle officielle avec playbook d’application pour guider le fonctionnement quotidien du studio MAD DevOps.
 
 La priorité recommandée est de finaliser les validations CHK-015 et CHK-019 du site réel, puis de poursuivre la mise en usage commerciale et les actions opérationnelles reliées à la base MAD DevOps.
