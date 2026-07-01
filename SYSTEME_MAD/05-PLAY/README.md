@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 2.4
+Version: 2.5
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -49,6 +49,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 | `play-026-appliquer-base-operationnelle-mad-devops.md` | Officiel | Appliquer la base opérationnelle MAD DevOps pour trier, décider, documenter ou refuser une action. |
 | `play-027-executer-processus-cerveau-mad.md` | Officiel | Exécuter le processus CerveauMAD pour transformer une entrée brute en prochaine action claire. |
 | `play-028-revue-registre-cerveaumad.md` | Officiel | Revoir le registre CerveauMAD pour garder les entrées claires, utiles et actionnables. |
+| `play-029-transformer-entree-cerveaumad-en-action-commerciale.md` | Officiel | Transformer une entrée CerveauMAD en action commerciale claire. |
 
 ---
 
@@ -62,6 +63,14 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 
 - `play-027-executer-processus-cerveau-mad.md`
 - `play-028-revue-registre-cerveaumad.md`
+- `play-029-transformer-entree-cerveaumad-en-action-commerciale.md`
+
+### Activation commerciale
+
+- `play-017-appel-decouverte-commerciale.md`
+- `play-020-traiter-demande-entrante-mad-devops.md`
+- `play-021-revue-pipeline-commercial-mad-devops.md`
+- `play-029-transformer-entree-cerveaumad-en-action-commerciale.md`
 
 ### Base opérationnelle MAD DevOps
 
@@ -101,6 +110,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-026-appliquer-base-operationnelle-mad-devops.md`
 - `play-027-executer-processus-cerveau-mad.md`
 - `play-028-revue-registre-cerveaumad.md`
+- `play-029-transformer-entree-cerveaumad-en-action-commerciale.md`
 
 ---
 
