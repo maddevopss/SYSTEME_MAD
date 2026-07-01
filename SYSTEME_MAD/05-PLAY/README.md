@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 2.0
+Version: 2.1
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -46,6 +46,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 | `play-023-publier-site-web-mad-devops.md` | Officiel | Publier ou mettre à jour le site Web MAD DevOps. |
 | `play-024-transformer-idee-cognitive-en-fonctionnalite-madsuite.md` | Officiel | Transformer une idée cognitive en fonctionnalité MADSuite. |
 | `play-025-transformer-idee-en-element-basemad.md` | Officiel | Transformer une idée en élément BaseMAD. |
+| `play-026-appliquer-base-operationnelle-mad-devops.md` | Officiel | Appliquer la base opérationnelle MAD DevOps pour trier, décider, documenter ou refuser une action. |
 
 ---
 
@@ -54,6 +55,10 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 ### BaseMAD
 
 - `play-025-transformer-idee-en-element-basemad.md`
+
+### Base opérationnelle MAD DevOps
+
+- `play-026-appliquer-base-operationnelle-mad-devops.md`
 
 ### MADSuite cognition / MADPROOF
 
@@ -86,6 +91,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 ### Pilotage MAD DevOps
 
 - `play-016-deploiement-demarche-pilotage-mad-devops.md`
+- `play-026-appliquer-base-operationnelle-mad-devops.md`
 
 ---
 
