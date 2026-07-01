@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 4.4
+Version: 4.5
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -28,6 +28,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `frontiere-public-prive-mad-devops.md` | Officiel | Frontière entre méthode interne et communication publique. |
 | `lexique-public-prive-mad-devops.md` | Officiel | Lexique pour traduire les concepts internes en langage public sécurisé. |
 | `synthese-publication-controlee-mad-devops.md` | Officiel | Synthèse du système de publication publique contrôlée. |
+| `synthese-concordance-commerciale-globale-mad-devops.md` | Officiel | Synthèse de concordance des blocs commerciaux MAD DevOps. |
 | `presence-web-mad-devops.md` | Officiel | Présence Web. |
 | `communication-commerciale-mad-devops.md` | Officiel | Communication commerciale. |
 | `acquisition-clients-mad-devops.md` | Officiel | Acquisition clients. |
@@ -71,6 +72,14 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ## Guides prioritaires
 
+### Concordance commerciale globale
+
+- `synthese-concordance-commerciale-globale-mad-devops.md`
+- `synthese-publication-controlee-mad-devops.md`
+- `synthese-chaine-demandes-entrantes-mad-devops.md`
+- `synthese-traitement-demandes-entrantes-mad-devops.md`
+- `synthese-chaine-commerciale-mad-devops.md`
+
 ### Demandes entrantes
 
 - `synthese-chaine-demandes-entrantes-mad-devops.md`
@@ -93,6 +102,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ### Commercial, terrain et offres
 
+- `synthese-concordance-commerciale-globale-mad-devops.md`
 - `synthese-chaine-demandes-entrantes-mad-devops.md`
 - `synthese-traitement-demandes-entrantes-mad-devops.md`
 - `frontiere-public-prive-mad-devops.md`
