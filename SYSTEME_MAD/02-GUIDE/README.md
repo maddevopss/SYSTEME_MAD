@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 2.0
+Version: 2.1
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -32,6 +32,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `acquisition-clients-mad-devops.md` | Officiel | Acquisition clients. |
 | `portfolio-mad-devops.md` | Officiel | Portfolio. |
 | `preuves-sociales-mad-devops.md` | Officiel | Preuves sociales. |
+| `temoignages-references-clients-mad-devops.md` | Officiel | Témoignages et références clients. |
 | `offre-simple-mad-devops.md` | Officiel | Offre simple. |
 | `offres-packagees-mad-devops.md` | Officiel | Offres packagées. |
 | `parcours-client-mad-devops.md` | Officiel | Parcours client. |
@@ -66,6 +67,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `acquisition-clients-mad-devops.md`
 - `portfolio-mad-devops.md`
 - `preuves-sociales-mad-devops.md`
+- `temoignages-references-clients-mad-devops.md`
 
 ### Comprendre l’offre
 
