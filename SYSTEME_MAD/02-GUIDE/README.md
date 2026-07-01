@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 2.4
+Version: 2.5
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -33,6 +33,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `demandes-entrantes-mad-devops.md` | Officiel | Réception et orientation des demandes entrantes. |
 | `cockpit-commercial-mad-devops.md` | Officiel | Cockpit commercial et suivi du pipeline. |
 | `synthese-chaine-commerciale-mad-devops.md` | Officiel | Synthèse de la chaîne commerciale MAD DevOps. |
+| `routine-commerciale-hebdomadaire-mad-devops.md` | Officiel | Routine commerciale hebdomadaire MAD DevOps. |
 | `portfolio-mad-devops.md` | Officiel | Portfolio. |
 | `preuves-sociales-mad-devops.md` | Officiel | Preuves sociales. |
 | `temoignages-references-clients-mad-devops.md` | Officiel | Témoignages et références clients. |
@@ -71,6 +72,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `demandes-entrantes-mad-devops.md`
 - `cockpit-commercial-mad-devops.md`
 - `synthese-chaine-commerciale-mad-devops.md`
+- `routine-commerciale-hebdomadaire-mad-devops.md`
 - `portfolio-mad-devops.md`
 - `preuves-sociales-mad-devops.md`
 - `temoignages-references-clients-mad-devops.md`
@@ -91,6 +93,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `fiche-reflexe-fondateur-mad-devops.md`
 - `routine-courte-fondateur-lundi-vendredi.md`
 - `cockpit-fondateur-mad-devops.md`
+- `routine-commerciale-hebdomadaire-mad-devops.md`
 - `routine-hebdomadaire-indicateurs-mad-devops.md`
 - `principe-amelioration-continue-mad-devops.md`
 
