@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 2.7
+Version: 2.8
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -52,10 +52,16 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 | `play-029-transformer-entree-cerveaumad-en-action-commerciale.md` | Officiel | Entrée CerveauMAD vers action commerciale. |
 | `play-030-routine-hebdomadaire-machine-a-clients.md` | Officiel | Routine hebdomadaire commerciale. |
 | `play-031-activation-7-jours-commerciale.md` | Officiel | Activation commerciale terrain sur 7 jours. |
+| `play-032-traiter-contenu-public-candidat.md` | Officiel | Traiter un contenu public candidat. |
 
 ---
 
 ## Playbooks prioritaires
+
+### Publication contrôlée
+
+- `play-032-traiter-contenu-public-candidat.md`
+- `play-023-publier-site-web-mad-devops.md`
 
 ### CerveauMAD
 
@@ -64,6 +70,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-029-transformer-entree-cerveaumad-en-action-commerciale.md`
 - `play-030-routine-hebdomadaire-machine-a-clients.md`
 - `play-031-activation-7-jours-commerciale.md`
+- `play-032-traiter-contenu-public-candidat.md`
 
 ### Activation commerciale
 
@@ -73,6 +80,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-029-transformer-entree-cerveaumad-en-action-commerciale.md`
 - `play-030-routine-hebdomadaire-machine-a-clients.md`
 - `play-031-activation-7-jours-commerciale.md`
+- `play-032-traiter-contenu-public-candidat.md`
 
 ### Pilotage MAD DevOps
 
@@ -83,6 +91,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-029-transformer-entree-cerveaumad-en-action-commerciale.md`
 - `play-030-routine-hebdomadaire-machine-a-clients.md`
 - `play-031-activation-7-jours-commerciale.md`
+- `play-032-traiter-contenu-public-candidat.md`
 
 ---
 
