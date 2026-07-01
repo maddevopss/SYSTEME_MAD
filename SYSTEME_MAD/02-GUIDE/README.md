@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 4.2
+Version: 4.3
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -52,6 +52,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `exemple-fiche-contenu-public-guide-client.md` | Exemple | Exemple rempli de fiche contenu public candidat pour le Guide client. |
 | `exemple-demande-entrante-qualification-reponse.md` | Exemple | Exemple complet de demande entrante, qualification, réponse et opportunité. |
 | `exemple-fermeture-demande-entrante.md` | Exemple | Exemple de fermeture propre, refus poli ou report d’une demande entrante. |
+| `exemple-report-demande-entrante.md` | Exemple | Exemple de report propre d’une demande entrante. |
 | `exemple-parcours-client-a-z.md` | Exemple | Exemple parcours client. |
 | `vision-long-terme-mad-devops.md` | Officiel | Boussole stratégique long terme de MAD DevOps. |
 | `roadmap-strategique-2026-2027-mad-devops.md` | Officiel | Roadmap stratégique. |
@@ -75,6 +76,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `demandes-entrantes-mad-devops.md`
 - `exemple-demande-entrante-qualification-reponse.md`
 - `exemple-fermeture-demande-entrante.md`
+- `exemple-report-demande-entrante.md`
 - `offre-terrain-mad-devops.md`
 - `frontiere-public-prive-mad-devops.md`
 - `lexique-public-prive-mad-devops.md`
@@ -106,6 +108,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `exemple-fiche-contenu-public-guide-client.md`
 - `exemple-demande-entrante-qualification-reponse.md`
 - `exemple-fermeture-demande-entrante.md`
+- `exemple-report-demande-entrante.md`
 
 ### BaseMAD, CerveauMAD et base opérationnelle
 
