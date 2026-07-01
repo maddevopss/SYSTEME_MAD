@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 2.0
+Version: 2.1
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -22,6 +22,7 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | Fichier | Statut | Rôle |
 |---|---|---|
 | `starter-kit-projet-mad-devops.md` | Template | Kit de démarrage pour projet MAD DevOps. |
+| `template-entree-cerveaumad.md` | Template | Entrée rapide CerveauMAD pour transformer une information brute en prochaine action claire, trace utile ou refus assumé. |
 | `template-cadrage-client-mad-devops.md` | Template | Modèle de cadrage client avant proposition. |
 | `template-proposition-client-mad-devops.md` | Template | Modèle de proposition client claire et professionnelle. |
 | `template-suivis-client-mad-devops.md` | Template | Messages de suivi client. |
@@ -54,6 +55,12 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 ---
 
 ## Templates prioritaires
+
+### CerveauMAD
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-entree-cerveaumad.md
+```
 
 ### Site Web
 
@@ -114,6 +121,7 @@ SYSTEME_MAD/07-TEMPLATES/template-tableau-suivi-clients-mad-devops.md
 ### Pilotage MAD DevOps
 
 ```text
+SYSTEME_MAD/07-TEMPLATES/template-entree-cerveaumad.md
 SYSTEME_MAD/07-TEMPLATES/template-revue-hebdomadaire-pilotage-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-lancement-pilotage-solo-micro-equipe-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-journal-bord-hebdomadaire-mad-devops.md
