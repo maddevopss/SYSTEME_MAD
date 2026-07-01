@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -38,6 +38,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 | `play-015-qualification-phase-0-client.md` | Officiel | Qualification d’un besoin client et décision Phase 0. |
 | `play-016-deploiement-demarche-pilotage-mad-devops.md` | Officiel | Déploiement avancé d’une démarche de pilotage MAD DevOps dans une organisation de services professionnels. |
 | `play-017-appel-decouverte-commerciale.md` | Officiel | Appel découverte commerciale sans jargon ni vente trop rapide. |
+| `play-018-mise-a-jour-site-web-mad-devops.md` | Officiel | Mise à jour du site Web MAD DevOps sans perdre la clarté du positionnement. |
 
 ---
 
@@ -54,6 +55,10 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-014-decouverte-client-mad-devops.md`
 - `play-015-qualification-phase-0-client.md`
 - `play-017-appel-decouverte-commerciale.md`
+
+### Présence Web
+
+- `play-018-mise-a-jour-site-web-mad-devops.md`
 
 ### Pilotage MAD DevOps
 
