@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 3.0
+Version: 3.1
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -202,9 +202,10 @@ Statut : **En cours — suspendu après préparation, à reprendre après MADPRO
 | Playbook PLAY-024 créé | Complété |
 | Première passe CHK-016 sur MAD Ariane | Complété — validé avec réserves |
 | Spécification MVP prudente MAD Ariane | Complété |
-| Spécification technique contrôlée MAD Ariane | Complété — à valider |
+| Spécification technique contrôlée MAD Ariane | Complété — ajustée après validation simulée |
 | Plan de tests produit MAD Ariane | Complété — validation réelle à faire |
 | Sources explicites MAD Ariane | Complété — à valider |
+| Validation produit simulée MAD Ariane | Complété |
 | Tests produit réels MAD Ariane | À faire |
 
 Statut : **En cours — priorité actuelle**
@@ -213,6 +214,6 @@ Statut : **En cours — priorité actuelle**
 
 ## Statut global
 
-Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, préparation du site Web réel, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, spécification technique contrôlée MAD Ariane, plan de tests produit MAD Ariane et sources explicites d’appui.
+Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, préparation du site Web réel, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, spécification technique contrôlée ajustée, plan de tests produit, sources explicites et première validation simulée.
 
-La priorité actuelle est d’exécuter une première validation produit simulée de MAD Ariane, puis d’ajuster la spécification selon les résultats.
+La priorité actuelle est d’exécuter des tests produit réels ou de préparer le backlog d’implémentation MAD Ariane.
