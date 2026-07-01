@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 2.2
+Version: 2.3
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -168,10 +168,27 @@ Statut : **En cours**
 
 ---
 
+## Bloc 10 — Site Web réel MAD DevOps
+
+| Élément | Statut |
+|---|---|
+| Architecture site Web | Complété |
+| Contenu complet du site | Complété |
+| Playbook publication site Web | Complété |
+| Checklist validation site Web | Complété |
+| Index Guides mis à jour | Complété |
+| Index Templates mis à jour | Complété |
+| Index Playbooks mis à jour | Complété |
+| Index Checklists mis à jour | Complété |
+| Implémentation réelle du site | À faire |
+| Validation CHK-015 sur le site réel | À faire |
+
+Statut : **En cours**
+
+---
+
 ## Statut global
 
-Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio et audit de chaîne commerciale.
+Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale et préparation complète du site Web réel.
 
-La mise en usage commerciale est commencée : routine hebdomadaire créée, cockpit fondateur raccordé, pipeline initialisé et première revue pipeline effectuée.
-
-La prochaine action recommandée est d’ajouter de vrais prospects au pipeline, puis d’effectuer une première passe `CHK-014`.
+La prochaine action recommandée est de transformer le contenu du site en implémentation concrète, puis de valider le site avec `CHK-015`.
