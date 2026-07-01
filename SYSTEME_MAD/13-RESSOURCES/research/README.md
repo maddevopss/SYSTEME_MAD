@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Recherche MADSuite
-Version: 1.3
+Version: 1.4
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -57,6 +57,7 @@ SYSTEME_MAD/13-RESSOURCES/research/
 | `001-synthese-cognitive-madsuite.md` | `03-madproof/` | À valider | Synthèse MADPROOF des axes cognitifs MADSuite. |
 | `002-matrice-claims-cognitifs-madsuite.md` | `03-madproof/` | À valider | Matrice de contrôle des claims cognitifs MADSuite. |
 | `003-validation-mad-ariane-chk-016.md` | `03-madproof/` | À valider | Première validation CHK-016 du module MAD Ariane. |
+| `004-sources-explicites-mad-ariane.md` | `03-madproof/` | À valider | Sources d’appui explicites pour MAD Ariane. |
 
 ---
 
@@ -112,4 +113,4 @@ Contient les documents historiques ou remplacés.
 
 ## Prochaine action recommandée
 
-Créer une spécification MVP prudente pour MAD Ariane ou durcir les sources explicites de la validation CHK-016.
+Exécuter une première validation produit simulée de MAD Ariane à partir du plan de tests produit.
