@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 3.7
+Version: 3.8
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -26,6 +26,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `base-operationnelle-mad-devops.md` | Officiel | Base de fonctionnement opérationnel quotidien du studio MAD DevOps. |
 | `base-uiux-accessible-cognitive-mad-devops.md` | Officiel | Base interne de conception UI/UX accessible et cognitive. |
 | `frontiere-public-prive-mad-devops.md` | Officiel | Frontière entre méthode interne et communication publique. |
+| `lexique-public-prive-mad-devops.md` | Officiel | Lexique pour traduire les concepts internes en langage public sécurisé. |
 | `presence-web-mad-devops.md` | Officiel | Présence Web. |
 | `communication-commerciale-mad-devops.md` | Officiel | Communication commerciale. |
 | `acquisition-clients-mad-devops.md` | Officiel | Acquisition clients. |
@@ -67,6 +68,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 ### Commercial, terrain et offres
 
 - `frontiere-public-prive-mad-devops.md`
+- `lexique-public-prive-mad-devops.md`
 - `page-guide-client-rapide-mad-devops.md`
 - `offre-simple-mad-devops.md`
 - `offre-terrain-mad-devops.md`
