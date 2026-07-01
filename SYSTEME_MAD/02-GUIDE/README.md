@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 1.4
+Version: 1.5
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -22,6 +22,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | Fichier | Statut | Rôle |
 |---|---|---|
 | `vision-long-terme-mad-devops.md` | Officiel | Boussole stratégique long terme de MAD DevOps. |
+| `roadmap-strategique-2026-2027-mad-devops.md` | Officiel | Roadmap stratégique pour transformer la vision en priorités concrètes. |
 | `offre-simple-mad-devops.md` | Officiel | Guide de compréhension simple de l’offre MAD DevOps. |
 | `offres-packagees-mad-devops.md` | Officiel | Guide des portes d’entrée commerciales simples. |
 | `parcours-client-mad-devops.md` | Officiel | Cockpit central du parcours client MAD DevOps. |
@@ -43,6 +44,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 ### Vision stratégique
 
 - `vision-long-terme-mad-devops.md`
+- `roadmap-strategique-2026-2027-mad-devops.md`
 
 ### Comprendre l’offre
 
