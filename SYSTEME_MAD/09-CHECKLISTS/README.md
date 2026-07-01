@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 2.6
+Version: 2.7
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -42,24 +42,26 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-021-validation-opportunite-machine-a-clients.md` | Officiel | Validation d’une opportunité Machine à clients. |
 | `chk-022-validation-activation-commerciale-7-jours.md` | Officiel | Validation d’une activation commerciale de 7 jours. |
 | `chk-023-validation-mesures-execution-commerciale.md` | Officiel | Validation des mesures d’exécution commerciale. |
+| `chk-024-validation-offre-terrain-mad-devops.md` | Officiel | Validation d’une offre terrain MAD DevOps. |
 
 ---
 
 ## Checklists prioritaires
-
-### BaseMAD
-
-- `chk-018-validation-entree-basemad.md`
-
-### CerveauMAD
-
-- `chk-020-validation-entree-cerveaumad.md`
 
 ### Machine à clients
 
 - `chk-021-validation-opportunite-machine-a-clients.md`
 - `chk-022-validation-activation-commerciale-7-jours.md`
 - `chk-023-validation-mesures-execution-commerciale.md`
+- `chk-024-validation-offre-terrain-mad-devops.md`
+
+### CerveauMAD
+
+- `chk-020-validation-entree-cerveaumad.md`
+
+### BaseMAD
+
+- `chk-018-validation-entree-basemad.md`
 
 ### MADSuite cognition / MADPROOF
 
@@ -86,8 +88,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-013-validation-bloc-cockpit-commercial.md`
 - `chk-014-audit-chaine-commerciale-mad-devops.md`
 - `chk-021-validation-opportunite-machine-a-clients.md`
-- `chk-022-validation-activation-commerciale-7-jours.md`
-- `chk-023-validation-mesures-execution-commerciale.md`
+- `chk-024-validation-offre-terrain-mad-devops.md`
 
 ### Pilotage et amélioration MAD DevOps
 
@@ -98,6 +99,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-021-validation-opportunite-machine-a-clients.md`
 - `chk-022-validation-activation-commerciale-7-jours.md`
 - `chk-023-validation-mesures-execution-commerciale.md`
+- `chk-024-validation-offre-terrain-mad-devops.md`
 
 ---
 
@@ -120,3 +122,4 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `SYSTEME_MAD/09-CHECKLISTS/chk-021-validation-opportunite-machine-a-clients.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-022-validation-activation-commerciale-7-jours.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-023-validation-mesures-execution-commerciale.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-024-validation-offre-terrain-mad-devops.md`
