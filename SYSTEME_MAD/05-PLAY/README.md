@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 1.8
+Version: 1.9
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -44,10 +44,15 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 | `play-021-revue-pipeline-commercial-mad-devops.md` | Officiel | Revue du pipeline commercial MAD DevOps. |
 | `play-022-audit-chaine-commerciale-mad-devops.md` | Officiel | Audit de la chaîne commerciale MAD DevOps. |
 | `play-023-publier-site-web-mad-devops.md` | Officiel | Publier ou mettre à jour le site Web MAD DevOps. |
+| `play-024-transformer-idee-cognitive-en-fonctionnalite-madsuite.md` | Officiel | Transformer une idée cognitive en fonctionnalité MADSuite. |
 
 ---
 
 ## Playbooks prioritaires
+
+### MADSuite cognition / MADPROOF
+
+- `play-024-transformer-idee-cognitive-en-fonctionnalite-madsuite.md`
 
 ### Site Web
 
@@ -95,4 +100,4 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `SYSTEME_MAD/03-STANDARDS/README.md`
 - `SYSTEME_MAD/07-TEMPLATES/README.md`
 - `SYSTEME_MAD/09-CHECKLISTS/README.md`
-- `SYSTEME_MAD/13-RESSOURCES/research/001-pilotage-routine-indicateurs-sources.md`
+- `SYSTEME_MAD/13-RESSOURCES/research/README.md`
