@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 3.1
+Version: 3.2
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -54,6 +54,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `fiche-reflexe-fondateur-mad-devops.md` | Officiel | Fiche réflexe. |
 | `exemple-parcours-client-a-z.md` | Exemple | Exemple parcours client. |
 | `exemple-revue-commerciale.md` | Exemple | Exemple court de revue commerciale hebdomadaire. |
+| `exemple-activation-commerciale-7-jours.md` | Exemple | Exemple court d’activation commerciale 7 jours. |
 | `exemple-semaine-cockpit-fondateur-mad-devops.md` | Exemple | Exemple cockpit fondateur. |
 | `exemple-fiche-reflexe-fondateur-mad-devops.md` | Exemple | Exemple fiche réflexe. |
 
@@ -88,6 +89,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-commerciale-mad-devops.md`
 - `routine-commerciale-hebdomadaire-mad-devops.md`
 - `exemple-revue-commerciale.md`
+- `exemple-activation-commerciale-7-jours.md`
 - `portfolio-mad-devops.md`
 - `preuves-sociales-mad-devops.md`
 - `temoignages-references-clients-mad-devops.md`
@@ -113,6 +115,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `routine-commerciale-hebdomadaire-mad-devops.md`
 - `routine-hebdomadaire-indicateurs-mad-devops.md`
 - `exemple-revue-commerciale.md`
+- `exemple-activation-commerciale-7-jours.md`
 - `principe-amelioration-continue-mad-devops.md`
 
 ---
