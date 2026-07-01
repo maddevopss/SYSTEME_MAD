@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Cockpit fondateur MAD DevOps
-Version: 1.5
+Version: 1.6
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -87,7 +87,7 @@ Situation complexe : cockpit complet.
 | Amélioration continue | `principe-amelioration-continue-mad-devops.md` | Comprendre comment le système apprend sans se complexifier. |
 | Registre des améliorations | `template-registre-ameliorations-systeme-mad-devops.md` | Prioriser ce qui est retenu, reporté, fait ou abandonné. |
 | Fermer le bloc amélioration continue | `chk-011-validation-bloc-amelioration-continue.md` | Valider que le système apprend sans devenir lourd. |
-
+| Fermer le bloc gouvernance documentaire | `chk-012-validation-bloc-gouvernance-fiabilite-documentaire.md` | Valider que le système reste fiable, traçable et maintenable. |
 
 ---
 
