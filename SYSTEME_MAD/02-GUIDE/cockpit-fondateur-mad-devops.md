@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Cockpit fondateur MAD DevOps
-Version: 1.7
-Dernière révision: 2026-06-30
+Version: 1.8
+Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -13,7 +13,7 @@ Auteur: Marc-André Dufour
 
 Ce guide sert de point d’entrée opérationnel pour le fondateur de MAD DevOps.
 
-Il indique quel document ouvrir selon la situation : début de semaine, fin de semaine, nouveau client, demande entrante, pipeline commercial, projet actif, livraison, blocage, opportunité sans suite ou apprentissage.
+Il indique quel document ouvrir selon la situation : journée normale, début de semaine, fin de semaine, nouveau client, demande entrante, pipeline commercial, projet actif, livraison, blocage, opportunité sans suite ou apprentissage.
 
 Le but est simple :
 
@@ -43,6 +43,7 @@ Plus clarifier.
 ## Entrée graduée
 
 ```text
+Aujourd’hui : routine quotidienne.
 Dans le jus : fiche réflexe.
 Semaine normale : routine courte.
 Commercial actif : routine commerciale.
@@ -51,6 +52,7 @@ Situation complexe : cockpit complet.
 
 | Niveau | Document | Quand l’utiliser |
 |---|---|---|
+| Quotidien | `routine-quotidienne-fondateur-mad-devops.md` | Pour savoir quoi faire aujourd’hui sans ouvrir tout le système. |
 | Réflexe | `fiche-reflexe-fondateur-mad-devops.md` | Quand il faut savoir quoi faire immédiatement. |
 | Routine courte | `routine-courte-fondateur-lundi-vendredi.md` | Pour piloter lundi et vendredi sans ouvrir tout le système. |
 | Routine commerciale | `routine-commerciale-hebdomadaire-mad-devops.md` | Pour suivre pipeline, relances, demandes entrantes et preuves client. |
@@ -62,6 +64,7 @@ Situation complexe : cockpit complet.
 
 | Situation | Document à ouvrir | Résultat attendu |
 |---|---|---|
+| Aujourd’hui | `routine-quotidienne-fondateur-mad-devops.md` | Choisir les actions utiles de la journée. |
 | Dans le jus | `fiche-reflexe-fondateur-mad-devops.md` | Savoir quoi faire sans réfléchir trop longtemps. |
 | Routine lundi / vendredi | `routine-courte-fondateur-lundi-vendredi.md` | Piloter sans ouvrir tout le système. |
 | Routine commerciale hebdomadaire | `routine-commerciale-hebdomadaire-mad-devops.md` | Savoir quoi faire chaque jour côté commercial. |
@@ -104,7 +107,34 @@ Situation complexe : cockpit complet.
 
 ---
 
-# 2. Routine de début de semaine
+# 2. Routine quotidienne
+
+## Ouvrir d’abord
+
+```text
+SYSTEME_MAD/02-GUIDE/routine-quotidienne-fondateur-mad-devops.md
+```
+
+## Questions
+
+```text
+Quelle est l’action client la plus importante aujourd’hui ?
+Quelle demande entrante doit recevoir une réponse ou une décision ?
+Quelle opportunité commerciale a besoin d’une prochaine action ?
+Quel risque ou blocage doit être réduit aujourd’hui ?
+Quelle petite amélioration système vaut vraiment la peine ?
+```
+
+## Résultat attendu
+
+- 1 action client prioritaire;
+- 1 action commerciale ou demande entrante;
+- 1 risque ou blocage à réduire;
+- 1 mini-action système seulement si réaliste.
+
+---
+
+# 3. Routine de début de semaine
 
 ## Option courte
 
@@ -148,7 +178,7 @@ Quelle amélioration système est réaliste cette semaine ?
 
 ---
 
-# 3. Routine de fin de semaine
+# 4. Routine de fin de semaine
 
 ## Option courte
 
@@ -192,7 +222,7 @@ Quelle petite action peut améliorer la prochaine semaine ?
 
 ---
 
-# 4. Quand une demande entrante arrive
+# 5. Quand une demande entrante arrive
 
 ## Ouvrir d’abord
 
@@ -217,7 +247,7 @@ SYSTEME_MAD/07-TEMPLATES/template-reponse-demande-entrante-mad-devops.md
 
 ---
 
-# 5. Quand un nouveau client arrive
+# 6. Quand un nouveau client arrive
 
 ## Ouvrir d’abord
 
@@ -249,198 +279,11 @@ SYSTEME_MAD/05-PLAY/play-015-qualification-phase-0-client.md
 
 ---
 
-# 6. Quand un mandat démarre
+# 7. Quand un mandat démarre
 
 ## Ouvrir
 
 ```text
 SYSTEME_MAD/07-TEMPLATES/starter-kit-projet-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-projet-client-mad-devops.md
-```
-
-## Questions
-
-```text
-Quel problème règle-t-on ?
-Pour qui ?
-Quelle est la première version utile ?
-Qu’est-ce qui est hors périmètre ?
-Comment saura-t-on que c’est réussi ?
-Quelle est la prochaine action ?
-```
-
-## Résultat attendu
-
-- projet démarré proprement;
-- fiche projet créée;
-- périmètre visible;
-- risques documentés;
-- décisions importantes suivies.
-
----
-
-# 7. Quand un projet bloque
-
-## Ouvrir
-
-```text
-SYSTEME_MAD/07-TEMPLATES/template-fiche-projet-client-mad-devops.md
-SYSTEME_MAD/07-TEMPLATES/template-journal-bord-hebdomadaire-mad-devops.md
-```
-
-## Questions
-
-```text
-Le blocage vient-il du besoin ?
-Du périmètre ?
-D’un accès ?
-D’une validation client ?
-D’une décision non documentée ?
-D’un template faible ?
-```
-
-## Décision possible
-
-- clarifier avec le client;
-- mettre à jour le périmètre;
-- documenter une décision;
-- créer une amélioration système;
-- reporter une demande en phase future.
-
----
-
-# 8. Avant une livraison
-
-## Ouvrir
-
-```text
-SYSTEME_MAD/09-CHECKLISTS/chk-003-livraison-client.md
-SYSTEME_MAD/07-TEMPLATES/template-suivis-client-mad-devops.md
-```
-
-## Questions
-
-```text
-Le parcours principal fonctionne-t-il ?
-Les limites connues sont-elles documentées ?
-Le client sait-il quoi valider ?
-La note de livraison est-elle claire ?
-```
-
-## Résultat attendu
-
-- livraison validée;
-- limites nommées;
-- message client prêt;
-- prochaine action claire.
-
----
-
-# 9. Quand une livraison peut devenir une preuve client
-
-## Ouvrir
-
-```text
-SYSTEME_MAD/05-PLAY/play-019-transformer-livraison-en-preuve-client.md
-SYSTEME_MAD/02-GUIDE/temoignages-references-clients-mad-devops.md
-SYSTEME_MAD/02-GUIDE/portfolio-mad-devops.md
-```
-
-## Résultat attendu
-
-- témoignage demandé si pertinent;
-- autorisation vérifiée;
-- fiche publique ou étude de cas préparée;
-- aucune donnée sensible exposée.
-
----
-
-# 10. Quand une opportunité tombe sans suite
-
-## Ouvrir
-
-```text
-SYSTEME_MAD/07-TEMPLATES/template-fiche-apprentissage-opportunite-mad-devops.md
-```
-
-## Questions
-
-```text
-Qu’est-ce qui a été compris ?
-Qu’est-ce qui est resté flou ?
-Pourquoi la suite n’a pas avancé ?
-Qu’est-ce qui était sous contrôle MAD DevOps ?
-Quelle amélioration garde-t-on ?
-```
-
-## Résultat attendu
-
-- apprentissage sans blâme;
-- signal de prudence conservé;
-- amélioration potentielle identifiée;
-- opportunité fermée proprement.
-
----
-
-# 11. Quand le système devient lourd
-
-## Ouvrir
-
-```text
-SYSTEME_MAD/09-CHECKLISTS/chk-006-deploiement-pilotage-mad-devops.md
-```
-
-## Questions
-
-```text
-Quel document est trop lourd ?
-Quelle métrique ne sert plus ?
-Quel rituel crée plus de stress que de clarté ?
-Quel template peut être simplifié ?
-Qu’est-ce qui peut être retiré sans perdre la qualité ?
-```
-
-## Règle
-
-```text
-Un système MAD DevOps doit aider à agir.
-S’il devient une charge, il doit être simplifié.
-```
-
----
-
-# 12. Ordre minimal hebdomadaire
-
-Si la semaine est chargée, ne pas tout ouvrir.
-
-Ouvrir seulement :
-
-```text
-1. fiche-reflexe-fondateur-mad-devops.md
-2. routine-commerciale-hebdomadaire-mad-devops.md
-3. template-tableau-pipeline-commercial-mad-devops.md
-4. template-journal-bord-hebdomadaire-mad-devops.md
-```
-
-## Minimum viable
-
-```text
-1 relance.
-1 prochaine action commerciale.
-1 risque.
-1 apprentissage ou célébration.
-```
-
----
-
-## Critère de réussite
-
-Le cockpit est utile si, en moins de quelques minutes, il permet de savoir :
-
-```text
-Où regarder ?
-Quel document ouvrir ?
-Quelle décision prendre ?
-Quelle prochaine action poser ?
-Quel apprentissage conserver ?
 ```
