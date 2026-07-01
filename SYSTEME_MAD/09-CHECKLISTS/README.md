@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 2.2
+Version: 2.3
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -38,6 +38,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-016-validation-madproof-cognitif-madsuite.md` | Officiel | Validation MADPROOF cognitive MADSuite. |
 | `chk-017-validation-mvp-mad-ariane.md` | Officiel | Validation finale MVP MAD Ariane. |
 | `chk-018-validation-entree-basemad.md` | Officiel | Validation d’entrée BaseMAD. |
+| `chk-020-validation-entree-cerveaumad.md` | Officiel | Validation d’une entrée CerveauMAD : clarté, classement, raccordement, priorité, prochaine action et trace. |
 
 ---
 
@@ -46,6 +47,10 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 ### BaseMAD
 
 - `chk-018-validation-entree-basemad.md`
+
+### CerveauMAD
+
+- `chk-020-validation-entree-cerveaumad.md`
 
 ### MADSuite cognition / MADPROOF
 
@@ -77,6 +82,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-006-deploiement-pilotage-mad-devops.md`
 - `chk-007-validation-bloc-pilotage-fondateur.md`
 - `chk-011-validation-bloc-amelioration-continue.md`
+- `chk-020-validation-entree-cerveaumad.md`
 
 ---
 
@@ -101,3 +107,4 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `SYSTEME_MAD/09-CHECKLISTS/chk-016-validation-madproof-cognitif-madsuite.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-017-validation-mvp-mad-ariane.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-018-validation-entree-basemad.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-020-validation-entree-cerveaumad.md`
