@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 1.7
+Version: 1.8
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -26,6 +26,9 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `systeme-operatoire-mad-devops.md` | Officiel | Guide d’utilisation du système opératoire documentaire MAD DevOps. |
 | `decisions-long-terme-mad-devops.md` | Officiel | Guide de décision pour protéger la vision long terme. |
 | `evolution-repo-systeme-mad.md` | Officiel | Guide d’évolution du repo SYSTEME_MAD sans dérive documentaire. |
+| `communication-commerciale-mad-devops.md` | Officiel | Guide de communication commerciale simple et crédible. |
+| `message-site-web-mad-devops.md` | Officiel | Guide des messages de base du site Web MAD DevOps. |
+| `acquisition-clients-mad-devops.md` | Officiel | Guide d’acquisition clients simple, humaine et soutenable. |
 | `offre-simple-mad-devops.md` | Officiel | Guide de compréhension simple de l’offre MAD DevOps. |
 | `offres-packagees-mad-devops.md` | Officiel | Guide des portes d’entrée commerciales simples. |
 | `parcours-client-mad-devops.md` | Officiel | Cockpit central du parcours client MAD DevOps. |
@@ -51,6 +54,12 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `systeme-operatoire-mad-devops.md`
 - `decisions-long-terme-mad-devops.md`
 - `evolution-repo-systeme-mad.md`
+
+### Acquisition et communication
+
+- `communication-commerciale-mad-devops.md`
+- `message-site-web-mad-devops.md`
+- `acquisition-clients-mad-devops.md`
 
 ### Comprendre l’offre
 
