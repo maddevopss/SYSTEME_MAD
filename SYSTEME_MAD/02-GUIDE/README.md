@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -30,6 +30,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `principe-amelioration-continue-mad-devops.md` | Officiel | Principe d’amélioration continue MAD DevOps. |
 | `cockpit-fondateur-mad-devops.md` | Officiel | Point d’entrée opérationnel du fondateur : quel document ouvrir selon la situation. |
 | `routine-courte-fondateur-lundi-vendredi.md` | Officiel | Routine courte lundi/vendredi pour piloter sans ouvrir tout le système. |
+| `fiche-reflexe-fondateur-mad-devops.md` | Officiel | Fiche réflexe ultra-courte : situation, réflexe, document à ouvrir. |
 | `exemple-parcours-client-a-z.md` | Exemple | Exemple complet d’un parcours client fictif. |
 | `exemple-semaine-cockpit-fondateur-mad-devops.md` | Exemple | Exemple rempli d’une semaine cockpit fondateur. |
 
@@ -50,8 +51,9 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ### Pilotage fondateur
 
-- `cockpit-fondateur-mad-devops.md`
+- `fiche-reflexe-fondateur-mad-devops.md`
 - `routine-courte-fondateur-lundi-vendredi.md`
+- `cockpit-fondateur-mad-devops.md`
 - `routine-hebdomadaire-indicateurs-mad-devops.md`
 - `principe-amelioration-continue-mad-devops.md`
 
