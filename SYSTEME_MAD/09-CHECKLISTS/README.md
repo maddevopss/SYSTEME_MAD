@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 1.9
+Version: 2.0
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -35,10 +35,15 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-013-validation-bloc-cockpit-commercial.md` | Officiel | Bloc cockpit commercial MAD DevOps. |
 | `chk-014-audit-chaine-commerciale-mad-devops.md` | Officiel | Audit chaîne commerciale MAD DevOps. |
 | `chk-015-validation-site-web-mad-devops.md` | Officiel | Validation du site Web MAD DevOps. |
+| `chk-016-validation-madproof-cognitif-madsuite.md` | Officiel | Validation MADPROOF cognitive MADSuite. |
 
 ---
 
 ## Checklists prioritaires
+
+### MADSuite cognition / MADPROOF
+
+- `chk-016-validation-madproof-cognitif-madsuite.md`
 
 ### Site Web
 
@@ -86,3 +91,4 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `SYSTEME_MAD/07-TEMPLATES/README.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-014-audit-chaine-commerciale-mad-devops.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-015-validation-site-web-mad-devops.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-016-validation-madproof-cognitif-madsuite.md`
