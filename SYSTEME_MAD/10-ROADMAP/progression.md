@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 4.2
+Version: 4.3
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -189,8 +189,22 @@ Statut : **Complété — cycle complet guide / playbook / template / checklist*
 
 ---
 
+## Bloc 15 — Inbox / Registre CerveauMAD
+
+| Élément | Statut |
+|---|---|
+| Registre des entrées CerveauMAD | Créé — Actif |
+| Première entrée de registre | Complété |
+| Raccordement à PLAY-027 | Complété |
+| Raccordement au template d’entrée | Complété |
+| Raccordement à CHK-020 | Complété |
+
+Statut : **Actif — point d’entrée vivant**
+
+---
+
 ## Statut global
 
-Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, site Web réel V1, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, lots d’implémentation MAD Ariane, checklist finale MVP, BaseMAD comme couche centrale officielle de continuité, mémoire opérationnelle et gouvernance documentaire, une base opérationnelle officielle avec playbook d’application, ainsi que CerveauMAD comme couche d’intelligence opérationnelle complète avec guide, playbook d’exécution, template d’entrée et checklist de validation pour capter, classer, relier, prioriser, valider et transformer l’information en prochaine action claire.
+Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, site Web réel V1, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, lots d’implémentation MAD Ariane, checklist finale MVP, BaseMAD comme couche centrale officielle de continuité, mémoire opérationnelle et gouvernance documentaire, une base opérationnelle officielle avec playbook d’application, CerveauMAD comme couche d’intelligence opérationnelle complète avec guide, playbook d’exécution, template d’entrée et checklist de validation, ainsi qu’un registre actif pour capter, classer, relier, prioriser, valider et transformer l’information en prochaine action claire.
 
-La priorité recommandée est de finaliser les validations CHK-015 et CHK-019 du site réel, puis de poursuivre la mise en usage commerciale et les actions opérationnelles reliées à la base MAD DevOps et à CerveauMAD.
+La priorité recommandée est d’utiliser le registre CerveauMAD comme point d’entrée unique pour les nouvelles idées, demandes, risques, décisions et pistes de travail, tout en poursuivant la mise en usage commerciale de MAD DevOps.
