@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 1.3
+Version: 1.4
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -73,6 +73,16 @@ SYSTEME_MAD/07-TEMPLATES/template-registre-ameliorations-systeme-mad-devops.md
 
 Ces templates permettent d’utiliser le pilotage MAD DevOps de façon concrète, légère et non punitive.
 
+### Amélioration continue
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-journal-bord-hebdomadaire-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-registre-ameliorations-systeme-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-fiche-apprentissage-opportunite-mad-devops.md
+```
+
+Ces templates servent à transformer les irritants, apprentissages, opportunités sans suite et frictions récurrentes en améliorations système utiles.
+
 ---
 
 ## Règles d’usage
@@ -94,3 +104,4 @@ Ces templates permettent d’utiliser le pilotage MAD DevOps de façon concrète
 - `SYSTEME_MAD/05-PLAY/play-016-deploiement-demarche-pilotage-mad-devops.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-003-livraison-client.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-006-deploiement-pilotage-mad-devops.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-011-validation-bloc-amelioration-continue.md`
