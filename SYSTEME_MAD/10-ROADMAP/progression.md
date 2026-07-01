@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 5.0
+Version: 5.1
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -145,20 +145,27 @@ Statut : **Actif — cockpit commercial léger**
 
 ## Bloc 22 — Fiche opportunité Machine à clients
 
+Statut : **Complété — qualification rapide des opportunités**
+
+---
+
+## Bloc 23 — Validation opportunité Machine à clients
+
 | Élément | Statut |
 |---|---|
-| Template fiche opportunité Machine à clients | Créé — Template |
-| Index Templates mis à jour | Complété |
+| CHK-021 validation opportunité Machine à clients | Créé — Officiel |
+| Index Checklists mis à jour | Complété |
+| Raccordement à la fiche opportunité | Complété |
 | Raccordement au pipeline commercial | Complété |
 | Raccordement au tableau de bord Machine à clients | Complété |
 | Raccordement à PLAY-029 | Complété |
 
-Statut : **Complété — qualification rapide des opportunités**
+Statut : **Complété — garde-fou commercial actif**
 
 ---
 
 ## Statut global
 
-Le Système MAD dispose maintenant d’une base documentaire complète, de BaseMAD, d’une base opérationnelle, de CerveauMAD, du registre, de la revue, des tableaux de bord, du snapshot de reprise, du pont commercial, du pipeline commercial et d’une fiche opportunité Machine à clients.
+Le Système MAD dispose maintenant d’une base documentaire complète, de BaseMAD, d’une base opérationnelle, de CerveauMAD, du registre, de la revue, des tableaux de bord, du snapshot de reprise, du pont commercial, du pipeline commercial, d’une fiche opportunité et d’une checklist de validation Machine à clients.
 
-La priorité recommandée est d’utiliser la fiche opportunité pour qualifier les prospects et signaux commerciaux avant de les faire avancer dans le pipeline.
+La priorité recommandée est de qualifier les opportunités avec la fiche, de les valider avec CHK-021, puis de les faire avancer dans le pipeline seulement lorsqu’elles sont claires et actionnables.
