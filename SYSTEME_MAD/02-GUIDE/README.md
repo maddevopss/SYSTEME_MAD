@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 3.0
+Version: 3.1
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -22,7 +22,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | Fichier | Statut | Rôle |
 |---|---|---|
 | `basemad-couche-centrale-systeme-mad.md` | Officiel | Couche centrale de continuité, mémoire opérationnelle et gouvernance documentaire. |
-| `cerveau-mad-intelligence-operationnelle.md` | Officiel | Couche d’intelligence opérationnelle du Système MAD : capter, classer, relier, prioriser et transformer en prochaine action claire. |
+| `cerveau-mad-intelligence-operationnelle.md` | Officiel | Couche d’intelligence opérationnelle du Système MAD. |
 | `base-operationnelle-mad-devops.md` | Officiel | Base de fonctionnement opérationnel quotidien du studio MAD DevOps. |
 | `base-uiux-accessible-cognitive-mad-devops.md` | Officiel | Base interne de conception UI/UX accessible et cognitive. |
 | `vision-long-terme-mad-devops.md` | Officiel | Boussole stratégique long terme de MAD DevOps. |
@@ -53,6 +53,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `routine-courte-fondateur-lundi-vendredi.md` | Officiel | Routine courte. |
 | `fiche-reflexe-fondateur-mad-devops.md` | Officiel | Fiche réflexe. |
 | `exemple-parcours-client-a-z.md` | Exemple | Exemple parcours client. |
+| `exemple-revue-commerciale.md` | Exemple | Exemple court de revue commerciale hebdomadaire. |
 | `exemple-semaine-cockpit-fondateur-mad-devops.md` | Exemple | Exemple cockpit fondateur. |
 | `exemple-fiche-reflexe-fondateur-mad-devops.md` | Exemple | Exemple fiche réflexe. |
 
@@ -86,6 +87,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `cockpit-commercial-mad-devops.md`
 - `synthese-chaine-commerciale-mad-devops.md`
 - `routine-commerciale-hebdomadaire-mad-devops.md`
+- `exemple-revue-commerciale.md`
 - `portfolio-mad-devops.md`
 - `preuves-sociales-mad-devops.md`
 - `temoignages-references-clients-mad-devops.md`
@@ -110,6 +112,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `cockpit-fondateur-mad-devops.md`
 - `routine-commerciale-hebdomadaire-mad-devops.md`
 - `routine-hebdomadaire-indicateurs-mad-devops.md`
+- `exemple-revue-commerciale.md`
 - `principe-amelioration-continue-mad-devops.md`
 
 ---
