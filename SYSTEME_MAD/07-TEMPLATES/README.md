@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 2.7
+Version: 2.8
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -51,6 +51,7 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | `template-tableau-suivi-clients-mad-devops.md` | Template | Tableau de pilotage léger. |
 | `template-revue-hebdomadaire-pilotage-mad-devops.md` | Template | Revue hebdomadaire du pilotage. |
 | `template-lancement-pilotage-solo-micro-equipe-mad-devops.md` | Template | Lancement du pilotage. |
+| `template-journal-quotidien-fondateur-mad-devops.md` | Template | Journal quotidien léger du fondateur MAD DevOps. |
 | `template-journal-bord-hebdomadaire-mad-devops.md` | Template | Journal hebdomadaire. |
 | `template-registre-ameliorations-systeme-mad-devops.md` | Template | Registre des améliorations système. |
 | `tpl-001.md` | Template | Modèle réutilisable existant. |
@@ -61,6 +62,15 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 ---
 
 ## Templates prioritaires
+
+### Pilotage fondateur
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-journal-quotidien-fondateur-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-journal-bord-hebdomadaire-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-revue-hebdomadaire-pilotage-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-registre-ameliorations-systeme-mad-devops.md
+```
 
 ### Publication publique
 
