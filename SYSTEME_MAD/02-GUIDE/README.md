@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 2.6
+Version: 2.7
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -21,6 +21,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 | Fichier | Statut | Rôle |
 |---|---|---|
+| `basemad-couche-centrale-systeme-mad.md` | Officiel | Couche centrale de continuité, mémoire opérationnelle et gouvernance documentaire. |
 | `vision-long-terme-mad-devops.md` | Officiel | Boussole stratégique long terme de MAD DevOps. |
 | `roadmap-strategique-2026-2027-mad-devops.md` | Officiel | Roadmap stratégique. |
 | `systeme-operatoire-mad-devops.md` | Officiel | Système opératoire documentaire. |
@@ -55,6 +56,10 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 ---
 
 ## Guides prioritaires
+
+### BaseMAD
+
+- `basemad-couche-centrale-systeme-mad.md`
 
 ### Vision stratégique
 
