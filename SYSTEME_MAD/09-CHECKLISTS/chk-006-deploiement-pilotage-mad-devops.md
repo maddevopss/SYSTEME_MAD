@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: CHK-006 — Déploiement du pilotage MAD DevOps
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -23,8 +23,21 @@ Améliorer sans blâmer.
 
 ---
 
+## Positionnement
+
+Cette checklist est la validation rapide du pilotage MAD DevOps.
+
+Pour déployer une démarche complète dans une organisation de services professionnels, utiliser le playbook avancé :
+
+```text
+SYSTEME_MAD/05-PLAY/play-016-deploiement-demarche-pilotage-mad-devops.md
+```
+
+---
+
 ## Documents liés
 
+- `SYSTEME_MAD/05-PLAY/play-016-deploiement-demarche-pilotage-mad-devops.md`
 - `SYSTEME_MAD/02-GUIDE/pilotage-client-mad-devops.md`
 - `SYSTEME_MAD/02-GUIDE/routine-hebdomadaire-indicateurs-mad-devops.md`
 - `SYSTEME_MAD/07-TEMPLATES/template-tableau-suivi-clients-mad-devops.md`
