@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 3.1
+Version: 3.2
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -47,10 +47,17 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-026-validation-contenu-public-mad-devops.md` | Officiel | Contenu public MAD DevOps. |
 | `chk-027-validation-reponse-demande-entrante.md` | Officiel | Réponse à une demande entrante. |
 | `chk-028-validation-fermeture-demande-entrante.md` | Officiel | Fermeture, report ou refus poli d’une demande entrante. |
+| `chk-029-validation-cockpit-fondateur.md` | Officiel | Validation ciblée du cockpit fondateur. |
 
 ---
 
 ## Checklists prioritaires
+
+### Pilotage fondateur
+
+- `chk-029-validation-cockpit-fondateur.md`
+- `chk-007-validation-bloc-pilotage-fondateur.md`
+- `chk-006-deploiement-pilotage-mad-devops.md`
 
 ### Demandes entrantes
 
@@ -109,5 +116,5 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `SYSTEME_MAD/03-STANDARDS/README.md`
 - `SYSTEME_MAD/05-PLAY/README.md`
 - `SYSTEME_MAD/07-TEMPLATES/README.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-027-validation-reponse-demande-entrante.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-028-validation-fermeture-demande-entrante.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-029-validation-cockpit-fondateur.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-007-validation-bloc-pilotage-fondateur.md`
