@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 4.7
+Version: 4.8
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -63,6 +63,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `evolution-repo-systeme-mad.md` | Officiel | Évolution du repo. |
 | `principe-amelioration-continue-mad-devops.md` | Officiel | Amélioration continue. |
 | `cockpit-fondateur-mad-devops.md` | Officiel | Cockpit fondateur. |
+| `synthese-pilotage-fondateur-quotidien.md` | Officiel | Synthèse du pilotage quotidien du fondateur MAD DevOps. |
 | `routine-quotidienne-fondateur-mad-devops.md` | Officiel | Routine quotidienne légère du fondateur MAD DevOps. |
 | `routine-courte-fondateur-lundi-vendredi.md` | Officiel | Routine courte. |
 | `fiche-reflexe-fondateur-mad-devops.md` | Officiel | Fiche réflexe. |
@@ -134,16 +135,17 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ### Pilotage fondateur
 
+- `synthese-pilotage-fondateur-quotidien.md`
 - `routine-quotidienne-fondateur-mad-devops.md`
 - `exemple-journal-quotidien-fondateur-mad-devops.md`
-- `cerveau-mad-intelligence-operationnelle.md`
-- `base-operationnelle-mad-devops.md`
+- `cockpit-fondateur-mad-devops.md`
 - `fiche-reflexe-fondateur-mad-devops.md`
 - `routine-courte-fondateur-lundi-vendredi.md`
-- `cockpit-fondateur-mad-devops.md`
 - `routine-commerciale-hebdomadaire-mad-devops.md`
 - `routine-hebdomadaire-indicateurs-mad-devops.md`
 - `principe-amelioration-continue-mad-devops.md`
+- `cerveau-mad-intelligence-operationnelle.md`
+- `base-operationnelle-mad-devops.md`
 
 ---
 
