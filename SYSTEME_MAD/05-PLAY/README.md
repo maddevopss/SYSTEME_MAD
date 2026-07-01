@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 1.9
+Version: 2.0
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -45,10 +45,15 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 | `play-022-audit-chaine-commerciale-mad-devops.md` | Officiel | Audit de la chaîne commerciale MAD DevOps. |
 | `play-023-publier-site-web-mad-devops.md` | Officiel | Publier ou mettre à jour le site Web MAD DevOps. |
 | `play-024-transformer-idee-cognitive-en-fonctionnalite-madsuite.md` | Officiel | Transformer une idée cognitive en fonctionnalité MADSuite. |
+| `play-025-transformer-idee-en-element-basemad.md` | Officiel | Transformer une idée en élément BaseMAD. |
 
 ---
 
 ## Playbooks prioritaires
+
+### BaseMAD
+
+- `play-025-transformer-idee-en-element-basemad.md`
 
 ### MADSuite cognition / MADPROOF
 
