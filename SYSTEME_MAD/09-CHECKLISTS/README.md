@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 2.4
+Version: 2.5
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -40,6 +40,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-018-validation-entree-basemad.md` | Officiel | Validation d’entrée BaseMAD. |
 | `chk-020-validation-entree-cerveaumad.md` | Officiel | Validation d’une entrée CerveauMAD. |
 | `chk-021-validation-opportunite-machine-a-clients.md` | Officiel | Validation d’une opportunité Machine à clients avant avancement dans le pipeline. |
+| `chk-022-validation-activation-commerciale-7-jours.md` | Officiel | Validation d’une activation commerciale de 7 jours. |
 
 ---
 
@@ -56,6 +57,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 ### Machine à clients
 
 - `chk-021-validation-opportunite-machine-a-clients.md`
+- `chk-022-validation-activation-commerciale-7-jours.md`
 
 ### MADSuite cognition / MADPROOF
 
@@ -82,6 +84,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-013-validation-bloc-cockpit-commercial.md`
 - `chk-014-audit-chaine-commerciale-mad-devops.md`
 - `chk-021-validation-opportunite-machine-a-clients.md`
+- `chk-022-validation-activation-commerciale-7-jours.md`
 
 ### Pilotage et amélioration MAD DevOps
 
@@ -90,6 +93,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-011-validation-bloc-amelioration-continue.md`
 - `chk-020-validation-entree-cerveaumad.md`
 - `chk-021-validation-opportunite-machine-a-clients.md`
+- `chk-022-validation-activation-commerciale-7-jours.md`
 
 ---
 
@@ -116,3 +120,4 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `SYSTEME_MAD/09-CHECKLISTS/chk-018-validation-entree-basemad.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-020-validation-entree-cerveaumad.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-021-validation-opportunite-machine-a-clients.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-022-validation-activation-commerciale-7-jours.md`
