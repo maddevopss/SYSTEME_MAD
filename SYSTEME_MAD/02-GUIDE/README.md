@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 4.3
+Version: 4.4
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -33,6 +33,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `acquisition-clients-mad-devops.md` | Officiel | Acquisition clients. |
 | `demandes-entrantes-mad-devops.md` | Officiel | Réception et orientation des demandes entrantes. |
 | `synthese-traitement-demandes-entrantes-mad-devops.md` | Officiel | Synthèse du flux demandes entrantes vers opportunité. |
+| `synthese-chaine-demandes-entrantes-mad-devops.md` | Officiel | Synthèse complète de la chaîne demandes entrantes. |
 | `page-guide-client-rapide-mad-devops.md` | Officiel | Cadrage d’une future page Web de consultation rapide client. |
 | `cockpit-commercial-mad-devops.md` | Officiel | Cockpit commercial et suivi du pipeline. |
 | `synthese-chaine-commerciale-mad-devops.md` | Officiel | Synthèse de la chaîne commerciale MAD DevOps. |
@@ -72,6 +73,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ### Demandes entrantes
 
+- `synthese-chaine-demandes-entrantes-mad-devops.md`
 - `synthese-traitement-demandes-entrantes-mad-devops.md`
 - `demandes-entrantes-mad-devops.md`
 - `exemple-demande-entrante-qualification-reponse.md`
@@ -91,6 +93,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ### Commercial, terrain et offres
 
+- `synthese-chaine-demandes-entrantes-mad-devops.md`
 - `synthese-traitement-demandes-entrantes-mad-devops.md`
 - `frontiere-public-prive-mad-devops.md`
 - `lexique-public-prive-mad-devops.md`
