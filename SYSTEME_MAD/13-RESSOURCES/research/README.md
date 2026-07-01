@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — Recherche MADSuite
-Version: 1.0
-Dernière révision: 2026-06-30
+Version: 1.1
+Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -43,6 +43,18 @@ SYSTEME_MAD/13-RESSOURCES/research/
   04-imports-a-classer/
   99-archives/
 ```
+
+---
+
+## Documents actifs
+
+| Document | Dossier | Statut | Rôle |
+|---|---|---|---|
+| `00-index-sources.md` | `research/` | Officiel | Index des sources, notes et statuts MADPROOF. |
+| `001-assistance-cognitive-tdah.md` | `01-fondations-prudentes/` | À valider | Fondation prudente pour l’assistance cognitive non médicale. |
+| `001-mad-ariane-snapshot-reprise.md` | `02-rd-hypotheses/` | À valider | Hypothèse R&D du snapshot de reprise. |
+| `002-jitai-context-aware-sans-camera.md` | `02-rd-hypotheses/` | À valider | Hypothèse R&D context-aware sans caméra. |
+| `001-synthese-cognitive-madsuite.md` | `03-madproof/` | À valider | Synthèse MADPROOF des axes cognitifs MADSuite. |
 
 ---
 
@@ -92,6 +104,7 @@ Contient les documents historiques ou remplacés.
 - Séparer hypothèse R&D, décision produit et fonctionnalité validée.
 - Relier les affirmations importantes à une source ou une note MADPROOF.
 - Archiver les documents remplacés.
+- Exclure la caméra du MVP context-aware par défaut.
 
 ---
 
@@ -109,10 +122,4 @@ Ce dossier doit respecter :
 
 ## Prochaine action recommandée
 
-Créer ensuite :
-
-```text
-SYSTEME_MAD/13-RESSOURCES/research/00-index-sources.md
-```
-
-Ce fichier devra lister les sources, documents importés et synthèses avec leur statut MADPROOF.
+Durcir les documents `À valider` avec sources explicites, niveau de preuve et décisions produit.
