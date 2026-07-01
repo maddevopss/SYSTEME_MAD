@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 3.4
+Version: 3.6
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -19,30 +19,11 @@ Il ne remplace pas la roadmap ni le backlog. Il sert à voir rapidement les bloc
 
 ## Bloc 01 — Fondations documentaires
 
-| Élément | Statut |
-|---|---|
-| Structure officielle `SYSTEME_MAD/` | Complété |
-| `MANIFEST.md` | Complété |
-| README racine | Complété |
-| Standards documentaires | Complété |
-| ADR initiaux | Complété |
-| Gouvernance documentaire | Complété |
-
 Statut : **Complété**
 
 ---
 
 ## Bloc 02 — Standards
-
-| Famille | Statut |
-|---|---|
-| Développement | Complété |
-| Architecture | Complété |
-| Sécurité | Complété |
-| Qualité | Complété |
-| DevOps | Complété |
-| Intelligence artificielle | Complété |
-| Documentation | Complété |
 
 Statut : **35 standards complétés et officialisés**
 
@@ -50,31 +31,11 @@ Statut : **35 standards complétés et officialisés**
 
 ## Bloc 03 — Projet client et livraison
 
-| Élément | Statut |
-|---|---|
-| Starter Kit projet MAD DevOps | Complété |
-| Démarrage projet client | Complété |
-| Revue avant production | Complété |
-| Checklist livraison client | Complété |
-| Bloc projet client / livraison | Validé |
-
 Statut : **Complété**
 
 ---
 
 ## Bloc 04 — Parcours client et offre commerciale
-
-| Élément | Statut |
-|---|---|
-| Parcours client MAD DevOps | Complété |
-| Découverte client | Complété |
-| Qualification Phase 0 | Complété |
-| Offre simple | Complété |
-| Offres packagées | Complété |
-| Proposition client | Complété |
-| Suivis client | Complété |
-| Validation parcours client | Validé |
-| Validation offre commerciale | Validé |
 
 Statut : **Complété**
 
@@ -82,38 +43,11 @@ Statut : **Complété**
 
 ## Bloc 05 — Présence Web, acquisition et communication
 
-| Élément | Statut |
-|---|---|
-| Communication commerciale | Complété |
-| Message site Web | Complété |
-| Présence Web | Complété |
-| Page accueil | Complété |
-| À propos | Complété |
-| FAQ site Web | Complété |
-| Acquisition clients | Complété |
-| Prospection douce | Complété |
-| Demandes entrantes | Complété |
-| Formulaire de contact | Complété |
-| Réponse demande entrante | Complété |
-| Fiche qualification demande entrante | Complété |
-
 Statut : **Complété**
 
 ---
 
 ## Bloc 06 — Preuves, portfolio et références
-
-| Élément | Statut |
-|---|---|
-| Portfolio MAD DevOps | Complété |
-| Preuves sociales | Complété |
-| Étude de cas client | Complété |
-| Fiche projet public | Complété |
-| Témoignages et références clients | Complété |
-| Demande de témoignage | Complété |
-| Autorisation de publication | Complété |
-| Demande de référence | Complété |
-| Livraison vers preuve client | Complété |
 
 Statut : **Complété**
 
@@ -121,32 +55,11 @@ Statut : **Complété**
 
 ## Bloc 07 — Cockpit commercial et audit
 
-| Élément | Statut |
-|---|---|
-| Cockpit commercial | Complété |
-| Tableau pipeline commercial | Complété |
-| Revue pipeline commercial | Complété |
-| Validation bloc cockpit commercial | Validé |
-| Synthèse chaîne commerciale | Complété |
-| Audit chaîne commerciale | Complété |
-| Checklist audit chaîne commerciale | Complété |
-
 Statut : **Complété**
 
 ---
 
 ## Bloc 08 — Pilotage fondateur et amélioration continue
-
-| Élément | Statut |
-|---|---|
-| Cockpit fondateur | Complété |
-| Fiche réflexe fondateur | Complété |
-| Routine courte lundi/vendredi | Complété |
-| Exemple semaine cockpit | Complété |
-| Principe amélioration continue | Complété |
-| Registre améliorations système | Complété |
-| Journal de bord hebdomadaire | Complété |
-| Validation amélioration continue | Validé |
 
 Statut : **Complété**
 
@@ -183,7 +96,7 @@ Statut : **En cours**
 | Implémentation réelle du site | À faire |
 | Validation CHK-015 sur le site réel | À faire |
 
-Statut : **En cours — suspendu après préparation, à reprendre après MADPROOF cognitif**
+Statut : **En cours — prêt à reprendre**
 
 ---
 
@@ -207,17 +120,39 @@ Statut : **En cours — suspendu après préparation, à reprendre après MADPRO
 | Sources explicites MAD Ariane | Complété — à valider |
 | Validation produit simulée MAD Ariane | Complété |
 | Backlog d’implémentation MAD Ariane | Complété |
-| Lot 1 — Fondation données MAD Ariane | Prêt à implémenter |
-| Prompt Agent Code — Lot 1 MAD Ariane | Prêt à utiliser |
+| Lots 1 à 6 MAD Ariane | Complété — prêts |
+| Synthèse lots MAD Ariane | Complété |
+| CHK-017 validation MVP MAD Ariane | Complété |
+| Index produit MADSuite | Complété |
+| Guide manuel Lot 1 | Prêt à utiliser |
+| Prompt Agent Code Lot 1 | Prêt à utiliser |
 | Tests produit réels MAD Ariane | À faire |
 | Implémentation Lot 1 — Fondation données | À faire |
 
-Statut : **En cours — priorité actuelle**
+Statut : **Documentairement complété — implémentation future**
+
+---
+
+## Bloc 12 — BaseMAD
+
+| Élément | Statut |
+|---|---|
+| Guide BaseMAD | Complété — Officiel |
+| PLAY-025 transformer une idée en élément BaseMAD | Complété — Officiel |
+| CHK-018 validation d’entrée BaseMAD | Complété — Officiel |
+| DEC-003 reconnaissance officielle BaseMAD | Complété — Officiel |
+| Index Guides mis à jour | Complété |
+| Index Playbooks mis à jour | Complété |
+| Index Checklists mis à jour | Complété |
+| Index Décisions créé | Complété |
+| Fiche reprise de chantier 2026-07-01 | Complété |
+
+Statut : **Complété**
 
 ---
 
 ## Statut global
 
-Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, préparation du site Web réel, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, spécification technique contrôlée ajustée, plan de tests produit, sources explicites, validation simulée, backlog d’implémentation, Lot 1 prêt à implémenter et prompt agent prêt à utiliser.
+Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, préparation du site Web réel, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, lots d’implémentation MAD Ariane, checklist finale MVP, et BaseMAD comme couche centrale officielle de continuité, mémoire opérationnelle et gouvernance documentaire.
 
-La priorité actuelle est de lancer l’agent de code sur le Lot 1 — Fondation données de MAD Ariane, puis de valider les tests P0.
+La priorité recommandée est de reprendre le Bloc 10 — Site Web réel MAD DevOps, puis de revenir à l’implémentation MAD Ariane lorsque le repo backend applicatif est disponible.
