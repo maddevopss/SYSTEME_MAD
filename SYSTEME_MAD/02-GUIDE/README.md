@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 2.9
+Version: 3.0
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -22,6 +22,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | Fichier | Statut | Rôle |
 |---|---|---|
 | `basemad-couche-centrale-systeme-mad.md` | Officiel | Couche centrale de continuité, mémoire opérationnelle et gouvernance documentaire. |
+| `cerveau-mad-intelligence-operationnelle.md` | Officiel | Couche d’intelligence opérationnelle du Système MAD : capter, classer, relier, prioriser et transformer en prochaine action claire. |
 | `base-operationnelle-mad-devops.md` | Officiel | Base de fonctionnement opérationnel quotidien du studio MAD DevOps. |
 | `base-uiux-accessible-cognitive-mad-devops.md` | Officiel | Base interne de conception UI/UX accessible et cognitive. |
 | `vision-long-terme-mad-devops.md` | Officiel | Boussole stratégique long terme de MAD DevOps. |
@@ -59,9 +60,10 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ## Guides prioritaires
 
-### BaseMAD et base opérationnelle
+### BaseMAD, CerveauMAD et base opérationnelle
 
 - `basemad-couche-centrale-systeme-mad.md`
+- `cerveau-mad-intelligence-operationnelle.md`
 - `base-operationnelle-mad-devops.md`
 - `base-uiux-accessible-cognitive-mad-devops.md`
 
@@ -101,6 +103,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ### Pilotage fondateur
 
+- `cerveau-mad-intelligence-operationnelle.md`
 - `base-operationnelle-mad-devops.md`
 - `fiche-reflexe-fondateur-mad-devops.md`
 - `routine-courte-fondateur-lundi-vendredi.md`
