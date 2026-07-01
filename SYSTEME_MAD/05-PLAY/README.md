@@ -1,36 +1,78 @@
 ---
 Projet: MAD DevOps
-Document: Index — 06-operations-internes/plays
-Version: 1.0
+Document: Index — Playbooks
+Version: 1.1
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
 
-# Index — 06-operations-internes/plays
+# Index — Playbooks
 
 ## Rôle du dossier
 
-Routines opérationnelles internes et guides d’exécution.
+Ce dossier contient les playbooks du Système MAD.
+
+Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, avec quels garde-fous et quels livrables.
+
+---
 
 ## Documents
 
 | Fichier | Statut | Rôle |
 |---|---|---|
-| play-001.md | Brouillon | Document de travail actif |
-| play-002.md | Brouillon | Document de travail actif |
-| play-003.md | Brouillon | Document de travail actif |
-| play-004.md | Brouillon | Document de travail actif |
-| play-005.md | Brouillon | Document de travail actif |
-| play-006.md | Brouillon | Document de travail actif |
-| play-007.md | Brouillon | Document de travail actif |
-| play-008.md | Brouillon | Document de travail actif |
-| play-009.md | Brouillon | Document de travail actif |
+| `play-001.md` | Brouillon | Document de travail actif. |
+| `play-002.md` | Brouillon | Document de travail actif. |
+| `play-003.md` | Brouillon | Document de travail actif. |
+| `play-004.md` | Brouillon | Document de travail actif. |
+| `play-005.md` | Brouillon | Document de travail actif. |
+| `play-006.md` | Brouillon | Document de travail actif. |
+| `play-007.md` | Brouillon | Document de travail actif. |
+| `play-008.md` | Brouillon | Document de travail actif. |
+| `play-009.md` | Brouillon | Document de travail actif. |
+| `play-010-passe-qualite-documentaire.md` | Officiel | Passe de qualité documentaire du Système MAD. |
+| `play-011-demarrage-projet-client.md` | Officiel | Démarrage d’un projet client MAD DevOps. |
+| `play-012-revue-avant-production.md` | Officiel | Revue avant mise en production. |
+| `play-013-parcours-client-mad-devops.md` | Officiel | Parcours client MAD DevOps du premier contact au suivi. |
+| `play-014-decouverte-client-mad-devops.md` | Officiel | Découverte client sans pression commerciale. |
+| `play-015-qualification-phase-0-client.md` | Officiel | Qualification d’un besoin client et décision Phase 0. |
+| `play-016-deploiement-demarche-pilotage-mad-devops.md` | Officiel | Déploiement avancé d’une démarche de pilotage MAD DevOps dans une organisation de services professionnels. |
 
-## Notes
+---
 
-- Document canonique: voir les fichiers en statut Officiel.
-- Brouillon actif: voir les fichiers en statut Brouillon.
-- Archive: voir les fichiers en statut Archive.
-- Template: voir les fichiers en statut Template.
-- À valider: voir les fichiers en statut À valider.
+## Playbooks prioritaires
+
+### Projet client
+
+- `play-011-demarrage-projet-client.md`
+- `play-012-revue-avant-production.md`
+
+### Parcours client
+
+- `play-013-parcours-client-mad-devops.md`
+- `play-014-decouverte-client-mad-devops.md`
+- `play-015-qualification-phase-0-client.md`
+
+### Pilotage MAD DevOps
+
+- `play-016-deploiement-demarche-pilotage-mad-devops.md`
+
+---
+
+## Règles d’usage
+
+- Lire le playbook avant d’exécuter une démarche structurée.
+- Utiliser les templates et checklists liés au playbook.
+- Adapter le niveau de détail au contexte réel.
+- Ne pas transformer un playbook en bureaucratie.
+- Documenter les écarts importants et les apprentissages.
+
+---
+
+## Liens utiles
+
+- `SYSTEME_MAD/MANIFEST.md`
+- `SYSTEME_MAD/03-STANDARDS/README.md`
+- `SYSTEME_MAD/07-TEMPLATES/README.md`
+- `SYSTEME_MAD/09-CHECKLISTS/README.md`
+- `SYSTEME_MAD/13-RESSOURCES/research/001-pilotage-routine-indicateurs-sources.md`
