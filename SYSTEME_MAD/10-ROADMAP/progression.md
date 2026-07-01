@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 3.8
+Version: 3.9
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -169,8 +169,23 @@ Statut : **Complété**
 
 ---
 
+## Bloc 14 — CerveauMAD / Intelligence opérationnelle
+
+| Élément | Statut |
+|---|---|
+| Guide CerveauMAD — Intelligence opérationnelle | Complété — Officiel |
+| Index Guides mis à jour | Complété |
+| Raccordement à BaseMAD | Complété |
+| Raccordement à la base opérationnelle | Complété |
+| Raccordement au pilotage fondateur | Complété |
+| Playbook CerveauMAD dédié | À faire si usage répétitif requis |
+
+Statut : **Complété — playbook optionnel à évaluer**
+
+---
+
 ## Statut global
 
-Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, site Web réel V1, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, lots d’implémentation MAD Ariane, checklist finale MVP, BaseMAD comme couche centrale officielle de continuité, mémoire opérationnelle et gouvernance documentaire, ainsi qu’une base opérationnelle officielle avec playbook d’application pour guider le fonctionnement quotidien du studio MAD DevOps.
+Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, site Web réel V1, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, lots d’implémentation MAD Ariane, checklist finale MVP, BaseMAD comme couche centrale officielle de continuité, mémoire opérationnelle et gouvernance documentaire, une base opérationnelle officielle avec playbook d’application, ainsi que CerveauMAD comme couche d’intelligence opérationnelle pour capter, classer, relier, prioriser et transformer l’information en prochaine action claire.
 
-La priorité recommandée est de finaliser les validations CHK-015 et CHK-019 du site réel, puis de poursuivre la mise en usage commerciale et les actions opérationnelles reliées à la base MAD DevOps.
+La priorité recommandée est de finaliser les validations CHK-015 et CHK-019 du site réel, puis de poursuivre la mise en usage commerciale et les actions opérationnelles reliées à la base MAD DevOps et à CerveauMAD.
