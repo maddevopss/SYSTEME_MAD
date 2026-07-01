@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Spécification technique — MAD Ariane Snapshot de reprise
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-01
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -149,12 +149,16 @@ PATCH /api/madsuite/preferences/resume-snapshot
 
 Le snapshot doit être affiché comme une carte non bloquante.
 
-Exemple :
+La carte doit expliquer pourquoi elle apparaît avant de proposer une action.
+
+Exemple ajusté :
 
 ```text
 Reprendre le fil
+Vous revenez après une interruption. Voici le dernier contexte applicatif détecté.
+
 Vous étiez dans : Factures
-Contexte : Client ABC — Facture brouillon
+Contexte : Facture brouillon
 Dernière action : ajout d’un item non sauvegardé
 Prochaine action possible : vérifier le total ou sauvegarder
 
@@ -172,6 +176,21 @@ Prochaine action possible : vérifier le total ou sauvegarder
 - Permettre la désactivation.
 - Garder le texte court.
 - Ne pas afficher de données sensibles inutiles.
+- Éviter les détails client sensibles par défaut.
+- Préférer un contexte générique lorsque le détail nominatif n’est pas nécessaire.
+
+---
+
+## Règles de contenu du snapshot
+
+| Élément | Règle |
+|---|---|
+| Module | Affichable par défaut. |
+| Type d’entité | Affichable par défaut. |
+| Nom du client | Masqué par défaut si non nécessaire. |
+| Montant, note privée, contenu sensible | Exclu du snapshot. |
+| Dernière action | Résumée en langage simple. |
+| Prochaine action | Toujours optionnelle. |
 
 ---
 
@@ -198,6 +217,8 @@ Prochaine action possible : vérifier le total ou sauvegarder
 | Désactivation | Aucun snapshot ne doit être affiché si la fonction est désactivée. |
 | Données interdites | Empêcher caméra, micro ou données externes. |
 | UX non bloquante | Vérifier que l’utilisateur peut continuer sans répondre. |
+| Explication de la carte | Vérifier que l’utilisateur comprend pourquoi le snapshot apparaît. |
+| Masquage détails sensibles | Vérifier que le snapshot n’affiche pas de données inutiles. |
 
 ---
 
@@ -216,10 +237,20 @@ et aucun claim médical n’est induit par l’interface.
 
 ---
 
+## Historique d’ajustement
+
+| Version | Ajustement | Source |
+|---|---|---|
+| 1.1 | Ajout d’une phrase explicative et de règles de masquage des détails sensibles. | Validation simulée 2026-07-01 |
+
+---
+
 ## Liens
 
 ```text
 SYSTEME_MAD/01-PRODUIT/madsuite/mvp-mad-ariane-snapshot-reprise.md
+SYSTEME_MAD/01-PRODUIT/madsuite/tests-produit-mad-ariane.md
+SYSTEME_MAD/01-PRODUIT/madsuite/validation-simulee-mad-ariane-2026-07-01.md
 SYSTEME_MAD/13-RESSOURCES/research/03-madproof/003-validation-mad-ariane-chk-016.md
 SYSTEME_MAD/09-CHECKLISTS/chk-016-validation-madproof-cognitif-madsuite.md
 ```
