@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 1.5
+Version: 1.6
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -24,18 +24,20 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | `starter-kit-projet-mad-devops.md` | Template | Kit de démarrage pour projet MAD DevOps. |
 | `template-cadrage-client-mad-devops.md` | Template | Modèle de cadrage client avant proposition. |
 | `template-proposition-client-mad-devops.md` | Template | Modèle de proposition client claire et professionnelle. |
-| `template-suivis-client-mad-devops.md` | Template | Messages de suivi client : premier échange, cadrage, livraison, relance, refus ou report. |
-| `template-prospection-douce-mad-devops.md` | Template | Messages de prospection commerciale douce et sans pression. |
-| `template-page-accueil-mad-devops.md` | Template | Contenu de page d’accueil du site MAD DevOps. |
-| `template-a-propos-mad-devops.md` | Template | Contenu de page À propos MAD DevOps. |
-| `template-faq-site-web-mad-devops.md` | Template | FAQ simple pour le site Web MAD DevOps. |
+| `template-suivis-client-mad-devops.md` | Template | Messages de suivi client. |
+| `template-prospection-douce-mad-devops.md` | Template | Messages de prospection commerciale douce. |
+| `template-page-accueil-mad-devops.md` | Template | Contenu de page d’accueil. |
+| `template-a-propos-mad-devops.md` | Template | Contenu de page À propos. |
+| `template-faq-site-web-mad-devops.md` | Template | FAQ site Web. |
+| `template-etude-de-cas-client-mad-devops.md` | Template | Étude de cas client. |
+| `template-fiche-projet-public-mad-devops.md` | Template | Fiche projet public. |
 | `template-fiche-projet-client-mad-devops.md` | Template | Fiche de suivi d’un mandat client actif. |
-| `template-fiche-apprentissage-opportunite-mad-devops.md` | Template | Fiche d’apprentissage pour opportunité sans suite, reportée ou non qualifiée. |
-| `template-tableau-suivi-clients-mad-devops.md` | Template | Tableau de pilotage léger des prospects, clients, mandats et apprentissages. |
-| `template-revue-hebdomadaire-pilotage-mad-devops.md` | Template | Template de revue hebdomadaire du pilotage MAD DevOps. |
-| `template-lancement-pilotage-solo-micro-equipe-mad-devops.md` | Template | Template de lancement du pilotage MAD DevOps pour solo, duo ou micro-équipe. |
-| `template-journal-bord-hebdomadaire-mad-devops.md` | Template | Journal hebdomadaire léger pour apprentissage, mini-métriques et amélioration continue. |
-| `template-registre-ameliorations-systeme-mad-devops.md` | Template | Registre des améliorations système issues du cockpit, des journaux, projets et apprentissages. |
+| `template-fiche-apprentissage-opportunite-mad-devops.md` | Template | Fiche d’apprentissage pour opportunité sans suite. |
+| `template-tableau-suivi-clients-mad-devops.md` | Template | Tableau de pilotage léger. |
+| `template-revue-hebdomadaire-pilotage-mad-devops.md` | Template | Revue hebdomadaire du pilotage. |
+| `template-lancement-pilotage-solo-micro-equipe-mad-devops.md` | Template | Lancement du pilotage. |
+| `template-journal-bord-hebdomadaire-mad-devops.md` | Template | Journal hebdomadaire. |
+| `template-registre-ameliorations-systeme-mad-devops.md` | Template | Registre des améliorations système. |
 | `tpl-001.md` | Template | Modèle réutilisable existant. |
 | `tpl-002.md` | Template | Modèle réutilisable existant. |
 | `tpl-003.md` | Template | Modèle réutilisable existant. |
@@ -51,6 +53,8 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 SYSTEME_MAD/07-TEMPLATES/template-page-accueil-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-a-propos-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-faq-site-web-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-etude-de-cas-client-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-fiche-projet-public-mad-devops.md
 ```
 
 ### Acquisition et communication
