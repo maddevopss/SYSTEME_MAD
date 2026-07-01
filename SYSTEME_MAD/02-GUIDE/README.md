@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 3.3
+Version: 3.4
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -43,6 +43,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `temoignages-references-clients-mad-devops.md` | Officiel | Témoignages et références clients. |
 | `exemple-revue-commerciale.md` | Exemple | Exemple court de revue commerciale hebdomadaire. |
 | `exemple-activation-commerciale-7-jours.md` | Exemple | Exemple court d’activation commerciale 7 jours. |
+| `exemple-offre-terrain-mad-devops.md` | Exemple | Exemple court de message d’offre terrain MAD DevOps. |
 | `exemple-parcours-client-a-z.md` | Exemple | Exemple parcours client. |
 | `vision-long-terme-mad-devops.md` | Officiel | Boussole stratégique long terme de MAD DevOps. |
 | `roadmap-strategique-2026-2027-mad-devops.md` | Officiel | Roadmap stratégique. |
@@ -70,6 +71,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `routine-commerciale-hebdomadaire-mad-devops.md`
 - `exemple-revue-commerciale.md`
 - `exemple-activation-commerciale-7-jours.md`
+- `exemple-offre-terrain-mad-devops.md`
 
 ### BaseMAD, CerveauMAD et base opérationnelle
 
