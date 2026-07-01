@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 2.5
-Dernière révision: 2026-06-30
+Version: 2.6
+Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -27,6 +27,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `decisions-long-terme-mad-devops.md` | Officiel | Décisions long terme. |
 | `evolution-repo-systeme-mad.md` | Officiel | Évolution du repo. |
 | `presence-web-mad-devops.md` | Officiel | Présence Web. |
+| `architecture-site-web-mad-devops.md` | Officiel | Architecture du site Web MAD DevOps. |
 | `communication-commerciale-mad-devops.md` | Officiel | Communication commerciale. |
 | `message-site-web-mad-devops.md` | Officiel | Messages site Web. |
 | `acquisition-clients-mad-devops.md` | Officiel | Acquisition clients. |
@@ -63,9 +64,10 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `decisions-long-terme-mad-devops.md`
 - `evolution-repo-systeme-mad.md`
 
-### Présence Web et communication
+### Site Web, présence et communication
 
 - `presence-web-mad-devops.md`
+- `architecture-site-web-mad-devops.md`
 - `message-site-web-mad-devops.md`
 - `communication-commerciale-mad-devops.md`
 - `acquisition-clients-mad-devops.md`
