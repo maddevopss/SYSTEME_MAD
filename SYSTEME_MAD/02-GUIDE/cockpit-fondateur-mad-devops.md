@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Cockpit fondateur MAD DevOps
-Version: 1.3
+Version: 1.4
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -80,6 +80,7 @@ Situation complexe : cockpit complet.
 | Qualité parcours client | `chk-005-qualite-parcours-client.md` | Vérifier le parcours complet du client. |
 | Fermer le bloc parcours client | `chk-008-validation-bloc-parcours-client.md` | Valider que le bloc client est complet, utile et simple. |
 | Fermer le bloc offre commerciale | `chk-009-validation-bloc-offre-commerciale.md` | Valider que l’offre commerciale est claire, simple et cohérente. |
+| Fermer le bloc projet client / livraison | `chk-010-validation-bloc-projet-client-livraison.md` | Valider qu’un mandat accepté peut être démarré, livré et suivi proprement. |
 | Déployer le pilotage avancé | `play-016-deploiement-demarche-pilotage-mad-devops.md` | Démarche structurée pour équipe ou organisation. |
 | Valider le pilotage | `chk-006-deploiement-pilotage-mad-devops.md` | Vérifier que le système reste utile, léger et non punitif. |
 | Fermer le bloc pilotage fondateur | `chk-007-validation-bloc-pilotage-fondateur.md` | Valider que le bloc est complet, utile et simple. |
