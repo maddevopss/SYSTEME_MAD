@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 4.8
+Version: 4.9
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -39,6 +39,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `cockpit-commercial-mad-devops.md` | Officiel | Cockpit commercial et suivi du pipeline. |
 | `synthese-chaine-commerciale-mad-devops.md` | Officiel | Synthèse de la chaîne commerciale MAD DevOps. |
 | `routine-commerciale-hebdomadaire-mad-devops.md` | Officiel | Routine commerciale hebdomadaire MAD DevOps. |
+| `synthese-preuve-client-portfolio-mad-devops.md` | Officiel | Synthèse du bloc preuve client et portfolio. |
 | `offre-simple-mad-devops.md` | Officiel | Offre simple. |
 | `offre-terrain-mad-devops.md` | Officiel | Offre courte envoyable après qualification d’une opportunité. |
 | `offres-packagees-mad-devops.md` | Officiel | Offres packagées. |
@@ -75,6 +76,15 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ## Guides prioritaires
 
+### Preuve client et portfolio
+
+- `synthese-preuve-client-portfolio-mad-devops.md`
+- `portfolio-mad-devops.md`
+- `temoignages-references-clients-mad-devops.md`
+- `preuves-sociales-mad-devops.md`
+- `frontiere-public-prive-mad-devops.md`
+- `synthese-publication-controlee-mad-devops.md`
+
 ### Concordance commerciale globale
 
 - `synthese-concordance-commerciale-globale-mad-devops.md`
@@ -82,6 +92,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-demandes-entrantes-mad-devops.md`
 - `synthese-traitement-demandes-entrantes-mad-devops.md`
 - `synthese-chaine-commerciale-mad-devops.md`
+- `synthese-preuve-client-portfolio-mad-devops.md`
 
 ### Demandes entrantes
 
@@ -102,12 +113,14 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `lexique-public-prive-mad-devops.md`
 - `page-guide-client-rapide-mad-devops.md`
 - `exemple-fiche-contenu-public-guide-client.md`
+- `synthese-preuve-client-portfolio-mad-devops.md`
 
 ### Commercial, terrain et offres
 
 - `synthese-concordance-commerciale-globale-mad-devops.md`
 - `synthese-chaine-demandes-entrantes-mad-devops.md`
 - `synthese-traitement-demandes-entrantes-mad-devops.md`
+- `synthese-preuve-client-portfolio-mad-devops.md`
 - `frontiere-public-prive-mad-devops.md`
 - `lexique-public-prive-mad-devops.md`
 - `synthese-publication-controlee-mad-devops.md`
