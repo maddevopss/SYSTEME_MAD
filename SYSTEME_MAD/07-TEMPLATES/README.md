@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 1.7
+Version: 1.8
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -26,6 +26,9 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | `template-proposition-client-mad-devops.md` | Template | Modèle de proposition client claire et professionnelle. |
 | `template-suivis-client-mad-devops.md` | Template | Messages de suivi client. |
 | `template-prospection-douce-mad-devops.md` | Template | Messages de prospection commerciale douce. |
+| `template-formulaire-contact-mad-devops.md` | Template | Formulaire de contact MAD DevOps. |
+| `template-reponse-demande-entrante-mad-devops.md` | Template | Réponse à une demande entrante. |
+| `template-fiche-qualification-demande-entrante-mad-devops.md` | Template | Qualification rapide d’une demande entrante. |
 | `template-demande-temoignage-client-mad-devops.md` | Template | Demande de témoignage client. |
 | `template-autorisation-publication-projet-mad-devops.md` | Template | Autorisation de publication projet. |
 | `template-demande-reference-client-mad-devops.md` | Template | Demande de référence client. |
@@ -49,6 +52,14 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 ---
 
 ## Templates prioritaires
+
+### Demandes entrantes
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-formulaire-contact-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-reponse-demande-entrante-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-fiche-qualification-demande-entrante-mad-devops.md
+```
 
 ### Présence Web
 
