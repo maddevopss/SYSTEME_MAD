@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 2.3
+Version: 2.4
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -25,6 +25,7 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | `template-entree-cerveaumad.md` | Template | Entrée rapide CerveauMAD. |
 | `template-fiche-opportunite-machine-a-clients.md` | Template | Fiche courte pour qualifier une opportunité commerciale issue de CerveauMAD ou du pipeline. |
 | `template-revue-machine-a-clients.md` | Template | Revue hebdomadaire courte de la machine à clients. |
+| `template-suivi-activation-7-jours-commerciale.md` | Template | Suivi jour par jour d’une activation commerciale de 7 jours. |
 | `template-cadrage-client-mad-devops.md` | Template | Modèle de cadrage client avant proposition. |
 | `template-proposition-client-mad-devops.md` | Template | Modèle de proposition client claire et professionnelle. |
 | `template-suivis-client-mad-devops.md` | Template | Messages de suivi client. |
@@ -69,9 +70,19 @@ SYSTEME_MAD/07-TEMPLATES/template-entree-cerveaumad.md
 ```text
 SYSTEME_MAD/07-TEMPLATES/template-fiche-opportunite-machine-a-clients.md
 SYSTEME_MAD/07-TEMPLATES/template-revue-machine-a-clients.md
+SYSTEME_MAD/07-TEMPLATES/template-suivi-activation-7-jours-commerciale.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-qualification-demande-entrante-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-proposition-client-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-suivis-client-mad-devops.md
+```
+
+### Cockpit commercial
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-tableau-pipeline-commercial-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-fiche-opportunite-machine-a-clients.md
+SYSTEME_MAD/07-TEMPLATES/template-revue-machine-a-clients.md
+SYSTEME_MAD/07-TEMPLATES/template-suivi-activation-7-jours-commerciale.md
 ```
 
 ### Site Web
@@ -82,43 +93,6 @@ SYSTEME_MAD/07-TEMPLATES/template-page-accueil-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-a-propos-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-faq-site-web-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-formulaire-contact-mad-devops.md
-```
-
-### Demandes entrantes
-
-```text
-SYSTEME_MAD/07-TEMPLATES/template-formulaire-contact-mad-devops.md
-SYSTEME_MAD/07-TEMPLATES/template-reponse-demande-entrante-mad-devops.md
-SYSTEME_MAD/07-TEMPLATES/template-fiche-qualification-demande-entrante-mad-devops.md
-```
-
-### Cockpit commercial
-
-```text
-SYSTEME_MAD/07-TEMPLATES/template-tableau-pipeline-commercial-mad-devops.md
-SYSTEME_MAD/07-TEMPLATES/template-fiche-opportunite-machine-a-clients.md
-SYSTEME_MAD/07-TEMPLATES/template-revue-machine-a-clients.md
-```
-
-### Présence Web
-
-```text
-SYSTEME_MAD/07-TEMPLATES/template-etude-de-cas-client-mad-devops.md
-SYSTEME_MAD/07-TEMPLATES/template-fiche-projet-public-mad-devops.md
-```
-
-### Références et témoignages
-
-```text
-SYSTEME_MAD/07-TEMPLATES/template-demande-temoignage-client-mad-devops.md
-SYSTEME_MAD/07-TEMPLATES/template-autorisation-publication-projet-mad-devops.md
-SYSTEME_MAD/07-TEMPLATES/template-demande-reference-client-mad-devops.md
-```
-
-### Acquisition et communication
-
-```text
-SYSTEME_MAD/07-TEMPLATES/template-prospection-douce-mad-devops.md
 ```
 
 ### Parcours client
@@ -138,10 +112,9 @@ SYSTEME_MAD/07-TEMPLATES/template-tableau-suivi-clients-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-entree-cerveaumad.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-opportunite-machine-a-clients.md
 SYSTEME_MAD/07-TEMPLATES/template-revue-machine-a-clients.md
+SYSTEME_MAD/07-TEMPLATES/template-suivi-activation-7-jours-commerciale.md
 SYSTEME_MAD/07-TEMPLATES/template-revue-hebdomadaire-pilotage-mad-devops.md
-SYSTEME_MAD/07-TEMPLATES/template-lancement-pilotage-solo-micro-equipe-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-journal-bord-hebdomadaire-mad-devops.md
-SYSTEME_MAD/07-TEMPLATES/template-registre-ameliorations-systeme-mad-devops.md
 ```
 
 ---
