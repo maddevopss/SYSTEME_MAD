@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 1.4
+Version: 1.5
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -26,6 +26,9 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | `template-proposition-client-mad-devops.md` | Template | Modèle de proposition client claire et professionnelle. |
 | `template-suivis-client-mad-devops.md` | Template | Messages de suivi client : premier échange, cadrage, livraison, relance, refus ou report. |
 | `template-prospection-douce-mad-devops.md` | Template | Messages de prospection commerciale douce et sans pression. |
+| `template-page-accueil-mad-devops.md` | Template | Contenu de page d’accueil du site MAD DevOps. |
+| `template-a-propos-mad-devops.md` | Template | Contenu de page À propos MAD DevOps. |
+| `template-faq-site-web-mad-devops.md` | Template | FAQ simple pour le site Web MAD DevOps. |
 | `template-fiche-projet-client-mad-devops.md` | Template | Fiche de suivi d’un mandat client actif. |
 | `template-fiche-apprentissage-opportunite-mad-devops.md` | Template | Fiche d’apprentissage pour opportunité sans suite, reportée ou non qualifiée. |
 | `template-tableau-suivi-clients-mad-devops.md` | Template | Tableau de pilotage léger des prospects, clients, mandats et apprentissages. |
@@ -42,13 +45,19 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 
 ## Templates prioritaires
 
-### Démarrage projet
+### Présence Web
 
 ```text
-SYSTEME_MAD/07-TEMPLATES/starter-kit-projet-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-page-accueil-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-a-propos-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-faq-site-web-mad-devops.md
 ```
 
-Il sert à démarrer un nouveau projet MAD DevOps avec une base claire.
+### Acquisition et communication
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-prospection-douce-mad-devops.md
+```
 
 ### Parcours client
 
@@ -61,8 +70,6 @@ SYSTEME_MAD/07-TEMPLATES/template-fiche-apprentissage-opportunite-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-tableau-suivi-clients-mad-devops.md
 ```
 
-Ces templates soutiennent le parcours client, du premier contact au suivi post-livraison.
-
 ### Pilotage MAD DevOps
 
 ```text
@@ -71,27 +78,6 @@ SYSTEME_MAD/07-TEMPLATES/template-lancement-pilotage-solo-micro-equipe-mad-devop
 SYSTEME_MAD/07-TEMPLATES/template-journal-bord-hebdomadaire-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-registre-ameliorations-systeme-mad-devops.md
 ```
-
-Ces templates permettent d’utiliser le pilotage MAD DevOps de façon concrète, légère et non punitive.
-
-### Amélioration continue
-
-```text
-SYSTEME_MAD/07-TEMPLATES/template-journal-bord-hebdomadaire-mad-devops.md
-SYSTEME_MAD/07-TEMPLATES/template-registre-ameliorations-systeme-mad-devops.md
-SYSTEME_MAD/07-TEMPLATES/template-fiche-apprentissage-opportunite-mad-devops.md
-```
-
-Ces templates servent à transformer les irritants, apprentissages, opportunités sans suite et frictions récurrentes en améliorations système utiles.
-
-### Acquisition et communication
-
-```text
-SYSTEME_MAD/07-TEMPLATES/template-prospection-douce-mad-devops.md
-```
-
-
-
 
 ---
 
@@ -102,7 +88,6 @@ SYSTEME_MAD/07-TEMPLATES/template-prospection-douce-mad-devops.md
 - Remplacer les placeholders avant une livraison.
 - Relier les templates aux standards, checklists, guides et playbooks pertinents.
 - Garder les templates simples et maintenables.
-- Supprimer ou simplifier un template qui devient plus lourd qu’utile.
 
 ---
 
@@ -110,8 +95,5 @@ SYSTEME_MAD/07-TEMPLATES/template-prospection-douce-mad-devops.md
 
 - `SYSTEME_MAD/MANIFEST.md`
 - `SYSTEME_MAD/03-STANDARDS/README.md`
-- `SYSTEME_MAD/05-PLAY/play-011-demarrage-projet-client.md`
-- `SYSTEME_MAD/05-PLAY/play-016-deploiement-demarche-pilotage-mad-devops.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-003-livraison-client.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-006-deploiement-pilotage-mad-devops.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-011-validation-bloc-amelioration-continue.md`
+- `SYSTEME_MAD/05-PLAY/README.md`
+- `SYSTEME_MAD/09-CHECKLISTS/README.md`
