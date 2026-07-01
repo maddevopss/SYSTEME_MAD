@@ -25,6 +25,7 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | `template-cadrage-client-mad-devops.md` | Template | Modèle de cadrage client avant proposition. |
 | `template-proposition-client-mad-devops.md` | Template | Modèle de proposition client claire et professionnelle. |
 | `template-suivis-client-mad-devops.md` | Template | Messages de suivi client : premier échange, cadrage, livraison, relance, refus ou report. |
+| `template-prospection-douce-mad-devops.md` | Template | Messages de prospection commerciale douce et sans pression. |
 | `template-fiche-projet-client-mad-devops.md` | Template | Fiche de suivi d’un mandat client actif. |
 | `template-fiche-apprentissage-opportunite-mad-devops.md` | Template | Fiche d’apprentissage pour opportunité sans suite, reportée ou non qualifiée. |
 | `template-tableau-suivi-clients-mad-devops.md` | Template | Tableau de pilotage léger des prospects, clients, mandats et apprentissages. |
