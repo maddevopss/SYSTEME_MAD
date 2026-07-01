@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 2.8
+Version: 2.9
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -53,10 +53,18 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 | `play-030-routine-hebdomadaire-machine-a-clients.md` | Officiel | Routine hebdomadaire commerciale. |
 | `play-031-activation-7-jours-commerciale.md` | Officiel | Activation commerciale terrain sur 7 jours. |
 | `play-032-traiter-contenu-public-candidat.md` | Officiel | Traiter un contenu public candidat. |
+| `play-033-convertir-demande-entrante-en-opportunite.md` | Officiel | Convertir une demande entrante en opportunité. |
 
 ---
 
 ## Playbooks prioritaires
+
+### Demandes entrantes
+
+- `play-020-traiter-demande-entrante-mad-devops.md`
+- `play-033-convertir-demande-entrante-en-opportunite.md`
+- `play-014-decouverte-client-mad-devops.md`
+- `play-015-qualification-phase-0-client.md`
 
 ### Publication contrôlée
 
@@ -71,6 +79,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-030-routine-hebdomadaire-machine-a-clients.md`
 - `play-031-activation-7-jours-commerciale.md`
 - `play-032-traiter-contenu-public-candidat.md`
+- `play-033-convertir-demande-entrante-en-opportunite.md`
 
 ### Activation commerciale
 
@@ -81,6 +90,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-030-routine-hebdomadaire-machine-a-clients.md`
 - `play-031-activation-7-jours-commerciale.md`
 - `play-032-traiter-contenu-public-candidat.md`
+- `play-033-convertir-demande-entrante-en-opportunite.md`
 
 ### Pilotage MAD DevOps
 
@@ -92,6 +102,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-030-routine-hebdomadaire-machine-a-clients.md`
 - `play-031-activation-7-jours-commerciale.md`
 - `play-032-traiter-contenu-public-candidat.md`
+- `play-033-convertir-demande-entrante-en-opportunite.md`
 
 ---
 
