@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 3.8
+Version: 3.9
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -27,6 +27,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `base-uiux-accessible-cognitive-mad-devops.md` | Officiel | Base interne de conception UI/UX accessible et cognitive. |
 | `frontiere-public-prive-mad-devops.md` | Officiel | Frontière entre méthode interne et communication publique. |
 | `lexique-public-prive-mad-devops.md` | Officiel | Lexique pour traduire les concepts internes en langage public sécurisé. |
+| `synthese-publication-controlee-mad-devops.md` | Officiel | Synthèse du système de publication publique contrôlée. |
 | `presence-web-mad-devops.md` | Officiel | Présence Web. |
 | `communication-commerciale-mad-devops.md` | Officiel | Communication commerciale. |
 | `acquisition-clients-mad-devops.md` | Officiel | Acquisition clients. |
@@ -65,10 +66,19 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ## Guides prioritaires
 
+### Publication contrôlée
+
+- `synthese-publication-controlee-mad-devops.md`
+- `frontiere-public-prive-mad-devops.md`
+- `lexique-public-prive-mad-devops.md`
+- `page-guide-client-rapide-mad-devops.md`
+- `exemple-fiche-contenu-public-guide-client.md`
+
 ### Commercial, terrain et offres
 
 - `frontiere-public-prive-mad-devops.md`
 - `lexique-public-prive-mad-devops.md`
+- `synthese-publication-controlee-mad-devops.md`
 - `page-guide-client-rapide-mad-devops.md`
 - `offre-simple-mad-devops.md`
 - `offre-terrain-mad-devops.md`
