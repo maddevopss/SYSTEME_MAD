@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 2.3
+Version: 2.4
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -183,12 +183,32 @@ Statut : **En cours**
 | Implémentation réelle du site | À faire |
 | Validation CHK-015 sur le site réel | À faire |
 
-Statut : **En cours**
+Statut : **En cours — suspendu après préparation, à reprendre après MADPROOF cognitif**
+
+---
+
+## Bloc 11 — MADSuite cognition / MADPROOF
+
+| Élément | Statut |
+|---|---|
+| Index recherche MADSuite mis à jour | Complété |
+| Index sources MADPROOF mis à jour | Complété |
+| Fondation assistance cognitive créée | Complété — à sourcer / durcir |
+| Hypothèse MAD Ariane créée | Complété — à sourcer / durcir |
+| Hypothèse JITAI sans caméra créée | Complété — à sourcer / durcir |
+| Synthèse cognitive MADPROOF créée | Complété — à sourcer / durcir |
+| Matrice claims cognitifs créée | Complété — à valider |
+| Checklist CHK-016 créée | Complété |
+| Playbook PLAY-024 créé | Complété |
+| Sources explicites à intégrer | À faire |
+| Première passe CHK-016 | À faire |
+
+Statut : **En cours — priorité actuelle**
 
 ---
 
 ## Statut global
 
-Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale et préparation complète du site Web réel.
+Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, préparation du site Web réel et base MADPROOF cognitive MADSuite.
 
-La prochaine action recommandée est de transformer le contenu du site en implémentation concrète, puis de valider le site avec `CHK-015`.
+La priorité actuelle est de durcir la recherche cognitive MADSuite avant toute communication externe forte ou implémentation publique du positionnement produit.
