@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Cockpit fondateur MAD DevOps
-Version: 1.4
+Version: 1.5
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -84,6 +84,10 @@ Situation complexe : cockpit complet.
 | Déployer le pilotage avancé | `play-016-deploiement-demarche-pilotage-mad-devops.md` | Démarche structurée pour équipe ou organisation. |
 | Valider le pilotage | `chk-006-deploiement-pilotage-mad-devops.md` | Vérifier que le système reste utile, léger et non punitif. |
 | Fermer le bloc pilotage fondateur | `chk-007-validation-bloc-pilotage-fondateur.md` | Valider que le bloc est complet, utile et simple. |
+| Amélioration continue | `principe-amelioration-continue-mad-devops.md` | Comprendre comment le système apprend sans se complexifier. |
+| Registre des améliorations | `template-registre-ameliorations-systeme-mad-devops.md` | Prioriser ce qui est retenu, reporté, fait ou abandonné. |
+| Fermer le bloc amélioration continue | `chk-011-validation-bloc-amelioration-continue.md` | Valider que le système apprend sans devenir lourd. |
+
 
 ---
 
