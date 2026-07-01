@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Cockpit fondateur MAD DevOps
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -65,6 +65,8 @@ Situation complexe : cockpit complet.
 | Début de semaine | `template-revue-hebdomadaire-pilotage-mad-devops.md` | Priorités, relance, risque et amélioration de la semaine. |
 | Fin de semaine | `template-journal-bord-hebdomadaire-mad-devops.md` | Apprentissages, irritants, célébrations et mini-action. |
 | Lancer le pilotage solo | `template-lancement-pilotage-solo-micro-equipe-mad-devops.md` | Base légère de pilotage personnel ou micro-équipe. |
+| Offre commerciale complète | `offre-simple-mad-devops.md` | Expliquer clairement ce que MAD DevOps offre, sans jargon inutile. |
+| Portes d’entrée commerciales | `offres-packagees-mad-devops.md` | Orienter le client vers une façon simple de commencer. |
 | Parcours client complet | `parcours-client-mad-devops.md` | Voir le chemin complet du premier contact au suivi. |
 | Nouveau prospect | `play-014-decouverte-client-mad-devops.md` | Comprendre avant de proposer. |
 | Besoin flou | `play-015-qualification-phase-0-client.md` | Décider : proposition, cadrage, Phase 0, report ou refus. |
@@ -77,6 +79,7 @@ Situation complexe : cockpit complet.
 | Opportunité sans suite | `template-fiche-apprentissage-opportunite-mad-devops.md` | Apprentissage sans blâme. |
 | Qualité parcours client | `chk-005-qualite-parcours-client.md` | Vérifier le parcours complet du client. |
 | Fermer le bloc parcours client | `chk-008-validation-bloc-parcours-client.md` | Valider que le bloc client est complet, utile et simple. |
+| Fermer le bloc offre commerciale | `chk-009-validation-bloc-offre-commerciale.md` | Valider que l’offre commerciale est claire, simple et cohérente. |
 | Déployer le pilotage avancé | `play-016-deploiement-demarche-pilotage-mad-devops.md` | Démarche structurée pour équipe ou organisation. |
 | Valider le pilotage | `chk-006-deploiement-pilotage-mad-devops.md` | Vérifier que le système reste utile, léger et non punitif. |
 | Fermer le bloc pilotage fondateur | `chk-007-validation-bloc-pilotage-fondateur.md` | Valider que le bloc est complet, utile et simple. |
