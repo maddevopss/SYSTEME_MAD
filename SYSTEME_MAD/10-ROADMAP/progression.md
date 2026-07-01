@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 2.1
-Dernière révision: 2026-06-30
+Version: 2.2
+Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -159,9 +159,10 @@ Statut : **Complété**
 | Routine commerciale hebdomadaire | Complété |
 | Cockpit fondateur raccordé à la chaîne commerciale | Complété |
 | Index Guides mis à jour | Complété |
-| Premier tableau pipeline rempli | À faire |
-| Première revue pipeline | À faire |
+| Premier tableau pipeline initialisé | Complété |
+| Première revue pipeline | Complété |
 | Première passe CHK-014 | À faire |
+| Ajout de vrais prospects au pipeline | À faire |
 
 Statut : **En cours**
 
@@ -171,6 +172,6 @@ Statut : **En cours**
 
 Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio et audit de chaîne commerciale.
 
-La mise en usage commerciale est commencée : routine hebdomadaire créée et cockpit fondateur raccordé.
+La mise en usage commerciale est commencée : routine hebdomadaire créée, cockpit fondateur raccordé, pipeline initialisé et première revue pipeline effectuée.
 
-La prochaine action recommandée est de remplir le premier tableau pipeline commercial et d’effectuer une première revue pipeline.
+La prochaine action recommandée est d’ajouter de vrais prospects au pipeline, puis d’effectuer une première passe `CHK-014`.
