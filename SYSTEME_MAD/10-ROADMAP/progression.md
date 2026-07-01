@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 3.3
+Version: 3.4
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -208,6 +208,7 @@ Statut : **En cours — suspendu après préparation, à reprendre après MADPRO
 | Validation produit simulée MAD Ariane | Complété |
 | Backlog d’implémentation MAD Ariane | Complété |
 | Lot 1 — Fondation données MAD Ariane | Prêt à implémenter |
+| Prompt Agent Code — Lot 1 MAD Ariane | Prêt à utiliser |
 | Tests produit réels MAD Ariane | À faire |
 | Implémentation Lot 1 — Fondation données | À faire |
 
@@ -217,6 +218,6 @@ Statut : **En cours — priorité actuelle**
 
 ## Statut global
 
-Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, préparation du site Web réel, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, spécification technique contrôlée ajustée, plan de tests produit, sources explicites, validation simulée, backlog d’implémentation et Lot 1 prêt à implémenter.
+Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, préparation du site Web réel, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, spécification technique contrôlée ajustée, plan de tests produit, sources explicites, validation simulée, backlog d’implémentation, Lot 1 prêt à implémenter et prompt agent prêt à utiliser.
 
-La priorité actuelle est d’exécuter l’implémentation du Lot 1 — Fondation données de MAD Ariane dans le code applicatif, puis de valider les tests P0.
+La priorité actuelle est de lancer l’agent de code sur le Lot 1 — Fondation données de MAD Ariane, puis de valider les tests P0.
