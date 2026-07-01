@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Roadmap MAD DevOps
-Version: 1.3
+Version: 2.0
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -19,148 +19,179 @@ Auteur: Marc-André Dufour
 
 La présente feuille de route n'est pas une liste de tâches.
 
-Elle représente les prochaines briques qui apporteront le plus de valeur à MAD DevOps.
+Elle représente les prochaines briques qui apportent le plus de valeur au Système MAD et à MAD DevOps.
 
-Les idées qui ne répondent pas à un besoin immédiat sont conservées dans l'Innovation Backlog.
+Les idées qui ne répondent pas à un besoin immédiat sont conservées dans le backlog ou dans le dossier Innovation.
 
 ---
 
-# Bloc 01 — Handbook
+# Bloc 01 — Fondations
 
-## Fondations
+## Livrables
 
-- [x] Fondations
-- [x] Guide officiel
-- [x] Business Plan
-- [x] PLAY
-- [x] Manifeste
+- [x] Structure officielle `SYSTEME_MAD/`
+- [x] README racine
+- [x] `MANIFEST.md`
+- [x] Gouvernance documentaire
+- [x] ADR initiaux
+- [x] Standards documentaires
 
-Statut : Complété
+Statut : **Complété**
 
 ---
 
 # Bloc 02 — Standards
 
-## Développement
+## Livrables
 
-- [x] STD-001
-- [x] STD-002
-- [x] STD-003
-- [x] STD-004
-- [x] STD-005
-- [x] STD-006
+- [x] Développement
+- [x] Architecture
+- [x] Sécurité
+- [x] Qualité
+- [x] DevOps
+- [x] Intelligence artificielle
+- [x] Documentation
 
-Statut : Complété
-
----
-
-## Architecture
-
-- [x] STD-101
-- [x] STD-102
-- [x] STD-103
-- [x] STD-104
-- [x] STD-105
-
-Statut : Complété
+Statut : **Complété — 35 standards officialisés**
 
 ---
 
-## Sécurité
+# Bloc 03 — Projet client et livraison
 
-- [x] STD-201
-- [x] STD-202
-- [x] STD-203
-- [x] STD-204
-- [x] STD-205
+## Livrables
 
-Statut : Complété
+- [x] Starter Kit projet MAD DevOps
+- [x] Démarrage projet client
+- [x] Revue avant production
+- [x] Fiche projet client
+- [x] Accès requis avant démarrage
+- [x] Checklist livraison client
+- [x] Validation bloc projet client / livraison
 
----
-
-## Qualité
-
-- [x] STD-301
-- [x] STD-302
-- [x] STD-303
-- [x] STD-304
-- [x] STD-305
-
-Statut : Complété
+Statut : **Complété**
 
 ---
 
-## DevOps
+# Bloc 04 — Parcours client et offre commerciale
 
-- [x] STD-401
-- [x] STD-402
-- [x] STD-403
-- [x] STD-404
-- [x] STD-405
+## Livrables
 
-Statut : Complété
+- [x] Parcours client MAD DevOps
+- [x] Découverte client
+- [x] Qualification Phase 0
+- [x] Offre simple
+- [x] Offres packagées
+- [x] Proposition client
+- [x] Suivis client
+- [x] Validation parcours client
+- [x] Validation offre commerciale
 
----
-
-## Intelligence artificielle
-
-- [x] STD-501
-- [x] STD-502
-- [x] STD-503
-- [x] STD-504
-- [x] STD-505
-
-Statut : Complété
+Statut : **Complété**
 
 ---
 
-## Documentation
+# Bloc 05 — Présence Web et acquisition
 
-- [x] STD-601
-- [x] STD-602
-- [x] STD-603
-- [x] STD-604
-- [x] STD-605
+## Livrables
 
-Statut : Complété
+- [x] Communication commerciale
+- [x] Message site Web
+- [x] Présence Web
+- [x] Page accueil
+- [x] À propos
+- [x] FAQ site Web
+- [x] Acquisition clients
+- [x] Prospection douce
+- [x] Demandes entrantes
+- [x] Formulaire contact
+- [x] Réponse demande entrante
+- [x] Qualification demande entrante
+
+Statut : **Complété**
+
+---
+
+# Bloc 06 — Preuves client et portfolio
+
+## Livrables
+
+- [x] Portfolio MAD DevOps
+- [x] Preuves sociales
+- [x] Étude de cas client
+- [x] Fiche projet public
+- [x] Témoignages et références clients
+- [x] Demande de témoignage
+- [x] Autorisation publication projet
+- [x] Demande de référence client
+- [x] Transformation livraison en preuve client
+
+Statut : **Complété**
+
+---
+
+# Bloc 07 — Cockpit commercial
+
+## Livrables
+
+- [x] Cockpit commercial
+- [x] Tableau pipeline commercial
+- [x] Revue pipeline commercial
+- [x] Validation bloc cockpit commercial
+
+Statut : **Complété**
+
+---
+
+# Bloc 08 — Audit chaîne commerciale
+
+## Livrables
+
+- [x] Synthèse chaîne commerciale
+- [x] Playbook audit chaîne commerciale
+- [x] Checklist audit chaîne commerciale
+
+Statut : **Complété**
+
+---
+
+# Bloc 09 — Mise en usage commerciale
+
+## Objectif
+
+Transformer la chaîne commerciale documentée en routine exploitable.
+
+## Livrables recommandés
+
+- [ ] Mise à jour du cockpit fondateur avec les entrées commerciales.
+- [ ] Routine commerciale hebdomadaire.
+- [ ] Premier tableau pipeline rempli.
+- [ ] Première revue pipeline.
+- [ ] Première passe d’audit CHK-014.
+
+Statut : **Prochaine phase recommandée**
+
+---
+
+# Bloc 10 — Site Web réel MAD DevOps
+
+## Objectif
+
+Transformer les guides et templates Web en structure concrète pour `maddevops.com`.
+
+## Livrables recommandés
+
+- [ ] Architecture site Web MAD DevOps.
+- [ ] Contenu complet du site.
+- [ ] Page contact / formulaire.
+- [ ] Section portfolio.
+- [ ] Checklist validation site Web.
+
+Statut : **À planifier après mise en usage commerciale**
 
 ---
 
 # Statut global
 
-Les 35 standards planifiés sont créés et constituent la base officielle du Système MAD.
+La couche commerciale MAD DevOps est documentée de bout en bout : présence Web, acquisition, demandes entrantes, qualification, offre, proposition, livraison, preuves client, portfolio, cockpit commercial et audit.
 
----
-
-# Bloc 03 — ADR
-
-Créer les ADR uniquement lorsqu'une décision importante est prise.
-
-Statut : Au besoin
-
----
-
-# Bloc 04 — Knowledge Base
-
-Créer une fiche uniquement lorsqu'une information est recherchée plus d'une fois.
-
-Exemples :
-
-- Git
-- Node.js
-- TypeScript
-- Prisma
-- PostgreSQL
-- Docker
-- React
-- Electron
-
-Statut : En évolution
-
----
-
-# Bloc 05 — Checklists
-
-Créer les checklists lorsqu'un processus devient répétitif.
-
-Statut : Au besoin
+La prochaine priorité est la mise en usage concrète du système commercial.
