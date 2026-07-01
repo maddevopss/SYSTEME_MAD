@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 4.9
+Version: 5.0
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -139,24 +139,26 @@ Statut : **Actif — suivi des opportunités commerciales**
 
 ## Bloc 21 — Tableau de bord Machine à clients
 
+Statut : **Actif — cockpit commercial léger**
+
+---
+
+## Bloc 22 — Fiche opportunité Machine à clients
+
 | Élément | Statut |
 |---|---|
-| Tableau de bord Machine à clients | Créé — Actif |
-| Santé du pipeline | Complété |
-| Opportunités P0 / P1 | Complété |
-| Suivis à faire | Complété |
-| Propositions à préparer | Complété |
-| Preuves client à produire | Complété |
-| Offres à clarifier | Complété |
-| Actions commerciales de la semaine | Complété |
-| Garde-fous commerciaux | Complété |
+| Template fiche opportunité Machine à clients | Créé — Template |
+| Index Templates mis à jour | Complété |
+| Raccordement au pipeline commercial | Complété |
+| Raccordement au tableau de bord Machine à clients | Complété |
+| Raccordement à PLAY-029 | Complété |
 
-Statut : **Actif — cockpit commercial léger**
+Statut : **Complété — qualification rapide des opportunités**
 
 ---
 
 ## Statut global
 
-Le Système MAD dispose maintenant d’une base documentaire complète, de BaseMAD, d’une base opérationnelle, de CerveauMAD, d’un registre actif, d’une revue, d’un tableau de bord, d’un snapshot de reprise, d’un pont vers l’exécution commerciale, d’un pipeline commercial actif et d’un tableau de bord Machine à clients.
+Le Système MAD dispose maintenant d’une base documentaire complète, de BaseMAD, d’une base opérationnelle, de CerveauMAD, du registre, de la revue, des tableaux de bord, du snapshot de reprise, du pont commercial, du pipeline commercial et d’une fiche opportunité Machine à clients.
 
-La priorité recommandée est d’utiliser le registre comme point d’entrée, PLAY-029 comme transformateur commercial, le pipeline comme suivi des opportunités et le tableau de bord Machine à clients comme cockpit commercial léger.
+La priorité recommandée est d’utiliser la fiche opportunité pour qualifier les prospects et signaux commerciaux avant de les faire avancer dans le pipeline.
