@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 2.8
+Version: 2.9
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -44,10 +44,17 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-023-validation-mesures-execution-commerciale.md` | Officiel | Mesures commerciales. |
 | `chk-024-validation-offre-terrain-mad-devops.md` | Officiel | Offre terrain. |
 | `chk-025-validation-page-guide-client-rapide.md` | Officiel | Page Guide client rapide. |
+| `chk-026-validation-contenu-public-mad-devops.md` | Officiel | Contenu public MAD DevOps. |
 
 ---
 
 ## Checklists prioritaires
+
+### Publication publique
+
+- `chk-015-validation-site-web-mad-devops.md`
+- `chk-025-validation-page-guide-client-rapide.md`
+- `chk-026-validation-contenu-public-mad-devops.md`
 
 ### Machine à clients
 
@@ -56,11 +63,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-023-validation-mesures-execution-commerciale.md`
 - `chk-024-validation-offre-terrain-mad-devops.md`
 - `chk-025-validation-page-guide-client-rapide.md`
-
-### Site Web
-
-- `chk-015-validation-site-web-mad-devops.md`
-- `chk-025-validation-page-guide-client-rapide.md`
+- `chk-026-validation-contenu-public-mad-devops.md`
 
 ### CerveauMAD
 
@@ -94,3 +97,4 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `SYSTEME_MAD/05-PLAY/README.md`
 - `SYSTEME_MAD/07-TEMPLATES/README.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-025-validation-page-guide-client-rapide.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-026-validation-contenu-public-mad-devops.md`
