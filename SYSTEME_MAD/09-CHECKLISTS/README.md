@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 2.9
+Version: 3.0
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -45,16 +45,24 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-024-validation-offre-terrain-mad-devops.md` | Officiel | Offre terrain. |
 | `chk-025-validation-page-guide-client-rapide.md` | Officiel | Page Guide client rapide. |
 | `chk-026-validation-contenu-public-mad-devops.md` | Officiel | Contenu public MAD DevOps. |
+| `chk-027-validation-reponse-demande-entrante.md` | Officiel | Réponse à une demande entrante. |
 
 ---
 
 ## Checklists prioritaires
+
+### Demandes entrantes
+
+- `chk-027-validation-reponse-demande-entrante.md`
+- `chk-021-validation-opportunite-machine-a-clients.md`
+- `chk-024-validation-offre-terrain-mad-devops.md`
 
 ### Publication publique
 
 - `chk-015-validation-site-web-mad-devops.md`
 - `chk-025-validation-page-guide-client-rapide.md`
 - `chk-026-validation-contenu-public-mad-devops.md`
+- `chk-027-validation-reponse-demande-entrante.md`
 
 ### Machine à clients
 
@@ -64,6 +72,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-024-validation-offre-terrain-mad-devops.md`
 - `chk-025-validation-page-guide-client-rapide.md`
 - `chk-026-validation-contenu-public-mad-devops.md`
+- `chk-027-validation-reponse-demande-entrante.md`
 
 ### CerveauMAD
 
@@ -96,5 +105,4 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `SYSTEME_MAD/03-STANDARDS/README.md`
 - `SYSTEME_MAD/05-PLAY/README.md`
 - `SYSTEME_MAD/07-TEMPLATES/README.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-025-validation-page-guide-client-rapide.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-026-validation-contenu-public-mad-devops.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-027-validation-reponse-demande-entrante.md`
