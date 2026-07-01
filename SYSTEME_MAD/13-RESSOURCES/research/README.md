@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Recherche MADSuite
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -55,6 +55,7 @@ SYSTEME_MAD/13-RESSOURCES/research/
 | `001-mad-ariane-snapshot-reprise.md` | `02-rd-hypotheses/` | À valider | Hypothèse R&D du snapshot de reprise. |
 | `002-jitai-context-aware-sans-camera.md` | `02-rd-hypotheses/` | À valider | Hypothèse R&D context-aware sans caméra. |
 | `001-synthese-cognitive-madsuite.md` | `03-madproof/` | À valider | Synthèse MADPROOF des axes cognitifs MADSuite. |
+| `002-matrice-claims-cognitifs-madsuite.md` | `03-madproof/` | À valider | Matrice de contrôle des claims cognitifs MADSuite. |
 
 ---
 
@@ -122,4 +123,4 @@ Ce dossier doit respecter :
 
 ## Prochaine action recommandée
 
-Durcir les documents `À valider` avec sources explicites, niveau de preuve et décisions produit.
+Durcir les documents `À valider` avec sources explicites, niveau de preuve, claims acceptables, claims à reformuler et décisions produit.
