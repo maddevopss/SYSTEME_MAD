@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 4.5
+Version: 4.6
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -63,6 +63,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `evolution-repo-systeme-mad.md` | Officiel | Évolution du repo. |
 | `principe-amelioration-continue-mad-devops.md` | Officiel | Amélioration continue. |
 | `cockpit-fondateur-mad-devops.md` | Officiel | Cockpit fondateur. |
+| `routine-quotidienne-fondateur-mad-devops.md` | Officiel | Routine quotidienne légère du fondateur MAD DevOps. |
 | `routine-courte-fondateur-lundi-vendredi.md` | Officiel | Routine courte. |
 | `fiche-reflexe-fondateur-mad-devops.md` | Officiel | Fiche réflexe. |
 | `exemple-semaine-cockpit-fondateur-mad-devops.md` | Exemple | Exemple cockpit fondateur. |
@@ -132,6 +133,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ### Pilotage fondateur
 
+- `routine-quotidienne-fondateur-mad-devops.md`
 - `cerveau-mad-intelligence-operationnelle.md`
 - `base-operationnelle-mad-devops.md`
 - `fiche-reflexe-fondateur-mad-devops.md`
