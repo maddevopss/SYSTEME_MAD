@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index des sources — Recherche MADSuite
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -56,14 +56,14 @@ Toute affirmation importante doit être classée selon son niveau de maturité e
 
 ---
 
-## Documents à créer ou compléter
+## Documents actifs à durcir
 
-| Document | Type | Statut | Destination recommandée |
+| Document | Type | Statut | Destination |
 |---|---|---|---|
-| `001-assistance-cognitive-tdah.md` | Fondation prudente | À créer | `01-fondations-prudentes/` |
-| `001-mad-ariane-snapshot-reprise.md` | Hypothèse R&D | À créer | `02-rd-hypotheses/` |
-| `002-jitai-context-aware-sans-camera.md` | Hypothèse R&D | À créer | `02-rd-hypotheses/` |
-| `001-synthese-cognitive-madsuite.md` | Synthèse MADPROOF | À créer | `03-madproof/` |
+| `001-assistance-cognitive-tdah.md` | Fondation prudente | Créé — à sourcer / durcir | `01-fondations-prudentes/` |
+| `001-mad-ariane-snapshot-reprise.md` | Hypothèse R&D | Créé — à sourcer / durcir | `02-rd-hypotheses/` |
+| `002-jitai-context-aware-sans-camera.md` | Hypothèse R&D | Créé — à sourcer / durcir | `02-rd-hypotheses/` |
+| `001-synthese-cognitive-madsuite.md` | Synthèse MADPROOF | Créé — à sourcer / durcir | `03-madproof/` |
 
 ---
 
@@ -82,4 +82,10 @@ Toute affirmation importante doit être classée selon son niveau de maturité e
 
 ## Prochaine action
 
-Créer les documents de fondation, d’hypothèse R&D et de synthèse MADPROOF liés à l’assistance cognitive MADSuite.
+Durcir chaque document actif avec :
+
+- sources explicites;
+- niveau de preuve;
+- claims acceptables;
+- claims à reformuler;
+- décisions produit.
