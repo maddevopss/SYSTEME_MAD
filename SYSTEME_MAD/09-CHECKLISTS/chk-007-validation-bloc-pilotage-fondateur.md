@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: CHK-007 — Validation du bloc pilotage fondateur
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -34,6 +34,7 @@ Le bloc est réussi s’il aide à agir plus vite, à réduire le flou et à con
 | Document | Rôle attendu | Présent |
 |---|---|---|
 | `fiche-reflexe-fondateur-mad-devops.md` | Réflexe immédiat en situation de surcharge ou de flou. | [ ] |
+| `exemple-fiche-reflexe-fondateur-mad-devops.md` | Exemple d’utilisation de la fiche réflexe en situation réelle. | [ ] |
 | `routine-courte-fondateur-lundi-vendredi.md` | Routine courte pour lundi et vendredi. | [ ] |
 | `cockpit-fondateur-mad-devops.md` | Point d’entrée selon la situation. | [ ] |
 | `exemple-semaine-cockpit-fondateur-mad-devops.md` | Exemple terrain rempli. | [ ] |
@@ -49,6 +50,7 @@ Le bloc est réussi s’il aide à agir plus vite, à réduire le flou et à con
 # 1. Utilisation rapide
 
 - [ ] La fiche réflexe permet de décider quoi faire sans réfléchir longtemps.
+- [ ] L’exemple de fiche réflexe montre comment l’utiliser dans des situations concrètes.
 - [ ] La routine courte tient en 20 minutes le lundi.
 - [ ] La routine courte tient en 10 à 15 minutes le vendredi.
 - [ ] Le mode minimum vital existe pour les semaines chargées.
@@ -100,6 +102,7 @@ Le bloc couvre :
 # 5. Indexation
 
 - [ ] La fiche réflexe est listée dans `SYSTEME_MAD/02-GUIDE/README.md`.
+- [ ] L’exemple de fiche réflexe est listé dans `SYSTEME_MAD/02-GUIDE/README.md`.
 - [ ] La routine courte est listée dans `SYSTEME_MAD/02-GUIDE/README.md`.
 - [ ] Le cockpit fondateur est listé dans `SYSTEME_MAD/02-GUIDE/README.md`.
 - [ ] Les templates de pilotage sont listés dans `SYSTEME_MAD/07-TEMPLATES/README.md`.
