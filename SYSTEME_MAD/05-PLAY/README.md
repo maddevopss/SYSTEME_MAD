@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 2.1
+Version: 2.2
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -47,6 +47,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 | `play-024-transformer-idee-cognitive-en-fonctionnalite-madsuite.md` | Officiel | Transformer une idée cognitive en fonctionnalité MADSuite. |
 | `play-025-transformer-idee-en-element-basemad.md` | Officiel | Transformer une idée en élément BaseMAD. |
 | `play-026-appliquer-base-operationnelle-mad-devops.md` | Officiel | Appliquer la base opérationnelle MAD DevOps pour trier, décider, documenter ou refuser une action. |
+| `play-027-executer-processus-cerveaumad.md` | Officiel | Exécuter le processus CerveauMAD pour transformer une entrée brute en prochaine action claire. |
 
 ---
 
@@ -55,6 +56,10 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 ### BaseMAD
 
 - `play-025-transformer-idee-en-element-basemad.md`
+
+### CerveauMAD
+
+- `play-027-executer-processus-cerveaumad.md`
 
 ### Base opérationnelle MAD DevOps
 
@@ -92,6 +97,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 
 - `play-016-deploiement-demarche-pilotage-mad-devops.md`
 - `play-026-appliquer-base-operationnelle-mad-devops.md`
+- `play-027-executer-processus-cerveaumad.md`
 
 ---
 
