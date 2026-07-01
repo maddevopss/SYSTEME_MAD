@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 2.8
+Version: 2.9
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -22,6 +22,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | Fichier | Statut | Rôle |
 |---|---|---|
 | `basemad-couche-centrale-systeme-mad.md` | Officiel | Couche centrale de continuité, mémoire opérationnelle et gouvernance documentaire. |
+| `base-operationnelle-mad-devops.md` | Officiel | Base de fonctionnement opérationnel quotidien du studio MAD DevOps. |
 | `base-uiux-accessible-cognitive-mad-devops.md` | Officiel | Base interne de conception UI/UX accessible et cognitive. |
 | `vision-long-terme-mad-devops.md` | Officiel | Boussole stratégique long terme de MAD DevOps. |
 | `roadmap-strategique-2026-2027-mad-devops.md` | Officiel | Roadmap stratégique. |
@@ -58,9 +59,10 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ## Guides prioritaires
 
-### BaseMAD
+### BaseMAD et base opérationnelle
 
 - `basemad-couche-centrale-systeme-mad.md`
+- `base-operationnelle-mad-devops.md`
 - `base-uiux-accessible-cognitive-mad-devops.md`
 
 ### Vision stratégique
@@ -99,6 +101,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ### Pilotage fondateur
 
+- `base-operationnelle-mad-devops.md`
 - `fiche-reflexe-fondateur-mad-devops.md`
 - `routine-courte-fondateur-lundi-vendredi.md`
 - `cockpit-fondateur-mad-devops.md`
