@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Progression du Système MAD
-Version: 4.4
+Version: 4.5
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -217,8 +217,26 @@ Statut : **Complété — routine de maintien du registre**
 
 ---
 
+## Bloc 17 — Tableau de bord CerveauMAD
+
+| Élément | Statut |
+|---|---|
+| Tableau de bord CerveauMAD | Créé — Actif |
+| Vue santé du registre | Complété |
+| Vue P0 / P1 | Complété |
+| Vue entrées à clarifier | Complété |
+| Vue entrées à planifier | Complété |
+| Vue décisions à créer | Complété |
+| Vue actions de la semaine | Complété |
+| Raccordement au registre | Complété |
+| Raccordement à PLAY-028 | Complété |
+
+Statut : **Actif — pilotage du registre CerveauMAD**
+
+---
+
 ## Statut global
 
-Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, site Web réel V1, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, lots d’implémentation MAD Ariane, checklist finale MVP, BaseMAD comme couche centrale officielle de continuité, mémoire opérationnelle et gouvernance documentaire, une base opérationnelle officielle avec playbook d’application, CerveauMAD comme couche d’intelligence opérationnelle complète avec guide, playbook d’exécution, template d’entrée et checklist de validation, un registre actif pour capter les entrées, ainsi qu’une routine de revue pour maintenir ce registre clair, utile et actionnable.
+Le Système MAD dispose maintenant de fondations documentaires, standards, parcours client, offre commerciale, présence Web, acquisition, cockpit commercial, preuves client, portfolio, audit de chaîne commerciale, site Web réel V1, base MADPROOF cognitive MADSuite, MVP prudent MAD Ariane, lots d’implémentation MAD Ariane, checklist finale MVP, BaseMAD comme couche centrale officielle de continuité, mémoire opérationnelle et gouvernance documentaire, une base opérationnelle officielle avec playbook d’application, CerveauMAD comme couche d’intelligence opérationnelle complète avec guide, playbook d’exécution, template d’entrée et checklist de validation, un registre actif pour capter les entrées, une routine de revue pour maintenir ce registre clair, utile et actionnable, ainsi qu’un tableau de bord actif pour piloter les priorités, les blocages, les décisions et les actions.
 
-La priorité recommandée est d’utiliser le registre CerveauMAD comme point d’entrée unique pour les nouvelles idées, demandes, risques, décisions et pistes de travail, puis de faire une revue régulière avec PLAY-028 afin d’éviter l’accumulation de bruit.
+La priorité recommandée est d’utiliser le registre CerveauMAD comme point d’entrée unique, de faire une revue régulière avec PLAY-028, puis de maintenir le tableau de bord CerveauMAD comme vue rapide de pilotage.
