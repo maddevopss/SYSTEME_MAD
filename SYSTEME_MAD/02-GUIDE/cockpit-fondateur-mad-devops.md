@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Cockpit fondateur MAD DevOps
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -40,10 +40,28 @@ Plus clarifier.
 
 ---
 
+## Entrée graduée
+
+```text
+Dans le jus : fiche réflexe.
+Semaine normale : routine courte.
+Situation complexe : cockpit complet.
+```
+
+| Niveau | Document | Quand l’utiliser |
+|---|---|---|
+| Réflexe | `fiche-reflexe-fondateur-mad-devops.md` | Quand il faut savoir quoi faire immédiatement. |
+| Routine courte | `routine-courte-fondateur-lundi-vendredi.md` | Pour piloter lundi et vendredi sans ouvrir tout le système. |
+| Cockpit complet | `cockpit-fondateur-mad-devops.md` | Quand il faut choisir le bon document selon une situation précise. |
+
+---
+
 # 1. Vue rapide
 
 | Situation | Document à ouvrir | Résultat attendu |
 |---|---|---|
+| Dans le jus | `fiche-reflexe-fondateur-mad-devops.md` | Savoir quoi faire sans réfléchir trop longtemps. |
+| Routine lundi / vendredi | `routine-courte-fondateur-lundi-vendredi.md` | Piloter sans ouvrir tout le système. |
 | Début de semaine | `template-revue-hebdomadaire-pilotage-mad-devops.md` | Priorités, relance, risque et amélioration de la semaine. |
 | Fin de semaine | `template-journal-bord-hebdomadaire-mad-devops.md` | Apprentissages, irritants, célébrations et mini-action. |
 | Lancer le pilotage solo | `template-lancement-pilotage-solo-micro-equipe-mad-devops.md` | Base légère de pilotage personnel ou micro-équipe. |
@@ -59,12 +77,19 @@ Plus clarifier.
 | Qualité parcours client | `chk-005-qualite-parcours-client.md` | Vérifier le parcours complet du client. |
 | Déployer le pilotage avancé | `play-016-deploiement-demarche-pilotage-mad-devops.md` | Démarche structurée pour équipe ou organisation. |
 | Valider le pilotage | `chk-006-deploiement-pilotage-mad-devops.md` | Vérifier que le système reste utile, léger et non punitif. |
+| Fermer le bloc pilotage fondateur | `chk-007-validation-bloc-pilotage-fondateur.md` | Valider que le bloc est complet, utile et simple. |
 
 ---
 
 # 2. Routine de début de semaine
 
-## Ouvrir
+## Option courte
+
+```text
+SYSTEME_MAD/02-GUIDE/routine-courte-fondateur-lundi-vendredi.md
+```
+
+## Option complète
 
 ```text
 SYSTEME_MAD/07-TEMPLATES/template-revue-hebdomadaire-pilotage-mad-devops.md
@@ -92,7 +117,13 @@ Quelle amélioration système est réaliste cette semaine ?
 
 # 3. Routine de fin de semaine
 
-## Ouvrir
+## Option courte
+
+```text
+SYSTEME_MAD/02-GUIDE/routine-courte-fondateur-lundi-vendredi.md
+```
+
+## Option complète
 
 ```text
 SYSTEME_MAD/07-TEMPLATES/template-journal-bord-hebdomadaire-mad-devops.md
@@ -297,8 +328,8 @@ Si la semaine est chargée, ne pas tout ouvrir.
 Ouvrir seulement :
 
 ```text
-1. template-tableau-suivi-clients-mad-devops.md
-2. template-revue-hebdomadaire-pilotage-mad-devops.md
+1. fiche-reflexe-fondateur-mad-devops.md
+2. routine-courte-fondateur-lundi-vendredi.md
 3. template-journal-bord-hebdomadaire-mad-devops.md
 ```
 
@@ -307,9 +338,7 @@ Ouvrir seulement :
 ```text
 1 relance.
 1 risque.
-1 livraison ou projet à suivre.
-1 apprentissage.
-1 mini-amélioration.
+1 apprentissage ou célébration.
 ```
 
 ---
