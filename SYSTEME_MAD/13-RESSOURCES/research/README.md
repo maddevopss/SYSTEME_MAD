@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Recherche MADSuite
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -56,6 +56,7 @@ SYSTEME_MAD/13-RESSOURCES/research/
 | `002-jitai-context-aware-sans-camera.md` | `02-rd-hypotheses/` | À valider | Hypothèse R&D context-aware sans caméra. |
 | `001-synthese-cognitive-madsuite.md` | `03-madproof/` | À valider | Synthèse MADPROOF des axes cognitifs MADSuite. |
 | `002-matrice-claims-cognitifs-madsuite.md` | `03-madproof/` | À valider | Matrice de contrôle des claims cognitifs MADSuite. |
+| `003-validation-mad-ariane-chk-016.md` | `03-madproof/` | À valider | Première validation CHK-016 du module MAD Ariane. |
 
 ---
 
@@ -109,18 +110,6 @@ Contient les documents historiques ou remplacés.
 
 ---
 
-## Lien avec les décisions
-
-Ce dossier doit respecter :
-
-- `ADR-002 — Positionnement non médical de MADSuite`;
-- `STD-501 — IA responsable`;
-- `STD-503 — Données et confidentialité IA`;
-- `STD-505 — IA cognitive non médicale`;
-- la charte éthique MADSuite.
-
----
-
 ## Prochaine action recommandée
 
-Durcir les documents `À valider` avec sources explicites, niveau de preuve, claims acceptables, claims à reformuler et décisions produit.
+Créer une spécification MVP prudente pour MAD Ariane ou durcir les sources explicites de la validation CHK-016.
