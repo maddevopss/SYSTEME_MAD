@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 1.3
+Version: 1.4
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -29,6 +29,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-007-validation-bloc-pilotage-fondateur.md` | Officiel | Bloc pilotage fondateur. |
 | `chk-008-validation-bloc-parcours-client.md` | Officiel | Bloc parcours client MAD DevOps. |
 | `chk-009-validation-bloc-offre-commerciale.md` | Officiel | Bloc offre commerciale MAD DevOps. |
+| `chk-010-validation-bloc-projet-client-livraison.md` | Officiel | Bloc projet client et livraison. |
 
 ---
 
@@ -45,6 +46,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-005-qualite-parcours-client.md`
 - `chk-008-validation-bloc-parcours-client.md`
 - `chk-009-validation-bloc-offre-commerciale.md`
+- `chk-010-validation-bloc-projet-client-livraison.md`
 
 ### Pilotage MAD DevOps
 
@@ -75,3 +77,4 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `SYSTEME_MAD/05-PLAY/play-013-parcours-client-mad-devops.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-008-validation-bloc-parcours-client.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-009-validation-bloc-offre-commerciale.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-010-validation-bloc-projet-client-livraison.md`
