@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -28,11 +28,12 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `pilotage-client-mad-devops.md` | Officiel | Guide de pilotage client et suivi des prochaines actions. |
 | `routine-hebdomadaire-indicateurs-mad-devops.md` | Brouillon contrôlé | Routine hebdomadaire et indicateurs de pilotage. |
 | `principe-amelioration-continue-mad-devops.md` | Officiel | Principe d’amélioration continue MAD DevOps. |
-| `cockpit-fondateur-mad-devops.md` | Officiel | Point d’entrée opérationnel du fondateur : quel document ouvrir selon la situation. |
-| `routine-courte-fondateur-lundi-vendredi.md` | Officiel | Routine courte lundi/vendredi pour piloter sans ouvrir tout le système. |
-| `fiche-reflexe-fondateur-mad-devops.md` | Officiel | Fiche réflexe ultra-courte : situation, réflexe, document à ouvrir. |
+| `cockpit-fondateur-mad-devops.md` | Officiel | Point d’entrée opérationnel du fondateur. |
+| `routine-courte-fondateur-lundi-vendredi.md` | Officiel | Routine courte lundi/vendredi. |
+| `fiche-reflexe-fondateur-mad-devops.md` | Officiel | Fiche réflexe ultra-courte. |
 | `exemple-parcours-client-a-z.md` | Exemple | Exemple complet d’un parcours client fictif. |
 | `exemple-semaine-cockpit-fondateur-mad-devops.md` | Exemple | Exemple rempli d’une semaine cockpit fondateur. |
+| `exemple-fiche-reflexe-fondateur-mad-devops.md` | Exemple | Exemple d’utilisation de la fiche réflexe. |
 
 ---
 
@@ -61,6 +62,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 - `exemple-parcours-client-a-z.md`
 - `exemple-semaine-cockpit-fondateur-mad-devops.md`
+- `exemple-fiche-reflexe-fondateur-mad-devops.md`
 
 ---
 
