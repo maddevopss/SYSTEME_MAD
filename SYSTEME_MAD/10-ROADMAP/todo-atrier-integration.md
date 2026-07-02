@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 3.9
+Version: 4.0
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -77,7 +77,8 @@ Pas MADPROOF = pas officiel.
 | Alignement checklist Loi 25 | `SYSTEME_MAD/09-CHECKLISTS/chk-loi25-madsuite.md` | Fait / v1.1 |
 | `Recherche-cybersecurite.md` | `SYSTEME_MAD/13-RESSOURCES/research/05-compliance/fiche-madproof-recherche-cybersecurite.md` | Fait |
 | Alignement checklist sécurité SaaS | `SYSTEME_MAD/09-CHECKLISTS/chk-security-saas-lite.md` | Fait / v1.1 |
-| `Recherche-fiscale.md` | Fiche MADPROOF à produire | À faire |
+| `Recherche-fiscale.md` | `SYSTEME_MAD/13-RESSOURCES/research/05-compliance/fiche-madproof-recherche-fiscale.md` | Fait |
+| Checklist fiscale RS&DE | `SYSTEME_MAD/09-CHECKLISTS/chk-fiscal-rd-sred.md` | À créer si nécessaire |
 | `Recherche-droitauteur.md` | Fiche MADPROOF à produire | À faire |
 
 ## 7. Bloc produit / terrain — à faire
@@ -99,7 +100,7 @@ Pas MADPROOF = pas officiel.
 
 Ordre conseillé :
 
-1. Traiter `Recherche-fiscale.md`.
+1. Créer `chk-fiscal-rd-sred.md` si on veut verrouiller la gouvernance fiscale.
 2. Traiter ensuite `Recherche-droitauteur.md`.
 3. Revenir ensuite au bloc géospatial / terrain.
 
