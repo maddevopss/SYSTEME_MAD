@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 5.7
+Version: 5.8
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -17,73 +17,14 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ---
 
-## Documents
-
-| Fichier | Statut | Rôle |
-|---|---|---|
-| `basemad-couche-centrale-systeme-mad.md` | Officiel | Couche centrale de continuité, mémoire opérationnelle et gouvernance documentaire. |
-| `cerveau-mad-intelligence-operationnelle.md` | Officiel | Couche d’intelligence opérationnelle du Système MAD. |
-| `base-operationnelle-mad-devops.md` | Officiel | Base de fonctionnement opérationnel quotidien du studio MAD DevOps. |
-| `base-uiux-accessible-cognitive-mad-devops.md` | Officiel | Base interne de conception UI/UX accessible et cognitive. |
-| `frontiere-public-prive-mad-devops.md` | Officiel | Frontière entre méthode interne et communication publique. |
-| `lexique-public-prive-mad-devops.md` | Officiel | Lexique pour traduire les concepts internes en langage public sécurisé. |
-| `synthese-publication-controlee-mad-devops.md` | Officiel | Synthèse du système de publication publique contrôlée. |
-| `synthese-concordance-commerciale-globale-mad-devops.md` | Officiel | Synthèse de concordance des blocs commerciaux MAD DevOps. |
-| `presence-web-mad-devops.md` | Officiel | Présence Web. |
-| `communication-commerciale-mad-devops.md` | Officiel | Communication commerciale. |
-| `acquisition-clients-mad-devops.md` | Officiel | Acquisition clients. |
-| `demandes-entrantes-mad-devops.md` | Officiel | Réception et orientation des demandes entrantes. |
-| `synthese-traitement-demandes-entrantes-mad-devops.md` | Officiel | Synthèse du flux demandes entrantes vers opportunité. |
-| `synthese-chaine-demandes-entrantes-mad-devops.md` | Officiel | Synthèse complète de la chaîne demandes entrantes. |
-| `page-guide-client-rapide-mad-devops.md` | Officiel | Cadrage d’une future page Web de consultation rapide client. |
-| `cockpit-commercial-mad-devops.md` | Officiel | Cockpit commercial et suivi du pipeline. |
-| `synthese-chaine-commerciale-mad-devops.md` | Officiel | Synthèse de la chaîne commerciale MAD DevOps. |
-| `routine-commerciale-hebdomadaire-mad-devops.md` | Officiel | Routine commerciale hebdomadaire MAD DevOps. |
-| `synthese-preuve-client-portfolio-mad-devops.md` | Officiel | Synthèse du bloc preuve client et portfolio. |
-| `synthese-finale-bloc-preuve-client-portfolio.md` | Officiel | Synthèse finale du bloc Preuve client / Portfolio. |
-| `synthese-chaine-projet-client-livraison.md` | Officiel | Synthèse du bloc Projet client / Livraison. |
-| `synthese-finale-projet-client-livraison.md` | Officiel | Synthèse finale compacte du bloc Projet client / Livraison. |
-| `offre-simple-mad-devops.md` | Officiel | Offre simple. |
-| `offre-terrain-mad-devops.md` | Officiel | Offre courte envoyable après qualification d’une opportunité. |
-| `offres-packagees-mad-devops.md` | Officiel | Offres packagées. |
-| `parcours-client-mad-devops.md` | Officiel | Parcours client. |
-| `kit-terrain-parcours-client-mad-devops.md` | Officiel | Kit terrain parcours client. |
-| `pilotage-client-mad-devops.md` | Officiel | Pilotage client. |
-| `portfolio-mad-devops.md` | Officiel | Portfolio. |
-| `preuves-sociales-mad-devops.md` | Officiel | Preuves sociales. |
-| `temoignages-references-clients-mad-devops.md` | Officiel | Témoignages et références clients. |
-| `exemple-fiche-projet-client-mad-devops.md` | Exemple | Exemple rempli de fiche projet client. |
-| `exemple-validation-chk-031-projet-pret-a-demarrer.md` | Exemple | Exemple de validation CHK-031 pour projet prêt à démarrer. |
-| `exemple-revue-hebdomadaire-projet-client.md` | Exemple | Exemple de revue hebdomadaire d’un projet client actif. |
-| `exemple-validation-chk-003-livraison-client.md` | Exemple | Exemple de validation CHK-003 pour livraison client. |
-| `exemple-fiche-projet-public-mad-devops.md` | Exemple | Exemple de fiche projet publique anonymisée. |
-| `exemple-validation-chk-030-preuve-client.md` | Exemple | Exemple de validation CHK-030 pour une preuve client. |
-| `exemple-revue-commerciale.md` | Exemple | Exemple court de revue commerciale hebdomadaire. |
-| `exemple-activation-commerciale-7-jours.md` | Exemple | Exemple court d’activation commerciale 7 jours. |
-| `exemple-offre-terrain-mad-devops.md` | Exemple | Exemple court de message d’offre terrain MAD DevOps. |
-| `exemple-fiche-contenu-public-guide-client.md` | Exemple | Exemple rempli de fiche contenu public candidat pour le Guide client. |
-| `exemple-demande-entrante-qualification-reponse.md` | Exemple | Exemple complet de demande entrante, qualification, réponse et opportunité. |
-| `exemple-fermeture-demande-entrante.md` | Exemple | Exemple de fermeture propre, refus poli ou report d’une demande entrante. |
-| `exemple-report-demande-entrante.md` | Exemple | Exemple de report propre d’une demande entrante. |
-| `exemple-parcours-client-a-z.md` | Exemple | Exemple parcours client. |
-| `vision-long-terme-mad-devops.md` | Officiel | Boussole stratégique long terme de MAD DevOps. |
-| `roadmap-strategique-2026-2027-mad-devops.md` | Officiel | Roadmap stratégique. |
-| `systeme-operatoire-mad-devops.md` | Officiel | Système opératoire documentaire. |
-| `decisions-long-terme-mad-devops.md` | Officiel | Décisions long terme. |
-| `evolution-repo-systeme-mad.md` | Officiel | Évolution du repo. |
-| `principe-amelioration-continue-mad-devops.md` | Officiel | Amélioration continue. |
-| `cockpit-fondateur-mad-devops.md` | Officiel | Cockpit fondateur. |
-| `synthese-pilotage-fondateur-quotidien.md` | Officiel | Synthèse du pilotage quotidien du fondateur MAD DevOps. |
-| `routine-quotidienne-fondateur-mad-devops.md` | Officiel | Routine quotidienne légère du fondateur MAD DevOps. |
-| `routine-courte-fondateur-lundi-vendredi.md` | Officiel | Routine courte. |
-| `fiche-reflexe-fondateur-mad-devops.md` | Officiel | Fiche réflexe. |
-| `exemple-journal-quotidien-fondateur-mad-devops.md` | Exemple | Exemple rempli du journal quotidien fondateur MAD DevOps. |
-| `exemple-semaine-cockpit-fondateur-mad-devops.md` | Exemple | Exemple cockpit fondateur. |
-| `exemple-fiche-reflexe-fondateur-mad-devops.md` | Exemple | Exemple fiche réflexe. |
-
----
-
 ## Guides prioritaires
+
+### Amélioration continue
+
+- `synthese-chaine-amelioration-continue.md`
+- `principe-amelioration-continue-mad-devops.md`
+- `cockpit-fondateur-mad-devops.md`
+- `synthese-pilotage-fondateur-quotidien.md`
 
 ### Projet client et livraison
 
@@ -96,39 +37,26 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `parcours-client-mad-devops.md`
 - `kit-terrain-parcours-client-mad-devops.md`
 - `pilotage-client-mad-devops.md`
-- `synthese-preuve-client-portfolio-mad-devops.md`
-- `synthese-finale-bloc-preuve-client-portfolio.md`
 
 ### Preuve client et portfolio
 
 - `synthese-finale-bloc-preuve-client-portfolio.md`
 - `synthese-preuve-client-portfolio-mad-devops.md`
-- `exemple-validation-chk-003-livraison-client.md`
 - `exemple-fiche-projet-public-mad-devops.md`
 - `exemple-validation-chk-030-preuve-client.md`
 - `portfolio-mad-devops.md`
 - `temoignages-references-clients-mad-devops.md`
 - `preuves-sociales-mad-devops.md`
-- `frontiere-public-prive-mad-devops.md`
-- `synthese-publication-controlee-mad-devops.md`
 
 ### Concordance commerciale globale
 
 - `synthese-concordance-commerciale-globale-mad-devops.md`
 - `synthese-publication-controlee-mad-devops.md`
 - `synthese-chaine-demandes-entrantes-mad-devops.md`
-- `synthese-traitement-demandes-entrantes-mad-devops.md`
 - `synthese-chaine-commerciale-mad-devops.md`
 - `synthese-finale-projet-client-livraison.md`
-- `synthese-preuve-client-portfolio-mad-devops.md`
+- `synthese-chaine-amelioration-continue.md`
 - `synthese-finale-bloc-preuve-client-portfolio.md`
-- `synthese-chaine-projet-client-livraison.md`
-- `exemple-fiche-projet-client-mad-devops.md`
-- `exemple-validation-chk-031-projet-pret-a-demarrer.md`
-- `exemple-revue-hebdomadaire-projet-client.md`
-- `exemple-validation-chk-003-livraison-client.md`
-- `exemple-fiche-projet-public-mad-devops.md`
-- `exemple-validation-chk-030-preuve-client.md`
 
 ### Demandes entrantes
 
@@ -139,8 +67,6 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `exemple-fermeture-demande-entrante.md`
 - `exemple-report-demande-entrante.md`
 - `offre-terrain-mad-devops.md`
-- `frontiere-public-prive-mad-devops.md`
-- `lexique-public-prive-mad-devops.md`
 
 ### Publication contrôlée
 
@@ -149,10 +75,6 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `lexique-public-prive-mad-devops.md`
 - `page-guide-client-rapide-mad-devops.md`
 - `exemple-fiche-contenu-public-guide-client.md`
-- `synthese-preuve-client-portfolio-mad-devops.md`
-- `synthese-finale-bloc-preuve-client-portfolio.md`
-- `exemple-fiche-projet-public-mad-devops.md`
-- `exemple-validation-chk-030-preuve-client.md`
 
 ### Commercial, terrain et offres
 
@@ -160,32 +82,12 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-demandes-entrantes-mad-devops.md`
 - `synthese-traitement-demandes-entrantes-mad-devops.md`
 - `synthese-finale-projet-client-livraison.md`
-- `synthese-chaine-projet-client-livraison.md`
-- `exemple-fiche-projet-client-mad-devops.md`
-- `exemple-validation-chk-031-projet-pret-a-demarrer.md`
-- `exemple-revue-hebdomadaire-projet-client.md`
-- `exemple-validation-chk-003-livraison-client.md`
-- `synthese-preuve-client-portfolio-mad-devops.md`
-- `synthese-finale-bloc-preuve-client-portfolio.md`
-- `exemple-fiche-projet-public-mad-devops.md`
-- `exemple-validation-chk-030-preuve-client.md`
-- `frontiere-public-prive-mad-devops.md`
-- `lexique-public-prive-mad-devops.md`
-- `synthese-publication-controlee-mad-devops.md`
-- `page-guide-client-rapide-mad-devops.md`
+- `synthese-chaine-amelioration-continue.md`
 - `offre-simple-mad-devops.md`
 - `offre-terrain-mad-devops.md`
 - `offres-packagees-mad-devops.md`
-- `parcours-client-mad-devops.md`
 - `cockpit-commercial-mad-devops.md`
 - `routine-commerciale-hebdomadaire-mad-devops.md`
-- `exemple-revue-commerciale.md`
-- `exemple-activation-commerciale-7-jours.md`
-- `exemple-offre-terrain-mad-devops.md`
-- `exemple-fiche-contenu-public-guide-client.md`
-- `exemple-demande-entrante-qualification-reponse.md`
-- `exemple-fermeture-demande-entrante.md`
-- `exemple-report-demande-entrante.md`
 
 ### BaseMAD, CerveauMAD et base opérationnelle
 
@@ -203,10 +105,8 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `fiche-reflexe-fondateur-mad-devops.md`
 - `routine-courte-fondateur-lundi-vendredi.md`
 - `routine-commerciale-hebdomadaire-mad-devops.md`
-- `routine-hebdomadaire-indicateurs-mad-devops.md`
+- `synthese-chaine-amelioration-continue.md`
 - `principe-amelioration-continue-mad-devops.md`
-- `cerveau-mad-intelligence-operationnelle.md`
-- `base-operationnelle-mad-devops.md`
 
 ---
 
@@ -215,6 +115,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - Lire un guide pour comprendre quelle démarche appliquer.
 - Utiliser ensuite les templates, playbooks et checklists liés.
 - Garder les guides courts lorsque l’objectif est opérationnel.
+- Utiliser la recherche du repo pour retrouver un guide précis non listé dans les sections prioritaires.
 
 ---
 
