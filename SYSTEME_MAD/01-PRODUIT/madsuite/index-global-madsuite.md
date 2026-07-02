@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 4.8
+Version: 4.9
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -37,7 +37,9 @@ Phrase directrice :
 SYSTEME_MAD/10-ROADMAP/roadmap-mvp-early-access-madsuite.md
 SYSTEME_MAD/10-ROADMAP/tickets-sprint-1-parcours-premiere-facture-madsuite.md
 SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-developpeur-mvp-early-access-madsuite.md
+SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-developpeur-sprint-1-premiere-facture-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-045-validation-mvp-early-access-madsuite.md
+SYSTEME_MAD/09-CHECKLISTS/chk-046-validation-sprint-1-premiere-facture-madsuite.md
 ```
 
 ---
@@ -113,7 +115,9 @@ SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md
 - Lire la roadmap MVP Early Access avant de planifier du développement produit.
 - Lire le découpage Sprint 1 avant de coder le parcours première facture.
 - Utiliser le prompt agent développeur MVP pour cadrer l’implémentation.
+- Utiliser le prompt agent développeur Sprint 1 pour exécuter le parcours première facture.
 - Utiliser `CHK-045` pour valider le MVP Early Access avant invitation utilisateurs.
+- Utiliser `CHK-046` pour valider le Sprint 1 première facture.
 - Lire le contexte IA MADSuite / MADPROOF.
 - Utiliser `PLAY-041` pour le cycle mensuel Early Access.
 - Utiliser `CHK-041` pour valider le cycle mensuel Early Access.
