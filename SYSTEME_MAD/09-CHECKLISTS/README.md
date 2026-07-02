@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 3.4
+Version: 3.5
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -55,6 +55,10 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 
 ## Checklists prioritaires
 
+### Amélioration continue
+
+- `chk-011-validation-bloc-amelioration-continue.md`
+
 ### Projet client et livraison
 
 - `chk-031-validation-projet-pret-a-demarrer.md`
@@ -72,6 +76,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-029-validation-cockpit-fondateur.md`
 - `chk-007-validation-bloc-pilotage-fondateur.md`
 - `chk-006-deploiement-pilotage-mad-devops.md`
+- `chk-011-validation-bloc-amelioration-continue.md`
 
 ### Demandes entrantes
 
@@ -101,6 +106,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-031-validation-projet-pret-a-demarrer.md`
 - `chk-027-validation-reponse-demande-entrante.md`
 - `chk-028-validation-fermeture-demande-entrante.md`
+- `chk-011-validation-bloc-amelioration-continue.md`
 
 ### CerveauMAD
 
@@ -136,3 +142,4 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `SYSTEME_MAD/09-CHECKLISTS/chk-031-validation-projet-pret-a-demarrer.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-030-validation-preuve-client.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-029-validation-cockpit-fondateur.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-011-validation-bloc-amelioration-continue.md`
