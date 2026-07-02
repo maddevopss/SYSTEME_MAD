@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 5.5
+Version: 5.6
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -53,6 +53,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `temoignages-references-clients-mad-devops.md` | Officiel | Témoignages et références clients. |
 | `exemple-fiche-projet-client-mad-devops.md` | Exemple | Exemple rempli de fiche projet client. |
 | `exemple-validation-chk-031-projet-pret-a-demarrer.md` | Exemple | Exemple de validation CHK-031 pour projet prêt à démarrer. |
+| `exemple-validation-chk-003-livraison-client.md` | Exemple | Exemple de validation CHK-003 pour livraison client. |
 | `exemple-fiche-projet-public-mad-devops.md` | Exemple | Exemple de fiche projet publique anonymisée. |
 | `exemple-validation-chk-030-preuve-client.md` | Exemple | Exemple de validation CHK-030 pour une preuve client. |
 | `exemple-revue-commerciale.md` | Exemple | Exemple court de revue commerciale hebdomadaire. |
@@ -87,6 +88,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-projet-client-livraison.md`
 - `exemple-fiche-projet-client-mad-devops.md`
 - `exemple-validation-chk-031-projet-pret-a-demarrer.md`
+- `exemple-validation-chk-003-livraison-client.md`
 - `parcours-client-mad-devops.md`
 - `kit-terrain-parcours-client-mad-devops.md`
 - `pilotage-client-mad-devops.md`
@@ -97,6 +99,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 - `synthese-finale-bloc-preuve-client-portfolio.md`
 - `synthese-preuve-client-portfolio-mad-devops.md`
+- `exemple-validation-chk-003-livraison-client.md`
 - `exemple-fiche-projet-public-mad-devops.md`
 - `exemple-validation-chk-030-preuve-client.md`
 - `portfolio-mad-devops.md`
@@ -117,6 +120,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-projet-client-livraison.md`
 - `exemple-fiche-projet-client-mad-devops.md`
 - `exemple-validation-chk-031-projet-pret-a-demarrer.md`
+- `exemple-validation-chk-003-livraison-client.md`
 - `exemple-fiche-projet-public-mad-devops.md`
 - `exemple-validation-chk-030-preuve-client.md`
 
@@ -152,6 +156,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-projet-client-livraison.md`
 - `exemple-fiche-projet-client-mad-devops.md`
 - `exemple-validation-chk-031-projet-pret-a-demarrer.md`
+- `exemple-validation-chk-003-livraison-client.md`
 - `synthese-preuve-client-portfolio-mad-devops.md`
 - `synthese-finale-bloc-preuve-client-portfolio.md`
 - `exemple-fiche-projet-public-mad-devops.md`
