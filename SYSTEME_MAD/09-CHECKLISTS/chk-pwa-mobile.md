@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: Checklist — PWA mobile release
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-02
 Statut: À valider / MADPROOF-ENGINEERING
 Auteur: Marc-André Dufour / MAD DevOps
@@ -13,7 +13,10 @@ Auteur: Marc-André Dufour / MAD DevOps
 
 Cette checklist valide qu’une application web MAD DevOps peut être utilisée correctement sur mobile et, si voulu, installée comme PWA.
 
-Elle complète `SYSTEME_MAD/03-STANDARDS/std-web-mobile.md`.
+Elle complète :
+
+- `SYSTEME_MAD/03-STANDARDS/std-web-mobile.md`
+- `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/compatibilite-web-apis-fallbacks.md`
 
 ## 2. Manifest
 
@@ -92,6 +95,10 @@ Pour chaque API utilisée :
 - [ ] Fallback disponible.
 - [ ] Fonction non critique si support partiel.
 - [ ] Test iOS/Android selon public cible.
+- [ ] Refus utilisateur géré proprement.
+- [ ] Aucune redemande agressive après refus.
+- [ ] Données minimisées.
+- [ ] Décision compatible avec `compatibilite-web-apis-fallbacks.md`.
 
 APIs à surveiller :
 
@@ -104,7 +111,30 @@ APIs à surveiller :
 - Contacts Picker.
 - WebUSB / WebBluetooth / WebNFC.
 
-## 9. Sécurité et vie privée
+## 9. Gate API sensible
+
+Une API est sensible si elle touche :
+
+- identité;
+- localisation;
+- contacts;
+- fichiers locaux;
+- capteurs;
+- notifications;
+- authentification;
+- stockage offline de données métier;
+- périphériques matériels.
+
+Avant release :
+
+- [ ] La finalité est expliquée avant la demande système.
+- [ ] L’utilisateur peut refuser sans casser le parcours principal.
+- [ ] Une alternative manuelle existe.
+- [ ] La permission n’est pas utilisée comme signal caché de profilage.
+- [ ] Le comportement est documenté dans la release note ou la doc interne.
+- [ ] La fonction respecte les checklists privacy et sécurité.
+
+## 10. Sécurité et vie privée
 
 - [ ] HTTPS obligatoire.
 - [ ] Aucun secret frontend.
@@ -115,7 +145,7 @@ APIs à surveiller :
 - [ ] Déconnexion invalide les données nécessaires.
 - [ ] Données locales supprimables.
 
-## 10. MADSuite — tests spécifiques
+## 11. MADSuite — tests spécifiques
 
 - [ ] Login mobile.
 - [ ] Dashboard mobile.
@@ -127,16 +157,17 @@ APIs à surveiller :
 - [ ] Paramètres privacy mobile.
 - [ ] Installation PWA si activée.
 - [ ] Offline minimal.
+- [ ] Aucun usage de capture média, capture écran passive ou enregistrement brut des touches dans le MVP cognitif.
 
-## 11. Critères de sortie
+## 12. Critères de sortie
 
 | Statut | Signification |
 |---|---|
 | PASS | PWA ou expérience mobile prête. |
 | PASS WITH RISKS | Défauts mineurs documentés. |
-| BLOCKED | Problème critique de login, facture, sécurité, offline ou accessibilité. |
+| BLOCKED | Problème critique de login, facture, sécurité, offline, accessibilité, permission sensible ou fallback manquant. |
 
-## 12. Verdict MADPROOF
+## 13. Verdict MADPROOF
 
 **MADPROOF-ENGINEERING : accepté.**
 
