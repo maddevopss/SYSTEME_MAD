@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 5.4
+Version: 5.5
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -41,6 +41,7 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 | MADSuite cognition / time monitoring | Terminé |
 | Géospatial / terrain | Structure initiale terminée |
 | Distribution / anti-rejet | Structure initiale terminée |
+| Agenda / planification / sync | Structure initiale terminée |
 
 ## 4. Bloc distribution / anti-rejet — structure terminée
 
@@ -52,15 +53,23 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 | `specifications_reseau_securite.md` | `fiche-madproof-distribution-reseau-securite.md` | Fait |
 | Standard distribution multiplateforme | `SYSTEME_MAD/03-STANDARDS/std-distribution-multiplateforme.md` | Fait / v1.0 |
 
-## 5. Blocs restants
+## 5. Bloc agenda / planification / sync — structure terminée
+
+| Source / action | Sortie | Statut |
+|---|---|---|
+| `specifications_agenda_planification.md` | `fiche-madproof-agenda-planification-sync.md` | Fait |
+| `specifications_agenda_consolidation.md` | intégré à l’ADR sync agenda | Fait |
+| ADR sync agenda | `SYSTEME_MAD/04-ADR/ADR-agenda-sync-crdt-vs-server-authoritative.md` | Fait / accepté |
+| Standard agenda | `SYSTEME_MAD/03-STANDARDS/std-agenda-recurrence-sync.md` | Fait / v1.0 |
+
+## 6. Blocs restants
 
 | Bloc | Sources principales | Priorité |
 |---|---|---|
-| Agenda / planification / sync | `specifications_agenda_planification.md`, `specifications_agenda_consolidation.md` | P2 |
 | Plateformes desktop / OS | `specifications_windows*.md`, `specifications_linux*.md`, `specifications_chromeos.md`, `specifications_multiplateforme.md` | P3 |
 | Cheatsheets dev | `commandes_node_prisma_tsx.md`, sections restantes de `gemini-code-1783002804829.md` | P4 |
 
-## 6. Décisions confirmées
+## 7. Décisions confirmées
 
 - [x] `docs/research/atrier` reste une zone brute non officielle.
 - [x] Les documents validés sortent vers `SYSTEME_MAD/...`.
@@ -72,21 +81,21 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 - [x] Une checklist anti-rejet réduit les risques, sans garantir l’acceptation store.
 - [x] La stratégie mobile MADSuite reste PWA-first tant qu’un besoin natif clair n’est pas démontré.
 - [x] Les exceptions réseau local doivent rester limitées, documentées et testées.
+- [x] L’agenda MADSuite doit être server-authoritative par défaut; les CRDT restent R&D.
 
-## 7. Priorité immédiate
+## 8. Priorité immédiate
 
-Traiter :
-
-```text
-docs/research/atrier/specifications_agenda_planification.md
-```
-
-Sortie recommandée :
+Traiter le bloc plateformes desktop / OS :
 
 ```text
-SYSTEME_MAD/13-RESSOURCES/research/06-modules-metiers/agenda/fiche-madproof-agenda-planification-sync.md
+docs/research/atrier/specifications_windows.md
+docs/research/atrier/specifications_windows_avancees.md
+docs/research/atrier/specifications_linux.md
+docs/research/atrier/specifications_linux_avancees.md
+docs/research/atrier/specifications_chromeos.md
+docs/research/atrier/specifications_multiplateforme.md
 ```
 
-## 8. Note finale
+## 9. Note finale
 
 Le système MADPROOF est la couche de gouvernance documentaire du projet. Le dossier `atrier` n’est pas une source officielle.
