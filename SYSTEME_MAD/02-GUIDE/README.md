@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 5.3
+Version: 5.4
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -51,6 +51,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `portfolio-mad-devops.md` | Officiel | Portfolio. |
 | `preuves-sociales-mad-devops.md` | Officiel | Preuves sociales. |
 | `temoignages-references-clients-mad-devops.md` | Officiel | Témoignages et références clients. |
+| `exemple-fiche-projet-client-mad-devops.md` | Exemple | Exemple rempli de fiche projet client. |
 | `exemple-fiche-projet-public-mad-devops.md` | Exemple | Exemple de fiche projet publique anonymisée. |
 | `exemple-validation-chk-030-preuve-client.md` | Exemple | Exemple de validation CHK-030 pour une preuve client. |
 | `exemple-revue-commerciale.md` | Exemple | Exemple court de revue commerciale hebdomadaire. |
@@ -83,6 +84,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 ### Projet client et livraison
 
 - `synthese-chaine-projet-client-livraison.md`
+- `exemple-fiche-projet-client-mad-devops.md`
 - `parcours-client-mad-devops.md`
 - `kit-terrain-parcours-client-mad-devops.md`
 - `pilotage-client-mad-devops.md`
@@ -111,6 +113,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-preuve-client-portfolio-mad-devops.md`
 - `synthese-finale-bloc-preuve-client-portfolio.md`
 - `synthese-chaine-projet-client-livraison.md`
+- `exemple-fiche-projet-client-mad-devops.md`
 - `exemple-fiche-projet-public-mad-devops.md`
 - `exemple-validation-chk-030-preuve-client.md`
 
@@ -144,6 +147,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-demandes-entrantes-mad-devops.md`
 - `synthese-traitement-demandes-entrantes-mad-devops.md`
 - `synthese-chaine-projet-client-livraison.md`
+- `exemple-fiche-projet-client-mad-devops.md`
 - `synthese-preuve-client-portfolio-mad-devops.md`
 - `synthese-finale-bloc-preuve-client-portfolio.md`
 - `exemple-fiche-projet-public-mad-devops.md`
