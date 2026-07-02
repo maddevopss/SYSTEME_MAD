@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 4.0
+Version: 4.1
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -44,6 +44,7 @@ Pas MADPROOF = pas officiel.
 | Checklist PWA mobile | `SYSTEME_MAD/09-CHECKLISTS/chk-pwa-mobile.md` | Fait / v1.1 |
 | Checklist Loi 25 / vie privée | `SYSTEME_MAD/09-CHECKLISTS/chk-loi25-madsuite.md` | Fait / v1.1 |
 | Checklist sécurité SaaS lite | `SYSTEME_MAD/09-CHECKLISTS/chk-security-saas-lite.md` | Fait / v1.1 |
+| Checklist fiscale R&D / RS&DE | `SYSTEME_MAD/09-CHECKLISTS/chk-fiscal-rd-sred.md` | Fait / v1.0 |
 | Standard Accessibilité Web | `SYSTEME_MAD/03-STANDARDS/std-accessibilite-web.md` | Fait |
 | Checklist WCAG 2.2 / COGA | `SYSTEME_MAD/09-CHECKLISTS/chk-web-accessibilite-wcag22.md` | Fait |
 | Checklist dépendances / contenus tiers | `SYSTEME_MAD/09-CHECKLISTS/chk-open-source-licenses.md` | Fait |
@@ -78,7 +79,7 @@ Pas MADPROOF = pas officiel.
 | `Recherche-cybersecurite.md` | `SYSTEME_MAD/13-RESSOURCES/research/05-compliance/fiche-madproof-recherche-cybersecurite.md` | Fait |
 | Alignement checklist sécurité SaaS | `SYSTEME_MAD/09-CHECKLISTS/chk-security-saas-lite.md` | Fait / v1.1 |
 | `Recherche-fiscale.md` | `SYSTEME_MAD/13-RESSOURCES/research/05-compliance/fiche-madproof-recherche-fiscale.md` | Fait |
-| Checklist fiscale RS&DE | `SYSTEME_MAD/09-CHECKLISTS/chk-fiscal-rd-sred.md` | À créer si nécessaire |
+| Checklist fiscale RS&DE | `SYSTEME_MAD/09-CHECKLISTS/chk-fiscal-rd-sred.md` | Fait / v1.0 |
 | `Recherche-droitauteur.md` | Fiche MADPROOF à produire | À faire |
 
 ## 7. Bloc produit / terrain — à faire
@@ -100,9 +101,9 @@ Pas MADPROOF = pas officiel.
 
 Ordre conseillé :
 
-1. Créer `chk-fiscal-rd-sred.md` si on veut verrouiller la gouvernance fiscale.
-2. Traiter ensuite `Recherche-droitauteur.md`.
-3. Revenir ensuite au bloc géospatial / terrain.
+1. Traiter `Recherche-droitauteur.md`.
+2. Revenir ensuite au bloc géospatial / terrain.
+3. Vérifier le registre R&D / preuves si le module fiscal-R&D devient produit.
 
 ## 10. Note finale
 
