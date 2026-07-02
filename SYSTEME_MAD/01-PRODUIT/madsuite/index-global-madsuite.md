@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 2.2
+Version: 2.3
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -13,24 +13,7 @@ Auteur: Marc-André Dufour
 
 Ce document est le point d’entrée unique pour tout ce qui touche MADSuite dans le Système MAD.
 
-Il sert à relier :
-
-- le produit;
-- les décisions produit;
-- le Revenue Core;
-- la Machine à clients;
-- la roadmap;
-- les risques;
-- MADPROOF;
-- MAD Ariane;
-- les standards;
-- les ADR;
-- les checklists;
-- les playbooks;
-- les templates;
-- le contexte IA;
-- la knowledge base;
-- les documents de recherche.
+Il sert à relier le produit, les décisions produit, le Revenue Core, la Machine à clients, MADPROOF, MAD Ariane, les standards, les ADR, les checklists, les playbooks, les templates, le contexte IA, la knowledge base et les documents de recherche.
 
 ---
 
@@ -38,17 +21,7 @@ Il sert à relier :
 
 MADSuite est un SaaS de gestion et d’assistance cognitive non médicale.
 
-MADSuite aide à gérer :
-
-- clients;
-- projets;
-- temps;
-- factures;
-- estimés;
-- paiements;
-- revenus;
-- reprise de tâche;
-- contexte opérationnel.
+MADSuite aide à gérer : clients, projets, temps, factures, estimés, paiements, revenus, reprise de tâche et contexte opérationnel.
 
 MADSuite ne diagnostique pas, ne traite pas le TDAH, ne mesure pas l’état mental réel et ne remplace pas un professionnel.
 
@@ -59,8 +32,6 @@ Phrase directrice :
 ---
 
 ## Lecture rapide recommandée
-
-Pour comprendre MADSuite rapidement, lire dans cet ordre :
 
 1. `SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md`
 2. `SYSTEME_MAD/00-SYSTEME-MAD/ai-context-madsuite-madproof.md`
@@ -74,14 +45,17 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 10. `SYSTEME_MAD/09-CHECKLISTS/chk-034-validation-machine-a-clients-madsuite.md`
 11. `SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-machine-a-clients-madsuite.md`
 12. `SYSTEME_MAD/05-PLAY/play-038-publication-page-publique-madsuite.md`
-13. `SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md`
-14. `SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md`
-15. `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md`
-16. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
-17. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
-18. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
-19. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-20. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+13. `SYSTEME_MAD/09-CHECKLISTS/chk-035-validation-publication-page-publique-madsuite.md`
+14. `SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md`
+15. `SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md`
+16. `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md`
+17. `SYSTEME_MAD/07-TEMPLATES/template-page-demo-madsuite.md`
+18. `SYSTEME_MAD/07-TEMPLATES/template-page-lancement-early-access-madsuite.md`
+19. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
+20. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
+21. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
+22. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+23. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
 
 ---
 
@@ -93,14 +67,14 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 | `SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md` | Point d’entrée global MADSuite. | Officiel |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/registre-decisions-produit-madsuite.md` | Registre des décisions produit MADSuite. | Officiel |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md` | Spécification produit du Revenue Core. | Brouillon contrôlé |
-| `SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-revenue-core-madsuite.md` | Prompt agent pour implémenter ou stabiliser le Revenue Core. | Prêt à utiliser |
+| `SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-revenue-core-madsuite.md` | Prompt agent Revenue Core. | Prêt à utiliser |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md` | Spécification produit de la Machine à clients. | Brouillon contrôlé |
-| `SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-machine-a-clients-madsuite.md` | Prompt agent pour produire ou améliorer les surfaces Machine à clients. | Prêt à utiliser |
+| `SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-machine-a-clients-madsuite.md` | Prompt agent Machine à clients. | Prêt à utiliser |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md` | Synthèse produit MAD Ariane. | Brouillon |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/mvp-mad-ariane-snapshot-reprise.md` | Spécification MVP MAD Ariane. | Brouillon contrôlé |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/spec-technique-mad-ariane-snapshot-reprise.md` | Spécification technique MAD Ariane. | Brouillon contrôlé |
-| `SYSTEME_MAD/01-PRODUIT/madsuite/backlog-implementation-mad-ariane.md` | Backlog d’implémentation MAD Ariane. | Brouillon contrôlé |
-| `SYSTEME_MAD/01-PRODUIT/madsuite/synthese-lots-implementation-mad-ariane.md` | Synthèse des lots d’implémentation. | Brouillon contrôlé |
+| `SYSTEME_MAD/01-PRODUIT/madsuite/backlog-implementation-mad-ariane.md` | Backlog MAD Ariane. | Brouillon contrôlé |
+| `SYSTEME_MAD/01-PRODUIT/madsuite/synthese-lots-implementation-mad-ariane.md` | Synthèse des lots MAD Ariane. | Brouillon contrôlé |
 
 ---
 
@@ -133,7 +107,7 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md` | Registre opérationnel des claims. |
 | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/001-synthese-cognitive-madsuite.md` | Synthèse cognitive MADSuite. |
 | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/002-matrice-claims-cognitifs-madsuite.md` | Matrice des claims cognitifs. |
-| `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/003-validation-mad-ariane-chk-016.md` | Validation MAD Ariane avec CHK-016. |
+| `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/003-validation-mad-ariane-chk-016.md` | Validation MAD Ariane. |
 | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/004-sources-explicites-mad-ariane.md` | Sources explicites MAD Ariane. |
 
 ---
@@ -171,6 +145,7 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 |---|---|
 | `SYSTEME_MAD/09-CHECKLISTS/chk-033-validation-mvp-revenue-core-madsuite.md` | Validation MVP Revenue Core MADSuite. |
 | `SYSTEME_MAD/09-CHECKLISTS/chk-034-validation-machine-a-clients-madsuite.md` | Validation Machine à clients MADSuite. |
+| `SYSTEME_MAD/09-CHECKLISTS/chk-035-validation-publication-page-publique-madsuite.md` | Validation publication page publique MADSuite. |
 | `SYSTEME_MAD/09-CHECKLISTS/chk-016-validation-madproof-cognitif-madsuite.md` | Validation MADPROOF cognitive. |
 | `SYSTEME_MAD/09-CHECKLISTS/chk-017-validation-mvp-mad-ariane.md` | Validation MVP MAD Ariane. |
 | `SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md` | Validation d’un claim MADPROOF. |
@@ -193,9 +168,11 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 
 | Template | Rôle |
 |---|---|
-| `SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md` | Template de landing page MADSuite pour la Machine à clients. |
-| `SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md` | Template de FAQ publique MADSuite. |
-| `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md` | Template de page Prix MADSuite. |
+| `SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md` | Template landing page MADSuite. |
+| `SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md` | Template FAQ publique MADSuite. |
+| `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md` | Template page Prix MADSuite. |
+| `SYSTEME_MAD/07-TEMPLATES/template-page-demo-madsuite.md` | Template page Démo MADSuite. |
+| `SYSTEME_MAD/07-TEMPLATES/template-page-lancement-early-access-madsuite.md` | Template page Lancement / Early Access MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md` | Modèle de claim MADPROOF. |
 
 ---
@@ -223,57 +200,29 @@ Avant de modifier un document MADSuite :
 8. Lire le prompt agent Machine à clients si la tâche touche landing, prix, FAQ, onboarding, CTA ou conversion.
 9. Lire le playbook Publication page publique MADSuite si la tâche touche une surface publique.
 10. Lire `CHK-034` si la modification touche la validation de la Machine à clients.
-11. Lire le template landing page MADSuite si la modification touche une page publique MADSuite.
-12. Lire le template FAQ publique MADSuite si la modification touche une FAQ, une page d’aide ou une page publique.
-13. Lire le template page Prix MADSuite si la modification touche l’offre, les plans, les limites ou la conversion.
-14. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
-15. Lire le registre des risques si la modification touche produit, IA, claims ou données.
-16. Vérifier si le sujet touche un claim cognitif.
-17. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
-18. Ne pas créer de doublon si un document existant peut être enrichi.
-19. Garder les formulations non médicales.
-20. Conserver l’utilisateur en contrôle.
+11. Lire `CHK-035` si la modification touche la publication ou le test d’une page publique MADSuite.
+12. Lire le template public approprié : landing, FAQ, prix, démo ou early access.
+13. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
+14. Lire le registre des risques si la modification touche produit, IA, claims ou données.
+15. Vérifier si le sujet touche un claim cognitif.
+16. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
+17. Ne pas créer de doublon si un document existant peut être enrichi.
+18. Garder les formulations non médicales.
+19. Conserver l’utilisateur en contrôle.
 
 ---
 
 ## Règles rapides pour claims
 
-Toujours éviter :
+Toujours éviter : diagnostic, traitement, thérapie numérique validée, lecture mentale, mesure de fatigue réelle, détection d’attention réelle, surveillance intrusive, caméra par défaut, culpabilisation.
 
-- diagnostic;
-- traitement;
-- thérapie numérique validée;
-- lecture mentale;
-- mesure de fatigue réelle;
-- détection d’attention réelle;
-- surveillance intrusive;
-- caméra par défaut;
-- culpabilisation.
-
-Toujours privilégier :
-
-- contexte opérationnel;
-- signaux d’usage;
-- reprise de tâche;
-- réduction de friction;
-- accessibilité cognitive;
-- suggestion explicable;
-- contrôle utilisateur.
+Toujours privilégier : contexte opérationnel, signaux d’usage, reprise de tâche, réduction de friction, accessibilité cognitive, suggestion explicable, contrôle utilisateur.
 
 ---
 
 ## Prochaine action recommandée
 
-Pour faire évoluer MADSuite sans créer de chaos documentaire :
-
-1. Vérifier si une décision existe déjà dans le registre des décisions produit.
-2. Ajouter ou modifier une idée dans la roadmap.
-3. Vérifier si elle contient un claim MADPROOF.
-4. Si oui, l’ajouter au registre.
-5. Vérifier si elle ajoute ou augmente un risque.
-6. Produire une spec produit dans `01-PRODUIT/madsuite/`.
-7. Ajouter une checklist ou un playbook seulement si le processus devient récurrent.
-8. Mettre à jour cet index si le document devient important.
+Pour faire évoluer MADSuite sans créer de chaos documentaire : vérifier d’abord les décisions produit, puis la roadmap, les claims MADPROOF, les risques, la spec produit concernée, et enfin les index.
 
 ---
 
