@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 5.9
+Version: 6.0
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -23,6 +23,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 - `synthese-chaine-amelioration-continue.md`
 - `exemple-registre-ameliorations-systeme.md`
+- `exemple-utilisation-template-relance-element-manquant.md`
 - `principe-amelioration-continue-mad-devops.md`
 - `cockpit-fondateur-mad-devops.md`
 - `synthese-pilotage-fondateur-quotidien.md`
@@ -34,6 +35,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `exemple-fiche-projet-client-mad-devops.md`
 - `exemple-validation-chk-031-projet-pret-a-demarrer.md`
 - `exemple-revue-hebdomadaire-projet-client.md`
+- `exemple-utilisation-template-relance-element-manquant.md`
 - `exemple-validation-chk-003-livraison-client.md`
 - `parcours-client-mad-devops.md`
 - `kit-terrain-parcours-client-mad-devops.md`
@@ -58,6 +60,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-finale-projet-client-livraison.md`
 - `synthese-chaine-amelioration-continue.md`
 - `exemple-registre-ameliorations-systeme.md`
+- `exemple-utilisation-template-relance-element-manquant.md`
 - `synthese-finale-bloc-preuve-client-portfolio.md`
 
 ### Demandes entrantes
@@ -86,6 +89,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-finale-projet-client-livraison.md`
 - `synthese-chaine-amelioration-continue.md`
 - `exemple-registre-ameliorations-systeme.md`
+- `exemple-utilisation-template-relance-element-manquant.md`
 - `offre-simple-mad-devops.md`
 - `offre-terrain-mad-devops.md`
 - `offres-packagees-mad-devops.md`
@@ -110,6 +114,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `routine-commerciale-hebdomadaire-mad-devops.md`
 - `synthese-chaine-amelioration-continue.md`
 - `exemple-registre-ameliorations-systeme.md`
+- `exemple-utilisation-template-relance-element-manquant.md`
 - `principe-amelioration-continue-mad-devops.md`
 
 ---
