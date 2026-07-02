@@ -1,27 +1,43 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 5.6
+Version: 6.0
 Dernière révision: 2026-07-02
-Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
+Statut: Mission complète / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
 ---
 
 # TODO — Intégration consolidée du dossier `atrier`
 
-## 1. Règle centrale
+## 1. Verdict final
+
+```text
+MISSION MADPROOF ATRIER — COMPLETE
+```
+
+Le dossier :
+
+```text
+docs/research/atrier
+```
+
+reste une zone brute non officielle.
+
+Les informations utiles ont été extraites, classées, reformulées et transférées dans `SYSTEME_MAD/...`.
+
+## 2. Règle centrale permanente
 
 ```text
 Pas MADPROOF = pas officiel.
 ```
 
-Pipeline obligatoire :
+Pipeline obligatoire pour tout futur ajout brut :
 
 ```text
 atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> intégration SYSTEME_MAD
 ```
 
-## 2. Fondation MADPROOF — terminé
+## 3. Fondation MADPROOF — terminé
 
 | Action | Fichier | Statut |
 |---|---|---|
@@ -30,58 +46,23 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 | Registre claims | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md` | Fait |
 | Index MADPROOF | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/README.md` | Fait |
 | README `atrier` | `docs/research/atrier/README.md` | Fait |
-| Inventaire final `atrier` | `SYSTEME_MAD/10-ROADMAP/inventaire-final-atrier-madproof.md` | Fait / v1.0 |
+| Inventaire final `atrier` | `SYSTEME_MAD/10-ROADMAP/inventaire-final-atrier-madproof.md` | Fait |
+| Rapport final | `SYSTEME_MAD/10-ROADMAP/rapport-final-integration-atrier-madproof.md` | Fait |
 
-## 3. Blocs traités
+## 4. Blocs traités
 
 | Bloc | Statut |
 |---|---|
 | Web / PWA / accessibilité | Terminé |
-| Compliance / sécurité / fiscal / droit / open source | Terminé pour sources principales |
+| Compliance / sécurité / fiscal / droit / open source | Terminé |
 | MADSuite cognition / time monitoring | Terminé |
 | Géospatial / terrain | Structure initiale terminée |
 | Distribution / anti-rejet | Structure initiale terminée |
 | Agenda / planification / sync | Structure initiale terminée |
 | Plateformes desktop / OS | Structure initiale terminée |
+| Références dev / cheatsheets | Classé et encadré |
 
-## 4. Bloc distribution / anti-rejet — structure terminée
-
-| Source / action | Sortie | Statut |
-|---|---|---|
-| `specifications_anti_rejet.md` | `fiche-madproof-distribution-anti-rejet.md` | Fait |
-| Checklist release stores | `SYSTEME_MAD/09-CHECKLISTS/chk-app-store-release.md` | Fait / v1.0 |
-| `specifications_mobiles_android.md` | `fiche-madproof-distribution-mobile.md` | Fait |
-| `specifications_reseau_securite.md` | `fiche-madproof-distribution-reseau-securite.md` | Fait |
-| Standard distribution multiplateforme | `SYSTEME_MAD/03-STANDARDS/std-distribution-multiplateforme.md` | Fait / v1.0 |
-
-## 5. Bloc agenda / planification / sync — structure terminée
-
-| Source / action | Sortie | Statut |
-|---|---|---|
-| `specifications_agenda_planification.md` | `fiche-madproof-agenda-planification-sync.md` | Fait |
-| `specifications_agenda_consolidation.md` | intégré à l’ADR sync agenda | Fait |
-| ADR sync agenda | `SYSTEME_MAD/04-ADR/ADR-agenda-sync-crdt-vs-server-authoritative.md` | Fait / accepté |
-| Standard agenda | `SYSTEME_MAD/03-STANDARDS/std-agenda-recurrence-sync.md` | Fait / v1.0 |
-
-## 6. Bloc plateformes desktop / OS — structure terminée
-
-| Source / action | Sortie | Statut |
-|---|---|---|
-| `specifications_windows.md` | `fiche-madproof-plateformes-desktop-os.md` | Fait |
-| `specifications_windows_avancees.md` | `fiche-madproof-plateformes-desktop-os.md` | Fait |
-| `specifications_linux.md` | `fiche-madproof-plateformes-desktop-os.md` | Fait |
-| `specifications_linux_avancees.md` | `fiche-madproof-plateformes-desktop-os.md` | Fait |
-| `specifications_chromeos.md` | `fiche-madproof-plateformes-desktop-os.md` | Fait |
-| `specifications_multiplateforme.md` | `fiche-madproof-plateformes-desktop-os.md` | Fait |
-| Standard desktop agent | `SYSTEME_MAD/03-STANDARDS/std-desktop-agent.md` | Fait / v1.0 |
-
-## 7. Blocs restants
-
-| Bloc | Sources principales | Priorité |
-|---|---|---|
-| Cheatsheets dev | `commandes_node_prisma_tsx.md`, sections restantes de `gemini-code-1783002804829.md` | P4 |
-
-## 8. Décisions confirmées
+## 5. Décisions confirmées
 
 - [x] `docs/research/atrier` reste une zone brute non officielle.
 - [x] Les documents validés sortent vers `SYSTEME_MAD/...`.
@@ -95,16 +76,24 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 - [x] Les exceptions réseau local doivent rester limitées, documentées et testées.
 - [x] L’agenda MADSuite doit être server-authoritative par défaut; les CRDT restent R&D.
 - [x] Un agent desktop MADSuite doit être visible, contrôlable, explicable et désactivable.
+- [x] Les aide-mémoires dev ne remplacent pas les procédures officielles.
 
-## 9. Priorité immédiate
+## 6. Prochaines roadmaps séparées possibles
 
-Traiter ou archiver le bloc cheatsheets dev :
+| Roadmap future | Déclencheur |
+|---|---|
+| Roadmap module terrain | Si `MAD Field / MAD Terrain / MAD Measure` devient prioritaire. |
+| Roadmap agenda | Si réservation / planification devient module produit. |
+| Roadmap desktop agent | Si agent local devient prioritaire. |
+| Roadmap mobile/store | Si publication native ou store devient nécessaire. |
+| Roadmap conformité produit | Avant commercialisation large. |
+
+## 7. Note finale
+
+Le système MADPROOF est la couche de gouvernance documentaire du projet.
+
+Le dossier `atrier` n’est pas une source officielle.
 
 ```text
-docs/research/atrier/commandes_node_prisma_tsx.md
-sections restantes de docs/research/atrier/gemini-code-1783002804829.md
+ARCHIVE BRUTE CONSERVÉE — OFFICIALISATION TERMINÉE
 ```
-
-## 10. Note finale
-
-Le système MADPROOF est la couche de gouvernance documentaire du projet. Le dossier `atrier` n’est pas une source officielle.
