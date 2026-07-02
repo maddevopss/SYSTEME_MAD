@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 2.3
+Version: 2.4
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -51,11 +51,12 @@ Phrase directrice :
 16. `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md`
 17. `SYSTEME_MAD/07-TEMPLATES/template-page-demo-madsuite.md`
 18. `SYSTEME_MAD/07-TEMPLATES/template-page-lancement-early-access-madsuite.md`
-19. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
-20. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
-21. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
-22. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-23. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+19. `SYSTEME_MAD/07-TEMPLATES/template-formulaire-early-access-madsuite.md`
+20. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
+21. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
+22. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
+23. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+24. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
 
 ---
 
@@ -78,67 +79,6 @@ Phrase directrice :
 
 ---
 
-## Roadmap et risques
-
-| Document | Rôle |
-|---|---|
-| `SYSTEME_MAD/10-ROADMAP/README.md` | Index du dossier Roadmap. |
-| `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md` | Roadmap consolidée MADSuite / MADPROOF. |
-| `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md` | Registre des risques MADSuite / MADPROOF. |
-| `SYSTEME_MAD/10-ROADMAP/progression.md` | Suivi de progression global du Système MAD. |
-
----
-
-## Knowledge Base
-
-| Document | Rôle |
-|---|---|
-| `SYSTEME_MAD/06-KNOWLEDGE-BASE/README.md` | Index de la base de connaissances. |
-| `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md` | Définitions officielles MADSuite, MADPROOF, MAD Ariane et assistance cognitive. |
-
----
-
-## MADPROOF
-
-| Document | Rôle |
-|---|---|
-| `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/README.md` | Index recherche MADPROOF. |
-| `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md` | Cadre MADPROOF. |
-| `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md` | Registre opérationnel des claims. |
-| `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/001-synthese-cognitive-madsuite.md` | Synthèse cognitive MADSuite. |
-| `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/002-matrice-claims-cognitifs-madsuite.md` | Matrice des claims cognitifs. |
-| `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/003-validation-mad-ariane-chk-016.md` | Validation MAD Ariane. |
-| `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/004-sources-explicites-mad-ariane.md` | Sources explicites MAD Ariane. |
-
----
-
-## ADR liées
-
-| ADR | Décision |
-|---|---|
-| `SYSTEME_MAD/04-ADR/ADR-002-positionnement-non-medical-madsuite.md` | MADSuite est une solution de gestion et d’assistance cognitive non médicale. |
-| `SYSTEME_MAD/04-ADR/ADR-003-gouvernance-madproof-claims-madsuite.md` | Les claims MADSuite doivent passer par le registre et la validation MADPROOF. |
-
----
-
-## Standards critiques
-
-| Standard | Rôle |
-|---|---|
-| `SYSTEME_MAD/03-STANDARDS/std-104.md` | SaaS multi-tenant. |
-| `SYSTEME_MAD/03-STANDARDS/std-105.md` | Configuration. |
-| `SYSTEME_MAD/03-STANDARDS/std-201.md` | Authentification. |
-| `SYSTEME_MAD/03-STANDARDS/std-202.md` | Autorisation. |
-| `SYSTEME_MAD/03-STANDARDS/std-204.md` | Protection des données. |
-| `SYSTEME_MAD/03-STANDARDS/std-301.md` | Stratégie de tests. |
-| `SYSTEME_MAD/03-STANDARDS/std-404.md` | Observabilité. |
-| `SYSTEME_MAD/03-STANDARDS/std-501.md` | IA responsable. |
-| `SYSTEME_MAD/03-STANDARDS/std-503.md` | Données et confidentialité IA. |
-| `SYSTEME_MAD/03-STANDARDS/std-505.md` | IA cognitive non médicale. |
-| `SYSTEME_MAD/03-STANDARDS/std-506.md` | Gouvernance des claims MADPROOF. |
-
----
-
 ## Checklists critiques
 
 | Checklist | Rôle |
@@ -146,10 +86,7 @@ Phrase directrice :
 | `SYSTEME_MAD/09-CHECKLISTS/chk-033-validation-mvp-revenue-core-madsuite.md` | Validation MVP Revenue Core MADSuite. |
 | `SYSTEME_MAD/09-CHECKLISTS/chk-034-validation-machine-a-clients-madsuite.md` | Validation Machine à clients MADSuite. |
 | `SYSTEME_MAD/09-CHECKLISTS/chk-035-validation-publication-page-publique-madsuite.md` | Validation publication page publique MADSuite. |
-| `SYSTEME_MAD/09-CHECKLISTS/chk-016-validation-madproof-cognitif-madsuite.md` | Validation MADPROOF cognitive. |
-| `SYSTEME_MAD/09-CHECKLISTS/chk-017-validation-mvp-mad-ariane.md` | Validation MVP MAD Ariane. |
 | `SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md` | Validation d’un claim MADPROOF. |
-| `SYSTEME_MAD/09-CHECKLISTS/chk-002-validation-documentaire.md` | Validation documentaire générale. |
 
 ---
 
@@ -158,9 +95,7 @@ Phrase directrice :
 | Playbook | Rôle |
 |---|---|
 | `SYSTEME_MAD/05-PLAY/play-038-publication-page-publique-madsuite.md` | Publication contrôlée d’une page publique MADSuite. |
-| `SYSTEME_MAD/05-PLAY/play-024-transformer-idee-cognitive-en-fonctionnalite-madsuite.md` | Transformer une idée cognitive en fonctionnalité MADSuite. |
 | `SYSTEME_MAD/05-PLAY/play-037-ajouter-ou-corriger-claim-madproof.md` | Ajouter ou corriger un claim MADPROOF. |
-| `SYSTEME_MAD/05-PLAY/play-010-passe-qualite-documentaire.md` | Passe de qualité documentaire. |
 
 ---
 
@@ -173,16 +108,8 @@ Phrase directrice :
 | `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md` | Template page Prix MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-page-demo-madsuite.md` | Template page Démo MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-page-lancement-early-access-madsuite.md` | Template page Lancement / Early Access MADSuite. |
+| `SYSTEME_MAD/07-TEMPLATES/template-formulaire-early-access-madsuite.md` | Template formulaire Early Access MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md` | Modèle de claim MADPROOF. |
-
----
-
-## Contexte IA
-
-| Document | Rôle |
-|---|---|
-| `SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md` | Contexte IA général MAD DevOps. |
-| `SYSTEME_MAD/00-SYSTEME-MAD/ai-context-madsuite-madproof.md` | Contexte IA spécifique MADSuite / MADPROOF. |
 
 ---
 
@@ -194,35 +121,15 @@ Avant de modifier un document MADSuite :
 2. Lire le contexte IA MADSuite / MADPROOF.
 3. Lire le registre des décisions produit.
 4. Lire le Revenue Core si la modification touche clients, projets, temps, factures, estimés, paiements ou revenus.
-5. Lire `CHK-033` si la modification touche la validation MVP du Revenue Core.
-6. Lire le prompt agent Revenue Core si la tâche concerne l’implémentation ou la stabilisation du Revenue Core.
-7. Lire la Machine à clients si la modification touche acquisition, landing page, onboarding ou conversion.
-8. Lire le prompt agent Machine à clients si la tâche touche landing, prix, FAQ, onboarding, CTA ou conversion.
-9. Lire le playbook Publication page publique MADSuite si la tâche touche une surface publique.
-10. Lire `CHK-034` si la modification touche la validation de la Machine à clients.
-11. Lire `CHK-035` si la modification touche la publication ou le test d’une page publique MADSuite.
-12. Lire le template public approprié : landing, FAQ, prix, démo ou early access.
-13. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
-14. Lire le registre des risques si la modification touche produit, IA, claims ou données.
-15. Vérifier si le sujet touche un claim cognitif.
-16. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
-17. Ne pas créer de doublon si un document existant peut être enrichi.
-18. Garder les formulations non médicales.
-19. Conserver l’utilisateur en contrôle.
-
----
-
-## Règles rapides pour claims
-
-Toujours éviter : diagnostic, traitement, thérapie numérique validée, lecture mentale, mesure de fatigue réelle, détection d’attention réelle, surveillance intrusive, caméra par défaut, culpabilisation.
-
-Toujours privilégier : contexte opérationnel, signaux d’usage, reprise de tâche, réduction de friction, accessibilité cognitive, suggestion explicable, contrôle utilisateur.
-
----
-
-## Prochaine action recommandée
-
-Pour faire évoluer MADSuite sans créer de chaos documentaire : vérifier d’abord les décisions produit, puis la roadmap, les claims MADPROOF, les risques, la spec produit concernée, et enfin les index.
+5. Lire la Machine à clients si la modification touche acquisition, landing page, onboarding ou conversion.
+6. Lire `CHK-035` et `PLAY-038` si la modification touche une page publique.
+7. Lire le template public approprié : landing, FAQ, prix, démo, early access ou formulaire early access.
+8. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
+9. Lire le registre des risques si la modification touche produit, IA, claims ou données.
+10. Si le sujet touche un claim cognitif, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
+11. Ne pas créer de doublon si un document existant peut être enrichi.
+12. Garder les formulations non médicales.
+13. Conserver l’utilisateur en contrôle.
 
 ---
 
