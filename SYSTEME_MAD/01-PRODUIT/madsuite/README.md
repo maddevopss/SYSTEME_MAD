@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index produit — MADSuite
-Version: 1.4
+Version: 1.5
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -38,6 +38,7 @@ Cet index relie produit, roadmap, MADPROOF, MAD Ariane, standards, ADR, checklis
 | `spec-revenue-core-madsuite.md` | Spécification produit du Revenue Core. | Brouillon contrôlé |
 | `prompt-agent-revenue-core-madsuite.md` | Prompt agent pour implémenter ou stabiliser le Revenue Core. | Prêt à utiliser |
 | `spec-machine-a-clients-madsuite.md` | Spécification produit de la Machine à clients. | Brouillon contrôlé |
+| `prompt-agent-machine-a-clients-madsuite.md` | Prompt agent pour produire ou améliorer les surfaces Machine à clients. | Prêt à utiliser |
 | `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md` | Roadmap consolidée MADSuite / MADPROOF. | Brouillon |
 | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md` | Cadre de validation MADPROOF. | Brouillon |
 | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md` | Registre opérationnel des claims. | Brouillon |
@@ -51,6 +52,7 @@ Cet index relie produit, roadmap, MADPROOF, MAD Ariane, standards, ADR, checklis
 | Revenue Core | `spec-revenue-core-madsuite.md` | Clients, projets, temps, factures, estimés, paiements et revenus. |
 | Revenue Core — agent | `prompt-agent-revenue-core-madsuite.md` | Prompt de code pour implémentation ou stabilisation contrôlée. |
 | Machine à clients | `spec-machine-a-clients-madsuite.md` | Acquisition, landing, activation, onboarding et conversion. |
+| Machine à clients — agent | `prompt-agent-machine-a-clients-madsuite.md` | Prompt pour landing, prix, FAQ, onboarding et conversion. |
 | MAD Ariane | `mad-ariane-fil-ariane-zero-effort.md` | Snapshot de reprise et fil opérationnel. |
 
 ---
@@ -95,6 +97,7 @@ Le module ne traite pas le TDAH, ne restaure pas un état mental, ne détecte pa
 | Document | Rôle | Statut |
 |---|---|---|
 | `prompt-agent-revenue-core-madsuite.md` | Prompt agent pour implémenter ou stabiliser le Revenue Core. | Prêt à utiliser |
+| `prompt-agent-machine-a-clients-madsuite.md` | Prompt agent pour produire ou améliorer les surfaces Machine à clients. | Prêt à utiliser |
 | `guide-implementation-manuelle-lot-1-mad-ariane.md` | Guide manuel pour implémenter le Lot 1. | Brouillon contrôlé |
 | `prompt-agent-code-lot-1-mad-ariane.md` | Prompt agent de code pour Lot 1. | Prêt à utiliser |
 
@@ -114,6 +117,12 @@ La checklist finale pour le Revenue Core se trouve ici :
 SYSTEME_MAD/09-CHECKLISTS/chk-033-validation-mvp-revenue-core-madsuite.md
 ```
 
+La checklist finale pour la Machine à clients se trouve ici :
+
+```text
+SYSTEME_MAD/09-CHECKLISTS/chk-034-validation-machine-a-clients-madsuite.md
+```
+
 ---
 
 ## Ordre de lecture recommandé
@@ -125,15 +134,17 @@ SYSTEME_MAD/09-CHECKLISTS/chk-033-validation-mvp-revenue-core-madsuite.md
 4. SYSTEME_MAD/09-CHECKLISTS/chk-033-validation-mvp-revenue-core-madsuite.md
 5. SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-revenue-core-madsuite.md
 6. SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md
-7. SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md
-8. SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md
-9. SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md
-10. MVP MAD Ariane
-11. Spécification technique
-12. Synthèse des lots
-13. Lots 1 à 6
-14. CHK-017 — Validation MVP MAD Ariane
-15. Guide manuel ou prompt agent pour l’implémentation
+7. SYSTEME_MAD/09-CHECKLISTS/chk-034-validation-machine-a-clients-madsuite.md
+8. SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-machine-a-clients-madsuite.md
+9. SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md
+10. SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md
+11. SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md
+12. MVP MAD Ariane
+13. Spécification technique
+14. Synthèse des lots
+15. Lots 1 à 6
+16. CHK-017 — Validation MVP MAD Ariane
+17. Guide manuel ou prompt agent pour l’implémentation
 ```
 
 ---
