@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 4.5
+Version: 4.6
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -35,6 +35,7 @@ Phrase directrice :
 
 ```text
 SYSTEME_MAD/10-ROADMAP/roadmap-mvp-early-access-madsuite.md
+SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-developpeur-mvp-early-access-madsuite.md
 ```
 
 ---
@@ -108,6 +109,7 @@ SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md
 
 - Lire ce document avant de modifier un élément MADSuite.
 - Lire la roadmap MVP Early Access avant de planifier du développement produit.
+- Utiliser le prompt agent développeur MVP pour cadrer l’implémentation.
 - Lire le contexte IA MADSuite / MADPROOF.
 - Utiliser `PLAY-041` pour le cycle mensuel Early Access.
 - Utiliser `CHK-041` pour valider le cycle mensuel Early Access.
