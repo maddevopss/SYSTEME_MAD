@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 3.0
+Version: 3.1
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -55,10 +55,17 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 | `play-032-traiter-contenu-public-candidat.md` | Officiel | Traiter un contenu public candidat. |
 | `play-033-convertir-demande-entrante-en-opportunite.md` | Officiel | Convertir une demande entrante en opportunité. |
 | `play-034-revue-hebdomadaire-demandes-entrantes.md` | Officiel | Revue hebdomadaire des demandes entrantes. |
+| `play-035-revue-mensuelle-preuves-client.md` | Officiel | Revue mensuelle des preuves client. |
 
 ---
 
 ## Playbooks prioritaires
+
+### Preuve client et portfolio
+
+- `play-019-transformer-livraison-en-preuve-client.md`
+- `play-035-revue-mensuelle-preuves-client.md`
+- `play-032-traiter-contenu-public-candidat.md`
 
 ### Demandes entrantes
 
@@ -72,6 +79,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 
 - `play-032-traiter-contenu-public-candidat.md`
 - `play-023-publier-site-web-mad-devops.md`
+- `play-035-revue-mensuelle-preuves-client.md`
 
 ### CerveauMAD
 
@@ -83,6 +91,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-032-traiter-contenu-public-candidat.md`
 - `play-033-convertir-demande-entrante-en-opportunite.md`
 - `play-034-revue-hebdomadaire-demandes-entrantes.md`
+- `play-035-revue-mensuelle-preuves-client.md`
 
 ### Activation commerciale
 
@@ -95,6 +104,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-032-traiter-contenu-public-candidat.md`
 - `play-033-convertir-demande-entrante-en-opportunite.md`
 - `play-034-revue-hebdomadaire-demandes-entrantes.md`
+- `play-035-revue-mensuelle-preuves-client.md`
 
 ### Pilotage MAD DevOps
 
@@ -108,6 +118,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-032-traiter-contenu-public-candidat.md`
 - `play-033-convertir-demande-entrante-en-opportunite.md`
 - `play-034-revue-hebdomadaire-demandes-entrantes.md`
+- `play-035-revue-mensuelle-preuves-client.md`
 
 ---
 
