@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 2.9
-Dernière révision: 2026-07-01
+Version: 3.0
+Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -55,6 +55,7 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | `template-journal-quotidien-fondateur-mad-devops.md` | Template | Journal quotidien léger du fondateur MAD DevOps. |
 | `template-journal-bord-hebdomadaire-mad-devops.md` | Template | Journal hebdomadaire. |
 | `template-registre-ameliorations-systeme-mad-devops.md` | Template | Registre des améliorations système. |
+| `template-claim-madproof.md` | Template | Modèle de claim MADPROOF. |
 | `tpl-001.md` | Template | Modèle réutilisable existant. |
 | `tpl-002.md` | Template | Modèle réutilisable existant. |
 | `tpl-003.md` | Template | Modèle réutilisable existant. |
@@ -63,6 +64,12 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 ---
 
 ## Templates prioritaires
+
+### MADSuite cognition / MADPROOF
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md
+```
 
 ### Projet client et livraison
 
