@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — Produit
-Version: 1.0
-Dernière révision: 2026-07-01
+Version: 1.1
+Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -25,6 +25,18 @@ Il sert à structurer les modules, spécifications MVP, décisions produit, lots
 
 ---
 
+## Point d’entrée MADSuite
+
+Pour tout travail lié à MADSuite, commencer par :
+
+```text
+SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md
+```
+
+Ce document relie produit, roadmap, MADPROOF, MAD Ariane, standards, ADR, checklists, playbooks, templates et contexte IA.
+
+---
+
 ## Module prioritaire actuel
 
 ```text
@@ -37,7 +49,13 @@ MAD Ariane est le module prioritaire documenté dans le dossier `madsuite/`.
 
 ## Entrée recommandée
 
-Pour MAD Ariane, commencer par :
+Pour MADSuite global :
+
+```text
+SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md
+```
+
+Pour MAD Ariane :
 
 ```text
 SYSTEME_MAD/01-PRODUIT/madsuite/README.md
@@ -58,3 +76,4 @@ SYSTEME_MAD/09-CHECKLISTS/chk-017-validation-mvp-mad-ariane.md
 - Documenter les limites du MVP.
 - Relier les modules cognitifs au cadre MADPROOF.
 - Garder les décisions produit vérifiables, prudentes et auditables.
+- Utiliser `STD-506`, `CHK-032` et `PLAY-037` pour tout claim MADPROOF sensible.
