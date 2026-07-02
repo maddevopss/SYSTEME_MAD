@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 5.1
+Version: 5.2
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -47,7 +47,7 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 |---|---|---|
 | `specifications_anti_rejet.md` | `fiche-madproof-distribution-anti-rejet.md` | Fait |
 | Checklist release stores | `SYSTEME_MAD/09-CHECKLISTS/chk-app-store-release.md` | Fait / v1.0 |
-| `specifications_mobiles_android.md` | Fiche mobile distribution à produire | À faire |
+| `specifications_mobiles_android.md` | `fiche-madproof-distribution-mobile.md` | Fait |
 | `specifications_reseau_securite.md` | Complément distribution / sécurité réseau | À faire |
 
 ## 5. Blocs restants
@@ -68,19 +68,20 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 - [x] La localisation ne doit pas être utilisée pour inférer un état cognitif.
 - [x] Les mesures GPS ne deviennent jamais contractuelles automatiquement.
 - [x] Une checklist anti-rejet réduit les risques, sans garantir l’acceptation store.
+- [x] La stratégie mobile MADSuite reste PWA-first tant qu’un besoin natif clair n’est pas démontré.
 
 ## 7. Priorité immédiate
 
 Traiter :
 
 ```text
-docs/research/atrier/specifications_mobiles_android.md
+docs/research/atrier/specifications_reseau_securite.md
 ```
 
 Sortie recommandée :
 
 ```text
-SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/fiche-madproof-distribution-mobile.md
+SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/fiche-madproof-distribution-reseau-securite.md
 ```
 
 ## 8. Note finale
