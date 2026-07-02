@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 3.5
+Version: 3.6
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -112,7 +112,8 @@ La première passe a produit des résumés et documents de gouvernance maintenan
 
 ### 7.3 Traiter les sources compliance
 
-- [ ] Traiter `Recherche-vieprivee.md`.
+- [x] Traiter `Recherche-vieprivee.md` -> `SYSTEME_MAD/13-RESSOURCES/research/05-compliance/fiche-madproof-recherche-vieprivee.md`.
+- [ ] Vérifier et aligner `SYSTEME_MAD/09-CHECKLISTS/chk-loi25-madsuite.md` avec la fiche privacy.
 - [ ] Traiter `Recherche-cybersecurite.md`.
 - [ ] Traiter `Recherche-fiscale.md`.
 - [ ] Traiter `Recherche-droitauteur.md`.
@@ -137,8 +138,9 @@ La première passe a produit des résumés et documents de gouvernance maintenan
 
 Ordre conseillé :
 
-1. Passer aux fichiers compliance : vie privée, cybersécurité, fiscalité, droit d’auteur.
-2. Commencer par `Recherche-vieprivee.md`, car il influence directement MADSuite, MAD Ariane, PWA, desktop agent et les claims privacy.
+1. Vérifier et aligner `chk-loi25-madsuite.md` avec la fiche privacy.
+2. Passer ensuite à `Recherche-cybersecurite.md`.
+3. Traiter ensuite `Recherche-fiscale.md` et `Recherche-droitauteur.md`.
 
 ## 10. Note finale
 
