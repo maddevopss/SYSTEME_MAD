@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 3.8
+Version: 3.9
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -43,9 +43,9 @@ Pas MADPROOF = pas officiel.
 | Standard Web mobile / PWA | `SYSTEME_MAD/03-STANDARDS/std-web-mobile.md` | Fait / v1.1 |
 | Checklist PWA mobile | `SYSTEME_MAD/09-CHECKLISTS/chk-pwa-mobile.md` | Fait / v1.1 |
 | Checklist Loi 25 / vie privée | `SYSTEME_MAD/09-CHECKLISTS/chk-loi25-madsuite.md` | Fait / v1.1 |
+| Checklist sécurité SaaS lite | `SYSTEME_MAD/09-CHECKLISTS/chk-security-saas-lite.md` | Fait / v1.1 |
 | Standard Accessibilité Web | `SYSTEME_MAD/03-STANDARDS/std-accessibilite-web.md` | Fait |
 | Checklist WCAG 2.2 / COGA | `SYSTEME_MAD/09-CHECKLISTS/chk-web-accessibilite-wcag22.md` | Fait |
-| Checklist sécurité SaaS lite | `SYSTEME_MAD/09-CHECKLISTS/chk-security-saas-lite.md` | Fait |
 | Checklist dépendances / contenus tiers | `SYSTEME_MAD/09-CHECKLISTS/chk-open-source-licenses.md` | Fait |
 | Registre R&D / preuves | `SYSTEME_MAD/06-OPERATIONS-INTERNES/registre-rd-sred.md` | Fait |
 
@@ -76,7 +76,7 @@ Pas MADPROOF = pas officiel.
 | `Recherche-vieprivee.md` | `SYSTEME_MAD/13-RESSOURCES/research/05-compliance/fiche-madproof-recherche-vieprivee.md` | Fait |
 | Alignement checklist Loi 25 | `SYSTEME_MAD/09-CHECKLISTS/chk-loi25-madsuite.md` | Fait / v1.1 |
 | `Recherche-cybersecurite.md` | `SYSTEME_MAD/13-RESSOURCES/research/05-compliance/fiche-madproof-recherche-cybersecurite.md` | Fait |
-| Alignement checklist sécurité SaaS | `SYSTEME_MAD/09-CHECKLISTS/chk-security-saas-lite.md` | À faire |
+| Alignement checklist sécurité SaaS | `SYSTEME_MAD/09-CHECKLISTS/chk-security-saas-lite.md` | Fait / v1.1 |
 | `Recherche-fiscale.md` | Fiche MADPROOF à produire | À faire |
 | `Recherche-droitauteur.md` | Fiche MADPROOF à produire | À faire |
 
@@ -99,9 +99,9 @@ Pas MADPROOF = pas officiel.
 
 Ordre conseillé :
 
-1. Aligner `chk-security-saas-lite.md` avec la fiche cybersécurité.
-2. Traiter ensuite `Recherche-fiscale.md`.
-3. Traiter ensuite `Recherche-droitauteur.md`.
+1. Traiter `Recherche-fiscale.md`.
+2. Traiter ensuite `Recherche-droitauteur.md`.
+3. Revenir ensuite au bloc géospatial / terrain.
 
 ## 10. Note finale
 
