@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 2.0
+Version: 2.1
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -72,14 +72,15 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 8. `SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-revenue-core-madsuite.md`
 9. `SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md`
 10. `SYSTEME_MAD/09-CHECKLISTS/chk-034-validation-machine-a-clients-madsuite.md`
-11. `SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md`
-12. `SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md`
-13. `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md`
-14. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
-15. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
-16. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
-17. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-18. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+11. `SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-machine-a-clients-madsuite.md`
+12. `SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md`
+13. `SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md`
+14. `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md`
+15. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
+16. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
+17. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
+18. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+19. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
 
 ---
 
@@ -93,6 +94,7 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 | `SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md` | Spécification produit du Revenue Core. | Brouillon contrôlé |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-revenue-core-madsuite.md` | Prompt agent pour implémenter ou stabiliser le Revenue Core. | Prêt à utiliser |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md` | Spécification produit de la Machine à clients. | Brouillon contrôlé |
+| `SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-machine-a-clients-madsuite.md` | Prompt agent pour produire ou améliorer les surfaces Machine à clients. | Prêt à utiliser |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md` | Synthèse produit MAD Ariane. | Brouillon |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/mvp-mad-ariane-snapshot-reprise.md` | Spécification MVP MAD Ariane. | Brouillon contrôlé |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/spec-technique-mad-ariane-snapshot-reprise.md` | Spécification technique MAD Ariane. | Brouillon contrôlé |
@@ -216,17 +218,18 @@ Avant de modifier un document MADSuite :
 5. Lire `CHK-033` si la modification touche la validation MVP du Revenue Core.
 6. Lire le prompt agent Revenue Core si la tâche concerne l’implémentation ou la stabilisation du Revenue Core.
 7. Lire la Machine à clients si la modification touche acquisition, landing page, onboarding ou conversion.
-8. Lire `CHK-034` si la modification touche la validation de la Machine à clients.
-9. Lire le template landing page MADSuite si la modification touche une page publique MADSuite.
-10. Lire le template FAQ publique MADSuite si la modification touche une FAQ, une page d’aide ou une page publique.
-11. Lire le template page Prix MADSuite si la modification touche l’offre, les plans, les limites ou la conversion.
-12. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
-13. Lire le registre des risques si la modification touche produit, IA, claims ou données.
-14. Vérifier si le sujet touche un claim cognitif.
-15. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
-16. Ne pas créer de doublon si un document existant peut être enrichi.
-17. Garder les formulations non médicales.
-18. Conserver l’utilisateur en contrôle.
+8. Lire le prompt agent Machine à clients si la tâche touche landing, prix, FAQ, onboarding, CTA ou conversion.
+9. Lire `CHK-034` si la modification touche la validation de la Machine à clients.
+10. Lire le template landing page MADSuite si la modification touche une page publique MADSuite.
+11. Lire le template FAQ publique MADSuite si la modification touche une FAQ, une page d’aide ou une page publique.
+12. Lire le template page Prix MADSuite si la modification touche l’offre, les plans, les limites ou la conversion.
+13. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
+14. Lire le registre des risques si la modification touche produit, IA, claims ou données.
+15. Vérifier si le sujet touche un claim cognitif.
+16. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
+17. Ne pas créer de doublon si un document existant peut être enrichi.
+18. Garder les formulations non médicales.
+19. Conserver l’utilisateur en contrôle.
 
 ---
 
