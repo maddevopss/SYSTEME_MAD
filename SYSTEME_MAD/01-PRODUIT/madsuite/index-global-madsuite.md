@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 2.4
+Version: 2.5
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -50,13 +50,15 @@ Phrase directrice :
 15. `SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md`
 16. `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md`
 17. `SYSTEME_MAD/07-TEMPLATES/template-page-demo-madsuite.md`
-18. `SYSTEME_MAD/07-TEMPLATES/template-page-lancement-early-access-madsuite.md`
-19. `SYSTEME_MAD/07-TEMPLATES/template-formulaire-early-access-madsuite.md`
-20. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
-21. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
-22. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
-23. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-24. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+18. `SYSTEME_MAD/07-TEMPLATES/template-script-video-demo-madsuite.md`
+19. `SYSTEME_MAD/07-TEMPLATES/template-page-lancement-early-access-madsuite.md`
+20. `SYSTEME_MAD/07-TEMPLATES/template-formulaire-early-access-madsuite.md`
+21. `SYSTEME_MAD/07-TEMPLATES/template-courriel-invitation-early-access-madsuite.md`
+22. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
+23. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
+24. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
+25. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+26. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
 
 ---
 
@@ -107,8 +109,10 @@ Phrase directrice :
 | `SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md` | Template FAQ publique MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md` | Template page Prix MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-page-demo-madsuite.md` | Template page Démo MADSuite. |
+| `SYSTEME_MAD/07-TEMPLATES/template-script-video-demo-madsuite.md` | Template script vidéo Démo MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-page-lancement-early-access-madsuite.md` | Template page Lancement / Early Access MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-formulaire-early-access-madsuite.md` | Template formulaire Early Access MADSuite. |
+| `SYSTEME_MAD/07-TEMPLATES/template-courriel-invitation-early-access-madsuite.md` | Template courriel invitation Early Access MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md` | Modèle de claim MADPROOF. |
 
 ---
@@ -123,7 +127,7 @@ Avant de modifier un document MADSuite :
 4. Lire le Revenue Core si la modification touche clients, projets, temps, factures, estimés, paiements ou revenus.
 5. Lire la Machine à clients si la modification touche acquisition, landing page, onboarding ou conversion.
 6. Lire `CHK-035` et `PLAY-038` si la modification touche une page publique.
-7. Lire le template public approprié : landing, FAQ, prix, démo, early access ou formulaire early access.
+7. Lire le template public approprié : landing, FAQ, prix, démo, script vidéo, early access, formulaire ou courriel early access.
 8. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
 9. Lire le registre des risques si la modification touche produit, IA, claims ou données.
 10. Si le sujet touche un claim cognitif, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
