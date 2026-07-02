@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index produit — MADSuite
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -17,10 +17,23 @@ Il sert à relier les idées R&D, les spécifications MVP, les lots d’impléme
 
 ---
 
+## Point d’entrée global
+
+Pour une vue complète de MADSuite, commencer par :
+
+```text
+SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md
+```
+
+Cet index relie produit, roadmap, MADPROOF, MAD Ariane, standards, ADR, checklists, playbooks, templates et contexte IA.
+
+---
+
 ## Entrées de pilotage
 
 | Document | Rôle | Statut |
 |---|---|---|
+| `index-global-madsuite.md` | Point d’entrée global MADSuite. | Officiel |
 | `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md` | Roadmap consolidée MADSuite / MADPROOF. | Brouillon |
 | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md` | Cadre de validation MADPROOF. | Brouillon |
 | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md` | Registre opérationnel des claims. | Brouillon |
@@ -86,15 +99,16 @@ Elle doit être utilisée avant de considérer MAD Ariane comme MVP contrôlé.
 ## Ordre de lecture recommandé
 
 ```text
-1. SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md
-2. SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md
-3. SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md
-4. MVP MAD Ariane
-5. Spécification technique
-6. Synthèse des lots
-7. Lots 1 à 6
-8. CHK-017 — Validation MVP MAD Ariane
-9. Guide manuel ou prompt agent pour l’implémentation
+1. SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md
+2. SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md
+3. SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md
+4. SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md
+5. MVP MAD Ariane
+6. Spécification technique
+7. Synthèse des lots
+8. Lots 1 à 6
+9. CHK-017 — Validation MVP MAD Ariane
+10. Guide manuel ou prompt agent pour l’implémentation
 ```
 
 ---
