@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: AI_CONTEXT.md
-Version: 1.0
-Dernière révision: 2026-06-30
+Version: 1.1
+Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -109,6 +109,14 @@ C'est une plateforme conçue pour réduire la charge cognitive des entrepreneurs
 
 Le logiciel doit aider les utilisateurs à retrouver de l'énergie mentale afin qu'ils puissent consacrer davantage de temps à leur métier.
 
+Pour tout travail lié à MADSuite, MADPROOF, MAD Ariane, Cognitive Engine ou à l'assistance cognitive, lire aussi :
+
+```text
+SYSTEME_MAD/00-SYSTEME-MAD/ai-context-madsuite-madproof.md
+```
+
+Ce document précise les formulations autorisées, les formulations interdites, les données exclues par défaut et les garde-fous non médicaux.
+
 ---
 
 # Communication
@@ -149,6 +157,13 @@ Respecte-t-elle la mission ?
 
 Serons-nous encore fiers de cette décision dans cinq ans ?
 
+Pour une idée liée à la cognition, au TDAH, à l'attention, à la reprise de tâche, au flow, à la fatigue cognitive ou à MADSuite, utiliser aussi :
+
+```text
+SYSTEME_MAD/05-PLAY/play-037-ajouter-ou-corriger-claim-madproof.md
+SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md
+```
+
 ---
 
 # Ce qui est plus important que la technologie
@@ -165,13 +180,11 @@ Le respect du temps des utilisateurs.
 
 ---
 
-
 # Rappel
 
 Nous ne vendons pas des logiciels.
 
 Nous améliorons le quotidien des personnes qui les utilisent.
-
 
 ---
 
