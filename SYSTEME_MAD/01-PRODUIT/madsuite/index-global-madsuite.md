@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 1.6
+Version: 1.7
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -71,11 +71,12 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 7. `SYSTEME_MAD/09-CHECKLISTS/chk-033-validation-mvp-revenue-core-madsuite.md`
 8. `SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-revenue-core-madsuite.md`
 9. `SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md`
-10. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
-11. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
-12. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
-13. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-14. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+10. `SYSTEME_MAD/09-CHECKLISTS/chk-034-validation-machine-a-clients-madsuite.md`
+11. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
+12. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
+13. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
+14. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+15. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
 
 ---
 
@@ -163,6 +164,7 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 | Checklist | Rôle |
 |---|---|
 | `SYSTEME_MAD/09-CHECKLISTS/chk-033-validation-mvp-revenue-core-madsuite.md` | Validation MVP Revenue Core MADSuite. |
+| `SYSTEME_MAD/09-CHECKLISTS/chk-034-validation-machine-a-clients-madsuite.md` | Validation Machine à clients MADSuite. |
 | `SYSTEME_MAD/09-CHECKLISTS/chk-016-validation-madproof-cognitif-madsuite.md` | Validation MADPROOF cognitive. |
 | `SYSTEME_MAD/09-CHECKLISTS/chk-017-validation-mvp-mad-ariane.md` | Validation MVP MAD Ariane. |
 | `SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md` | Validation d’un claim MADPROOF. |
@@ -208,13 +210,14 @@ Avant de modifier un document MADSuite :
 5. Lire `CHK-033` si la modification touche la validation MVP du Revenue Core.
 6. Lire le prompt agent Revenue Core si la tâche concerne l’implémentation ou la stabilisation du Revenue Core.
 7. Lire la Machine à clients si la modification touche acquisition, landing page, onboarding ou conversion.
-8. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
-9. Lire le registre des risques si la modification touche produit, IA, claims ou données.
-10. Vérifier si le sujet touche un claim cognitif.
-11. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
-12. Ne pas créer de doublon si un document existant peut être enrichi.
-13. Garder les formulations non médicales.
-14. Conserver l’utilisateur en contrôle.
+8. Lire `CHK-034` si la modification touche la validation de la Machine à clients.
+9. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
+10. Lire le registre des risques si la modification touche produit, IA, claims ou données.
+11. Vérifier si le sujet touche un claim cognitif.
+12. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
+13. Ne pas créer de doublon si un document existant peut être enrichi.
+14. Garder les formulations non médicales.
+15. Conserver l’utilisateur en contrôle.
 
 ---
 
