@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 3.3
+Version: 3.4
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -58,10 +58,16 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 | `play-035-revue-mensuelle-preuves-client.md` | Officiel | Revue mensuelle des preuves client. |
 | `play-036-suivi-hebdomadaire-projet-client.md` | Officiel | Suivi hebdomadaire des projets client actifs. |
 | `play-037-ajouter-ou-corriger-claim-madproof.md` | Officiel | Ajouter, corriger ou supprimer un claim MADPROOF. |
+| `play-038-publication-page-publique-madsuite.md` | Officiel | Publication contrôlée d’une page publique MADSuite. |
 
 ---
 
 ## Playbooks prioritaires
+
+### MADSuite produit / Machine à clients
+
+- `play-038-publication-page-publique-madsuite.md`
+- `play-037-ajouter-ou-corriger-claim-madproof.md`
 
 ### MADSuite cognition / MADPROOF
 
@@ -91,6 +97,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 
 ### Publication contrôlée
 
+- `play-038-publication-page-publique-madsuite.md`
 - `play-032-traiter-contenu-public-candidat.md`
 - `play-023-publier-site-web-mad-devops.md`
 - `play-035-revue-mensuelle-preuves-client.md`
