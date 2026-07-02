@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index produit — MADSuite
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -34,9 +34,22 @@ Cet index relie produit, roadmap, MADPROOF, MAD Ariane, standards, ADR, checklis
 | Document | Rôle | Statut |
 |---|---|---|
 | `index-global-madsuite.md` | Point d’entrée global MADSuite. | Officiel |
+| `registre-decisions-produit-madsuite.md` | Registre des décisions produit MADSuite. | Officiel |
+| `spec-revenue-core-madsuite.md` | Spécification produit du Revenue Core. | Brouillon contrôlé |
+| `spec-machine-a-clients-madsuite.md` | Spécification produit de la Machine à clients. | Brouillon contrôlé |
 | `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md` | Roadmap consolidée MADSuite / MADPROOF. | Brouillon |
 | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md` | Cadre de validation MADPROOF. | Brouillon |
 | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md` | Registre opérationnel des claims. | Brouillon |
+
+---
+
+## Axes produit prioritaires
+
+| Axe | Document | Rôle |
+|---|---|---|
+| Revenue Core | `spec-revenue-core-madsuite.md` | Clients, projets, temps, factures, estimés, paiements et revenus. |
+| Machine à clients | `spec-machine-a-clients-madsuite.md` | Acquisition, landing, activation, onboarding et conversion. |
+| MAD Ariane | `mad-ariane-fil-ariane-zero-effort.md` | Snapshot de reprise et fil opérationnel. |
 
 ---
 
@@ -100,15 +113,18 @@ Elle doit être utilisée avant de considérer MAD Ariane comme MVP contrôlé.
 
 ```text
 1. SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md
-2. SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md
-3. SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md
-4. SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md
-5. MVP MAD Ariane
-6. Spécification technique
-7. Synthèse des lots
-8. Lots 1 à 6
-9. CHK-017 — Validation MVP MAD Ariane
-10. Guide manuel ou prompt agent pour l’implémentation
+2. SYSTEME_MAD/01-PRODUIT/madsuite/registre-decisions-produit-madsuite.md
+3. SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md
+4. SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md
+5. SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md
+6. SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md
+7. SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md
+8. MVP MAD Ariane
+9. Spécification technique
+10. Synthèse des lots
+11. Lots 1 à 6
+12. CHK-017 — Validation MVP MAD Ariane
+13. Guide manuel ou prompt agent pour l’implémentation
 ```
 
 ---
