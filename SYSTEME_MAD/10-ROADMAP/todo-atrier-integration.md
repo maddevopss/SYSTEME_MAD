@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 4.1
+Version: 4.2
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -70,7 +70,7 @@ Pas MADPROOF = pas officiel.
 | Fiches Web consolidées | `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/compatibilite-web-apis-fallbacks.md` | Fait |
 | Standards durables Web/PWA extraits | `std-web-mobile.md` + `chk-pwa-mobile.md` | Fait |
 
-## 6. Bloc compliance — en cours
+## 6. Bloc compliance — terminé pour les sources principales
 
 | Source / action | Sortie | Statut |
 |---|---|---|
@@ -80,7 +80,8 @@ Pas MADPROOF = pas officiel.
 | Alignement checklist sécurité SaaS | `SYSTEME_MAD/09-CHECKLISTS/chk-security-saas-lite.md` | Fait / v1.1 |
 | `Recherche-fiscale.md` | `SYSTEME_MAD/13-RESSOURCES/research/05-compliance/fiche-madproof-recherche-fiscale.md` | Fait |
 | Checklist fiscale RS&DE | `SYSTEME_MAD/09-CHECKLISTS/chk-fiscal-rd-sred.md` | Fait / v1.0 |
-| `Recherche-droitauteur.md` | Fiche MADPROOF à produire | À faire |
+| `Recherche-droitauteur.md` | `SYSTEME_MAD/13-RESSOURCES/research/05-compliance/fiche-madproof-recherche-droitauteur.md` | Fait |
+| Checklist open source licenses | `SYSTEME_MAD/09-CHECKLISTS/chk-open-source-licenses.md` | À vérifier / aligner si nécessaire |
 
 ## 7. Bloc produit / terrain — à faire
 
@@ -101,9 +102,9 @@ Pas MADPROOF = pas officiel.
 
 Ordre conseillé :
 
-1. Traiter `Recherche-droitauteur.md`.
+1. Vérifier / aligner `chk-open-source-licenses.md` avec la fiche IP.
 2. Revenir ensuite au bloc géospatial / terrain.
-3. Vérifier le registre R&D / preuves si le module fiscal-R&D devient produit.
+3. Traiter `Recherche-gps.md` et les spécifications associées.
 
 ## 10. Note finale
 
