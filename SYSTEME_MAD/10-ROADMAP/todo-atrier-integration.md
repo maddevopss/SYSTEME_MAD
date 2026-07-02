@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 3.4
+Version: 3.5
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -45,9 +45,9 @@ La première passe a produit des résumés et documents de gouvernance maintenan
 | Axe | Fichier | Statut |
 |---|---|---|
 | ADR Time Tracking vs Monitoring | `SYSTEME_MAD/04-ADR/ADR-time-tracking-vs-monitoring.md` | Fait |
-| Standard Web mobile / PWA | `SYSTEME_MAD/03-STANDARDS/std-web-mobile.md` | Fait |
+| Standard Web mobile / PWA | `SYSTEME_MAD/03-STANDARDS/std-web-mobile.md` | Fait / mis à jour v1.1 |
 | Standard Accessibilité Web | `SYSTEME_MAD/03-STANDARDS/std-accessibilite-web.md` | Fait |
-| Checklist PWA mobile | `SYSTEME_MAD/09-CHECKLISTS/chk-pwa-mobile.md` | Fait |
+| Checklist PWA mobile | `SYSTEME_MAD/09-CHECKLISTS/chk-pwa-mobile.md` | Fait / mis à jour v1.1 |
 | Checklist WCAG 2.2 / COGA | `SYSTEME_MAD/09-CHECKLISTS/chk-web-accessibilite-wcag22.md` | Fait |
 | Checklist Loi 25 / vie privée | `SYSTEME_MAD/09-CHECKLISTS/chk-loi25-madsuite.md` | Fait |
 | Checklist sécurité SaaS lite | `SYSTEME_MAD/09-CHECKLISTS/chk-security-saas-lite.md` | Fait |
@@ -105,7 +105,7 @@ La première passe a produit des résumés et documents de gouvernance maintenan
 - [x] Traiter `Recherche-css.md` -> `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/fiche-madproof-recherche-css.md`.
 - [x] Traiter `Recherche-JavaScript.md` -> `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/fiche-madproof-recherche-javascript.md`.
 - [x] Consolider les fiches Web dans `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/compatibilite-web-apis-fallbacks.md`.
-- [ ] Extraire seulement les standards durables vers `std-web-mobile.md` si nécessaire.
+- [x] Extraire les standards durables vers `std-web-mobile.md` et `chk-pwa-mobile.md`.
 - [x] Marquer les APIs récentes comme `À vérifier` ou `R&D` si support partiel pour `Recherche-html.md`.
 - [x] Marquer les fonctionnalités CSS récentes comme `À vérifier`, `R&D` ou `MVP sous fallback` pour `Recherche-css.md`.
 - [x] Marquer les APIs JavaScript sensibles comme `MVP sous conditions`, `R&D`, `À vérifier` ou `Interdit MVP` selon privacy/sécurité.
@@ -137,8 +137,8 @@ La première passe a produit des résumés et documents de gouvernance maintenan
 
 Ordre conseillé :
 
-1. Vérifier si `std-web-mobile.md` et `chk-pwa-mobile.md` doivent recevoir une courte section “API avancée = fallback + consentement”.
-2. Passer ensuite aux fichiers compliance : vie privée, cybersécurité, fiscalité, droit d’auteur.
+1. Passer aux fichiers compliance : vie privée, cybersécurité, fiscalité, droit d’auteur.
+2. Commencer par `Recherche-vieprivee.md`, car il influence directement MADSuite, MAD Ariane, PWA, desktop agent et les claims privacy.
 
 ## 10. Note finale
 
