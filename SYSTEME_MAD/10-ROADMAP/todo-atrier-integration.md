@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 3.0
+Version: 3.1
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -68,26 +68,26 @@ La première passe a produit des résumés et documents de gouvernance maintenan
 
 ### 6.1 Créer la checklist MADPROOF unifiée
 
-- [ ] Vérifier si `SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md` existe et est à jour.
-- [ ] L’aligner avec la matrice MVP / R&D / Clinique / Interdit.
-- [ ] Ajouter gate : claim public interdit sans registre.
-- [ ] Ajouter gate : claim légal/fiscal/sécurité doit être vérifié sur source officielle récente.
-- [ ] Ajouter gate : claim médical/clinique doit être exclu ou marqué clinique.
+- [x] Vérifier si `SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md` existe et est à jour.
+- [x] L’aligner avec la matrice MVP / R&D / Clinique / Interdit.
+- [x] Ajouter gate : claim public interdit sans registre.
+- [x] Ajouter gate : claim légal/fiscal/sécurité doit être vérifié sur source officielle récente.
+- [x] Ajouter gate : claim médical/clinique doit être exclu ou marqué clinique.
 
 ### 6.2 Mettre à jour le playbook claim MADPROOF
 
-- [ ] Vérifier `SYSTEME_MAD/05-PLAY/play-037-ajouter-ou-corriger-claim-madproof.md`.
-- [ ] L’aligner avec le template V2.
-- [ ] Ajouter procédure : claim brut -> classification -> reformulation -> registre.
-- [ ] Ajouter procédure de suppression d’un claim interdit.
+- [x] Vérifier `SYSTEME_MAD/05-PLAY/play-037-ajouter-ou-corriger-claim-madproof.md`.
+- [x] L’aligner avec le template V2.
+- [x] Ajouter procédure : claim brut -> classification -> reformulation -> registre.
+- [x] Ajouter procédure de suppression d’un claim interdit.
 
 ### 6.3 Ajouter un README dans `docs/research/atrier`
 
-- [ ] Créer ou mettre à jour `docs/research/atrier/README.md`.
-- [ ] Indiquer que le dossier est brut / non officiel.
-- [ ] Ajouter la règle : tout fichier traité doit sortir vers `SYSTEME_MAD/...`.
-- [ ] Ajouter le lien vers la matrice MADPROOF.
-- [ ] Ajouter la procédure de tri.
+- [x] Créer ou mettre à jour `docs/research/atrier/README.md`.
+- [x] Indiquer que le dossier est brut / non officiel.
+- [x] Ajouter la règle : tout fichier traité doit sortir vers `SYSTEME_MAD/...`.
+- [x] Ajouter le lien vers la matrice MADPROOF.
+- [x] Ajouter la procédure de tri.
 
 ## 7. Prochaines actions P2 — Nettoyage du contenu `atrier`
 
@@ -101,11 +101,11 @@ La première passe a produit des résumés et documents de gouvernance maintenan
 
 ### 7.2 Traiter les sources techniques Web
 
-- [ ] Traiter `Recherche-html.md`.
+- [x] Traiter `Recherche-html.md` -> `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/fiche-madproof-recherche-html.md`.
 - [ ] Traiter `Recherche-css.md`.
 - [ ] Traiter `Recherche-JavaScript.md`.
 - [ ] Extraire seulement les standards durables.
-- [ ] Marquer les APIs récentes comme `À vérifier` ou `R&D` si support partiel.
+- [x] Marquer les APIs récentes comme `À vérifier` ou `R&D` si support partiel pour `Recherche-html.md`.
 
 ### 7.3 Traiter les sources compliance
 
@@ -134,10 +134,10 @@ La première passe a produit des résumés et documents de gouvernance maintenan
 
 Ordre conseillé :
 
-1. Mettre à jour la checklist `chk-032-validation-claim-madproof.md`.
-2. Mettre à jour le playbook `play-037-ajouter-ou-corriger-claim-madproof.md`.
-3. Ajouter un README dans `docs/research/atrier`.
-4. Commencer la deuxième passe de tri fichier par fichier.
+1. Traiter `Recherche-css.md`.
+2. Traiter `Recherche-JavaScript.md`.
+3. Consolider les trois fiches Web dans le standard si un ajout durable est nécessaire.
+4. Passer ensuite aux fichiers compliance : vie privée, cybersécurité, fiscalité, droit d’auteur.
 
 ## 10. Note finale
 
