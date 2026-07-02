@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 4.1
+Version: 4.2
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -23,6 +23,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 
 ```text
 SYSTEME_MAD/09-CHECKLISTS/chk-045-validation-mvp-early-access-madsuite.md
+SYSTEME_MAD/09-CHECKLISTS/chk-046-validation-sprint-1-premiere-facture-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-033-validation-mvp-revenue-core-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-034-validation-machine-a-clients-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md
@@ -92,3 +93,4 @@ chk-031-validation-projet-pret-a-demarrer.md
 - Ne pas cocher mécaniquement.
 - Adapter la profondeur de validation au risque du contexte.
 - Pour MADSuite, utiliser `CHK-045` avant d’inviter des utilisateurs Early Access.
+- Pour Sprint 1 MADSuite, utiliser `CHK-046` avant de considérer le parcours première facture validé.
