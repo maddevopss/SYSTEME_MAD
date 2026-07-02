@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -17,6 +17,7 @@ Il sert à relier :
 
 - le produit;
 - la roadmap;
+- les risques;
 - MADPROOF;
 - MAD Ariane;
 - les standards;
@@ -63,9 +64,10 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 3. `SYSTEME_MAD/04-ADR/ADR-002-positionnement-non-medical-madsuite.md`
 4. `SYSTEME_MAD/01-PRODUIT/madsuite/README.md`
 5. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
-6. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
-7. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-8. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+6. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
+7. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
+8. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+9. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
 
 ---
 
@@ -83,11 +85,13 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 
 ---
 
-## Roadmap
+## Roadmap et risques
 
 | Document | Rôle |
 |---|---|
+| `SYSTEME_MAD/10-ROADMAP/README.md` | Index du dossier Roadmap. |
 | `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md` | Roadmap consolidée MADSuite / MADPROOF. |
+| `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md` | Registre des risques MADSuite / MADPROOF. |
 | `SYSTEME_MAD/10-ROADMAP/progression.md` | Suivi de progression global du Système MAD. |
 
 ---
@@ -187,11 +191,12 @@ Avant de modifier un document MADSuite :
 1. Lire ce document.
 2. Lire le contexte IA MADSuite / MADPROOF.
 3. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
-4. Vérifier si le sujet touche un claim cognitif.
-5. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
-6. Ne pas créer de doublon si un document existant peut être enrichi.
-7. Garder les formulations non médicales.
-8. Conserver l’utilisateur en contrôle.
+4. Lire le registre des risques si la modification touche produit, IA, claims ou données.
+5. Vérifier si le sujet touche un claim cognitif.
+6. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
+7. Ne pas créer de doublon si un document existant peut être enrichi.
+8. Garder les formulations non médicales.
+9. Conserver l’utilisateur en contrôle.
 
 ---
 
@@ -228,9 +233,10 @@ Pour faire évoluer MADSuite sans créer de chaos documentaire :
 1. Ajouter ou modifier une idée dans la roadmap.
 2. Vérifier si elle contient un claim MADPROOF.
 3. Si oui, l’ajouter au registre.
-4. Produire une spec produit dans `01-PRODUIT/madsuite/`.
-5. Ajouter une checklist ou un playbook seulement si le processus devient récurrent.
-6. Mettre à jour cet index si le document devient important.
+4. Vérifier si elle ajoute ou augmente un risque.
+5. Produire une spec produit dans `01-PRODUIT/madsuite/`.
+6. Ajouter une checklist ou un playbook seulement si le processus devient récurrent.
+7. Mettre à jour cet index si le document devient important.
 
 ---
 
