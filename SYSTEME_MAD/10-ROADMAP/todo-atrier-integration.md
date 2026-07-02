@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 4.6
+Version: 4.7
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -60,10 +60,12 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 
 | Source | Destination / sortie | Statut |
 |---|---|---|
-| `Recherche-gps.md` | `SYSTEME_MAD/13-RESSOURCES/research/06-modules-metiers/geospatial/fiche-madproof-recherche-gps.md` | Fait |
-| ADR séparation géospatial | `SYSTEME_MAD/04-ADR/ADR-geospatial-module-separe.md` | Fait / accepté |
-| Checklist localisation / privacy terrain | `SYSTEME_MAD/09-CHECKLISTS/chk-geospatial-location-privacy.md` | Fait / v1.0 |
-| Spécifications géospatiales restantes | Dossier géospatial | À faire |
+| `Recherche-gps.md` | `fiche-madproof-recherche-gps.md` | Fait |
+| ADR séparation géospatial | `ADR-geospatial-module-separe.md` | Fait / accepté |
+| Checklist localisation / privacy terrain | `chk-geospatial-location-privacy.md` | Fait / v1.0 |
+| Spécifications géospatiales consolidées | `fiche-madproof-specifications-geospatiales-consolidees.md` | Fait |
+| Standard mesure terrain | `SYSTEME_MAD/03-STANDARDS/std-geospatial-measurement.md` | À créer si module prioritaire |
+| Index module géospatial | `SYSTEME_MAD/13-RESSOURCES/research/06-modules-metiers/geospatial/README.md` | À créer |
 
 ## 6. Décisions confirmées
 
@@ -77,9 +79,9 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 
 ## 7. Priorité immédiate
 
-1. Traiter les spécifications géospatiales associées.
-2. Créer éventuellement un standard de mesure terrain si le module devient prioritaire.
-3. Regrouper ensuite les décisions géospatiales dans un index de module futur.
+1. Créer `SYSTEME_MAD/13-RESSOURCES/research/06-modules-metiers/geospatial/README.md` pour indexer le module futur.
+2. Créer éventuellement `std-geospatial-measurement.md` si le module devient prioritaire.
+3. Traiter les autres fichiers techniques `atrier` non géospatiaux restants.
 
 ## 8. Note finale
 
