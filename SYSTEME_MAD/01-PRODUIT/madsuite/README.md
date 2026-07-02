@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index produit — MADSuite
-Version: 1.3
+Version: 1.4
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -36,6 +36,7 @@ Cet index relie produit, roadmap, MADPROOF, MAD Ariane, standards, ADR, checklis
 | `index-global-madsuite.md` | Point d’entrée global MADSuite. | Officiel |
 | `registre-decisions-produit-madsuite.md` | Registre des décisions produit MADSuite. | Officiel |
 | `spec-revenue-core-madsuite.md` | Spécification produit du Revenue Core. | Brouillon contrôlé |
+| `prompt-agent-revenue-core-madsuite.md` | Prompt agent pour implémenter ou stabiliser le Revenue Core. | Prêt à utiliser |
 | `spec-machine-a-clients-madsuite.md` | Spécification produit de la Machine à clients. | Brouillon contrôlé |
 | `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md` | Roadmap consolidée MADSuite / MADPROOF. | Brouillon |
 | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md` | Cadre de validation MADPROOF. | Brouillon |
@@ -48,6 +49,7 @@ Cet index relie produit, roadmap, MADPROOF, MAD Ariane, standards, ADR, checklis
 | Axe | Document | Rôle |
 |---|---|---|
 | Revenue Core | `spec-revenue-core-madsuite.md` | Clients, projets, temps, factures, estimés, paiements et revenus. |
+| Revenue Core — agent | `prompt-agent-revenue-core-madsuite.md` | Prompt de code pour implémentation ou stabilisation contrôlée. |
 | Machine à clients | `spec-machine-a-clients-madsuite.md` | Acquisition, landing, activation, onboarding et conversion. |
 | MAD Ariane | `mad-ariane-fil-ariane-zero-effort.md` | Snapshot de reprise et fil opérationnel. |
 
@@ -92,6 +94,7 @@ Le module ne traite pas le TDAH, ne restaure pas un état mental, ne détecte pa
 
 | Document | Rôle | Statut |
 |---|---|---|
+| `prompt-agent-revenue-core-madsuite.md` | Prompt agent pour implémenter ou stabiliser le Revenue Core. | Prêt à utiliser |
 | `guide-implementation-manuelle-lot-1-mad-ariane.md` | Guide manuel pour implémenter le Lot 1. | Brouillon contrôlé |
 | `prompt-agent-code-lot-1-mad-ariane.md` | Prompt agent de code pour Lot 1. | Prêt à utiliser |
 
@@ -99,13 +102,17 @@ Le module ne traite pas le TDAH, ne restaure pas un état mental, ne détecte pa
 
 ## Validation finale
 
-La checklist finale se trouve ici :
+La checklist finale pour MAD Ariane se trouve ici :
 
 ```text
 SYSTEME_MAD/09-CHECKLISTS/chk-017-validation-mvp-mad-ariane.md
 ```
 
-Elle doit être utilisée avant de considérer MAD Ariane comme MVP contrôlé.
+La checklist finale pour le Revenue Core se trouve ici :
+
+```text
+SYSTEME_MAD/09-CHECKLISTS/chk-033-validation-mvp-revenue-core-madsuite.md
+```
 
 ---
 
@@ -115,16 +122,18 @@ Elle doit être utilisée avant de considérer MAD Ariane comme MVP contrôlé.
 1. SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md
 2. SYSTEME_MAD/01-PRODUIT/madsuite/registre-decisions-produit-madsuite.md
 3. SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md
-4. SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md
-5. SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md
-6. SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md
-7. SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md
-8. MVP MAD Ariane
-9. Spécification technique
-10. Synthèse des lots
-11. Lots 1 à 6
-12. CHK-017 — Validation MVP MAD Ariane
-13. Guide manuel ou prompt agent pour l’implémentation
+4. SYSTEME_MAD/09-CHECKLISTS/chk-033-validation-mvp-revenue-core-madsuite.md
+5. SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-revenue-core-madsuite.md
+6. SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md
+7. SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md
+8. SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md
+9. SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md
+10. MVP MAD Ariane
+11. Spécification technique
+12. Synthèse des lots
+13. Lots 1 à 6
+14. CHK-017 — Validation MVP MAD Ariane
+15. Guide manuel ou prompt agent pour l’implémentation
 ```
 
 ---
