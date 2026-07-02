@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 4.1
+Version: 4.2
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -52,6 +52,7 @@ SYSTEME_MAD/09-CHECKLISTS/chk-039-validation-dashboard-metriques-early-access-ma
 SYSTEME_MAD/09-CHECKLISTS/chk-040-validation-bilan-fin-mois-early-access-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-041-validation-cycle-mensuel-early-access-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-042-validation-synthese-executive-early-access-madsuite.md
+SYSTEME_MAD/09-CHECKLISTS/chk-043-validation-rapport-partenaire-early-access-madsuite.md
 ```
 
 ---
@@ -99,6 +100,7 @@ SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md
 - Utiliser `PLAY-041` pour le cycle mensuel Early Access.
 - Utiliser `CHK-041` pour valider le cycle mensuel Early Access.
 - Utiliser `CHK-042` pour valider une synthèse exécutive Early Access.
+- Utiliser `CHK-043` pour valider un rapport partenaire Early Access.
 - Utiliser le template approprié selon le livrable Early Access.
 - Garder les formulations non médicales et l’utilisateur en contrôle.
 
