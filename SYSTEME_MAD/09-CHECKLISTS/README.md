@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 3.7
+Version: 3.8
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -52,6 +52,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-031-validation-projet-pret-a-demarrer.md` | Officiel | Validation avant exécution d’un projet client. |
 | `chk-032-validation-claim-madproof.md` | Officiel | Validation d’un claim MADPROOF. |
 | `chk-033-validation-mvp-revenue-core-madsuite.md` | Officiel | Validation MVP Revenue Core MADSuite. |
+| `chk-034-validation-machine-a-clients-madsuite.md` | Officiel | Validation Machine à clients MADSuite. |
 
 ---
 
@@ -60,6 +61,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 ### MADSuite produit
 
 - `chk-033-validation-mvp-revenue-core-madsuite.md`
+- `chk-034-validation-machine-a-clients-madsuite.md`
 - `chk-017-validation-mvp-mad-ariane.md`
 - `chk-032-validation-claim-madproof.md`
 
@@ -109,9 +111,11 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-030-validation-preuve-client.md`
 - `chk-027-validation-reponse-demande-entrante.md`
 - `chk-028-validation-fermeture-demande-entrante.md`
+- `chk-034-validation-machine-a-clients-madsuite.md`
 
 ### Machine à clients
 
+- `chk-034-validation-machine-a-clients-madsuite.md`
 - `chk-021-validation-opportunite-machine-a-clients.md`
 - `chk-022-validation-activation-commerciale-7-jours.md`
 - `chk-023-validation-mesures-execution-commerciale.md`
