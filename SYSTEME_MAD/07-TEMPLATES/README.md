@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 2.8
+Version: 2.9
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -32,6 +32,7 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | `template-cadrage-client-mad-devops.md` | Template | Modèle de cadrage client avant proposition. |
 | `template-proposition-client-mad-devops.md` | Template | Modèle de proposition client claire et professionnelle. |
 | `template-suivis-client-mad-devops.md` | Template | Messages de suivi client. |
+| `template-relance-element-manquant-client.md` | Template | Relance client pour élément manquant ou information requise. |
 | `template-prospection-douce-mad-devops.md` | Template | Messages de prospection commerciale douce. |
 | `template-formulaire-contact-mad-devops.md` | Template | Formulaire de contact MAD DevOps. |
 | `template-reponse-demande-entrante-mad-devops.md` | Template | Réponse à une demande entrante. |
@@ -63,6 +64,15 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 
 ## Templates prioritaires
 
+### Projet client et livraison
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-cadrage-client-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-fiche-projet-client-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-relance-element-manquant-client.md
+SYSTEME_MAD/07-TEMPLATES/template-suivis-client-mad-devops.md
+```
+
 ### Pilotage fondateur
 
 ```text
@@ -70,6 +80,7 @@ SYSTEME_MAD/07-TEMPLATES/template-journal-quotidien-fondateur-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-journal-bord-hebdomadaire-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-revue-hebdomadaire-pilotage-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-registre-ameliorations-systeme-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-relance-element-manquant-client.md
 ```
 
 ### Publication publique
@@ -94,6 +105,7 @@ SYSTEME_MAD/07-TEMPLATES/template-suivi-activation-7-jours-commerciale.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-qualification-demande-entrante-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-proposition-client-mad-devops.md
 SYSTEME_MAD/07-TEMPLATES/template-suivis-client-mad-devops.md
+SYSTEME_MAD/07-TEMPLATES/template-relance-element-manquant-client.md
 ```
 
 ### CerveauMAD
