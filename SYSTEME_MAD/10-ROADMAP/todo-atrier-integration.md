@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 5.3
+Version: 5.4
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -40,6 +40,7 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 | Compliance / sécurité / fiscal / droit / open source | Terminé pour sources principales |
 | MADSuite cognition / time monitoring | Terminé |
 | Géospatial / terrain | Structure initiale terminée |
+| Distribution / anti-rejet | Structure initiale terminée |
 
 ## 4. Bloc distribution / anti-rejet — structure terminée
 
@@ -49,7 +50,7 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 | Checklist release stores | `SYSTEME_MAD/09-CHECKLISTS/chk-app-store-release.md` | Fait / v1.0 |
 | `specifications_mobiles_android.md` | `fiche-madproof-distribution-mobile.md` | Fait |
 | `specifications_reseau_securite.md` | `fiche-madproof-distribution-reseau-securite.md` | Fait |
-| Standard distribution multiplateforme | `SYSTEME_MAD/03-STANDARDS/std-distribution-multiplateforme.md` | À créer si on veut consolider |
+| Standard distribution multiplateforme | `SYSTEME_MAD/03-STANDARDS/std-distribution-multiplateforme.md` | Fait / v1.0 |
 
 ## 5. Blocs restants
 
@@ -74,16 +75,16 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 
 ## 7. Priorité immédiate
 
-Option A — consolider le bloc distribution :
-
-```text
-SYSTEME_MAD/03-STANDARDS/std-distribution-multiplateforme.md
-```
-
-Option B — passer au bloc agenda :
+Traiter :
 
 ```text
 docs/research/atrier/specifications_agenda_planification.md
+```
+
+Sortie recommandée :
+
+```text
+SYSTEME_MAD/13-RESSOURCES/research/06-modules-metiers/agenda/fiche-madproof-agenda-planification-sync.md
 ```
 
 ## 8. Note finale
