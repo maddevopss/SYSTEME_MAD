@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — Standards
-Version: 1.1
-Dernière révision: 2026-06-30
+Version: 1.2
+Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -32,7 +32,7 @@ Il sert de point d’entrée pour les humains, les collaborateurs et les agents 
 3. Sécurité — `STD-201` à `STD-205`
 4. Qualité — `STD-301` à `STD-305`
 5. DevOps — `STD-401` à `STD-405`
-6. IA — `STD-501` à `STD-505` si le projet utilise l’IA
+6. IA — `STD-501` à `STD-506` si le projet utilise l’IA
 7. Documentation — `STD-601` à `STD-605`
 
 ---
@@ -108,6 +108,7 @@ Il sert de point d’entrée pour les humains, les collaborateurs et les agents 
 | `std-503.md` | Données et confidentialité IA | Protéger les données utilisées avec l’IA. |
 | `std-504.md` | Agents IA | Encadrer les agents et leur périmètre. |
 | `std-505.md` | IA cognitive non médicale | Encadrer MADSuite et l’assistance cognitive non médicale. |
+| `std-506.md` | Gouvernance des claims MADPROOF | Encadrer les claims cognitifs, TDAH, R&D et marketing MADSuite. |
 
 ---
 
@@ -135,7 +136,8 @@ Pour MADSuite, les standards à lire en priorité sont :
 - `std-404.md` — Observabilité;
 - `std-501.md` — IA responsable;
 - `std-503.md` — Données et confidentialité IA;
-- `std-505.md` — IA cognitive non médicale.
+- `std-505.md` — IA cognitive non médicale;
+- `std-506.md` — Gouvernance des claims MADPROOF.
 
 ---
 
