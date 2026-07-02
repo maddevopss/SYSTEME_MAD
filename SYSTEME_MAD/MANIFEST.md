@@ -1,8 +1,8 @@
 ---
 Projet: Système MAD
 Document: Manifeste documentaire officiel
-Version: 1.1
-Dernière révision: 2026-06-30
+Version: 1.2
+Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -64,10 +64,22 @@ Les dossiers hors de `SYSTEME_MAD/` sont considérés comme périphériques, tra
 ### Lecture pour travailler sur MADSuite
 
 1. `SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md`
-2. `SYSTEME_MAD/02-GUIDE/05-madsuite.md`
-3. `SYSTEME_MAD/03-STANDARDS/std-104.md`
-4. `SYSTEME_MAD/03-STANDARDS/std-105.md`
-5. Les documents de recherche MADSuite applicables
+2. `SYSTEME_MAD/00-SYSTEME-MAD/ai-context-madsuite-madproof.md`
+3. `SYSTEME_MAD/02-GUIDE/05-madsuite.md`
+4. `SYSTEME_MAD/03-STANDARDS/std-104.md`
+5. `SYSTEME_MAD/03-STANDARDS/std-105.md`
+6. `SYSTEME_MAD/03-STANDARDS/std-505.md`
+7. `SYSTEME_MAD/03-STANDARDS/std-506.md`
+8. Les documents produit et recherche MADSuite applicables
+
+### Lecture pour un claim MADSuite / MADPROOF
+
+1. `SYSTEME_MAD/04-ADR/ADR-002-positionnement-non-medical-madsuite.md`
+2. `SYSTEME_MAD/04-ADR/ADR-003-gouvernance-madproof-claims-madsuite.md`
+3. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+4. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+5. `SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md`
+6. `SYSTEME_MAD/05-PLAY/play-037-ajouter-ou-corriger-claim-madproof.md`
 
 ---
 
@@ -200,6 +212,7 @@ Un document archivé ne doit pas être utilisé comme source officielle sans men
 6. Garder le langage clair, professionnel et accessible.
 7. Éviter les promesses exagérées, les superlatifs inutiles et les affirmations non vérifiées.
 8. Utiliser `STD-006` et `CHK-002` pour toute passe qualité documentaire.
+9. Utiliser `STD-506` et `CHK-032` pour tout claim MADSuite / MADPROOF sensible.
 
 ---
 
@@ -213,10 +226,11 @@ Avant de produire, corriger ou réorganiser un document, un agent IA doit :
 4. Lire les standards applicables, notamment `STD-006` pour les documents.
 5. Lire `CHK-002` lorsqu’il faut valider la qualité d’un document.
 6. Utiliser `PLAY-010` lorsqu’il faut effectuer une passe qualité documentaire.
-7. Ne pas utiliser `99-ARCHIVES/` comme source principale.
-8. Respecter les statuts documentaires.
-9. Signaler les doublons au lieu de les amplifier.
-10. Préserver le ton MAD DevOps : professionnel, humain, simple et crédible.
+7. Lire `SYSTEME_MAD/00-SYSTEME-MAD/ai-context-madsuite-madproof.md` lorsque la tâche concerne MADSuite ou MADPROOF.
+8. Ne pas utiliser `99-ARCHIVES/` comme source principale.
+9. Respecter les statuts documentaires.
+10. Signaler les doublons au lieu de les amplifier.
+11. Préserver le ton MAD DevOps : professionnel, humain, simple et crédible.
 
 ---
 
@@ -229,9 +243,11 @@ Les formulations doivent rester prudentes :
 - ne pas prétendre diagnostiquer le TDAH;
 - ne pas présenter MADSuite comme une thérapie numérique validée;
 - ne pas promettre une amélioration clinique;
-- parler d’accessibilité cognitive, d’assistance exécutive, de réduction de friction et de soutien au travail numérique;
+- ne pas prétendre lire, mesurer ou restaurer un état mental;
+- parler d’accessibilité cognitive, d’assistance cognitive non médicale, de réduction de friction et de soutien au travail numérique;
 - conserver l’utilisateur en contrôle;
-- privilégier les fonctions volontaires, transparentes, désactivables et non médicalisées.
+- privilégier les fonctions volontaires, transparentes, désactivables et non médicalisées;
+- exclure caméra, micro, biométrie et capture permanente du MVP par défaut.
 
 ---
 
@@ -242,12 +258,19 @@ Les documents suivants sont prioritaires pour la cohérence du système :
 - `README.md`
 - `SYSTEME_MAD/MANIFEST.md`
 - `SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md`
+- `SYSTEME_MAD/00-SYSTEME-MAD/ai-context-madsuite-madproof.md`
 - `SYSTEME_MAD/00-SYSTEME-MAD/decisions.md`
 - `SYSTEME_MAD/00-SYSTEME-MAD/yaml-standard.md`
 - `SYSTEME_MAD/01-FONDATIONS/non-negociable.md`
 - `SYSTEME_MAD/03-STANDARDS/std-006.md`
+- `SYSTEME_MAD/03-STANDARDS/std-505.md`
+- `SYSTEME_MAD/03-STANDARDS/std-506.md`
+- `SYSTEME_MAD/04-ADR/ADR-002-positionnement-non-medical-madsuite.md`
+- `SYSTEME_MAD/04-ADR/ADR-003-gouvernance-madproof-claims-madsuite.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-002-validation-documentaire.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md`
 - `SYSTEME_MAD/05-PLAY/play-010-passe-qualite-documentaire.md`
+- `SYSTEME_MAD/05-PLAY/play-037-ajouter-ou-corriger-claim-madproof.md`
 - `SYSTEME_MAD/03-STANDARDS/`
 - `SYSTEME_MAD/04-ADR/`
 
