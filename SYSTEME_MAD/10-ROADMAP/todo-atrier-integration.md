@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 3.6
+Version: 3.7
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -13,48 +13,43 @@ Auteur: Marc-André Dufour / MAD DevOps
 
 Le dossier `docs/research/atrier` est le bac brut de recherche non triée.
 
-Les documents qui en sortent doivent maintenant passer par le pipeline MADPROOF :
+Tout document qui en sort doit suivre le pipeline :
 
 ```text
 atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> intégration SYSTEME_MAD
 ```
 
-La première passe a produit des résumés et documents de gouvernance maintenant rangés dans `SYSTEME_MAD/...`.
+Règle permanente :
 
-## 2. Règles permanentes
+```text
+Pas MADPROOF = pas officiel.
+```
 
-- [x] Garder `docs/research/atrier` comme zone brute / non officielle.
-- [x] Ne pas rendre officiel un claim non classé MADPROOF.
-- [x] Ranger les documents validés hors de `docs/research/atrier`.
-- [x] Éviter le double système `docs/` vs `SYSTEME_MAD/`.
-- [x] Utiliser YAML standard sur les nouveaux fichiers Markdown.
-- [x] Garder les docs officielles professionnelles et prudentes.
-
-## 3. Terminé — Fondation MADPROOF
+## 2. Fondation MADPROOF terminée
 
 | Action | Fichier | Statut |
 |---|---|---|
-| Créer la matrice officielle MVP / R&D / Clinique / Interdit | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/001-matrice-madproof-mvp-rd-clinique-interdit.md` | Fait |
-| Mettre à jour le template de fiche claim | `SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md` | Fait |
-| Mettre à jour le registre des claims | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md` | Fait |
-| Mettre à jour l’index MADPROOF | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/README.md` | Fait |
-| Déplacer les résumés research hors de `docs/research` | `SYSTEME_MAD/13-RESSOURCES/research/...` | Fait |
+| Matrice officielle MVP / R&D / Clinique / Interdit | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/001-matrice-madproof-mvp-rd-clinique-interdit.md` | Fait |
+| Template fiche claim | `SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md` | Fait |
+| Registre des claims | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md` | Fait |
+| Index MADPROOF | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/README.md` | Fait |
+| README zone brute `atrier` | `docs/research/atrier/README.md` | Fait |
 
-## 4. Terminé — Standards, ADR et checklists
+## 3. Standards, ADR et checklists terminés
 
 | Axe | Fichier | Statut |
 |---|---|---|
 | ADR Time Tracking vs Monitoring | `SYSTEME_MAD/04-ADR/ADR-time-tracking-vs-monitoring.md` | Fait |
-| Standard Web mobile / PWA | `SYSTEME_MAD/03-STANDARDS/std-web-mobile.md` | Fait / mis à jour v1.1 |
+| Standard Web mobile / PWA | `SYSTEME_MAD/03-STANDARDS/std-web-mobile.md` | Fait / v1.1 |
+| Checklist PWA mobile | `SYSTEME_MAD/09-CHECKLISTS/chk-pwa-mobile.md` | Fait / v1.1 |
+| Checklist Loi 25 / vie privée | `SYSTEME_MAD/09-CHECKLISTS/chk-loi25-madsuite.md` | Fait / v1.1 |
 | Standard Accessibilité Web | `SYSTEME_MAD/03-STANDARDS/std-accessibilite-web.md` | Fait |
-| Checklist PWA mobile | `SYSTEME_MAD/09-CHECKLISTS/chk-pwa-mobile.md` | Fait / mis à jour v1.1 |
 | Checklist WCAG 2.2 / COGA | `SYSTEME_MAD/09-CHECKLISTS/chk-web-accessibilite-wcag22.md` | Fait |
-| Checklist Loi 25 / vie privée | `SYSTEME_MAD/09-CHECKLISTS/chk-loi25-madsuite.md` | Fait |
 | Checklist sécurité SaaS lite | `SYSTEME_MAD/09-CHECKLISTS/chk-security-saas-lite.md` | Fait |
 | Checklist dépendances / contenus tiers | `SYSTEME_MAD/09-CHECKLISTS/chk-open-source-licenses.md` | Fait |
 | Registre R&D / preuves | `SYSTEME_MAD/06-OPERATIONS-INTERNES/registre-rd-sred.md` | Fait |
 
-## 5. Résumés issus de `atrier` déjà classés
+## 4. Résumés issus de `atrier` déjà classés
 
 | Axe | Fichier | Statut |
 |---|---|---|
@@ -64,92 +59,51 @@ La première passe a produit des résumés et documents de gouvernance maintenan
 | Sécurité / vie privée / fiscal / juridique | `SYSTEME_MAD/13-RESSOURCES/research/05-compliance/resume-atrier-securite-vie-privee-juridique-fiscal.md` | Classé compliance |
 | GPS / géospatial / offline | `SYSTEME_MAD/13-RESSOURCES/research/06-modules-metiers/geospatial/resume-atrier-geospatial-gps-offline.md` | Classé module futur |
 
-## 6. Prochaines actions P1 — Solidifier le système MADPROOF
+## 5. Bloc Web technique — terminé
 
-### 6.1 Créer la checklist MADPROOF unifiée
+| Source | Sortie MADPROOF | Statut |
+|---|---|---|
+| `Recherche-html.md` | `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/fiche-madproof-recherche-html.md` | Fait |
+| `Recherche-css.md` | `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/fiche-madproof-recherche-css.md` | Fait |
+| `Recherche-JavaScript.md` | `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/fiche-madproof-recherche-javascript.md` | Fait |
+| Fiches Web consolidées | `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/compatibilite-web-apis-fallbacks.md` | Fait |
+| Standards durables Web/PWA extraits | `std-web-mobile.md` + `chk-pwa-mobile.md` | Fait |
 
-- [x] Vérifier si `SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md` existe et est à jour.
-- [x] L’aligner avec la matrice MVP / R&D / Clinique / Interdit.
-- [x] Ajouter gate : claim public interdit sans registre.
-- [x] Ajouter gate : claim légal/fiscal/sécurité doit être vérifié sur source officielle récente.
-- [x] Ajouter gate : claim médical/clinique doit être exclu ou marqué clinique.
+## 6. Bloc compliance — en cours
 
-### 6.2 Mettre à jour le playbook claim MADPROOF
+| Source / action | Sortie | Statut |
+|---|---|---|
+| `Recherche-vieprivee.md` | `SYSTEME_MAD/13-RESSOURCES/research/05-compliance/fiche-madproof-recherche-vieprivee.md` | Fait |
+| Alignement checklist Loi 25 | `SYSTEME_MAD/09-CHECKLISTS/chk-loi25-madsuite.md` | Fait / v1.1 |
+| `Recherche-cybersecurite.md` | Fiche MADPROOF à produire | À faire |
+| `Recherche-fiscale.md` | Fiche MADPROOF à produire | À faire |
+| `Recherche-droitauteur.md` | Fiche MADPROOF à produire | À faire |
 
-- [x] Vérifier `SYSTEME_MAD/05-PLAY/play-037-ajouter-ou-corriger-claim-madproof.md`.
-- [x] L’aligner avec le template V2.
-- [x] Ajouter procédure : claim brut -> classification -> reformulation -> registre.
-- [x] Ajouter procédure de suppression d’un claim interdit.
+## 7. Bloc produit / terrain — à faire
 
-### 6.3 Ajouter un README dans `docs/research/atrier`
-
-- [x] Créer ou mettre à jour `docs/research/atrier/README.md`.
-- [x] Indiquer que le dossier est brut / non officiel.
-- [x] Ajouter la règle : tout fichier traité doit sortir vers `SYSTEME_MAD/...`.
-- [x] Ajouter le lien vers la matrice MADPROOF.
-- [x] Ajouter la procédure de tri.
-
-## 7. Prochaines actions P2 — Nettoyage du contenu `atrier`
-
-### 7.1 Nettoyer les fichiers convertis depuis Word
-
-- [ ] Corriger les blocs Markdown échappés issus de conversion Word.
-- [ ] Retirer les phrases conversationnelles comme “Chef ?” dans docs officielles.
-- [ ] Remplacer les formulations trop fortes : “obligatoire”, “complet”, “partout”, “rejet immédiat”.
-- [ ] Séparer fait vérifié, bonne pratique, hypothèse produit, idée R&D.
-- [ ] Ajouter sources officielles à chaque claim légal/fiscal/sécurité.
-
-### 7.2 Traiter les sources techniques Web
-
-- [x] Traiter `Recherche-html.md` -> `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/fiche-madproof-recherche-html.md`.
-- [x] Traiter `Recherche-css.md` -> `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/fiche-madproof-recherche-css.md`.
-- [x] Traiter `Recherche-JavaScript.md` -> `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/fiche-madproof-recherche-javascript.md`.
-- [x] Consolider les fiches Web dans `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/compatibilite-web-apis-fallbacks.md`.
-- [x] Extraire les standards durables vers `std-web-mobile.md` et `chk-pwa-mobile.md`.
-- [x] Marquer les APIs récentes comme `À vérifier` ou `R&D` si support partiel pour `Recherche-html.md`.
-- [x] Marquer les fonctionnalités CSS récentes comme `À vérifier`, `R&D` ou `MVP sous fallback` pour `Recherche-css.md`.
-- [x] Marquer les APIs JavaScript sensibles comme `MVP sous conditions`, `R&D`, `À vérifier` ou `Interdit MVP` selon privacy/sécurité.
-
-### 7.3 Traiter les sources compliance
-
-- [x] Traiter `Recherche-vieprivee.md` -> `SYSTEME_MAD/13-RESSOURCES/research/05-compliance/fiche-madproof-recherche-vieprivee.md`.
-- [ ] Vérifier et aligner `SYSTEME_MAD/09-CHECKLISTS/chk-loi25-madsuite.md` avec la fiche privacy.
-- [ ] Traiter `Recherche-cybersecurite.md`.
-- [ ] Traiter `Recherche-fiscale.md`.
-- [ ] Traiter `Recherche-droitauteur.md`.
-- [ ] Garder les sujets fiscal/juridique comme internes, jamais comme conseil professionnel.
-
-### 7.4 Traiter les sources produit / terrain
-
-- [ ] Traiter `Recherche-gps.md`.
-- [ ] Traiter les spécifications géospatiales restantes.
-- [ ] Garder le géospatial dans `SYSTEME_MAD/13-RESSOURCES/research/06-modules-metiers/geospatial/`.
-- [ ] Ne pas mélanger avec le cœur MADSuite cognitif.
+| Source | Destination prévue | Statut |
+|---|---|---|
+| `Recherche-gps.md` | `SYSTEME_MAD/13-RESSOURCES/research/06-modules-metiers/geospatial/` | À faire |
+| Spécifications géospatiales restantes | Dossier géospatial | À faire |
 
 ## 8. Décisions produit à confirmer plus tard
 
 - [ ] Est-ce que MADSuite vise PWA installable en priorité ? Recommandé : oui.
 - [ ] Est-ce que le desktop agent capture automatiquement l’app active ? Recommandé : oui, local et validé par l’utilisateur.
-- [x] Est-ce qu’on exclut screenshots/keylogging du MVP ? Décision actuelle : oui.
-- [x] Est-ce que le géospatial devient un module futur séparé ? Décision actuelle : oui.
-- [x] Est-ce que les documents fiscalité/droit deviennent des checklists internes seulement ? Décision actuelle : oui.
+- [x] Exclure les fonctions de surveillance invasive du MVP cognitif.
+- [x] Garder le géospatial comme module futur séparé.
+- [x] Garder fiscalité/droit comme checklists internes, jamais comme conseil professionnel.
 
 ## 9. Priorité recommandée immédiate
 
 Ordre conseillé :
 
-1. Vérifier et aligner `chk-loi25-madsuite.md` avec la fiche privacy.
-2. Passer ensuite à `Recherche-cybersecurite.md`.
-3. Traiter ensuite `Recherche-fiscale.md` et `Recherche-droitauteur.md`.
+1. Passer à `Recherche-cybersecurite.md`.
+2. Traiter ensuite `Recherche-fiscale.md`.
+3. Traiter ensuite `Recherche-droitauteur.md`.
 
 ## 10. Note finale
 
-Le système MADPROOF est maintenant la couche de gouvernance documentaire du projet.
+Le système MADPROOF est la couche de gouvernance documentaire du projet.
 
 Le dossier `atrier` n’est pas une source officielle. C’est une zone d’entrée brute.
-
-La prochaine étape est de faire respecter ce pipeline à chaque nouveau fichier, claim ou idée :
-
-```text
-brut -> MADPROOF -> décision -> rangement -> TODO
-```
