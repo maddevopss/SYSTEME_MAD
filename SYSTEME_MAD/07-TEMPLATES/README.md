@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 3.7
+Version: 3.8
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -64,6 +64,8 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | `template-page-lancement-early-access-madsuite.md` | Template | Page Lancement / Early Access MADSuite conforme Machine à clients et MADPROOF. |
 | `template-formulaire-early-access-madsuite.md` | Template | Formulaire Early Access MADSuite minimal, utile et privacy by design. |
 | `template-courriel-invitation-early-access-madsuite.md` | Template | Courriel d’invitation Early Access MADSuite. |
+| `template-sequence-courriels-early-access-madsuite.md` | Template | Séquence de courriels Early Access MADSuite. |
+| `template-confirmation-early-access-madsuite.md` | Template | Page de confirmation Early Access MADSuite. |
 | `tpl-001.md` | Template | Modèle réutilisable existant. |
 | `tpl-002.md` | Template | Modèle réutilisable existant. |
 | `tpl-003.md` | Template | Modèle réutilisable existant. |
@@ -84,6 +86,8 @@ SYSTEME_MAD/07-TEMPLATES/template-script-video-demo-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-page-lancement-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-formulaire-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-courriel-invitation-early-access-madsuite.md
+SYSTEME_MAD/07-TEMPLATES/template-sequence-courriels-early-access-madsuite.md
+SYSTEME_MAD/07-TEMPLATES/template-confirmation-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md
 ```
 
@@ -123,6 +127,8 @@ SYSTEME_MAD/07-TEMPLATES/template-script-video-demo-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-page-lancement-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-formulaire-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-courriel-invitation-early-access-madsuite.md
+SYSTEME_MAD/07-TEMPLATES/template-sequence-courriels-early-access-madsuite.md
+SYSTEME_MAD/07-TEMPLATES/template-confirmation-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-contenu-public-candidat.md
 SYSTEME_MAD/07-TEMPLATES/template-page-orientation-client.md
 SYSTEME_MAD/07-TEMPLATES/template-contenu-site-complet-mad-devops.md
@@ -141,6 +147,8 @@ SYSTEME_MAD/07-TEMPLATES/template-script-video-demo-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-page-lancement-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-formulaire-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-courriel-invitation-early-access-madsuite.md
+SYSTEME_MAD/07-TEMPLATES/template-sequence-courriels-early-access-madsuite.md
+SYSTEME_MAD/07-TEMPLATES/template-confirmation-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-contenu-public-candidat.md
 SYSTEME_MAD/07-TEMPLATES/template-page-orientation-client.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-opportunite-machine-a-clients.md
