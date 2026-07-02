@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 3.8
+Version: 3.9
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -53,6 +53,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-032-validation-claim-madproof.md` | Officiel | Validation d’un claim MADPROOF. |
 | `chk-033-validation-mvp-revenue-core-madsuite.md` | Officiel | Validation MVP Revenue Core MADSuite. |
 | `chk-034-validation-machine-a-clients-madsuite.md` | Officiel | Validation Machine à clients MADSuite. |
+| `chk-035-validation-publication-page-publique-madsuite.md` | Officiel | Validation publication page publique MADSuite. |
 
 ---
 
@@ -62,6 +63,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 
 - `chk-033-validation-mvp-revenue-core-madsuite.md`
 - `chk-034-validation-machine-a-clients-madsuite.md`
+- `chk-035-validation-publication-page-publique-madsuite.md`
 - `chk-017-validation-mvp-mad-ariane.md`
 - `chk-032-validation-claim-madproof.md`
 
@@ -105,6 +107,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 
 ### Publication publique
 
+- `chk-035-validation-publication-page-publique-madsuite.md`
 - `chk-015-validation-site-web-mad-devops.md`
 - `chk-025-validation-page-guide-client-rapide.md`
 - `chk-026-validation-contenu-public-mad-devops.md`
@@ -116,6 +119,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 ### Machine à clients
 
 - `chk-034-validation-machine-a-clients-madsuite.md`
+- `chk-035-validation-publication-page-publique-madsuite.md`
 - `chk-021-validation-opportunite-machine-a-clients.md`
 - `chk-022-validation-activation-commerciale-7-jours.md`
 - `chk-023-validation-mesures-execution-commerciale.md`
