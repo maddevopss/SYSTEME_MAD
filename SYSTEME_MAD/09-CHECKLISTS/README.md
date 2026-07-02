@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 3.5
-Dernière révision: 2026-07-01
+Version: 3.6
+Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -50,14 +50,17 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-029-validation-cockpit-fondateur.md` | Officiel | Validation ciblée du cockpit fondateur. |
 | `chk-030-validation-preuve-client.md` | Officiel | Validation des preuves client. |
 | `chk-031-validation-projet-pret-a-demarrer.md` | Officiel | Validation avant exécution d’un projet client. |
+| `chk-032-validation-claim-madproof.md` | Officiel | Validation d’un claim MADPROOF. |
 
 ---
 
 ## Checklists prioritaires
 
-### Amélioration continue
+### MADSuite cognition / MADPROOF
 
-- `chk-011-validation-bloc-amelioration-continue.md`
+- `chk-016-validation-madproof-cognitif-madsuite.md`
+- `chk-017-validation-mvp-mad-ariane.md`
+- `chk-032-validation-claim-madproof.md`
 
 ### Projet client et livraison
 
@@ -116,11 +119,6 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 
 - `chk-018-validation-entree-basemad.md`
 
-### MADSuite cognition / MADPROOF
-
-- `chk-016-validation-madproof-cognitif-madsuite.md`
-- `chk-017-validation-mvp-mad-ariane.md`
-
 ---
 
 ## Règles d’usage
@@ -128,18 +126,3 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - Utiliser une checklist avant une livraison, une validation ou une mise en usage.
 - Ne pas cocher mécaniquement.
 - Adapter la profondeur de validation au risque du contexte.
-- Documenter les écarts importants.
-- Simplifier une checklist qui devient trop lourde.
-
----
-
-## Liens utiles
-
-- `SYSTEME_MAD/MANIFEST.md`
-- `SYSTEME_MAD/03-STANDARDS/README.md`
-- `SYSTEME_MAD/05-PLAY/README.md`
-- `SYSTEME_MAD/07-TEMPLATES/README.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-031-validation-projet-pret-a-demarrer.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-030-validation-preuve-client.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-029-validation-cockpit-fondateur.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-011-validation-bloc-amelioration-continue.md`
