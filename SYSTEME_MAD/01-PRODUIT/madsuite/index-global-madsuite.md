@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 1.3
+Version: 1.4
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -17,6 +17,8 @@ Il sert à relier :
 
 - le produit;
 - les décisions produit;
+- le Revenue Core;
+- la Machine à clients;
 - la roadmap;
 - les risques;
 - MADPROOF;
@@ -65,11 +67,13 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 3. `SYSTEME_MAD/04-ADR/ADR-002-positionnement-non-medical-madsuite.md`
 4. `SYSTEME_MAD/01-PRODUIT/madsuite/README.md`
 5. `SYSTEME_MAD/01-PRODUIT/madsuite/registre-decisions-produit-madsuite.md`
-6. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
-7. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
-8. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
-9. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-10. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+6. `SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md`
+7. `SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md`
+8. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
+9. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
+10. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
+11. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+12. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
 
 ---
 
@@ -80,6 +84,8 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 | `SYSTEME_MAD/01-PRODUIT/madsuite/README.md` | Index produit MADSuite. | Officiel |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md` | Point d’entrée global MADSuite. | Officiel |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/registre-decisions-produit-madsuite.md` | Registre des décisions produit MADSuite. | Officiel |
+| `SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md` | Spécification produit du Revenue Core. | Brouillon contrôlé |
+| `SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md` | Spécification produit de la Machine à clients. | Brouillon contrôlé |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md` | Synthèse produit MAD Ariane. | Brouillon |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/mvp-mad-ariane-snapshot-reprise.md` | Spécification MVP MAD Ariane. | Brouillon contrôlé |
 | `SYSTEME_MAD/01-PRODUIT/madsuite/spec-technique-mad-ariane-snapshot-reprise.md` | Spécification technique MAD Ariane. | Brouillon contrôlé |
@@ -194,13 +200,15 @@ Avant de modifier un document MADSuite :
 1. Lire ce document.
 2. Lire le contexte IA MADSuite / MADPROOF.
 3. Lire le registre des décisions produit.
-4. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
-5. Lire le registre des risques si la modification touche produit, IA, claims ou données.
-6. Vérifier si le sujet touche un claim cognitif.
-7. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
-8. Ne pas créer de doublon si un document existant peut être enrichi.
-9. Garder les formulations non médicales.
-10. Conserver l’utilisateur en contrôle.
+4. Lire le Revenue Core si la modification touche clients, projets, temps, factures, estimés, paiements ou revenus.
+5. Lire la Machine à clients si la modification touche acquisition, landing page, onboarding ou conversion.
+6. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
+7. Lire le registre des risques si la modification touche produit, IA, claims ou données.
+8. Vérifier si le sujet touche un claim cognitif.
+9. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
+10. Ne pas créer de doublon si un document existant peut être enrichi.
+11. Garder les formulations non médicales.
+12. Conserver l’utilisateur en contrôle.
 
 ---
 
