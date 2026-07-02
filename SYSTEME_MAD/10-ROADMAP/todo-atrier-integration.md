@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 5.5
+Version: 5.6
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -42,6 +42,7 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 | Géospatial / terrain | Structure initiale terminée |
 | Distribution / anti-rejet | Structure initiale terminée |
 | Agenda / planification / sync | Structure initiale terminée |
+| Plateformes desktop / OS | Structure initiale terminée |
 
 ## 4. Bloc distribution / anti-rejet — structure terminée
 
@@ -62,14 +63,25 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 | ADR sync agenda | `SYSTEME_MAD/04-ADR/ADR-agenda-sync-crdt-vs-server-authoritative.md` | Fait / accepté |
 | Standard agenda | `SYSTEME_MAD/03-STANDARDS/std-agenda-recurrence-sync.md` | Fait / v1.0 |
 
-## 6. Blocs restants
+## 6. Bloc plateformes desktop / OS — structure terminée
+
+| Source / action | Sortie | Statut |
+|---|---|---|
+| `specifications_windows.md` | `fiche-madproof-plateformes-desktop-os.md` | Fait |
+| `specifications_windows_avancees.md` | `fiche-madproof-plateformes-desktop-os.md` | Fait |
+| `specifications_linux.md` | `fiche-madproof-plateformes-desktop-os.md` | Fait |
+| `specifications_linux_avancees.md` | `fiche-madproof-plateformes-desktop-os.md` | Fait |
+| `specifications_chromeos.md` | `fiche-madproof-plateformes-desktop-os.md` | Fait |
+| `specifications_multiplateforme.md` | `fiche-madproof-plateformes-desktop-os.md` | Fait |
+| Standard desktop agent | `SYSTEME_MAD/03-STANDARDS/std-desktop-agent.md` | Fait / v1.0 |
+
+## 7. Blocs restants
 
 | Bloc | Sources principales | Priorité |
 |---|---|---|
-| Plateformes desktop / OS | `specifications_windows*.md`, `specifications_linux*.md`, `specifications_chromeos.md`, `specifications_multiplateforme.md` | P3 |
 | Cheatsheets dev | `commandes_node_prisma_tsx.md`, sections restantes de `gemini-code-1783002804829.md` | P4 |
 
-## 7. Décisions confirmées
+## 8. Décisions confirmées
 
 - [x] `docs/research/atrier` reste une zone brute non officielle.
 - [x] Les documents validés sortent vers `SYSTEME_MAD/...`.
@@ -82,20 +94,17 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 - [x] La stratégie mobile MADSuite reste PWA-first tant qu’un besoin natif clair n’est pas démontré.
 - [x] Les exceptions réseau local doivent rester limitées, documentées et testées.
 - [x] L’agenda MADSuite doit être server-authoritative par défaut; les CRDT restent R&D.
+- [x] Un agent desktop MADSuite doit être visible, contrôlable, explicable et désactivable.
 
-## 8. Priorité immédiate
+## 9. Priorité immédiate
 
-Traiter le bloc plateformes desktop / OS :
+Traiter ou archiver le bloc cheatsheets dev :
 
 ```text
-docs/research/atrier/specifications_windows.md
-docs/research/atrier/specifications_windows_avancees.md
-docs/research/atrier/specifications_linux.md
-docs/research/atrier/specifications_linux_avancees.md
-docs/research/atrier/specifications_chromeos.md
-docs/research/atrier/specifications_multiplateforme.md
+docs/research/atrier/commandes_node_prisma_tsx.md
+sections restantes de docs/research/atrier/gemini-code-1783002804829.md
 ```
 
-## 9. Note finale
+## 10. Note finale
 
 Le système MADPROOF est la couche de gouvernance documentaire du projet. Le dossier `atrier` n’est pas une source officielle.
