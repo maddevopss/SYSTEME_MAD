@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: État global des blocs complétés
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-01
 Statut: Actif
 Auteur: Marc-André Dufour
@@ -34,15 +34,41 @@ Un bloc est utile s’il aide à décider, exécuter, livrer ou améliorer sans 
 | Machine à clients | Complété / actif | Commercial | Pipeline, opportunités, activation 7 jours, mesures et routines. |
 | Demandes entrantes | Complété | Commercial | Réception, qualification, réponse, fermeture, report et revue. |
 | Publication contrôlée | Complété | Communication | Frontière public / privé, lexique, contenu candidat et validation publique. |
+| Site Web / contenu public | Complété côté documentation | Public | Chaîne Web, contenu préparatoire, registre, CHK-026 exemple et synthèse finale. |
 | Preuve client / Portfolio | Complété | Confiance | Registre, validation CHK-030, exemples, revue mensuelle et synthèse finale. |
 | Projet client / Livraison | Complété | Exécution | Cadrage, fiche projet, CHK-031, suivi, CHK-003 et synthèse finale. |
 | Amélioration continue | Complété | Apprentissage | Registre, revue, CHK-011, relance élément manquant et synthèse finale. |
-| Site Web / contenu public | À reprendre | Public | Contenu préparatoire existant, publication réelle à contrôler. |
 | Progression centrale | Partiel | Suivi | Certains fichiers existent, mais `progression.md` peut être en retard. |
 
 ---
 
 ## Blocs fermés proprement
+
+### Site Web / contenu public
+
+Fermé côté documentation avec :
+
+- synthèse de chaîne Web;
+- exemple de contenu public page Guide client;
+- exemple de validation CHK-026;
+- registre des contenus Web publics;
+- synthèse finale;
+- raccord à l’index Guides.
+
+Statut :
+
+```text
+Complété côté documentation.
+Publication réelle non effectuée.
+```
+
+Règle importante :
+
+```text
+Ne pas toucher au repo du site Web sans go explicite.
+```
+
+---
 
 ### Preuve client / Portfolio
 
@@ -161,35 +187,11 @@ Surveillance :
 
 ---
 
-## Bloc à reprendre plus tard
-
-### Site Web / contenu public
-
-Statut :
-
-```text
-À reprendre.
-```
-
-Règle importante :
-
-```text
-Ne pas toucher au repo du site Web sans go explicite.
-```
-
-Objectif futur :
-
-- préparer les éléments publiables;
-- appliquer la frontière public / privé;
-- valider avec CHK-026;
-- garder le langage simple pour client non technique.
-
----
-
 ## Point de vérité honnête
 
 ```text
 Les blocs principaux sont maintenant structurés.
+Le bloc Site Web est complété côté documentation, mais aucune publication réelle n’a été faite.
 Les index ont été compactés lorsque nécessaire.
 Le fichier progression.md peut être en retard et ne doit pas être considéré comme parfaitement synchronisé.
 ```
@@ -199,7 +201,7 @@ Le fichier progression.md peut être en retard et ne doit pas être considéré 
 ## Prochaine passe recommandée
 
 1. Ne pas créer de nouveaux exemples sans friction réelle.
-2. Reprendre le site Web seulement avec intention claire.
+2. Publier le site Web seulement avec un go explicite.
 3. Faire une passe de cohérence légère sur les index si nécessaire.
 4. Garder le cockpit fondateur comme point d’entrée principal.
 5. Utiliser l’amélioration continue pour éviter l’accumulation documentaire.
