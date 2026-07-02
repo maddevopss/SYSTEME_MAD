@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 5.0
+Version: 5.1
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -50,6 +50,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `preuves-sociales-mad-devops.md` | Officiel | Preuves sociales. |
 | `temoignages-references-clients-mad-devops.md` | Officiel | Témoignages et références clients. |
 | `exemple-fiche-projet-public-mad-devops.md` | Exemple | Exemple de fiche projet publique anonymisée. |
+| `exemple-validation-chk-030-preuve-client.md` | Exemple | Exemple de validation CHK-030 pour une preuve client. |
 | `exemple-revue-commerciale.md` | Exemple | Exemple court de revue commerciale hebdomadaire. |
 | `exemple-activation-commerciale-7-jours.md` | Exemple | Exemple court d’activation commerciale 7 jours. |
 | `exemple-offre-terrain-mad-devops.md` | Exemple | Exemple court de message d’offre terrain MAD DevOps. |
@@ -81,6 +82,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 - `synthese-preuve-client-portfolio-mad-devops.md`
 - `exemple-fiche-projet-public-mad-devops.md`
+- `exemple-validation-chk-030-preuve-client.md`
 - `portfolio-mad-devops.md`
 - `temoignages-references-clients-mad-devops.md`
 - `preuves-sociales-mad-devops.md`
@@ -96,6 +98,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-commerciale-mad-devops.md`
 - `synthese-preuve-client-portfolio-mad-devops.md`
 - `exemple-fiche-projet-public-mad-devops.md`
+- `exemple-validation-chk-030-preuve-client.md`
 
 ### Demandes entrantes
 
@@ -118,6 +121,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `exemple-fiche-contenu-public-guide-client.md`
 - `synthese-preuve-client-portfolio-mad-devops.md`
 - `exemple-fiche-projet-public-mad-devops.md`
+- `exemple-validation-chk-030-preuve-client.md`
 
 ### Commercial, terrain et offres
 
@@ -126,6 +130,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-traitement-demandes-entrantes-mad-devops.md`
 - `synthese-preuve-client-portfolio-mad-devops.md`
 - `exemple-fiche-projet-public-mad-devops.md`
+- `exemple-validation-chk-030-preuve-client.md`
 - `frontiere-public-prive-mad-devops.md`
 - `lexique-public-prive-mad-devops.md`
 - `synthese-publication-controlee-mad-devops.md`
