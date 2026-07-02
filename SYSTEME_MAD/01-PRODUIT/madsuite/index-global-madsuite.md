@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 4.2
+Version: 4.3
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -76,6 +76,7 @@ SYSTEME_MAD/07-TEMPLATES/template-bilan-fin-mois-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-calendrier-mensuel-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-synthese-executive-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-rapport-partenaire-early-access-madsuite.md
+SYSTEME_MAD/07-TEMPLATES/template-one-pager-partenaire-madsuite.md
 ```
 
 ---
