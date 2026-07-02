@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 3.1
+Version: 3.2
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -102,10 +102,11 @@ La première passe a produit des résumés et documents de gouvernance maintenan
 ### 7.2 Traiter les sources techniques Web
 
 - [x] Traiter `Recherche-html.md` -> `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/fiche-madproof-recherche-html.md`.
-- [ ] Traiter `Recherche-css.md`.
+- [x] Traiter `Recherche-css.md` -> `SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/fiche-madproof-recherche-css.md`.
 - [ ] Traiter `Recherche-JavaScript.md`.
 - [ ] Extraire seulement les standards durables.
 - [x] Marquer les APIs récentes comme `À vérifier` ou `R&D` si support partiel pour `Recherche-html.md`.
+- [x] Marquer les fonctionnalités CSS récentes comme `À vérifier`, `R&D` ou `MVP sous fallback` pour `Recherche-css.md`.
 
 ### 7.3 Traiter les sources compliance
 
@@ -134,10 +135,9 @@ La première passe a produit des résumés et documents de gouvernance maintenan
 
 Ordre conseillé :
 
-1. Traiter `Recherche-css.md`.
-2. Traiter `Recherche-JavaScript.md`.
-3. Consolider les trois fiches Web dans le standard si un ajout durable est nécessaire.
-4. Passer ensuite aux fichiers compliance : vie privée, cybersécurité, fiscalité, droit d’auteur.
+1. Traiter `Recherche-JavaScript.md`.
+2. Consolider les trois fiches Web dans le standard si un ajout durable est nécessaire.
+3. Passer ensuite aux fichiers compliance : vie privée, cybersécurité, fiscalité, droit d’auteur.
 
 ## 10. Note finale
 
