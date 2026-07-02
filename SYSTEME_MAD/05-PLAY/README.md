@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 3.5
+Version: 3.6
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -17,120 +17,80 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 
 ---
 
-## Documents
+## Playbooks prioritaires MADSuite
 
-| Fichier | Statut | Rôle |
-|---|---|---|
-| `play-001.md` | Brouillon | Document de travail actif. |
-| `play-002.md` | Brouillon | Document de travail actif. |
-| `play-003.md` | Brouillon | Document de travail actif. |
-| `play-004.md` | Brouillon | Document de travail actif. |
-| `play-005.md` | Brouillon | Document de travail actif. |
-| `play-006.md` | Brouillon | Document de travail actif. |
-| `play-007.md` | Brouillon | Document de travail actif. |
-| `play-008.md` | Brouillon | Document de travail actif. |
-| `play-009.md` | Brouillon | Document de travail actif. |
-| `play-010-passe-qualite-documentaire.md` | Officiel | Passe de qualité documentaire. |
-| `play-011-demarrage-projet-client.md` | Officiel | Démarrage d’un projet client. |
-| `play-012-revue-avant-production.md` | Officiel | Revue avant mise en production. |
-| `play-013-parcours-client-mad-devops.md` | Officiel | Parcours client. |
-| `play-014-decouverte-client-mad-devops.md` | Officiel | Découverte client. |
-| `play-015-qualification-phase-0-client.md` | Officiel | Qualification Phase 0. |
-| `play-016-deploiement-demarche-pilotage-mad-devops.md` | Officiel | Démarche de pilotage. |
-| `play-017-appel-decouverte-commerciale.md` | Officiel | Appel découverte. |
-| `play-018-mise-a-jour-site-web-mad-devops.md` | Officiel | Mise à jour site Web. |
-| `play-019-transformer-livraison-en-preuve-client.md` | Officiel | Transformer une livraison en preuve. |
-| `play-020-traiter-demande-entrante-mad-devops.md` | Officiel | Traiter une demande entrante. |
-| `play-021-revue-pipeline-commercial-mad-devops.md` | Officiel | Revue pipeline commercial. |
-| `play-022-audit-chaine-commerciale-mad-devops.md` | Officiel | Audit chaîne commerciale. |
-| `play-023-publier-site-web-mad-devops.md` | Officiel | Publier le site Web. |
-| `play-024-transformer-idee-cognitive-en-fonctionnalite-madsuite.md` | Officiel | Idée cognitive vers fonctionnalité. |
-| `play-025-transformer-idee-en-element-basemad.md` | Officiel | Idée vers BaseMAD. |
-| `play-026-appliquer-base-operationnelle-mad-devops.md` | Officiel | Base opérationnelle. |
-| `play-027-executer-processus-cerveau-mad.md` | Officiel | Processus CerveauMAD. |
-| `play-028-revue-registre-cerveaumad.md` | Officiel | Revue registre CerveauMAD. |
-| `play-029-transformer-entree-cerveaumad-en-action-commerciale.md` | Officiel | Entrée CerveauMAD vers action commerciale. |
-| `play-030-routine-hebdomadaire-machine-a-clients.md` | Officiel | Routine hebdomadaire commerciale. |
-| `play-031-activation-7-jours-commerciale.md` | Officiel | Activation commerciale terrain sur 7 jours. |
-| `play-032-traiter-contenu-public-candidat.md` | Officiel | Traiter un contenu public candidat. |
-| `play-033-convertir-demande-entrante-en-opportunite.md` | Officiel | Convertir une demande entrante en opportunité. |
-| `play-034-revue-hebdomadaire-demandes-entrantes.md` | Officiel | Revue hebdomadaire des demandes entrantes. |
-| `play-035-revue-mensuelle-preuves-client.md` | Officiel | Revue mensuelle des preuves client. |
-| `play-036-suivi-hebdomadaire-projet-client.md` | Officiel | Suivi hebdomadaire des projets client actifs. |
-| `play-037-ajouter-ou-corriger-claim-madproof.md` | Officiel | Ajouter, corriger ou supprimer un claim MADPROOF. |
-| `play-038-publication-page-publique-madsuite.md` | Officiel | Publication contrôlée d’une page publique MADSuite. |
-| `play-039-analyse-feedback-early-access-madsuite.md` | Officiel | Analyse des retours Early Access MADSuite. |
+### MVP / Revenue Core
 
----
+```text
+SYSTEME_MAD/10-ROADMAP/roadmap-mvp-early-access-madsuite.md
+SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-developpeur-mvp-early-access-madsuite.md
+SYSTEME_MAD/09-CHECKLISTS/chk-045-validation-mvp-early-access-madsuite.md
+```
 
-## Playbooks prioritaires
+### Early Access
 
-### MADSuite produit / Machine à clients
-
-- `play-038-publication-page-publique-madsuite.md`
-- `play-039-analyse-feedback-early-access-madsuite.md`
-- `play-037-ajouter-ou-corriger-claim-madproof.md`
+```text
+play-038-publication-page-publique-madsuite.md
+play-039-analyse-feedback-early-access-madsuite.md
+play-040-revue-mensuelle-early-access-madsuite.md
+play-041-cycle-mensuel-early-access-madsuite.md
+```
 
 ### MADSuite cognition / MADPROOF
 
-- `play-024-transformer-idee-cognitive-en-fonctionnalite-madsuite.md`
-- `play-037-ajouter-ou-corriger-claim-madproof.md`
+```text
+play-024-transformer-idee-cognitive-en-fonctionnalite-madsuite.md
+play-037-ajouter-ou-corriger-claim-madproof.md
+```
 
-### Projet client et livraison
+---
 
-- `play-011-demarrage-projet-client.md`
-- `play-036-suivi-hebdomadaire-projet-client.md`
-- `play-012-revue-avant-production.md`
-- `play-019-transformer-livraison-en-preuve-client.md`
+## Autres playbooks actifs
 
-### Preuve client et portfolio
+```text
+play-010-passe-qualite-documentaire.md
+play-011-demarrage-projet-client.md
+play-012-revue-avant-production.md
+play-013-parcours-client-mad-devops.md
+play-014-decouverte-client-mad-devops.md
+play-015-qualification-phase-0-client.md
+play-016-deploiement-demarche-pilotage-mad-devops.md
+play-017-appel-decouverte-commerciale.md
+play-018-mise-a-jour-site-web-mad-devops.md
+play-019-transformer-livraison-en-preuve-client.md
+play-020-traiter-demande-entrante-mad-devops.md
+play-021-revue-pipeline-commercial-mad-devops.md
+play-022-audit-chaine-commerciale-mad-devops.md
+play-023-publier-site-web-mad-devops.md
+play-025-transformer-idee-en-element-basemad.md
+play-026-appliquer-base-operationnelle-mad-devops.md
+play-027-executer-processus-cerveau-mad.md
+play-028-revue-registre-cerveaumad.md
+play-029-transformer-entree-cerveaumad-en-action-commerciale.md
+play-030-routine-hebdomadaire-machine-a-clients.md
+play-031-activation-7-jours-commerciale.md
+play-032-traiter-contenu-public-candidat.md
+play-033-convertir-demande-entrante-en-opportunite.md
+play-034-revue-hebdomadaire-demandes-entrantes.md
+play-035-revue-mensuelle-preuves-client.md
+play-036-suivi-hebdomadaire-projet-client.md
+```
 
-- `play-019-transformer-livraison-en-preuve-client.md`
-- `play-035-revue-mensuelle-preuves-client.md`
-- `play-032-traiter-contenu-public-candidat.md`
+---
 
-### Demandes entrantes
+## Brouillons historiques
 
-- `play-034-revue-hebdomadaire-demandes-entrantes.md`
-- `play-020-traiter-demande-entrante-mad-devops.md`
-- `play-033-convertir-demande-entrante-en-opportunite.md`
-- `play-014-decouverte-client-mad-devops.md`
-- `play-015-qualification-phase-0-client.md`
-
-### Publication contrôlée
-
-- `play-038-publication-page-publique-madsuite.md`
-- `play-039-analyse-feedback-early-access-madsuite.md`
-- `play-032-traiter-contenu-public-candidat.md`
-- `play-023-publier-site-web-mad-devops.md`
-- `play-035-revue-mensuelle-preuves-client.md`
-
-### CerveauMAD
-
-- `play-027-executer-processus-cerveau-mad.md`
-- `play-028-revue-registre-cerveaumad.md`
-- `play-029-transformer-entree-cerveaumad-en-action-commerciale.md`
-- `play-030-routine-hebdomadaire-machine-a-clients.md`
-- `play-031-activation-7-jours-commerciale.md`
-- `play-032-traiter-contenu-public-candidat.md`
-- `play-033-convertir-demande-entrante-en-opportunite.md`
-- `play-034-revue-hebdomadaire-demandes-entrantes.md`
-- `play-035-revue-mensuelle-preuves-client.md`
-- `play-036-suivi-hebdomadaire-projet-client.md`
-
-### Activation commerciale
-
-- `play-017-appel-decouverte-commerciale.md`
-- `play-020-traiter-demande-entrante-mad-devops.md`
-- `play-021-revue-pipeline-commercial-mad-devops.md`
-- `play-029-transformer-entree-cerveaumad-en-action-commerciale.md`
-- `play-030-routine-hebdomadaire-machine-a-clients.md`
-- `play-031-activation-7-jours-commerciale.md`
-- `play-032-traiter-contenu-public-candidat.md`
-- `play-033-convertir-demande-entrante-en-opportunite.md`
-- `play-034-revue-hebdomadaire-demandes-entrantes.md`
-- `play-035-revue-mensuelle-preuves-client.md`
-- `play-036-suivi-hebdomadaire-projet-client.md`
+```text
+play-001.md
+play-002.md
+play-003.md
+play-004.md
+play-005.md
+play-006.md
+play-007.md
+play-008.md
+play-009.md
+```
 
 ---
 
@@ -139,3 +99,4 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - Utiliser un playbook lorsqu’une action est récurrente ou risquée.
 - Ne pas transformer un playbook en document théorique.
 - Garder les étapes concrètes, vérifiables et réutilisables.
+- Pour MADSuite Early Access, utiliser `play-041-cycle-mensuel-early-access-madsuite.md` comme playbook de pilotage mensuel.
