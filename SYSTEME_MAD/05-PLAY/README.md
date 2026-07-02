@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 3.1
+Version: 3.2
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -56,10 +56,18 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 | `play-033-convertir-demande-entrante-en-opportunite.md` | Officiel | Convertir une demande entrante en opportunité. |
 | `play-034-revue-hebdomadaire-demandes-entrantes.md` | Officiel | Revue hebdomadaire des demandes entrantes. |
 | `play-035-revue-mensuelle-preuves-client.md` | Officiel | Revue mensuelle des preuves client. |
+| `play-036-suivi-hebdomadaire-projet-client.md` | Officiel | Suivi hebdomadaire des projets client actifs. |
 
 ---
 
 ## Playbooks prioritaires
+
+### Projet client et livraison
+
+- `play-011-demarrage-projet-client.md`
+- `play-036-suivi-hebdomadaire-projet-client.md`
+- `play-012-revue-avant-production.md`
+- `play-019-transformer-livraison-en-preuve-client.md`
 
 ### Preuve client et portfolio
 
@@ -92,6 +100,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-033-convertir-demande-entrante-en-opportunite.md`
 - `play-034-revue-hebdomadaire-demandes-entrantes.md`
 - `play-035-revue-mensuelle-preuves-client.md`
+- `play-036-suivi-hebdomadaire-projet-client.md`
 
 ### Activation commerciale
 
@@ -105,6 +114,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-033-convertir-demande-entrante-en-opportunite.md`
 - `play-034-revue-hebdomadaire-demandes-entrantes.md`
 - `play-035-revue-mensuelle-preuves-client.md`
+- `play-036-suivi-hebdomadaire-projet-client.md`
 
 ### Pilotage MAD DevOps
 
@@ -119,6 +129,7 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-033-convertir-demande-entrante-en-opportunite.md`
 - `play-034-revue-hebdomadaire-demandes-entrantes.md`
 - `play-035-revue-mensuelle-preuves-client.md`
+- `play-036-suivi-hebdomadaire-projet-client.md`
 
 ---
 
