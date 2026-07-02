@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 4.0
+Version: 4.1
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -51,6 +51,7 @@ SYSTEME_MAD/09-CHECKLISTS/chk-038-note-revue-early-access-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-039-validation-dashboard-metriques-early-access-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-040-validation-bilan-fin-mois-early-access-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-041-validation-cycle-mensuel-early-access-madsuite.md
+SYSTEME_MAD/09-CHECKLISTS/chk-042-validation-synthese-executive-early-access-madsuite.md
 ```
 
 ---
@@ -73,6 +74,7 @@ SYSTEME_MAD/07-TEMPLATES/template-plan-action-mensuel-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-bilan-fin-mois-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-calendrier-mensuel-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-synthese-executive-early-access-madsuite.md
+SYSTEME_MAD/07-TEMPLATES/template-rapport-partenaire-early-access-madsuite.md
 ```
 
 ---
@@ -96,6 +98,7 @@ SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md
 - Lire le contexte IA MADSuite / MADPROOF.
 - Utiliser `PLAY-041` pour le cycle mensuel Early Access.
 - Utiliser `CHK-041` pour valider le cycle mensuel Early Access.
+- Utiliser `CHK-042` pour valider une synthèse exécutive Early Access.
 - Utiliser le template approprié selon le livrable Early Access.
 - Garder les formulations non médicales et l’utilisateur en contrôle.
 
