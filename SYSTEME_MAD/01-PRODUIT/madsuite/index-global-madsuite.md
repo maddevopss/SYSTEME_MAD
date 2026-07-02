@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 1.9
+Version: 2.0
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -74,11 +74,12 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 10. `SYSTEME_MAD/09-CHECKLISTS/chk-034-validation-machine-a-clients-madsuite.md`
 11. `SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md`
 12. `SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md`
-13. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
-14. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
-15. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
-16. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-17. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+13. `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md`
+14. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
+15. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
+16. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
+17. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+18. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
 
 ---
 
@@ -190,6 +191,7 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 |---|---|
 | `SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md` | Template de landing page MADSuite pour la Machine à clients. |
 | `SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md` | Template de FAQ publique MADSuite. |
+| `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md` | Template de page Prix MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md` | Modèle de claim MADPROOF. |
 
 ---
@@ -217,13 +219,14 @@ Avant de modifier un document MADSuite :
 8. Lire `CHK-034` si la modification touche la validation de la Machine à clients.
 9. Lire le template landing page MADSuite si la modification touche une page publique MADSuite.
 10. Lire le template FAQ publique MADSuite si la modification touche une FAQ, une page d’aide ou une page publique.
-11. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
-12. Lire le registre des risques si la modification touche produit, IA, claims ou données.
-13. Vérifier si le sujet touche un claim cognitif.
-14. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
-15. Ne pas créer de doublon si un document existant peut être enrichi.
-16. Garder les formulations non médicales.
-17. Conserver l’utilisateur en contrôle.
+11. Lire le template page Prix MADSuite si la modification touche l’offre, les plans, les limites ou la conversion.
+12. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
+13. Lire le registre des risques si la modification touche produit, IA, claims ou données.
+14. Vérifier si le sujet touche un claim cognitif.
+15. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
+16. Ne pas créer de doublon si un document existant peut être enrichi.
+17. Garder les formulations non médicales.
+18. Conserver l’utilisateur en contrôle.
 
 ---
 
