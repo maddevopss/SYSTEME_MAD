@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 3.6
+Version: 3.7
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -51,16 +51,29 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-030-validation-preuve-client.md` | Officiel | Validation des preuves client. |
 | `chk-031-validation-projet-pret-a-demarrer.md` | Officiel | Validation avant exécution d’un projet client. |
 | `chk-032-validation-claim-madproof.md` | Officiel | Validation d’un claim MADPROOF. |
+| `chk-033-validation-mvp-revenue-core-madsuite.md` | Officiel | Validation MVP Revenue Core MADSuite. |
 
 ---
 
 ## Checklists prioritaires
+
+### MADSuite produit
+
+- `chk-033-validation-mvp-revenue-core-madsuite.md`
+- `chk-017-validation-mvp-mad-ariane.md`
+- `chk-032-validation-claim-madproof.md`
 
 ### MADSuite cognition / MADPROOF
 
 - `chk-016-validation-madproof-cognitif-madsuite.md`
 - `chk-017-validation-mvp-mad-ariane.md`
 - `chk-032-validation-claim-madproof.md`
+
+### Revenue Core
+
+- `chk-033-validation-mvp-revenue-core-madsuite.md`
+- `chk-023-validation-mesures-execution-commerciale.md`
+- `chk-031-validation-projet-pret-a-demarrer.md`
 
 ### Projet client et livraison
 
