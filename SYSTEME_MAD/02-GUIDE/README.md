@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 6.3
+Version: 6.4
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -18,6 +18,17 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 ---
 
 ## Guides prioritaires
+
+### Site Web et contenu public
+
+- `synthese-finale-site-web-contenu-public.md`
+- `synthese-chaine-site-web-contenu-public.md`
+- `synthese-publication-controlee-mad-devops.md`
+- `page-guide-client-rapide-mad-devops.md`
+- `exemple-contenu-page-guide-client-public.md`
+- `exemple-validation-chk-026-page-guide-client.md`
+- `frontiere-public-prive-mad-devops.md`
+- `lexique-public-prive-mad-devops.md`
 
 ### Amélioration continue
 
@@ -58,15 +69,12 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 - `synthese-concordance-commerciale-globale-mad-devops.md`
 - `synthese-publication-controlee-mad-devops.md`
+- `synthese-finale-site-web-contenu-public.md`
+- `synthese-chaine-site-web-contenu-public.md`
 - `synthese-chaine-demandes-entrantes-mad-devops.md`
 - `synthese-chaine-commerciale-mad-devops.md`
 - `synthese-finale-projet-client-livraison.md`
 - `synthese-finale-amelioration-continue.md`
-- `synthese-chaine-amelioration-continue.md`
-- `exemple-registre-ameliorations-systeme.md`
-- `exemple-revue-amelioration-continue.md`
-- `exemple-validation-chk-011-amelioration-continue.md`
-- `exemple-utilisation-template-relance-element-manquant.md`
 - `synthese-finale-bloc-preuve-client-portfolio.md`
 
 ### Demandes entrantes
@@ -82,23 +90,23 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 ### Publication contrôlée
 
 - `synthese-publication-controlee-mad-devops.md`
+- `synthese-finale-site-web-contenu-public.md`
+- `synthese-chaine-site-web-contenu-public.md`
 - `frontiere-public-prive-mad-devops.md`
 - `lexique-public-prive-mad-devops.md`
 - `page-guide-client-rapide-mad-devops.md`
 - `exemple-fiche-contenu-public-guide-client.md`
+- `exemple-contenu-page-guide-client-public.md`
+- `exemple-validation-chk-026-page-guide-client.md`
 
 ### Commercial, terrain et offres
 
 - `synthese-concordance-commerciale-globale-mad-devops.md`
+- `synthese-finale-site-web-contenu-public.md`
 - `synthese-chaine-demandes-entrantes-mad-devops.md`
 - `synthese-traitement-demandes-entrantes-mad-devops.md`
 - `synthese-finale-projet-client-livraison.md`
 - `synthese-finale-amelioration-continue.md`
-- `synthese-chaine-amelioration-continue.md`
-- `exemple-registre-ameliorations-systeme.md`
-- `exemple-revue-amelioration-continue.md`
-- `exemple-validation-chk-011-amelioration-continue.md`
-- `exemple-utilisation-template-relance-element-manquant.md`
 - `offre-simple-mad-devops.md`
 - `offre-terrain-mad-devops.md`
 - `offres-packagees-mad-devops.md`
@@ -121,12 +129,8 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `fiche-reflexe-fondateur-mad-devops.md`
 - `routine-courte-fondateur-lundi-vendredi.md`
 - `routine-commerciale-hebdomadaire-mad-devops.md`
+- `synthese-finale-site-web-contenu-public.md`
 - `synthese-finale-amelioration-continue.md`
-- `synthese-chaine-amelioration-continue.md`
-- `exemple-registre-ameliorations-systeme.md`
-- `exemple-revue-amelioration-continue.md`
-- `exemple-validation-chk-011-amelioration-continue.md`
-- `exemple-utilisation-template-relance-element-manquant.md`
 - `principe-amelioration-continue-mad-devops.md`
 
 ---
