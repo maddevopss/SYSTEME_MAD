@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 4.7
+Version: 4.8
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -64,8 +64,8 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 | ADR séparation géospatial | `ADR-geospatial-module-separe.md` | Fait / accepté |
 | Checklist localisation / privacy terrain | `chk-geospatial-location-privacy.md` | Fait / v1.0 |
 | Spécifications géospatiales consolidées | `fiche-madproof-specifications-geospatiales-consolidees.md` | Fait |
+| Index module géospatial | `SYSTEME_MAD/13-RESSOURCES/research/06-modules-metiers/geospatial/README.md` | Fait / v1.0 |
 | Standard mesure terrain | `SYSTEME_MAD/03-STANDARDS/std-geospatial-measurement.md` | À créer si module prioritaire |
-| Index module géospatial | `SYSTEME_MAD/13-RESSOURCES/research/06-modules-metiers/geospatial/README.md` | À créer |
 
 ## 6. Décisions confirmées
 
@@ -79,9 +79,9 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 
 ## 7. Priorité immédiate
 
-1. Créer `SYSTEME_MAD/13-RESSOURCES/research/06-modules-metiers/geospatial/README.md` pour indexer le module futur.
-2. Créer éventuellement `std-geospatial-measurement.md` si le module devient prioritaire.
-3. Traiter les autres fichiers techniques `atrier` non géospatiaux restants.
+1. Créer `SYSTEME_MAD/03-STANDARDS/std-geospatial-measurement.md` si le module devient prioritaire.
+2. Traiter les autres fichiers techniques `atrier` non géospatiaux restants.
+3. Faire une passe finale d’inventaire du dossier `docs/research/atrier`.
 
 ## 8. Note finale
 
