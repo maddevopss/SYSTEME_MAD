@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: Standard — Web mobile et PWA baseline
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-02
 Statut: À valider / MADPROOF-ENGINEERING
 Auteur: Marc-André Dufour / MAD DevOps
@@ -22,6 +22,12 @@ Le web mobile doit suivre trois règles :
 1. **Simple d’abord** : HTML sémantique, CSS robuste, JavaScript minimal.
 2. **Progressive enhancement** : les APIs modernes enrichissent l’expérience, mais ne cassent pas l’usage si elles sont absentes.
 3. **Accessibilité par défaut** : clavier, lecteur d’écran, motion réduite, focus visible et charge cognitive réduite.
+
+Document de référence complémentaire :
+
+```text
+SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/compatibilite-web-apis-fallbacks.md
+```
 
 ## 3. HTML baseline
 
@@ -121,6 +127,31 @@ Règle MADPROOF :
 
 > Une API expérimentale ou partiellement supportée ne doit jamais être le seul chemin pour une action critique.
 
+### 8.1 API avancée = fallback + consentement
+
+Toute API avancée doit respecter les règles suivantes :
+
+- [ ] Détection de support avant affichage ou activation.
+- [ ] Fallback utilisable sans l’API.
+- [ ] Parcours critique non bloqué.
+- [ ] Consentement clair si l’API touche une donnée sensible.
+- [ ] Refus utilisateur géré proprement.
+- [ ] Données minimisées.
+- [ ] Aucun usage comme signal caché de profilage.
+- [ ] Décision compatible avec l’annexe `compatibilite-web-apis-fallbacks.md`.
+
+Capacités sensibles :
+
+- localisation;
+- contacts;
+- presse-papiers en lecture;
+- fichiers locaux;
+- capteurs;
+- notifications;
+- authentification;
+- stockage offline de données métier;
+- périphériques matériels.
+
 ## 9. Performance mobile
 
 Objectifs :
@@ -159,6 +190,8 @@ Pour MADSuite :
 - [ ] Les timers doivent rester visibles sans voler l’attention.
 - [ ] Les transitions ne doivent pas nuire au focus.
 - [ ] Les modules cognitifs doivent respecter privacy by design.
+- [ ] Aucune API Web sensible ne doit être utilisée pour inférer un état mental.
+- [ ] Capture média, capture passive d’écran et enregistrement brut des touches restent exclus du MVP cognitif.
 
 ## 12. Tests requis
 
@@ -171,6 +204,8 @@ Pour MADSuite :
 - [ ] Test réseau lent.
 - [ ] Test reduced motion.
 - [ ] Test dark/light mode.
+- [ ] Test fallback pour chaque API avancée utilisée.
+- [ ] Test refus de permission pour chaque API sensible utilisée.
 
 ## 13. Non-objectifs
 
@@ -181,7 +216,8 @@ Ce standard ne force pas :
 - Tailwind obligatoire;
 - PWA obligatoire pour chaque site vitrine;
 - usage d’API expérimentale;
-- score Lighthouse parfait au détriment du produit.
+- score Lighthouse parfait au détriment du produit;
+- usage d’API sensible sans justification produit explicite.
 
 ## 14. Verdict MADPROOF
 
