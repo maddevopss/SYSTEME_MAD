@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 5.2
+Version: 5.3
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -41,14 +41,15 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 | MADSuite cognition / time monitoring | Terminé |
 | Géospatial / terrain | Structure initiale terminée |
 
-## 4. Bloc distribution / anti-rejet — en cours
+## 4. Bloc distribution / anti-rejet — structure terminée
 
 | Source / action | Sortie | Statut |
 |---|---|---|
 | `specifications_anti_rejet.md` | `fiche-madproof-distribution-anti-rejet.md` | Fait |
 | Checklist release stores | `SYSTEME_MAD/09-CHECKLISTS/chk-app-store-release.md` | Fait / v1.0 |
 | `specifications_mobiles_android.md` | `fiche-madproof-distribution-mobile.md` | Fait |
-| `specifications_reseau_securite.md` | Complément distribution / sécurité réseau | À faire |
+| `specifications_reseau_securite.md` | `fiche-madproof-distribution-reseau-securite.md` | Fait |
+| Standard distribution multiplateforme | `SYSTEME_MAD/03-STANDARDS/std-distribution-multiplateforme.md` | À créer si on veut consolider |
 
 ## 5. Blocs restants
 
@@ -69,19 +70,20 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 - [x] Les mesures GPS ne deviennent jamais contractuelles automatiquement.
 - [x] Une checklist anti-rejet réduit les risques, sans garantir l’acceptation store.
 - [x] La stratégie mobile MADSuite reste PWA-first tant qu’un besoin natif clair n’est pas démontré.
+- [x] Les exceptions réseau local doivent rester limitées, documentées et testées.
 
 ## 7. Priorité immédiate
 
-Traiter :
+Option A — consolider le bloc distribution :
 
 ```text
-docs/research/atrier/specifications_reseau_securite.md
+SYSTEME_MAD/03-STANDARDS/std-distribution-multiplateforme.md
 ```
 
-Sortie recommandée :
+Option B — passer au bloc agenda :
 
 ```text
-SYSTEME_MAD/13-RESSOURCES/research/04-standards-web/fiche-madproof-distribution-reseau-securite.md
+docs/research/atrier/specifications_agenda_planification.md
 ```
 
 ## 8. Note finale
