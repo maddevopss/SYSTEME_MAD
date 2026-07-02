@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 5.2
+Version: 5.3
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -41,6 +41,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `routine-commerciale-hebdomadaire-mad-devops.md` | Officiel | Routine commerciale hebdomadaire MAD DevOps. |
 | `synthese-preuve-client-portfolio-mad-devops.md` | Officiel | Synthèse du bloc preuve client et portfolio. |
 | `synthese-finale-bloc-preuve-client-portfolio.md` | Officiel | Synthèse finale du bloc Preuve client / Portfolio. |
+| `synthese-chaine-projet-client-livraison.md` | Officiel | Synthèse du bloc Projet client / Livraison. |
 | `offre-simple-mad-devops.md` | Officiel | Offre simple. |
 | `offre-terrain-mad-devops.md` | Officiel | Offre courte envoyable après qualification d’une opportunité. |
 | `offres-packagees-mad-devops.md` | Officiel | Offres packagées. |
@@ -79,6 +80,15 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ## Guides prioritaires
 
+### Projet client et livraison
+
+- `synthese-chaine-projet-client-livraison.md`
+- `parcours-client-mad-devops.md`
+- `kit-terrain-parcours-client-mad-devops.md`
+- `pilotage-client-mad-devops.md`
+- `synthese-preuve-client-portfolio-mad-devops.md`
+- `synthese-finale-bloc-preuve-client-portfolio.md`
+
 ### Preuve client et portfolio
 
 - `synthese-finale-bloc-preuve-client-portfolio.md`
@@ -100,6 +110,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-commerciale-mad-devops.md`
 - `synthese-preuve-client-portfolio-mad-devops.md`
 - `synthese-finale-bloc-preuve-client-portfolio.md`
+- `synthese-chaine-projet-client-livraison.md`
 - `exemple-fiche-projet-public-mad-devops.md`
 - `exemple-validation-chk-030-preuve-client.md`
 
@@ -132,6 +143,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-concordance-commerciale-globale-mad-devops.md`
 - `synthese-chaine-demandes-entrantes-mad-devops.md`
 - `synthese-traitement-demandes-entrantes-mad-devops.md`
+- `synthese-chaine-projet-client-livraison.md`
 - `synthese-preuve-client-portfolio-mad-devops.md`
 - `synthese-finale-bloc-preuve-client-portfolio.md`
 - `exemple-fiche-projet-public-mad-devops.md`
