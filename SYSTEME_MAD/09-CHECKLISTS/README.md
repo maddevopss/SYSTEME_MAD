@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 3.3
+Version: 3.4
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -49,10 +49,17 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-028-validation-fermeture-demande-entrante.md` | Officiel | Fermeture, report ou refus poli d’une demande entrante. |
 | `chk-029-validation-cockpit-fondateur.md` | Officiel | Validation ciblée du cockpit fondateur. |
 | `chk-030-validation-preuve-client.md` | Officiel | Validation des preuves client. |
+| `chk-031-validation-projet-pret-a-demarrer.md` | Officiel | Validation avant exécution d’un projet client. |
 
 ---
 
 ## Checklists prioritaires
+
+### Projet client et livraison
+
+- `chk-031-validation-projet-pret-a-demarrer.md`
+- `chk-003-livraison-client.md`
+- `chk-010-validation-bloc-projet-client-livraison.md`
 
 ### Preuve client et portfolio
 
@@ -91,6 +98,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-025-validation-page-guide-client-rapide.md`
 - `chk-026-validation-contenu-public-mad-devops.md`
 - `chk-030-validation-preuve-client.md`
+- `chk-031-validation-projet-pret-a-demarrer.md`
 - `chk-027-validation-reponse-demande-entrante.md`
 - `chk-028-validation-fermeture-demande-entrante.md`
 
@@ -125,6 +133,6 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `SYSTEME_MAD/03-STANDARDS/README.md`
 - `SYSTEME_MAD/05-PLAY/README.md`
 - `SYSTEME_MAD/07-TEMPLATES/README.md`
+- `SYSTEME_MAD/09-CHECKLISTS/chk-031-validation-projet-pret-a-demarrer.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-030-validation-preuve-client.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-029-validation-cockpit-fondateur.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-007-validation-bloc-pilotage-fondateur.md`
