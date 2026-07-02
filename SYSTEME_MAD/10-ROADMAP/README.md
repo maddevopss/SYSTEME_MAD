@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Roadmap
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -23,6 +23,7 @@ Il sert à garder une vision claire de ce qui est fait, en cours, à surveiller 
 |---|---|---|
 | `progression.md` | Officiel | Suivi global de progression du Système MAD. |
 | `roadmap-mvp-early-access-madsuite.md` | Officiel | Roadmap d’exécution MVP Early Access MADSuite. |
+| `tickets-sprint-1-parcours-premiere-facture-madsuite.md` | Brouillon contrôlé | Découpage tickets Sprint 1 — première facture. |
 | `madsuite-madproof-roadmap.md` | Brouillon | Roadmap consolidée MADSuite / MADPROOF. |
 | `registre-risques-madsuite-madproof.md` | Brouillon | Registre des risques MADSuite / MADPROOF. |
 
@@ -34,6 +35,7 @@ Il sert à garder une vision claire de ce qui est fait, en cours, à surveiller 
 
 ```text
 SYSTEME_MAD/10-ROADMAP/roadmap-mvp-early-access-madsuite.md
+SYSTEME_MAD/10-ROADMAP/tickets-sprint-1-parcours-premiere-facture-madsuite.md
 SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-developpeur-mvp-early-access-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-045-validation-mvp-early-access-madsuite.md
 ```
