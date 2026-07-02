@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 3.7
+Version: 3.8
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -75,7 +75,8 @@ Pas MADPROOF = pas officiel.
 |---|---|---|
 | `Recherche-vieprivee.md` | `SYSTEME_MAD/13-RESSOURCES/research/05-compliance/fiche-madproof-recherche-vieprivee.md` | Fait |
 | Alignement checklist Loi 25 | `SYSTEME_MAD/09-CHECKLISTS/chk-loi25-madsuite.md` | Fait / v1.1 |
-| `Recherche-cybersecurite.md` | Fiche MADPROOF à produire | À faire |
+| `Recherche-cybersecurite.md` | `SYSTEME_MAD/13-RESSOURCES/research/05-compliance/fiche-madproof-recherche-cybersecurite.md` | Fait |
+| Alignement checklist sécurité SaaS | `SYSTEME_MAD/09-CHECKLISTS/chk-security-saas-lite.md` | À faire |
 | `Recherche-fiscale.md` | Fiche MADPROOF à produire | À faire |
 | `Recherche-droitauteur.md` | Fiche MADPROOF à produire | À faire |
 
@@ -98,7 +99,7 @@ Pas MADPROOF = pas officiel.
 
 Ordre conseillé :
 
-1. Passer à `Recherche-cybersecurite.md`.
+1. Aligner `chk-security-saas-lite.md` avec la fiche cybersécurité.
 2. Traiter ensuite `Recherche-fiscale.md`.
 3. Traiter ensuite `Recherche-droitauteur.md`.
 
