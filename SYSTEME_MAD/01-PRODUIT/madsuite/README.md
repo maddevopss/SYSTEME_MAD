@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index produit — MADSuite
-Version: 1.0
-Dernière révision: 2026-07-01
+Version: 1.1
+Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -14,6 +14,16 @@ Auteur: Marc-André Dufour
 Ce dossier regroupe les documents produit liés à MADSuite.
 
 Il sert à relier les idées R&D, les spécifications MVP, les lots d’implémentation, les validations produit et les garde-fous MADPROOF.
+
+---
+
+## Entrées de pilotage
+
+| Document | Rôle | Statut |
+|---|---|---|
+| `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md` | Roadmap consolidée MADSuite / MADPROOF. | Brouillon |
+| `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md` | Cadre de validation MADPROOF. | Brouillon |
+| `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md` | Registre opérationnel des claims. | Brouillon |
 
 ---
 
@@ -29,6 +39,7 @@ Le module ne traite pas le TDAH, ne restaure pas un état mental, ne détecte pa
 
 | Document | Rôle | Statut |
 |---|---|---|
+| `mad-ariane-fil-ariane-zero-effort.md` | Synthèse produit MAD Ariane et cadrage zéro-effort. | Brouillon |
 | `mvp-mad-ariane-snapshot-reprise.md` | Spécification MVP prudente. | Brouillon contrôlé |
 | `spec-technique-mad-ariane-snapshot-reprise.md` | Spécification technique contrôlée. | Brouillon contrôlé |
 | `tests-produit-mad-ariane.md` | Plan de tests produit. | Brouillon contrôlé |
@@ -75,12 +86,15 @@ Elle doit être utilisée avant de considérer MAD Ariane comme MVP contrôlé.
 ## Ordre de lecture recommandé
 
 ```text
-1. MVP MAD Ariane
-2. Spécification technique
-3. Synthèse des lots
-4. Lots 1 à 6
-5. CHK-017 — Validation MVP MAD Ariane
-6. Guide manuel ou prompt agent pour l’implémentation
+1. SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md
+2. SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md
+3. SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md
+4. MVP MAD Ariane
+5. Spécification technique
+6. Synthèse des lots
+7. Lots 1 à 6
+8. CHK-017 — Validation MVP MAD Ariane
+9. Guide manuel ou prompt agent pour l’implémentation
 ```
 
 ---
