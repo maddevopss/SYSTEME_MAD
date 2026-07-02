@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 3.2
+Version: 3.3
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -46,29 +46,30 @@ Phrase directrice :
 11. `SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-machine-a-clients-madsuite.md`
 12. `SYSTEME_MAD/05-PLAY/play-038-publication-page-publique-madsuite.md`
 13. `SYSTEME_MAD/05-PLAY/play-039-analyse-feedback-early-access-madsuite.md`
-14. `SYSTEME_MAD/09-CHECKLISTS/chk-035-validation-publication-page-publique-madsuite.md`
-15. `SYSTEME_MAD/09-CHECKLISTS/chk-036-validation-rapport-mensuel-early-access-madsuite.md`
-16. `SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md`
-17. `SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md`
-18. `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md`
-19. `SYSTEME_MAD/07-TEMPLATES/template-page-demo-madsuite.md`
-20. `SYSTEME_MAD/07-TEMPLATES/template-script-video-demo-madsuite.md`
-21. `SYSTEME_MAD/07-TEMPLATES/template-page-lancement-early-access-madsuite.md`
-22. `SYSTEME_MAD/07-TEMPLATES/template-formulaire-early-access-madsuite.md`
-23. `SYSTEME_MAD/07-TEMPLATES/template-courriel-invitation-early-access-madsuite.md`
-24. `SYSTEME_MAD/07-TEMPLATES/template-sequence-courriels-early-access-madsuite.md`
-25. `SYSTEME_MAD/07-TEMPLATES/template-confirmation-early-access-madsuite.md`
-26. `SYSTEME_MAD/07-TEMPLATES/template-page-feedback-early-access-madsuite.md`
-27. `SYSTEME_MAD/07-TEMPLATES/template-mini-sondage-feedback-early-access-madsuite.md`
-28. `SYSTEME_MAD/07-TEMPLATES/template-analyse-feedback-early-access-madsuite.md`
-29. `SYSTEME_MAD/07-TEMPLATES/template-backlog-post-feedback-early-access-madsuite.md`
-30. `SYSTEME_MAD/07-TEMPLATES/template-rapport-mensuel-early-access-madsuite.md`
-31. `SYSTEME_MAD/07-TEMPLATES/template-dashboard-metriques-early-access-madsuite.md`
-32. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
-33. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
-34. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
-35. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-36. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+14. `SYSTEME_MAD/05-PLAY/play-040-revue-mensuelle-early-access-madsuite.md`
+15. `SYSTEME_MAD/09-CHECKLISTS/chk-035-validation-publication-page-publique-madsuite.md`
+16. `SYSTEME_MAD/09-CHECKLISTS/chk-036-validation-rapport-mensuel-early-access-madsuite.md`
+17. `SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md`
+18. `SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md`
+19. `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md`
+20. `SYSTEME_MAD/07-TEMPLATES/template-page-demo-madsuite.md`
+21. `SYSTEME_MAD/07-TEMPLATES/template-script-video-demo-madsuite.md`
+22. `SYSTEME_MAD/07-TEMPLATES/template-page-lancement-early-access-madsuite.md`
+23. `SYSTEME_MAD/07-TEMPLATES/template-formulaire-early-access-madsuite.md`
+24. `SYSTEME_MAD/07-TEMPLATES/template-courriel-invitation-early-access-madsuite.md`
+25. `SYSTEME_MAD/07-TEMPLATES/template-sequence-courriels-early-access-madsuite.md`
+26. `SYSTEME_MAD/07-TEMPLATES/template-confirmation-early-access-madsuite.md`
+27. `SYSTEME_MAD/07-TEMPLATES/template-page-feedback-early-access-madsuite.md`
+28. `SYSTEME_MAD/07-TEMPLATES/template-mini-sondage-feedback-early-access-madsuite.md`
+29. `SYSTEME_MAD/07-TEMPLATES/template-analyse-feedback-early-access-madsuite.md`
+30. `SYSTEME_MAD/07-TEMPLATES/template-backlog-post-feedback-early-access-madsuite.md`
+31. `SYSTEME_MAD/07-TEMPLATES/template-rapport-mensuel-early-access-madsuite.md`
+32. `SYSTEME_MAD/07-TEMPLATES/template-dashboard-metriques-early-access-madsuite.md`
+33. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
+34. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
+35. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
+36. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+37. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
 
 ---
 
@@ -104,6 +105,7 @@ Phrase directrice :
 |---|---|
 | `SYSTEME_MAD/05-PLAY/play-038-publication-page-publique-madsuite.md` | Publication contrôlée d’une page publique MADSuite. |
 | `SYSTEME_MAD/05-PLAY/play-039-analyse-feedback-early-access-madsuite.md` | Analyse feedback Early Access MADSuite. |
+| `SYSTEME_MAD/05-PLAY/play-040-revue-mensuelle-early-access-madsuite.md` | Revue mensuelle Early Access MADSuite. |
 | `SYSTEME_MAD/05-PLAY/play-037-ajouter-ou-corriger-claim-madproof.md` | Ajouter ou corriger un claim MADPROOF. |
 
 ---
@@ -143,10 +145,11 @@ Avant de modifier un document MADSuite :
 5. Lire la Machine à clients si la modification touche acquisition, landing page, onboarding ou conversion.
 6. Lire `CHK-035` et `PLAY-038` si la modification touche une page publique.
 7. Lire `PLAY-039` si la tâche touche l’analyse de retours Early Access.
-8. Lire `CHK-036` si la tâche touche le rapport mensuel Early Access.
-9. Lire le template public approprié : landing, FAQ, prix, démo, script vidéo, early access, formulaire, courriel, séquence, confirmation, feedback, mini-sondage, analyse feedback, backlog post-feedback, rapport mensuel ou dashboard métriques.
-10. Si le sujet touche un claim cognitif, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
-11. Garder les formulations non médicales et l’utilisateur en contrôle.
+8. Lire `PLAY-040` si la tâche touche la revue mensuelle Early Access.
+9. Lire `CHK-036` si la tâche touche le rapport mensuel Early Access.
+10. Lire le template public approprié : landing, FAQ, prix, démo, script vidéo, early access, formulaire, courriel, séquence, confirmation, feedback, mini-sondage, analyse feedback, backlog post-feedback, rapport mensuel ou dashboard métriques.
+11. Si le sujet touche un claim cognitif, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
+12. Garder les formulations non médicales et l’utilisateur en contrôle.
 
 ---
 
