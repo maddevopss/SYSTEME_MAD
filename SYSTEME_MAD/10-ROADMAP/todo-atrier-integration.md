@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 4.3
+Version: 4.4
 Dernière révision: 2026-07-02
 Statut: Roadmap opérationnelle / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
@@ -56,11 +56,13 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 | `Recherche-droitauteur.md` | `fiche-madproof-recherche-droitauteur.md` | Fait |
 | Checklist open source / contenus tiers | `chk-open-source-licenses.md` | v1.1 |
 
-## 5. Bloc produit / terrain — à faire
+## 5. Bloc produit / terrain — en cours
 
-| Source | Destination prévue | Statut |
+| Source | Destination / sortie | Statut |
 |---|---|---|
-| `Recherche-gps.md` | `SYSTEME_MAD/13-RESSOURCES/research/06-modules-metiers/geospatial/` | À faire |
+| `Recherche-gps.md` | `SYSTEME_MAD/13-RESSOURCES/research/06-modules-metiers/geospatial/fiche-madproof-recherche-gps.md` | Fait |
+| Checklist localisation / privacy terrain | `SYSTEME_MAD/09-CHECKLISTS/chk-geospatial-location-privacy.md` | À créer si module terrain confirmé |
+| ADR séparation géospatial | `SYSTEME_MAD/04-ADR/ADR-geospatial-module-separe.md` | À créer |
 | Spécifications géospatiales restantes | Dossier géospatial | À faire |
 
 ## 6. Décisions confirmées
@@ -70,11 +72,13 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 - [x] Les fonctions de surveillance invasive restent exclues du MVP cognitif.
 - [x] Le géospatial reste un module futur séparé.
 - [x] Fiscalité/droit restent internes et nécessitent validation professionnelle.
+- [x] La localisation ne doit pas être utilisée pour inférer un état cognitif.
+- [x] Les mesures GPS ne deviennent jamais contractuelles automatiquement.
 
 ## 7. Priorité immédiate
 
-1. Revenir au bloc géospatial / terrain.
-2. Traiter `Recherche-gps.md`.
+1. Créer `ADR-geospatial-module-separe.md` pour verrouiller la séparation produit.
+2. Créer `chk-geospatial-location-privacy.md` si on veut préparer le module terrain.
 3. Traiter ensuite les spécifications géospatiales associées.
 
 ## 8. Note finale
