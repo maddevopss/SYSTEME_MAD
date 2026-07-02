@@ -1,9 +1,9 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: Verdict post-agent — Sprint 01 MVP commercial
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-02
-Statut: Verdict contrôlé / MADPROOF-PRODUCT
+Statut: Verdict mis à jour / MADPROOF-PRODUCT
 Auteur: Marc-André Dufour / MAD DevOps
 ---
 
@@ -11,69 +11,52 @@ Auteur: Marc-André Dufour / MAD DevOps
 
 ## 1. Repos vérifiés
 
-| Repo | Commit vérifié | Message |
+| Repo | Élément vérifié | Statut |
 |---|---|---|
-| `maddevopss/madsuite-frontend` | `f77516048d504f32410ceb211a6351105f619170` | `fix:sprint1mvp` |
-| `maddevopss/madsuite-backend` | `0e6a8c9ca07c1fa61661006cbe48189d0b1414e7` | `fix:sprint1mvp` |
+| `maddevopss/madsuite-frontend` | Redirection premier client | Corrigé |
+| `maddevopss/madsuite-frontend` | Bloc dashboard “Prochaine action” | Corrigé partiellement |
+| `maddevopss/madsuite-frontend` | Capacitor / Geolocation | Corrigé |
+| `maddevopss/madsuite-backend` | `.env.example` | Encore à corriger |
 
 ## 2. Verdict exécutif
 
 ```text
-SPRINT 01 NOT DONE — PATCH TOO BROAD AND P0 FLOW STILL OPEN
+SPRINT 01 FRONTEND P0 MOSTLY CLOSED — BACKEND ENV BLOCKER REMAINS
 ```
 
-Le commit a bien été poussé, mais les corrections principales demandées pour le Sprint 01 ne semblent pas terminées.
+Le deuxième push a bien corrigé les principaux éléments frontend du Sprint 01.
 
-Le patch contient plusieurs ajouts utiles ou potentiellement utiles, mais il dépasse le périmètre Sprint 01 et laisse ouverts des points P0.
+Cependant, le backend contient encore un problème de qualité bloquant dans `.env.example` : du pseudo-code JavaScript est encore présent dans un fichier d’environnement.
 
-## 3. P0 toujours ouverts
+## 3. Points confirmés corrigés
 
-### P0-001 — Redirection premier client
+### 3.1 P0-001 — Redirection premier client
 
-Constat : dans `src/pages/Clients/index.jsx`, la création du premier client redirige encore vers :
+Dans `src/pages/Clients/index.jsx`, la création du premier client redirige maintenant vers :
 
 ```text
-/estimates
+/projets
 ```
 
-Problème : cela détourne encore le parcours MVP :
+Statut : **corrigé**.
+
+Impact : le parcours MVP reste aligné :
 
 ```text
 Client -> Projet -> Temps -> Facture -> PDF -> Valeur visible
 ```
 
-Statut : **non corrigé**.
+### 3.2 P0-002 — Dashboard prochaine action
 
-### P0-002 — Dashboard prochaine action
+Dans `src/pages/Dashboard/index.jsx`, un bloc “Prochaine action” est présent lorsque `unbilled_hours > 0`.
 
-Constat : `src/pages/Dashboard/index.jsx` affiche des métriques de revenus, factures, devis et heures facturables, mais aucun vrai bloc de prochaine action conditionnelle.
+Statut : **corrigé partiellement**.
 
-Attendu :
+Note : la logique couvre bien le cas “heures non facturées -> créer une facture”. Les cas “aucun client” et “client sans projet” ne sont pas encore couverts, mais le P0 demandé en correction immédiate est fonctionnel pour la valeur facturable.
 
-- si aucun client : CTA créer client;
-- si client sans projet : CTA créer projet;
-- si heures non facturées : CTA facturer;
-- si facture brouillon/envoyée : CTA continuer.
+### 3.3 Capacitor / Geolocation
 
-Statut : **non corrigé**.
-
-### P0-003 — Modules/gates MVP
-
-Constat : pas encore validé dans ce passage.
-
-Statut : **à vérifier**.
-
-### P0-004 — Parcours facture E2E
-
-Constat : les briques factures/PDF existent, mais le parcours complet n’a pas été prouvé par test ou checklist.
-
-Statut : **à tester manuellement**.
-
-## 4. Dérives observées
-
-### 4.1 Ajout Capacitor / Geolocation
-
-Le frontend contient maintenant :
+Les dépendances suivantes ne sont plus présentes dans `frontend/package.json` :
 
 ```text
 @capacitor/app
@@ -81,79 +64,66 @@ Le frontend contient maintenant :
 @capacitor/geolocation
 ```
 
-Problème : géolocalisation/mobile natif est hors scope Sprint 01.
+Statut : **corrigé**.
 
-Classification : **dérive Sprint 01 / à retirer ou justifier hors sprint**.
+Impact : la dérive géolocalisation/mobile natif est retirée du Sprint 01.
 
-### 4.2 Patch trop large
+## 4. Point encore bloquant
 
-Le commit touche des sujets variés :
+### 4.1 `.env.example` backend
 
-- landing CTA;
-- dependencies mobile;
-- lint/modules guard;
-- ErrorBoundary;
-- style tokens;
-- tests;
-- analytics;
-- modules API;
-- migrations backend;
-- `.env.example`.
-
-Problème : le Sprint 01 demandait un patch minimal ciblé parcours première facture.
-
-Classification : **risque de régression / trop large**.
-
-### 4.3 `.env.example` contient du pseudo-code JavaScript
-
-Constat : `.env.example` contient :
+Dans `maddevopss/madsuite-backend/.env.example`, le pseudo-code JavaScript est encore présent :
 
 ```text
 const masterAdminEnv = process.env.MASTER_ADMIN_USER_IDS;
 if (!masterAdminEnv) throw new Error("Required env var");
 ```
 
-Problème : un fichier `.env` doit contenir des paires clé/valeur, pas du code JavaScript.
+Un fichier `.env.example` doit contenir des paires clé/valeur et des commentaires, pas du code.
 
-Statut : **à corriger**.
-
-## 5. Points positifs
-
-Le patch semble aller dans certaines bonnes directions :
-
-- ajout d’un helper analytics `trackFunnelEvent`;
-- centralisation API modules;
-- ajout d’un garde lint contre les appels directs modules;
-- amélioration partielle du styling dashboard;
-- présence d’un ErrorBoundary global potentiel;
-- confirmation que timer note reste sur `/timer/active/note`.
-
-Ces éléments peuvent être utiles, mais ne remplacent pas les P0 Sprint 01.
-
-## 6. Décision recommandée
-
-Ne pas continuer à empiler de nouvelles features.
-
-Faire un patch de correction très court :
-
-1. Corriger la redirection après premier client.
-2. Ajouter la prochaine action au dashboard.
-3. Retirer ou isoler les dépendances Capacitor/geolocation du Sprint 01.
-4. Corriger `.env.example`.
-5. Faire une checklist manuelle première facture.
-
-## 7. Verdict MADPROOF
-
-Le commit post-agent est **partiellement utile**, mais il ne ferme pas Sprint 01.
-
-Règle à rappeler :
+Correction attendue :
 
 ```text
-Si ça ne rapproche pas d’une première facture client, ça sort du sprint.
+MASTER_ADMIN_USER_IDS=1
 ```
+
+ou :
+
+```text
+# MASTER_ADMIN_USER_IDS=1,2,3
+```
+
+Statut : **à corriger avant validation finale**.
+
+## 5. Validation manuelle restante
+
+Le parcours doit encore être validé manuellement avec `SPRINT_01_CHECKLIST.md` :
+
+- [ ] login;
+- [ ] création premier client;
+- [ ] redirection vers `/projets`;
+- [ ] création projet;
+- [ ] timer manuel;
+- [ ] note rapide;
+- [ ] arrêt timer;
+- [ ] création facture depuis temps;
+- [ ] preview PDF;
+- [ ] téléchargement PDF;
+- [ ] dashboard avec valeur visible;
+- [ ] aucun claim MADPROOF interdit visible.
+
+## 6. Verdict MADPROOF
+
+Le Sprint 01 est **presque validable côté frontend**, mais pas encore officiellement fermé.
 
 Statut final :
 
 ```text
-SPRINT 01 — À RECADRER AVANT VALIDATION
+SPRINT 01 — PRESQUE VALIDÉ / BACKEND ENV À CORRIGER
+```
+
+Règle de fermeture :
+
+```text
+Corriger .env.example, puis exécuter la checklist manuelle première facture.
 ```
