@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Templates
-Version: 3.0
+Version: 3.1
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -56,6 +56,7 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 | `template-journal-bord-hebdomadaire-mad-devops.md` | Template | Journal hebdomadaire. |
 | `template-registre-ameliorations-systeme-mad-devops.md` | Template | Registre des améliorations système. |
 | `template-claim-madproof.md` | Template | Modèle de claim MADPROOF. |
+| `template-landing-page-madsuite.md` | Template | Structure de landing page MADSuite conforme Machine à clients et MADPROOF. |
 | `tpl-001.md` | Template | Modèle réutilisable existant. |
 | `tpl-002.md` | Template | Modèle réutilisable existant. |
 | `tpl-003.md` | Template | Modèle réutilisable existant. |
@@ -64,6 +65,13 @@ Un template sert à accélérer la création d’un document, d’un cadrage, d�
 ---
 
 ## Templates prioritaires
+
+### MADSuite produit / Machine à clients
+
+```text
+SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md
+SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md
+```
 
 ### MADSuite cognition / MADPROOF
 
@@ -93,6 +101,7 @@ SYSTEME_MAD/07-TEMPLATES/template-relance-element-manquant-client.md
 ### Publication publique
 
 ```text
+SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-contenu-public-candidat.md
 SYSTEME_MAD/07-TEMPLATES/template-page-orientation-client.md
 SYSTEME_MAD/07-TEMPLATES/template-contenu-site-complet-mad-devops.md
@@ -103,6 +112,7 @@ SYSTEME_MAD/07-TEMPLATES/template-formulaire-contact-mad-devops.md
 ### Machine à clients
 
 ```text
+SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-contenu-public-candidat.md
 SYSTEME_MAD/07-TEMPLATES/template-page-orientation-client.md
 SYSTEME_MAD/07-TEMPLATES/template-fiche-opportunite-machine-a-clients.md
