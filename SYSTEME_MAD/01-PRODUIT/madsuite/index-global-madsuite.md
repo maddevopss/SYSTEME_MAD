@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 2.9
+Version: 3.0
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -61,11 +61,12 @@ Phrase directrice :
 26. `SYSTEME_MAD/07-TEMPLATES/template-mini-sondage-feedback-early-access-madsuite.md`
 27. `SYSTEME_MAD/07-TEMPLATES/template-analyse-feedback-early-access-madsuite.md`
 28. `SYSTEME_MAD/07-TEMPLATES/template-backlog-post-feedback-early-access-madsuite.md`
-29. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
-30. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
-31. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
-32. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-33. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+29. `SYSTEME_MAD/07-TEMPLATES/template-rapport-mensuel-early-access-madsuite.md`
+30. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
+31. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
+32. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
+33. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+34. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
 
 ---
 
@@ -122,6 +123,7 @@ Phrase directrice :
 | `SYSTEME_MAD/07-TEMPLATES/template-mini-sondage-feedback-early-access-madsuite.md` | Template mini-sondage feedback Early Access MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-analyse-feedback-early-access-madsuite.md` | Template analyse feedback Early Access MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-backlog-post-feedback-early-access-madsuite.md` | Template backlog post-feedback Early Access MADSuite. |
+| `SYSTEME_MAD/07-TEMPLATES/template-rapport-mensuel-early-access-madsuite.md` | Template rapport mensuel Early Access MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md` | Modèle de claim MADPROOF. |
 
 ---
@@ -137,7 +139,7 @@ Avant de modifier un document MADSuite :
 5. Lire la Machine à clients si la modification touche acquisition, landing page, onboarding ou conversion.
 6. Lire `CHK-035` et `PLAY-038` si la modification touche une page publique.
 7. Lire `PLAY-039` si la tâche touche l’analyse de retours Early Access.
-8. Lire le template public approprié : landing, FAQ, prix, démo, script vidéo, early access, formulaire, courriel, séquence, confirmation, feedback, mini-sondage, analyse feedback ou backlog post-feedback.
+8. Lire le template public approprié : landing, FAQ, prix, démo, script vidéo, early access, formulaire, courriel, séquence, confirmation, feedback, mini-sondage, analyse feedback, backlog post-feedback ou rapport mensuel.
 9. Si le sujet touche un claim cognitif, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
 10. Garder les formulations non médicales et l’utilisateur en contrôle.
 
