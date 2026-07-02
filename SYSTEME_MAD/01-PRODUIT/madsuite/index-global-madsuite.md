@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -25,6 +25,7 @@ Il sert à relier :
 - les playbooks;
 - les templates;
 - le contexte IA;
+- la knowledge base;
 - les documents de recherche.
 
 ---
@@ -62,8 +63,9 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 3. `SYSTEME_MAD/04-ADR/ADR-002-positionnement-non-medical-madsuite.md`
 4. `SYSTEME_MAD/01-PRODUIT/madsuite/README.md`
 5. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
-6. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-7. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+6. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
+7. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+8. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
 
 ---
 
@@ -87,6 +89,15 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 |---|---|
 | `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md` | Roadmap consolidée MADSuite / MADPROOF. |
 | `SYSTEME_MAD/10-ROADMAP/progression.md` | Suivi de progression global du Système MAD. |
+
+---
+
+## Knowledge Base
+
+| Document | Rôle |
+|---|---|
+| `SYSTEME_MAD/06-KNOWLEDGE-BASE/README.md` | Index de la base de connaissances. |
+| `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md` | Définitions officielles MADSuite, MADPROOF, MAD Ariane et assistance cognitive. |
 
 ---
 
@@ -175,11 +186,12 @@ Avant de modifier un document MADSuite :
 
 1. Lire ce document.
 2. Lire le contexte IA MADSuite / MADPROOF.
-3. Vérifier si le sujet touche un claim cognitif.
-4. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
-5. Ne pas créer de doublon si un document existant peut être enrichi.
-6. Garder les formulations non médicales.
-7. Conserver l’utilisateur en contrôle.
+3. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
+4. Vérifier si le sujet touche un claim cognitif.
+5. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
+6. Ne pas créer de doublon si un document existant peut être enrichi.
+7. Garder les formulations non médicales.
+8. Conserver l’utilisateur en contrôle.
 
 ---
 
