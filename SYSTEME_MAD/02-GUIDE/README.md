@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 6.2
+Version: 6.3
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -21,6 +21,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ### Amélioration continue
 
+- `synthese-finale-amelioration-continue.md`
 - `synthese-chaine-amelioration-continue.md`
 - `exemple-registre-ameliorations-systeme.md`
 - `exemple-revue-amelioration-continue.md`
@@ -60,6 +61,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-demandes-entrantes-mad-devops.md`
 - `synthese-chaine-commerciale-mad-devops.md`
 - `synthese-finale-projet-client-livraison.md`
+- `synthese-finale-amelioration-continue.md`
 - `synthese-chaine-amelioration-continue.md`
 - `exemple-registre-ameliorations-systeme.md`
 - `exemple-revue-amelioration-continue.md`
@@ -91,6 +93,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-demandes-entrantes-mad-devops.md`
 - `synthese-traitement-demandes-entrantes-mad-devops.md`
 - `synthese-finale-projet-client-livraison.md`
+- `synthese-finale-amelioration-continue.md`
 - `synthese-chaine-amelioration-continue.md`
 - `exemple-registre-ameliorations-systeme.md`
 - `exemple-revue-amelioration-continue.md`
@@ -118,6 +121,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `fiche-reflexe-fondateur-mad-devops.md`
 - `routine-courte-fondateur-lundi-vendredi.md`
 - `routine-commerciale-hebdomadaire-mad-devops.md`
+- `synthese-finale-amelioration-continue.md`
 - `synthese-chaine-amelioration-continue.md`
 - `exemple-registre-ameliorations-systeme.md`
 - `exemple-revue-amelioration-continue.md`
