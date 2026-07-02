@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 2.1
+Version: 2.2
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -73,14 +73,15 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 9. `SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md`
 10. `SYSTEME_MAD/09-CHECKLISTS/chk-034-validation-machine-a-clients-madsuite.md`
 11. `SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-machine-a-clients-madsuite.md`
-12. `SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md`
-13. `SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md`
-14. `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md`
-15. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
-16. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
-17. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
-18. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-19. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+12. `SYSTEME_MAD/05-PLAY/play-038-publication-page-publique-madsuite.md`
+13. `SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md`
+14. `SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md`
+15. `SYSTEME_MAD/07-TEMPLATES/template-page-prix-madsuite.md`
+16. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
+17. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
+18. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
+19. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+20. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
 
 ---
 
@@ -181,6 +182,7 @@ Pour comprendre MADSuite rapidement, lire dans cet ordre :
 
 | Playbook | Rôle |
 |---|---|
+| `SYSTEME_MAD/05-PLAY/play-038-publication-page-publique-madsuite.md` | Publication contrôlée d’une page publique MADSuite. |
 | `SYSTEME_MAD/05-PLAY/play-024-transformer-idee-cognitive-en-fonctionnalite-madsuite.md` | Transformer une idée cognitive en fonctionnalité MADSuite. |
 | `SYSTEME_MAD/05-PLAY/play-037-ajouter-ou-corriger-claim-madproof.md` | Ajouter ou corriger un claim MADPROOF. |
 | `SYSTEME_MAD/05-PLAY/play-010-passe-qualite-documentaire.md` | Passe de qualité documentaire. |
@@ -219,17 +221,18 @@ Avant de modifier un document MADSuite :
 6. Lire le prompt agent Revenue Core si la tâche concerne l’implémentation ou la stabilisation du Revenue Core.
 7. Lire la Machine à clients si la modification touche acquisition, landing page, onboarding ou conversion.
 8. Lire le prompt agent Machine à clients si la tâche touche landing, prix, FAQ, onboarding, CTA ou conversion.
-9. Lire `CHK-034` si la modification touche la validation de la Machine à clients.
-10. Lire le template landing page MADSuite si la modification touche une page publique MADSuite.
-11. Lire le template FAQ publique MADSuite si la modification touche une FAQ, une page d’aide ou une page publique.
-12. Lire le template page Prix MADSuite si la modification touche l’offre, les plans, les limites ou la conversion.
-13. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
-14. Lire le registre des risques si la modification touche produit, IA, claims ou données.
-15. Vérifier si le sujet touche un claim cognitif.
-16. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
-17. Ne pas créer de doublon si un document existant peut être enrichi.
-18. Garder les formulations non médicales.
-19. Conserver l’utilisateur en contrôle.
+9. Lire le playbook Publication page publique MADSuite si la tâche touche une surface publique.
+10. Lire `CHK-034` si la modification touche la validation de la Machine à clients.
+11. Lire le template landing page MADSuite si la modification touche une page publique MADSuite.
+12. Lire le template FAQ publique MADSuite si la modification touche une FAQ, une page d’aide ou une page publique.
+13. Lire le template page Prix MADSuite si la modification touche l’offre, les plans, les limites ou la conversion.
+14. Lire le glossaire MADSuite / MADPROOF si un terme cognitif est utilisé.
+15. Lire le registre des risques si la modification touche produit, IA, claims ou données.
+16. Vérifier si le sujet touche un claim cognitif.
+17. Si oui, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
+18. Ne pas créer de doublon si un document existant peut être enrichi.
+19. Garder les formulations non médicales.
+20. Conserver l’utilisateur en contrôle.
 
 ---
 
