@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 6.1
+Version: 6.2
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -24,6 +24,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-amelioration-continue.md`
 - `exemple-registre-ameliorations-systeme.md`
 - `exemple-revue-amelioration-continue.md`
+- `exemple-validation-chk-011-amelioration-continue.md`
 - `exemple-utilisation-template-relance-element-manquant.md`
 - `principe-amelioration-continue-mad-devops.md`
 - `cockpit-fondateur-mad-devops.md`
@@ -62,6 +63,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-amelioration-continue.md`
 - `exemple-registre-ameliorations-systeme.md`
 - `exemple-revue-amelioration-continue.md`
+- `exemple-validation-chk-011-amelioration-continue.md`
 - `exemple-utilisation-template-relance-element-manquant.md`
 - `synthese-finale-bloc-preuve-client-portfolio.md`
 
@@ -92,6 +94,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-amelioration-continue.md`
 - `exemple-registre-ameliorations-systeme.md`
 - `exemple-revue-amelioration-continue.md`
+- `exemple-validation-chk-011-amelioration-continue.md`
 - `exemple-utilisation-template-relance-element-manquant.md`
 - `offre-simple-mad-devops.md`
 - `offre-terrain-mad-devops.md`
@@ -118,6 +121,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-amelioration-continue.md`
 - `exemple-registre-ameliorations-systeme.md`
 - `exemple-revue-amelioration-continue.md`
+- `exemple-validation-chk-011-amelioration-continue.md`
 - `exemple-utilisation-template-relance-element-manquant.md`
 - `principe-amelioration-continue-mad-devops.md`
 
