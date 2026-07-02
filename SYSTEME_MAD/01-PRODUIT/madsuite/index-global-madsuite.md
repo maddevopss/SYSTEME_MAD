@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 3.6
+Version: 3.7
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -69,11 +69,12 @@ Phrase directrice :
 34. `SYSTEME_MAD/07-TEMPLATES/template-rapport-mensuel-early-access-madsuite.md`
 35. `SYSTEME_MAD/07-TEMPLATES/template-dashboard-metriques-early-access-madsuite.md`
 36. `SYSTEME_MAD/07-TEMPLATES/template-plan-action-mensuel-early-access-madsuite.md`
-37. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
-38. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
-39. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
-40. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-41. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+37. `SYSTEME_MAD/07-TEMPLATES/template-bilan-fin-mois-early-access-madsuite.md`
+38. `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
+39. `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
+40. `SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md`
+41. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+42. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
 
 ---
 
@@ -138,6 +139,7 @@ Phrase directrice :
 | `SYSTEME_MAD/07-TEMPLATES/template-rapport-mensuel-early-access-madsuite.md` | Template rapport mensuel Early Access MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-dashboard-metriques-early-access-madsuite.md` | Template dashboard métriques Early Access MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-plan-action-mensuel-early-access-madsuite.md` | Template plan d’action mensuel Early Access MADSuite. |
+| `SYSTEME_MAD/07-TEMPLATES/template-bilan-fin-mois-early-access-madsuite.md` | Template bilan fin de mois Early Access MADSuite. |
 | `SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md` | Modèle de claim MADPROOF. |
 
 ---
@@ -158,7 +160,7 @@ Avant de modifier un document MADSuite :
 10. Lire `CHK-037` si la tâche touche la validation de revue mensuelle Early Access.
 11. Lire `CHK-038` si la tâche touche une note courte de revue Early Access.
 12. Lire `CHK-039` si la tâche touche le dashboard métriques Early Access.
-13. Lire le template public approprié : landing, FAQ, prix, démo, script vidéo, early access, formulaire, courriel, séquence, confirmation, feedback, mini-sondage, analyse feedback, backlog post-feedback, rapport mensuel, dashboard métriques ou plan d’action mensuel.
+13. Lire le template public approprié : landing, FAQ, prix, démo, script vidéo, early access, formulaire, courriel, séquence, confirmation, feedback, mini-sondage, analyse feedback, backlog post-feedback, rapport mensuel, dashboard métriques, plan d’action mensuel ou bilan fin de mois.
 14. Si le sujet touche un claim cognitif, utiliser `STD-506`, `CHK-032` et `PLAY-037`.
 15. Garder les formulations non médicales et l’utilisateur en contrôle.
 
