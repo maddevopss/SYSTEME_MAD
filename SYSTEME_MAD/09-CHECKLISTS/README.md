@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Checklists
-Version: 3.9
+Version: 4.0
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -54,6 +54,7 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 | `chk-033-validation-mvp-revenue-core-madsuite.md` | Officiel | Validation MVP Revenue Core MADSuite. |
 | `chk-034-validation-machine-a-clients-madsuite.md` | Officiel | Validation Machine à clients MADSuite. |
 | `chk-035-validation-publication-page-publique-madsuite.md` | Officiel | Validation publication page publique MADSuite. |
+| `chk-036-validation-rapport-mensuel-early-access-madsuite.md` | Officiel | Validation rapport mensuel Early Access MADSuite. |
 
 ---
 
@@ -64,8 +65,16 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-033-validation-mvp-revenue-core-madsuite.md`
 - `chk-034-validation-machine-a-clients-madsuite.md`
 - `chk-035-validation-publication-page-publique-madsuite.md`
+- `chk-036-validation-rapport-mensuel-early-access-madsuite.md`
 - `chk-017-validation-mvp-mad-ariane.md`
 - `chk-032-validation-claim-madproof.md`
+
+### MADSuite Early Access
+
+- `chk-036-validation-rapport-mensuel-early-access-madsuite.md`
+- `chk-035-validation-publication-page-publique-madsuite.md`
+- `chk-034-validation-machine-a-clients-madsuite.md`
+- `chk-033-validation-mvp-revenue-core-madsuite.md`
 
 ### MADSuite cognition / MADPROOF
 
@@ -79,66 +88,22 @@ Une checklist sert à valider un processus, un livrable ou une démarche avant d
 - `chk-023-validation-mesures-execution-commerciale.md`
 - `chk-031-validation-projet-pret-a-demarrer.md`
 
-### Projet client et livraison
-
-- `chk-031-validation-projet-pret-a-demarrer.md`
-- `chk-003-livraison-client.md`
-- `chk-010-validation-bloc-projet-client-livraison.md`
-
-### Preuve client et portfolio
-
-- `chk-030-validation-preuve-client.md`
-- `chk-026-validation-contenu-public-mad-devops.md`
-- `chk-003-livraison-client.md`
-
-### Pilotage fondateur
-
-- `chk-029-validation-cockpit-fondateur.md`
-- `chk-007-validation-bloc-pilotage-fondateur.md`
-- `chk-006-deploiement-pilotage-mad-devops.md`
-- `chk-011-validation-bloc-amelioration-continue.md`
-
-### Demandes entrantes
-
-- `chk-027-validation-reponse-demande-entrante.md`
-- `chk-028-validation-fermeture-demande-entrante.md`
-- `chk-021-validation-opportunite-machine-a-clients.md`
-- `chk-024-validation-offre-terrain-mad-devops.md`
-
 ### Publication publique
 
 - `chk-035-validation-publication-page-publique-madsuite.md`
+- `chk-036-validation-rapport-mensuel-early-access-madsuite.md`
 - `chk-015-validation-site-web-mad-devops.md`
 - `chk-025-validation-page-guide-client-rapide.md`
 - `chk-026-validation-contenu-public-mad-devops.md`
-- `chk-030-validation-preuve-client.md`
-- `chk-027-validation-reponse-demande-entrante.md`
-- `chk-028-validation-fermeture-demande-entrante.md`
-- `chk-034-validation-machine-a-clients-madsuite.md`
 
 ### Machine à clients
 
 - `chk-034-validation-machine-a-clients-madsuite.md`
 - `chk-035-validation-publication-page-publique-madsuite.md`
+- `chk-036-validation-rapport-mensuel-early-access-madsuite.md`
 - `chk-021-validation-opportunite-machine-a-clients.md`
 - `chk-022-validation-activation-commerciale-7-jours.md`
 - `chk-023-validation-mesures-execution-commerciale.md`
-- `chk-024-validation-offre-terrain-mad-devops.md`
-- `chk-025-validation-page-guide-client-rapide.md`
-- `chk-026-validation-contenu-public-mad-devops.md`
-- `chk-030-validation-preuve-client.md`
-- `chk-031-validation-projet-pret-a-demarrer.md`
-- `chk-027-validation-reponse-demande-entrante.md`
-- `chk-028-validation-fermeture-demande-entrante.md`
-- `chk-011-validation-bloc-amelioration-continue.md`
-
-### CerveauMAD
-
-- `chk-020-validation-entree-cerveaumad.md`
-
-### BaseMAD
-
-- `chk-018-validation-entree-basemad.md`
 
 ---
 
