@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 5.1
+Version: 5.2
 Dernière révision: 2026-07-01
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -40,6 +40,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 | `synthese-chaine-commerciale-mad-devops.md` | Officiel | Synthèse de la chaîne commerciale MAD DevOps. |
 | `routine-commerciale-hebdomadaire-mad-devops.md` | Officiel | Routine commerciale hebdomadaire MAD DevOps. |
 | `synthese-preuve-client-portfolio-mad-devops.md` | Officiel | Synthèse du bloc preuve client et portfolio. |
+| `synthese-finale-bloc-preuve-client-portfolio.md` | Officiel | Synthèse finale du bloc Preuve client / Portfolio. |
 | `offre-simple-mad-devops.md` | Officiel | Offre simple. |
 | `offre-terrain-mad-devops.md` | Officiel | Offre courte envoyable après qualification d’une opportunité. |
 | `offres-packagees-mad-devops.md` | Officiel | Offres packagées. |
@@ -80,6 +81,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 
 ### Preuve client et portfolio
 
+- `synthese-finale-bloc-preuve-client-portfolio.md`
 - `synthese-preuve-client-portfolio-mad-devops.md`
 - `exemple-fiche-projet-public-mad-devops.md`
 - `exemple-validation-chk-030-preuve-client.md`
@@ -97,6 +99,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-traitement-demandes-entrantes-mad-devops.md`
 - `synthese-chaine-commerciale-mad-devops.md`
 - `synthese-preuve-client-portfolio-mad-devops.md`
+- `synthese-finale-bloc-preuve-client-portfolio.md`
 - `exemple-fiche-projet-public-mad-devops.md`
 - `exemple-validation-chk-030-preuve-client.md`
 
@@ -120,6 +123,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `page-guide-client-rapide-mad-devops.md`
 - `exemple-fiche-contenu-public-guide-client.md`
 - `synthese-preuve-client-portfolio-mad-devops.md`
+- `synthese-finale-bloc-preuve-client-portfolio.md`
 - `exemple-fiche-projet-public-mad-devops.md`
 - `exemple-validation-chk-030-preuve-client.md`
 
@@ -129,6 +133,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `synthese-chaine-demandes-entrantes-mad-devops.md`
 - `synthese-traitement-demandes-entrantes-mad-devops.md`
 - `synthese-preuve-client-portfolio-mad-devops.md`
+- `synthese-finale-bloc-preuve-client-portfolio.md`
 - `exemple-fiche-projet-public-mad-devops.md`
 - `exemple-validation-chk-030-preuve-client.md`
 - `frontiere-public-prive-mad-devops.md`
