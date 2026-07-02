@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 3.2
-Dernière révision: 2026-07-01
+Version: 3.3
+Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -57,10 +57,16 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 | `play-034-revue-hebdomadaire-demandes-entrantes.md` | Officiel | Revue hebdomadaire des demandes entrantes. |
 | `play-035-revue-mensuelle-preuves-client.md` | Officiel | Revue mensuelle des preuves client. |
 | `play-036-suivi-hebdomadaire-projet-client.md` | Officiel | Suivi hebdomadaire des projets client actifs. |
+| `play-037-ajouter-ou-corriger-claim-madproof.md` | Officiel | Ajouter, corriger ou supprimer un claim MADPROOF. |
 
 ---
 
 ## Playbooks prioritaires
+
+### MADSuite cognition / MADPROOF
+
+- `play-024-transformer-idee-cognitive-en-fonctionnalite-madsuite.md`
+- `play-037-ajouter-ou-corriger-claim-madproof.md`
 
 ### Projet client et livraison
 
@@ -116,36 +122,10 @@ Un playbook décrit une méthode d’exécution : quoi faire, dans quel ordre, a
 - `play-035-revue-mensuelle-preuves-client.md`
 - `play-036-suivi-hebdomadaire-projet-client.md`
 
-### Pilotage MAD DevOps
-
-- `play-016-deploiement-demarche-pilotage-mad-devops.md`
-- `play-026-appliquer-base-operationnelle-mad-devops.md`
-- `play-027-executer-processus-cerveau-mad.md`
-- `play-028-revue-registre-cerveaumad.md`
-- `play-029-transformer-entree-cerveaumad-en-action-commerciale.md`
-- `play-030-routine-hebdomadaire-machine-a-clients.md`
-- `play-031-activation-7-jours-commerciale.md`
-- `play-032-traiter-contenu-public-candidat.md`
-- `play-033-convertir-demande-entrante-en-opportunite.md`
-- `play-034-revue-hebdomadaire-demandes-entrantes.md`
-- `play-035-revue-mensuelle-preuves-client.md`
-- `play-036-suivi-hebdomadaire-projet-client.md`
-
 ---
 
 ## Règles d’usage
 
-- Lire le playbook avant d’exécuter une démarche structurée.
-- Utiliser les templates et checklists liés au playbook.
-- Adapter le niveau de détail au contexte réel.
-- Ne pas transformer un playbook en bureaucratie.
-- Documenter les écarts importants et les apprentissages.
-
----
-
-## Liens utiles
-
-- `SYSTEME_MAD/MANIFEST.md`
-- `SYSTEME_MAD/03-STANDARDS/README.md`
-- `SYSTEME_MAD/07-TEMPLATES/README.md`
-- `SYSTEME_MAD/09-CHECKLISTS/README.md`
+- Utiliser un playbook lorsqu’une action est récurrente ou risquée.
+- Ne pas transformer un playbook en document théorique.
+- Garder les étapes concrètes, vérifiables et réutilisables.
