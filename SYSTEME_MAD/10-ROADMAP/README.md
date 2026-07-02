@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Roadmap
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -37,7 +37,9 @@ Il sert à garder une vision claire de ce qui est fait, en cours, à surveiller 
 SYSTEME_MAD/10-ROADMAP/roadmap-mvp-early-access-madsuite.md
 SYSTEME_MAD/10-ROADMAP/tickets-sprint-1-parcours-premiere-facture-madsuite.md
 SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-developpeur-mvp-early-access-madsuite.md
+SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-developpeur-sprint-1-premiere-facture-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-045-validation-mvp-early-access-madsuite.md
+SYSTEME_MAD/09-CHECKLISTS/chk-046-validation-sprint-1-premiere-facture-madsuite.md
 ```
 
 ### MADSuite / MADPROOF
