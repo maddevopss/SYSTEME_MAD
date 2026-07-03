@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Tableau d’exécution multi-repo MADSuite
-Version: 1.9
+Version: 2.0
 Dernière révision: 2026-07-03
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -97,7 +97,7 @@ Chaque chantier doit avoir :
 | README minimal E2E | `maddevopss/e2e` | Complété | `maddevopss/e2e/README.md` | `#12` fermée | Ajouter squelette Playwright |
 | README minimal desktop-agent | `maddevopss/desktop-agent` | Complété | `maddevopss/desktop-agent/README.md` | `#13` fermée | Maintenir avec l’implémentation réelle |
 | Matrice CI/CD multi-repo | Tous repos | Complété | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` v1.1 | `#14` fermée | Planifier durcissements restants |
-| Release Web/API | Frontend + Backend | À valider | `SYSTEME_MAD/05-PLAY/play-041-release-madsuite-web-api.md` utilisé sur une release réelle | `#15` ouverte | Utiliser avant prochaine release |
+| Release Web/API | Frontend + Backend | Dry run complété, release réelle à valider | `SYSTEME_MAD/10-ROADMAP/release-2026-07-03-web-api-dry-run.md` | `#15` ouverte | Faire validation staging/prod réelle + smoke test manuel |
 | Initialisation repos exécution | E2E + Desktop-agent | Complété partiel | Repos clarifiés et documentés | `#16` fermée | Ajouter structure technique E2E au prochain cycle |
 
 ---
@@ -120,7 +120,7 @@ Chaque chantier doit avoir :
 | `#12` — Appliquer README minimal au repo e2e | `bleeband/SYSTEME_MAD` | P2 | Fermée |
 | `#13` — Appliquer README minimal au repo desktop-agent | `bleeband/SYSTEME_MAD` | P2 | Fermée |
 | `#14` — Remplir la matrice CI/CD multi-repo CHK-040 | `bleeband/SYSTEME_MAD` | P2 | Fermée |
-| `#15` — Appliquer PLAY-041 release Web/API MADSuite | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
+| `#15` — Appliquer PLAY-041 release Web/API MADSuite | `bleeband/SYSTEME_MAD` | P2 | Ouverte — dry run complété |
 | `#16` — Appliquer PLAY-042 initialisation repos d’exécution | `bleeband/SYSTEME_MAD` | P2 | Fermée |
 
 ---
@@ -139,7 +139,7 @@ Statut actuel : **complété pour les audits initiaux; durcissements restants su
 
 ## Definition of Done P2
 
-Statut actuel : **complété documentairement; release Web/API à valider**.
+Statut actuel : **complété documentairement; release Web/API réelle à valider**.
 
 ---
 
@@ -147,8 +147,9 @@ Statut actuel : **complété documentairement; release Web/API à valider**.
 
 Priorité immédiate :
 
-1. `#15` — Appliquer PLAY-041 lors de la prochaine release Web/API.
-2. Planifier les durcissements futurs listés dans CHK-040 : tests backend DB portables, E2E Playwright, CI desktop-agent, branch protection, secret scanning.
+1. Faire une validation staging/prod réelle avec smoke test manuel selon PLAY-041.
+2. Ensuite seulement, fermer `#15` si la release est confirmée.
+3. Planifier les durcissements futurs : tests backend DB portables, E2E Playwright, CI desktop-agent, branch protection, secret scanning.
 
 ---
 
