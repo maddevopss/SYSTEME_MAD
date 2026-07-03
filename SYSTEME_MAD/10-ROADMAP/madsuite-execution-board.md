@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Tableau d’exécution multi-repo MADSuite
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-02
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -56,47 +56,49 @@ Chaque chantier doit avoir :
 | À valider | Livrable créé, validation nécessaire |
 | Complété | Livrable terminé et utilisable |
 | Réservé | Dépôt ou chantier prévu, mais non encore actif |
+| Bloqué permissions | Travail prêt, mais écriture GitHub indisponible dans le dépôt cible |
 
 ---
 
 ## P0 — Alignement immédiat
 
-| Chantier | Dépôt responsable | Statut | Preuve attendue | Risque si non fait | Prochaine action |
+| Chantier | Dépôt responsable | Statut | Preuve attendue | Issue | Prochaine action |
 |---|---|---|---|---|---|
-| Cartographie officielle des dépôts | `bleeband/SYSTEME_MAD` | Complété | `SYSTEME_MAD/00-SYSTEME-MAD/repos.md` | Confusion entre source système et repos de dev | Réviser à chaque création ou migration de repo |
-| README officiel backend | `maddevopss/madsuite-backend` | À valider | `README.md` racine | Onboarding difficile, déploiement/migrations flous | Valider commandes, env et stratégie de migration |
-| README officiel frontend | `maddevopss/madsuite-frontend` | À valider | `README.md` racine | README temporaire ou incomplet, perte de contexte | Valider routes, providers, env et workflow Vercel |
-| Décision séparation `e2e` et `desktop-agent` | `bleeband/SYSTEME_MAD` | Complété | `ADR-004-separation-repos-execution-madsuite.md` | Dépôts vides ou rôle ambigu | Initialiser les dépôts ou les marquer réservés |
-| Statut repo `e2e` | `maddevopss/e2e` | Réservé | README minimal ou structure Playwright | Tests dispersés, non-reproductibles | Créer README + squelette Playwright |
-| Statut repo `desktop-agent` | `maddevopss/desktop-agent` | Réservé | README minimal ou structure Electron/Tauri | Agent local non traçable ou mélangé au frontend | Créer README + squelette agent |
+| Cartographie officielle des dépôts | `bleeband/SYSTEME_MAD` | Complété | `SYSTEME_MAD/00-SYSTEME-MAD/repos.md` | N/A | Réviser à chaque création ou migration de repo |
+| README officiel backend | `maddevopss/madsuite-backend` | Bloqué permissions | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-backend.md` | `#1` | Appliquer le README quand les permissions seront corrigées |
+| README officiel frontend | `maddevopss/madsuite-frontend` | Bloqué permissions | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-frontend.md` | `#2` | Appliquer le README quand les permissions seront corrigées |
+| Décision séparation `e2e` et `desktop-agent` | `bleeband/SYSTEME_MAD` | Complété | `ADR-004-separation-repos-execution-madsuite.md` | N/A | Maintenir l’ADR si la stratégie change |
+| Statut repo `e2e` | `maddevopss/e2e` | Réservé | README minimal ou structure Playwright | `#3` | Créer README + squelette Playwright ou déclarer réservé |
+| Statut repo `desktop-agent` | `maddevopss/desktop-agent` | Réservé | README minimal ou structure Electron/Tauri | `#4` | Créer README + squelette agent ou déclarer réservé |
 
 ---
 
 ## P1 — Stabilisation produit
 
-| Chantier | Dépôt responsable | Statut | Preuve attendue | Risque si non fait | Prochaine action |
+| Chantier | Dépôt responsable | Statut | Preuve attendue | Issue | Prochaine action |
 |---|---|---|---|---|---|
-| Audit MADPROOF du code réel | `madsuite-frontend` + `madsuite-backend` | À faire | Liste des textes, routes, données et prompts à corriger | Claims trop forts, risque médical, confiance affaiblie | Auditer `/api/cognitive`, `/api/ai-assistant`, UI cognitive et textes visibles |
-| Audit règles ESLint désactivées | `maddevopss/madsuite-frontend` | À faire | Plan de réactivation progressif | Bugs React/tests cachés, dette qualité | Classer les règles par risque et réactiver par lots |
-| Audit CI/tests/build | Tous repos actifs | À faire | Matrice CI par repo | Non-régression insuffisante | Vérifier workflows, scripts, build et tests |
-| Cohérence modules frontend/backend | `madsuite-frontend` + `madsuite-backend` | À faire | Tableau modules UI/API | Modules visibles sans API ou API sans UI | Comparer `ModuleGate`, `requireModule` et routes backend |
-| Documentation sécurité publique | Repos publics | À faire | `SECURITY.md` minimal | Signal faible sur la gouvernance sécurité | Ajouter une politique simple de signalement et secrets |
-| Board GitHub Issues | Tous repos | En cours | Issues P0/P1 ouvertes | Roadmap non exécutable | Créer les issues initiales puis les relier ici |
+| Audit MADPROOF du code réel | `madsuite-frontend` + `madsuite-backend` | À faire | Liste des textes, routes, données et prompts à corriger | `#5` | Auditer `/api/cognitive`, `/api/ai-assistant`, UI cognitive et textes visibles |
+| Audit règles ESLint désactivées | `maddevopss/madsuite-frontend` | À faire | Plan de réactivation progressif | `#6` | Classer les règles par risque et réactiver par lots |
+| Audit CI/tests/build | Tous repos actifs | À faire | Matrice CI par repo | `#7` | Vérifier workflows, scripts, build et tests |
+| Cohérence modules frontend/backend | `madsuite-frontend` + `madsuite-backend` | À faire | Tableau modules UI/API | `#8` | Comparer `ModuleGate`, `requireModule` et routes backend |
+| Documentation sécurité publique | Repos publics | En cours | `SYSTEME_MAD/07-TEMPLATES/security-repo-public-madsuite.md` | `#9` | Appliquer `SECURITY.md` aux repos publics quand les permissions seront disponibles |
+| Board GitHub Issues | Tous repos | Complété | Issues P0/P1 ouvertes | `#1` à `#9` | Maintenir les issues à jour |
 
 ---
 
-## Issues à créer ou relier
+## Issues créées ou reliées
 
-| Issue | Repo recommandé | Priorité | Statut |
+| Issue | Repo de suivi | Priorité | Statut |
 |---|---|---|---|
-| Backend README officiel | `maddevopss/madsuite-backend` | P0 | À créer |
-| Frontend README officiel | `maddevopss/madsuite-frontend` | P0 | À créer |
-| Initialiser ou réserver explicitement `e2e` | `maddevopss/e2e` | P0 | À créer |
-| Initialiser ou réserver explicitement `desktop-agent` | `maddevopss/desktop-agent` | P0 | À créer |
-| Audit MADPROOF du code réel | `bleeband/SYSTEME_MAD` ou repos concernés | P1 | À créer |
-| Audit ESLint frontend | `maddevopss/madsuite-frontend` | P1 | À créer |
-| Audit CI/tests/build multi-repo | `bleeband/SYSTEME_MAD` | P1 | À créer |
-| Cohérence modules frontend/backend | `bleeband/SYSTEME_MAD` | P1 | À créer |
+| `#1` — Appliquer README officiel backend MADSuite | `bleeband/SYSTEME_MAD` | P0 | Ouverte |
+| `#2` — Appliquer README officiel frontend MADSuite | `bleeband/SYSTEME_MAD` | P0 | Ouverte |
+| `#3` — Initialiser ou réserver explicitement le repo e2e | `bleeband/SYSTEME_MAD` | P0 | Ouverte |
+| `#4` — Initialiser ou réserver explicitement le repo desktop-agent | `bleeband/SYSTEME_MAD` | P0 | Ouverte |
+| `#5` — Audit MADPROOF du code réel MADSuite | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
+| `#6` — Audit et plan de réactivation ESLint frontend | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
+| `#7` — Audit CI, tests et build multi-repo | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
+| `#8` — Vérifier cohérence modules frontend/backend | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
+| `#9` — Ajouter politique SECURITY minimale aux repos publics | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
 
 ---
 
