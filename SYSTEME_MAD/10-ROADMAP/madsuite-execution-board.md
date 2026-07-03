@@ -1,8 +1,8 @@
 ---
 Projet: MADSuite
 Document: Tableau d’exécution multi-repo MADSuite
-Version: 1.1
-Dernière révision: 2026-07-02
+Version: 1.2
+Dernière révision: 2026-07-03
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -15,7 +15,7 @@ Ce tableau transforme la gouvernance du Système MAD en actions concrètes pour 
 
 Il sert à suivre :
 
-- les chantiers P0 et P1;
+- les chantiers P0, P1 et P2;
 - le dépôt responsable;
 - le statut réel;
 - les preuves attendues;
@@ -47,7 +47,7 @@ Chaque chantier doit avoir :
 |---|---|
 | P0 | Bloquant pour l’alignement, la sécurité, la gouvernance ou la lisibilité du projet |
 | P1 | Important pour stabiliser l’exécution, réduire la dette ou préparer la production |
-| P2 | Amélioration utile, non bloquante à court terme |
+| P2 | Hardening, documentation appliquable, CI/CD, initialisation propre et amélioration structurante |
 
 | Statut | Signification |
 |---|---|
@@ -56,6 +56,7 @@ Chaque chantier doit avoir :
 | À valider | Livrable créé, validation nécessaire |
 | Complété | Livrable terminé et utilisable |
 | Réservé | Dépôt ou chantier prévu, mais non encore actif |
+| Prêt à appliquer | Fichier produit dans SYSTEME_MAD, à copier dans le repo cible |
 | Bloqué permissions | Travail prêt, mais écriture GitHub indisponible dans le dépôt cible |
 
 ---
@@ -86,6 +87,21 @@ Chaque chantier doit avoir :
 
 ---
 
+## P2 — Hardening et initialisation propre
+
+| Chantier | Dépôt responsable | Statut | Preuve attendue | Issue | Prochaine action |
+|---|---|---|---|---|---|
+| Plan P2 hardening | `bleeband/SYSTEME_MAD` | Complété | `SYSTEME_MAD/10-ROADMAP/madsuite-p2-hardening-board.md` | N/A | Maintenir le plan à jour |
+| `.env.example` backend | `maddevopss/madsuite-backend` | Prêt à appliquer | `SYSTEME_MAD/08-BOOTSTRAPS/env-example-madsuite-backend.md` | `#10` | Copier dans le repo backend quand possible |
+| `.env.example` frontend | `maddevopss/madsuite-frontend` | Prêt à appliquer | `SYSTEME_MAD/08-BOOTSTRAPS/env-example-madsuite-frontend.md` | `#11` | Copier dans le repo frontend quand possible |
+| README minimal E2E | `maddevopss/e2e` | Prêt à appliquer | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-e2e.md` | `#12` | Copier dans le repo E2E quand possible |
+| README minimal desktop-agent | `maddevopss/desktop-agent` | Prêt à appliquer | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-desktop-agent.md` | `#13` | Copier dans le repo desktop-agent quand possible |
+| Matrice CI/CD multi-repo | Tous repos | À valider | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` | `#14` | Remplir avec les commandes et workflows réels |
+| Release Web/API | Frontend + Backend | À valider | `SYSTEME_MAD/05-PLAY/play-041-release-madsuite-web-api.md` | `#15` | Utiliser avant prochaine release |
+| Initialisation repos exécution | E2E + Desktop-agent | À valider | `SYSTEME_MAD/05-PLAY/play-042-initialiser-repo-execution-madsuite.md` | `#16` | Appliquer aux repos réservés |
+
+---
+
 ## Issues créées ou reliées
 
 | Issue | Repo de suivi | Priorité | Statut |
@@ -99,6 +115,13 @@ Chaque chantier doit avoir :
 | `#7` — Audit CI, tests et build multi-repo | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
 | `#8` — Vérifier cohérence modules frontend/backend | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
 | `#9` — Ajouter politique SECURITY minimale aux repos publics | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
+| `#10` — Appliquer `.env.example` backend MADSuite | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
+| `#11` — Appliquer `.env.example` frontend MADSuite | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
+| `#12` — Appliquer README minimal au repo e2e | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
+| `#13` — Appliquer README minimal au repo desktop-agent | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
+| `#14` — Remplir la matrice CI/CD multi-repo CHK-040 | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
+| `#15` — Appliquer PLAY-041 release Web/API MADSuite | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
+| `#16` — Appliquer PLAY-042 initialisation repos d’exécution | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
 
 ---
 
@@ -126,6 +149,19 @@ La phase P1 est considérée complétée lorsque :
 - la matrice CI/tests/build est documentée;
 - les repos publics ont une politique minimale de sécurité;
 - les issues P1 sont ouvertes, fermées ou explicitement reportées.
+
+---
+
+## Definition of Done P2
+
+La phase P2 est considérée complétée lorsque :
+
+- les `.env.example` backend/frontend sont appliqués dans les repos cibles;
+- les repos `e2e` et `desktop-agent` ont au minimum un README officiel;
+- la checklist CHK-040 est remplie avec l’état réel;
+- les playbooks PLAY-041 et PLAY-042 sont utilisables;
+- les repos publics ont `README.md`, `.env.example` si requis et `SECURITY.md`;
+- les fichiers bootstrap de SYSTEME_MAD sont copiés ou explicitement reportés.
 
 ---
 
