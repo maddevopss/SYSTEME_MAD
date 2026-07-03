@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Tableau d’exécution multi-repo MADSuite
-Version: 1.5
+Version: 1.6
 Dernière révision: 2026-07-03
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -81,7 +81,7 @@ Chaque chantier doit avoir :
 | Audit MADPROOF du code réel | `madsuite-frontend` + `madsuite-backend` | Complété | `SYSTEME_MAD/09-CHECKLISTS/audit-005-madproof-code-reel-madsuite.md` + PR backend `#3` mergée | `#5` fermée | Surveiller wording futur via MADPROOF |
 | Audit règles ESLint désactivées | `maddevopss/madsuite-frontend` | À faire | Plan de réactivation progressif | `#6` ouverte | Classer les règles par risque et réactiver par lots |
 | Audit CI/tests/build | Tous repos actifs | À faire | Matrice CI par repo | `#7` ouverte | Vérifier workflows, scripts, build et tests |
-| Cohérence modules frontend/backend | `madsuite-frontend` + `madsuite-backend` | À faire | Tableau modules UI/API | `#8` ouverte | Comparer `ModuleGate`, `requireModule` et routes backend |
+| Cohérence modules frontend/backend | `madsuite-frontend` + `madsuite-backend` | Complété | `SYSTEME_MAD/09-CHECKLISTS/audit-008-coherence-modules-frontend-backend.md` + PR backend `#4` + PR frontend `#2` mergées | `#8` fermée | Surveiller tout nouveau module via registry + gates |
 | Documentation sécurité publique | Repos publics | Complété | Politiques repo minimales dans les repos publics | `#9` fermée | Raffiner plus tard si nécessaire |
 | Board GitHub Issues | Tous repos | Complété | Issues P0/P1/P2 suivies | `#1` à `#16` | Maintenir les issues à jour |
 
@@ -113,7 +113,7 @@ Chaque chantier doit avoir :
 | `#5` — Audit MADPROOF du code réel MADSuite | `bleeband/SYSTEME_MAD` | P1 | Fermée |
 | `#6` — Audit et plan de réactivation ESLint frontend | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
 | `#7` — Audit CI, tests et build multi-repo | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
-| `#8` — Vérifier cohérence modules frontend/backend | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
+| `#8` — Vérifier cohérence modules frontend/backend | `bleeband/SYSTEME_MAD` | P1 | Fermée |
 | `#9` — Ajouter politique SECURITY minimale aux repos publics | `bleeband/SYSTEME_MAD` | P1 | Fermée |
 | `#10` — Appliquer `.env.example` backend MADSuite | `bleeband/SYSTEME_MAD` | P2 | Fermée |
 | `#11` — Appliquer `.env.example` frontend MADSuite | `bleeband/SYSTEME_MAD` | P2 | Fermée |
@@ -157,10 +157,9 @@ Statut actuel : **complété documentairement, audits CI/release à valider**.
 
 Priorité immédiate :
 
-1. `#8` — Cohérence modules frontend/backend.
-2. `#6` — Audit ESLint frontend.
-3. `#7` / `#14` — CI, tests, build et matrice CHK-040.
-4. `#15` — PLAY-041 à utiliser lors de la prochaine release.
+1. `#6` — Audit ESLint frontend.
+2. `#7` / `#14` — CI, tests, build et matrice CHK-040.
+3. `#15` — PLAY-041 à utiliser lors de la prochaine release.
 
 ---
 
