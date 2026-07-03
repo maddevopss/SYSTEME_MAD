@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Tableau d’exécution multi-repo MADSuite
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-07-03
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -66,11 +66,11 @@ Chaque chantier doit avoir :
 | Chantier | Dépôt responsable | Statut | Preuve attendue | Issue | Prochaine action |
 |---|---|---|---|---|---|
 | Cartographie officielle des dépôts | `bleeband/SYSTEME_MAD` | Complété | `SYSTEME_MAD/00-SYSTEME-MAD/repos.md` | N/A | Réviser à chaque création ou migration de repo |
-| README officiel backend | `maddevopss/madsuite-backend` | Bloqué permissions | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-backend.md` | `#1` | Appliquer le README quand les permissions seront corrigées |
-| README officiel frontend | `maddevopss/madsuite-frontend` | Bloqué permissions | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-frontend.md` | `#2` | Appliquer le README quand les permissions seront corrigées |
+| README officiel backend | `maddevopss/madsuite-backend` | Complété | `maddevopss/madsuite-backend/README.md` | `#1` fermée | Maintenir avec le code réel |
+| README officiel frontend | `maddevopss/madsuite-frontend` | Complété | `maddevopss/madsuite-frontend/README.md` | `#2` fermée | Maintenir avec le code réel |
 | Décision séparation `e2e` et `desktop-agent` | `bleeband/SYSTEME_MAD` | Complété | `ADR-004-separation-repos-execution-madsuite.md` | N/A | Maintenir l’ADR si la stratégie change |
-| Statut repo `e2e` | `maddevopss/e2e` | Réservé | README minimal ou structure Playwright | `#3` | Créer README + squelette Playwright ou déclarer réservé |
-| Statut repo `desktop-agent` | `maddevopss/desktop-agent` | Réservé | README minimal ou structure Electron/Tauri | `#4` | Créer README + squelette agent ou déclarer réservé |
+| Statut repo `e2e` | `maddevopss/e2e` | Complété | `maddevopss/e2e/README.md` | `#3` fermée | Initialiser Playwright quand prêt |
+| Statut repo `desktop-agent` | `maddevopss/desktop-agent` | Complété | `maddevopss/desktop-agent/README.md` | `#4` fermée | Maintenir garde-fous MADPROOF |
 
 ---
 
@@ -78,12 +78,12 @@ Chaque chantier doit avoir :
 
 | Chantier | Dépôt responsable | Statut | Preuve attendue | Issue | Prochaine action |
 |---|---|---|---|---|---|
-| Audit MADPROOF du code réel | `madsuite-frontend` + `madsuite-backend` | À faire | Liste des textes, routes, données et prompts à corriger | `#5` | Auditer `/api/cognitive`, `/api/ai-assistant`, UI cognitive et textes visibles |
-| Audit règles ESLint désactivées | `maddevopss/madsuite-frontend` | À faire | Plan de réactivation progressif | `#6` | Classer les règles par risque et réactiver par lots |
-| Audit CI/tests/build | Tous repos actifs | À faire | Matrice CI par repo | `#7` | Vérifier workflows, scripts, build et tests |
-| Cohérence modules frontend/backend | `madsuite-frontend` + `madsuite-backend` | À faire | Tableau modules UI/API | `#8` | Comparer `ModuleGate`, `requireModule` et routes backend |
-| Documentation sécurité publique | Repos publics | En cours | `SYSTEME_MAD/07-TEMPLATES/security-repo-public-madsuite.md` | `#9` | Appliquer `SECURITY.md` aux repos publics quand les permissions seront disponibles |
-| Board GitHub Issues | Tous repos | Complété | Issues P0/P1 ouvertes | `#1` à `#9` | Maintenir les issues à jour |
+| Audit MADPROOF du code réel | `madsuite-frontend` + `madsuite-backend` | À faire | Liste des textes, routes, données et prompts à corriger | `#5` ouverte | Auditer `/api/cognitive`, `/api/ai-assistant`, UI cognitive et textes visibles |
+| Audit règles ESLint désactivées | `maddevopss/madsuite-frontend` | À faire | Plan de réactivation progressif | `#6` ouverte | Classer les règles par risque et réactiver par lots |
+| Audit CI/tests/build | Tous repos actifs | À faire | Matrice CI par repo | `#7` ouverte | Vérifier workflows, scripts, build et tests |
+| Cohérence modules frontend/backend | `madsuite-frontend` + `madsuite-backend` | À faire | Tableau modules UI/API | `#8` ouverte | Comparer `ModuleGate`, `requireModule` et routes backend |
+| Documentation sécurité publique | Repos publics | Complété | Politiques repo minimales dans les repos publics | `#9` fermée | Raffiner plus tard si nécessaire |
+| Board GitHub Issues | Tous repos | Complété | Issues P0/P1/P2 suivies | `#1` à `#16` | Maintenir les issues à jour |
 
 ---
 
@@ -92,13 +92,13 @@ Chaque chantier doit avoir :
 | Chantier | Dépôt responsable | Statut | Preuve attendue | Issue | Prochaine action |
 |---|---|---|---|---|---|
 | Plan P2 hardening | `bleeband/SYSTEME_MAD` | Complété | `SYSTEME_MAD/10-ROADMAP/madsuite-p2-hardening-board.md` | N/A | Maintenir le plan à jour |
-| `.env.example` backend | `maddevopss/madsuite-backend` | Prêt à appliquer | `SYSTEME_MAD/08-BOOTSTRAPS/env-example-madsuite-backend.md` | `#10` | Copier dans le repo backend quand possible |
-| `.env.example` frontend | `maddevopss/madsuite-frontend` | Prêt à appliquer | `SYSTEME_MAD/08-BOOTSTRAPS/env-example-madsuite-frontend.md` | `#11` | Copier dans le repo frontend quand possible |
-| README minimal E2E | `maddevopss/e2e` | Prêt à appliquer | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-e2e.md` | `#12` | Copier dans le repo E2E quand possible |
-| README minimal desktop-agent | `maddevopss/desktop-agent` | Prêt à appliquer | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-desktop-agent.md` | `#13` | Copier dans le repo desktop-agent quand possible |
-| Matrice CI/CD multi-repo | Tous repos | À valider | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` | `#14` | Remplir avec les commandes et workflows réels |
-| Release Web/API | Frontend + Backend | À valider | `SYSTEME_MAD/05-PLAY/play-041-release-madsuite-web-api.md` | `#15` | Utiliser avant prochaine release |
-| Initialisation repos exécution | E2E + Desktop-agent | À valider | `SYSTEME_MAD/05-PLAY/play-042-initialiser-repo-execution-madsuite.md` | `#16` | Appliquer aux repos réservés |
+| `.env.example` backend | `maddevopss/madsuite-backend` | Complété | `maddevopss/madsuite-backend/.env.example` | `#10` fermée | Valider contre le code réel à l’audit CI/env |
+| `.env.example` frontend | `maddevopss/madsuite-frontend` | Complété | `maddevopss/madsuite-frontend/.env.example` | `#11` fermée | Valider contre le code réel à l’audit CI/env |
+| README minimal E2E | `maddevopss/e2e` | Complété | `maddevopss/e2e/README.md` | `#12` fermée | Ajouter squelette Playwright |
+| README minimal desktop-agent | `maddevopss/desktop-agent` | Complété | `maddevopss/desktop-agent/README.md` | `#13` fermée | Maintenir avec l’implémentation réelle |
+| Matrice CI/CD multi-repo | Tous repos | À faire | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` remplie | `#14` ouverte | Remplir avec les commandes et workflows réels |
+| Release Web/API | Frontend + Backend | À valider | `SYSTEME_MAD/05-PLAY/play-041-release-madsuite-web-api.md` utilisé sur une release réelle | `#15` ouverte | Utiliser avant prochaine release |
+| Initialisation repos exécution | E2E + Desktop-agent | Complété partiel | Repos clarifiés et documentés | `#16` fermée | Ajouter structure technique E2E au prochain cycle |
 
 ---
 
@@ -106,22 +106,22 @@ Chaque chantier doit avoir :
 
 | Issue | Repo de suivi | Priorité | Statut |
 |---|---|---|---|
-| `#1` — Appliquer README officiel backend MADSuite | `bleeband/SYSTEME_MAD` | P0 | Ouverte |
-| `#2` — Appliquer README officiel frontend MADSuite | `bleeband/SYSTEME_MAD` | P0 | Ouverte |
-| `#3` — Initialiser ou réserver explicitement le repo e2e | `bleeband/SYSTEME_MAD` | P0 | Ouverte |
-| `#4` — Initialiser ou réserver explicitement le repo desktop-agent | `bleeband/SYSTEME_MAD` | P0 | Ouverte |
+| `#1` — Appliquer README officiel backend MADSuite | `bleeband/SYSTEME_MAD` | P0 | Fermée |
+| `#2` — Appliquer README officiel frontend MADSuite | `bleeband/SYSTEME_MAD` | P0 | Fermée |
+| `#3` — Initialiser ou réserver explicitement le repo e2e | `bleeband/SYSTEME_MAD` | P0 | Fermée |
+| `#4` — Initialiser ou réserver explicitement le repo desktop-agent | `bleeband/SYSTEME_MAD` | P0 | Fermée |
 | `#5` — Audit MADPROOF du code réel MADSuite | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
 | `#6` — Audit et plan de réactivation ESLint frontend | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
 | `#7` — Audit CI, tests et build multi-repo | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
 | `#8` — Vérifier cohérence modules frontend/backend | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
-| `#9` — Ajouter politique SECURITY minimale aux repos publics | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
-| `#10` — Appliquer `.env.example` backend MADSuite | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
-| `#11` — Appliquer `.env.example` frontend MADSuite | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
-| `#12` — Appliquer README minimal au repo e2e | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
-| `#13` — Appliquer README minimal au repo desktop-agent | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
+| `#9` — Ajouter politique SECURITY minimale aux repos publics | `bleeband/SYSTEME_MAD` | P1 | Fermée |
+| `#10` — Appliquer `.env.example` backend MADSuite | `bleeband/SYSTEME_MAD` | P2 | Fermée |
+| `#11` — Appliquer `.env.example` frontend MADSuite | `bleeband/SYSTEME_MAD` | P2 | Fermée |
+| `#12` — Appliquer README minimal au repo e2e | `bleeband/SYSTEME_MAD` | P2 | Fermée |
+| `#13` — Appliquer README minimal au repo desktop-agent | `bleeband/SYSTEME_MAD` | P2 | Fermée |
 | `#14` — Remplir la matrice CI/CD multi-repo CHK-040 | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
 | `#15` — Appliquer PLAY-041 release Web/API MADSuite | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
-| `#16` — Appliquer PLAY-042 initialisation repos d’exécution | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
+| `#16` — Appliquer PLAY-042 initialisation repos d’exécution | `bleeband/SYSTEME_MAD` | P2 | Fermée |
 
 ---
 
@@ -135,6 +135,8 @@ La phase P0 est considérée complétée lorsque :
 - une ADR clarifie le rôle de `e2e` et `desktop-agent`;
 - les repos réservés ont au minimum un README ou une issue de démarrage;
 - les chantiers P0 sont visibles dans GitHub Issues ou dans ce tableau.
+
+Statut actuel : **complété**.
 
 ---
 
@@ -150,6 +152,8 @@ La phase P1 est considérée complétée lorsque :
 - les repos publics ont une politique minimale de sécurité;
 - les issues P1 sont ouvertes, fermées ou explicitement reportées.
 
+Statut actuel : **en cours**.
+
 ---
 
 ## Definition of Done P2
@@ -162,6 +166,20 @@ La phase P2 est considérée complétée lorsque :
 - les playbooks PLAY-041 et PLAY-042 sont utilisables;
 - les repos publics ont `README.md`, `.env.example` si requis et `SECURITY.md`;
 - les fichiers bootstrap de SYSTEME_MAD sont copiés ou explicitement reportés.
+
+Statut actuel : **complété documentairement, audits CI/release à valider**.
+
+---
+
+## Prochaine action recommandée
+
+Priorité immédiate : exécuter les audits ouverts dans cet ordre :
+
+1. `#5` — Audit MADPROOF du code réel.
+2. `#8` — Cohérence modules frontend/backend.
+3. `#6` — Audit ESLint frontend.
+4. `#7` / `#14` — CI, tests, build et matrice CHK-040.
+5. `#15` — PLAY-041 à utiliser lors de la prochaine release.
 
 ---
 
