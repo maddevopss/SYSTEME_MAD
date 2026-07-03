@@ -1,9 +1,9 @@
 ---
 Projet: MADSuite
 Document: Bloc 18 — E2E Revenue Core Validation
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-03
-Statut: Prêt pour exécution E2E
+Statut: Stabilisé — prêt pour exécution E2E
 Auteur: Marc-André Dufour
 ---
 
@@ -35,13 +35,14 @@ signup/login → onboarding → dashboard guidé → premier client → premier 
 
 ## Résultat livré
 
-Une suite E2E dédiée au Revenue Core a été créée.
+Une suite E2E dédiée au Revenue Core a été créée puis stabilisée.
 
 ### Fichiers créés / modifiés
 
 ```text
 e2e/revenue-core.spec.js
 e2e/helpers/auth.js
+e2e/helpers/api.js
 ```
 
 ### Changements principaux
@@ -53,7 +54,65 @@ e2e/helpers/auth.js
 - extraction du token pour les requêtes API ;
 - authentification rapide via API ;
 - création des données de test via API ;
-- validation UI via Playwright.
+- validation UI via Playwright ;
+- ajout de helpers API robustes ;
+- correction des sélecteurs Playwright invalides ;
+- indépendance des scénarios de test.
+
+---
+
+## Stabilisation V1.1
+
+### Nouveau helper API
+
+Fichier :
+
+```text
+e2e/helpers/api.js
+```
+
+Fonctions ajoutées :
+
+- `apiPost()` ;
+- `apiGet()` ;
+- `createClient()` ;
+- `createProject()` ;
+- `createTimeEntry()` ;
+- `createInvoice()`.
+
+Objectif : fournir des erreurs API détaillées au lieu d’un simple `expect(res.ok()).toBeTruthy()` sans contexte.
+
+### Helper auth
+
+Fichier :
+
+```text
+e2e/helpers/auth.js
+```
+
+Changements :
+
+- ajout / stabilisation de `apiLogin()` ;
+- support des credentials E2E via `.env.test` ;
+- extraction du token pour les appels API ;
+- alignement avec les variables d’environnement de test.
+
+### Spec Revenue Core
+
+Fichier :
+
+```text
+e2e/revenue-core.spec.js
+```
+
+Changements :
+
+- remplacement des sélecteurs invalides `has-text()` par `getByRole()` et `getByText()` ;
+- imports des helpers API ;
+- 7 scénarios rendus indépendants ;
+- tests moins dépendants d’un état partagé ;
+- timeouts conservateurs ;
+- assertions plus robustes.
 
 ---
 
@@ -76,11 +135,12 @@ e2e/helpers/auth.js
 - utiliser `apiLogin()` pour authentification rapide ;
 - créer les données nécessaires via API ;
 - tester les comportements visibles via Playwright ;
-- utiliser des sélecteurs robustes : texte, rôle, `has-text` ;
+- utiliser des sélecteurs robustes : texte, rôle, `getByText`, `getByRole` ;
 - éviter les sélecteurs CSS trop précis ;
 - éviter les assertions contenant de la PII ;
 - configurer des timeouts conservateurs ;
-- ne pas tester Stripe réel en production.
+- ne pas tester Stripe réel en production ;
+- rendre chaque scénario autonome.
 
 ---
 
@@ -146,8 +206,8 @@ npx playwright test e2e/revenue-core.spec.js --reporter=html
 
 | Risque / limitation | Niveau | Note |
 |---|---:|---|
-| Tests supposent un compte vide pour P0-1 | Élevé | Prévoir reset DB / seed dédié |
-| Persistance modal supposée en localStorage/sessionStorage | Moyen | Confirmer mécanisme réel |
+| Tests supposent encore un état cohérent de base de test | Moyen | Prévoir reset DB / seed dédié si instable |
+| Persistance modal supposée en localStorage/sessionStorage ou équivalent | Moyen | Confirmer mécanisme réel |
 | Événements funnel validés indirectement | Moyen | Ajouter validation directe si endpoint/test helper disponible |
 | Backend requis sur `127.0.0.1:5000` | Moyen | CI doit démarrer le backend correctement |
 | Stripe réel exclu | Faible | Utiliser mocks/environnement test |
@@ -156,26 +216,25 @@ npx playwright test e2e/revenue-core.spec.js --reporter=html
 
 ## Validation attendue
 
-Statut actuel : prêt pour exécution E2E.
+Statut actuel : stabilisé et prêt pour exécution E2E.
 
 À faire :
 
-1. exécuter `npm run test:e2e` ;
-2. exécuter `npx playwright test e2e/revenue-core.spec.js` ;
-3. documenter les résultats ;
-4. corriger les bugs découverts ;
-5. valider les événements funnel sans PII ;
-6. ajouter la suite au CI si stable.
+1. exécuter `npx playwright test e2e/revenue-core.spec.js` ;
+2. documenter les résultats ;
+3. corriger les bugs découverts ;
+4. valider les événements funnel sans PII ;
+5. ajouter la suite au CI si stable.
 
 ---
 
 ## Décision
 
 ```text
-Statut : Bloc 18 prêt pour exécution
+Statut : Bloc 18 stabilisé, prêt pour exécution
 Cible : Application MADSuite
-Résultat : suite E2E revenue-core créée
-Prochaine étape : exécuter les tests, corriger les échecs, puis ajouter au CI Revenue Core Gate
+Résultat : suite E2E revenue-core créée et stabilisée avec helpers API/auth robustes
+Prochaine étape : exécuter la suite stabilisée, corriger les échecs restants, puis ajouter au CI Revenue Core Gate
 ```
 
 ---
@@ -184,4 +243,5 @@ Prochaine étape : exécuter les tests, corriger les échecs, puis ajouter au CI
 
 | Version | Date | Description |
 |---|---|---|
+| 1.1 | 2026-07-03 | Stabilisation de la suite E2E : helpers API, auth API, sélecteurs robustes, tests indépendants. |
 | 1.0 | 2026-07-03 | Création du suivi E2E Revenue Core Validation. |
