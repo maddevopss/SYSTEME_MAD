@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Tableau d’exécution multi-repo MADSuite
-Version: 1.3
+Version: 1.4
 Dernière révision: 2026-07-03
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -78,7 +78,7 @@ Chaque chantier doit avoir :
 
 | Chantier | Dépôt responsable | Statut | Preuve attendue | Issue | Prochaine action |
 |---|---|---|---|---|---|
-| Audit MADPROOF du code réel | `madsuite-frontend` + `madsuite-backend` | À faire | Liste des textes, routes, données et prompts à corriger | `#5` ouverte | Auditer `/api/cognitive`, `/api/ai-assistant`, UI cognitive et textes visibles |
+| Audit MADPROOF du code réel | `madsuite-frontend` + `madsuite-backend` | En cours | `SYSTEME_MAD/09-CHECKLISTS/audit-005-madproof-code-reel-madsuite.md` | `#5` ouverte | Corriger prompt Brain Dump et Cognitive System Contract |
 | Audit règles ESLint désactivées | `maddevopss/madsuite-frontend` | À faire | Plan de réactivation progressif | `#6` ouverte | Classer les règles par risque et réactiver par lots |
 | Audit CI/tests/build | Tous repos actifs | À faire | Matrice CI par repo | `#7` ouverte | Vérifier workflows, scripts, build et tests |
 | Cohérence modules frontend/backend | `madsuite-frontend` + `madsuite-backend` | À faire | Tableau modules UI/API | `#8` ouverte | Comparer `ModuleGate`, `requireModule` et routes backend |
@@ -110,7 +110,7 @@ Chaque chantier doit avoir :
 | `#2` — Appliquer README officiel frontend MADSuite | `bleeband/SYSTEME_MAD` | P0 | Fermée |
 | `#3` — Initialiser ou réserver explicitement le repo e2e | `bleeband/SYSTEME_MAD` | P0 | Fermée |
 | `#4` — Initialiser ou réserver explicitement le repo desktop-agent | `bleeband/SYSTEME_MAD` | P0 | Fermée |
-| `#5` — Audit MADPROOF du code réel MADSuite | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
+| `#5` — Audit MADPROOF du code réel MADSuite | `bleeband/SYSTEME_MAD` | P1 | Ouverte — audit créé |
 | `#6` — Audit et plan de réactivation ESLint frontend | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
 | `#7` — Audit CI, tests et build multi-repo | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
 | `#8` — Vérifier cohérence modules frontend/backend | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
@@ -126,15 +126,6 @@ Chaque chantier doit avoir :
 ---
 
 ## Definition of Done P0
-
-La phase P0 est considérée complétée lorsque :
-
-- la cartographie officielle des repos existe dans `SYSTEME_MAD`;
-- le backend possède un README officiel utilisable;
-- le frontend possède un README officiel utilisable;
-- une ADR clarifie le rôle de `e2e` et `desktop-agent`;
-- les repos réservés ont au minimum un README ou une issue de démarrage;
-- les chantiers P0 sont visibles dans GitHub Issues ou dans ce tableau.
 
 Statut actuel : **complété**.
 
@@ -158,28 +149,25 @@ Statut actuel : **en cours**.
 
 ## Definition of Done P2
 
-La phase P2 est considérée complétée lorsque :
-
-- les `.env.example` backend/frontend sont appliqués dans les repos cibles;
-- les repos `e2e` et `desktop-agent` ont au minimum un README officiel;
-- la checklist CHK-040 est remplie avec l’état réel;
-- les playbooks PLAY-041 et PLAY-042 sont utilisables;
-- les repos publics ont `README.md`, `.env.example` si requis et `SECURITY.md`;
-- les fichiers bootstrap de SYSTEME_MAD sont copiés ou explicitement reportés.
-
 Statut actuel : **complété documentairement, audits CI/release à valider**.
 
 ---
 
 ## Prochaine action recommandée
 
-Priorité immédiate : exécuter les audits ouverts dans cet ordre :
+Priorité immédiate : corriger les constats P1 de l’audit MADPROOF :
 
-1. `#5` — Audit MADPROOF du code réel.
-2. `#8` — Cohérence modules frontend/backend.
-3. `#6` — Audit ESLint frontend.
-4. `#7` / `#14` — CI, tests, build et matrice CHK-040.
-5. `#15` — PLAY-041 à utiliser lors de la prochaine release.
+1. prompt Brain Dump dans `src/services/ai.service.js`;
+2. wording du `cognitiveSystemContract.js`;
+3. note de transparence sur les signaux applicatifs;
+4. suivi de la correction dans l’issue `#5`.
+
+Ensuite :
+
+1. `#8` — Cohérence modules frontend/backend.
+2. `#6` — Audit ESLint frontend.
+3. `#7` / `#14` — CI, tests, build et matrice CHK-040.
+4. `#15` — PLAY-041 à utiliser lors de la prochaine release.
 
 ---
 
