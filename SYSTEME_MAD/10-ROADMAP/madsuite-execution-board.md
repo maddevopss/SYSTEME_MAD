@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Tableau d’exécution multi-repo MADSuite
-Version: 1.8
+Version: 1.9
 Dernière révision: 2026-07-03
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -96,7 +96,7 @@ Chaque chantier doit avoir :
 | `.env.example` frontend | `maddevopss/madsuite-frontend` | Complété | `maddevopss/madsuite-frontend/.env.example` | `#11` fermée | Valider contre le code réel à l’audit CI/env |
 | README minimal E2E | `maddevopss/e2e` | Complété | `maddevopss/e2e/README.md` | `#12` fermée | Ajouter squelette Playwright |
 | README minimal desktop-agent | `maddevopss/desktop-agent` | Complété | `maddevopss/desktop-agent/README.md` | `#13` fermée | Maintenir avec l’implémentation réelle |
-| Matrice CI/CD multi-repo | Tous repos | À faire | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` remplie | `#14` ouverte | Remplir avec les commandes et workflows réels |
+| Matrice CI/CD multi-repo | Tous repos | Complété | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` v1.1 | `#14` fermée | Planifier durcissements restants |
 | Release Web/API | Frontend + Backend | À valider | `SYSTEME_MAD/05-PLAY/play-041-release-madsuite-web-api.md` utilisé sur une release réelle | `#15` ouverte | Utiliser avant prochaine release |
 | Initialisation repos exécution | E2E + Desktop-agent | Complété partiel | Repos clarifiés et documentés | `#16` fermée | Ajouter structure technique E2E au prochain cycle |
 
@@ -119,7 +119,7 @@ Chaque chantier doit avoir :
 | `#11` — Appliquer `.env.example` frontend MADSuite | `bleeband/SYSTEME_MAD` | P2 | Fermée |
 | `#12` — Appliquer README minimal au repo e2e | `bleeband/SYSTEME_MAD` | P2 | Fermée |
 | `#13` — Appliquer README minimal au repo desktop-agent | `bleeband/SYSTEME_MAD` | P2 | Fermée |
-| `#14` — Remplir la matrice CI/CD multi-repo CHK-040 | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
+| `#14` — Remplir la matrice CI/CD multi-repo CHK-040 | `bleeband/SYSTEME_MAD` | P2 | Fermée |
 | `#15` — Appliquer PLAY-041 release Web/API MADSuite | `bleeband/SYSTEME_MAD` | P2 | Ouverte |
 | `#16` — Appliquer PLAY-042 initialisation repos d’exécution | `bleeband/SYSTEME_MAD` | P2 | Fermée |
 
@@ -133,23 +133,13 @@ Statut actuel : **complété**.
 
 ## Definition of Done P1
 
-La phase P1 est considérée complétée lorsque :
-
-- l’audit MADPROOF du code réel est fait;
-- les textes et noms visibles à risque sont corrigés ou listés;
-- les règles ESLint désactivées sont classées et planifiées;
-- les modules frontend/backend sont comparés;
-- la matrice CI/tests/build est documentée;
-- les repos publics ont une politique minimale de sécurité;
-- les issues P1 sont ouvertes, fermées ou explicitement reportées.
-
-Statut actuel : **complété pour les audits initiaux; durcissements restants suivis en P2**.
+Statut actuel : **complété pour les audits initiaux; durcissements restants suivis en P2/P3**.
 
 ---
 
 ## Definition of Done P2
 
-Statut actuel : **complété documentairement, matrice CHK-040 et release à valider**.
+Statut actuel : **complété documentairement; release Web/API à valider**.
 
 ---
 
@@ -157,8 +147,8 @@ Statut actuel : **complété documentairement, matrice CHK-040 et release à val
 
 Priorité immédiate :
 
-1. `#14` — Remplir la matrice CI/CD multi-repo CHK-040 avec les nouveaux workflows.
-2. `#15` — PLAY-041 à utiliser lors de la prochaine release.
+1. `#15` — Appliquer PLAY-041 lors de la prochaine release Web/API.
+2. Planifier les durcissements futurs listés dans CHK-040 : tests backend DB portables, E2E Playwright, CI desktop-agent, branch protection, secret scanning.
 
 ---
 
