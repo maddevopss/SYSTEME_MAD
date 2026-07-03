@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Page d’accueil MAD DevOps — V1 production
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-07-03
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -56,6 +56,7 @@ Des outils numériques simples pour gagner du temps, réduire les tâches répé
 9. CTA final.
 10. Footer simplifié.
 11. Page contact autonome pour les demandes de consultation.
+12. Tracking léger de conversion sans données personnelles.
 
 ---
 
@@ -221,9 +222,91 @@ Les liens `mailto:` restants sont acceptés seulement comme fallback, lien courr
 
 ---
 
+## Tracking léger de conversion
+
+Décision V1.3 : le site peut mesurer les interactions de conversion sans service externe obligatoire et sans données personnelles.
+
+### Fichier dédié
+
+```text
+tracking.js
+```
+
+Ce fichier centralise la fonction `trackEvent()` et pousse les événements dans :
+
+```text
+window.dataLayer
+```
+
+Le mode debug est activable manuellement avec :
+
+```js
+window.MADDEVOPS_TRACKING_DEBUG = true
+```
+
+### Événements acceptés
+
+- `cta_clicked` ;
+- `contact_page_viewed` ;
+- `contact_need_selected` ;
+- `contact_form_submitted`.
+
+### Données autorisées
+
+- nom de l’événement ;
+- type de CTA ;
+- type de besoin sélectionné ;
+- page courante ;
+- timestamp ;
+- viewport approximatif : `mobile` ou `desktop`.
+
+### Données interdites
+
+- nom du visiteur ;
+- adresse courriel ;
+- contenu du message ;
+- budget précis associé à une identité ;
+- fingerprinting ;
+- identifiants persistants invasifs ;
+- données personnelles non nécessaires.
+
+### Règles d’intégration
+
+Les CTA principaux doivent utiliser des attributs explicites, par exemple :
+
+```html
+<a href="contact.html" data-tracking-cta="contact">Demander une consultation</a>
+```
+
+Le formulaire contact peut tracker la soumission et le type de besoin, mais ne doit jamais envoyer le nom, le courriel ou le message dans l’événement de tracking.
+
+### Statut d’intégration
+
+- `tracking.js` créé ;
+- `index.html` charge `tracking.js` ;
+- `contact.html` charge `tracking.js` ;
+- les CTA principaux utilisent `data-tracking-cta` ;
+- la page contact tracke son chargement ;
+- le formulaire contact tracke la soumission ;
+- le type de besoin peut être tracké ;
+- le comportement `mailto:` reste fonctionnel ;
+- aucun service externe n’est obligatoire.
+
+---
+
 ## Validation technique actuelle
 
 Dernière validation rapportée :
+
+- tracking léger implémenté ;
+- aucun service externe obligatoire ;
+- site compatible statique ;
+- comportement `mailto:` préservé ;
+- flux MADSuite non affecté ;
+- aucune donnée personnelle capturée ;
+- pas de fingerprinting ou tracking invasif.
+
+Validation précédente :
 
 - recherche ciblée effectuée sur les CTA ;
 - aucun CTA principal ne pointe encore vers l’ancien `mailto:` ;
@@ -231,10 +314,7 @@ Dernière validation rapportée :
 - `contact.html` ajouté ;
 - `index.html` mis à jour ;
 - `v2.html` mis à jour ;
-- le flux MADSuite reste intact.
-
-Validation précédente :
-
+- le flux MADSuite reste intact ;
 - `npm run lint` réussi avec un warning existant et non lié dans `index.jsx` ;
 - `npm run build` réussi ;
 - responsive mobile ajusté pour header, hero, grilles de cartes, CTA et logo.
@@ -244,7 +324,8 @@ Validation précédente :
 ## Risques restants
 
 - Le formulaire utilise `mailto:` : acceptable pour V1, mais moins robuste qu’un vrai endpoint ou service de formulaire.
-- Pas encore de suivi analytics/conversion sur les soumissions.
+- Le tracking reste client-side et non persisté côté serveur tant qu’aucun outil analytics ou endpoint interne n’est branché.
+- Pas encore de suivi de taux de conversion consolidé.
 - Le gros logo PNG existant peut alourdir le header sur certains réseaux lents.
 - Le build affiche encore un warning global de taille de chunk, sans lien direct avec la refonte.
 
@@ -253,11 +334,12 @@ Validation précédente :
 ## Décision
 
 ```text
-Statut : V1.2 production acceptée
-Usage : page d’accueil maddevops.com + destination contact
+Statut : V1.3 production acceptée
+Usage : page d’accueil maddevops.com + destination contact + tracking léger
 Positionnement : solutions numériques simples et utiles pour PME, travailleurs autonomes et petites équipes
 CTA : les demandes de consultation/projet pointent vers contact.html
-Prochaine étape : améliorer la fiabilité conversion avec tracking léger, formulaire backend ou booking dédié quand nécessaire
+Tracking : interactions de conversion sans PII, sans service externe obligatoire
+Prochaine étape : enchaîner avec Revenue Core / Machine à clients ou ajouter un endpoint/contact booking dédié si requis
 ```
 
 ---
@@ -266,6 +348,7 @@ Prochaine étape : améliorer la fiabilité conversion avec tracking léger, for
 
 | Version | Date | Description |
 |---|---|---|
+| 1.3 | 2026-07-03 | Ajout du tracking léger de conversion sans données personnelles. |
 | 1.2 | 2026-07-03 | Ajout de la destination contact/consultation et règle CTA. |
 | 1.1 | 2026-07-03 | Mise à jour du positionnement post-refonte site réel MAD DevOps. |
 | 1.0 | 2026-07-01 | Création de la version V1 production. |
