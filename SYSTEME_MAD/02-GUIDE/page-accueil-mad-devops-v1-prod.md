@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Page d’accueil MAD DevOps — V1 production
-Version: 1.3
+Version: 1.4
 Dernière révision: 2026-07-03
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -57,6 +57,7 @@ Des outils numériques simples pour gagner du temps, réduire les tâches répé
 10. Footer simplifié.
 11. Page contact autonome pour les demandes de consultation.
 12. Tracking léger de conversion sans données personnelles.
+13. P0 conversion marketing : CTA MADSuite, succès contact, clarification MAD DevOps vs MADSuite.
 
 ---
 
@@ -131,6 +132,18 @@ MADSuite aide à reprendre le contrôle sur les suivis, les heures, les factures
 
 Ne pas présenter MADSuite comme une promesse magique ou un outil médical.
 
+### Distinction MAD DevOps vs MADSuite
+
+```text
+MAD DevOps
+Pour créer ou améliorer vos outils numériques sur mesure : sites, applications, automatisations et outils internes.
+
+MADSuite
+Pour gérer vos opérations quotidiennes : clients, projets, temps et factures dans un produit logiciel prêt à l’emploi.
+```
+
+Cette distinction doit rester visible dans le site afin de réduire la confusion entre le service sur mesure et le produit logiciel.
+
 ---
 
 ## Approche retenue
@@ -173,9 +186,21 @@ CTA alternatifs acceptés :
 Demander une consultation
 Discuter d’un projet
 Voir MADSuite
+Essayer MADSuite
 ```
 
 Décision V1.2 : les CTA de consultation et projet doivent pointer vers une destination de contact dédiée, pas vers le flux d’inscription MADSuite.
+
+Décision V1.4 : le CTA “Essayer MADSuite” est accepté comme chemin produit distinct. Il doit être visible dans la section MADSuite et tracké séparément des CTA de consultation.
+
+### Règle de destination
+
+- “Demander une consultation” : service MAD DevOps / projet sur mesure.
+- “Discuter d’un projet” : service MAD DevOps / projet sur mesure.
+- “Parler de votre besoin” : service MAD DevOps / clarification.
+- “Essayer MADSuite” : produit MADSuite.
+
+Tant que l’URL réelle du produit n’est pas disponible dans ce repo, un lien placeholder est accepté temporairement, mais doit rester listé dans les risques.
 
 ---
 
@@ -213,6 +238,12 @@ La page contact sert de porte d’entrée consultation pour MAD DevOps. Elle ne 
 Envoi sans service externe via `mailto:` prérempli.
 
 Cette approche est acceptée pour la V1 parce qu’elle évite d’ajouter un backend ou un service tiers avant validation du besoin.
+
+### Message de succès / fallback
+
+Décision V1.4 : après soumission du formulaire, la page doit afficher un message rassurant indiquant que la demande est prête à être envoyée dans l’application courriel.
+
+Le message doit aussi prévoir un fallback si le client courriel ne s’ouvre pas, avec une adresse courriel directe affichée.
 
 ### Règle de CTA
 
@@ -278,6 +309,12 @@ Les CTA principaux doivent utiliser des attributs explicites, par exemple :
 <a href="contact.html" data-tracking-cta="contact">Demander une consultation</a>
 ```
 
+Le CTA MADSuite doit être tracké séparément, par exemple :
+
+```html
+<a href="#" data-tracking-cta="madsuite_signup">Essayer MADSuite</a>
+```
+
 Le formulaire contact peut tracker la soumission et le type de besoin, mais ne doit jamais envoyer le nom, le courriel ou le message dans l’événement de tracking.
 
 ### Statut d’intégration
@@ -286,6 +323,7 @@ Le formulaire contact peut tracker la soumission et le type de besoin, mais ne d
 - `index.html` charge `tracking.js` ;
 - `contact.html` charge `tracking.js` ;
 - les CTA principaux utilisent `data-tracking-cta` ;
+- le CTA “Essayer MADSuite” utilise `data-tracking-cta="madsuite_signup"` ;
 - la page contact tracke son chargement ;
 - le formulaire contact tracke la soumission ;
 - le type de besoin peut être tracké ;
@@ -294,20 +332,67 @@ Le formulaire contact peut tracker la soumission et le type de besoin, mais ne d
 
 ---
 
+## P0 conversion site marketing
+
+Bloc 14 complété.
+
+### P0-1 — CTA “Essayer MADSuite”
+
+Fichier : `index.html`, section MADSuite.
+
+Changement : ajout d’un bouton secondaire “Essayer MADSuite”.
+
+Objectif : permettre au visiteur de distinguer l’action produit de l’action service.
+
+Statut : implémenté avec tracking `data-tracking-cta="madsuite_signup"`.
+
+Risque : lien placeholder `#` tant que l’URL produit réelle n’est pas définie.
+
+### P0-2 — Message de succès contact
+
+Fichier : `contact.html`.
+
+Changement : ajout d’un message de succès/fallback après soumission du formulaire.
+
+Objectif : réduire l’abandon si le client courriel ne s’ouvre pas ou si le visiteur n’est pas certain que l’action a fonctionné.
+
+Statut : implémenté avec scroll automatique vers le message.
+
+### P0-3 — Clarification MAD DevOps vs MADSuite
+
+Fichier : `index.html`, section MADSuite.
+
+Changement : ajout d’un texte de clarification :
+
+```text
+MAD DevOps = services sur mesure : sites, applications, automatisations.
+MADSuite = produit logiciel prêt à l’emploi : clients, projets, temps, factures.
+```
+
+Objectif : réduire la confusion entre le studio et le produit.
+
+Statut : implémenté.
+
+---
+
 ## Validation technique actuelle
 
 Dernière validation rapportée :
 
-- tracking léger implémenté ;
-- aucun service externe obligatoire ;
-- site compatible statique ;
-- comportement `mailto:` préservé ;
-- flux MADSuite non affecté ;
-- aucune donnée personnelle capturée ;
-- pas de fingerprinting ou tracking invasif.
+- CTA “Essayer MADSuite” ajouté dans `index.html` ;
+- tracking `data-tracking-cta="madsuite_signup"` ajouté ;
+- message de succès/fallback ajouté dans `contact.html` ;
+- clarification MAD DevOps vs MADSuite ajoutée ;
+- flux MADSuite non modifié ;
+- site statique conservé.
 
 Validation précédente :
 
+- tracking léger implémenté ;
+- aucun service externe obligatoire ;
+- comportement `mailto:` préservé ;
+- aucune donnée personnelle capturée ;
+- pas de fingerprinting ou tracking invasif ;
 - recherche ciblée effectuée sur les CTA ;
 - aucun CTA principal ne pointe encore vers l’ancien `mailto:` ;
 - les occurrences `mailto:` restantes sont intentionnelles : fallback, lien courriel de secours ou footer ;
@@ -323,6 +408,7 @@ Validation précédente :
 
 ## Risques restants
 
+- Le CTA “Essayer MADSuite” pointe temporairement vers `#` ; l’URL réelle doit être branchée dès qu’elle est confirmée.
 - Le formulaire utilise `mailto:` : acceptable pour V1, mais moins robuste qu’un vrai endpoint ou service de formulaire.
 - Le tracking reste client-side et non persisté côté serveur tant qu’aucun outil analytics ou endpoint interne n’est branché.
 - Pas encore de suivi de taux de conversion consolidé.
@@ -334,12 +420,13 @@ Validation précédente :
 ## Décision
 
 ```text
-Statut : V1.3 production acceptée
-Usage : page d’accueil maddevops.com + destination contact + tracking léger
+Statut : V1.4 production acceptée
+Usage : page d’accueil maddevops.com + destination contact + tracking léger + P0 conversion marketing
 Positionnement : solutions numériques simples et utiles pour PME, travailleurs autonomes et petites équipes
 CTA : les demandes de consultation/projet pointent vers contact.html
+CTA produit : “Essayer MADSuite” est distinct, tracké et temporairement en placeholder
 Tracking : interactions de conversion sans PII, sans service externe obligatoire
-Prochaine étape : enchaîner avec Revenue Core / Machine à clients ou ajouter un endpoint/contact booking dédié si requis
+Prochaine étape : brancher l’URL réelle MADSuite, puis analyser le flow signup → onboarding → première facture → paiement dans les repos applicatifs
 ```
 
 ---
@@ -348,6 +435,7 @@ Prochaine étape : enchaîner avec Revenue Core / Machine à clients ou ajouter 
 
 | Version | Date | Description |
 |---|---|---|
+| 1.4 | 2026-07-03 | Ajout des P0 conversion site marketing : CTA MADSuite, succès contact, clarification MAD DevOps vs MADSuite. |
 | 1.3 | 2026-07-03 | Ajout du tracking léger de conversion sans données personnelles. |
 | 1.2 | 2026-07-03 | Ajout de la destination contact/consultation et règle CTA. |
 | 1.1 | 2026-07-03 | Mise à jour du positionnement post-refonte site réel MAD DevOps. |
