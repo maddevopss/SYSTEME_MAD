@@ -28,7 +28,7 @@ Il sert de point d’entrée pour les humains, les collaborateurs et les agents 
 ### Pour un projet logiciel complet
 
 1. Développement — `STD-001` à `STD-006`
-2. Architecture — `STD-101` à `STD-105`
+2. Architecture — `STD-101` à `STD-106`
 3. Sécurité — `STD-201` à `STD-205`
 4. Qualité — `STD-301` à `STD-305`
 5. DevOps — `STD-401` à `STD-405`
@@ -60,6 +60,7 @@ Il sert de point d’entrée pour les humains, les collaborateurs et les agents 
 | `std-103.md` | Base de données | Encadre les choix et pratiques de données. |
 | `std-104.md` | SaaS multi-tenant | Encadre l’isolation des organisations. |
 | `std-105.md` | Configuration | Encadre les variables, environnements et secrets de configuration. |
+| `std-106.md` | Responsive mobile et interfaces adaptatives | Encadre les interfaces mobile, tablette et desktop redimensionnable. |
 
 ---
 
@@ -129,6 +130,7 @@ Il sert de point d’entrée pour les humains, les collaborateurs et les agents 
 Pour MADSuite, les standards à lire en priorité sont :
 
 - `std-104.md` — SaaS multi-tenant;
+- `std-106.md` — Responsive mobile et interfaces adaptatives;
 - `std-201.md` — Authentification;
 - `std-202.md` — Autorisation;
 - `std-204.md` — Protection des données;
