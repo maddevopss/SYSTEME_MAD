@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Tableau d’exécution multi-repo MADSuite
-Version: 1.4
+Version: 1.5
 Dernière révision: 2026-07-03
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -78,7 +78,7 @@ Chaque chantier doit avoir :
 
 | Chantier | Dépôt responsable | Statut | Preuve attendue | Issue | Prochaine action |
 |---|---|---|---|---|---|
-| Audit MADPROOF du code réel | `madsuite-frontend` + `madsuite-backend` | En cours | `SYSTEME_MAD/09-CHECKLISTS/audit-005-madproof-code-reel-madsuite.md` | `#5` ouverte | Corriger prompt Brain Dump et Cognitive System Contract |
+| Audit MADPROOF du code réel | `madsuite-frontend` + `madsuite-backend` | Complété | `SYSTEME_MAD/09-CHECKLISTS/audit-005-madproof-code-reel-madsuite.md` + PR backend `#3` mergée | `#5` fermée | Surveiller wording futur via MADPROOF |
 | Audit règles ESLint désactivées | `maddevopss/madsuite-frontend` | À faire | Plan de réactivation progressif | `#6` ouverte | Classer les règles par risque et réactiver par lots |
 | Audit CI/tests/build | Tous repos actifs | À faire | Matrice CI par repo | `#7` ouverte | Vérifier workflows, scripts, build et tests |
 | Cohérence modules frontend/backend | `madsuite-frontend` + `madsuite-backend` | À faire | Tableau modules UI/API | `#8` ouverte | Comparer `ModuleGate`, `requireModule` et routes backend |
@@ -110,7 +110,7 @@ Chaque chantier doit avoir :
 | `#2` — Appliquer README officiel frontend MADSuite | `bleeband/SYSTEME_MAD` | P0 | Fermée |
 | `#3` — Initialiser ou réserver explicitement le repo e2e | `bleeband/SYSTEME_MAD` | P0 | Fermée |
 | `#4` — Initialiser ou réserver explicitement le repo desktop-agent | `bleeband/SYSTEME_MAD` | P0 | Fermée |
-| `#5` — Audit MADPROOF du code réel MADSuite | `bleeband/SYSTEME_MAD` | P1 | Ouverte — audit créé |
+| `#5` — Audit MADPROOF du code réel MADSuite | `bleeband/SYSTEME_MAD` | P1 | Fermée |
 | `#6` — Audit et plan de réactivation ESLint frontend | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
 | `#7` — Audit CI, tests et build multi-repo | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
 | `#8` — Vérifier cohérence modules frontend/backend | `bleeband/SYSTEME_MAD` | P1 | Ouverte |
@@ -155,14 +155,7 @@ Statut actuel : **complété documentairement, audits CI/release à valider**.
 
 ## Prochaine action recommandée
 
-Priorité immédiate : corriger les constats P1 de l’audit MADPROOF :
-
-1. prompt Brain Dump dans `src/services/ai.service.js`;
-2. wording du `cognitiveSystemContract.js`;
-3. note de transparence sur les signaux applicatifs;
-4. suivi de la correction dans l’issue `#5`.
-
-Ensuite :
+Priorité immédiate :
 
 1. `#8` — Cohérence modules frontend/backend.
 2. `#6` — Audit ESLint frontend.
