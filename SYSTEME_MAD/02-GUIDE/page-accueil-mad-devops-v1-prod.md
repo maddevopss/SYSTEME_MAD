@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Page d’accueil MAD DevOps — V1 production
-Version: 1.0
-Dernière révision: 2026-07-01
+Version: 1.1
+Dernière révision: 2026-07-03
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -20,35 +20,66 @@ Cette page doit rester simple, concrète, accessible, non technique et orientée
 ## Positionnement
 
 ```text
+MAD DevOps crée des solutions numériques simples, utiles et crédibles pour PME, travailleurs autonomes et petites équipes.
+```
+
+MAD DevOps aide les clients à gagner du temps, réduire les tâches répétitives, mieux structurer leurs opérations et transformer des processus flous en outils numériques concrets.
+
+Le message public ne doit pas commencer par le DevOps, le cloud ou le jargon technique. Il doit commencer par les résultats client.
+
+---
+
+## Message principal recommandé
+
+```text
 Des sites Web, applications et automatisations qui simplifient votre travail.
 ```
 
-MAD DevOps aide les travailleurs autonomes, PME et petites organisations à transformer les tâches répétitives, les fichiers dispersés et les processus flous en outils numériques simples, utiles et adaptés à leur réalité.
+Variante orientée résultat :
+
+```text
+Des outils numériques simples pour gagner du temps, réduire les tâches répétitives et mieux gérer vos opérations.
+```
 
 ---
 
 ## Structure retenue
 
-1. Hero clair.
-2. Problème général.
-3. Services possibles.
-4. Exemples par métier.
-5. Approche simple.
-6. Commencer petit.
-7. Pour qui.
+1. Header avec logo MAD DevOps proprement intégré.
+2. Hero clair, orienté bénéfices et sans jargon.
+3. Section problèmes clients.
+4. Section solutions.
+5. Section offres de projet.
+6. Section MADSuite.
+7. Méthode de travail simple.
 8. Pourquoi MAD DevOps.
-9. Clarification du besoin.
-10. CTA final.
+9. CTA final.
+10. Footer simplifié.
 
 ---
 
 ## Services à présenter
 
-- Sites Web.
+- Sites Web professionnels.
 - Applications Web.
 - Applications mobiles.
-- Automatisations.
-- Outils internes.
+- Automatisation de processus.
+- Tableaux de bord et outils internes.
+- Intégration de données.
+- MADSuite.
+
+---
+
+## Problèmes clients à mettre en avant
+
+- tâches répétitives ;
+- suivis clients dispersés ;
+- fichiers Excel ou documents difficiles à maintenir ;
+- perte de temps administratif ;
+- informations fragmentées ;
+- manque de visibilité sur les opérations ;
+- outils existants trop lourds ou mal adaptés ;
+- besoin de structurer une idée d’application.
 
 ---
 
@@ -86,12 +117,27 @@ Solutions : cadrage d’idée, définition MVP, prototype, première version Web
 
 ---
 
+## Section MADSuite
+
+MADSuite doit être présenté comme l’outil maison de MAD DevOps pour centraliser les opérations, le suivi du temps, les clients, les projets et la facturation.
+
+Le positionnement doit rester concret :
+
+```text
+MADSuite aide à reprendre le contrôle sur les suivis, les heures, les factures et les opérations quotidiennes.
+```
+
+Ne pas présenter MADSuite comme une promesse magique ou un outil médical.
+
+---
+
 ## Approche retenue
 
 ```text
 1. Comprendre
 2. Cadrer
 3. Construire
+4. Améliorer
 ```
 
 Le but n’est pas de faire compliqué. Le but est de livrer quelque chose qui règle un vrai problème.
@@ -106,21 +152,63 @@ Le but n’est pas de faire compliqué. Le but est de livrer quelque chose qui r
 - Parler des problèmes concrets avant les technologies.
 - Garder le texte lisible pour une personne non technique.
 - Présenter MAD DevOps comme un studio qui aide à simplifier le travail.
+- Mettre les résultats client avant les outils.
+- Préférer des phrases courtes, concrètes et compréhensibles.
 
 ---
 
-## CTA principal
+## CTA principaux
+
+CTA recommandé :
 
 ```text
 Parler de votre besoin
 ```
+
+CTA alternatifs acceptés :
+
+```text
+Demander une consultation
+Discuter d’un projet
+Voir MADSuite
+```
+
+À surveiller : les CTA doivent pointer vers une vraie page de contact, un formulaire ou un booking dès que disponible. Éviter de les laisser durablement reliés à un flux d’inscription qui ne correspond pas à l’intention.
+
+---
+
+## Validation technique actuelle
+
+Dernière validation rapportée :
+
+- `npm run lint` réussi avec un warning existant et non lié dans `index.jsx` ;
+- `npm run build` réussi ;
+- responsive mobile ajusté pour header, hero, grilles de cartes, CTA et logo.
+
+---
+
+## Risques restants
+
+- Les CTA “Demander une consultation” et “Discuter d’un projet” pointent encore vers le flux d’inscription existant faute de page contact ou booking dédiée.
+- Le gros logo PNG existant peut alourdir le header sur certains réseaux lents.
+- Le build affiche encore un warning global de taille de chunk, sans lien direct avec la refonte.
 
 ---
 
 ## Décision
 
 ```text
-Statut : V1 production acceptée
+Statut : V1.1 production acceptée
 Usage : page d’accueil maddevops.com
-Prochaine étape : intégration Web puis validation CHK-015 et CHK-019
+Positionnement : solutions numériques simples et utiles pour PME, travailleurs autonomes et petites équipes
+Prochaine étape : clarifier les CTA vers contact/booking, puis enchaîner avec Revenue Core / Machine à clients
 ```
+
+---
+
+## Historique des versions
+
+| Version | Date | Description |
+|---|---|---|
+| 1.1 | 2026-07-03 | Mise à jour du positionnement post-refonte site réel MAD DevOps. |
+| 1.0 | 2026-07-01 | Création de la version V1 production. |
