@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Page d’accueil MAD DevOps — V1 production
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-07-03
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -55,6 +55,7 @@ Des outils numériques simples pour gagner du temps, réduire les tâches répé
 8. Pourquoi MAD DevOps.
 9. CTA final.
 10. Footer simplifié.
+11. Page contact autonome pour les demandes de consultation.
 
 ---
 
@@ -173,13 +174,66 @@ Discuter d’un projet
 Voir MADSuite
 ```
 
-À surveiller : les CTA doivent pointer vers une vraie page de contact, un formulaire ou un booking dès que disponible. Éviter de les laisser durablement reliés à un flux d’inscription qui ne correspond pas à l’intention.
+Décision V1.2 : les CTA de consultation et projet doivent pointer vers une destination de contact dédiée, pas vers le flux d’inscription MADSuite.
+
+---
+
+## Page contact / consultation
+
+Destination retenue :
+
+```text
+contact.html
+```
+
+La page contact sert de porte d’entrée consultation pour MAD DevOps. Elle ne remplace pas et ne modifie pas le flux MADSuite.
+
+### Champs du formulaire
+
+- nom ;
+- courriel ;
+- type de besoin ;
+- message ;
+- budget approximatif optionnel ;
+- délai souhaité optionnel.
+
+### Types de besoin acceptés
+
+- Site Web ;
+- application Web ;
+- application mobile ;
+- automatisation ;
+- tableau de bord / outil interne ;
+- MADSuite ;
+- incertain / à clarifier.
+
+### Comportement retenu
+
+Envoi sans service externe via `mailto:` prérempli.
+
+Cette approche est acceptée pour la V1 parce qu’elle évite d’ajouter un backend ou un service tiers avant validation du besoin.
+
+### Règle de CTA
+
+Les CTA principaux de `index.html` et `v2.html` doivent pointer vers `contact.html`.
+
+Les liens `mailto:` restants sont acceptés seulement comme fallback, lien courriel direct ou footer. Ils ne doivent pas être le chemin principal de conversion.
 
 ---
 
 ## Validation technique actuelle
 
 Dernière validation rapportée :
+
+- recherche ciblée effectuée sur les CTA ;
+- aucun CTA principal ne pointe encore vers l’ancien `mailto:` ;
+- les occurrences `mailto:` restantes sont intentionnelles : fallback, lien courriel de secours ou footer ;
+- `contact.html` ajouté ;
+- `index.html` mis à jour ;
+- `v2.html` mis à jour ;
+- le flux MADSuite reste intact.
+
+Validation précédente :
 
 - `npm run lint` réussi avec un warning existant et non lié dans `index.jsx` ;
 - `npm run build` réussi ;
@@ -189,7 +243,8 @@ Dernière validation rapportée :
 
 ## Risques restants
 
-- Les CTA “Demander une consultation” et “Discuter d’un projet” pointent encore vers le flux d’inscription existant faute de page contact ou booking dédiée.
+- Le formulaire utilise `mailto:` : acceptable pour V1, mais moins robuste qu’un vrai endpoint ou service de formulaire.
+- Pas encore de suivi analytics/conversion sur les soumissions.
 - Le gros logo PNG existant peut alourdir le header sur certains réseaux lents.
 - Le build affiche encore un warning global de taille de chunk, sans lien direct avec la refonte.
 
@@ -198,10 +253,11 @@ Dernière validation rapportée :
 ## Décision
 
 ```text
-Statut : V1.1 production acceptée
-Usage : page d’accueil maddevops.com
+Statut : V1.2 production acceptée
+Usage : page d’accueil maddevops.com + destination contact
 Positionnement : solutions numériques simples et utiles pour PME, travailleurs autonomes et petites équipes
-Prochaine étape : clarifier les CTA vers contact/booking, puis enchaîner avec Revenue Core / Machine à clients
+CTA : les demandes de consultation/projet pointent vers contact.html
+Prochaine étape : améliorer la fiabilité conversion avec tracking léger, formulaire backend ou booking dédié quand nécessaire
 ```
 
 ---
@@ -210,5 +266,6 @@ Prochaine étape : clarifier les CTA vers contact/booking, puis enchaîner avec 
 
 | Version | Date | Description |
 |---|---|---|
+| 1.2 | 2026-07-03 | Ajout de la destination contact/consultation et règle CTA. |
 | 1.1 | 2026-07-03 | Mise à jour du positionnement post-refonte site réel MAD DevOps. |
 | 1.0 | 2026-07-01 | Création de la version V1 production. |
