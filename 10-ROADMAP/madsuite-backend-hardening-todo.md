@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO audit backend et hardening
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-07-04
 Statut: À valider
 Auteur: MAD DevOps
@@ -46,14 +46,15 @@ Travail déjà complété dans cette phase :
 - matrice officielle des routes backend ajoutée dans SYSTEME_MAD;
 - `GET /api/organisation/health` placé derrière le contexte organisationnel;
 - `GET /api/analytics/funnel` restreint au super-admin plateforme;
-- routes de modules ajustées pour appliquer le contexte organisationnel au niveau du routeur.
+- routes de modules ajustées pour appliquer le contexte organisationnel au niveau du routeur;
+- script npm ciblé ajouté pour lancer les tests backend critiques existants.
 
 Le prochain travail doit surtout durcir les écarts restants :
 
 - ajouter le contexte organisationnel explicite aux exports CSV;
-- transformer les preuves existantes en checks CI plus visibles;
 - documenter les commandes release obligatoires;
-- ajouter une preuve de non-fuite de contexte entre requêtes concurrentes.
+- ajouter une preuve de non-fuite de contexte entre requêtes concurrentes;
+- auditer les routes IA et cognitives selon MADPROOF.
 
 ## 3. P0 — À corriger ou vérifier avant release majeure
 
@@ -167,21 +168,94 @@ Document :
 
 ### P1-02 — Rendre les preuves tests plus visibles en CI
 
-Action :
+Statut : partiellement complété.
 
+- [x] Ajouter un script npm dédié aux tests backend critiques existants.
 - [ ] S’assurer que les tests RLS sont nommés clairement dans le rapport Jest.
-- [ ] S’assurer que les tests multi-tenant jobs sont exécutés par défaut.
-- [ ] Ajouter un script npm dédié si nécessaire : `test:security` ou équivalent.
+- [ ] S’assurer que les tests multi-tenant jobs sont exécutés par défaut ou documentés comme commande dédiée.
 - [ ] Documenter la commande dans README backend et SYSTEME_MAD.
 
 ### P1-03 — Vérifier les routes IA et cognitives contre MADPROOF
 
-Action :
+Statut : à faire.
 
-- [ ] Auditer les réponses utilisateur des routes IA.
-- [ ] Auditer les routes cognitives pour éviter les claims médicaux.
-- [ ] Confirmer que les labels `flow`, `deep_focus`, `friction`, `fatigue` restent des observations fonctionnelles, pas des diagnostics.
-- [ ] Confirmer que caméra, micro, capture écran permanente et biométrie ne sont pas collectés par défaut.
+Routes identifiées dans `src/app.js` :
+
+```text
+/api/activity-intelligence
+/api/project-detection
+/api/day-summary
+/api/billing-assistant
+/api/ai-assistant
+/api/cognitive
+```
+
+Objectif : confirmer que ces routes demeurent dans le cadre MADSuite officiel : assistance cognitive non médicale, aide opérationnelle, contexte applicatif, réduction de friction, reprise de tâche, non-substitution au médical ou à l’humain.
+
+Interdictions à vérifier :
+
+- [ ] Aucune route ne diagnostique le TDAH.
+- [ ] Aucune route ne prétend traiter le TDAH.
+- [ ] Aucune route ne prétend mesurer un état mental réel.
+- [ ] Aucune route ne prétend lire l’attention ou détecter une émotion.
+- [ ] Aucune route ne produit un score de normalité cognitive.
+- [ ] Aucune route ne compare l’utilisateur à d’autres utilisateurs.
+- [ ] Aucune route ne remplace un professionnel, un avis médical ou une décision humaine.
+
+Formulations interdites à chercher et reformuler :
+
+```text
+Vous êtes en fatigue cognitive.
+Votre attention est basse.
+Vous êtes en état de flow réel.
+Votre TDAH cause ce comportement.
+Votre cerveau est désorganisé.
+MADSuite détecte votre état mental.
+MADSuite traite les symptômes.
+```
+
+Formulations acceptables :
+
+```text
+On observe une période d’activité plus fragmentée.
+Votre session semble contenir plusieurs changements de contexte.
+Voici une suggestion pour reprendre le fil.
+Voici ce qui était actif avant l’interruption.
+Vous pouvez ignorer cette suggestion.
+Cette aide est basée sur vos actions applicatives récentes.
+MADSuite ne fournit pas d’avis médical.
+```
+
+Actions par route :
+
+- [ ] `/api/cognitive` : garder `flow`, `deep_focus`, `friction`, `fatigue` comme labels fonctionnels internes, non diagnostiques.
+- [ ] `/api/ai-assistant` : filtrer les rôles injectés, refuser ou rediriger les demandes médicales, ne pas exposer instructions système.
+- [ ] `/api/billing-assistant` : ne pas inventer heures, montants, taxes ou clients; garder la reformulation factuelle.
+- [ ] `/api/activity-intelligence` : présenter seulement des tendances d’activité applicative, sans score normatif.
+- [ ] `/api/project-detection` : présenter la détection comme hypothèse corrigible par l’utilisateur.
+- [ ] `/api/day-summary` : résumer les actions applicatives, pas l’état mental.
+
+Données interdites par défaut :
+
+- [ ] caméra;
+- [ ] micro;
+- [ ] capture écran permanente;
+- [ ] enregistrement brut clavier;
+- [ ] biométrie;
+- [ ] émotions;
+- [ ] diagnostic;
+- [ ] profilage externe;
+- [ ] comparaison inter-utilisateurs;
+- [ ] score de normalité.
+
+Preuves attendues :
+
+- [ ] Tests ou snapshots de réponse pour vérifier les formulations interdites.
+- [ ] Test de filtrage des rôles IA injectés.
+- [ ] Test de refus ou redirection pour demandes médicales.
+- [ ] Test que les recommandations sont optionnelles.
+- [ ] Test que les routes ne sortent que les données de l’organisation courante.
+- [ ] Test que les logs n’exposent pas de prompt complet sensible.
 
 ### P1-04 — Vérifier les commandes release obligatoires
 
@@ -251,8 +325,9 @@ Cette phase sera complète quand :
 - [ ] les routes métier sans scope organisation sont corrigées ou justifiées;
 - [x] les logs ne peuvent plus exposer de query params sensibles;
 - [x] le middleware auth retourne un format d’erreur uniforme;
-- [ ] les tests RLS et multi-tenant sont visibles dans les commandes CI;
+- [x] les tests RLS et multi-tenant sont accessibles via une commande dédiée;
 - [ ] le workflow E2E connecté peut utiliser le seed backend sans divergence de variables;
+- [ ] les routes IA/cognitives sont auditées MADPROOF;
 - [ ] les écarts restants sont classés P1/P2/P3.
 
 ## 9. Prochaine action recommandée
@@ -260,6 +335,6 @@ Cette phase sera complète quand :
 Créer une PR locale ou via agent pour corriger :
 
 1. `src/integrations/export/export.routes.js` avec `requireOrganisation`;
-2. un script npm dédié aux tests de sécurité si les tests existent déjà;
-3. une vérification concurrente du contexte organisationnel/RLS;
-4. l’audit MADPROOF des routes IA et cognitives.
+2. une vérification concurrente du contexte organisationnel/RLS;
+3. l’audit MADPROOF des routes IA et cognitives;
+4. la documentation README backend des commandes release et tests critiques.
