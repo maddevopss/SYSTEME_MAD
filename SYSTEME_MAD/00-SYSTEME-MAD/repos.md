@@ -1,8 +1,8 @@
 ---
 Projet: Système MAD
 Document: Cartographie officielle des dépôts MAD
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-04
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -76,8 +76,8 @@ SYSTEME_MAD/09-CHECKLISTS/
 | `bleeband/maddevops` | Privé | Dépôt MAD DevOps / vitrine / ressources studio selon contenu réel | Actif, à clarifier | Raccorder au Système MAD et documenter le rôle exact |
 | `maddevopss/madsuite-frontend` | Public | Frontend MADSuite | Actif | Maintenir README officiel, durcir lint/tests, aligner UI avec MADPROOF |
 | `maddevopss/madsuite-backend` | Public | Backend MADSuite | Actif | Maintenir README officiel, documenter migrations, sécurité, modules et env |
-| `maddevopss/e2e` | Public | Tests end-to-end MADSuite | Réservé / vide au moment de l’analyse | Initialiser ou déclarer explicitement comme réservé |
-| `maddevopss/desktop-agent` | Public | Agent desktop MADSuite | Réservé / vide au moment de l’analyse | Initialiser ou déclarer explicitement comme réservé |
+| `maddevopss/e2e` | Public | Tests end-to-end MADSuite | Activation en cours | Initialiser Playwright, ajouter tests responsive mobile et brancher les parcours critiques |
+| `maddevopss/desktop-agent` | Public | Agent desktop MADSuite | Actif, garde-fous MADPROOF à maintenir | Valider release desktop avec consentement, filtres confidentialité et absence de secrets |
 
 ---
 
