@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO audit backend et hardening
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-04
 Statut: À valider
 Auteur: MAD DevOps
@@ -39,46 +39,53 @@ Le backend possède déjà plusieurs fondations solides :
 - tests multi-tenant sur jobs critiques;
 - endpoints système réservés aux super-admins.
 
+Travail déjà complété dans cette phase :
+
+- format d’erreur `auth` uniformisé avec `ApiResponse.error("UNAUTHORIZED")`;
+- query params sensibles masqués dans `requestLogger` via helper de sanitization;
+- matrice officielle des routes backend ajoutée dans SYSTEME_MAD;
+- `GET /api/organisation/health` placé derrière le contexte organisationnel;
+- `GET /api/analytics/funnel` restreint au super-admin plateforme;
+- routes de modules ajustées pour appliquer le contexte organisationnel au niveau du routeur.
+
 Le prochain travail doit surtout durcir les écarts restants :
 
-- uniformiser le format d’erreur auth;
-- éviter les query params sensibles dans les logs;
-- auditer toutes les routes protégées qui ne montent pas explicitement `requireOrganisation`;
+- ajouter le contexte organisationnel explicite aux exports CSV;
 - transformer les preuves existantes en checks CI plus visibles;
-- documenter les commandes release obligatoires.
+- documenter les commandes release obligatoires;
+- ajouter une preuve de non-fuite de contexte entre requêtes concurrentes.
 
 ## 3. P0 — À corriger ou vérifier avant release majeure
 
 ### P0-01 — Auditer les routes protégées sans `requireOrganisation`
 
-Statut : à vérifier.
+Statut : partiellement complété.
 
-Risque : certaines routes protégées par `auth` pourraient dépendre uniquement du JWT et non du middleware d’organisation/RLS.
+Travail fait :
 
-Action :
-
-- [ ] Lister toutes les routes montées dans `src/app.js`.
-- [ ] Classer chaque route comme publique, protégée sans organisation, protégée organisationnelle ou super-admin.
-- [ ] Ajouter `requireOrganisation` sur les routes métier organisationnelles qui n’en ont pas.
-- [ ] Justifier explicitement les exceptions : portail, punch kiosk, master-admin, system, login, refresh, Stripe webhook.
+- [x] Lister toutes les routes montées dans `src/app.js`.
+- [x] Créer une matrice officielle des routes backend dans SYSTEME_MAD.
+- [x] Corriger `GET /api/organisation/health` avec contexte organisationnel.
+- [x] Restreindre `GET /api/analytics/funnel` au super-admin plateforme.
+- [x] Ajouter le contexte organisationnel commun aux routes de modules.
+- [ ] Ajouter le contexte organisationnel aux exports CSV.
+- [ ] Justifier ou corriger les dernières routes métier sans garde organisationnelle explicite.
 
 Critère d’acceptation :
 
 - Chaque route métier a un statut de scope documenté.
-- Aucune route métier organisationnelle ne peut accéder à la DB sans scope organisation.
+- Aucune route métier organisationnelle ne peut accéder à la DB sans scope organisation ou justification explicite.
 
 ### P0-02 — Normaliser les erreurs du middleware auth
 
-Statut : à corriger.
+Statut : complété.
 
-Risque : `auth.js` retourne encore un JSON simple `{ message: ... }`, alors que plusieurs routes utilisent `ApiResponse`.
+Travail fait :
 
-Action :
-
-- [ ] Modifier `src/middleware/auth.js` pour utiliser `ApiResponse.error`.
-- [ ] Garder 401 pour token manquant, invalide ou expiré.
-- [ ] Ne pas exposer la cause exacte côté client.
-- [ ] Ajouter ou ajuster les tests auth.
+- [x] Modifier `src/middleware/auth.js` pour utiliser `ApiResponse.error`.
+- [x] Garder 401 pour token manquant, invalide ou expiré.
+- [x] Ne pas exposer la cause exacte côté client.
+- [ ] Ajouter ou ajuster les tests auth si nécessaire.
 
 Critère d’acceptation :
 
@@ -87,16 +94,14 @@ Critère d’acceptation :
 
 ### P0-03 — Masquer les query params sensibles dans requestLogger
 
-Statut : à corriger.
+Statut : complété.
 
-Risque : le logger enregistre `req.originalUrl || req.url`. Si une route utilise un token ou une donnée sensible en query string, elle peut apparaître dans les logs.
+Travail fait :
 
-Action :
-
-- [ ] Ajouter une fonction de sanitization d’URL.
-- [ ] Supprimer ou masquer les query params connus sensibles.
-- [ ] Préférer `req.path` pour les logs courants.
-- [ ] Ajouter un test unitaire pour confirmer le masquage.
+- [x] Ajouter une fonction de sanitization d’URL.
+- [x] Supprimer ou masquer les query params connus sensibles.
+- [x] Appliquer la sanitization dans `requestLogger`.
+- [x] Ajouter un test unitaire pour confirmer le masquage.
 
 Critère d’acceptation :
 
@@ -119,15 +124,46 @@ Critère d’acceptation :
 
 - Deux requêtes concurrentes de deux organisations différentes ne partagent jamais le même contexte RLS.
 
+### P0-05 — Durcir les exports CSV
+
+Statut : à faire localement ou via agent.
+
+Constat : le routeur `src/integrations/export/export.routes.js` utilise `req.user.organisation_id` et est monté avec `auth` dans `app.js`, mais ne force pas encore le contexte organisationnel commun au niveau du routeur.
+
+Action recommandée :
+
+- [ ] Importer `requireOrganisation` depuis `src/middleware/organization.middleware`.
+- [ ] Ajouter `router.use(requireOrganisation)` au début du routeur.
+- [ ] Conserver les filtres existants par `organisationId` dans les services d’export.
+- [ ] Ajouter un test ou une preuve manuelle que les exports ne sortent que les données de l’organisation courante.
+
+Patch attendu :
+
+```js
+const { requireOrganisation } = require("../../middleware/organization.middleware");
+
+const router = express.Router();
+
+router.use(requireOrganisation);
+```
+
+Note : la modification automatique de ce fichier a été bloquée par l’outil distant. À appliquer sur le poste local ou avec un agent local.
+
 ## 4. P1 — À faire avant release publique stable
 
 ### P1-01 — Créer une matrice officielle des routes backend
 
-Action :
+Statut : complété.
 
-- [ ] Créer un document ou tableau avec toutes les routes `src/app.js`.
-- [ ] Colonnes minimales : route, public/protégé, module requis, scope org, rôle requis, tests existants.
-- [ ] Lier cette matrice à la checklist backend.
+- [x] Créer un document ou tableau avec toutes les routes `src/app.js`.
+- [x] Colonnes minimales : route, public/protégé, module requis, scope org, rôle requis, tests existants.
+- [x] Lier cette matrice à la checklist backend.
+
+Document :
+
+```text
+04-ARCHITECTURE/madsuite-backend-route-scope-matrix.md
+```
 
 ### P1-02 — Rendre les preuves tests plus visibles en CI
 
@@ -167,11 +203,12 @@ Action :
 
 ### P2-01 — Centraliser la sanitization des logs
 
-Action :
+Statut : partiellement complété.
 
-- [ ] Créer un helper de sanitization réutilisable.
-- [ ] L’utiliser dans requestLogger, errorHandler et services sensibles.
-- [ ] Ajouter une liste de clés masquées : token, refresh, password, secret, key, code, cookie.
+- [x] Créer un helper de sanitization réutilisable.
+- [x] L’utiliser dans requestLogger.
+- [ ] L’utiliser dans errorHandler et services sensibles si nécessaire.
+- [x] Ajouter une liste de clés masquées : token, refresh, password, secret, key, code, cookie.
 
 ### P2-02 — Ajouter des identifiants de corrélation dans les logs métier
 
@@ -210,19 +247,19 @@ Action :
 
 Cette phase sera complète quand :
 
-- la matrice des routes backend existe;
-- les routes métier sans scope organisation sont corrigées ou justifiées;
-- les logs ne peuvent plus exposer de query params sensibles;
-- le middleware auth retourne un format d’erreur uniforme;
-- les tests RLS et multi-tenant sont visibles dans les commandes CI;
-- le workflow E2E connecté peut utiliser le seed backend sans divergence de variables;
-- les écarts restants sont classés P1/P2/P3.
+- [x] la matrice des routes backend existe;
+- [ ] les routes métier sans scope organisation sont corrigées ou justifiées;
+- [x] les logs ne peuvent plus exposer de query params sensibles;
+- [x] le middleware auth retourne un format d’erreur uniforme;
+- [ ] les tests RLS et multi-tenant sont visibles dans les commandes CI;
+- [ ] le workflow E2E connecté peut utiliser le seed backend sans divergence de variables;
+- [ ] les écarts restants sont classés P1/P2/P3.
 
 ## 9. Prochaine action recommandée
 
-Créer une PR backend pour corriger d’abord :
+Créer une PR locale ou via agent pour corriger :
 
-1. `src/middleware/auth.js` vers `ApiResponse.error`;
-2. `src/middleware/requestLogger.js` avec URL sanitizée;
-3. une matrice route/scope dans SYSTEME_MAD ou README backend;
-4. un script npm dédié aux tests de sécurité si les tests existent déjà.
+1. `src/integrations/export/export.routes.js` avec `requireOrganisation`;
+2. un script npm dédié aux tests de sécurité si les tests existent déjà;
+3. une vérification concurrente du contexte organisationnel/RLS;
+4. l’audit MADPROOF des routes IA et cognitives.
