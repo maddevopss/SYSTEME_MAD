@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Plan P2 — Hardening, CI/CD et initialisation repos réservés
-Version: 2.3
+Version: 2.4
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -13,7 +13,7 @@ Auteur: Marc-André Dufour
 
 Ce document transforme la phase P2 en plan d’exécution concret.
 
-Il complète les checklists et playbooks P2 actifs : CHK-040 à CHK-049, PLAY-041, PLAY-042, PLAY-043, PLAY-044 et PLAY-045.
+Il complète les checklists et playbooks P2 actifs : CHK-040 à CHK-050, PLAY-041, PLAY-042, PLAY-043, PLAY-044 et PLAY-045.
 
 ---
 
@@ -35,6 +35,7 @@ La phase P2 vise à :
 - standardiser l’exécution locale des preuves;
 - maintenir un readiness maître clair;
 - consigner les preuves terrain;
+- définir la fermeture officielle de P2;
 - préparer une validation CI verte reproductible.
 
 ---
@@ -64,6 +65,7 @@ La phase P2 vise à :
 | Branch protection MADPROOF | SYSTEME_MAD + repos d’exécution | Documenté, à appliquer dans GitHub UI | `SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md` | `#32` |
 | PR review + CODEOWNERS MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué partiel | `SYSTEME_MAD/09-CHECKLISTS/chk-043-pr-review-codeowners-madproof.md` | `#37` |
 | Issue templates MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué | `SYSTEME_MAD/09-CHECKLISTS/chk-044-issue-templates-madproof.md` | Complété |
+| Fermeture P2 MADPROOF | SYSTEME_MAD | Ouvert, dépend des issues #32 à #38 | `SYSTEME_MAD/09-CHECKLISTS/chk-050-fermeture-p2-madproof.md` | `#39` |
 
 ---
 
@@ -78,19 +80,18 @@ La phase P2 vise à :
 | `#36` | E2E CI hygiene | À finaliser ou exception |
 | `#37` | CODEOWNERS desktop-agent | À appliquer ou exception |
 | `#38` | Labels GitHub MADSuite | À appliquer |
+| `#39` | Fermeture P2 MADPROOF | À fermer en dernier |
 
 ---
 
-## Issue tracking
+## Fermeture P2
 
 | Document | Rôle | Statut |
 |---|---|---|
-| `CHK-044` | Issue templates | Appliqué |
-| `CHK-046` | Suivi release par issue | Appliqué |
-| `CHK-049` | Taxonomie labels | Documenté |
-| `PLAY-045` | Script/commande pour créer les labels | Créé |
+| `CHK-050` | Critères de fermeture P2 | Créé v1.0 |
+| `#39` | Issue de fermeture P2 | Ouverte |
 
-Les issues devraient utiliser au minimum un label de type, un label de surface et une priorité si nécessaire.
+P2 ne doit pas être fermée tant que les issues #32 à #38 ne sont pas fermées ou reportées avec une exception documentée.
 
 ---
 
@@ -118,6 +119,7 @@ Un statut `Validé` doit être appuyé par une preuve dans CHK-048 ou une issue 
 8. Créer une issue release via `release_web_api.md` ou utiliser `#35` comme suivi.
 9. Faire le smoke test post-release selon `CHK-045`.
 10. Mettre à jour `CHK-047` selon les preuves observées.
+11. Fermer P2 via `CHK-050` et `#39` seulement lorsque les critères sont rencontrés.
 
 ---
 
