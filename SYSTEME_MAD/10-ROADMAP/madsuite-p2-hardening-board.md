@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Plan P2 — Hardening, CI/CD et initialisation repos réservés
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -21,6 +21,7 @@ SYSTEME_MAD/00-SYSTEME-MAD/repos.md
 SYSTEME_MAD/04-ADR/ADR-004-separation-repos-execution-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md
 SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md
+SYSTEME_MAD/09-CHECKLISTS/chk-043-pr-review-codeowners-madproof.md
 ```
 
 ---
@@ -39,6 +40,7 @@ La phase P2 vise à :
 - réduire les risques de secrets, drift et non-régression;
 - appliquer des guards MADPROOF multi-repo;
 - documenter et appliquer la branch protection;
+- standardiser les pull requests et CODEOWNERS;
 - préparer une validation CI verte reproductible.
 
 ---
@@ -56,6 +58,7 @@ La phase P2 vise à :
 | Workflow de migration e2e/desktop | E2E + Desktop | Complété partiel | `SYSTEME_MAD/05-PLAY/play-042-initialiser-repo-execution-madsuite.md` | `#16` |
 | Guards MADPROOF multi-repo | Backend + Frontend + E2E + Desktop | Appliqué, validation CI requise | `SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md` | À créer si suivi GitHub requis |
 | Branch protection MADPROOF | SYSTEME_MAD + repos d’exécution | Documenté, à appliquer dans GitHub UI | `SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md` | À créer par repo |
+| PR review + CODEOWNERS MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué partiel | `SYSTEME_MAD/09-CHECKLISTS/chk-043-pr-review-codeowners-madproof.md` | À créer si suivi GitHub requis |
 
 ---
 
@@ -86,6 +89,19 @@ La protection doit rendre impossible le merge direct d’une branche rouge sur `
 
 ---
 
+## PR review + CODEOWNERS MADPROOF
+
+| Dépôt | PR template | CODEOWNERS | Statut |
+|---|---|---|---|
+| `maddevopss/madsuite-backend` | Appliqué | Appliqué | Complété |
+| `maddevopss/madsuite-frontend` | Appliqué | Appliqué | Complété |
+| `maddevopss/e2e` | Appliqué | Appliqué | Complété |
+| `maddevopss/desktop-agent` | Appliqué | À appliquer manuellement si requis | Partiel |
+
+Référence officielle : `SYSTEME_MAD/09-CHECKLISTS/chk-043-pr-review-codeowners-madproof.md`.
+
+---
+
 ## Definition of Done P2
 
 La phase P2 est considérée complétée lorsque :
@@ -97,6 +113,7 @@ La phase P2 est considérée complétée lorsque :
 - les repos publics ont un `SECURITY.md` minimal;
 - les guards MADPROOF multi-repo sont appliqués;
 - la branch protection `main` est appliquée ou son exception est documentée;
+- les templates PR et CODEOWNERS sont appliqués ou exception documentée;
 - les CI pertinentes exécutent les guards;
 - les checks locaux passent dans chaque repo;
 - les issues P2 sont ouvertes, reliées et suivies;
@@ -112,10 +129,11 @@ La phase P2 est considérée complétée lorsque :
 3. Observer les CI GitHub Actions.
 4. Corriger tout guard rouge sans contournement silencieux.
 5. Appliquer la branch protection `main` selon `CHK-042`.
-6. Créer une issue de suivi par repo si la configuration doit être validée plus tard.
-7. Transformer tout échec durable en issue GitHub suivie.
-8. Fermer le chantier guards seulement après CI verte ou exception documentée.
-9. Faire une validation staging/prod réelle selon PLAY-041.
+6. Activer review from Code Owners quand applicable.
+7. Créer une issue de suivi par repo si la configuration doit être validée plus tard.
+8. Transformer tout échec durable en issue GitHub suivie.
+9. Fermer le chantier guards seulement après CI verte ou exception documentée.
+10. Faire une validation staging/prod réelle selon PLAY-041.
 
 ---
 
@@ -126,5 +144,7 @@ Les guards ne garantissent pas que le produit est parfait.
 Ils garantissent que certaines classes de régressions ne peuvent plus revenir silencieusement : secrets, artefacts générés, routes sensibles mal protégées, drift modules frontend, absence de contexte organisationnel sur routes métier et documentation opérationnelle obsolète.
 
 La branch protection garantit que ces preuves ne peuvent pas être contournées par un merge direct non validé.
+
+Les templates PR et CODEOWNERS rendent la revue plus répétable et moins dépendante de la mémoire humaine.
 
 Tant que les CI n’ont pas été observées vertes et que la branch protection n’est pas appliquée, le statut reste : **appliqué, validation requise**.
