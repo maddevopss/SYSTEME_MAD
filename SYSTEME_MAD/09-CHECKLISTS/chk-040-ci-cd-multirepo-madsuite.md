@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-040 — Validation CI/CD multi-repo MADSuite
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -21,6 +21,7 @@ Elle couvre :
 - env;
 - secrets;
 - sécurité;
+- dépendances;
 - déploiement;
 - MADPROOF lorsque pertinent;
 - guards multi-repo documentés dans `CHK-041`.
@@ -50,19 +51,20 @@ maddevopss/desktop-agent
 | `AUDIT-008` | Cohérence modules frontend/backend |
 | `CHK-041` | Guards MADPROOF multi-repo |
 | README des repos d’exécution | Commandes locales et consignes opérationnelles |
+| `.github/dependabot.yml` | Surveillance dépendances npm et GitHub Actions |
 
 ---
 
 ## Matrice minimale — état réel au 2026-07-05
 
-| Repo | Build | Test | Lint | Guards | Env / secrets | CI | Statut |
-|---|---|---|---|---|---|---|---|
-| `bleeband/SYSTEME_MAD` | N/A | Docs QA manuel | YAML/Markdown manuel | N/A | Interne / à surveiller | Non requis | Source de vérité active |
-| `bleeband/maddevops` | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | Hors scope immédiat MADSuite produit |
-| `maddevopss/madsuite-frontend` | `npm run build` | `npm test -- --watchAll=false` | `npm run lint` | gitignore, hygiene, modules API | `.env.example` autorisé; secrets `VITE_*` interdits | `.github/workflows/ci.yml` | Guards appliqués, CI à valider |
-| `maddevopss/madsuite-backend` | `node -c server.js`; build TS à clarifier | `npm test`; `npm run test:security` | `npm run lint` | gitignore, hygiene, routes, organisation routes | `.env.example` autorisé; `.env` bloqué | `.github/workflows/ci.yml` avec Postgres service | Guards appliqués, CI à valider |
-| `maddevopss/e2e` | N/A | Playwright public/authenticated | N/A | gitignore, artifact hygiene | `.env` et `storageState/*.json` bloqués | `.github/workflows/ci.yml` | Appliqué partiel; hygiene CI à finaliser si possible |
-| `maddevopss/desktop-agent` | `npm run build:ci` | `npm test` | syntax check | gitignore, artifact hygiene | `.env`, installers, certificats bloqués | `.github/workflows/ci.yml` | Guards appliqués, CI à valider |
+| Repo | Build | Test | Lint | Guards | Dépendances | Env / secrets | CI | Statut |
+|---|---|---|---|---|---|---|---|---|
+| `bleeband/SYSTEME_MAD` | N/A | Docs QA manuel | YAML/Markdown manuel | N/A | À surveiller manuellement | Interne / à surveiller | Non requis | Source de vérité active |
+| `bleeband/maddevops` | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | Hors scope immédiat MADSuite produit |
+| `maddevopss/madsuite-frontend` | `npm run build` | `npm test -- --watchAll=false` | `npm run lint` | gitignore, hygiene, modules API | Dependabot npm + Actions | `.env.example` autorisé; secrets `VITE_*` interdits | `.github/workflows/ci.yml` | Guards + Dependabot appliqués, CI à valider |
+| `maddevopss/madsuite-backend` | `node -c server.js`; build TS à clarifier | `npm test`; `npm run test:security` | `npm run lint` | gitignore, hygiene, routes, organisation routes | Dependabot npm + Actions | `.env.example` autorisé; `.env` bloqué | `.github/workflows/ci.yml` avec Postgres service | Guards + Dependabot appliqués, CI à valider |
+| `maddevopss/e2e` | N/A | Playwright public/authenticated | N/A | gitignore, artifact hygiene | Dependabot npm + Actions | `.env` et `storageState/*.json` bloqués | `.github/workflows/ci.yml` | Appliqué partiel; hygiene CI à finaliser si possible |
+| `maddevopss/desktop-agent` | `npm run build:ci` | `npm test` | syntax check | gitignore, artifact hygiene | Dependabot npm + Actions | `.env`, installers, certificats bloqués | `.github/workflows/ci.yml` | Guards + Dependabot appliqués, CI à valider |
 
 ---
 
@@ -75,6 +77,7 @@ maddevopss/desktop-agent
 | Chaque repo applicatif possède un `.env.example` sans secrets | Validé partiel | Frontend, backend, e2e, desktop-agent présents |
 | Aucun `.env` réel n’est commité | Guardé | Guards hygiene + `.gitignore` policy |
 | Scripts `check:*` documentés | Validé | Backend, frontend, e2e, desktop-agent |
+| Dependabot npm / Actions | Appliqué | Backend, frontend, e2e, desktop-agent |
 | Commandes documentées fonctionnent localement | À valider localement | Non exécuté par SYSTEME_MAD |
 | Erreurs connues transformées en issues | À poursuivre | Les CI rouges doivent devenir corrections ou issues |
 | Branches de production protégées | À vérifier | Nécessite vérification settings GitHub/repo |
@@ -93,6 +96,7 @@ maddevopss/desktop-agent
 | `npm test -- --watchAll=false` | CI ajoutée | Jest |
 | `npm run build` | CI ajoutée | Vite build |
 | `npm run check:frontend` | Local | Agrège guards + lint + test + build |
+| `.github/dependabot.yml` | Appliqué | Surveillance npm + GitHub Actions |
 
 ---
 
@@ -111,6 +115,7 @@ maddevopss/desktop-agent
 | `npm run lint` | CI ajoutée | ESLint backend |
 | `npm run check:backend` | Local | Agrège guards + tests + lint |
 | `npm run deploy:migrate` | Documenté | Migrations prod séparées du startup serveur |
+| `.github/dependabot.yml` | Appliqué | Surveillance npm + GitHub Actions |
 
 ---
 
@@ -139,6 +144,7 @@ Si la CI backend tombe rouge, traiter dans cet ordre :
 | `npm run guard:hygiene` | Local | Bloque `.env`, reports, test-results, auth state |
 | `npm run test:public` | CI/local | Responsive public |
 | `npm run test:authenticated` | Local/CI conditionnelle | Requiert `E2E_BASE_URL`, `E2E_ADMIN_EMAIL`, `E2E_PASSWORD` |
+| `.github/dependabot.yml` | Appliqué | Surveillance npm + GitHub Actions |
 | Sessions sans secrets réels | Guardé | `storageState/*.json` bloqué |
 | Scénarios multi-tenant prioritaires | À matérialiser | Futur P2/P3 |
 
@@ -155,6 +161,7 @@ Si la CI backend tombe rouge, traiter dans cet ordre :
 | `npm run check:syntax` | CI/local | Vérifie `main.js` et `preload.js` |
 | `npm test` | CI/local | Jest avec `passWithNoTests` tant que tests manquants |
 | `npm run build:ci` | CI/local | Packaging Windows non signé |
+| `.github/dependabot.yml` | Appliqué | Surveillance npm + GitHub Actions |
 | Aucun log token/cookie/secret | À surveiller | Audit sécurité desktop futur recommandé |
 | Deep link one-time code | À faire | Durcissement sécurité futur |
 
@@ -173,6 +180,7 @@ Si la CI backend tombe rouge, traiter dans cet ordre :
 | Utilisateur garde le contrôle | Validé documentaire | À maintenir dans UI/runtime |
 | Routes métier isolées par organisation | Guardé | Backend `guard:organisation-routes` + RLS middleware |
 | Routes platform globales super-admin | Guardé | Backend `guard:routes` + tests super-admin |
+| Dépendances surveillées | Appliqué | Dependabot npm + Actions sur repos d’exécution |
 
 ---
 
@@ -196,6 +204,12 @@ Les deux repos ont maintenant scripts, README, guards et CI ou validation partie
 
 Leur statut passe de “réservé” à “appliqué, validation à compléter”.
 
+### Décision 4 — Dependabot activé sur les repos d’exécution
+
+Les repos backend, frontend, e2e et desktop-agent possèdent maintenant une configuration Dependabot pour npm et GitHub Actions.
+
+Les PR Dependabot doivent être traitées comme des changements normaux : CI obligatoire, revue rapide, merge seulement si les checks restent verts.
+
 ---
 
 ## Actions restantes
@@ -205,11 +219,12 @@ Leur statut passe de “réservé” à “appliqué, validation à compléter�
 | P0/P1 | Observer CI backend et corriger rouges | `madsuite-backend` | Issue dédiée si échec persistant |
 | P1 | Observer CI frontend et corriger rouges | `madsuite-frontend` | Issue dédiée si échec persistant |
 | P1/P2 | Finaliser hygiene guard dans CI E2E si possible | `e2e` | Nouvelle issue si bloqué par secrets/workflow |
+| P1/P2 | Traiter premières PR Dependabot | Repos d’exécution | Issues/PRs Dependabot |
 | P2 | Ajouter scénarios Playwright authentifiés métier | `e2e` | Nouvelle issue dédiée |
 | P2 | Durcir deep link desktop en one-time code | `desktop-agent` + backend | Nouvelle issue sécurité |
 | P2 | Vérifier branch protection main | Tous repos | Nouvelle issue gouvernance |
 | P2 | Vérifier Vercel/Railway deploy checks | Frontend/backend | Issue release `#15` |
-| P2 | Ajouter secret scanning / Dependabot | Repos publics | Nouvelle issue sécurité |
+| P2 | Vérifier secret scanning GitHub settings | Repos publics | Nouvelle issue sécurité |
 
 ---
 
@@ -220,6 +235,7 @@ CHK-040 est considéré **à jour pour la phase actuelle** lorsque :
 - chaque repo a un statut clair;
 - les guards MADPROOF sont listés;
 - les workflows minimaux sont documentés;
+- Dependabot est activé sur les repos d’exécution;
 - les limites restantes sont explicites;
 - les CI ont été observées ou les échecs ont été transformés en corrections/issues.
 
