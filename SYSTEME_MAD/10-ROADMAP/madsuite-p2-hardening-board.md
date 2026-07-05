@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Plan P2 — Hardening, CI/CD et initialisation repos réservés
-Version: 2.0
+Version: 2.1
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -13,7 +13,7 @@ Auteur: Marc-André Dufour
 
 Ce document transforme la phase P2 en plan d’exécution concret.
 
-Il complète les checklists et playbooks P2 actifs : CHK-040 à CHK-048, PLAY-041, PLAY-042, PLAY-043 et PLAY-044.
+Il complète les checklists et playbooks P2 actifs : CHK-040 à CHK-049, PLAY-041, PLAY-042, PLAY-043 et PLAY-044.
 
 ---
 
@@ -28,6 +28,7 @@ La phase P2 vise à :
 - réduire les risques de régression;
 - appliquer les guards MADPROOF multi-repo;
 - documenter branch protection, PR review, CODEOWNERS et issues;
+- standardiser les labels GitHub;
 - standardiser la validation release et post-release;
 - standardiser le suivi GitHub Issues des releases;
 - standardiser le triage des CI rouges;
@@ -47,6 +48,7 @@ La phase P2 vise à :
 | README E2E | `maddevopss/e2e` | Complété | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-e2e.md` | `#12` |
 | README desktop-agent | `maddevopss/desktop-agent` | Complété | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-desktop-agent.md` | `#13` |
 | Matrice CI/CD multi-repo | Tous repos | Complété, à revalider | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` | `#14` |
+| Taxonomie labels GitHub | Tous repos | Documenté, application UI/API à faire si requis | `SYSTEME_MAD/09-CHECKLISTS/chk-049-github-label-taxonomy-madsuite.md` | À créer si suivi requis |
 | Readiness maître MADPROOF | Tous repos | Documenté, validation réelle requise | `SYSTEME_MAD/09-CHECKLISTS/chk-047-madproof-readiness-master.md` | À créer si suivi requis |
 | Evidence log MADPROOF | Tous repos | Créé, preuves terrain à remplir | `SYSTEME_MAD/09-CHECKLISTS/chk-048-evidence-log-madproof.md` | À créer si suivi requis |
 | Exécution locale des preuves | Tous repos actifs | Documenté | `SYSTEME_MAD/05-PLAY/play-044-execution-locale-preuves-madproof.md` | À créer si suivi requis |
@@ -59,6 +61,18 @@ La phase P2 vise à :
 | Branch protection MADPROOF | SYSTEME_MAD + repos d’exécution | Documenté, à appliquer dans GitHub UI | `SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md` | À créer par repo |
 | PR review + CODEOWNERS MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué partiel | `SYSTEME_MAD/09-CHECKLISTS/chk-043-pr-review-codeowners-madproof.md` | À créer si suivi requis |
 | Issue templates MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué | `SYSTEME_MAD/09-CHECKLISTS/chk-044-issue-templates-madproof.md` | À créer si suivi requis |
+
+---
+
+## Issue tracking
+
+| Document | Rôle | Statut |
+|---|---|---|
+| `CHK-044` | Issue templates | Appliqué |
+| `CHK-046` | Suivi release par issue | Appliqué |
+| `CHK-049` | Taxonomie labels | Documenté |
+
+Les issues devraient utiliser au minimum un label de type, un label de surface et une priorité si nécessaire.
 
 ---
 
@@ -83,15 +97,16 @@ Un statut `Validé` doit être appuyé par une preuve dans CHK-048 ou une issue 
 5. Corriger les rouges avec `PLAY-043` sans contourner les guards.
 6. Appliquer branch protection selon `CHK-042`.
 7. Créer une issue release via `release_web_api.md`.
-8. Valider une release selon `PLAY-041`.
-9. Faire le smoke test post-release selon `CHK-045`.
-10. Mettre à jour `CHK-047` selon les preuves observées.
+8. Appliquer les labels selon `CHK-049`.
+9. Valider une release selon `PLAY-041`.
+10. Faire le smoke test post-release selon `CHK-045`.
+11. Mettre à jour `CHK-047` selon les preuves observées.
 
 ---
 
 ## Note importante
 
-Les guards, templates, branch protection et smoke tests ne garantissent pas la perfection.
+Les guards, templates, labels, branch protection et smoke tests ne garantissent pas la perfection.
 
 Ils rendent les régressions visibles, répétables et plus difficiles à ignorer.
 
