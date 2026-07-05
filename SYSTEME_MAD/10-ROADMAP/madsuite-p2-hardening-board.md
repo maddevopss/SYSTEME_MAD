@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Plan P2 — Hardening, CI/CD et initialisation repos réservés
-Version: 2.1
+Version: 2.2
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -49,18 +49,33 @@ La phase P2 vise à :
 | README desktop-agent | `maddevopss/desktop-agent` | Complété | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-desktop-agent.md` | `#13` |
 | Matrice CI/CD multi-repo | Tous repos | Complété, à revalider | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` | `#14` |
 | Taxonomie labels GitHub | Tous repos | Documenté, application UI/API à faire si requis | `SYSTEME_MAD/09-CHECKLISTS/chk-049-github-label-taxonomy-madsuite.md` | À créer si suivi requis |
-| Readiness maître MADPROOF | Tous repos | Documenté, validation réelle requise | `SYSTEME_MAD/09-CHECKLISTS/chk-047-madproof-readiness-master.md` | À créer si suivi requis |
-| Evidence log MADPROOF | Tous repos | Créé, preuves terrain à remplir | `SYSTEME_MAD/09-CHECKLISTS/chk-048-evidence-log-madproof.md` | À créer si suivi requis |
-| Exécution locale des preuves | Tous repos actifs | Documenté | `SYSTEME_MAD/05-PLAY/play-044-execution-locale-preuves-madproof.md` | À créer si suivi requis |
-| Triage CI rouge | Tous repos d’exécution | Documenté | `SYSTEME_MAD/05-PLAY/play-043-triage-ci-rouge-madsuite.md` | À créer si suivi requis |
-| Workflow de release Web/API | Frontend + Backend | Durci, release réelle à valider | `SYSTEME_MAD/05-PLAY/play-041-release-madsuite-web-api.md` | `#15` |
-| Post-release smoke test | Frontend + Backend | Documenté, à exécuter après release | `SYSTEME_MAD/09-CHECKLISTS/chk-045-post-release-smoke-test-madsuite.md` | `#15` |
-| Suivi release GitHub Issues | SYSTEME_MAD | Appliqué | `SYSTEME_MAD/09-CHECKLISTS/chk-046-release-tracking-madsuite.md` | `#15` |
+| Readiness maître MADPROOF | Tous repos | Documenté, validation réelle requise | `SYSTEME_MAD/09-CHECKLISTS/chk-047-madproof-readiness-master.md` | `#34` |
+| Evidence log MADPROOF | Tous repos | Créé, preuves terrain à remplir | `SYSTEME_MAD/09-CHECKLISTS/chk-048-evidence-log-madproof.md` | `#34` |
+| Exécution locale des preuves | Tous repos actifs | Documenté | `SYSTEME_MAD/05-PLAY/play-044-execution-locale-preuves-madproof.md` | `#34` |
+| Observation CI GitHub Actions | Repos d’exécution | À faire | `SYSTEME_MAD/09-CHECKLISTS/chk-048-evidence-log-madproof.md` | `#33` |
+| Triage CI rouge | Tous repos d’exécution | Documenté | `SYSTEME_MAD/05-PLAY/play-043-triage-ci-rouge-madsuite.md` | `#33` |
+| Workflow de release Web/API | Frontend + Backend | Durci, release réelle à valider | `SYSTEME_MAD/05-PLAY/play-041-release-madsuite-web-api.md` | `#35` |
+| Post-release smoke test | Frontend + Backend | Documenté, à exécuter après release | `SYSTEME_MAD/09-CHECKLISTS/chk-045-post-release-smoke-test-madsuite.md` | `#35` |
+| Suivi release GitHub Issues | SYSTEME_MAD | Appliqué | `SYSTEME_MAD/09-CHECKLISTS/chk-046-release-tracking-madsuite.md` | `#35` |
 | Workflow migration e2e/desktop | E2E + Desktop | Complété partiel | `SYSTEME_MAD/05-PLAY/play-042-initialiser-repo-execution-madsuite.md` | `#16` |
-| Guards MADPROOF multi-repo | Backend + Frontend + E2E + Desktop | Appliqué, validation CI requise | `SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md` | À créer si suivi requis |
-| Branch protection MADPROOF | SYSTEME_MAD + repos d’exécution | Documenté, à appliquer dans GitHub UI | `SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md` | À créer par repo |
-| PR review + CODEOWNERS MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué partiel | `SYSTEME_MAD/09-CHECKLISTS/chk-043-pr-review-codeowners-madproof.md` | À créer si suivi requis |
-| Issue templates MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué | `SYSTEME_MAD/09-CHECKLISTS/chk-044-issue-templates-madproof.md` | À créer si suivi requis |
+| E2E CI hygiene | `maddevopss/e2e` | À finaliser ou exception | `SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md` | `#36` |
+| Guards MADPROOF multi-repo | Backend + Frontend + E2E + Desktop | Appliqué, validation CI requise | `SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md` | `#33` |
+| Branch protection MADPROOF | SYSTEME_MAD + repos d’exécution | Documenté, à appliquer dans GitHub UI | `SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md` | `#32` |
+| PR review + CODEOWNERS MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué partiel | `SYSTEME_MAD/09-CHECKLISTS/chk-043-pr-review-codeowners-madproof.md` | `#37` |
+| Issue templates MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué | `SYSTEME_MAD/09-CHECKLISTS/chk-044-issue-templates-madproof.md` | Complété |
+
+---
+
+## Issues P2 de suivi terrain
+
+| Issue | Sujet | Statut attendu |
+|---|---|---|
+| `#32` | Branch protection MADPROOF | À appliquer |
+| `#33` | CI GitHub Actions | À observer |
+| `#34` | CHK-048 validations locales | À remplir |
+| `#35` | Release Web/API | À valider |
+| `#36` | E2E CI hygiene | À finaliser ou exception |
+| `#37` | CODEOWNERS desktop-agent | À appliquer ou exception |
 
 ---
 
@@ -81,8 +96,8 @@ Les issues devraient utiliser au minimum un label de type, un label de surface e
 | Document | Rôle | Statut |
 |---|---|---|
 | `CHK-047` | Vue maître des preuves et blocants restants | v1.1 |
-| `CHK-048` | Journal des preuves observées | Créé v1.0 |
-| `PLAY-044` | Procédure locale pour produire les preuves | Créé v1.0 |
+| `CHK-048` | Journal des preuves observées | Créé v1.1 |
+| `PLAY-044` | Procédure locale pour produire les preuves | Créé v1.1 |
 
 Un statut `Validé` doit être appuyé par une preuve dans CHK-048 ou une issue GitHub reliée.
 
@@ -92,15 +107,14 @@ Un statut `Validé` doit être appuyé par une preuve dans CHK-048 ou une issue 
 
 1. Pull local des repos actifs.
 2. Exécuter les checks selon `PLAY-044`.
-3. Noter les résultats dans `CHK-048`.
-4. Observer les CI GitHub Actions.
+3. Noter les résultats dans `CHK-048` et dans l’issue `#34`.
+4. Observer les CI GitHub Actions via `#33`.
 5. Corriger les rouges avec `PLAY-043` sans contourner les guards.
-6. Appliquer branch protection selon `CHK-042`.
-7. Créer une issue release via `release_web_api.md`.
+6. Appliquer branch protection selon `CHK-042` et `#32`.
+7. Créer une issue release via `release_web_api.md` ou utiliser `#35` comme suivi.
 8. Appliquer les labels selon `CHK-049`.
-9. Valider une release selon `PLAY-041`.
-10. Faire le smoke test post-release selon `CHK-045`.
-11. Mettre à jour `CHK-047` selon les preuves observées.
+9. Faire le smoke test post-release selon `CHK-045`.
+10. Mettre à jour `CHK-047` selon les preuves observées.
 
 ---
 
