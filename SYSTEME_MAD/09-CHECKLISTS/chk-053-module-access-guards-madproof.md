@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-053 — Guards d’accès modules MADPROOF
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -89,7 +89,23 @@ Raison : `quotes` et `estimates` sont deux clés modules distinctes dans le regi
 | `moduleGateAllows()` | Ajouté | Helper pur testable |
 | `src/components/ModuleGate.test.jsx` | Ajouté | Vérifie les décisions UI de base |
 | `src/modules/index.js` | Durci | Exporte `ModuleGate` depuis le barrel officiel |
+| `src/pages/App/index.jsx` | Durci | Utilise `ModuleGate` depuis le barrel et la prop officielle `moduleKey` |
 | `scripts/guard-modules-api.js` | Durci | Bloque aussi les imports directs de `components/ModuleGate` |
+| `scripts/guard-app-module-routes.js` | Ajouté | Vérifie les mappings route UI sensible → `moduleKey` attendu |
+| `.github/workflows/ci.yml` | Mis à jour | Exécute le guard des routes modules frontend |
+
+---
+
+## Mappings UI → module surveillés
+
+```text
+/reports             → reports
+/invoices            → invoices
+/estimates           → estimates
+/billing-assistant   → billing_assistant
+/expenses            → expenses
+/calculkm            → calcul_km
+```
 
 ---
 
@@ -107,6 +123,12 @@ Usage recommandé :
 
 ```javascript
 import { ModuleGate } from '../modules';
+```
+
+Les routes UI sensibles doivent utiliser la prop officielle :
+
+```text
+moduleKey
 ```
 
 ### Côté backend
@@ -146,13 +168,19 @@ Frontend :
 .github/workflows/ci.yml
 ```
 
-exécute déjà les guards modules frontend disponibles.
+exécute maintenant :
+
+```bash
+npm run guard:modules-api
+node scripts/guard-modules-known-keys.js
+node scripts/guard-app-module-routes.js
+```
 
 ---
 
 ## Limite connue
 
-Le guard `app-module-mounts` vérifie les mappings sensibles explicitement déclarés dans ce document. Il ne détecte pas automatiquement tous les futurs modules. Toute nouvelle route module-sensitive doit être ajoutée ici et dans `scripts/guard-app-module-mounts.js`.
+Les guards `app-module-mounts` et `app-module-routes` vérifient les mappings sensibles explicitement déclarés dans ce document. Ils ne détectent pas automatiquement tous les futurs modules. Toute nouvelle route module-sensitive doit être ajoutée ici et dans le guard correspondant.
 
 ---
 
@@ -164,10 +192,11 @@ Le guard `app-module-mounts` vérifie les mappings sensibles explicitement décl
 - [ ] Exécuter `npm run guard:app-module-mounts` localement.
 - [ ] Exécuter `npm run guard:modules-api` côté frontend.
 - [ ] Exécuter `node scripts/guard-modules-known-keys.js` côté frontend.
+- [ ] Exécuter `node scripts/guard-app-module-routes.js` côté frontend.
 - [ ] Observer les CI vertes.
 
 ---
 
 ## Statut actuel
 
-Statut : **guards d’accès modules appliqués, mapping API→module sensible surveillé, validation locale/CI requise**.
+Statut : **guards d’accès modules appliqués, mappings API/UI→module sensibles surveillés, validation locale/CI requise**.
