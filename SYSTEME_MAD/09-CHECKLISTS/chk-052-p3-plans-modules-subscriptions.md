@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-052 — P3 Plans, modules et subscriptions
-Version: 1.7
+Version: 1.8
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -75,6 +75,22 @@ Cette checklist sert à vérifier que l’implémentation frontend/backend reste
 
 ---
 
+## Modules opérationnels / legacy reconnus
+
+Ces clés peuvent exister dans le backend pour compatibilité produit ou écrans historiques. Elles ne doivent pas déclencher un diagnostic frontend `unknownModules` simplement parce qu’elles ne font pas partie du noyau commercial.
+
+```text
+dashboard
+timesheet
+kiosk_punch
+calcul_km
+kiosk_km
+```
+
+Règle : ces modules peuvent être reconnus comme connus, mais leur migration produit doit rester contrôlée. Exemple : `timesheet` peut coexister avec la clé produit `time_tracking` jusqu’à migration explicite.
+
+---
+
 ## Durcissement backend appliqué
 
 Repo : `maddevopss/madsuite-backend`
@@ -103,12 +119,16 @@ Repo : `maddevopss/madsuite-frontend`
 
 | Élément | Statut | Rôle |
 |---|---|---|
-| `src/api/modules.api.js` | Durci | Normalise et unwrap défensivement le payload modules/plans |
+| `src/api/modules.api.js` | Durci | Normalise, unwrap défensivement et reconnaît les familles de modules |
+| `CORE_MODULE_KEYS` | Ajouté | Clés produit essentielles |
+| `BUSINESS_MODULE_KEYS` | Ajouté | Modules commerciaux/gestion |
+| `ASSISTANCE_MODULE_KEYS` | Ajouté | Modules IA/cognitifs/agent |
+| `LEGACY_OPERATIONAL_MODULE_KEYS` | Ajouté | Modules historiques/opérationnels reconnus |
 | `getModulesDiagnostics()` | Ajouté | Détecte modules core manquants et modules inconnus |
 | `findMissingCoreModules()` | Ajouté | Aide à repérer une organisation incomplète |
 | `findUnknownModules()` | Ajouté | Aide à repérer un drift backend/frontend |
 | `isInternalPlan()` | Ajouté | Identifie les plans internes/admin |
-| `src/api/modules.helpers.test.js` | Ajouté | Tests unitaires des helpers purs, incluant unwrap ApiResponse |
+| `src/api/modules.helpers.test.js` | Durci | Tests unitaires des helpers purs, incluant unwrap ApiResponse et legacy modules |
 | `scripts/guard-modules-api.js` | Durci | Bloque appels directs et imports directs non autorisés |
 | `src/hooks/useModules.jsx` | Durci | Expose les diagnostics modules via le provider |
 | `src/components/ModulesPanel.jsx` | Durci | Affiche une alerte admin actionnable si modules incohérents |
@@ -211,6 +231,7 @@ tests modules dédiés
 | Permissions insuffisantes | Explication claire | À tester |
 | Payload modules incomplet | Diagnostic disponible côté frontend | Préparé |
 | Module backend inconnu | Diagnostic disponible côté frontend | Préparé |
+| Module legacy connu | Aucun faux diagnostic `unknownModules` | Préparé |
 | Admin avec modules core manquants | Alerte visible dans ModulesPanel | Préparé |
 | Admin détecte une incohérence | Action reload + lien paramètres disponibles | Préparé |
 | Matrice plans/modules existe | Source produit créée | Préparé |
@@ -242,4 +263,4 @@ Plan → modules inclus → limites → CTA upgrade → exceptions admin
 
 ## Statut actuel
 
-Statut : **cadrage P3 préparé, contrat API modules centralisé, backend/frontend alignés sur une base traçable, validation locale/CI requise**.
+Statut : **cadrage P3 préparé, contrat API modules centralisé, familles modules frontend alignées, validation locale/CI requise**.
