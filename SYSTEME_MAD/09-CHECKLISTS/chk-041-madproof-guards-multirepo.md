@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-041 — Guards MADPROOF multi-repo
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -51,12 +51,19 @@ npm run check:backend
 
 ### Preuves attendues
 
-- `.github/workflows/ci.yml` exécute les guards backend.
+- `.github/workflows/ci.yml` exécute les tests backend.
+- `.github/workflows/backend-guards.yml` exécute les guards backend sans dépendre des variables de test.
 - `scripts/guard-route-security.js` existe.
 - `scripts/guard-organisation-routes.js` existe.
 - `scripts/guard-repo-hygiene.js` existe.
 - `scripts/guard-gitignore-policy.js` existe.
 - `README.md` documente les checks.
+
+### Durcissement récent
+
+- `npm run check:backend` exécute maintenant les tests Jest en mode séquentiel avec `--runInBand`.
+- `/api/calendar` applique maintenant `requireOrganisation`.
+- `scripts/guard-organisation-routes.js` surveille maintenant `src/routes/calendar.routes.js`.
 
 ---
 
@@ -156,7 +163,7 @@ Ordre de résolution :
 
 | Dépôt | Statut guards | Validation requise |
 |---|---|---|
-| Backend | Appliqué | CI + `npm run check:backend` |
+| Backend | Appliqué, durci pour calendar/RLS | CI + `npm run check:backend` |
 | Frontend | Appliqué | CI + `npm run check:frontend` |
 | E2E | Appliqué partiel | `npm run check:e2e`; CI hygiene à brancher si filtre/permissions le permettent |
 | Desktop agent | Appliqué | CI + `npm run check:desktop` + `npm run build:ci` |
