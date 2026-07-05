@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Plan P2 — Hardening, CI/CD et initialisation repos réservés
-Version: 2.2
+Version: 2.3
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -13,7 +13,7 @@ Auteur: Marc-André Dufour
 
 Ce document transforme la phase P2 en plan d’exécution concret.
 
-Il complète les checklists et playbooks P2 actifs : CHK-040 à CHK-049, PLAY-041, PLAY-042, PLAY-043 et PLAY-044.
+Il complète les checklists et playbooks P2 actifs : CHK-040 à CHK-049, PLAY-041, PLAY-042, PLAY-043, PLAY-044 et PLAY-045.
 
 ---
 
@@ -48,7 +48,8 @@ La phase P2 vise à :
 | README E2E | `maddevopss/e2e` | Complété | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-e2e.md` | `#12` |
 | README desktop-agent | `maddevopss/desktop-agent` | Complété | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-desktop-agent.md` | `#13` |
 | Matrice CI/CD multi-repo | Tous repos | Complété, à revalider | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` | `#14` |
-| Taxonomie labels GitHub | Tous repos | Documenté, application UI/API à faire si requis | `SYSTEME_MAD/09-CHECKLISTS/chk-049-github-label-taxonomy-madsuite.md` | À créer si suivi requis |
+| Taxonomie labels GitHub | Tous repos | Documenté, à appliquer | `SYSTEME_MAD/09-CHECKLISTS/chk-049-github-label-taxonomy-madsuite.md` | `#38` |
+| Application labels GitHub | Tous repos | Playbook créé | `SYSTEME_MAD/05-PLAY/play-045-appliquer-labels-github-madsuite.md` | `#38` |
 | Readiness maître MADPROOF | Tous repos | Documenté, validation réelle requise | `SYSTEME_MAD/09-CHECKLISTS/chk-047-madproof-readiness-master.md` | `#34` |
 | Evidence log MADPROOF | Tous repos | Créé, preuves terrain à remplir | `SYSTEME_MAD/09-CHECKLISTS/chk-048-evidence-log-madproof.md` | `#34` |
 | Exécution locale des preuves | Tous repos actifs | Documenté | `SYSTEME_MAD/05-PLAY/play-044-execution-locale-preuves-madproof.md` | `#34` |
@@ -76,6 +77,7 @@ La phase P2 vise à :
 | `#35` | Release Web/API | À valider |
 | `#36` | E2E CI hygiene | À finaliser ou exception |
 | `#37` | CODEOWNERS desktop-agent | À appliquer ou exception |
+| `#38` | Labels GitHub MADSuite | À appliquer |
 
 ---
 
@@ -86,6 +88,7 @@ La phase P2 vise à :
 | `CHK-044` | Issue templates | Appliqué |
 | `CHK-046` | Suivi release par issue | Appliqué |
 | `CHK-049` | Taxonomie labels | Documenté |
+| `PLAY-045` | Script/commande pour créer les labels | Créé |
 
 Les issues devraient utiliser au minimum un label de type, un label de surface et une priorité si nécessaire.
 
@@ -111,8 +114,8 @@ Un statut `Validé` doit être appuyé par une preuve dans CHK-048 ou une issue 
 4. Observer les CI GitHub Actions via `#33`.
 5. Corriger les rouges avec `PLAY-043` sans contourner les guards.
 6. Appliquer branch protection selon `CHK-042` et `#32`.
-7. Créer une issue release via `release_web_api.md` ou utiliser `#35` comme suivi.
-8. Appliquer les labels selon `CHK-049`.
+7. Appliquer les labels selon `PLAY-045` et `#38`.
+8. Créer une issue release via `release_web_api.md` ou utiliser `#35` comme suivi.
 9. Faire le smoke test post-release selon `CHK-045`.
 10. Mettre à jour `CHK-047` selon les preuves observées.
 
