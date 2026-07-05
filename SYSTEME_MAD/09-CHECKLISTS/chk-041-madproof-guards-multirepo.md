@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-041 — Guards MADPROOF multi-repo
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -27,7 +27,7 @@ Chaque dépôt doit contenir :
 2. des commandes `check:*` regroupant les validations critiques;
 3. une CI qui exécute les guards disponibles;
 4. un `.gitignore` aligné avec les guards;
-5. un README expliquant quoi lancer et quoi faire en cas d’échec.
+5. un README ou document repo expliquant quoi lancer et quoi faire en cas d’échec.
 
 ---
 
@@ -80,20 +80,25 @@ npm run check:backend
 | Gitignore policy | `npm run guard:gitignore` | Vérifie les règles `.gitignore` critiques |
 | Hygiene | `npm run guard:hygiene` | Bloque `.env`, build outputs et secrets évidents |
 | Modules API | `npm run guard:modules-api` | Empêche les appels directs à `/organisation/modules` hors API centralisée |
+| Modules known keys | `node scripts/guard-modules-known-keys.js` | Empêche la disparition silencieuse d’une famille ou clé module attendue |
 
 ### Commande complète
 
 ```bash
 npm run check:frontend
+node scripts/guard-modules-known-keys.js
 ```
+
+Note : le guard `modules-known-keys` est branché dans la CI frontend. L’alias npm local reste à ajouter si l’outil permet une mise à jour future de `package.json`.
 
 ### Preuves attendues
 
 - `.github/workflows/ci.yml` exécute les guards frontend.
 - `scripts/guard-modules-api.js` existe.
+- `scripts/guard-modules-known-keys.js` existe.
 - `scripts/guard-repo-hygiene.js` existe.
 - `scripts/guard-gitignore-policy.js` existe.
-- `README.md` documente les checks.
+- `README.md` ou `MADPROOF_MODULES_GUARDS.md` documente les checks.
 
 ---
 
@@ -168,7 +173,7 @@ Ordre de résolution :
 | Dépôt | Statut guards | Validation requise |
 |---|---|---|
 | Backend | Appliqué, durci pour calendar/RLS/modules contract | CI + `npm run check:backend` |
-| Frontend | Appliqué | CI + `npm run check:frontend` |
+| Frontend | Appliqué, durci pour modules API + known keys | CI + `npm run check:frontend` + known-keys guard |
 | E2E | Appliqué partiel | `npm run check:e2e`; CI hygiene à brancher si filtre/permissions le permettent |
 | Desktop agent | Appliqué | CI + `npm run check:desktop` + `npm run build:ci` |
 
@@ -179,7 +184,7 @@ Ordre de résolution :
 Le statut MADPROOF peut être considéré atteint pour cette couche seulement lorsque :
 
 - les guards existent;
-- les README les documentent;
+- les README ou documents repo les documentent;
 - les CI pertinentes les exécutent;
 - les checks locaux passent;
 - aucune exception non documentée n’est présente;
