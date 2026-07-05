@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Matrice officielle — Plans, modules et accès
-Version: 0.1
+Version: 0.2
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -84,6 +84,33 @@ Les modules core sont les modules nécessaires pour que MADSuite livre sa valeur
 
 ---
 
+## Modules opérationnels / legacy
+
+Ces clés existent dans le code ou l’interface actuelle, mais ne doivent pas être confondues avec les modules produit principaux.
+
+| Module key | Rôle | Statut |
+|---|---|---|
+| `dashboard` | Surface UI principale | Legacy/UI |
+| `timesheet` | Ancienne clé liée au suivi du temps | Legacy, équivalent opérationnel de `time_tracking` |
+| `kiosk_punch` | Kiosque punch | Opérationnel |
+| `calcul_km` | Calcul kilométrage | Opérationnel / add-on |
+| `kiosk_km` | Kiosque kilométrage | Opérationnel / add-on |
+
+---
+
+## Alignement code actuel
+
+| Couche | Fichier | Statut |
+|---|---|---|
+| Backend registry | `maddevopss/madsuite-backend/src/config/modules.js` | Aligné avec matrice brouillon + legacy conservé |
+| Backend tests | `maddevopss/madsuite-backend/src/test/modulesRegistry.test.js` | Ajouté |
+| Backend check | `maddevopss/madsuite-backend/package.json` → `npm run test:modules` | Ajouté dans `check:backend` |
+| Frontend registry helpers | `maddevopss/madsuite-frontend/src/api/modules.api.js` | Aligné helpers/diagnostics |
+| Frontend tests | `maddevopss/madsuite-frontend/src/api/modules.helpers.test.js` | Ajouté |
+| Frontend guard | `maddevopss/madsuite-frontend/scripts/guard-modules-api.js` | Durci |
+
+---
+
 ## Règles d’affichage frontend
 
 | Situation | Comportement attendu |
@@ -108,6 +135,7 @@ Les modules core sont les modules nécessaires pour que MADSuite livre sa valeur
 | Modules cognitifs | Consentement explicite requis avant exposition forte |
 | Admin/Internal | Doit permettre validation complète du produit |
 | Module inconnu | Ne doit pas casser l’UI; doit être diagnosticable |
+| Clé legacy | Doit être documentée, pas cachée |
 
 ---
 
@@ -136,11 +164,12 @@ Il ne doit pas devenir un passe-droit silencieux : toute différence avec les pl
 | Comportement UI des modules non inclus | À définir |
 | Activation cognitive engine | À cadrer MADPROOF |
 | Desktop agent en production | À cadrer consentement / privacy |
+| Migration éventuelle `timesheet` → `time_tracking` | À planifier prudemment |
 
 ---
 
 ## Statut actuel
 
-Statut : **brouillon contrôlé — base de vérité produit à valider**.
+Statut : **brouillon contrôlé — backend/frontend alignés sur une base traçable, validation locale/CI requise**.
 
 Ce document ne marque pas les plans comme finalisés. Il fixe la structure pour éviter le bordel pendant la validation P3.
