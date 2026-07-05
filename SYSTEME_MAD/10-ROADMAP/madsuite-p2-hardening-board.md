@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Plan P2 — Hardening, CI/CD et initialisation repos réservés
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -20,6 +20,7 @@ SYSTEME_MAD/10-ROADMAP/madsuite-execution-board.md
 SYSTEME_MAD/00-SYSTEME-MAD/repos.md
 SYSTEME_MAD/04-ADR/ADR-004-separation-repos-execution-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md
+SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md
 ```
 
 ---
@@ -37,6 +38,7 @@ La phase P2 vise à :
 - documenter les workflows de validation;
 - réduire les risques de secrets, drift et non-régression;
 - appliquer des guards MADPROOF multi-repo;
+- documenter et appliquer la branch protection;
 - préparer une validation CI verte reproductible.
 
 ---
@@ -53,6 +55,7 @@ La phase P2 vise à :
 | Workflow de release backend/frontend | Frontend + Backend | Dry run complété, release réelle à valider | `SYSTEME_MAD/05-PLAY/play-041-release-madsuite-web-api.md` | `#15` |
 | Workflow de migration e2e/desktop | E2E + Desktop | Complété partiel | `SYSTEME_MAD/05-PLAY/play-042-initialiser-repo-execution-madsuite.md` | `#16` |
 | Guards MADPROOF multi-repo | Backend + Frontend + E2E + Desktop | Appliqué, validation CI requise | `SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md` | À créer si suivi GitHub requis |
+| Branch protection MADPROOF | SYSTEME_MAD + repos d’exécution | Documenté, à appliquer dans GitHub UI | `SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md` | À créer par repo |
 
 ---
 
@@ -69,6 +72,20 @@ Référence officielle : `SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-mult
 
 ---
 
+## Branch protection MADPROOF
+
+| Dépôt | Branche | Statut | Référence |
+|---|---|---|---|
+| `bleeband/SYSTEME_MAD` | `main` | À appliquer | `CHK-042` |
+| `maddevopss/madsuite-backend` | `main` | À appliquer | `CHK-042` |
+| `maddevopss/madsuite-frontend` | `main` | À appliquer | `CHK-042` |
+| `maddevopss/e2e` | `main` | À appliquer | `CHK-042` |
+| `maddevopss/desktop-agent` | `main` | À appliquer | `CHK-042` |
+
+La protection doit rendre impossible le merge direct d’une branche rouge sur `main`.
+
+---
+
 ## Definition of Done P2
 
 La phase P2 est considérée complétée lorsque :
@@ -79,6 +96,7 @@ La phase P2 est considérée complétée lorsque :
 - les workflows de release et d’initialisation sont documentés;
 - les repos publics ont un `SECURITY.md` minimal;
 - les guards MADPROOF multi-repo sont appliqués;
+- la branch protection `main` est appliquée ou son exception est documentée;
 - les CI pertinentes exécutent les guards;
 - les checks locaux passent dans chaque repo;
 - les issues P2 sont ouvertes, reliées et suivies;
@@ -93,9 +111,11 @@ La phase P2 est considérée complétée lorsque :
 2. Exécuter les checks locaux documentés dans chaque README.
 3. Observer les CI GitHub Actions.
 4. Corriger tout guard rouge sans contournement silencieux.
-5. Transformer tout échec durable en issue GitHub suivie.
-6. Fermer le chantier guards seulement après CI verte ou exception documentée.
-7. Faire une validation staging/prod réelle selon PLAY-041.
+5. Appliquer la branch protection `main` selon `CHK-042`.
+6. Créer une issue de suivi par repo si la configuration doit être validée plus tard.
+7. Transformer tout échec durable en issue GitHub suivie.
+8. Fermer le chantier guards seulement après CI verte ou exception documentée.
+9. Faire une validation staging/prod réelle selon PLAY-041.
 
 ---
 
@@ -105,4 +125,6 @@ Les guards ne garantissent pas que le produit est parfait.
 
 Ils garantissent que certaines classes de régressions ne peuvent plus revenir silencieusement : secrets, artefacts générés, routes sensibles mal protégées, drift modules frontend, absence de contexte organisationnel sur routes métier et documentation opérationnelle obsolète.
 
-Tant que les CI n’ont pas été observées vertes, le statut reste : **appliqué, validation requise**.
+La branch protection garantit que ces preuves ne peuvent pas être contournées par un merge direct non validé.
+
+Tant que les CI n’ont pas été observées vertes et que la branch protection n’est pas appliquée, le statut reste : **appliqué, validation requise**.
