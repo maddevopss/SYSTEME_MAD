@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-040 — Validation CI/CD multi-repo MADSuite
-Version: 1.3
+Version: 1.4
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -22,9 +22,11 @@ Elle couvre :
 - secrets;
 - sécurité;
 - dépendances;
+- branch protection;
 - déploiement;
 - MADPROOF lorsque pertinent;
-- guards multi-repo documentés dans `CHK-041`.
+- guards multi-repo documentés dans `CHK-041`;
+- protection de branche documentée dans `CHK-042`.
 
 ---
 
@@ -50,6 +52,7 @@ maddevopss/desktop-agent
 | `AUDIT-007` | CI, tests et build multi-repo |
 | `AUDIT-008` | Cohérence modules frontend/backend |
 | `CHK-041` | Guards MADPROOF multi-repo |
+| `CHK-042` | Branch protection MADPROOF |
 | README des repos d’exécution | Commandes locales et consignes opérationnelles |
 | `.github/dependabot.yml` | Surveillance dépendances npm et GitHub Actions |
 
@@ -57,14 +60,14 @@ maddevopss/desktop-agent
 
 ## Matrice minimale — état réel au 2026-07-05
 
-| Repo | Build | Test | Lint | Guards | Dépendances | Env / secrets | CI | Statut |
-|---|---|---|---|---|---|---|---|---|
-| `bleeband/SYSTEME_MAD` | N/A | Docs QA manuel | YAML/Markdown manuel | N/A | À surveiller manuellement | Interne / à surveiller | Non requis | Source de vérité active |
-| `bleeband/maddevops` | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | Hors scope immédiat MADSuite produit |
-| `maddevopss/madsuite-frontend` | `npm run build` | `npm test -- --watchAll=false` | `npm run lint` | gitignore, hygiene, modules API | Dependabot npm + Actions | `.env.example` autorisé; secrets `VITE_*` interdits | `.github/workflows/ci.yml` | Guards + Dependabot appliqués, CI à valider |
-| `maddevopss/madsuite-backend` | `node -c server.js`; build TS à clarifier | `npm test`; `npm run test:security` | `npm run lint` | gitignore, hygiene, routes, organisation routes | Dependabot npm + Actions | `.env.example` autorisé; `.env` bloqué | `.github/workflows/ci.yml` avec Postgres service | Guards + Dependabot appliqués, CI à valider |
-| `maddevopss/e2e` | N/A | Playwright public/authenticated | N/A | gitignore, artifact hygiene | Dependabot npm + Actions | `.env` et `storageState/*.json` bloqués | `.github/workflows/ci.yml` | Appliqué partiel; hygiene CI à finaliser si possible |
-| `maddevopss/desktop-agent` | `npm run build:ci` | `npm test` | syntax check | gitignore, artifact hygiene | Dependabot npm + Actions | `.env`, installers, certificats bloqués | `.github/workflows/ci.yml` | Guards + Dependabot appliqués, CI à valider |
+| Repo | Build | Test | Lint | Guards | Dépendances | Branch protection | Env / secrets | CI | Statut |
+|---|---|---|---|---|---|---|---|---|---|
+| `bleeband/SYSTEME_MAD` | N/A | Docs QA manuel | YAML/Markdown manuel | N/A | À surveiller manuellement | À appliquer selon CHK-042 | Interne / à surveiller | Non requis | Source de vérité active |
+| `bleeband/maddevops` | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | Hors scope immédiat MADSuite produit |
+| `maddevopss/madsuite-frontend` | `npm run build` | `npm test -- --watchAll=false` | `npm run lint` | gitignore, hygiene, modules API | Dependabot npm + Actions | À appliquer selon CHK-042 | `.env.example` autorisé; secrets `VITE_*` interdits | `.github/workflows/ci.yml` | Guards + Dependabot appliqués, branch protection à appliquer |
+| `maddevopss/madsuite-backend` | `node -c server.js`; build TS à clarifier | `npm test`; `npm run test:security` | `npm run lint` | gitignore, hygiene, routes, organisation routes | Dependabot npm + Actions | À appliquer selon CHK-042 | `.env.example` autorisé; `.env` bloqué | `.github/workflows/ci.yml` avec Postgres service | Guards + Dependabot appliqués, branch protection à appliquer |
+| `maddevopss/e2e` | N/A | Playwright public/authenticated | N/A | gitignore, artifact hygiene | Dependabot npm + Actions | À appliquer selon CHK-042 | `.env` et `storageState/*.json` bloqués | `.github/workflows/ci.yml` | Appliqué partiel; branch protection à appliquer |
+| `maddevopss/desktop-agent` | `npm run build:ci` | `npm test` | syntax check | gitignore, artifact hygiene | Dependabot npm + Actions | À appliquer selon CHK-042 | `.env`, installers, certificats bloqués | `.github/workflows/ci.yml` | Guards + Dependabot appliqués, branch protection à appliquer |
 
 ---
 
@@ -78,9 +81,9 @@ maddevopss/desktop-agent
 | Aucun `.env` réel n’est commité | Guardé | Guards hygiene + `.gitignore` policy |
 | Scripts `check:*` documentés | Validé | Backend, frontend, e2e, desktop-agent |
 | Dependabot npm / Actions | Appliqué | Backend, frontend, e2e, desktop-agent |
+| Branch protection `main` | À appliquer | Configuration officielle définie dans `CHK-042` |
 | Commandes documentées fonctionnent localement | À valider localement | Non exécuté par SYSTEME_MAD |
 | Erreurs connues transformées en issues | À poursuivre | Les CI rouges doivent devenir corrections ou issues |
-| Branches de production protégées | À vérifier | Nécessite vérification settings GitHub/repo |
 
 ---
 
@@ -97,6 +100,7 @@ maddevopss/desktop-agent
 | `npm run build` | CI ajoutée | Vite build |
 | `npm run check:frontend` | Local | Agrège guards + lint + test + build |
 | `.github/dependabot.yml` | Appliqué | Surveillance npm + GitHub Actions |
+| Branch protection | À appliquer | Voir `CHK-042` |
 
 ---
 
@@ -116,6 +120,7 @@ maddevopss/desktop-agent
 | `npm run check:backend` | Local | Agrège guards + tests + lint |
 | `npm run deploy:migrate` | Documenté | Migrations prod séparées du startup serveur |
 | `.github/dependabot.yml` | Appliqué | Surveillance npm + GitHub Actions |
+| Branch protection | À appliquer | Voir `CHK-042` |
 
 ---
 
@@ -145,6 +150,7 @@ Si la CI backend tombe rouge, traiter dans cet ordre :
 | `npm run test:public` | CI/local | Responsive public |
 | `npm run test:authenticated` | Local/CI conditionnelle | Requiert `E2E_BASE_URL`, `E2E_ADMIN_EMAIL`, `E2E_PASSWORD` |
 | `.github/dependabot.yml` | Appliqué | Surveillance npm + GitHub Actions |
+| Branch protection | À appliquer | Voir `CHK-042` |
 | Sessions sans secrets réels | Guardé | `storageState/*.json` bloqué |
 | Scénarios multi-tenant prioritaires | À matérialiser | Futur P2/P3 |
 
@@ -162,6 +168,7 @@ Si la CI backend tombe rouge, traiter dans cet ordre :
 | `npm test` | CI/local | Jest avec `passWithNoTests` tant que tests manquants |
 | `npm run build:ci` | CI/local | Packaging Windows non signé |
 | `.github/dependabot.yml` | Appliqué | Surveillance npm + GitHub Actions |
+| Branch protection | À appliquer | Voir `CHK-042` |
 | Aucun log token/cookie/secret | À surveiller | Audit sécurité desktop futur recommandé |
 | Deep link one-time code | À faire | Durcissement sécurité futur |
 
@@ -181,6 +188,7 @@ Si la CI backend tombe rouge, traiter dans cet ordre :
 | Routes métier isolées par organisation | Guardé | Backend `guard:organisation-routes` + RLS middleware |
 | Routes platform globales super-admin | Guardé | Backend `guard:routes` + tests super-admin |
 | Dépendances surveillées | Appliqué | Dependabot npm + Actions sur repos d’exécution |
+| Merge direct sur `main` bloqué | À appliquer | Branch protection selon `CHK-042` |
 
 ---
 
@@ -210,19 +218,29 @@ Les repos backend, frontend, e2e et desktop-agent possèdent maintenant une conf
 
 Les PR Dependabot doivent être traitées comme des changements normaux : CI obligatoire, revue rapide, merge seulement si les checks restent verts.
 
+### Décision 5 — Branch protection obligatoire sur `main`
+
+La protection de branche `main` devient une exigence MADPROOF pour les repos d’exécution et la source de vérité.
+
+Les réglages exacts sont définis dans `CHK-042`. Le statut reste `à appliquer` tant que les settings GitHub n’ont pas été configurés et validés.
+
 ---
 
 ## Actions restantes
 
 | Priorité | Action | Repo | Issue recommandée |
 |---|---|---|---|
+| P0 | Appliquer branch protection backend | `madsuite-backend` | Modèle CHK-042 |
+| P0 | Appliquer branch protection frontend | `madsuite-frontend` | Modèle CHK-042 |
+| P0 | Appliquer branch protection SYSTEME_MAD | `SYSTEME_MAD` | Modèle CHK-042 |
+| P1 | Appliquer branch protection E2E | `e2e` | Modèle CHK-042 |
+| P1 | Appliquer branch protection desktop-agent | `desktop-agent` | Modèle CHK-042 |
 | P0/P1 | Observer CI backend et corriger rouges | `madsuite-backend` | Issue dédiée si échec persistant |
 | P1 | Observer CI frontend et corriger rouges | `madsuite-frontend` | Issue dédiée si échec persistant |
 | P1/P2 | Finaliser hygiene guard dans CI E2E si possible | `e2e` | Nouvelle issue si bloqué par secrets/workflow |
 | P1/P2 | Traiter premières PR Dependabot | Repos d’exécution | Issues/PRs Dependabot |
 | P2 | Ajouter scénarios Playwright authentifiés métier | `e2e` | Nouvelle issue dédiée |
 | P2 | Durcir deep link desktop en one-time code | `desktop-agent` + backend | Nouvelle issue sécurité |
-| P2 | Vérifier branch protection main | Tous repos | Nouvelle issue gouvernance |
 | P2 | Vérifier Vercel/Railway deploy checks | Frontend/backend | Issue release `#15` |
 | P2 | Vérifier secret scanning GitHub settings | Repos publics | Nouvelle issue sécurité |
 
@@ -236,10 +254,11 @@ CHK-040 est considéré **à jour pour la phase actuelle** lorsque :
 - les guards MADPROOF sont listés;
 - les workflows minimaux sont documentés;
 - Dependabot est activé sur les repos d’exécution;
+- branch protection est documentée et appliquée ou explicitement marquée à appliquer;
 - les limites restantes sont explicites;
 - les CI ont été observées ou les échecs ont été transformés en corrections/issues.
 
-Statut actuel : **mis à jour; validation CI réelle requise**.
+Statut actuel : **mis à jour; branch protection à appliquer dans GitHub UI; validation CI réelle requise**.
 
 ---
 
