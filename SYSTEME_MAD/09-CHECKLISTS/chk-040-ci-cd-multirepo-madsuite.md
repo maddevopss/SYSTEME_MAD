@@ -1,8 +1,8 @@
 ---
 Projet: MADSuite
 Document: CHK-040 — Validation CI/CD multi-repo MADSuite
-Version: 1.1
-Dernière révision: 2026-07-03
+Version: 1.2
+Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -22,7 +22,8 @@ Elle couvre :
 - secrets;
 - sécurité;
 - déploiement;
-- MADPROOF lorsque pertinent.
+- MADPROOF lorsque pertinent;
+- guards multi-repo documentés dans `CHK-041`.
 
 ---
 
@@ -47,21 +48,21 @@ maddevopss/desktop-agent
 | `AUDIT-006` | ESLint frontend |
 | `AUDIT-007` | CI, tests et build multi-repo |
 | `AUDIT-008` | Cohérence modules frontend/backend |
-| PR frontend `#4` | Ajout CI frontend |
-| PR backend `#5` | Ajout CI backend statique |
+| `CHK-041` | Guards MADPROOF multi-repo |
+| README des repos d’exécution | Commandes locales et consignes opérationnelles |
 
 ---
 
-## Matrice minimale — état réel au 2026-07-03
+## Matrice minimale — état réel au 2026-07-05
 
-| Repo | Build | Test | Lint | Secrets | Env example | SECURITY | CI | Statut |
-|---|---|---|---|---|---|---|---|---|
-| `bleeband/SYSTEME_MAD` | N/A | Docs QA manuel | YAML/Markdown manuel | Interne / à surveiller | N/A | Interne | Non requis | Source de vérité active |
-| `bleeband/maddevops` | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | Hors scope immédiat MADSuite produit |
-| `maddevopss/madsuite-frontend` | `npm run build` | `npm test -- --watchAll=false` | `npm run lint` | Aucun secret privé dans `.env.example`; surveiller `VITE_*` | Présent | Présent | `.github/workflows/ci.yml` ajouté via PR `#4` | CI minimale active |
-| `maddevopss/madsuite-backend` | `node -c server.js` en CI phase 1; `npm run build` à clarifier | Tests DB non lancés en CI phase 1 | `npm run lint` | `.env.example` sans secret réel | Présent | Présent | `.github/workflows/ci.yml` ajouté via PR `#5` | CI minimale active, DB tests à durcir |
-| `maddevopss/e2e` | À définir | Playwright prévu | À définir | `.env.example` présent | Présent | Présent | Non initialisée | Réservé / à initialiser |
-| `maddevopss/desktop-agent` | `npm run build` local, packaging non portable CI | `npm test` | À définir | `.env.example` privacy-safe | Présent | Présent | Non initialisée | Actif, CI tests à ajouter plus tard |
+| Repo | Build | Test | Lint | Guards | Env / secrets | CI | Statut |
+|---|---|---|---|---|---|---|---|
+| `bleeband/SYSTEME_MAD` | N/A | Docs QA manuel | YAML/Markdown manuel | N/A | Interne / à surveiller | Non requis | Source de vérité active |
+| `bleeband/maddevops` | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | Hors scope immédiat MADSuite produit |
+| `maddevopss/madsuite-frontend` | `npm run build` | `npm test -- --watchAll=false` | `npm run lint` | gitignore, hygiene, modules API | `.env.example` autorisé; secrets `VITE_*` interdits | `.github/workflows/ci.yml` | Guards appliqués, CI à valider |
+| `maddevopss/madsuite-backend` | `node -c server.js`; build TS à clarifier | `npm test`; `npm run test:security` | `npm run lint` | gitignore, hygiene, routes, organisation routes | `.env.example` autorisé; `.env` bloqué | `.github/workflows/ci.yml` avec Postgres service | Guards appliqués, CI à valider |
+| `maddevopss/e2e` | N/A | Playwright public/authenticated | N/A | gitignore, artifact hygiene | `.env` et `storageState/*.json` bloqués | `.github/workflows/ci.yml` | Appliqué partiel; hygiene CI à finaliser si possible |
+| `maddevopss/desktop-agent` | `npm run build:ci` | `npm test` | syntax check | gitignore, artifact hygiene | `.env`, installers, certificats bloqués | `.github/workflows/ci.yml` | Guards appliqués, CI à valider |
 
 ---
 
@@ -69,13 +70,13 @@ maddevopss/desktop-agent
 
 | Contrôle | Statut | Commentaire |
 |---|---|---|
-| Chaque repo actif possède un README | Validé partiel | Frontend, backend, e2e, desktop-agent documentés; `maddevops` hors scope immédiat |
-| Chaque repo public possède un `SECURITY.md` | Validé partiel | Politiques ajoutées aux repos publics MADSuite lors P0/P2 |
+| Chaque repo actif possède un README | Validé | Backend, frontend, e2e et desktop-agent documentent les checks |
+| Chaque repo public possède un `SECURITY.md` | Validé partiel | Politiques minimales présentes selon phase précédente |
 | Chaque repo applicatif possède un `.env.example` sans secrets | Validé partiel | Frontend, backend, e2e, desktop-agent présents |
-| Aucun `.env` réel n’est commité | À surveiller | Contrôle GitHub secret scanning recommandé |
-| Scripts `test`, `lint`, `build` documentés | Validé partiel | Frontend/backend clairs; e2e à initialiser; desktop build à clarifier |
+| Aucun `.env` réel n’est commité | Guardé | Guards hygiene + `.gitignore` policy |
+| Scripts `check:*` documentés | Validé | Backend, frontend, e2e, desktop-agent |
 | Commandes documentées fonctionnent localement | À valider localement | Non exécuté par SYSTEME_MAD |
-| Erreurs connues transformées en issues | Validé partiel | Backend tests DB Windows-only documenté; e2e réservé |
+| Erreurs connues transformées en issues | À poursuivre | Les CI rouges doivent devenir corrections ou issues |
 | Branches de production protégées | À vérifier | Nécessite vérification settings GitHub/repo |
 
 ---
@@ -84,15 +85,14 @@ maddevopss/desktop-agent
 
 | Contrôle | Statut | Preuve / commentaire |
 |---|---|---|
-| `npm install` / `npm ci` | CI ajoutée | Workflow frontend PR `#4` utilise `npm ci` |
-| `npm run build` | CI ajoutée | Vite build exécuté dans workflow |
-| `npm test` | CI ajoutée | `npm test -- --watchAll=false` |
-| `npm run lint` | CI ajoutée | ESLint phase 1 issue `#6` appliquée |
-| `VITE_API_URL` défini selon environnement | Documenté | `.env.example` frontend |
-| Aucune clé privée exposée via `VITE_*` | Validé documentaire | Seulement clé Stripe publique `pk_*` attendue |
-| Modules visibles correspondent au backend | Validé | Audit `#8` complété |
-| Textes MADPROOF sensibles audités | Validé | Audit `#5` complété |
-| Build Vercel validé | À valider | Dépend du pipeline Vercel réel |
+| `npm ci` | CI ajoutée | Workflow frontend |
+| `npm run guard:gitignore` | CI/local | Vérifie règles `.gitignore` critiques |
+| `npm run guard:hygiene` | CI/local | Bloque `.env`, builds et secrets évidents |
+| `npm run guard:modules-api` | CI/local | Empêche le drift `/organisation/modules` |
+| `npm run lint` | CI ajoutée | ESLint phase 1 |
+| `npm test -- --watchAll=false` | CI ajoutée | Jest |
+| `npm run build` | CI ajoutée | Vite build |
+| `npm run check:frontend` | Local | Agrège guards + lint + test + build |
 
 ---
 
@@ -100,41 +100,32 @@ maddevopss/desktop-agent
 
 | Contrôle | Statut | Preuve / commentaire |
 |---|---|---|
-| `npm install` / `npm ci` | CI ajoutée | Workflow backend PR `#5` utilise `npm ci` |
-| `npm test` | Reporté | Tests DB non portables CI Linux pour l’instant |
-| `npm run lint` | CI ajoutée | Workflow backend PR `#5` |
+| `npm ci` | CI ajoutée | Workflow backend |
+| `npm run guard:gitignore` | CI/local | Vérifie règles `.gitignore` critiques |
+| `npm run guard:hygiene` | CI/local | Bloque `.env`, artefacts et secrets évidents |
+| `npm run guard:routes` | CI/local | Vérifie routes platform sensibles |
+| `npm run guard:organisation-routes` | CI/local | Vérifie routes métier sous `requireOrganisation` |
 | `node -c server.js` | CI ajoutée | Smoke syntax entrypoint |
-| `npm run db:migrate` | À valider | Ne doit pas rouler automatiquement sans environnement sûr |
-| `npm run db:preflight:org` | À valider | À intégrer dans CI quand env DB test portable existe |
-| `DATABASE_URL` documenté sans secret | Validé | `.env.example` backend |
-| `FRONTEND_URL` obligatoire en production | Documenté | `.env.example` backend; validation runtime à surveiller |
-| Routes système sensibles protégées | Validé partiel | `requireSuperAdmin` déjà appliqué dans audit précédent |
-| Webhooks Stripe testés | À valider | À intégrer dans suite tests backend future |
-| Endpoints IA/cognitive audités MADPROOF | Validé | Audit `#5` |
-| Logs sans secrets | À surveiller | Doit rester dans audits sécurité |
+| `npm test -- --runInBand` | CI ajoutée | Exécuté avec service PostgreSQL |
+| `npm run test:security -- --runInBand` | CI ajoutée | Inclut migrations, jobs multi-tenant et super-admin |
+| `npm run lint` | CI ajoutée | ESLint backend |
+| `npm run check:backend` | Local | Agrège guards + tests + lint |
+| `npm run deploy:migrate` | Documenté | Migrations prod séparées du startup serveur |
 
 ---
 
-## Risque connu backend — tests DB
+## Backend — risque de validation restant
 
-Les tests backend utilisent actuellement un cluster PostgreSQL de test local avec des dépendances Windows :
+Les tests backend DB ont été rendus plus portables par l’utilisation d’un service PostgreSQL en CI et par l’évitement du cluster Windows local lorsque `CI=true` ou des URLs PostgreSQL sont fournies.
 
-```text
-C:\Program Files\PostgreSQL\18\bin
-initdb.exe
-postgres.exe
-taskkill
-```
+Risque restant : la preuve définitive dépend d’une CI verte observée.
 
-Décision actuelle : ne pas lancer `npm test` dans le workflow Linux phase 1.
+Si la CI backend tombe rouge, traiter dans cet ordre :
 
-Durcissement futur recommandé :
-
-1. séparer tests unitaires et tests intégration DB;
-2. utiliser `services: postgres` dans GitHub Actions;
-3. retirer les chemins Windows hardcodés;
-4. rendre `npm test` portable CI;
-5. ajouter `db:preflight:org` dans une CI DB sûre.
+1. corriger les guards trop stricts seulement avec justification;
+2. corriger les tests ou migrations;
+3. corriger le code applicatif;
+4. créer une issue si l’échec révèle une dette durable.
 
 ---
 
@@ -144,11 +135,12 @@ Durcissement futur recommandé :
 |---|---|---|
 | README | Validé | Repo documenté comme E2E officiel |
 | `.env.example` | Validé | Variables test présentes |
-| Playwright installé | À faire | Aucun `package.json` confirmé |
-| Scénarios critiques listés | Validé documentaire | README liste auth, onboarding, clients, projets, temps, factures, modules, isolation org |
-| Tests sans données prod | À faire | À confirmer lors initialisation Playwright |
-| Sessions sans secrets réels | À faire | À imposer dans `.gitignore` et fixtures |
-| Scénarios multi-tenant prioritaires | Validé documentaire | À matérialiser en tests |
+| `npm run guard:gitignore` | Local | Vérifie `.gitignore` critique |
+| `npm run guard:hygiene` | Local | Bloque `.env`, reports, test-results, auth state |
+| `npm run test:public` | CI/local | Responsive public |
+| `npm run test:authenticated` | Local/CI conditionnelle | Requiert `E2E_BASE_URL`, `E2E_ADMIN_EMAIL`, `E2E_PASSWORD` |
+| Sessions sans secrets réels | Guardé | `storageState/*.json` bloqué |
+| Scénarios multi-tenant prioritaires | À matérialiser | Futur P2/P3 |
 
 ---
 
@@ -156,15 +148,15 @@ Durcissement futur recommandé :
 
 | Contrôle | Statut | Commentaire |
 |---|---|---|
-| README | Validé | Présent |
-| `.env.example` | Validé | Privacy defaults présents : tracking off, caméra/micro/screen off |
-| Stack confirmée | Validé | Electron |
-| Permissions locales documentées | Validé partiel | README documente contraintes et exclusions |
-| Données collectées documentées | Validé partiel | README décrit fenêtre active et filtres privacy |
-| Données exclues documentées | Validé | Caméra, micro, capture écran, secrets exclus par défaut |
-| Agent volontaire et désactivable | Validé documentaire | À maintenir côté UI/runtime |
+| README | Validé | Présent et mis à jour |
+| `.env.example` | Validé documentaire | Privacy defaults à maintenir |
+| `npm run guard:gitignore` | CI/local | Vérifie règles `.gitignore` critiques |
+| `npm run guard:hygiene` | CI/local | Bloque outputs, installateurs, certificats et `.env` |
+| `npm run check:syntax` | CI/local | Vérifie `main.js` et `preload.js` |
+| `npm test` | CI/local | Jest avec `passWithNoTests` tant que tests manquants |
+| `npm run build:ci` | CI/local | Packaging Windows non signé |
 | Aucun log token/cookie/secret | À surveiller | Audit sécurité desktop futur recommandé |
-| Packaging / signature / auto-update | À planifier | Build dépend PowerShell + frontend sibling; CI release séparée requise |
+| Deep link one-time code | À faire | Durcissement sécurité futur |
 
 ---
 
@@ -173,39 +165,36 @@ Durcissement futur recommandé :
 | Contrôle | Statut | Commentaire |
 |---|---|---|
 | Aucun claim médical fort | Validé audit initial | Audit `#5` |
-| Aucun texte ne promet de traiter le TDAH | Validé audit initial | Prompt Brain Dump corrigé |
-| Aucun texte ne prétend détecter l’état mental réel | Validé audit initial | Wording backend corrigé |
-| Aucun texte ne prétend mesurer la fatigue cognitive réelle | Validé audit initial | Wording à surveiller côté UI futur |
+| Aucun texte ne promet de traiter le TDAH | Validé audit initial | Wording à surveiller |
+| Aucun texte ne prétend détecter l’état mental réel | Validé audit initial | Wording backend corrigé précédemment |
+| Aucun texte ne prétend mesurer la fatigue cognitive réelle | Validé partiel | UI future à surveiller |
 | Labels internes présentés comme signaux fonctionnels | Validé partiel | Audit `#5`; renommages UI futurs possibles |
-| Données exclues par défaut restent exclues | Validé documentaire | Desktop `.env.example` et README |
+| Données exclues par défaut restent exclues | Validé documentaire | Desktop `.env.example`, README et guards artefacts |
 | Utilisateur garde le contrôle | Validé documentaire | À maintenir dans UI/runtime |
+| Routes métier isolées par organisation | Guardé | Backend `guard:organisation-routes` + RLS middleware |
+| Routes platform globales super-admin | Guardé | Backend `guard:routes` + tests super-admin |
 
 ---
 
 ## Décisions CHK-040
 
-### Décision 1 — CI minimale acceptée
+### Décision 1 — Guards multi-repo comme couche CI/CD officielle
 
-Frontend et backend ont maintenant une CI minimale.
+Les guards documentés dans `CHK-041` font désormais partie de la validation CI/CD minimale.
 
-Cette CI ne garantit pas encore la production complète, mais elle protège contre :
+Ils ne remplacent pas les tests fonctionnels, mais bloquent les régressions structurelles : secrets, artefacts, drift API, routes mal protégées et documentation `.gitignore` incohérente.
 
-- dépendances non installables;
-- erreurs lint critiques;
-- régressions de build frontend;
-- entrée backend syntaxiquement invalide.
+### Décision 2 — Backend DB tests non reportés; validation CI requise
 
-### Décision 2 — Backend DB tests reportés, pas ignorés
+Les tests backend DB doivent maintenant être exécutés dans la CI avec PostgreSQL service.
 
-Les tests backend DB sont un risque connu.
+Le statut final dépend de la CI verte observée.
 
-Ils ne sont pas supprimés.
+### Décision 3 — E2E et desktop-agent ne sont plus seulement réservés
 
-Ils doivent être rendus portables avant d’être bloquants dans GitHub Actions.
+Les deux repos ont maintenant scripts, README, guards et CI ou validation partielle.
 
-### Décision 3 — E2E et desktop-agent restent phases P2/P3
-
-E2E et desktop-agent sont documentés, mais pas encore des gates CI bloquants.
+Leur statut passe de “réservé” à “appliqué, validation à compléter”.
 
 ---
 
@@ -213,9 +202,11 @@ E2E et desktop-agent sont documentés, mais pas encore des gates CI bloquants.
 
 | Priorité | Action | Repo | Issue recommandée |
 |---|---|---|---|
-| P1/P2 | Rendre tests backend DB portables CI Linux | `madsuite-backend` | Nouvelle issue dédiée |
-| P2 | Initialiser Playwright E2E | `e2e` | Nouvelle issue dédiée ou réouverture P2 technique |
-| P2 | Ajouter CI desktop `npm ci` + `npm test` | `desktop-agent` | Nouvelle issue dédiée |
+| P0/P1 | Observer CI backend et corriger rouges | `madsuite-backend` | Issue dédiée si échec persistant |
+| P1 | Observer CI frontend et corriger rouges | `madsuite-frontend` | Issue dédiée si échec persistant |
+| P1/P2 | Finaliser hygiene guard dans CI E2E si possible | `e2e` | Nouvelle issue si bloqué par secrets/workflow |
+| P2 | Ajouter scénarios Playwright authentifiés métier | `e2e` | Nouvelle issue dédiée |
+| P2 | Durcir deep link desktop en one-time code | `desktop-agent` + backend | Nouvelle issue sécurité |
 | P2 | Vérifier branch protection main | Tous repos | Nouvelle issue gouvernance |
 | P2 | Vérifier Vercel/Railway deploy checks | Frontend/backend | Issue release `#15` |
 | P2 | Ajouter secret scanning / Dependabot | Repos publics | Nouvelle issue sécurité |
@@ -224,15 +215,15 @@ E2E et desktop-agent sont documentés, mais pas encore des gates CI bloquants.
 
 ## Definition of Done
 
-CHK-040 est considéré **rempli pour la phase actuelle** lorsque :
+CHK-040 est considéré **à jour pour la phase actuelle** lorsque :
 
 - chaque repo a un statut clair;
-- les trous CI/CD sont listés;
-- les risques P0/P1/P2 sont transformés ou prêts à transformer en issues;
-- les workflows minimaux frontend/backend sont mergés;
-- les limites backend DB, E2E et desktop-agent sont explicitement documentées.
+- les guards MADPROOF sont listés;
+- les workflows minimaux sont documentés;
+- les limites restantes sont explicites;
+- les CI ont été observées ou les échecs ont été transformés en corrections/issues.
 
-Statut actuel : **complété pour la phase actuelle, durcissements restants à planifier**.
+Statut actuel : **mis à jour; validation CI réelle requise**.
 
 ---
 
