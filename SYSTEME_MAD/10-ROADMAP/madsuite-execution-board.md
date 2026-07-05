@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Tableau d’exécution multi-repo MADSuite
-Version: 2.1
+Version: 2.2
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -96,10 +96,11 @@ Chaque chantier doit avoir :
 | `.env.example` frontend | `maddevopss/madsuite-frontend` | Complété | `maddevopss/madsuite-frontend/.env.example` | `#11` fermée | Valider contre le code réel à l’audit CI/env |
 | README E2E | `maddevopss/e2e` | Complété | `maddevopss/e2e/README.md` | `#12` fermée | Maintenir avec les checks E2E |
 | README desktop-agent | `maddevopss/desktop-agent` | Complété | `maddevopss/desktop-agent/README.md` | `#13` fermée | Maintenir avec l’implémentation réelle |
-| Matrice CI/CD multi-repo | Tous repos | Complété, à revalider | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` v1.1 | `#14` fermée | Vérifier alignement avec guards CHK-041 |
+| Matrice CI/CD multi-repo | Tous repos | Complété, à revalider | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` v1.4 | `#14` fermée | Vérifier alignement avec CHK-041 et CHK-042 |
 | Release Web/API | Frontend + Backend | Dry run complété, release réelle à valider | `SYSTEME_MAD/10-ROADMAP/release-2026-07-03-web-api-dry-run.md` | `#15` ouverte | Faire validation staging/prod réelle + smoke test manuel |
 | Initialisation repos exécution | E2E + Desktop-agent | Complété partiel | Repos clarifiés, documentés et dotés de guards | `#16` fermée | Valider CI réelle |
 | Guards MADPROOF multi-repo | Backend + Frontend + E2E + Desktop | Appliqué, validation CI requise | `SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md` | À créer si suivi GitHub requis | Pull local, lancer checks, corriger rouges CI |
+| Branch protection MADPROOF | SYSTEME_MAD + repos d’exécution | Documenté, à appliquer dans GitHub UI | `SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md` | À créer par repo | Appliquer règles `main` et vérifier PR rouge bloquée |
 
 ---
 
@@ -123,12 +124,13 @@ Chaque chantier doit avoir :
 | `#14` — Remplir la matrice CI/CD multi-repo CHK-040 | `bleeband/SYSTEME_MAD` | P2 | Fermée |
 | `#15` — Appliquer PLAY-041 release Web/API MADSuite | `bleeband/SYSTEME_MAD` | P2 | Ouverte — dry run complété |
 | `#16` — Appliquer PLAY-042 initialisation repos d’exécution | `bleeband/SYSTEME_MAD` | P2 | Fermée |
+| À créer — Appliquer branch protection MADPROOF par repo | Repos concernés | P0/P1 | À faire |
 
 ---
 
 ## Definition of Done P0
 
-Statut actuel : **complété**.
+Statut actuel : **complété pour l’alignement documentaire; branch protection P0 à appliquer sur SYSTEME_MAD, backend et frontend**.
 
 ---
 
@@ -140,7 +142,7 @@ Statut actuel : **complété pour les audits initiaux; durcissements restants su
 
 ## Definition of Done P2
 
-Statut actuel : **appliqué documentairement et techniquement pour plusieurs guards; validation CI requise avant statut final complété**.
+Statut actuel : **appliqué documentairement et techniquement pour plusieurs guards; branch protection et validation CI requises avant statut final complété**.
 
 ---
 
@@ -152,8 +154,10 @@ Priorité immédiate :
 2. Lancer les checks documentés dans les README.
 3. Observer les GitHub Actions.
 4. Corriger chaque rouge CI sans contourner les guards.
-5. Faire une validation staging/prod réelle avec smoke test manuel selon PLAY-041.
-6. Fermer `#15` seulement si la release est confirmée.
+5. Appliquer la branch protection `main` selon `CHK-042`.
+6. Créer les issues de suivi branch protection par repo si nécessaire.
+7. Faire une validation staging/prod réelle avec smoke test manuel selon PLAY-041.
+8. Fermer `#15` seulement si la release est confirmée.
 
 ---
 
