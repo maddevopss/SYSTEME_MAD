@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Plan P2 — Hardening, CI/CD et initialisation repos réservés
-Version: 1.4
+Version: 1.5
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -13,17 +13,7 @@ Auteur: Marc-André Dufour
 
 Ce document transforme la phase P2 en plan d’exécution concret.
 
-Il complète :
-
-```text
-SYSTEME_MAD/10-ROADMAP/madsuite-execution-board.md
-SYSTEME_MAD/00-SYSTEME-MAD/repos.md
-SYSTEME_MAD/04-ADR/ADR-004-separation-repos-execution-madsuite.md
-SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md
-SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md
-SYSTEME_MAD/09-CHECKLISTS/chk-043-pr-review-codeowners-madproof.md
-SYSTEME_MAD/09-CHECKLISTS/chk-044-issue-templates-madproof.md
-```
+Il complète les checklists et playbooks P2 actifs : CHK-040 à CHK-045, PLAY-041 et PLAY-042.
 
 ---
 
@@ -33,16 +23,12 @@ Stabiliser l’écosystème MADSuite après l’alignement P0/P1.
 
 La phase P2 vise à :
 
-- préparer les fichiers appliquables dans les repos publics;
-- structurer les `.env.example`;
-- créer une matrice CI/CD utilisable;
-- préparer les squelettes `e2e` et `desktop-agent`;
+- structurer les repos d’exécution;
 - documenter les workflows de validation;
-- réduire les risques de secrets, drift et non-régression;
-- appliquer des guards MADPROOF multi-repo;
-- documenter et appliquer la branch protection;
-- standardiser les pull requests et CODEOWNERS;
-- standardiser les issues GitHub;
+- réduire les risques de régression;
+- appliquer les guards MADPROOF multi-repo;
+- documenter branch protection, PR review, CODEOWNERS et issues;
+- standardiser la validation release et post-release;
 - préparer une validation CI verte reproductible.
 
 ---
@@ -56,38 +42,24 @@ La phase P2 vise à :
 | README E2E | `maddevopss/e2e` | Complété | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-e2e.md` | `#12` |
 | README desktop-agent | `maddevopss/desktop-agent` | Complété | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-desktop-agent.md` | `#13` |
 | Matrice CI/CD multi-repo | Tous repos | Complété, à revalider | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` | `#14` |
-| Workflow de release backend/frontend | Frontend + Backend | Dry run complété, release réelle à valider | `SYSTEME_MAD/05-PLAY/play-041-release-madsuite-web-api.md` | `#15` |
-| Workflow de migration e2e/desktop | E2E + Desktop | Complété partiel | `SYSTEME_MAD/05-PLAY/play-042-initialiser-repo-execution-madsuite.md` | `#16` |
-| Guards MADPROOF multi-repo | Backend + Frontend + E2E + Desktop | Appliqué, validation CI requise | `SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md` | À créer si suivi GitHub requis |
+| Workflow de release Web/API | Frontend + Backend | Durci, release réelle à valider | `SYSTEME_MAD/05-PLAY/play-041-release-madsuite-web-api.md` | `#15` |
+| Post-release smoke test | Frontend + Backend | Documenté, à exécuter après release | `SYSTEME_MAD/09-CHECKLISTS/chk-045-post-release-smoke-test-madsuite.md` | `#15` |
+| Workflow migration e2e/desktop | E2E + Desktop | Complété partiel | `SYSTEME_MAD/05-PLAY/play-042-initialiser-repo-execution-madsuite.md` | `#16` |
+| Guards MADPROOF multi-repo | Backend + Frontend + E2E + Desktop | Appliqué, validation CI requise | `SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md` | À créer si suivi requis |
 | Branch protection MADPROOF | SYSTEME_MAD + repos d’exécution | Documenté, à appliquer dans GitHub UI | `SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md` | À créer par repo |
-| PR review + CODEOWNERS MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué partiel | `SYSTEME_MAD/09-CHECKLISTS/chk-043-pr-review-codeowners-madproof.md` | À créer si suivi GitHub requis |
-| Issue templates MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué | `SYSTEME_MAD/09-CHECKLISTS/chk-044-issue-templates-madproof.md` | À créer si suivi GitHub requis |
+| PR review + CODEOWNERS MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué partiel | `SYSTEME_MAD/09-CHECKLISTS/chk-043-pr-review-codeowners-madproof.md` | À créer si suivi requis |
+| Issue templates MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué | `SYSTEME_MAD/09-CHECKLISTS/chk-044-issue-templates-madproof.md` | À créer si suivi requis |
 
 ---
 
-## Guards MADPROOF appliqués
+## Release / smoke test
 
-| Dépôt | Guards principaux | Statut |
+| Document | Rôle | Statut |
 |---|---|---|
-| `maddevopss/madsuite-backend` | gitignore, hygiene, route security, organisation routes, security tests | Appliqué — CI à valider |
-| `maddevopss/madsuite-frontend` | gitignore, hygiene, modules API boundary | Appliqué — CI à valider |
-| `maddevopss/e2e` | gitignore, artifact hygiene, public responsive check | Appliqué partiel — CI hygiene à finaliser si possible |
-| `maddevopss/desktop-agent` | gitignore, artifact hygiene, syntax, unsigned build CI | Appliqué — CI à valider |
+| `PLAY-041` | Procédure pré-release Web/API | Durci v1.1 |
+| `CHK-045` | Smoke test post-release | Créé v1.0 |
 
-Référence officielle : `SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md`.
-
----
-
-## Issue templates MADPROOF
-
-| Dépôt | Bug | CI / guard | Change request | Statut |
-|---|---|---|---|---|
-| `maddevopss/madsuite-backend` | Appliqué | Appliqué | Appliqué | Complété |
-| `maddevopss/madsuite-frontend` | Appliqué | Appliqué | Appliqué | Complété |
-| `maddevopss/e2e` | Appliqué | Appliqué | Appliqué | Complété |
-| `maddevopss/desktop-agent` | Appliqué | Appliqué | Appliqué | Complété |
-
-Référence officielle : `SYSTEME_MAD/09-CHECKLISTS/chk-044-issue-templates-madproof.md`.
+Une release Web/API n’est confirmée que si la validation pré-release et le smoke test post-release sont complétés.
 
 ---
 
@@ -95,46 +67,34 @@ Référence officielle : `SYSTEME_MAD/09-CHECKLISTS/chk-044-issue-templates-madp
 
 La phase P2 est considérée complétée lorsque :
 
-- les `.env.example` backend/frontend sont prêts et appliqués;
-- les repos `e2e` et `desktop-agent` ont au minimum un README officiel;
-- la matrice CI/CD multi-repo est remplie;
-- les workflows de release et d’initialisation sont documentés;
-- les repos publics ont un `SECURITY.md` minimal;
-- les guards MADPROOF multi-repo sont appliqués;
-- la branch protection `main` est appliquée ou son exception est documentée;
-- les templates PR et CODEOWNERS sont appliqués ou exception documentée;
-- les issue templates sont appliqués;
-- les CI pertinentes exécutent les guards;
-- les checks locaux passent dans chaque repo;
-- les issues P2 sont ouvertes, reliées et suivies;
-- aucun secret réel n’est présent dans les fichiers appliqués;
-- les fichiers SYSTEME_MAD prêts à appliquer sont synchronisés avec les repos cibles.
+- les repos d’exécution sont documentés;
+- les guards MADPROOF sont appliqués;
+- la branch protection `main` est appliquée ou exception documentée;
+- les templates PR, CODEOWNERS et issue templates sont appliqués ou exception documentée;
+- les procédures release et post-release sont documentées;
+- les CI pertinentes sont observées;
+- les checks locaux passent;
+- les échecs durables sont transformés en issues suivies.
 
 ---
 
 ## Ordre recommandé d’exécution
 
-1. Pull local des repos backend/frontend/e2e/desktop-agent.
-2. Exécuter les checks locaux documentés dans chaque README.
+1. Pull local des repos actifs.
+2. Exécuter les checks documentés.
 3. Observer les CI GitHub Actions.
-4. Corriger tout guard rouge sans contournement silencieux.
-5. Appliquer la branch protection `main` selon `CHK-042`.
-6. Activer review from Code Owners quand applicable.
-7. Utiliser les issue templates pour tout bug, échec CI ou changement.
-8. Créer une issue de suivi par repo si la configuration doit être validée plus tard.
-9. Transformer tout échec durable en issue GitHub suivie.
-10. Faire une validation staging/prod réelle selon PLAY-041.
+4. Corriger les rouges sans contourner les guards.
+5. Appliquer branch protection selon `CHK-042`.
+6. Utiliser les templates PR/issues.
+7. Valider une release selon `PLAY-041`.
+8. Faire le smoke test post-release selon `CHK-045`.
 
 ---
 
 ## Note importante
 
-Les guards ne garantissent pas que le produit est parfait.
+Les guards, templates, branch protection et smoke tests ne garantissent pas la perfection.
 
-Ils garantissent que certaines classes de régressions ne peuvent plus revenir silencieusement.
+Ils rendent les régressions visibles, répétables et plus difficiles à ignorer.
 
-La branch protection garantit que ces preuves ne peuvent pas être contournées par un merge direct non validé.
-
-Les templates PR, CODEOWNERS et issue templates rendent la revue et le suivi plus répétables.
-
-Tant que les CI n’ont pas été observées vertes et que la branch protection n’est pas appliquée, le statut reste : **appliqué, validation requise**.
+Tant que les CI, la branch protection et une release réelle ne sont pas validées, le statut reste : **appliqué, validation requise**.
