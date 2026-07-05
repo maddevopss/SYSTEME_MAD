@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-052 — P3 Plans, modules et subscriptions
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -63,6 +63,22 @@ Cette checklist valide la cohérence entre les plans, les modules visibles, les 
 
 ---
 
+## Durcissement frontend appliqué
+
+Repo : `maddevopss/madsuite-frontend`
+
+| Élément | Statut | Rôle |
+|---|---|---|
+| `src/api/modules.api.js` | Durci | Normalise le payload modules/plans |
+| `getModulesDiagnostics()` | Ajouté | Détecte modules core manquants et modules inconnus |
+| `findMissingCoreModules()` | Ajouté | Aide à repérer une organisation incomplète |
+| `findUnknownModules()` | Ajouté | Aide à repérer un drift backend/frontend |
+| `isInternalPlan()` | Ajouté | Identifie les plans internes/admin |
+| `src/api/modules.helpers.test.js` | Ajouté | Tests unitaires des helpers purs |
+| `scripts/guard-modules-api.js` | Durci | Bloque plus de variantes d’appels directs |
+
+---
+
 ## Validation produit
 
 | Cas | Résultat attendu | Statut |
@@ -73,6 +89,8 @@ Cette checklist valide la cohérence entre les plans, les modules visibles, les 
 | Module désactivé | Message clair, pas erreur brute | À tester |
 | Upgrade requis | CTA clair, non agressif | À tester |
 | Permissions insuffisantes | Explication claire | À tester |
+| Payload modules incomplet | Diagnostic disponible côté frontend | Préparé |
+| Module backend inconnu | Diagnostic disponible côté frontend | Préparé |
 
 ---
 
@@ -97,4 +115,4 @@ Plan → modules inclus → limites → CTA upgrade → exceptions admin
 
 ## Statut actuel
 
-Statut : **à cadrer en P3, priorité élevée**.
+Statut : **cadrage P3 préparé, durcissement frontend appliqué, validation locale/CI requise**.
