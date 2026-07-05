@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Plan P2 — Hardening, CI/CD et initialisation repos réservés
-Version: 1.9
+Version: 2.0
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -13,7 +13,7 @@ Auteur: Marc-André Dufour
 
 Ce document transforme la phase P2 en plan d’exécution concret.
 
-Il complète les checklists et playbooks P2 actifs : CHK-040 à CHK-048, PLAY-041, PLAY-042 et PLAY-043.
+Il complète les checklists et playbooks P2 actifs : CHK-040 à CHK-048, PLAY-041, PLAY-042, PLAY-043 et PLAY-044.
 
 ---
 
@@ -31,6 +31,7 @@ La phase P2 vise à :
 - standardiser la validation release et post-release;
 - standardiser le suivi GitHub Issues des releases;
 - standardiser le triage des CI rouges;
+- standardiser l’exécution locale des preuves;
 - maintenir un readiness maître clair;
 - consigner les preuves terrain;
 - préparer une validation CI verte reproductible.
@@ -48,6 +49,7 @@ La phase P2 vise à :
 | Matrice CI/CD multi-repo | Tous repos | Complété, à revalider | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` | `#14` |
 | Readiness maître MADPROOF | Tous repos | Documenté, validation réelle requise | `SYSTEME_MAD/09-CHECKLISTS/chk-047-madproof-readiness-master.md` | À créer si suivi requis |
 | Evidence log MADPROOF | Tous repos | Créé, preuves terrain à remplir | `SYSTEME_MAD/09-CHECKLISTS/chk-048-evidence-log-madproof.md` | À créer si suivi requis |
+| Exécution locale des preuves | Tous repos actifs | Documenté | `SYSTEME_MAD/05-PLAY/play-044-execution-locale-preuves-madproof.md` | À créer si suivi requis |
 | Triage CI rouge | Tous repos d’exécution | Documenté | `SYSTEME_MAD/05-PLAY/play-043-triage-ci-rouge-madsuite.md` | À créer si suivi requis |
 | Workflow de release Web/API | Frontend + Backend | Durci, release réelle à valider | `SYSTEME_MAD/05-PLAY/play-041-release-madsuite-web-api.md` | `#15` |
 | Post-release smoke test | Frontend + Backend | Documenté, à exécuter après release | `SYSTEME_MAD/09-CHECKLISTS/chk-045-post-release-smoke-test-madsuite.md` | `#15` |
@@ -66,6 +68,7 @@ La phase P2 vise à :
 |---|---|---|
 | `CHK-047` | Vue maître des preuves et blocants restants | v1.1 |
 | `CHK-048` | Journal des preuves observées | Créé v1.0 |
+| `PLAY-044` | Procédure locale pour produire les preuves | Créé v1.0 |
 
 Un statut `Validé` doit être appuyé par une preuve dans CHK-048 ou une issue GitHub reliée.
 
@@ -74,7 +77,7 @@ Un statut `Validé` doit être appuyé par une preuve dans CHK-048 ou une issue 
 ## Ordre recommandé d’exécution
 
 1. Pull local des repos actifs.
-2. Exécuter les checks documentés.
+2. Exécuter les checks selon `PLAY-044`.
 3. Noter les résultats dans `CHK-048`.
 4. Observer les CI GitHub Actions.
 5. Corriger les rouges avec `PLAY-043` sans contourner les guards.
