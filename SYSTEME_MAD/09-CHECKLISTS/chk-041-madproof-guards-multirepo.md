@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-041 — Guards MADPROOF multi-repo
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -41,6 +41,7 @@ Chaque dépôt doit contenir :
 | Hygiene | `npm run guard:hygiene` | Bloque `.env`, artefacts générés et secrets évidents |
 | Route security | `npm run guard:routes` | Vérifie les routes platform sensibles |
 | Organisation routes | `npm run guard:organisation-routes` | Vérifie les routes métier avec `requireOrganisation` |
+| Modules contract | `npm run guard:modules-contract` | Empêche la reconstruction inline du contrat API modules dans le routeur |
 | Security tests | `npm run test:security` | Vérifie migrations, RLS, jobs et super-admin |
 
 ### Commande complète
@@ -55,6 +56,7 @@ npm run check:backend
 - `.github/workflows/backend-guards.yml` exécute les guards backend sans dépendre des variables de test.
 - `scripts/guard-route-security.js` existe.
 - `scripts/guard-organisation-routes.js` existe.
+- `scripts/guard-modules-contract.js` existe.
 - `scripts/guard-repo-hygiene.js` existe.
 - `scripts/guard-gitignore-policy.js` existe.
 - `README.md` documente les checks.
@@ -64,6 +66,8 @@ npm run check:backend
 - `npm run check:backend` exécute maintenant les tests Jest en mode séquentiel avec `--runInBand`.
 - `/api/calendar` applique maintenant `requireOrganisation`.
 - `scripts/guard-organisation-routes.js` surveille maintenant `src/routes/calendar.routes.js`.
+- `src/services/modules.service.js` centralise le payload API modules.
+- `scripts/guard-modules-contract.js` empêche le retour d’une logique de contrat modules directement dans `src/routes/modules.routes.js`.
 
 ---
 
@@ -163,7 +167,7 @@ Ordre de résolution :
 
 | Dépôt | Statut guards | Validation requise |
 |---|---|---|
-| Backend | Appliqué, durci pour calendar/RLS | CI + `npm run check:backend` |
+| Backend | Appliqué, durci pour calendar/RLS/modules contract | CI + `npm run check:backend` |
 | Frontend | Appliqué | CI + `npm run check:frontend` |
 | E2E | Appliqué partiel | `npm run check:e2e`; CI hygiene à brancher si filtre/permissions le permettent |
 | Desktop agent | Appliqué | CI + `npm run check:desktop` + `npm run build:ci` |
