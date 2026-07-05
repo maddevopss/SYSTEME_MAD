@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Plan P2 — Hardening, CI/CD et initialisation repos réservés
-Version: 1.3
+Version: 1.4
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -22,6 +22,7 @@ SYSTEME_MAD/04-ADR/ADR-004-separation-repos-execution-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md
 SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md
 SYSTEME_MAD/09-CHECKLISTS/chk-043-pr-review-codeowners-madproof.md
+SYSTEME_MAD/09-CHECKLISTS/chk-044-issue-templates-madproof.md
 ```
 
 ---
@@ -41,6 +42,7 @@ La phase P2 vise à :
 - appliquer des guards MADPROOF multi-repo;
 - documenter et appliquer la branch protection;
 - standardiser les pull requests et CODEOWNERS;
+- standardiser les issues GitHub;
 - préparer une validation CI verte reproductible.
 
 ---
@@ -59,6 +61,7 @@ La phase P2 vise à :
 | Guards MADPROOF multi-repo | Backend + Frontend + E2E + Desktop | Appliqué, validation CI requise | `SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md` | À créer si suivi GitHub requis |
 | Branch protection MADPROOF | SYSTEME_MAD + repos d’exécution | Documenté, à appliquer dans GitHub UI | `SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md` | À créer par repo |
 | PR review + CODEOWNERS MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué partiel | `SYSTEME_MAD/09-CHECKLISTS/chk-043-pr-review-codeowners-madproof.md` | À créer si suivi GitHub requis |
+| Issue templates MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué | `SYSTEME_MAD/09-CHECKLISTS/chk-044-issue-templates-madproof.md` | À créer si suivi GitHub requis |
 
 ---
 
@@ -75,30 +78,16 @@ Référence officielle : `SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-mult
 
 ---
 
-## Branch protection MADPROOF
+## Issue templates MADPROOF
 
-| Dépôt | Branche | Statut | Référence |
-|---|---|---|---|
-| `bleeband/SYSTEME_MAD` | `main` | À appliquer | `CHK-042` |
-| `maddevopss/madsuite-backend` | `main` | À appliquer | `CHK-042` |
-| `maddevopss/madsuite-frontend` | `main` | À appliquer | `CHK-042` |
-| `maddevopss/e2e` | `main` | À appliquer | `CHK-042` |
-| `maddevopss/desktop-agent` | `main` | À appliquer | `CHK-042` |
+| Dépôt | Bug | CI / guard | Change request | Statut |
+|---|---|---|---|---|
+| `maddevopss/madsuite-backend` | Appliqué | Appliqué | Appliqué | Complété |
+| `maddevopss/madsuite-frontend` | Appliqué | Appliqué | Appliqué | Complété |
+| `maddevopss/e2e` | Appliqué | Appliqué | Appliqué | Complété |
+| `maddevopss/desktop-agent` | Appliqué | Appliqué | Appliqué | Complété |
 
-La protection doit rendre impossible le merge direct d’une branche rouge sur `main`.
-
----
-
-## PR review + CODEOWNERS MADPROOF
-
-| Dépôt | PR template | CODEOWNERS | Statut |
-|---|---|---|---|
-| `maddevopss/madsuite-backend` | Appliqué | Appliqué | Complété |
-| `maddevopss/madsuite-frontend` | Appliqué | Appliqué | Complété |
-| `maddevopss/e2e` | Appliqué | Appliqué | Complété |
-| `maddevopss/desktop-agent` | Appliqué | À appliquer manuellement si requis | Partiel |
-
-Référence officielle : `SYSTEME_MAD/09-CHECKLISTS/chk-043-pr-review-codeowners-madproof.md`.
+Référence officielle : `SYSTEME_MAD/09-CHECKLISTS/chk-044-issue-templates-madproof.md`.
 
 ---
 
@@ -114,6 +103,7 @@ La phase P2 est considérée complétée lorsque :
 - les guards MADPROOF multi-repo sont appliqués;
 - la branch protection `main` est appliquée ou son exception est documentée;
 - les templates PR et CODEOWNERS sont appliqués ou exception documentée;
+- les issue templates sont appliqués;
 - les CI pertinentes exécutent les guards;
 - les checks locaux passent dans chaque repo;
 - les issues P2 sont ouvertes, reliées et suivies;
@@ -130,9 +120,9 @@ La phase P2 est considérée complétée lorsque :
 4. Corriger tout guard rouge sans contournement silencieux.
 5. Appliquer la branch protection `main` selon `CHK-042`.
 6. Activer review from Code Owners quand applicable.
-7. Créer une issue de suivi par repo si la configuration doit être validée plus tard.
-8. Transformer tout échec durable en issue GitHub suivie.
-9. Fermer le chantier guards seulement après CI verte ou exception documentée.
+7. Utiliser les issue templates pour tout bug, échec CI ou changement.
+8. Créer une issue de suivi par repo si la configuration doit être validée plus tard.
+9. Transformer tout échec durable en issue GitHub suivie.
 10. Faire une validation staging/prod réelle selon PLAY-041.
 
 ---
@@ -141,10 +131,10 @@ La phase P2 est considérée complétée lorsque :
 
 Les guards ne garantissent pas que le produit est parfait.
 
-Ils garantissent que certaines classes de régressions ne peuvent plus revenir silencieusement : secrets, artefacts générés, routes sensibles mal protégées, drift modules frontend, absence de contexte organisationnel sur routes métier et documentation opérationnelle obsolète.
+Ils garantissent que certaines classes de régressions ne peuvent plus revenir silencieusement.
 
 La branch protection garantit que ces preuves ne peuvent pas être contournées par un merge direct non validé.
 
-Les templates PR et CODEOWNERS rendent la revue plus répétable et moins dépendante de la mémoire humaine.
+Les templates PR, CODEOWNERS et issue templates rendent la revue et le suivi plus répétables.
 
 Tant que les CI n’ont pas été observées vertes et que la branch protection n’est pas appliquée, le statut reste : **appliqué, validation requise**.
