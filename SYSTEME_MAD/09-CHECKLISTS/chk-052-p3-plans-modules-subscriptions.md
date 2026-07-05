@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-052 — P3 Plans, modules et subscriptions
-Version: 1.5
+Version: 1.6
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -89,6 +89,7 @@ Repo : `maddevopss/madsuite-backend`
 | `desktop_agent` | Ajouté interne | Module consentement/privacy |
 | `matrix_status` | Ajouté | Trace l’état produit de chaque module |
 | `getModuleRegistryDiagnostics()` | Ajouté | Diagnostics du registre backend |
+| `src/routes/modules.routes.js` | Durci | Utilise le contexte organisation canonique et retourne les champs normalisés |
 | `src/test/modulesRegistry.test.js` | Ajouté | Tests ciblés du registre modules |
 | `npm run test:modules` | Ajouté | Test modules dédié inclus dans `check:backend` |
 
@@ -100,15 +101,53 @@ Repo : `maddevopss/madsuite-frontend`
 
 | Élément | Statut | Rôle |
 |---|---|---|
-| `src/api/modules.api.js` | Durci | Normalise le payload modules/plans |
+| `src/api/modules.api.js` | Durci | Normalise et unwrap défensivement le payload modules/plans |
 | `getModulesDiagnostics()` | Ajouté | Détecte modules core manquants et modules inconnus |
 | `findMissingCoreModules()` | Ajouté | Aide à repérer une organisation incomplète |
 | `findUnknownModules()` | Ajouté | Aide à repérer un drift backend/frontend |
 | `isInternalPlan()` | Ajouté | Identifie les plans internes/admin |
-| `src/api/modules.helpers.test.js` | Ajouté | Tests unitaires des helpers purs |
+| `src/api/modules.helpers.test.js` | Ajouté | Tests unitaires des helpers purs, incluant unwrap ApiResponse |
 | `scripts/guard-modules-api.js` | Durci | Bloque appels directs et imports directs non autorisés |
 | `src/hooks/useModules.jsx` | Durci | Expose les diagnostics modules via le provider |
 | `src/components/ModulesPanel.jsx` | Durci | Affiche une alerte admin actionnable si modules incohérents |
+
+---
+
+## Contrat API attendu
+
+Le backend doit retourner un `ApiResponse` contenant au minimum :
+
+```text
+{
+  plan_type,
+  modules,
+  diagnostics
+}
+```
+
+Chaque module doit exposer au minimum :
+
+```text
+key
+label
+plan
+price
+currency
+matrix_status
+is_active
+active
+included_in_plan
+included
+is_addon_active
+```
+
+Le frontend doit accepter :
+
+```text
+payload direct
+ApiResponse.data
+response.apiResponse.data
+```
 
 ---
 
@@ -154,6 +193,7 @@ tests modules dédiés
 | Matrice plans/modules existe | Source produit créée | Préparé |
 | Backend registry aligné | Registre modules durci | Préparé |
 | Backend tests modules | `test:modules` ajouté | Préparé |
+| Contrat API modules | Backend/frontend défensifs | Préparé |
 
 ---
 
@@ -178,4 +218,4 @@ Plan → modules inclus → limites → CTA upgrade → exceptions admin
 
 ## Statut actuel
 
-Statut : **cadrage P3 préparé, backend/frontend alignés sur une base traçable, validation locale/CI requise**.
+Statut : **cadrage P3 préparé, contrat API modules durci, backend/frontend alignés sur une base traçable, validation locale/CI requise**.
