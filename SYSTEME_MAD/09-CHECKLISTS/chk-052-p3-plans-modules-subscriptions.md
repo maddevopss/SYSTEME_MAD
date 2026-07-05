@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-052 — P3 Plans, modules et subscriptions
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -76,6 +76,8 @@ Repo : `maddevopss/madsuite-frontend`
 | `isInternalPlan()` | Ajouté | Identifie les plans internes/admin |
 | `src/api/modules.helpers.test.js` | Ajouté | Tests unitaires des helpers purs |
 | `scripts/guard-modules-api.js` | Durci | Bloque plus de variantes d’appels directs |
+| `src/hooks/useModules.jsx` | Durci | Expose les diagnostics modules via le provider |
+| `src/components/ModulesPanel.jsx` | Durci | Affiche une alerte discrète aux admins si modules incohérents |
 
 ---
 
@@ -91,6 +93,7 @@ Repo : `maddevopss/madsuite-frontend`
 | Permissions insuffisantes | Explication claire | À tester |
 | Payload modules incomplet | Diagnostic disponible côté frontend | Préparé |
 | Module backend inconnu | Diagnostic disponible côté frontend | Préparé |
+| Admin avec modules core manquants | Alerte visible dans ModulesPanel | Préparé |
 
 ---
 
@@ -115,4 +118,4 @@ Plan → modules inclus → limites → CTA upgrade → exceptions admin
 
 ## Statut actuel
 
-Statut : **cadrage P3 préparé, durcissement frontend appliqué, validation locale/CI requise**.
+Statut : **cadrage P3 préparé, diagnostics admin visibles, validation locale/CI requise**.
