@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Plan P2 — Hardening, CI/CD et initialisation repos réservés
-Version: 1.5
+Version: 1.6
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -13,7 +13,7 @@ Auteur: Marc-André Dufour
 
 Ce document transforme la phase P2 en plan d’exécution concret.
 
-Il complète les checklists et playbooks P2 actifs : CHK-040 à CHK-045, PLAY-041 et PLAY-042.
+Il complète les checklists et playbooks P2 actifs : CHK-040 à CHK-046, PLAY-041 et PLAY-042.
 
 ---
 
@@ -29,6 +29,7 @@ La phase P2 vise à :
 - appliquer les guards MADPROOF multi-repo;
 - documenter branch protection, PR review, CODEOWNERS et issues;
 - standardiser la validation release et post-release;
+- standardiser le suivi GitHub Issues des releases;
 - préparer une validation CI verte reproductible.
 
 ---
@@ -44,6 +45,7 @@ La phase P2 vise à :
 | Matrice CI/CD multi-repo | Tous repos | Complété, à revalider | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` | `#14` |
 | Workflow de release Web/API | Frontend + Backend | Durci, release réelle à valider | `SYSTEME_MAD/05-PLAY/play-041-release-madsuite-web-api.md` | `#15` |
 | Post-release smoke test | Frontend + Backend | Documenté, à exécuter après release | `SYSTEME_MAD/09-CHECKLISTS/chk-045-post-release-smoke-test-madsuite.md` | `#15` |
+| Suivi release GitHub Issues | SYSTEME_MAD | Appliqué | `SYSTEME_MAD/09-CHECKLISTS/chk-046-release-tracking-madsuite.md` | `#15` |
 | Workflow migration e2e/desktop | E2E + Desktop | Complété partiel | `SYSTEME_MAD/05-PLAY/play-042-initialiser-repo-execution-madsuite.md` | `#16` |
 | Guards MADPROOF multi-repo | Backend + Frontend + E2E + Desktop | Appliqué, validation CI requise | `SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md` | À créer si suivi requis |
 | Branch protection MADPROOF | SYSTEME_MAD + repos d’exécution | Documenté, à appliquer dans GitHub UI | `SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md` | À créer par repo |
@@ -52,14 +54,15 @@ La phase P2 vise à :
 
 ---
 
-## Release / smoke test
+## Release / smoke / tracking
 
 | Document | Rôle | Statut |
 |---|---|---|
 | `PLAY-041` | Procédure pré-release Web/API | Durci v1.1 |
 | `CHK-045` | Smoke test post-release | Créé v1.0 |
+| `CHK-046` | Suivi GitHub Issues release/post-release | Créé v1.0 |
 
-Une release Web/API n’est confirmée que si la validation pré-release et le smoke test post-release sont complétés.
+Une release Web/API n’est confirmée que si la validation pré-release, le smoke test post-release et l’issue de suivi sont complétés.
 
 ---
 
@@ -71,7 +74,7 @@ La phase P2 est considérée complétée lorsque :
 - les guards MADPROOF sont appliqués;
 - la branch protection `main` est appliquée ou exception documentée;
 - les templates PR, CODEOWNERS et issue templates sont appliqués ou exception documentée;
-- les procédures release et post-release sont documentées;
+- les procédures release, post-release et suivi release sont documentées;
 - les CI pertinentes sont observées;
 - les checks locaux passent;
 - les échecs durables sont transformés en issues suivies.
@@ -86,8 +89,10 @@ La phase P2 est considérée complétée lorsque :
 4. Corriger les rouges sans contourner les guards.
 5. Appliquer branch protection selon `CHK-042`.
 6. Utiliser les templates PR/issues.
-7. Valider une release selon `PLAY-041`.
-8. Faire le smoke test post-release selon `CHK-045`.
+7. Créer une issue release via `release_web_api.md`.
+8. Valider une release selon `PLAY-041`.
+9. Faire le smoke test post-release selon `CHK-045`.
+10. Documenter tout suivi via `post_release_incident.md` si requis.
 
 ---
 
