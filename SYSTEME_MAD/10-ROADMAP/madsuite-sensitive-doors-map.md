@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Carte officielle des portes sensibles MADSuite
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -59,6 +59,7 @@ Aucune porte sensible ne doit rester protégée uniquement par convention orale,
 | Desktop-agent activité | Agent local | Ingestion non validée, trop fréquente, non scoppée | `guard-activity-ingestion-contract` | CHK-057 | Protégé |
 | Assistant IA | IA externe/outils | Coût, prompt injection, outils non scoppés, médical | `guard-ai-contract` | CHK-058 | Protégé |
 | Cognitive Engine | Signaux cognitifs | État client injecté, claims mentaux/médicaux | `guard-cognitive-contract` | CHK-059 | Protégé |
+| Hub / Socket.IO | Temps réel multi-tenant | Diffusion globale, mauvais tenant, payload socket brut | `guard-hub-contract` | CHK-061 | Protégé |
 
 ---
 
@@ -78,6 +79,7 @@ npm run guard:stripe-contract
 npm run guard:activity-ingestion-contract
 npm run guard:ai-contract
 npm run guard:cognitive-contract
+npm run guard:hub-contract
 ```
 
 ---
@@ -97,7 +99,6 @@ node scripts/guard-app-module-routes.js
 | Porte | Pourquoi l’auditer | Décision attendue |
 |---|---|---|
 | Notifications | Peut exposer ou créer des messages org/user | Vérifier scope org, read/unread, ciblage utilisateur |
-| Hub / Socket.IO | Temps réel multi-tenant | Vérifier rooms org, absence `io.emit` global, events sensibles |
 | Exports / intégrations | Extraction de données | Vérifier org scope, type export, permissions, audit |
 | Analytics | Agrégats business | Vérifier superadmin/org scope, absence cross-tenant |
 | Calendar | Intégration externe | Vérifier org scope, OAuth/tokens, module éventuel |
@@ -111,15 +112,14 @@ node scripts/guard-app-module-routes.js
 
 ## Ordre recommandé des prochaines morsures
 
-1. Hub / Socket.IO
-2. Notifications
-3. Exports / intégrations
-4. Analytics
-5. Calendar
-6. Project detection + day summary
-7. Cron/outbox notifications
-8. Admin/master-admin
-9. Reports avancés
+1. Notifications
+2. Exports / intégrations
+3. Analytics
+4. Calendar
+5. Project detection + day summary
+6. Cron/outbox notifications
+7. Admin/master-admin
+8. Reports avancés
 
 ---
 
@@ -139,4 +139,4 @@ Quand une nouvelle porte sensible est découverte ou ajoutée :
 
 ## Statut actuel
 
-Statut : **carte initiale créée, portes externes rapides principales protégées, prochaines portes internes temps réel/asynchrones à auditer**.
+Statut : **Hub / Socket.IO protégé, prochaines portes internes/asynchrones à auditer**.
