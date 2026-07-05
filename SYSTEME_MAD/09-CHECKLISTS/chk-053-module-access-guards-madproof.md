@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-053 — Guards d’accès modules MADPROOF
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -33,10 +33,51 @@ requireModule = garde API
 | `src/middleware/requireModule.js` | Durci | Utilise le contexte organisation canonique et le registre `MODULES` |
 | `src/test/requireModule.test.js` | Ajouté | Vérifie clé inconnue, accès par plan/add-on et refus stable |
 | `scripts/guard-module-access-contract.js` | Ajouté | Vérifie le contrat minimal du middleware |
-| `.github/workflows/backend-guards.yml` | Mis à jour | Exécute `guard:module-access-contract` en CI guard-only |
+| `scripts/guard-app-module-mounts.js` | Ajouté | Vérifie les mappings route API sensible → module attendu dans `src/app.js` |
+| `.github/workflows/backend-guards.yml` | Mis à jour | Exécute les guards module-access et app-module-mounts en CI guard-only |
 | `MADPROOF_MODULE_ACCESS.md` | Ajouté | Documente la règle d’usage backend |
 | `npm run test:modules` | Mis à jour | Inclut les tests `requireModule` |
-| `npm run check:backend` | Mis à jour | Inclut le guard module-access contract |
+| `npm run check:backend` | Mis à jour | Inclut les guards module-access et app-module-mounts |
+
+---
+
+## Drift corrigé
+
+Le montage suivant a été corrigé :
+
+```text
+/api/quotes
+```
+
+Avant :
+
+```text
+requireModule("estimates")
+```
+
+Après :
+
+```text
+requireModule("quotes")
+```
+
+Raison : `quotes` et `estimates` sont deux clés modules distinctes dans le registre produit. Une route de devis ne doit pas dépendre silencieusement du mauvais module.
+
+---
+
+## Mappings API → module surveillés
+
+```text
+/api/reports                → reports
+/api/activity-intelligence  → activity_intelligence
+/api/billing-assistant      → billing_assistant
+/api/invoices               → invoices
+/api/billing                → invoices
+/api/revenue                → invoices
+/api/estimates              → estimates
+/api/quotes                 → quotes
+/api/expenses               → expenses
+```
 
 ---
 
@@ -96,6 +137,7 @@ exécute maintenant :
 
 ```bash
 npm run guard:module-access-contract
+npm run guard:app-module-mounts
 ```
 
 Frontend :
@@ -110,7 +152,7 @@ exécute déjà les guards modules frontend disponibles.
 
 ## Limite connue
 
-Un guard backend plus agressif qui scannerait toutes les routes pour détecter une logique module reconstruite inline a été tenté, mais la mise à jour a été bloquée par l’outil. Le guard actuellement appliqué vérifie le contrat du middleware lui-même, pas l’ensemble des routes.
+Le guard `app-module-mounts` vérifie les mappings sensibles explicitement déclarés dans ce document. Il ne détecte pas automatiquement tous les futurs modules. Toute nouvelle route module-sensitive doit être ajoutée ici et dans `scripts/guard-app-module-mounts.js`.
 
 ---
 
@@ -119,6 +161,7 @@ Un guard backend plus agressif qui scannerait toutes les routes pour détecter u
 - [ ] Exécuter `npm run check:backend` localement.
 - [ ] Exécuter `npm run test:modules` localement.
 - [ ] Exécuter `npm run guard:module-access-contract` localement.
+- [ ] Exécuter `npm run guard:app-module-mounts` localement.
 - [ ] Exécuter `npm run guard:modules-api` côté frontend.
 - [ ] Exécuter `node scripts/guard-modules-known-keys.js` côté frontend.
 - [ ] Observer les CI vertes.
@@ -127,4 +170,4 @@ Un guard backend plus agressif qui scannerait toutes les routes pour détecter u
 
 ## Statut actuel
 
-Statut : **guards d’accès modules appliqués et branchés côté backend guard-only CI, validation locale/CI requise**.
+Statut : **guards d’accès modules appliqués, mapping API→module sensible surveillé, validation locale/CI requise**.
