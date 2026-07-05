@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Plan P2 — Hardening, CI/CD et initialisation repos réservés
-Version: 1.7
+Version: 1.8
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -13,7 +13,7 @@ Auteur: Marc-André Dufour
 
 Ce document transforme la phase P2 en plan d’exécution concret.
 
-Il complète les checklists et playbooks P2 actifs : CHK-040 à CHK-046, PLAY-041, PLAY-042 et PLAY-043.
+Il complète les checklists et playbooks P2 actifs : CHK-040 à CHK-047, PLAY-041, PLAY-042 et PLAY-043.
 
 ---
 
@@ -31,6 +31,7 @@ La phase P2 vise à :
 - standardiser la validation release et post-release;
 - standardiser le suivi GitHub Issues des releases;
 - standardiser le triage des CI rouges;
+- maintenir un readiness maître clair;
 - préparer une validation CI verte reproductible.
 
 ---
@@ -44,6 +45,7 @@ La phase P2 vise à :
 | README E2E | `maddevopss/e2e` | Complété | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-e2e.md` | `#12` |
 | README desktop-agent | `maddevopss/desktop-agent` | Complété | `SYSTEME_MAD/08-BOOTSTRAPS/readme-madsuite-desktop-agent.md` | `#13` |
 | Matrice CI/CD multi-repo | Tous repos | Complété, à revalider | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` | `#14` |
+| Readiness maître MADPROOF | Tous repos | Documenté, validation réelle requise | `SYSTEME_MAD/09-CHECKLISTS/chk-047-madproof-readiness-master.md` | À créer si suivi requis |
 | Triage CI rouge | Tous repos d’exécution | Documenté | `SYSTEME_MAD/05-PLAY/play-043-triage-ci-rouge-madsuite.md` | À créer si suivi requis |
 | Workflow de release Web/API | Frontend + Backend | Durci, release réelle à valider | `SYSTEME_MAD/05-PLAY/play-041-release-madsuite-web-api.md` | `#15` |
 | Post-release smoke test | Frontend + Backend | Documenté, à exécuter après release | `SYSTEME_MAD/09-CHECKLISTS/chk-045-post-release-smoke-test-madsuite.md` | `#15` |
@@ -53,6 +55,16 @@ La phase P2 vise à :
 | Branch protection MADPROOF | SYSTEME_MAD + repos d’exécution | Documenté, à appliquer dans GitHub UI | `SYSTEME_MAD/09-CHECKLISTS/chk-042-branch-protection-madproof.md` | À créer par repo |
 | PR review + CODEOWNERS MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué partiel | `SYSTEME_MAD/09-CHECKLISTS/chk-043-pr-review-codeowners-madproof.md` | À créer si suivi requis |
 | Issue templates MADPROOF | Backend + Frontend + E2E + Desktop | Appliqué | `SYSTEME_MAD/09-CHECKLISTS/chk-044-issue-templates-madproof.md` | À créer si suivi requis |
+
+---
+
+## Readiness maître
+
+| Document | Rôle | Statut |
+|---|---|---|
+| `CHK-047` | Vue maître des preuves et blocants restants | Créé v1.0 |
+
+Statut global actuel : **appliqué/documenté, validation réelle requise**.
 
 ---
 
@@ -87,6 +99,7 @@ La phase P2 est considérée complétée lorsque :
 - la branch protection `main` est appliquée ou exception documentée;
 - les templates PR, CODEOWNERS et issue templates sont appliqués ou exception documentée;
 - les procédures release, post-release, suivi release et triage CI sont documentées;
+- le readiness maître est maintenu;
 - les CI pertinentes sont observées;
 - les checks locaux passent;
 - les échecs durables sont transformés en issues suivies.
@@ -104,7 +117,7 @@ La phase P2 est considérée complétée lorsque :
 7. Créer une issue release via `release_web_api.md`.
 8. Valider une release selon `PLAY-041`.
 9. Faire le smoke test post-release selon `CHK-045`.
-10. Documenter tout suivi via `post_release_incident.md` si requis.
+10. Mettre à jour `CHK-047` selon les preuves observées.
 
 ---
 
