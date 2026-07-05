@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-047 — Readiness maître MADPROOF
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -15,6 +15,12 @@ Cette checklist résume les preuves nécessaires avant de déclarer MADSuite pr�
 
 Elle sert de tableau maître et renvoie vers les checklists spécialisées.
 
+Le journal de preuves associé est :
+
+```text
+SYSTEME_MAD/09-CHECKLISTS/chk-048-evidence-log-madproof.md
+```
+
 ---
 
 ## Statuts possibles
@@ -24,7 +30,7 @@ Elle sert de tableau maître et renvoie vers les checklists spécialisées.
 | Documenté | Procédure ou règle écrite |
 | Appliqué | Fichier ou guard en place |
 | À valider | Preuve réelle manquante |
-| Validé | Preuve observée |
+| Validé | Preuve observée et notée dans CHK-048 |
 | Exception | Écart documenté et accepté |
 
 ---
@@ -37,6 +43,7 @@ Elle sert de tableau maître et renvoie vers les checklists spécialisées.
 | Repos clarifiés | `repos.md` + ADR-004 | Validé documentaire |
 | Board P2 | `madsuite-p2-hardening-board.md` | Validé documentaire |
 | Tableau exécution | `madsuite-execution-board.md` | Validé documentaire |
+| Evidence log | CHK-048 | Créé, preuves à remplir |
 
 ---
 
@@ -44,10 +51,10 @@ Elle sert de tableau maître et renvoie vers les checklists spécialisées.
 
 | Élément | Preuve | Statut |
 |---|---|---|
-| Backend guards | CHK-041 | Appliqué, CI à valider |
-| Frontend guards | CHK-041 | Appliqué, CI à valider |
-| E2E guards | CHK-041 | Appliqué partiel |
-| Desktop guards | CHK-041 | Appliqué, CI à valider |
+| Backend guards | CHK-041 + CHK-048 | Appliqué, CI à valider |
+| Frontend guards | CHK-041 + CHK-048 | Appliqué, CI à valider |
+| E2E guards | CHK-041 + CHK-048 | Appliqué partiel |
+| Desktop guards | CHK-041 + CHK-048 | Appliqué, CI à valider |
 | Triage CI rouge | PLAY-043 | Documenté |
 
 ---
@@ -56,7 +63,7 @@ Elle sert de tableau maître et renvoie vers les checklists spécialisées.
 
 | Élément | Preuve | Statut |
 |---|---|---|
-| Branch protection | CHK-042 | Documenté, à appliquer |
+| Branch protection | CHK-042 + CHK-048 | Documenté, à appliquer |
 | PR templates | CHK-043 | Appliqué |
 | CODEOWNERS | CHK-043 | Appliqué partiel |
 | Issue templates | CHK-044 | Appliqué |
@@ -71,7 +78,7 @@ Elle sert de tableau maître et renvoie vers les checklists spécialisées.
 | Pré-release | PLAY-041 | Documenté |
 | Post-release smoke test | CHK-045 | Documenté |
 | Suivi release | CHK-046 | Appliqué |
-| Release réelle validée | Issue release + CHK-045 rempli | À faire |
+| Release réelle validée | Issue release + CHK-045 + CHK-048 | À faire |
 
 ---
 
@@ -79,10 +86,10 @@ Elle sert de tableau maître et renvoie vers les checklists spécialisées.
 
 Le statut global ne peut pas devenir “validé” tant que les points suivants ne sont pas faits :
 
-1. CI backend observée verte.
-2. CI frontend observée verte.
-3. CI desktop observée verte ou exception documentée.
-4. E2E public observé vert.
+1. CI backend observée verte et notée dans CHK-048.
+2. CI frontend observée verte et notée dans CHK-048.
+3. CI desktop observée verte ou exception documentée dans CHK-048.
+4. E2E public observé vert et noté dans CHK-048.
 5. Branch protection appliquée sur `main` pour SYSTEME_MAD, backend et frontend.
 6. Release réelle suivie avec une issue release.
 7. CHK-045 exécuté après release.
@@ -107,3 +114,5 @@ Statut global actuel : **appliqué/documenté, validation réelle requise**.
 ## Règle finale
 
 MADPROOF signifie : preuve, garde-fou, traçabilité, exception documentée et capacité de corriger sans improviser.
+
+Un statut `Validé` doit avoir une preuve observable dans CHK-048 ou une issue GitHub reliée.
