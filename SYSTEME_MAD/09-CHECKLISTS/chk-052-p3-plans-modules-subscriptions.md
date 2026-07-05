@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-052 — P3 Plans, modules et subscriptions
-Version: 1.8
+Version: 1.9
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -107,9 +107,11 @@ Repo : `maddevopss/madsuite-backend`
 | `getModuleRegistryDiagnostics()` | Ajouté | Diagnostics du registre backend |
 | `src/services/modules.service.js` | Ajouté | Construit le payload API modules de façon pure/testable |
 | `src/routes/modules.routes.js` | Refactorisé | Lit la DB puis délègue le contrat au service modules |
+| `src/middleware/requireModule.js` | Durci | Vérifie l’accès module côté API avec contexte organisation canonique |
 | `src/test/modulesRegistry.test.js` | Ajouté | Tests ciblés du registre modules |
 | `src/test/modulesService.test.js` | Ajouté | Tests ciblés du payload API modules |
-| `npm run test:modules` | Mis à jour | Lance les tests registry + service dans `check:backend` |
+| `src/test/requireModule.test.js` | Ajouté | Tests ciblés des règles d’accès modules backend |
+| `npm run test:modules` | Mis à jour | Lance les tests registry + service + middleware dans `check:backend` |
 
 ---
 
@@ -128,8 +130,13 @@ Repo : `maddevopss/madsuite-frontend`
 | `findMissingCoreModules()` | Ajouté | Aide à repérer une organisation incomplète |
 | `findUnknownModules()` | Ajouté | Aide à repérer un drift backend/frontend |
 | `isInternalPlan()` | Ajouté | Identifie les plans internes/admin |
+| `src/components/ModuleGate.jsx` | Durci | Gate UI officiel compatible `moduleKey` + legacy `module` |
+| `moduleGateAllows()` | Ajouté | Helper pur testable pour les règles UI module |
+| `src/modules/index.js` | Durci | Exporte `ModuleGate` depuis le barrel officiel |
+| `src/components/ModuleGate.test.jsx` | Ajouté | Tests ciblés du helper pur ModuleGate |
 | `src/api/modules.helpers.test.js` | Durci | Tests unitaires des helpers purs, incluant unwrap ApiResponse et legacy modules |
 | `scripts/guard-modules-api.js` | Durci | Bloque appels directs et imports directs non autorisés |
+| `scripts/guard-modules-known-keys.js` | Ajouté | Bloque disparition de familles/clés modules connues |
 | `src/hooks/useModules.jsx` | Durci | Expose les diagnostics modules via le provider |
 | `src/components/ModulesPanel.jsx` | Durci | Affiche une alerte admin actionnable si modules incohérents |
 
@@ -194,6 +201,24 @@ Le routeur doit seulement :
 
 ---
 
+## Règle d’accès modules
+
+Le frontend peut cacher ou afficher une interface avec :
+
+```text
+src/components/ModuleGate.jsx
+```
+
+Le backend doit protéger les routes sensibles avec :
+
+```text
+src/middleware/requireModule.js
+```
+
+Règle importante : `ModuleGate` n’est jamais une sécurité suffisante. C’est une garde d’expérience utilisateur. Toute action serveur sensible doit rester protégée côté API.
+
+---
+
 ## Règle anti-drift frontend
 
 Les appels réseau vers `/organisation/modules` doivent rester confinés dans :
@@ -232,6 +257,9 @@ tests modules dédiés
 | Payload modules incomplet | Diagnostic disponible côté frontend | Préparé |
 | Module backend inconnu | Diagnostic disponible côté frontend | Préparé |
 | Module legacy connu | Aucun faux diagnostic `unknownModules` | Préparé |
+| ModuleGate sans moduleKey | N’affiche pas le contenu protégé | Préparé |
+| requireModule avec clé inconnue | Échec immédiat côté backend | Préparé |
+| requireModule sans module actif | 403 stable | Préparé |
 | Admin avec modules core manquants | Alerte visible dans ModulesPanel | Préparé |
 | Admin détecte une incohérence | Action reload + lien paramètres disponibles | Préparé |
 | Matrice plans/modules existe | Source produit créée | Préparé |
@@ -263,4 +291,4 @@ Plan → modules inclus → limites → CTA upgrade → exceptions admin
 
 ## Statut actuel
 
-Statut : **cadrage P3 préparé, contrat API modules centralisé, familles modules frontend alignées, validation locale/CI requise**.
+Statut : **cadrage P3 préparé, accès modules backend/frontend durci, validation locale/CI requise**.
