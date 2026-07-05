@@ -1,8 +1,8 @@
 ---
 Projet: MADSuite
 Document: Tableau d’exécution multi-repo MADSuite
-Version: 2.0
-Dernière révision: 2026-07-03
+Version: 2.1
+Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -69,7 +69,7 @@ Chaque chantier doit avoir :
 | README officiel backend | `maddevopss/madsuite-backend` | Complété | `maddevopss/madsuite-backend/README.md` | `#1` fermée | Maintenir avec le code réel |
 | README officiel frontend | `maddevopss/madsuite-frontend` | Complété | `maddevopss/madsuite-frontend/README.md` | `#2` fermée | Maintenir avec le code réel |
 | Décision séparation `e2e` et `desktop-agent` | `bleeband/SYSTEME_MAD` | Complété | `ADR-004-separation-repos-execution-madsuite.md` | N/A | Maintenir l’ADR si la stratégie change |
-| Statut repo `e2e` | `maddevopss/e2e` | Complété | `maddevopss/e2e/README.md` | `#3` fermée | Initialiser Playwright quand prêt |
+| Statut repo `e2e` | `maddevopss/e2e` | Complété | `maddevopss/e2e/README.md` | `#3` fermée | Maintenir les checks E2E |
 | Statut repo `desktop-agent` | `maddevopss/desktop-agent` | Complété | `maddevopss/desktop-agent/README.md` | `#4` fermée | Maintenir garde-fous MADPROOF |
 
 ---
@@ -94,11 +94,12 @@ Chaque chantier doit avoir :
 | Plan P2 hardening | `bleeband/SYSTEME_MAD` | Complété | `SYSTEME_MAD/10-ROADMAP/madsuite-p2-hardening-board.md` | N/A | Maintenir le plan à jour |
 | `.env.example` backend | `maddevopss/madsuite-backend` | Complété | `maddevopss/madsuite-backend/.env.example` | `#10` fermée | Valider contre le code réel à l’audit CI/env |
 | `.env.example` frontend | `maddevopss/madsuite-frontend` | Complété | `maddevopss/madsuite-frontend/.env.example` | `#11` fermée | Valider contre le code réel à l’audit CI/env |
-| README minimal E2E | `maddevopss/e2e` | Complété | `maddevopss/e2e/README.md` | `#12` fermée | Ajouter squelette Playwright |
-| README minimal desktop-agent | `maddevopss/desktop-agent` | Complété | `maddevopss/desktop-agent/README.md` | `#13` fermée | Maintenir avec l’implémentation réelle |
-| Matrice CI/CD multi-repo | Tous repos | Complété | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` v1.1 | `#14` fermée | Planifier durcissements restants |
+| README E2E | `maddevopss/e2e` | Complété | `maddevopss/e2e/README.md` | `#12` fermée | Maintenir avec les checks E2E |
+| README desktop-agent | `maddevopss/desktop-agent` | Complété | `maddevopss/desktop-agent/README.md` | `#13` fermée | Maintenir avec l’implémentation réelle |
+| Matrice CI/CD multi-repo | Tous repos | Complété, à revalider | `SYSTEME_MAD/09-CHECKLISTS/chk-040-ci-cd-multirepo-madsuite.md` v1.1 | `#14` fermée | Vérifier alignement avec guards CHK-041 |
 | Release Web/API | Frontend + Backend | Dry run complété, release réelle à valider | `SYSTEME_MAD/10-ROADMAP/release-2026-07-03-web-api-dry-run.md` | `#15` ouverte | Faire validation staging/prod réelle + smoke test manuel |
-| Initialisation repos exécution | E2E + Desktop-agent | Complété partiel | Repos clarifiés et documentés | `#16` fermée | Ajouter structure technique E2E au prochain cycle |
+| Initialisation repos exécution | E2E + Desktop-agent | Complété partiel | Repos clarifiés, documentés et dotés de guards | `#16` fermée | Valider CI réelle |
+| Guards MADPROOF multi-repo | Backend + Frontend + E2E + Desktop | Appliqué, validation CI requise | `SYSTEME_MAD/09-CHECKLISTS/chk-041-madproof-guards-multirepo.md` | À créer si suivi GitHub requis | Pull local, lancer checks, corriger rouges CI |
 
 ---
 
@@ -139,7 +140,7 @@ Statut actuel : **complété pour les audits initiaux; durcissements restants su
 
 ## Definition of Done P2
 
-Statut actuel : **complété documentairement; release Web/API réelle à valider**.
+Statut actuel : **appliqué documentairement et techniquement pour plusieurs guards; validation CI requise avant statut final complété**.
 
 ---
 
@@ -147,9 +148,12 @@ Statut actuel : **complété documentairement; release Web/API réelle à valide
 
 Priorité immédiate :
 
-1. Faire une validation staging/prod réelle avec smoke test manuel selon PLAY-041.
-2. Ensuite seulement, fermer `#15` si la release est confirmée.
-3. Planifier les durcissements futurs : tests backend DB portables, E2E Playwright, CI desktop-agent, branch protection, secret scanning.
+1. Pull local des dépôts backend, frontend, e2e et desktop-agent.
+2. Lancer les checks documentés dans les README.
+3. Observer les GitHub Actions.
+4. Corriger chaque rouge CI sans contourner les guards.
+5. Faire une validation staging/prod réelle avec smoke test manuel selon PLAY-041.
+6. Fermer `#15` seulement si la release est confirmée.
 
 ---
 
