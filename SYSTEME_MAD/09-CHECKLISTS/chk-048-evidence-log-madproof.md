@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-048 — Evidence log MADPROOF
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -14,6 +14,12 @@ Auteur: Marc-André Dufour
 Cette checklist sert à consigner les preuves réelles observées après exécution des checks, CI, règles GitHub et releases.
 
 Elle complète `CHK-047 — Readiness maître MADPROOF`.
+
+Template de brouillon recommandé :
+
+```text
+SYSTEME_MAD/08-BOOTSTRAPS/template-run-report-madproof.md
+```
 
 ---
 
@@ -72,6 +78,17 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 | Date | Domaine | Exception | Raison | Durée | Suivi |
 |---|---|---|---|---|---|
 | | | | | | |
+
+---
+
+## Utilisation du run report
+
+Avant d’ajouter une preuve ici :
+
+1. remplir `template-run-report-madproof.md` si l’exécution est longue;
+2. résumer seulement le résultat utile dans CHK-048;
+3. relier une issue si le résultat reste rouge;
+4. mettre à jour CHK-047 seulement après preuve observable.
 
 ---
 
