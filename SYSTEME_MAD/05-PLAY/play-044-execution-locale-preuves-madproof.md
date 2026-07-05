@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: PLAY-044 — Exécution locale des preuves MADPROOF
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-05
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -15,6 +15,12 @@ Ce playbook décrit comment exécuter localement les commandes de validation et 
 
 Objectif : produire des preuves terrain propres sans improviser.
 
+Template recommandé :
+
+```text
+SYSTEME_MAD/08-BOOTSTRAPS/template-run-report-madproof.md
+```
+
 ---
 
 ## Préconditions
@@ -22,8 +28,8 @@ Objectif : produire des preuves terrain propres sans improviser.
 - [ ] Les repos sont à jour localement.
 - [ ] Les dépendances sont installées.
 - [ ] Les variables locales nécessaires sont configurées.
-- [ ] Aucun fichier local sensible ne sera copié dans les logs.
 - [ ] `CHK-048` est ouvert pour noter les résultats.
+- [ ] Le template run report est disponible si un résumé est requis.
 
 ---
 
@@ -72,7 +78,7 @@ Reporter dans CHK-048 :
 - repo;
 - commande;
 - résultat;
-- erreur utile si rouge;
+- note utile si rouge;
 - issue créée si nécessaire.
 
 ---
@@ -154,7 +160,19 @@ Reporter dans CHK-048.
 
 ---
 
-## Étape 6 — Si une commande échoue
+## Étape 6 — Run report
+
+Après une exécution complète ou partielle :
+
+1. copier `template-run-report-madproof.md`;
+2. remplir repo, branche, commit, environnement;
+3. noter les commandes vertes/rouges;
+4. résumer la décision;
+5. reporter le résultat final dans CHK-048.
+
+---
+
+## Étape 7 — Si une commande échoue
 
 Utiliser :
 
@@ -171,7 +189,7 @@ Règle :
 
 ---
 
-## Étape 7 — Mise à jour du readiness
+## Étape 8 — Mise à jour du readiness
 
 Après les preuves locales :
 
@@ -189,4 +207,5 @@ Cette exécution locale est complète lorsque :
 - chaque repo a été tenté;
 - chaque résultat est noté dans CHK-048;
 - les rouges sont traités ou reliés à une issue;
+- le run report est rempli si nécessaire;
 - CHK-047 reflète la réalité observée.
