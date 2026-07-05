@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-052 — P3 Plans, modules et subscriptions
-Version: 1.6
+Version: 1.7
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -89,9 +89,11 @@ Repo : `maddevopss/madsuite-backend`
 | `desktop_agent` | Ajouté interne | Module consentement/privacy |
 | `matrix_status` | Ajouté | Trace l’état produit de chaque module |
 | `getModuleRegistryDiagnostics()` | Ajouté | Diagnostics du registre backend |
-| `src/routes/modules.routes.js` | Durci | Utilise le contexte organisation canonique et retourne les champs normalisés |
+| `src/services/modules.service.js` | Ajouté | Construit le payload API modules de façon pure/testable |
+| `src/routes/modules.routes.js` | Refactorisé | Lit la DB puis délègue le contrat au service modules |
 | `src/test/modulesRegistry.test.js` | Ajouté | Tests ciblés du registre modules |
-| `npm run test:modules` | Ajouté | Test modules dédié inclus dans `check:backend` |
+| `src/test/modulesService.test.js` | Ajouté | Tests ciblés du payload API modules |
+| `npm run test:modules` | Mis à jour | Lance les tests registry + service dans `check:backend` |
 
 ---
 
@@ -151,6 +153,27 @@ response.apiResponse.data
 
 ---
 
+## Règle backend anti-bordel
+
+Le routeur modules ne doit pas reconstruire le contrat à la main.
+
+La construction du payload doit rester dans :
+
+```text
+src/services/modules.service.js
+```
+
+Le routeur doit seulement :
+
+```text
+1. valider auth/org/admin selon la route;
+2. lire les données nécessaires;
+3. appeler le service modules;
+4. retourner ApiResponse.success(...).
+```
+
+---
+
 ## Règle anti-drift frontend
 
 Les appels réseau vers `/organisation/modules` doivent rester confinés dans :
@@ -194,6 +217,7 @@ tests modules dédiés
 | Backend registry aligné | Registre modules durci | Préparé |
 | Backend tests modules | `test:modules` ajouté | Préparé |
 | Contrat API modules | Backend/frontend défensifs | Préparé |
+| Payload backend centralisé | Service pur/testable ajouté | Préparé |
 
 ---
 
@@ -218,4 +242,4 @@ Plan → modules inclus → limites → CTA upgrade → exceptions admin
 
 ## Statut actuel
 
-Statut : **cadrage P3 préparé, contrat API modules durci, backend/frontend alignés sur une base traçable, validation locale/CI requise**.
+Statut : **cadrage P3 préparé, contrat API modules centralisé, backend/frontend alignés sur une base traçable, validation locale/CI requise**.
