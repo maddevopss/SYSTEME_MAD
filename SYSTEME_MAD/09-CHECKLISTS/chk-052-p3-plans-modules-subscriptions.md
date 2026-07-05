@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-052 — P3 Plans, modules et subscriptions
-Version: 1.4
+Version: 1.5
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -75,6 +75,25 @@ Cette checklist sert à vérifier que l’implémentation frontend/backend reste
 
 ---
 
+## Durcissement backend appliqué
+
+Repo : `maddevopss/madsuite-backend`
+
+| Élément | Statut | Rôle |
+|---|---|---|
+| `src/config/modules.js` | Aligné | Registre backend aligné avec la matrice brouillon |
+| `time_tracking` | Ajouté | Clé produit core pour suivi du temps |
+| `quotes` | Ajouté | Clé produit devis |
+| `payments` | Ajouté | Clé produit paiements |
+| `cognitive_engine` | Ajouté interne | Module MADPROOF strict |
+| `desktop_agent` | Ajouté interne | Module consentement/privacy |
+| `matrix_status` | Ajouté | Trace l’état produit de chaque module |
+| `getModuleRegistryDiagnostics()` | Ajouté | Diagnostics du registre backend |
+| `src/test/modulesRegistry.test.js` | Ajouté | Tests ciblés du registre modules |
+| `npm run test:modules` | Ajouté | Test modules dédié inclus dans `check:backend` |
+
+---
+
 ## Durcissement frontend appliqué
 
 Repo : `maddevopss/madsuite-frontend`
@@ -133,6 +152,8 @@ tests modules dédiés
 | Admin avec modules core manquants | Alerte visible dans ModulesPanel | Préparé |
 | Admin détecte une incohérence | Action reload + lien paramètres disponibles | Préparé |
 | Matrice plans/modules existe | Source produit créée | Préparé |
+| Backend registry aligné | Registre modules durci | Préparé |
+| Backend tests modules | `test:modules` ajouté | Préparé |
 
 ---
 
@@ -157,4 +178,4 @@ Plan → modules inclus → limites → CTA upgrade → exceptions admin
 
 ## Statut actuel
 
-Statut : **cadrage P3 préparé, matrice créée, diagnostics admin actionnables, validation locale/CI requise**.
+Statut : **cadrage P3 préparé, backend/frontend alignés sur une base traçable, validation locale/CI requise**.
