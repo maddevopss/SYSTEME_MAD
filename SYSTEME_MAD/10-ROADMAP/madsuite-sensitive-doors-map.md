@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Carte officielle des portes sensibles MADSuite
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -61,6 +61,7 @@ Aucune porte sensible ne doit rester protégée uniquement par convention orale,
 | Cognitive Engine | Signaux cognitifs | État client injecté, claims mentaux/médicaux | `guard-cognitive-contract` | CHK-059 | Protégé |
 | Hub / Socket.IO | Temps réel multi-tenant | Diffusion globale, mauvais tenant, payload socket brut | `guard-hub-contract` | CHK-061 | Protégé |
 | Notifications — surface lecture/read | API utilisateur | Lecture ou marquage lu cross-user/cross-org | `guard-notifications-contract` | CHK-062 | Protégé |
+| Notifications — producteur scheduler | Asynchrone interne | Notification admin à utilisateur supprimé ou org invalide | `guard-notifications-contract` | CHK-062 | Protégé |
 
 ---
 
@@ -105,7 +106,6 @@ node scripts/guard-app-module-routes.js
 | Calendar | Intégration externe | Vérifier org scope, OAuth/tokens, module éventuel |
 | Project detection | Suggestion automatique | Vérifier scope org, pas d’écriture non contrôlée |
 | Day summary | Résumé quotidien | Vérifier scope org, source activité, pas de fuite |
-| Notifications cron/outbox | Événements asynchrones | Vérifier destinataires, org scope, idempotence |
 | Admin/master-admin | Surface critique | Vérifier superadmin guard et absence fuite org |
 | Reports avancés | Données financières/temps | Vérifier module + org scope + agrégats |
 
@@ -117,9 +117,8 @@ node scripts/guard-app-module-routes.js
 2. Analytics
 3. Calendar
 4. Project detection + day summary
-5. Cron/outbox notifications
-6. Admin/master-admin
-7. Reports avancés
+5. Admin/master-admin
+6. Reports avancés
 
 ---
 
@@ -139,4 +138,4 @@ Quand une nouvelle porte sensible est découverte ou ajoutée :
 
 ## Statut actuel
 
-Statut : **surface notifications protégée, producteurs asynchrones encore à auditer**.
+Statut : **surface notifications et producteur scheduler protégés, autres producteurs futurs à surveiller lors de leur ajout**.
