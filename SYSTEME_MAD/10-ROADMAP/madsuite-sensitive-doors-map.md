@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Carte officielle des portes sensibles MADSuite
-Version: 1.3
+Version: 1.4
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -62,6 +62,7 @@ Aucune porte sensible ne doit rester protégée uniquement par convention orale,
 | Hub / Socket.IO | Temps réel multi-tenant | Diffusion globale, mauvais tenant, payload socket brut | `guard-hub-contract` | CHK-061 | Protégé |
 | Notifications — surface lecture/read | API utilisateur | Lecture ou marquage lu cross-user/cross-org | `guard-notifications-contract` | CHK-062 | Protégé |
 | Notifications — producteur scheduler | Asynchrone interne | Notification admin à utilisateur supprimé ou org invalide | `guard-notifications-contract` | CHK-062 | Protégé |
+| Exports / intégrations CSV | Extraction données | Export financier non audité ou join cross-tenant | `guard-export-contract` | CHK-063 | Protégé |
 
 ---
 
@@ -83,6 +84,7 @@ npm run guard:ai-contract
 npm run guard:cognitive-contract
 npm run guard:hub-contract
 npm run guard:notifications-contract
+npm run guard:export-contract
 ```
 
 ---
@@ -101,7 +103,6 @@ node scripts/guard-app-module-routes.js
 
 | Porte | Pourquoi l’auditer | Décision attendue |
 |---|---|---|
-| Exports / intégrations | Extraction de données | Vérifier org scope, type export, permissions, audit |
 | Analytics | Agrégats business | Vérifier superadmin/org scope, absence cross-tenant |
 | Calendar | Intégration externe | Vérifier org scope, OAuth/tokens, module éventuel |
 | Project detection | Suggestion automatique | Vérifier scope org, pas d’écriture non contrôlée |
@@ -113,12 +114,11 @@ node scripts/guard-app-module-routes.js
 
 ## Ordre recommandé des prochaines morsures
 
-1. Exports / intégrations
-2. Analytics
-3. Calendar
-4. Project detection + day summary
-5. Admin/master-admin
-6. Reports avancés
+1. Analytics
+2. Calendar
+3. Project detection + day summary
+4. Admin/master-admin
+5. Reports avancés
 
 ---
 
@@ -138,4 +138,4 @@ Quand une nouvelle porte sensible est découverte ou ajoutée :
 
 ## Statut actuel
 
-Statut : **surface notifications et producteur scheduler protégés, autres producteurs futurs à surveiller lors de leur ajout**.
+Statut : **exports CSV protégés, prochaines portes analytics/intégrations à auditer**.
