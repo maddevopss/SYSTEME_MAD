@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-052 — P3 Plans, modules et subscriptions
-Version: 1.3
+Version: 1.4
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -15,6 +15,18 @@ Cette checklist valide la cohérence entre les plans, les modules visibles, les 
 
 ---
 
+## Source produit liée
+
+La matrice produit officielle de référence est :
+
+```text
+SYSTEME_MAD/02-PRODUIT/madsuite-matrice-plans-modules.md
+```
+
+Cette checklist sert à vérifier que l’implémentation frontend/backend reste alignée avec cette matrice.
+
+---
+
 ## Objectif
 
 Éviter qu’une organisation voie un produit incomplet, incohérent ou bloqué sans explication claire.
@@ -25,10 +37,10 @@ Cette checklist valide la cohérence entre les plans, les modules visibles, les 
 
 | Question | Décision requise |
 |---|---|
-| Quels plans existent officiellement ? | À définir |
-| Quels modules sont inclus par plan ? | À définir |
+| Quels plans existent officiellement ? | Brouillon créé dans la matrice |
+| Quels modules sont inclus par plan ? | Brouillon créé dans la matrice |
 | Quel plan a l’organisation admin ? | À définir |
-| Quels modules doivent être visibles en admin ? | À définir |
+| Quels modules doivent être visibles en admin ? | Brouillon créé dans la matrice |
 | Que voit un utilisateur sans module actif ? | À définir |
 | Que voit un utilisateur en essai ? | À définir |
 
@@ -120,6 +132,7 @@ tests modules dédiés
 | Module backend inconnu | Diagnostic disponible côté frontend | Préparé |
 | Admin avec modules core manquants | Alerte visible dans ModulesPanel | Préparé |
 | Admin détecte une incohérence | Action reload + lien paramètres disponibles | Préparé |
+| Matrice plans/modules existe | Source produit créée | Préparé |
 
 ---
 
@@ -134,7 +147,7 @@ tests modules dédiés
 
 ## Décision attendue
 
-Produire une matrice officielle :
+Finaliser la matrice officielle :
 
 ```text
 Plan → modules inclus → limites → CTA upgrade → exceptions admin
@@ -144,4 +157,4 @@ Plan → modules inclus → limites → CTA upgrade → exceptions admin
 
 ## Statut actuel
 
-Statut : **cadrage P3 préparé, diagnostics admin actionnables, validation locale/CI requise**.
+Statut : **cadrage P3 préparé, matrice créée, diagnostics admin actionnables, validation locale/CI requise**.
