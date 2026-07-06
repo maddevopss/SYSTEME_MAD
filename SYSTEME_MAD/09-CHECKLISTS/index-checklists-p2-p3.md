@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Index maître des checklists P2/P3
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-06
 Statut: Actif — référence
 Auteur: Marc-André Dufour
@@ -44,6 +44,9 @@ Il sert à retrouver rapidement le bon document selon la décision, la validatio
 | CHK-089 | `chk-089-accessibilite-minimale.md` | Accessibilité minimale | P1 |
 | CHK-090 | `chk-090-compatibilite-navigateurs-appareils.md` | Compatibilité navigateurs/appareils | P1 |
 | CHK-091 | `chk-091-revue-pricing-offres.md` | Pricing/offres | P0 |
+| CHK-092 | `chk-092-communication-incident-client.md` | Communication incident client | P1 |
+| CHK-093 | `chk-093-retention-suppression-donnees.md` | Rétention/suppression données | P0 |
+| CHK-094 | `chk-094-readiness-legale-commerciale.md` | Readiness légale/commerciale | P0 |
 
 ---
 
@@ -67,6 +70,7 @@ CHK-080
 CHK-084
 CHK-085
 CHK-091
+CHK-094
 ```
 
 ## Desktop-agent
@@ -77,6 +81,7 @@ CHK-074
 CHK-077
 CHK-078
 CHK-086
+CHK-093
 ```
 
 ## Mobile / UX / accessibilité
@@ -95,6 +100,16 @@ CHK-076
 CHK-079
 CHK-082
 CHK-087
+CHK-092
+```
+
+## Privacy / confiance
+
+```text
+CHK-075
+CHK-078
+CHK-093
+CHK-094
 ```
 
 ## Tests
