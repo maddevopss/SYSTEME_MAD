@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Carte officielle des portes sensibles MADSuite — Version consolidée
-Version: 2.0
+Version: 2.1
 Dernière révision: 2026-07-05
 Statut: Brouillon contrôlé
 Auteur: Marc-André Dufour
@@ -57,7 +57,7 @@ Aucune porte sensible ne doit rester protégée uniquement par convention orale,
 | Kiosques publics | Token public | Punch/KM sans module requis | `guard-public-kiosk-modules` | CHK-054 | Protégé |
 | Portail public | Token public | Paiement/action publique sans statut/module/scope | `guard-public-portal-contract` | CHK-055 | Protégé |
 | Stripe | Webhook externe | Update financier non vérifié/scoppé | `guard-stripe-contract` | CHK-056 | Protégé |
-| Desktop-agent activité | Agent local | Ingestion non validée, trop fréquente, non scoppée | `guard-activity-ingestion-contract` | CHK-057 | Protégé |
+| Desktop-agent activité backend | Agent local → backend | Ingestion non validée, trop fréquente, non scoppée | `guard-activity-ingestion-contract` | CHK-057 | Protégé |
 | Assistant IA | IA externe/outils | Coût, prompt injection, outils non scoppés, médical | `guard-ai-contract` | CHK-058 | Protégé |
 | Cognitive Engine | Signaux cognitifs | État client injecté, claims mentaux/médicaux | `guard-cognitive-contract` | CHK-059 | Protégé |
 | Hub / Socket.IO | Temps réel multi-tenant | Diffusion globale, mauvais tenant, payload socket brut | `guard-hub-contract` | CHK-061 | Protégé |
@@ -70,6 +70,7 @@ Aucune porte sensible ne doit rester protégée uniquement par convention orale,
 | Day Summary | Résumé activité | Lecture activité cross-user/cross-org ou résumé illimité | `guard-suggestions-summary-contract` | CHK-066 | Protégé |
 | Master Admin | Surface plateforme | Superadmin mal contrôlé, provisioning non audité, user.id magique | `guard-master-admin-contract` | CHK-067 | Protégé |
 | Reports avancés | Données financières/temps | Rapport cross-tenant, cache cross-org, debug production | `guard-reports-contract` | CHK-068 | Protégé |
+| Desktop Agent app locale | Electron / IPC / tokens | Token brut renderer, IPC payload libre, diagnostics privacy, navigation externe | `guard-desktop-agent-contract` | CHK-069 | Protégé |
 
 ---
 
@@ -107,6 +108,24 @@ npm run check:backend
 
 ---
 
+## Guards desktop-agent actifs dans `check:desktop`
+
+```bash
+npm run guard:gitignore
+npm run guard:hygiene
+npm run guard:desktop-agent-contract
+npm run check:syntax
+npm test
+```
+
+Validation complète :
+
+```bash
+npm run check:desktop
+```
+
+---
+
 ## Guards frontend actifs ou directs CI
 
 ```bash
@@ -129,6 +148,12 @@ madsuite-sensitive-doors-map-addendum-master-admin.md
 madsuite-sensitive-doors-map-addendum-reports.md
 ```
 
+Elle intègre aussi :
+
+```text
+CHK-069 — Guards contrat Desktop Agent
+```
+
 Ces addendums peuvent rester comme historique, mais la référence courante devient ce document V2.
 
 ---
@@ -141,11 +166,16 @@ Checklist locale :
 SYSTEME_MAD/10-ROADMAP/local-validation-todo.md
 ```
 
-Commande principale :
+Commandes principales :
 
 ```powershell
 cd T:\Projets\recherche\web\maddevops
 npm run check:backend
+```
+
+```powershell
+cd T:\Projets\recherche\web\desktop-agent
+npm run check:desktop
 ```
 
 ---
@@ -154,11 +184,14 @@ npm run check:backend
 
 | Risque | Statut | Décision |
 |---|---|---|
-| Validation locale non confirmée | Ouvert | Exécuter `npm run check:backend` |
+| Validation locale backend non confirmée | Ouvert | Exécuter `npm run check:backend` |
+| Validation locale desktop-agent non confirmée | Ouvert | Exécuter `npm run check:desktop` |
 | CI backend-guards non confirmée verte | Ouvert | Vérifier GitHub Actions |
+| CI desktop-guards non confirmée verte | Ouvert | Vérifier GitHub Actions |
 | Branch protection non confirmée | Ouvert | À confirmer avant P3 stable |
 | SSRF Calendar complet | Partiel | Protection pragmatique en place; DNS/CIDR strict possible plus tard |
 | Tests dynamiques multi-tenant exhaustifs | Partiel | Guards statiques ajoutés; tests dynamiques à renforcer progressivement |
+| Tests Electron UI réels | Partiel | Guard + unit/syntax ajoutés; smoke test manuel desktop recommandé |
 
 ---
 
@@ -181,6 +214,7 @@ socket/temps réel
 admin/superadmin
 résumés ou inférences d’activité
 intégration externe
+Electron / IPC / desktop-agent
 ```
 
 ---
@@ -201,4 +235,4 @@ Quand une nouvelle porte sensible est découverte ou ajoutée :
 
 ## Statut actuel
 
-Statut : **carte V2 consolidée, validation locale/CI requise avant fermeture P2 officielle**.
+Statut : **carte V2.1 consolidée, validation locale/CI requise avant fermeture P2 officielle**.
