@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Index P3 — Stabilisation Produit
-Version: 1.7
+Version: 1.8
 Dernière révision: 2026-07-06
 Statut: Préparation — à ouvrir après fermeture P2
 Auteur: Marc-André Dufour
@@ -42,6 +42,10 @@ P3 peut être ouverte seulement lorsque :
 | `SYSTEME_MAD/10-ROADMAP/p3-backlog-priorise.md` | Backlog P3 priorisé | Préparation |
 | `SYSTEME_MAD/10-ROADMAP/p3-criteres-fermeture.md` | Critères de fermeture P3 | Préparation |
 | `SYSTEME_MAD/10-ROADMAP/hypothese-pricing-v1.md` | Hypothèse pricing Starter/Pro/Team | Hypothèse P3 |
+| `SYSTEME_MAD/10-ROADMAP/p3-premier-client-ideal.md` | Profil du premier client réel | Préparation terrain |
+| `SYSTEME_MAD/10-ROADMAP/p3-questionnaire-decouverte-client.md` | Questionnaire découverte client | Préparation terrain |
+| `SYSTEME_MAD/10-ROADMAP/p3-onboarding-client-reel.md` | Parcours onboarding client réel | Préparation terrain |
+| `SYSTEME_MAD/10-ROADMAP/p3-message-approche-premier-client.md` | Message d’approche premier client | Préparation terrain |
 | `SYSTEME_MAD/10-ROADMAP/p4-preparation-acquisition-premiers-clients.md` | Préparation P4, non ouverte | Future |
 
 ---
@@ -125,11 +129,12 @@ P3 peut être ouverte seulement lorsque :
 | Mobile | CHK-072 | iPhone/Safari utilisable sur pages critiques |
 | Plans/modules | CHK-073 | Admin/internal/trial/starter/pro/team clarifiés |
 | Pricing | CHK-091 + `hypothese-pricing-v1.md` | Prix/offres/MRR alignés |
+| Client terrain | `p3-premier-client-ideal.md` + questionnaire | Client réel qualifié |
 | Privacy | CHK-078/093 | Consentement + rétention clairs |
 | Légal/commercial | CHK-094 | Documents et limites identifiés |
 | Desktop | CHK-074 | Agent démarre, track, sync, queue, quitte |
 | Readiness | CHK-080 | Go/no-go client clair |
-| Onboarding | CHK-085 | Premier client activable proprement |
+| Onboarding | CHK-085 + `p3-onboarding-client-reel.md` | Premier client activable proprement |
 | Copy | CHK-075 | Aucun claim médical ou mental abusif |
 
 ---
