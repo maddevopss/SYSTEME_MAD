@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Index P3 — Stabilisation Produit
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-06
 Statut: Préparation — à ouvrir après fermeture P2
 Auteur: Marc-André Dufour
@@ -49,6 +49,9 @@ P3 peut être ouverte seulement lorsque :
 | CHK-074 — Desktop-agent smoke test exécuté | Preuve d’exécution terrain desktop | P0 | À exécuter localement |
 | CHK-075 — Copy UX non-médicale | Protéger langage produit/cognition | P0 | À exécuter |
 | CHK-076 — Runbook incident minimal | Préparer opérations premiers clients | P1 | À exécuter |
+| CHK-077 — Guide installation desktop-agent client | Préparer distribution client desktop | P1 | À préparer |
+| CHK-078 — Consentement progressif et privacy | Encadrer modules sensibles | P0 | À valider |
+| CHK-079 — Erreurs connues client/support | Préparer support premiers clients | P1 | À préparer |
 
 ---
 
@@ -57,12 +60,15 @@ P3 peut être ouverte seulement lorsque :
 ```text
 1. Fermer P2 après validation backend + desktop-agent.
 2. Valider CHK-073 Matrice plans/modules.
-3. Exécuter CHK-071 Parcours revenu complet.
-4. Exécuter CHK-072 Mobile iPhone/Safari.
-5. Exécuter CHK-074 Desktop-agent smoke test.
-6. Auditer CHK-075 Copy UX non-médicale.
-7. Préparer CHK-076 Runbook incident minimal avant client actif.
-8. Exécuter CHK-070 comme synthèse smoke tests.
+3. Valider CHK-078 Consentement progressif/privacy.
+4. Exécuter CHK-071 Parcours revenu complet.
+5. Exécuter CHK-072 Mobile iPhone/Safari.
+6. Exécuter CHK-074 Desktop-agent smoke test.
+7. Auditer CHK-075 Copy UX non-médicale.
+8. Préparer CHK-077 Guide installation desktop-agent client.
+9. Préparer CHK-076 Runbook incident minimal avant client actif.
+10. Préparer CHK-079 Erreurs connues support.
+11. Exécuter CHK-070 comme synthèse smoke tests.
 ```
 
 ---
@@ -76,7 +82,19 @@ P3 peut être ouverte seulement lorsque :
 | Mobile | CHK-072 | iPhone/Safari utilisable sur pages critiques |
 | Plans/modules | CHK-073 | Admin/internal/trial/solo/PME clarifiés |
 | Desktop | CHK-074 | Agent démarre, track, sync, queue, quitte |
+| Consentement | CHK-078 | Modules sensibles expliqués/contrôlés |
 | Copy | CHK-075 | Aucun claim médical ou mental abusif |
+
+---
+
+## P3 P1 — Bloc avant vente élargie
+
+| Bloc | Document | Résultat attendu |
+|---|---|---|
+| Support | CHK-076 | Runbook incident prêt |
+| Installation desktop | CHK-077 | Client peut installer/comprendre/désinstaller |
+| Support client | CHK-079 | Réponses erreurs fréquentes prêtes |
+| Observabilité | CHK-076 | Incidents P0/P1 triables sans improviser |
 
 ---
 
@@ -87,6 +105,7 @@ Pas de nouvelle grosse feature avant stabilité des parcours P0.
 Pas de claim médical.
 Pas de module sans matrice plan/module.
 Pas de surface sensible sans guard ou checklist.
+Pas de consentement global vague pour une surface sensible.
 Pas de fermeture P3 sans smoke tests exécutés.
 ```
 
