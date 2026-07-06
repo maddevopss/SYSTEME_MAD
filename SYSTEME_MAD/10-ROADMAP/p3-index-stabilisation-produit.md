@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Index P3 — Stabilisation Produit
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-07-06
 Statut: Préparation — à ouvrir après fermeture P2
 Auteur: Marc-André Dufour
@@ -30,11 +30,14 @@ P3 peut être ouverte seulement lorsque :
 
 ---
 
-## Document principal
+## Documents principaux
 
 | Document | Rôle | Statut |
 |---|---|---|
 | `SYSTEME_MAD/10-ROADMAP/p3-stabilisation-produit.md` | Plan principal P3 | Préparation |
+| `SYSTEME_MAD/10-ROADMAP/p3-backlog-priorise.md` | Backlog P3 priorisé | Préparation |
+| `SYSTEME_MAD/10-ROADMAP/p3-criteres-fermeture.md` | Critères de fermeture P3 | Préparation |
+| `SYSTEME_MAD/10-ROADMAP/p4-preparation-acquisition-premiers-clients.md` | Préparation P4, non ouverte | Future |
 
 ---
 
@@ -81,6 +84,7 @@ P3 peut être ouverte seulement lorsque :
 15. Préparer CHK-084 Release P3.
 16. Préparer CHK-085 Onboarding premier client.
 17. Exécuter CHK-070 comme synthèse smoke tests.
+18. Valider `p3-criteres-fermeture.md` avant fermeture P3.
 ```
 
 ---
