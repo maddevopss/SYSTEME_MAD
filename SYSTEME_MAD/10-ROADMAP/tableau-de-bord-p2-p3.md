@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Tableau de bord P2/P3
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-06
 Statut: Actif — pilotage
 Auteur: Marc-André Dufour
@@ -32,11 +32,13 @@ Il évite de perdre le fil entre les validations locales, les checklists, les d�
 À consulter dans cet ordre :
 
 ```text
-1. post-validation-locale-resultats.md
-2. p2-closure-sensitive-doors-patrol.md
-3. p3-index-stabilisation-produit.md
-4. p3-backlog-priorise.md
-5. p3-decisions-ouvertes.md
+1. p3-vue-executive.md
+2. ordre-local-officiel-p2-p3.md
+3. post-validation-locale-resultats.md
+4. p2-closure-sensitive-doors-patrol.md
+5. p3-index-stabilisation-produit.md
+6. p3-backlog-priorise.md
+7. p3-decisions-ouvertes.md
 ```
 
 ---
@@ -62,6 +64,12 @@ aucun faux positif non traité
 ---
 
 # 3. Commandes locales à lancer
+
+Source officielle :
+
+```text
+SYSTEME_MAD/10-ROADMAP/ordre-local-officiel-p2-p3.md
+```
 
 Backend :
 
@@ -91,6 +99,8 @@ SYSTEME_MAD/10-ROADMAP/post-validation-locale-resultats.md
 
 | Document | Rôle |
 |---|---|
+| `p3-vue-executive.md` | Résumé rapide P2/P3 |
+| `ordre-local-officiel-p2-p3.md` | Séquence locale officielle |
 | `p2-closure-sensitive-doors-patrol.md` | Décision de fermeture P2 |
 | `post-validation-locale-resultats.md` | Résultats locaux/CI |
 | `p3-stabilisation-produit.md` | Plan P3 |
@@ -119,6 +129,8 @@ SYSTEME_MAD/10-ROADMAP/post-validation-locale-resultats.md
 | CHK-081 | Branch protection/CI gates |
 | CHK-085 | Onboarding premier client |
 | CHK-091 | Pricing/offres |
+| CHK-093 | Rétention/suppression données |
+| CHK-094 | Readiness légale/commerciale |
 
 ---
 
@@ -146,6 +158,12 @@ Toute dette acceptée doit être ajoutée à :
 
 ```text
 p3-dette-technique.md
+```
+
+Toute nouvelle checklist doit être ajoutée à :
+
+```text
+SYSTEME_MAD/09-CHECKLISTS/index-checklists-p2-p3.md
 ```
 
 ---
