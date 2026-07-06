@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Index maître des checklists P2/P3
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-07-06
 Statut: Actif — référence
 Auteur: Marc-André Dufour
@@ -47,6 +47,7 @@ Il sert à retrouver rapidement le bon document selon la décision, la validatio
 | CHK-092 | `chk-092-communication-incident-client.md` | Communication incident client | P1 |
 | CHK-093 | `chk-093-retention-suppression-donnees.md` | Rétention/suppression données | P0 |
 | CHK-094 | `chk-094-readiness-legale-commerciale.md` | Readiness légale/commerciale | P0 |
+| CHK-095 | `chk-095-ouverture-officielle-p3.md` | Ouverture officielle P3 | P0 |
 
 ---
 
@@ -118,6 +119,12 @@ CHK-094
 CHK-070
 CHK-083
 CHK-088
+```
+
+## Gouvernance phase
+
+```text
+CHK-095
 ```
 
 ---
