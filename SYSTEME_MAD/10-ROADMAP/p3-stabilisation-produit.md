@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: P3 — Stabilisation Produit
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-06
 Statut: Préparation — à ouvrir après fermeture P2
 Auteur: Marc-André Dufour
@@ -20,6 +20,12 @@ npm run check:backend vert
 npm run check:desktop vert
 CI backend-guards verte
 CI desktop-guards verte
+```
+
+Index associé :
+
+```text
+SYSTEME_MAD/10-ROADMAP/p3-index-stabilisation-produit.md
 ```
 
 ---
@@ -61,6 +67,8 @@ P3 = rendre le produit fiable, compréhensible et vendable
 | Smoke tests CHK-070 exécutés ou planifiés | Requis |
 | Carte portes sensibles V2.1 à jour | Requis |
 | TODO locale post-patrouille à jour | Requis |
+| Index P3 créé | Complété |
+| Checklists P3 P0/P1 préparées | Complété |
 
 ---
 
@@ -87,15 +95,15 @@ statut paid/finalized/overdue
 notifications facture
 ```
 
-Livrables recommandés :
+Livrables préparés :
 
-| Livrable | Type | Priorité |
-|---|---|---|
-| Checklist parcours revenu complet | Doc/test | P0 |
-| E2E happy path invoice | Playwright | P0 |
-| E2E portal facture public | Playwright | P0 |
-| E2E quote → invoice | Playwright | P1 |
-| Smoke Stripe test mode | Manuel/script | P1 |
+| Livrable | Type | Priorité | Document |
+|---|---|---|---|
+| Checklist parcours revenu complet | Doc/test | P0 | CHK-071 |
+| E2E happy path invoice | Playwright | P0 | À implémenter |
+| E2E portal facture public | Playwright | P0 | À implémenter |
+| E2E quote → invoice | Playwright | P1 | À implémenter |
+| Smoke Stripe test mode | Manuel/script | P1 | CHK-071 |
 
 ---
 
@@ -120,14 +128,14 @@ keyboard overlap
 scroll locking
 ```
 
-Livrables recommandés :
+Livrables préparés :
 
-| Livrable | Type | Priorité |
-|---|---|---|
-| Checklist mobile iPhone Safari | Doc | P0 |
-| Tests visuels pages critiques | Manuel/Playwright | P1 |
-| Régression modales/drawer | Test | P1 |
-| Matrice responsive pages | Doc | P1 |
+| Livrable | Type | Priorité | Document |
+|---|---|---|---|
+| Checklist mobile iPhone Safari | Doc | P0 | CHK-072 |
+| Tests visuels pages critiques | Manuel/Playwright | P1 | À implémenter |
+| Régression modales/drawer | Test | P1 | À implémenter |
+| Matrice responsive pages | Doc | P1 | À créer au besoin |
 
 ---
 
@@ -153,15 +161,16 @@ export diagnostics
 update/build Windows
 ```
 
-Livrables recommandés :
+Livrables préparés :
 
-| Livrable | Type | Priorité |
-|---|---|---|
-| Smoke test CHK-070 exécuté | Manuel | P0 |
-| Test queue offline | Manuel/test | P0 |
-| Test protocol auth | Manuel/test | P1 |
-| Build Windows signé/test | Build | P1 |
-| Guide installation client | Doc | P1 |
+| Livrable | Type | Priorité | Document |
+|---|---|---|---|
+| Smoke test backend + desktop | Manuel | P0 | CHK-070 |
+| Desktop-agent smoke test exécuté | Manuel | P0 | CHK-074 |
+| Test queue offline | Manuel/test | P0 | CHK-074 |
+| Test protocol auth | Manuel/test | P1 | CHK-074 |
+| Build Windows signé/test | Build | P1 | À implémenter |
+| Guide installation client | Doc | P1 | À créer |
 
 ---
 
@@ -184,14 +193,14 @@ module desktop_agent
 module cognitive_engine
 ```
 
-Livrables recommandés :
+Livrables préparés :
 
-| Livrable | Type | Priorité |
-|---|---|---|
-| Matrice plans/modules officielle | Doc | P0 |
-| Seed plans/subscriptions | Backend | P0 |
-| Tests module access par plan | Tests | P1 |
-| UI settings/modules alignée | Frontend | P1 |
+| Livrable | Type | Priorité | Document |
+|---|---|---|---|
+| Matrice plans/modules officielle | Doc | P0 | CHK-073 |
+| Seed plans/subscriptions | Backend | P0 | À implémenter |
+| Tests module access par plan | Tests | P1 | À implémenter |
+| UI settings/modules alignée | Frontend | P1 | À implémenter |
 
 ---
 
@@ -214,14 +223,14 @@ Sentry frontend/backend si activé
 logs structurés sans secrets
 ```
 
-Livrables recommandés :
+Livrables préparés :
 
-| Livrable | Type | Priorité |
-|---|---|---|
-| Dashboard santé admin minimal | Feature | P1 |
-| Runbook incident court | Doc | P1 |
-| Liste erreurs connues client | Doc | P1 |
-| Alertes critiques minimales | Ops | P2 |
+| Livrable | Type | Priorité | Document |
+|---|---|---|---|
+| Runbook incident minimal | Doc | P1 | CHK-076 |
+| Dashboard santé admin minimal | Feature | P1 | À implémenter |
+| Liste erreurs connues client | Doc | P1 | À créer |
+| Alertes critiques minimales | Ops | P2 | À créer |
 
 ---
 
@@ -243,14 +252,14 @@ fading contrôlé par utilisateur
 Kai non thérapeutique
 ```
 
-Livrables recommandés :
+Livrables préparés :
 
-| Livrable | Type | Priorité |
-|---|---|---|
-| Copy UX non-médicale | Doc/UI | P0 |
-| Review Cognitive Engine claims | Doc | P0 |
-| Consentement progressif desktop/cognition | UX | P1 |
-| Paramètres privacy visibles | UI | P1 |
+| Livrable | Type | Priorité | Document |
+|---|---|---|---|
+| Copy UX non-médicale | Doc/UI | P0 | CHK-075 |
+| Review Cognitive Engine claims | Doc | P0 | CHK-075 |
+| Consentement progressif desktop/cognition | UX | P1 | À créer |
+| Paramètres privacy visibles | UI | P1 | À implémenter |
 
 ---
 
@@ -261,11 +270,11 @@ Livrables recommandés :
 ```text
 1. Validation P2 backend + desktop-agent verte.
 2. Smoke tests CHK-070.
-3. Matrice plans/modules officielle.
-4. Parcours revenu happy path testé.
-5. Mobile iPhone/Safari pages critiques validé.
-6. Desktop-agent start/stop/sync/queue validé.
-7. Copy non-médicale validée.
+3. Matrice plans/modules officielle CHK-073 validée.
+4. Parcours revenu CHK-071 testé.
+5. Mobile iPhone/Safari CHK-072 validé.
+6. Desktop-agent CHK-074 validé.
+7. Copy non-médicale CHK-075 validée.
 ```
 
 ## P1 — Avant vente élargie
@@ -275,7 +284,7 @@ Livrables recommandés :
 2. E2E quote → invoice.
 3. Settings/modules alignés plans.
 4. Guide installation desktop-agent.
-5. Runbook incident minimal.
+5. Runbook incident minimal CHK-076 prêt.
 6. Dashboard santé admin minimal.
 ```
 
@@ -308,15 +317,17 @@ les erreurs critiques sont visibles et actionnables
 
 ---
 
-## Documents à créer pendant P3
+## Documents P3 préparés
 
 ```text
-CHK-071 — Parcours revenu complet
-CHK-072 — Mobile iPhone/Safari critical paths
-CHK-073 — Matrice plans/modules officielle
-CHK-074 — Desktop-agent smoke test exécuté
-CHK-075 — Copy UX non-médicale
-CHK-076 — Runbook incident minimal
+SYSTEME_MAD/10-ROADMAP/p3-index-stabilisation-produit.md
+SYSTEME_MAD/09-CHECKLISTS/chk-070-smoke-tests-backend-desktop.md
+SYSTEME_MAD/09-CHECKLISTS/chk-071-parcours-revenu-complet.md
+SYSTEME_MAD/09-CHECKLISTS/chk-072-mobile-iphone-safari-critical-paths.md
+SYSTEME_MAD/09-CHECKLISTS/chk-073-matrice-plans-modules.md
+SYSTEME_MAD/09-CHECKLISTS/chk-074-desktop-agent-smoke-test-execute.md
+SYSTEME_MAD/09-CHECKLISTS/chk-075-copy-ux-non-medicale.md
+SYSTEME_MAD/09-CHECKLISTS/chk-076-runbook-incident-minimal.md
 ```
 
 ---
