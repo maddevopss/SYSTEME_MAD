@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Index P3 — Stabilisation Produit
-Version: 1.6
+Version: 1.7
 Dernière révision: 2026-07-06
 Statut: Préparation — à ouvrir après fermeture P2
 Auteur: Marc-André Dufour
@@ -41,6 +41,7 @@ P3 peut être ouverte seulement lorsque :
 | `SYSTEME_MAD/10-ROADMAP/p3-stabilisation-produit.md` | Plan principal P3 | Préparation |
 | `SYSTEME_MAD/10-ROADMAP/p3-backlog-priorise.md` | Backlog P3 priorisé | Préparation |
 | `SYSTEME_MAD/10-ROADMAP/p3-criteres-fermeture.md` | Critères de fermeture P3 | Préparation |
+| `SYSTEME_MAD/10-ROADMAP/hypothese-pricing-v1.md` | Hypothèse pricing Starter/Pro/Team | Hypothèse P3 |
 | `SYSTEME_MAD/10-ROADMAP/p4-preparation-acquisition-premiers-clients.md` | Préparation P4, non ouverte | Future |
 
 ---
@@ -70,7 +71,7 @@ P3 peut être ouverte seulement lorsque :
 | CHK-088 — Stratégie E2E P3 | Prioriser E2E produit | P1 | À préparer |
 | CHK-089 — Accessibilité minimale | Garantir utilisabilité réelle | P1 | À vérifier |
 | CHK-090 — Compatibilité navigateurs/appareils | Définir support testé | P1 | À vérifier |
-| CHK-091 — Revue pricing et offres | Aligner plans, Stripe, MRR et discours | P0 | À décider |
+| CHK-091 — Revue pricing et offres | Aligner Starter/Pro/Team, Stripe, MRR et discours | P0 | À décider |
 | CHK-092 — Communication incident client | Communiquer sans panique ni secrets | P1 | À préparer |
 | CHK-093 — Rétention et suppression des données | Encadrer conservation, suppression, privacy | P0 | À décider |
 | CHK-094 — Readiness légale et commerciale | Préparer vente client payant | P0 | À préparer |
@@ -85,7 +86,7 @@ P3 peut être ouverte seulement lorsque :
 2. Exécuter CHK-095 — Ouverture officielle P3.
 3. Confirmer CHK-081 Branch protection / CI gates.
 4. Valider CHK-073 Matrice plans/modules.
-5. Valider CHK-091 Revue pricing/offres.
+5. Valider CHK-091 Revue pricing/offres avec hypothese-pricing-v1.md.
 6. Valider CHK-078 Consentement progressif/privacy.
 7. Valider CHK-093 Rétention/suppression des données.
 8. Préparer CHK-094 Readiness légale/commerciale.
@@ -122,8 +123,8 @@ P3 peut être ouverte seulement lorsque :
 | CI gates | CHK-081 | Checks requis avant merge |
 | Revenu | CHK-071 | Client → facture → paiement vérifié |
 | Mobile | CHK-072 | iPhone/Safari utilisable sur pages critiques |
-| Plans/modules | CHK-073 | Admin/internal/trial/solo/PME clarifiés |
-| Pricing | CHK-091 | Prix/offres/MRR alignés |
+| Plans/modules | CHK-073 | Admin/internal/trial/starter/pro/team clarifiés |
+| Pricing | CHK-091 + `hypothese-pricing-v1.md` | Prix/offres/MRR alignés |
 | Privacy | CHK-078/093 | Consentement + rétention clairs |
 | Légal/commercial | CHK-094 | Documents et limites identifiés |
 | Desktop | CHK-074 | Agent démarre, track, sync, queue, quitte |
