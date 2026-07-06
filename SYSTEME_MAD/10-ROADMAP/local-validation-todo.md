@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: TODO — Validation locale post-patrouille
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-05
 Statut: À exécuter localement
 Auteur: Marc-André Dufour
@@ -26,6 +26,8 @@ Validé localement / prêt pour fermeture officielle
 ```
 
 ---
+
+# A. Backend MADSuite
 
 ## 1. Se placer dans le repo backend local
 
@@ -93,7 +95,64 @@ Si un guard échoue, corriger le drift ou le faux positif avant de fermer P2.
 
 ---
 
-## 6. Vérifier la CI GitHub Actions
+# B. Desktop Agent
+
+## 6. Se placer dans le repo desktop-agent local
+
+Chemin recommandé selon les repos de développement :
+
+```powershell
+cd T:\Projets\recherche\web\desktop-agent
+```
+
+Si le repo est ailleurs localement, utiliser le chemin réel du clone `maddevopss/desktop-agent`.
+
+---
+
+## 7. Vérifier l’état Git desktop-agent
+
+```powershell
+git status
+git pull
+```
+
+---
+
+## 8. Installer / synchroniser les dépendances desktop-agent
+
+```powershell
+npm install
+```
+
+Ou, en mode CI-like :
+
+```powershell
+npm ci
+```
+
+---
+
+## 9. Exécuter le guard desktop-agent
+
+```powershell
+npm run guard:desktop-agent-contract
+```
+
+---
+
+## 10. Exécuter la validation complète desktop-agent
+
+```powershell
+npm run check:desktop
+```
+
+Résultat attendu : commande verte.
+
+---
+
+# C. Vérification CI GitHub Actions
+
+## 11. Vérifier la CI backend
 
 À vérifier dans GitHub :
 
@@ -107,31 +166,39 @@ Résultat attendu : workflow vert sur la branche principale ou la PR active.
 
 ---
 
-## 7. Noter le résultat dans SYSTEME_MAD
+## 12. Vérifier la CI desktop-agent
+
+À vérifier dans GitHub :
+
+```text
+maddevopss/desktop-agent
+Actions
+Desktop Agent Guards
+```
+
+Résultat attendu : workflow vert sur la branche principale ou la PR active.
+
+---
+
+# D. Mise à jour SYSTEME_MAD après validation
+
+## 13. Noter le résultat dans SYSTEME_MAD
 
 Après validation verte, mettre à jour :
 
 ```text
 SYSTEME_MAD/10-ROADMAP/p2-closure-sensitive-doors-patrol.md
+SYSTEME_MAD/10-ROADMAP/madsuite-sensitive-doors-map-v2.md
+SYSTEME_MAD/09-CHECKLISTS/chk-069-desktop-agent-contract-guards.md
 ```
 
-Changer le statut de :
-
-```text
-Prêt pour validation
-```
-
-vers :
-
-```text
-Validé localement / CI confirmée
-```
-
-seulement si les deux sont réellement confirmés.
+Changer le statut seulement si les validations sont réellement confirmées.
 
 ---
 
-## 8. Commande rapide complète
+## 14. Commandes rapides complètes
+
+Backend :
 
 ```powershell
 cd T:\Projets\recherche\web\maddevops
@@ -139,13 +206,22 @@ npm install
 npm run check:backend
 ```
 
+Desktop-agent :
+
+```powershell
+cd T:\Projets\recherche\web\desktop-agent
+npm install
+npm run check:desktop
+```
+
 ---
 
-## 9. Si échec
+## 15. Si échec
 
 Documenter :
 
 ```text
+repo concerné
 commande échouée
 message d’erreur exact
 fichier concerné
@@ -153,7 +229,7 @@ correction appliquée
 nouvelle validation
 ```
 
-Ne pas fermer P2 tant que `npm run check:backend` ou la CI guard-only échoue.
+Ne pas fermer P2 tant que `npm run check:backend`, `npm run check:desktop`, ou les CI guard-only échouent.
 
 ---
 
