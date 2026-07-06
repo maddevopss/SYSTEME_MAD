@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Index P3 — Stabilisation Produit
-Version: 1.4
+Version: 1.5
 Dernière révision: 2026-07-06
 Statut: Préparation — à ouvrir après fermeture P2
 Auteur: Marc-André Dufour
@@ -34,6 +34,7 @@ P3 peut être ouverte seulement lorsque :
 
 | Document | Rôle | Statut |
 |---|---|---|
+| `SYSTEME_MAD/10-ROADMAP/tableau-de-bord-p2-p3.md` | Point d’entrée pilotage P2/P3 | Actif |
 | `SYSTEME_MAD/10-ROADMAP/p3-stabilisation-produit.md` | Plan principal P3 | Préparation |
 | `SYSTEME_MAD/10-ROADMAP/p3-backlog-priorise.md` | Backlog P3 priorisé | Préparation |
 | `SYSTEME_MAD/10-ROADMAP/p3-criteres-fermeture.md` | Critères de fermeture P3 | Préparation |
@@ -67,6 +68,9 @@ P3 peut être ouverte seulement lorsque :
 | CHK-089 — Accessibilité minimale | Garantir utilisabilité réelle | P1 | À vérifier |
 | CHK-090 — Compatibilité navigateurs/appareils | Définir support testé | P1 | À vérifier |
 | CHK-091 — Revue pricing et offres | Aligner plans, Stripe, MRR et discours | P0 | À décider |
+| CHK-092 — Communication incident client | Communiquer sans panique ni secrets | P1 | À préparer |
+| CHK-093 — Rétention et suppression des données | Encadrer conservation, suppression, privacy | P0 | À décider |
+| CHK-094 — Readiness légale et commerciale | Préparer vente client payant | P0 | À préparer |
 
 ---
 
@@ -78,25 +82,28 @@ P3 peut être ouverte seulement lorsque :
 3. Valider CHK-073 Matrice plans/modules.
 4. Valider CHK-091 Revue pricing/offres.
 5. Valider CHK-078 Consentement progressif/privacy.
-6. Exécuter CHK-071 Parcours revenu complet.
-7. Exécuter CHK-072 Mobile iPhone/Safari.
-8. Exécuter CHK-074 Desktop-agent smoke test.
-9. Auditer CHK-075 Copy UX non-médicale.
-10. Valider CHK-080 Readiness premiers clients.
-11. Préparer CHK-077 Guide installation desktop-agent client.
-12. Préparer CHK-076 Runbook incident minimal avant client actif.
-13. Préparer CHK-079 Erreurs connues support.
-14. Préparer CHK-082 Observabilité minimale.
-15. Prioriser CHK-083 Tests dynamiques multi-tenant.
-16. Préparer CHK-084 Release P3.
-17. Préparer CHK-085 Onboarding premier client.
-18. Préparer CHK-086 Registre des environnements.
-19. Préparer CHK-087 Sauvegarde/restauration.
-20. Préparer CHK-088 Stratégie E2E P3.
-21. Vérifier CHK-089 Accessibilité minimale.
-22. Vérifier CHK-090 Compatibilité navigateurs/appareils.
-23. Exécuter CHK-070 comme synthèse smoke tests.
-24. Valider `p3-criteres-fermeture.md` avant fermeture P3.
+6. Valider CHK-093 Rétention/suppression des données.
+7. Préparer CHK-094 Readiness légale/commerciale.
+8. Exécuter CHK-071 Parcours revenu complet.
+9. Exécuter CHK-072 Mobile iPhone/Safari.
+10. Exécuter CHK-074 Desktop-agent smoke test.
+11. Auditer CHK-075 Copy UX non-médicale.
+12. Valider CHK-080 Readiness premiers clients.
+13. Préparer CHK-077 Guide installation desktop-agent client.
+14. Préparer CHK-076 Runbook incident minimal avant client actif.
+15. Préparer CHK-079 Erreurs connues support.
+16. Préparer CHK-092 Communication incident client.
+17. Préparer CHK-082 Observabilité minimale.
+18. Prioriser CHK-083 Tests dynamiques multi-tenant.
+19. Préparer CHK-084 Release P3.
+20. Préparer CHK-085 Onboarding premier client.
+21. Préparer CHK-086 Registre des environnements.
+22. Préparer CHK-087 Sauvegarde/restauration.
+23. Préparer CHK-088 Stratégie E2E P3.
+24. Vérifier CHK-089 Accessibilité minimale.
+25. Vérifier CHK-090 Compatibilité navigateurs/appareils.
+26. Exécuter CHK-070 comme synthèse smoke tests.
+27. Valider `p3-criteres-fermeture.md` avant fermeture P3.
 ```
 
 ---
@@ -111,8 +118,9 @@ P3 peut être ouverte seulement lorsque :
 | Mobile | CHK-072 | iPhone/Safari utilisable sur pages critiques |
 | Plans/modules | CHK-073 | Admin/internal/trial/solo/PME clarifiés |
 | Pricing | CHK-091 | Prix/offres/MRR alignés |
+| Privacy | CHK-078/093 | Consentement + rétention clairs |
+| Légal/commercial | CHK-094 | Documents et limites identifiés |
 | Desktop | CHK-074 | Agent démarre, track, sync, queue, quitte |
-| Consentement | CHK-078 | Modules sensibles expliqués/contrôlés |
 | Readiness | CHK-080 | Go/no-go client clair |
 | Onboarding | CHK-085 | Premier client activable proprement |
 | Copy | CHK-075 | Aucun claim médical ou mental abusif |
@@ -124,6 +132,7 @@ P3 peut être ouverte seulement lorsque :
 | Bloc | Document | Résultat attendu |
 |---|---|---|
 | Support | CHK-076 | Runbook incident prêt |
+| Communication incident | CHK-092 | Messages client prêts |
 | Installation desktop | CHK-077 | Client peut installer/comprendre/désinstaller |
 | Support client | CHK-079 | Réponses erreurs fréquentes prêtes |
 | Observabilité | CHK-082 | Incidents P0/P1 visibles |
@@ -147,6 +156,7 @@ Pas de surface sensible sans guard ou checklist.
 Pas de consentement global vague pour une surface sensible.
 Pas de prix/offre qui ne correspond pas à la matrice modules.
 Pas de client réel sans readiness go/no-go.
+Pas de client payant sans readiness légale/commerciale minimale.
 Pas de release sans rollback minimal documenté.
 Pas de fermeture P3 sans smoke tests exécutés.
 ```
