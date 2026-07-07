@@ -173,9 +173,9 @@ Ordre de résolution :
 | Dépôt | Statut guards | Validation requise |
 |---|---|---|
 | Backend | Appliqué, durci pour calendar/RLS/modules contract | CI + `npm run check:backend` |
-| Frontend | Appliqué, durci pour modules API + known keys | CI + `npm run check:frontend` + known-keys guard |
-| E2E | Appliqué partiel | `npm run check:e2e`; CI hygiene à brancher si filtre/permissions le permettent |
-| Desktop agent | Appliqué | CI + `npm run check:desktop` + `npm run build:ci` |
+| Frontend | Appliqué, durci pour modules API + known keys; CI à améliorer (guards et build manquants) | CI + `npm run check:frontend` |
+| E2E | Appliqué; CI E2E standard à créer | `npm run check:e2e`; CI E2E standard à ajouter |
+| Desktop agent | Appliqué; build:ci sur Windows à ajouter en CI | CI + `npm run check:desktop` + `npm run build:ci` |
 
 ---
 
