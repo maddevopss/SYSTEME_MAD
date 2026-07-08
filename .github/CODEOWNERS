@@ -1,0 +1,18 @@
+# CODEOWNERS — SYSTEME_MAD
+#
+# Ce fichier prépare l’exigence de review propriétaire dans la branch protection.
+# Le repo SYSTEME_MAD est la source de vérité documentaire MAD DevOps / MADSuite.
+
+* @bleeband
+
+# Gouvernance système
+/00-SYSTEME-MAD/ @bleeband
+/01-FONDATIONS/ @bleeband
+/03-STANDARDS/ @bleeband
+/04-ADR/ @bleeband
+/09-CHECKLISTS/ @bleeband
+/10-ROADMAP/ @bleeband
+/13-RESSOURCES/research/ @bleeband
+
+# CI / GitHub governance
+/.github/ @bleeband
