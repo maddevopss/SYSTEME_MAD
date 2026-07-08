@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: PLAY-010 — Passe qualité documentaire
-Version: 1.0
-Dernière révision: 2026-06-30
+Version: 1.1
+Dernière révision: 2026-07-07
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -34,15 +34,15 @@ Utiliser ce playbook lorsqu’il faut :
 ## Documents à lire avant de commencer
 
 1. `README.md`
-2. `SYSTEME_MAD/MANIFEST.md`
-3. `SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md`
-4. `SYSTEME_MAD/00-SYSTEME-MAD/decisions.md`
-5. `SYSTEME_MAD/03-STANDARDS/std-006.md`
-6. `SYSTEME_MAD/09-CHECKLISTS/chk-002-validation-documentaire.md`
+2. `MANIFEST.md`
+3. `00-SYSTEME-MAD/ai-context.md`
+4. `00-SYSTEME-MAD/decisions.md`
+5. `03-STANDARDS/std-006.md`
+6. `09-CHECKLISTS/chk-002-validation-documentaire.md`
 
 Si la passe touche une décision structurante, lire aussi :
 
-- `SYSTEME_MAD/04-ADR/`
+- `04-ADR/`
 
 ---
 
@@ -67,9 +67,9 @@ Déterminer le dossier ou les fichiers à analyser.
 
 Exemples :
 
-- `SYSTEME_MAD/03-STANDARDS/`
-- `SYSTEME_MAD/09-CHECKLISTS/`
-- `SYSTEME_MAD/02-GUIDE/`
+- `03-STANDARDS/`
+- `09-CHECKLISTS/`
+- `02-GUIDE/`
 - un seul document précis.
 
 Ne pas élargir le périmètre sans raison.
