@@ -1,8 +1,8 @@
 ---
 Projet: MADSuite
 Document: CHK-047 — Readiness maître MADPROOF
-Version: 1.1
-Dernière révision: 2026-07-05
+Version: 1.2
+Dernière révision: 2026-07-08
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -43,7 +43,7 @@ SYSTEME_MAD/09-CHECKLISTS/chk-048-evidence-log-madproof.md
 | Repos clarifiés | `repos.md` + ADR-004 | Validé documentaire |
 | Board P2 | `madsuite-p2-hardening-board.md` | Validé documentaire |
 | Tableau exécution | `madsuite-execution-board.md` | Validé documentaire |
-| Evidence log | CHK-048 | Créé, preuves à remplir |
+| Evidence log | CHK-048 | Créé, P0 branch protection tracé |
 
 ---
 
@@ -63,7 +63,7 @@ SYSTEME_MAD/09-CHECKLISTS/chk-048-evidence-log-madproof.md
 
 | Élément | Preuve | Statut |
 |---|---|---|
-| Branch protection | CHK-042 + CHK-048 | Documenté, à appliquer |
+| Branch protection | CHK-042 + CHK-048 + issue #32 | P0 ouvert, application GitHub UI/API requise |
 | PR templates | CHK-043 | Appliqué |
 | CODEOWNERS | CHK-043 | Appliqué partiel |
 | Issue templates | CHK-044 | Appliqué |
@@ -97,17 +97,36 @@ Le statut global ne peut pas devenir “validé” tant que les points suivants 
 
 ---
 
+## P0 actif — Branch protection
+
+Issue centrale : `bleeband/SYSTEME_MAD#32`.
+
+Repos P0 minimum :
+
+- `bleeband/SYSTEME_MAD`;
+- `maddevopss/madsuite-backend`;
+- `maddevopss/madsuite-frontend`.
+
+Repos P1 ensuite :
+
+- `maddevopss/e2e`;
+- `maddevopss/desktop-agent`.
+
+La phase ne doit pas être déclarée validée tant que la protection n’est pas appliquée et prouvée pour les trois repos P0.
+
+---
+
 ## Score readiness actuel
 
 | Domaine | État |
 |---|---|
-| Gouvernance | Fort |
+| Gouvernance | Fort, P0 branch protection ouvert |
 | Guards | Fort, validation réelle requise |
-| Workflow GitHub | Moyen à fort, configuration UI requise |
+| Workflow GitHub | Moyen, branch protection P0 à appliquer |
 | Release | Moyen, première release réelle à valider |
 | MADPROOF produit | Fort documentaire, validation continue requise |
 
-Statut global actuel : **appliqué/documenté, validation réelle requise**.
+Statut global actuel : **appliqué/documenté, P0 branch protection ouvert, validation réelle requise**.
 
 ---
 
