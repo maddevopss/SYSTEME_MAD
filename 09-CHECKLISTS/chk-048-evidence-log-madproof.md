@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-048 — Evidence log MADPROOF
-Version: 1.2
+Version: 1.3
 Dernière révision: 2026-07-08
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -46,8 +46,10 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 
 | Date | Repo | Workflow | Résultat | Lien run | Action |
 |---|---|---|---|---|---|
-| | `madsuite-backend` | CI | À observer | | |
-| | `madsuite-frontend` | CI | À observer | | |
+| 2026-07-08 | `madsuite-backend` | `Backend Guards` | Vert observé | `maddevopss/madsuite-backend#34` | Check utilisable pour branch protection P0 |
+| 2026-07-08 | `madsuite-backend` | `Backend CI / Guard, lint, syntax, tests and security checks` | Vert observé | `maddevopss/madsuite-backend#34`; merge `540b5ddf45edec6319bc99fbc1e4abefba4e3439` | Issue CI backend `bleeband/SYSTEME_MAD#46` fermée |
+| 2026-07-08 | `SYSTEME_MAD` | `Docs quality smoke` | Rouge observé sur PR invalide | `bleeband/SYSTEME_MAD#50` | Confirme que le workflow détecte YAML invalide; blocage branch protection à vérifier après application |
+| | `madsuite-frontend` | `Frontend CI / Guard, lint, test and build` | À observer / check réel identifié | `maddevopss/madsuite-frontend#14` | À exiger dans branch protection P0 |
 | | `e2e` | CI | À observer | | |
 | | `desktop-agent` | CI | À observer | | |
 
@@ -57,9 +59,9 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 
 | Date | Repo | Branche | Règle appliquée | Test de blocage rouge | Note |
 |---|---|---|---|---|---|
-| 2026-07-08 | `SYSTEME_MAD` | `main` | P0 ouvert — à appliquer | À faire | Issue centrale `bleeband/SYSTEME_MAD#32`; branche de preuve `p0-branch-protection-evidence-2026-07-08` |
-| 2026-07-08 | `madsuite-backend` | `main` | P0 ouvert — à appliquer | À faire | Issue repo `maddevopss/madsuite-backend#30`; reliée à `bleeband/SYSTEME_MAD#32` |
-| 2026-07-08 | `madsuite-frontend` | `main` | P0 ouvert — à appliquer | À faire | Issue repo `maddevopss/madsuite-frontend#14`; reliée à `bleeband/SYSTEME_MAD#32` |
+| 2026-07-08 | `SYSTEME_MAD` | `main` | P0 prêt — script d’application ajouté | À faire | Issue centrale `bleeband/SYSTEME_MAD#32`; check requis `Docs quality smoke`; script `08-BOOTSTRAPS/apply-branch-protection-p0.sh` |
+| 2026-07-08 | `madsuite-backend` | `main` | P0 prêt — CI revenue verte | À faire | Issue repo `maddevopss/madsuite-backend#30`; checks requis `Backend Guards` + `Backend CI / Guard, lint, syntax, tests and security checks` |
+| 2026-07-08 | `madsuite-frontend` | `main` | P0 prêt — check identifié | À faire | Issue repo `maddevopss/madsuite-frontend#14`; check requis `Frontend CI / Guard, lint, test and build` |
 | | `e2e` | `main` | P1 ensuite | À faire | Hors fermeture P0 immédiate |
 | | `desktop-agent` | `main` | P1 ensuite | À faire | Hors fermeture P0 immédiate |
 
@@ -77,7 +79,7 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 
 | Date | Domaine | Exception | Raison | Durée | Suivi |
 |---|---|---|---|---|---|
-| 2026-07-08 | Branch protection GitHub | Application UI/API non effectuée par l’assistant | Les outils disponibles permettent la création d’issues, fichiers et PR, mais pas la modification directe des règles Branch protection | Temporaire — jusqu’à application manuelle ou automatisation autorisée | `bleeband/SYSTEME_MAD#32` |
+| 2026-07-08 | Branch protection GitHub | Application UI/API non effectuée par l’assistant | Les outils disponibles permettent la création d’issues, fichiers et PR, mais pas la modification directe des règles Branch protection | Temporaire — jusqu’à application manuelle ou automatisation autorisée | `bleeband/SYSTEME_MAD#32`; script préparé `08-BOOTSTRAPS/apply-branch-protection-p0.sh` |
 
 ---
 
@@ -105,4 +107,4 @@ Après chaque preuve ajoutée ici :
 
 ## Statut actuel
 
-Statut : **P0 branch protection tracé, application GitHub UI/API à faire, preuves terrain à remplir**.
+Statut : **P0 branch protection prêt à appliquer, CI backend verte, script d’application ajouté, preuves terrain branch protection à remplir**.
