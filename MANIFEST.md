@@ -1,8 +1,8 @@
 ---
 Projet: Système MAD
 Document: Manifeste documentaire officiel
-Version: 1.2
-Dernière révision: 2026-07-02
+Version: 1.3
+Dernière révision: 2026-07-07
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -21,15 +21,29 @@ Il sert également de point d’entrée prioritaire pour les agents IA.
 
 ## Source officielle
 
-La source documentaire officielle est :
+La source documentaire officielle est la structure située à la racine de ce dépôt :
 
 ```text
-SYSTEME_MAD/
+00-SYSTEME-MAD/
+01-FONDATIONS/
+02-GUIDE/
+03-STANDARDS/
+04-ADR/
+05-PLAY/
+06-KNOWLEDGE-BASE/
+07-TEMPLATES/
+08-BOOTSTRAPS/
+09-CHECKLISTS/
+10-ROADMAP/
+11-ACADEMY/
+12-INNOVATION/
+13-RESSOURCES/
+99-ARCHIVES/
 ```
 
-Lorsqu’un document existe à plusieurs endroits, la version située dans `SYSTEME_MAD/` prévaut, sauf indication contraire explicite dans ce manifeste ou dans une ADR.
+Lorsqu’un document existe à plusieurs endroits, la version située dans la structure officielle prévaut, sauf indication contraire explicite dans ce manifeste ou dans une ADR.
 
-Les dossiers hors de `SYSTEME_MAD/` sont considérés comme périphériques, transitoires ou techniques.
+Les fichiers situés hors de cette structure sont considérés comme périphériques, transitoires ou techniques.
 
 ---
 
@@ -38,70 +52,69 @@ Les dossiers hors de `SYSTEME_MAD/` sont considérés comme périphériques, tra
 ### Lecture minimale pour comprendre MAD DevOps
 
 1. `README.md`
-2. `SYSTEME_MAD/MANIFEST.md`
-3. `SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md`
-4. `SYSTEME_MAD/00-SYSTEME-MAD/decisions.md`
-5. `SYSTEME_MAD/01-FONDATIONS/non-negociable.md`
+2. `MANIFEST.md`
+3. `00-SYSTEME-MAD/ai-context.md`
+4. `00-SYSTEME-MAD/decisions.md`
+5. `01-FONDATIONS/non-negociable.md`
 
 ### Lecture pour produire ou modifier un document
 
-1. `SYSTEME_MAD/MANIFEST.md`
-2. `SYSTEME_MAD/00-SYSTEME-MAD/yaml-standard.md`
-3. `SYSTEME_MAD/03-STANDARDS/std-006.md`
-4. `SYSTEME_MAD/09-CHECKLISTS/chk-002-validation-documentaire.md`
+1. `MANIFEST.md`
+2. `00-SYSTEME-MAD/yaml-standard.md`
+3. `03-STANDARDS/std-006.md`
+4. `09-CHECKLISTS/chk-002-validation-documentaire.md`
 5. Le dossier concerné par la modification
-6. Les standards applicables dans `SYSTEME_MAD/03-STANDARDS/`
-7. Les ADR applicables dans `SYSTEME_MAD/04-ADR/`
+6. Les standards applicables dans `03-STANDARDS/`
+7. Les ADR applicables dans `04-ADR/`
 
 ### Lecture pour une passe qualité documentaire
 
 1. `README.md`
-2. `SYSTEME_MAD/MANIFEST.md`
-3. `SYSTEME_MAD/03-STANDARDS/std-006.md`
-4. `SYSTEME_MAD/09-CHECKLISTS/chk-002-validation-documentaire.md`
-5. `SYSTEME_MAD/05-PLAY/play-010-passe-qualite-documentaire.md`
+2. `MANIFEST.md`
+3. `03-STANDARDS/std-006.md`
+4. `09-CHECKLISTS/chk-002-validation-documentaire.md`
+5. `05-PLAY/play-010-passe-qualite-documentaire.md`
 
 ### Lecture pour travailler sur MADSuite
 
-1. `SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md`
-2. `SYSTEME_MAD/00-SYSTEME-MAD/ai-context-madsuite-madproof.md`
-3. `SYSTEME_MAD/02-GUIDE/05-madsuite.md`
-4. `SYSTEME_MAD/03-STANDARDS/std-104.md`
-5. `SYSTEME_MAD/03-STANDARDS/std-105.md`
-6. `SYSTEME_MAD/03-STANDARDS/std-505.md`
-7. `SYSTEME_MAD/03-STANDARDS/std-506.md`
+1. `00-SYSTEME-MAD/ai-context.md`
+2. `00-SYSTEME-MAD/ai-context-madsuite-madproof.md`
+3. `02-GUIDE/05-madsuite.md`
+4. `03-STANDARDS/std-104.md`
+5. `03-STANDARDS/std-105.md`
+6. `03-STANDARDS/std-505.md`
+7. `03-STANDARDS/std-506.md`
 8. Les documents produit et recherche MADSuite applicables
 
 ### Lecture pour un claim MADSuite / MADPROOF
 
-1. `SYSTEME_MAD/04-ADR/ADR-002-positionnement-non-medical-madsuite.md`
-2. `SYSTEME_MAD/04-ADR/ADR-003-gouvernance-madproof-claims-madsuite.md`
-3. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-4. `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
-5. `SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md`
-6. `SYSTEME_MAD/05-PLAY/play-037-ajouter-ou-corriger-claim-madproof.md`
+1. `04-ADR/ADR-002-positionnement-non-medical-madsuite.md`
+2. `04-ADR/ADR-003-gouvernance-madproof-claims-madsuite.md`
+3. `13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
+4. `13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
+5. `09-CHECKLISTS/chk-032-validation-claim-madproof.md`
+6. `05-PLAY/play-037-ajouter-ou-corriger-claim-madproof.md`
 
 ---
 
 ## Structure officielle
 
 ```text
-SYSTEME_MAD/
-  00-SYSTEME-MAD/       Gouvernance, contexte IA, décisions et standards documentaires
-  01-FONDATIONS/        Principes fondateurs et non négociables
-  02-GUIDE/             Guide stratégique et opérationnel MAD DevOps
-  03-STANDARDS/         Standards techniques, qualité, sécurité et architecture
-  04-ADR/               Architecture Decision Records
-  05-PLAY/              Playbooks opérationnels
-  06-KNOWLEDGE-BASE/    Base de connaissances technique
-  07-TEMPLATES/         Modèles réutilisables
-  08-BOOTSTRAPS/        Scripts et documents d’initialisation
-  09-CHECKLISTS/        Checklists de validation
-  10-ROADMAP/           Backlog, progression et feuille de route
-  11-ACADEMY/           Notes d’apprentissage et formation interne
-  12-INNOVATION/        Idées, explorations et pistes R&D
-  13-RESSOURCES/        Ressources de marque, légales, recherche et actifs
-  99-ARCHIVES/          Documents historiques ou remplacés
+00-SYSTEME-MAD/       Gouvernance, contexte IA, décisions et standards documentaires
+01-FONDATIONS/        Principes fondateurs et non négociables
+02-GUIDE/             Guide stratégique et opérationnel MAD DevOps
+03-STANDARDS/         Standards techniques, qualité, sécurité et architecture
+04-ADR/               Architecture Decision Records
+05-PLAY/              Playbooks opérationnels
+06-KNOWLEDGE-BASE/    Base de connaissances technique
+07-TEMPLATES/         Modèles réutilisables
+08-BOOTSTRAPS/        Scripts et documents d’initialisation
+09-CHECKLISTS/        Checklists de validation
+10-ROADMAP/           Backlog, progression et feuille de route
+11-ACADEMY/           Notes d’apprentissage et formation interne
+12-INNOVATION/        Idées, explorations et pistes R&D
+13-RESSOURCES/        Ressources de marque, légales, recherche et actifs
+99-ARCHIVES/          Documents historiques ou remplacés
 ```
 
 ---
@@ -221,12 +234,12 @@ Un document archivé ne doit pas être utilisé comme source officielle sans men
 Avant de produire, corriger ou réorganiser un document, un agent IA doit :
 
 1. Lire ce manifeste.
-2. Lire `SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md`.
-3. Lire `SYSTEME_MAD/00-SYSTEME-MAD/decisions.md` lorsque la tâche touche le positionnement, la communication ou les décisions du studio.
+2. Lire `00-SYSTEME-MAD/ai-context.md`.
+3. Lire `00-SYSTEME-MAD/decisions.md` lorsque la tâche touche le positionnement, la communication ou les décisions du studio.
 4. Lire les standards applicables, notamment `STD-006` pour les documents.
 5. Lire `CHK-002` lorsqu’il faut valider la qualité d’un document.
 6. Utiliser `PLAY-010` lorsqu’il faut effectuer une passe qualité documentaire.
-7. Lire `SYSTEME_MAD/00-SYSTEME-MAD/ai-context-madsuite-madproof.md` lorsque la tâche concerne MADSuite ou MADPROOF.
+7. Lire `00-SYSTEME-MAD/ai-context-madsuite-madproof.md` lorsque la tâche concerne MADSuite ou MADPROOF.
 8. Ne pas utiliser `99-ARCHIVES/` comme source principale.
 9. Respecter les statuts documentaires.
 10. Signaler les doublons au lieu de les amplifier.
@@ -256,30 +269,5 @@ Les formulations doivent rester prudentes :
 Les documents suivants sont prioritaires pour la cohérence du système :
 
 - `README.md`
-- `SYSTEME_MAD/MANIFEST.md`
-- `SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md`
-- `SYSTEME_MAD/00-SYSTEME-MAD/ai-context-madsuite-madproof.md`
-- `SYSTEME_MAD/00-SYSTEME-MAD/decisions.md`
-- `SYSTEME_MAD/00-SYSTEME-MAD/yaml-standard.md`
-- `SYSTEME_MAD/01-FONDATIONS/non-negociable.md`
-- `SYSTEME_MAD/03-STANDARDS/std-006.md`
-- `SYSTEME_MAD/03-STANDARDS/std-505.md`
-- `SYSTEME_MAD/03-STANDARDS/std-506.md`
-- `SYSTEME_MAD/04-ADR/ADR-002-positionnement-non-medical-madsuite.md`
-- `SYSTEME_MAD/04-ADR/ADR-003-gouvernance-madproof-claims-madsuite.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-002-validation-documentaire.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md`
-- `SYSTEME_MAD/05-PLAY/play-010-passe-qualite-documentaire.md`
-- `SYSTEME_MAD/05-PLAY/play-037-ajouter-ou-corriger-claim-madproof.md`
-- `SYSTEME_MAD/03-STANDARDS/`
-- `SYSTEME_MAD/04-ADR/`
-
----
-
-## Principe final
-
-Le Système MAD doit rester vivant, mais jamais chaotique.
-
-Chaque document doit avoir une raison d’exister, une place claire et un statut explicite.
-
-La documentation ne doit pas devenir une charge mentale supplémentaire. Elle doit réduire la charge mentale du studio.
+- `MANIFEST.md`
+- `00-SYSTEME-MAD/ai-context.md`
