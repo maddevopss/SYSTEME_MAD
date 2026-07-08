@@ -1,8 +1,8 @@
 ---
 Projet: Système MAD
 Document: Cartographie officielle des dépôts MAD
-Version: 1.1
-Dernière révision: 2026-07-04
+Version: 1.2
+Dernière révision: 2026-07-07
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -29,7 +29,7 @@ Il sert de référence pour :
 
 Les autres dépôts sont des dépôts d’exécution, d’implémentation, de vitrine ou de validation.
 
-Lorsqu’un doute existe entre un document produit local et une règle officielle du Système MAD, la règle située dans `SYSTEME_MAD/` prévaut, sauf ADR contraire.
+Lorsqu’un doute existe entre un document produit local et une règle officielle du Système MAD, la règle située dans la structure officielle du dépôt `bleeband/SYSTEME_MAD` prévaut, sauf ADR contraire.
 
 ---
 
@@ -55,16 +55,16 @@ Ce dépôt conserve :
 
 ### Règle d’usage
 
-Avant de modifier un dépôt de développement, vérifier les règles applicables dans `SYSTEME_MAD/`, notamment :
+Avant de modifier un dépôt de développement, vérifier les règles applicables dans le dépôt `bleeband/SYSTEME_MAD`, notamment :
 
 ```text
-SYSTEME_MAD/MANIFEST.md
-SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md
-SYSTEME_MAD/00-SYSTEME-MAD/ai-context-madsuite-madproof.md
-SYSTEME_MAD/00-SYSTEME-MAD/decisions.md
-SYSTEME_MAD/03-STANDARDS/
-SYSTEME_MAD/04-ADR/
-SYSTEME_MAD/09-CHECKLISTS/
+MANIFEST.md
+00-SYSTEME-MAD/ai-context.md
+00-SYSTEME-MAD/ai-context-madsuite-madproof.md
+00-SYSTEME-MAD/decisions.md
+03-STANDARDS/
+04-ADR/
+09-CHECKLISTS/
 ```
 
 ---
@@ -105,7 +105,7 @@ Avant de modifier un dépôt de développement, un agent IA doit :
 
 1. identifier le dépôt cible;
 2. vérifier si la demande touche MADSuite, MADPROOF, l’IA, la cognition, la sécurité ou la gouvernance;
-3. lire les documents officiels applicables dans `SYSTEME_MAD/`;
+3. lire les documents officiels applicables dans `bleeband/SYSTEME_MAD`;
 4. éviter de créer une nouvelle règle locale si une règle centrale existe déjà;
 5. ne jamais traiter un repo de développement comme source de vérité documentaire principale;
 6. signaler les écarts entre le code et la documentation officielle;
@@ -117,7 +117,7 @@ Avant de modifier un dépôt de développement, un agent IA doit :
 
 | Décision | Statut | Impact |
 |---|---|---|
-| `SYSTEME_MAD/` est la source documentaire officielle | Accepté | Toute règle centrale doit y être conservée |
+| `bleeband/SYSTEME_MAD` est la source documentaire officielle | Accepté | Toute règle centrale doit y être conservée |
 | MADSuite est non médical | Accepté | Les repos frontend/backend doivent respecter les garde-fous MADPROOF |
 | Les claims MADSuite passent par MADPROOF | Accepté | Aucun texte produit ne doit promettre un effet clinique ou mesurer un état mental réel |
 | Les repos `e2e` et `desktop-agent` sont des dépôts d’exécution séparés | Accepté | Voir `ADR-004-separation-repos-execution-madsuite.md` |
