@@ -1,0 +1,3 @@
+DO NOT MERGE
+
+This branch intentionally breaks Docs quality smoke for P0 branch protection validation.
