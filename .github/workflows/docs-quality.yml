@@ -1,0 +1,89 @@
+name: Docs quality smoke
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  docs-quality-smoke:
+    name: Docs quality smoke
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate critical documentation
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import sys
+
+          required_files = [
+              Path("README.md"),
+              Path("MANIFEST.md"),
+              Path("00-SYSTEME-MAD/ai-context.md"),
+              Path("00-SYSTEME-MAD/decisions.md"),
+              Path("09-CHECKLISTS/chk-047-madproof-readiness-master.md"),
+              Path("09-CHECKLISTS/chk-048-evidence-log-madproof.md"),
+          ]
+
+          yaml_required = [
+              Path("MANIFEST.md"),
+              Path("00-SYSTEME-MAD/ai-context.md"),
+              Path("00-SYSTEME-MAD/decisions.md"),
+              Path("09-CHECKLISTS/chk-047-madproof-readiness-master.md"),
+              Path("09-CHECKLISTS/chk-048-evidence-log-madproof.md"),
+          ]
+
+          required_yaml_fields = [
+              "Projet:",
+              "Document:",
+              "Version:",
+              "Dernière révision:",
+              "Statut:",
+              "Auteur:",
+          ]
+
+          errors = []
+
+          for path in required_files:
+              if not path.exists():
+                  errors.append(f"Missing required file: {path}")
+
+          for path in yaml_required:
+              if not path.exists():
+                  continue
+
+              content = path.read_text(encoding="utf-8")
+              if not content.startswith("---\n"):
+                  errors.append(f"Missing YAML front matter start: {path}")
+                  continue
+
+              parts = content.split("---", 2)
+              if len(parts) < 3:
+                  errors.append(f"Invalid YAML front matter block: {path}")
+                  continue
+
+              yaml_block = parts[1]
+              for field in required_yaml_fields:
+                  if field not in yaml_block:
+                      errors.append(f"Missing YAML field {field} in {path}")
+
+          if errors:
+              print("Docs quality smoke failed:")
+              for error in errors:
+                  print(f"- {error}")
+              sys.exit(1)
+
+          print("Docs quality smoke passed.")
+          PY
