@@ -36,13 +36,27 @@ Il doit permettre à une personne, à un collaborateur ou à un agent IA de comp
 
 ## Source officielle
 
-La source documentaire active est :
+La source documentaire active est la structure officielle située à la racine de ce dépôt :
 
 ```text
-SYSTEME_MAD/
+00-SYSTEME-MAD/
+01-FONDATIONS/
+02-GUIDE/
+03-STANDARDS/
+04-ADR/
+05-PLAY/
+06-KNOWLEDGE-BASE/
+07-TEMPLATES/
+08-BOOTSTRAPS/
+09-CHECKLISTS/
+10-ROADMAP/
+11-ACADEMY/
+12-INNOVATION/
+13-RESSOURCES/
+99-ARCHIVES/
 ```
 
-Les fichiers situés hors de ce dossier doivent être considérés comme :
+Les fichiers situés hors de cette structure doivent être considérés comme :
 
 - fichiers techniques de dépôt;
 - documents importés;
@@ -50,7 +64,7 @@ Les fichiers situés hors de ce dossier doivent être considérés comme :
 - archives temporaires;
 - fichiers à classer.
 
-Lorsqu’un doute existe entre deux documents, le fichier situé dans `SYSTEME_MAD/` prévaut, sauf indication contraire dans le manifeste.
+Lorsqu’un doute existe entre deux documents, le fichier situé dans la structure officielle prévaut, sauf indication contraire dans le manifeste.
 
 ---
 
@@ -58,34 +72,33 @@ Lorsqu’un doute existe entre deux documents, le fichier situé dans `SYSTEME_M
 
 Lecture minimale recommandée :
 
-1. `SYSTEME_MAD/MANIFEST.md`
-2. `SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md`
-3. `SYSTEME_MAD/00-SYSTEME-MAD/decisions.md`
-4. `SYSTEME_MAD/01-FONDATIONS/non-negociable.md`
-5. `SYSTEME_MAD/03-STANDARDS/`
-6. `SYSTEME_MAD/04-ADR/`
+1. `MANIFEST.md`
+2. `00-SYSTEME-MAD/ai-context.md`
+3. `00-SYSTEME-MAD/decisions.md`
+4. `01-FONDATIONS/non-negociable.md`
+5. `03-STANDARDS/`
+6. `04-ADR/`
 
 ---
 
 ## Structure principale
 
 ```text
-SYSTEME_MAD/
-  00-SYSTEME-MAD/       Gouvernance, contexte IA, décisions et standards documentaires
-  01-FONDATIONS/        Principes fondateurs et non négociables
-  02-GUIDE/             Guide stratégique et opérationnel MAD DevOps
-  03-STANDARDS/         Standards techniques, qualité, sécurité et architecture
-  04-ADR/               Architecture Decision Records
-  05-PLAY/              Playbooks opérationnels
-  06-KNOWLEDGE-BASE/    Base de connaissances technique
-  07-TEMPLATES/         Modèles réutilisables
-  08-BOOTSTRAPS/        Scripts et documents d’initialisation
-  09-CHECKLISTS/        Checklists de validation
-  10-ROADMAP/           Backlog, progression et feuille de route
-  11-ACADEMY/           Notes d’apprentissage et formation interne
-  12-INNOVATION/        Idées, explorations et pistes R&D
-  13-RESSOURCES/        Ressources de marque, légales, recherche et actifs
-  99-ARCHIVES/          Documents historiques ou remplacés
+00-SYSTEME-MAD/       Gouvernance, contexte IA, décisions et standards documentaires
+01-FONDATIONS/        Principes fondateurs et non négociables
+02-GUIDE/             Guide stratégique et opérationnel MAD DevOps
+03-STANDARDS/         Standards techniques, qualité, sécurité et architecture
+04-ADR/               Architecture Decision Records
+05-PLAY/              Playbooks opérationnels
+06-KNOWLEDGE-BASE/    Base de connaissances technique
+07-TEMPLATES/         Modèles réutilisables
+08-BOOTSTRAPS/        Scripts et documents d’initialisation
+09-CHECKLISTS/        Checklists de validation
+10-ROADMAP/           Backlog, progression et feuille de route
+11-ACADEMY/           Notes d’apprentissage et formation interne
+12-INNOVATION/        Idées, explorations et pistes R&D
+13-RESSOURCES/        Ressources de marque, légales, recherche et actifs
+99-ARCHIVES/          Documents historiques ou remplacés
 ```
 
 ---
@@ -94,11 +107,11 @@ SYSTEME_MAD/
 
 Avant de modifier ou générer un document pour MAD DevOps ou MADSuite, un agent IA doit lire en priorité :
 
-- `SYSTEME_MAD/MANIFEST.md`;
-- `SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md`;
-- `SYSTEME_MAD/00-SYSTEME-MAD/decisions.md`;
-- les standards applicables dans `SYSTEME_MAD/03-STANDARDS/`;
-- les ADR applicables dans `SYSTEME_MAD/04-ADR/`.
+- `MANIFEST.md`;
+- `00-SYSTEME-MAD/ai-context.md`;
+- `00-SYSTEME-MAD/decisions.md`;
+- les standards applicables dans `03-STANDARDS/`;
+- les ADR applicables dans `04-ADR/`.
 
 Un agent IA ne doit pas traiter un document archivé comme une source officielle, sauf si la demande le précise explicitement.
 
