@@ -4,7 +4,6 @@ Document: CHK-048 — Evidence log MADPROOF
 Version: 1.2
 Dernière révision: 2026-07-08
 Statut: Officiel
-Auteur: Marc-André Dufour
 ---
 
 # CHK-048 — Evidence log MADPROOF
