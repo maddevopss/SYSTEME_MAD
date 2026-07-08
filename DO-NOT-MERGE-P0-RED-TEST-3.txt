@@ -1,0 +1,3 @@
+DO NOT MERGE
+
+Intentional red PR for Docs quality smoke validation.
