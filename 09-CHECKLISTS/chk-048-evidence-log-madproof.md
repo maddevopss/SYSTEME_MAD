@@ -1,8 +1,8 @@
 ---
 Projet: MADSuite
 Document: CHK-048 — Evidence log MADPROOF
-Version: 1.1
-Dernière révision: 2026-07-05
+Version: 1.2
+Dernière révision: 2026-07-08
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -57,11 +57,11 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 
 | Date | Repo | Branche | Règle appliquée | Test de blocage rouge | Note |
 |---|---|---|---|---|---|
-| | `SYSTEME_MAD` | `main` | À faire | À faire | |
-| | `madsuite-backend` | `main` | À faire | À faire | |
-| | `madsuite-frontend` | `main` | À faire | À faire | |
-| | `e2e` | `main` | À faire | À faire | |
-| | `desktop-agent` | `main` | À faire | À faire | |
+| 2026-07-08 | `SYSTEME_MAD` | `main` | P0 ouvert — à appliquer | À faire | Issue centrale `bleeband/SYSTEME_MAD#32`; branche de preuve `p0-branch-protection-evidence-2026-07-08` |
+| 2026-07-08 | `madsuite-backend` | `main` | P0 ouvert — à appliquer | À faire | Issue repo `maddevopss/madsuite-backend#30`; reliée à `bleeband/SYSTEME_MAD#32` |
+| 2026-07-08 | `madsuite-frontend` | `main` | P0 ouvert — à appliquer | À faire | Issue repo `maddevopss/madsuite-frontend#14`; reliée à `bleeband/SYSTEME_MAD#32` |
+| | `e2e` | `main` | P1 ensuite | À faire | Hors fermeture P0 immédiate |
+| | `desktop-agent` | `main` | P1 ensuite | À faire | Hors fermeture P0 immédiate |
 
 ---
 
@@ -77,7 +77,7 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 
 | Date | Domaine | Exception | Raison | Durée | Suivi |
 |---|---|---|---|---|---|
-| | | | | | |
+| 2026-07-08 | Branch protection GitHub | Application UI/API non effectuée par l’assistant | Les outils disponibles permettent la création d’issues, fichiers et PR, mais pas la modification directe des règles Branch protection | Temporaire — jusqu’à application manuelle ou automatisation autorisée | `bleeband/SYSTEME_MAD#32` |
 
 ---
 
@@ -105,4 +105,4 @@ Après chaque preuve ajoutée ici :
 
 ## Statut actuel
 
-Statut : **journal créé, preuves terrain à remplir**.
+Statut : **P0 branch protection tracé, application GitHub UI/API à faire, preuves terrain à remplir**.
