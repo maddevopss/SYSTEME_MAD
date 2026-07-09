@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Audit multi-repo MADSuite — snapshot 2026-07-09
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-09
 Statut: À valider
 Auteur: Marc-André Dufour
@@ -20,6 +20,7 @@ Tracer l’état des principaux dépôts MADSuite après audit GitHub-only.
 - `maddevopss/desktop-agent`
 - `maddevopss/e2e`
 - `maddevopss/madsuite`
+- `bleeband/maddevops`
 - `bleeband/SYSTEME_MAD`
 
 ## Synthèse
@@ -31,6 +32,7 @@ Tracer l’état des principaux dépôts MADSuite après audit GitHub-only.
 | `desktop-agent` | Bloqué | Tests unitaires rouges même sur correction documentation-only; issue P1 ouverte. |
 | `e2e` | Avancé | Documentation E2E alignée; CI et smoke verts; PR mergée. |
 | `madsuite` | Bloqué | CI legacy rouge; issue P1 ouverte; PR README fermée non mergée. |
+| `maddevops` | Avancé | README du site statique aligné; smoke CI ajouté et vert. |
 | `SYSTEME_MAD` | En attente | Protection de branche P0 à appliquer et vérifier avec droits admin. |
 
 ## Frontend
@@ -70,6 +72,14 @@ Travail complété : documentation et helper alignés avec la configuration rée
 Blocage : la CI actuelle est encore alignée sur une structure monorepo historique. Elle doit être remplacée par un smoke adapté au rôle de repo agrégateur.
 
 Décision : fermer la PR README non mergée tant que la CI n’est pas corrigée.
+
+## Site MAD DevOps
+
+Travail complété :
+
+- README du site statique aligné avec le rôle actuel du dépôt;
+- ajout d’un smoke CI pour vérifier les fichiers essentiels et les métadonnées HTML minimales;
+- smoke CI vert au merge.
 
 ## SYSTEME_MAD
 
