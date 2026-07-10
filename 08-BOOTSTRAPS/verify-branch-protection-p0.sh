@@ -9,6 +9,11 @@ set -euo pipefail
 # Prérequis :
 # - GitHub CLI installé
 # - gh auth login avec accès aux 3 repos P0
+# - jq installé
+#
+# Note Windows/Git Bash : les endpoints `gh api` sont volontairement écrits
+# sans slash initial (`repos/...` au lieu de `/repos/...`) pour éviter que MSYS
+# les convertisse en chemins Windows comme `C:/Program Files/Git/repos/...`.
 
 repos=(
   "bleeband/SYSTEME_MAD"
@@ -48,6 +53,14 @@ require_gh() {
   gh auth status >/dev/null
 }
 
+require_jq() {
+  if ! command -v jq >/dev/null 2>&1; then
+    echo "ERREUR: jq est introuvable." >&2
+    echo "Installe jq puis relance le script." >&2
+    exit 1
+  fi
+}
+
 verify_repo() {
   local repo="$1"
   local repo_slug
@@ -57,7 +70,7 @@ verify_repo() {
   echo "## ${repo}:main"
 
   local protection_json
-  if ! protection_json="$(gh api "/repos/${repo}/branches/main/protection")"; then
+  if ! protection_json="$(gh api "repos/${repo}/branches/main/protection")"; then
     echo "STATUS: FAIL"
     echo "Raison: impossible de lire la branch protection. Droits insuffisants ou protection absente."
     return 1
@@ -120,6 +133,7 @@ verify_repo() {
 
 main() {
   require_gh
+  require_jq
 
   echo "# Branch protection P0 — verification report"
   echo
