@@ -12,6 +12,10 @@ set -euo pipefail
 # - bleeband/SYSTEME_MAD
 # - maddevopss/madsuite-backend
 # - maddevopss/madsuite-frontend
+#
+# Note Windows/Git Bash : les endpoints `gh api` sont volontairement écrits
+# sans slash initial (`repos/...` au lieu de `/repos/...`) pour éviter que MSYS
+# les convertisse en chemins Windows comme `C:/Program Files/Git/repos/...`.
 
 require_gh() {
   if ! command -v gh >/dev/null 2>&1; then
@@ -32,7 +36,7 @@ apply_protection() {
     --method PUT \
     -H "Accept: application/vnd.github+json" \
     -H "X-GitHub-Api-Version: 2022-11-28" \
-    "/repos/${repo}/branches/main/protection" \
+    "repos/${repo}/branches/main/protection" \
     --input "${json_file}"
 }
 
@@ -41,7 +45,7 @@ verify_protection() {
 
   echo
   echo "==> Vérification: ${repo}:main"
-  gh api "/repos/${repo}/branches/main/protection" \
+  gh api "repos/${repo}/branches/main/protection" \
     --jq '{required_status_checks: .required_status_checks.contexts, enforce_admins: .enforce_admins.enabled, required_pull_request_reviews: .required_pull_request_reviews.required_approving_review_count, required_conversation_resolution: .required_conversation_resolution.enabled, allow_force_pushes: .allow_force_pushes.enabled, allow_deletions: .allow_deletions.enabled}'
 }
 
