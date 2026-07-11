@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — Roadmap
-Version: 1.4
-Dernière révision: 2026-07-02
+Version: 1.5
+Dernière révision: 2026-07-11
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -22,6 +22,7 @@ Il sert à garder une vision claire de ce qui est fait, en cours, à surveiller 
 | Fichier | Statut | Rôle |
 |---|---|---|
 | `progression.md` | Officiel | Suivi global de progression du Système MAD. |
+| `checkpoint-ecos-2026-q3.md` | Officiel | Instantané de l’état des fondations ECOS au troisième trimestre 2026. |
 | `roadmap-mvp-early-access-madsuite.md` | Officiel | Roadmap d’exécution MVP Early Access MADSuite. |
 | `tickets-sprint-1-parcours-premiere-facture-madsuite.md` | Brouillon contrôlé | Découpage tickets Sprint 1 — première facture. |
 | `analyse-repo-applicatif-madsuite-sprint-1.md` | Brouillon contrôlé | Analyse des dépôts accessibles pour mapper Sprint 1. |
@@ -31,6 +32,13 @@ Il sert à garder une vision claire de ce qui est fait, en cours, à surveiller 
 ---
 
 ## Documents prioritaires
+
+### ECOS — fondations et progression
+
+```text
+SYSTEME_MAD/10-ROADMAP/checkpoint-ecos-2026-q3.md
+SYSTEME_MAD/05-PLAY/play-054-foundation-review.md
+```
 
 ### MADSuite — exécution produit
 
@@ -56,7 +64,8 @@ SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md
 
 ## Règles d’usage
 
-- Utiliser ce dossier pour les documents de pilotage et priorisation.
+- Utiliser ce dossier pour les documents de pilotage, checkpoints et priorisation.
+- Un checkpoint photographie un état; il ne crée ni règle, ni décision structurante, ni release.
 - Ne pas y placer les spécifications produit détaillées : utiliser `01-PRODUIT/`.
 - Ne pas y placer les documents de recherche : utiliser `13-RESSOURCES/research/`.
 - Ne pas y placer les décisions structurantes : utiliser `04-ADR/`.
@@ -69,3 +78,4 @@ SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md
 - `SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md`
 - `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/README.md`
 - `SYSTEME_MAD/03-STANDARDS/std-506.md`
+- `SYSTEME_MAD/05-PLAY/play-054-foundation-review.md`
