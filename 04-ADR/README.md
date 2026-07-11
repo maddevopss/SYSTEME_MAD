@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — ADR
-Version: 1.3
-Dernière révision: 2026-07-02
+Version: 1.4
+Dernière révision: 2026-07-11
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -43,6 +43,7 @@ Ne pas créer une ADR pour une simple note ou une tâche mineure.
 | `ADR-002-positionnement-non-medical-madsuite.md` | Accepté | MADSuite est une solution de gestion et d’assistance cognitive non médicale. | `STD-501`, `STD-503`, `STD-505` |
 | `ADR-003-gouvernance-madproof-claims-madsuite.md` | Accepté | Les claims cognitifs MADSuite doivent passer par le registre et la validation MADPROOF. | `STD-006`, `CHK-016`, `CHK-032` |
 | `ADR-004-separation-repos-execution-madsuite.md` | Accepté | MADSuite est organisé en dépôts spécialisés : frontend, backend, E2E, desktop-agent, avec `SYSTEME_MAD` comme source de vérité. | `STD-006`, gouvernance IA, sécurité, MADPROOF |
+| `ADR-005-ecos-cadre-non-produit.md` | Accepté | ECOS demeure un cadre conceptuel et opérationnel porté par `SYSTEME_MAD`, et non un produit ou une plateforme autonome à ce stade. | Charte ECOS, glossaire ECOS, périmètre ECOS, MADPROOF |
 
 ---
 
