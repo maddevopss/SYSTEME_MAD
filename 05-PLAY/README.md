@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 3.6
-Dernière révision: 2026-07-02
+Version: 3.7
+Dernière révision: 2026-07-11
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -42,6 +42,16 @@ play-041-cycle-mensuel-early-access-madsuite.md
 play-024-transformer-idee-cognitive-en-fonctionnalite-madsuite.md
 play-037-ajouter-ou-corriger-claim-madproof.md
 ```
+
+---
+
+## Playbooks prioritaires ECOS et gouvernance
+
+```text
+play-053-proposer-ou-modifier-standard.md
+```
+
+`PLAY-053` applique le principe « on enrichit avant de créer » et définit le chemin officiel pour proposer, modifier ou rediriger une règle candidate.
 
 ---
 
@@ -100,3 +110,4 @@ play-009.md
 - Ne pas transformer un playbook en document théorique.
 - Garder les étapes concrètes, vérifiables et réutilisables.
 - Pour MADSuite Early Access, utiliser `play-041-cycle-mensuel-early-access-madsuite.md` comme playbook de pilotage mensuel.
+- Pour proposer ou modifier un Standard, utiliser `play-053-proposer-ou-modifier-standard.md`.
