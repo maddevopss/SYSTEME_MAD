@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Playbooks
-Version: 3.7
+Version: 3.8
 Dernière révision: 2026-07-11
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -49,9 +49,11 @@ play-037-ajouter-ou-corriger-claim-madproof.md
 
 ```text
 play-053-proposer-ou-modifier-standard.md
+play-054-foundation-review.md
 ```
 
-`PLAY-053` applique le principe « on enrichit avant de créer » et définit le chemin officiel pour proposer, modifier ou rediriger une règle candidate.
+- `PLAY-053` applique le principe « on enrichit avant de créer » et définit le chemin officiel pour proposer, modifier ou rediriger une règle candidate.
+- `PLAY-054` définit la revue quadrimestrielle des fondations, ses vérifications, ses livrables et ses garde-fous.
 
 ---
 
@@ -111,3 +113,4 @@ play-009.md
 - Garder les étapes concrètes, vérifiables et réutilisables.
 - Pour MADSuite Early Access, utiliser `play-041-cycle-mensuel-early-access-madsuite.md` comme playbook de pilotage mensuel.
 - Pour proposer ou modifier un Standard, utiliser `play-053-proposer-ou-modifier-standard.md`.
+- Pour réaliser une revue des fondations, utiliser `play-054-foundation-review.md` tous les quatre mois ou lors d’un déclencheur exceptionnel.
