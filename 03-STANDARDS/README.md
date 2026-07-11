@@ -1,7 +1,7 @@
 ---
 Projet: MAD DevOps
 Document: Index — Standards
-Version: 1.3
+Version: 1.4
 Dernière révision: 2026-07-11
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -131,6 +131,7 @@ Il sert de point d’entrée pour les humains, les collaborateurs et les agents 
 | Standard | Sujet | Rôle |
 |---|---|---|
 | `std-701.md` | Structure d’une recommandation ECOS | Rend les recommandations compréhensibles, vérifiables, traçables et soumises à une décision humaine. |
+| `std-702.md` | Observations ECOS | Définit les faits observables, leurs sources et la séparation entre observation, analyse, hypothèse et recommandation. |
 
 Cette famille encadre le fonctionnement opérationnel d’ECOS. Elle ne constitue pas une famille médicale et ne doit pas servir à évaluer l’état mental ou la valeur d’une personne.
 
@@ -162,7 +163,8 @@ Pour ECOS, les standards à lire en priorité sont :
 - `std-502.md` — Prompts et sorties IA;
 - `std-504.md` — Agents IA;
 - `std-605.md` — Documentation prête pour agents IA;
-- `std-701.md` — Structure d’une recommandation ECOS.
+- `std-701.md` — Structure d’une recommandation ECOS;
+- `std-702.md` — Observations ECOS.
 
 ---
 
