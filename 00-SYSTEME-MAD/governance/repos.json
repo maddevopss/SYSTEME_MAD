@@ -1,0 +1,11 @@
+{
+  "repositories": [
+    "bleeband/SYSTEME_MAD",
+    "maddevopss/madsuite",
+    "maddevopss/madsuite-frontend",
+    "maddevopss/madsuite-backend",
+    "maddevopss/desktop-agent",
+    "maddevopss/e2e",
+    "bleeband/maddevops"
+  ]
+}
