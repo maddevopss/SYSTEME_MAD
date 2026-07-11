@@ -1,0 +1,77 @@
+name: Governance dashboard
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 10 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "00-SYSTEME-MAD/governance/repos.json"
+      - "08-BOOTSTRAPS/generate-governance-dashboard.mjs"
+      - ".github/workflows/governance-dashboard.yml"
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+  issues: read
+
+concurrency:
+  group: governance-dashboard
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    name: Generate governance dashboard
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Generate dashboard
+        env:
+          GH_TOKEN: ${{ secrets.MAD_GOVERNANCE_TOKEN || github.token }}
+        run: node 08-BOOTSTRAPS/generate-governance-dashboard.mjs
+
+      - name: Validate generated document
+        run: |
+          test -s 00-SYSTEME-MAD/governance/generated-dashboard.md
+          grep -q "Projet: MADSuite" 00-SYSTEME-MAD/governance/generated-dashboard.md
+          grep -q "Signal automatisé GitHub" 00-SYSTEME-MAD/governance/generated-dashboard.md
+
+      - name: Create or update governance PR
+        env:
+          GH_TOKEN: ${{ secrets.MAD_GOVERNANCE_TOKEN || github.token }}
+        run: |
+          if git diff --quiet -- 00-SYSTEME-MAD/governance/generated-dashboard.md; then
+            echo "Dashboard déjà à jour."
+            exit 0
+          fi
+
+          branch="automation/governance-dashboard"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C "$branch"
+          git add 00-SYSTEME-MAD/governance/generated-dashboard.md
+          git commit -m "chore(governance): refresh generated dashboard"
+          git push --force-with-lease origin "$branch"
+
+          existing_pr=$(gh pr list --head "$branch" --base main --state open --json number --jq '.[0].number // empty')
+          if [ -z "$existing_pr" ]; then
+            gh pr create \
+              --base main \
+              --head "$branch" \
+              --title "[AUTO] Actualiser le dashboard de gouvernance" \
+              --body "Mise à jour automatisée des signaux GitHub observables. Le Engineering Health Score complet demeure soumis à validation humaine."
+          else
+            echo "PR #$existing_pr déjà ouverte et mise à jour."
+          fi
