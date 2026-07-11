@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — Standards
-Version: 1.2
-Dernière révision: 2026-07-02
+Version: 1.3
+Dernière révision: 2026-07-11
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -13,7 +13,7 @@ Auteur: Marc-André Dufour
 
 Cet index facilite la navigation dans les standards officiels du Système MAD.
 
-Il sert de point d’entrée pour les humains, les collaborateurs et les agents IA qui doivent comprendre les règles applicables à un projet MAD DevOps ou MADSuite.
+Il sert de point d’entrée pour les humains, les collaborateurs et les agents IA qui doivent comprendre les règles applicables à un projet MAD DevOps, MADSuite ou ECOS.
 
 ---
 
@@ -34,6 +34,7 @@ Il sert de point d’entrée pour les humains, les collaborateurs et les agents 
 5. DevOps — `STD-401` à `STD-405`
 6. IA — `STD-501` à `STD-506` si le projet utilise l’IA
 7. Documentation — `STD-601` à `STD-605`
+8. ECOS — `STD-701` et suivants si le travail concerne la gouvernance cognitive ou les recommandations
 
 ---
 
@@ -125,6 +126,16 @@ Il sert de point d’entrée pour les humains, les collaborateurs et les agents 
 
 ---
 
+## Famille 700 — ECOS et gouvernance cognitive
+
+| Standard | Sujet | Rôle |
+|---|---|---|
+| `std-701.md` | Structure d’une recommandation ECOS | Rend les recommandations compréhensibles, vérifiables, traçables et soumises à une décision humaine. |
+
+Cette famille encadre le fonctionnement opérationnel d’ECOS. Elle ne constitue pas une famille médicale et ne doit pas servir à évaluer l’état mental ou la valeur d’une personne.
+
+---
+
 ## Standards critiques MADSuite
 
 Pour MADSuite, les standards à lire en priorité sont :
@@ -140,6 +151,18 @@ Pour MADSuite, les standards à lire en priorité sont :
 - `std-503.md` — Données et confidentialité IA;
 - `std-505.md` — IA cognitive non médicale;
 - `std-506.md` — Gouvernance des claims MADPROOF.
+
+## Standards critiques ECOS
+
+Pour ECOS, les standards à lire en priorité sont :
+
+- `std-006.md` — Qualité documentaire;
+- `std-404.md` — Observabilité;
+- `std-501.md` — IA responsable;
+- `std-502.md` — Prompts et sorties IA;
+- `std-504.md` — Agents IA;
+- `std-605.md` — Documentation prête pour agents IA;
+- `std-701.md` — Structure d’une recommandation ECOS.
 
 ---
 
