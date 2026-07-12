@@ -23,19 +23,23 @@ Un document n’a pas besoin d’un footer complet si son parent et ses relation
 
 ## Bloc de navigation recommandé
 
-```markdown
+Le modèle ci-dessous utilise volontairement des chemins symboliques. Ils doivent être remplacés par des destinations réelles avant publication.
+
+```text
 ---
 
 ## Navigation
 
-- ↑ [Retour à l’index](../README.md)
-- ← [Document précédent](./precedent.md)
-- → [Document suivant](./suivant.md)
+- ↑ Retour à l’index : <chemin-vers-index>
+- ← Document précédent : <chemin-vers-document-precedent>
+- → Document suivant : <chemin-vers-document-suivant>
 
 ### Voir aussi
 
-- [Relation utile](./document-lie.md) — raison du lien
+- Relation utile : <chemin-vers-document-lie> — raison du lien
 ```
+
+Une fois les destinations confirmées, convertir chaque entrée en lien Markdown valide.
 
 ## Règles
 
@@ -46,6 +50,7 @@ Un document n’a pas besoin d’un footer complet si son parent et ses relation
 5. `Voir aussi` ne doit pas devenir une liste exhaustive.
 6. Un document archivé pointe vers son remplaçant lorsqu’il existe.
 7. Un lien circulaire est permis s’il représente une relation réelle et nommée.
+8. Aucun chemin fictif ne doit être écrit sous forme de lien Markdown actif.
 
 ## Navigation des objets MAD
 
@@ -79,6 +84,12 @@ Avant d’ajouter un lien :
 - l’ordre alphabétique n’est pas automatiquement un parcours de lecture.
 
 ## Journal du standard
+
+### 2026-07-12 — Correction des exemples
+
+- remplacement des liens fictifs actifs par des chemins symboliques;
+- ajout de la règle interdisant les liens Markdown vers des destinations inexistantes;
+- compatibilité rétablie avec l’audit automatique des liens.
 
 ### 2026-07-12 — Création
 
