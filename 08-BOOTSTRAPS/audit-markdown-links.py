@@ -3,6 +3,7 @@
 
 The audit is intentionally conservative:
 - external URLs, mailto links and pure anchors are ignored;
+- links inside fenced code blocks are ignored;
 - relative file links are resolved from the source document;
 - URL fragments are removed before filesystem validation;
 - archived and generated files are still checked unless explicitly excluded.
@@ -17,6 +18,7 @@ from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 LINK_PATTERN = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
+FENCE_PATTERN = re.compile(r"^\s*(`{3,}|~{3,})")
 EXCLUDED_PARTS = {".git", "node_modules", ".venv", "venv"}
 
 
@@ -74,7 +76,22 @@ def main() -> int:
 
     for source in iter_markdown_files():
         content = source.read_text(encoding="utf-8")
+        active_fence: str | None = None
+
         for line_number, line in enumerate(content.splitlines(), start=1):
+            fence_match = FENCE_PATTERN.match(line)
+            if fence_match:
+                fence = fence_match.group(1)
+                marker = fence[0]
+                if active_fence is None:
+                    active_fence = marker
+                elif active_fence == marker:
+                    active_fence = None
+                continue
+
+            if active_fence is not None:
+                continue
+
             for match in LINK_PATTERN.finditer(line):
                 raw_target = match.group(1)
                 target = normalize_target(raw_target)
