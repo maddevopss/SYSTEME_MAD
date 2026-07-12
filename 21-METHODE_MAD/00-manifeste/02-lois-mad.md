@@ -1,15 +1,33 @@
 ---
-title: Lois fondatrices de la Méthode MAD
-status: À valider
-type: Fondation
+title: B-002 — Lois de la Méthode MAD
+status: Découverte
+type: Bloc
+block_id: B-002
+maturity: B-100
 owner: MAD DevOps
 created_at: 2026-07-12
 updated_at: 2026-07-12
 ---
 
-# Lois fondatrices de la Méthode MAD
+# 🧱 B-002 — Les Lois de la Méthode MAD
 
-## Loi 0 — Fondation avant élévation
+## Question fondatrice
+
+> Comment prenons-nous nos décisions chez MAD?
+
+## Statut
+
+**🟡 Découverte — B-100**
+
+Ces lois formalisent des principes observés durant le Jour 0. Elles ne sont pas encore déclarées Fondations. Elles doivent être utilisées, confrontées à des cas réels et révisées si les preuves les contredisent.
+
+## Préambule
+
+Les lois de la Méthode MAD ne sont pas des règles imposées.
+
+Elles décrivent des principes qui reviennent dans notre manière de comprendre, décider et construire. Elles guident les décisions sans remplacer le jugement.
+
+## Loi 0 — Les fondations avant l’élévation
 
 > Une nouvelle couche ne peut être ajoutée que lorsque la couche précédente est suffisamment solide, comprise et prouvée.
 
@@ -66,3 +84,30 @@ Avant d’accepter une idée :
 4. Rend-elle le système plus compréMADsible?
 5. Comment saurons-nous qu’elle fonctionne?
 6. Quel est le coût de ne pas la construire maintenant?
+
+## Cycle de maturité du bloc
+
+- ⚪ **B-000 — Observation** : un phénomène est noté sans conclusion.
+- 🟡 **B-100 — Découverte** : un principe plausible est formulé.
+- 🟠 **B-200 — Validation** : le principe est appliqué et activement confronté aux contre-exemples.
+- 🟢 **B-300 — Fondation** : le principe a résisté et peut supporter d’autres blocs.
+- 🔵 **B-400 — Patrimoine** : le principe a traversé plusieurs contextes, produits et années.
+
+## Conditions de progression
+
+B-002 ne pourra progresser vers **Validation** que lorsque :
+
+- ses lois auront été utilisées sur des décisions réelles;
+- des contre-exemples auront été documentés;
+- les lois redondantes ou trop générales auront été corrigées;
+- leur application aura amélioré la qualité ou la compréMADsibilité d’au moins un chantier;
+- aucune loi ne sera conservée uniquement parce qu’elle est séduisante.
+
+## Journal du bloc
+
+### 12 juillet 2026 — Jour 0
+
+- Première formalisation des Lois MAD.
+- Ajout de la question fondatrice.
+- Statut officiel : **🟡 Découverte — B-100**.
+- Décision : laisser les lois vivre avant de les déclarer Fondations.
