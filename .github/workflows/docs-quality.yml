@@ -87,3 +87,7 @@ jobs:
 
           print("Docs quality smoke passed.")
           PY
+
+      - name: Audit local Markdown links
+        shell: bash
+        run: python 08-BOOTSTRAPS/audit-markdown-links.py
