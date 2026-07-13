@@ -76,15 +76,18 @@ Lecture minimale recommandée :
 2. `00-SYSTEME-MAD/ai-context.md`
 3. `00-SYSTEME-MAD/decisions.md`
 4. `01-FONDATIONS/non-negociable.md`
-5. `03-STANDARDS/`
-6. `04-ADR/`
+5. `00-SYSTEME-MAD/registry/REG-001-mad-registry.md`
+6. `03-STANDARDS/`
+7. `04-ADR/`
+
+Le registre canonique des objets officiels est disponible dans `00-SYSTEME-MAD/registry/registry-index.yaml`.
 
 ---
 
 ## Structure principale
 
 ```text
-00-SYSTEME-MAD/       Gouvernance, contexte IA, décisions et standards documentaires
+00-SYSTEME-MAD/       Gouvernance, contexte IA, décisions, Registry et standards documentaires
 01-FONDATIONS/        Principes fondateurs et non négociables
 02-GUIDE/             Guide stratégique et opérationnel MAD DevOps
 03-STANDARDS/         Standards techniques, qualité, sécurité et architecture
@@ -110,6 +113,7 @@ Avant de modifier ou générer un document pour MAD DevOps ou MADSuite, un agent
 - `MANIFEST.md`;
 - `00-SYSTEME-MAD/ai-context.md`;
 - `00-SYSTEME-MAD/decisions.md`;
+- `00-SYSTEME-MAD/registry/registry-index.yaml` pour identifier les objets déjà enregistrés;
 - les standards applicables dans `03-STANDARDS/`;
 - les ADR applicables dans `04-ADR/`.
 
