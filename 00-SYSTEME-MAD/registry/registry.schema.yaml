@@ -1,0 +1,71 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: MAD Registry Entry
+description: Schéma minimal d'une entrée du MAD Registry.
+type: object
+additionalProperties: false
+required:
+  - id
+  - type
+  - title
+  - status
+  - version
+  - owner
+  - path
+properties:
+  id:
+    type: string
+    pattern: "^[A-Z]+-[0-9]{3,}$"
+    description: Identifiant unique et immuable de l'objet.
+  type:
+    type: string
+    pattern: "^[A-Z]+$"
+    description: Type d'objet enregistré.
+  title:
+    type: string
+    minLength: 1
+  status:
+    type: string
+    enum:
+      - Officiel
+      - Brouillon
+      - À valider
+      - À fusionner
+      - Template
+      - Archive
+      - Déprécié
+  version:
+    type: string
+    pattern: "^[0-9]+\.[0-9]+(?:\.[0-9]+)?$"
+  owner:
+    type: string
+    minLength: 1
+  path:
+    type: string
+    minLength: 1
+    description: Chemin canonique relatif à la racine du dépôt.
+  summary:
+    type: string
+  tags:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      minLength: 1
+  relations:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      pattern: "^[A-Z]+-[0-9]{3,}$"
+  affects:
+    type: array
+    uniqueItems: true
+    items:
+      type: string
+      minLength: 1
+  created_at:
+    type: string
+    format: date
+  updated_at:
+    type: string
+    format: date
