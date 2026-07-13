@@ -1,0 +1,63 @@
+schema_version: "1.0"
+registry: MAD Registry
+updated_at: 2026-07-13
+objects:
+  - id: REG-001
+    type: REG
+    title: MAD Registry
+    status: À valider
+    version: "1.0"
+    owner: MAD DevOps
+    path: 00-SYSTEME-MAD/registry/REG-001-mad-registry.md
+    summary: Registre canonique des objets officiels du Système MAD.
+    tags:
+      - registry
+      - gouvernance
+      - fondation
+    relations:
+      - ADR-007
+      - STD-800
+    affects:
+      - SYSTEME_MAD
+    created_at: 2026-07-13
+    updated_at: 2026-07-13
+
+  - id: ADR-007
+    type: ADR
+    title: MAD Guardian — Certification continue proportionnelle
+    status: Officiel
+    version: "1.0"
+    owner: MAD DevOps
+    path: 04-ADR/ADR-007-mad-guardian-certification-continue.md
+    summary: Décision structurante introduisant MAD Guardian et ses profils de certification.
+    tags:
+      - guardian
+      - certification
+      - gouvernance
+    relations:
+      - REG-001
+      - STD-800
+    affects:
+      - SYSTEME_MAD
+    created_at: 2026-07-13
+    updated_at: 2026-07-13
+
+  - id: STD-800
+    type: STD
+    title: MAD Guardian — Quality Gates
+    status: Officiel
+    version: "1.0"
+    owner: MAD DevOps
+    path: 03-STANDARDS/std-800-mad-guardian-quality-gates.md
+    summary: Standard des contrôles et états de validation utilisés par MAD Guardian.
+    tags:
+      - guardian
+      - quality-gates
+      - standard
+    relations:
+      - REG-001
+      - ADR-007
+    affects:
+      - SYSTEME_MAD
+    created_at: 2026-07-13
+    updated_at: 2026-07-13
