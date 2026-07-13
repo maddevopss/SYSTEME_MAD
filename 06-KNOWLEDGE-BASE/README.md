@@ -22,6 +22,7 @@ Il sert à conserver les définitions, références techniques, notes explicativ
 | Fichier | Statut | Rôle |
 |---|---|---|
 | `glossaire-madsuite-madproof.md` | Officiel | Glossaire des termes MADSuite, MADPROOF, MAD Ariane et assistance cognitive. |
+| `mad-guardian-glossaire.md` | Officiel | Glossaire des termes MAD Guardian, profils, gates, preuves et certification. |
 
 ---
 

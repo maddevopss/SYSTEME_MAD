@@ -136,7 +136,17 @@ Il sert de point d’entrée pour les humains, les collaborateurs et les agents 
 | `std-704.md` | Niveaux de confiance ECOS | Qualifie la confiance dans une analyse de `C0` à `C4` sans la confondre avec la qualité des preuves. |
 | `std-705.md` | Priorisation ECOS | Définit une priorité explicable de `P0` à `P3`, avec `PX` lorsque les données sont insuffisantes. |
 
-Cette famille encadre le fonctionnement opérationnel d’ECOS. Elle ne constitue pas une famille médicale et ne doit pas servir à évaluer l’état mental ou la valeur d’une personne.
+Cette famille encadre le fonctionnement opérationnel d'ECOS. Elle ne constitue pas une famille médicale et ne doit pas servir à évaluer l'état mental ou la valeur d'une personne.
+
+---
+
+## Famille 800 — MAD Guardian
+
+| Standard | Sujet | Rôle |
+|---|---|---|
+| `std-800.md` | MAD Guardian — Quality Gates et profils de certification | Définit les quatre profils (FAST, CRITICAL, FULL, CERTIFICATION), les gates obligatoires, les preuves minimales et les conditions de certification. |
+
+Cette famille encadre le mécanisme de certification continue proportionnelle de l'écosystème MAD.
 
 ---
 
