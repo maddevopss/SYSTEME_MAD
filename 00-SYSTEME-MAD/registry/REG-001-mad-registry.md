@@ -15,7 +15,7 @@ updated_at: 2026-07-13
 
 Le **MAD Registry** est le registre canonique des objets officiels du Système MAD.
 
-Il attribue à chaque objet une identité stable et fournit une vue structurée de son type, de son statut, de sa version, de son propriétaire et de ses relations principales.
+Il attribue à chaque objet une identité stable et fournit une vue structurée de son type, de son statut, de sa version, de son propriétaire, de son emplacement et de sa chronologie documentaire.
 
 > Ce qui n'est pas enregistré ne fait pas partie du système officiel.
 
@@ -28,8 +28,10 @@ Le Registry doit permettre à une personne, à un collaborateur, à MAD Guardian
 - Qu'est-ce qui existe dans le Système MAD ?
 - Quel objet est officiel, en validation, déprécié ou archivé ?
 - Où se trouve sa représentation canonique ?
-- De quels autres objets dépend-il ?
-- Quels objets ou dépôts sont concernés par son évolution ?
+- Quand a-t-il été créé et mis à jour ?
+- Qui en est responsable ?
+
+Les dépendances, impacts et relations entre objets ne relèvent pas du Registry. Ils seront pris en charge par une capacité distincte lorsque son modèle aura été défini.
 
 ---
 
@@ -65,7 +67,8 @@ Le Registry constitue la source de vérité pour :
 - la version;
 - le propriétaire;
 - le chemin canonique;
-- les relations déclarées.
+- la date de création;
+- la date de dernière mise à jour.
 
 Le contenu détaillé demeure dans le document ou l'artefact référencé.
 
@@ -73,19 +76,30 @@ Le contenu détaillé demeure dans le document ou l'artefact référencé.
 
 Le Registry ne remplace pas les ADR, standards, playbooks, checklists ou documents de gouvernance.
 
-Il conserve les métadonnées nécessaires pour identifier, retrouver et relier les objets. Il ne doit pas dupliquer leur contenu complet.
+Il conserve uniquement les métadonnées nécessaires pour identifier, retrouver, dater et administrer les objets. Il ne doit pas dupliquer leur contenu complet ni modéliser leurs relations.
 
-### REG-001.5 — Validation explicite
+### REG-001.5 — Chronologie obligatoire
+
+Chaque entrée doit déclarer :
+
+- `created_at`, représentant la date de création initiale connue de l'objet;
+- `updated_at`, représentant la date de sa dernière modification connue.
+
+Ces dates permettent de reconstruire une chronologie documentaire fiable sans dépendre uniquement de l'historique Git.
+
+### REG-001.6 — Validation explicite
 
 Une entrée invalide, dupliquée ou pointant vers un chemin inexistant doit être considérée comme une erreur de cohérence.
 
 La présence d'une entrée dans le Registry ne rend pas automatiquement son contenu officiel : le statut déclaré demeure déterminant.
 
-### REG-001.6 — Évolution contrôlée
+### REG-001.7 — Évolution contrôlée
 
 De nouveaux types ou champs peuvent être ajoutés lorsqu'un besoin réel est démontré.
 
 Le modèle initial doit rester minimal afin d'éviter de construire prématurément un graphe de connaissances, un runtime ou une logique de certification dans cette première brique.
+
+La question de savoir si `REG` constitue durablement une famille d'objets autonome demeure ouverte pendant la phase de validation de cette fondation.
 
 ---
 
@@ -99,16 +113,14 @@ status: À valider
 version: "1.0"
 owner: MAD DevOps
 path: 00-SYSTEME-MAD/registry/REG-001-mad-registry.md
+created_at: 2026-07-13
+updated_at: 2026-07-13
 ```
 
 Les champs additionnels permis par le schéma initial sont :
 
 - `summary`;
-- `tags`;
-- `relations`;
-- `affects`;
-- `created_at`;
-- `updated_at`.
+- `tags`.
 
 ---
 
@@ -119,13 +131,14 @@ Le Registry :
 - identifie les objets;
 - référence leur emplacement canonique;
 - expose leur statut et leur version;
-- déclare leurs relations principales;
+- conserve leur chronologie documentaire;
 - fournit une base vérifiable pour les outils futurs.
 
 Le Registry ne :
 
 - décide pas à la place des ADR;
 - impose pas à lui seul les standards;
+- modélise pas les relations entre objets;
 - exécute pas de contrôles;
 - certifie pas un dépôt;
 - corrige pas automatiquement les incohérences;
@@ -157,7 +170,7 @@ L'enregistrement exhaustif de tous les objets existants fera l'objet de briques 
 
 ---
 
-## Relations
+## Documents associés
 
 - **Manifeste** : `MANIFEST.md`
 - **Architecture documentaire** : `00-SYSTEME-MAD/governance/architecture-documentaire.md`
@@ -173,8 +186,10 @@ REG-001 peut passer au statut `Officiel` lorsque :
 
 - son emplacement est accepté;
 - le schéma minimal est validé;
+- `created_at` et `updated_at` sont obligatoires;
 - l'index initial est syntaxiquement valide;
 - les références ajoutées au README et au manifeste sont cohérentes;
+- la séparation entre Registry et futur graphe de relations est explicite;
 - aucune capacité future n'a été introduite prématurément.
 
 ---
@@ -184,3 +199,4 @@ REG-001 peut passer au statut `Officiel` lorsque :
 | Date | Auteur | Changement |
 |---|---|---|
 | 2026-07-13 | MAD DevOps | Création de la fondation REG-001 |
+| 2026-07-13 | MAD DevOps | Chronologie rendue obligatoire et relations retirées du périmètre |
