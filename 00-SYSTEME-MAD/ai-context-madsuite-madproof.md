@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Contexte IA — MADSuite / MADPROOF
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-14
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -13,15 +13,7 @@ Auteur: Marc-André Dufour
 
 Ce document sert de contexte prioritaire pour tout agent IA qui travaille sur MADSuite, MADPROOF, MAD Ariane, le Cognitive Engine ou une fonctionnalité liée à l’assistance cognitive.
 
-Il complète :
-
-```text
-SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md
-```
-
-Il ne le remplace pas.
-
----
+Il complète `00-SYSTEME-MAD/ai-context.md` et ne le remplace pas.
 
 ## Positionnement obligatoire
 
@@ -45,17 +37,13 @@ MADSuite ne doit jamais être présenté comme :
 - mesure de l’état mental réel;
 - remplacement d’un professionnel.
 
----
-
 ## Phrase directrice
 
 > MADSuite ne remplace pas l’utilisateur. MADSuite lui redonne le fil.
 
----
-
 ## Règles de langage
 
-## À privilégier
+### À privilégier
 
 - assistance cognitive non médicale;
 - accessibilité cognitive;
@@ -68,7 +56,7 @@ MADSuite ne doit jamais être présenté comme :
 - tendance d’activité numérique;
 - aide à structurer le travail.
 
-## À éviter
+### À éviter
 
 - traiter le TDAH;
 - diagnostiquer;
@@ -81,8 +69,6 @@ MADSuite ne doit jamais être présenté comme :
 - thérapie numérique validée;
 - promesse clinique.
 
----
-
 ## Règles MADPROOF pour agents IA
 
 Avant de rédiger ou modifier un contenu MADSuite lié à la cognition, un agent IA doit vérifier :
@@ -91,21 +77,22 @@ Avant de rédiger ou modifier un contenu MADSuite lié à la cognition, un agent
 2. Le claim est-il médical, psychologique ou trop fort?
 3. La formulation parle-t-elle d’un état mental réel ou d’un contexte opérationnel?
 4. Les données nécessaires sont-elles proportionnées?
-5. Le MVP exclut-il toujours caméra, micro, biométrie et capture permanente?
-6. L’utilisateur garde-t-il le contrôle?
-7. La formulation est-elle non culpabilisante?
+5. Tout capteur éventuel respecte-t-il la gouvernance officielle : nécessité, finalité explicite, consentement granulaire, minimisation, traitement local prioritaire et contrôle utilisateur?
+6. La politique restrictive du MVP est-elle respectée?
+7. L’utilisateur garde-t-il le contrôle?
+8. La formulation est-elle non culpabilisante?
 
 Documents à lire :
 
 ```text
-SYSTEME_MAD/03-STANDARDS/std-505.md
-SYSTEME_MAD/03-STANDARDS/std-506.md
-SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md
-SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md
-SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md
+03-STANDARDS/std-505.md
+03-STANDARDS/std-506.md
+13-RESSOURCES/research/03-madproof/000-cadre-madproof.md
+13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md
+09-CHECKLISTS/chk-032-validation-claim-madproof.md
+01-FONDATIONS/gouvernance-capteurs.md
+04-ADR/ADR-008-neutralite-gouvernance-capteurs.md
 ```
-
----
 
 ## MAD Ariane
 
@@ -128,12 +115,10 @@ Formulation interdite :
 Documents liés :
 
 ```text
-SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md
-SYSTEME_MAD/01-PRODUIT/madsuite/mvp-mad-ariane-snapshot-reprise.md
-SYSTEME_MAD/09-CHECKLISTS/chk-017-validation-mvp-mad-ariane.md
+01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md
+01-PRODUIT/madsuite/mvp-mad-ariane-snapshot-reprise.md
+09-CHECKLISTS/chk-017-validation-mvp-mad-ariane.md
 ```
-
----
 
 ## Cognitive Engine
 
@@ -144,9 +129,7 @@ Le Cognitive Engine peut utiliser des labels fonctionnels internes comme :
 - friction;
 - fatigue.
 
-Ces labels doivent être décrits comme des observations ou hypothèses d’interface basées sur des signaux d’usage.
-
-Ils ne doivent jamais être présentés comme des diagnostics ou des mesures réelles de l’état mental.
+Ces labels doivent être décrits comme des observations ou hypothèses d’interface basées sur des signaux d’usage. Ils ne doivent jamais être présentés comme des diagnostics ou des mesures réelles de l’état mental.
 
 Formulation prudente :
 
@@ -156,11 +139,25 @@ Formulation interdite :
 
 > Le système détecte la fatigue cognitive réelle de l’utilisateur.
 
----
+## Gouvernance des capteurs
 
-## Données exclues par défaut
+> Aucun capteur n’est interdit par principe. Aucun capteur n’est autorisé par défaut.
 
-Pour le MVP et la conception par défaut, exclure :
+Tout capteur doit être justifié par une fonctionnalité explicite, nécessaire et proportionnée. Son usage exige un consentement granulaire et révocable, une transparence continue, une minimisation stricte et un traitement local lorsque possible.
+
+Les interdictions permanentes comprennent :
+
+- surveillance cachée;
+- activation non annoncée;
+- dérive de finalité;
+- profilage externe;
+- inférence sensible non sollicitée;
+- diagnostic médical automatique;
+- collecte disproportionnée.
+
+### Politique restrictive du MVP
+
+Pour le MVP et la conception par défaut, ne pas utiliser :
 
 - caméra;
 - microphone;
@@ -168,12 +165,9 @@ Pour le MVP et la conception par défaut, exclure :
 - enregistrement brut du clavier;
 - biométrie;
 - lecture émotionnelle;
-- inférence médicale;
-- profilage externe;
-- comparaison entre utilisateurs;
-- score de normalité.
+- surveillance passive.
 
----
+Cette politique est une restriction de portée, pas une interdiction technologique définitive. Toute exception future doit être documentée et validée selon `01-FONDATIONS/gouvernance-capteurs.md`.
 
 ## Données acceptables par défaut
 
@@ -182,7 +176,7 @@ Les données suivantes peuvent être utilisées prudemment si elles servent un o
 - événements applicatifs;
 - module actif;
 - entité active;
-- client/projet/facture lié;
+- client, projet ou facture lié;
 - timer;
 - statut de brouillon;
 - dernière action métier;
@@ -190,8 +184,6 @@ Les données suivantes peuvent être utilisées prudemment si elles servent un o
 - pauses abstraites;
 - changements de contexte applicatif;
 - focus fenêtre optionnel.
-
----
 
 ## Règle de sortie pour agents IA
 
@@ -204,8 +196,6 @@ Quand un agent IA rédige pour MADSuite, il doit préférer une formulation :
 - orientée action;
 - vérifiable;
 - respectueuse du contrôle utilisateur.
-
----
 
 ## Phrase de contrôle
 
