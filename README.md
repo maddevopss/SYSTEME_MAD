@@ -12,7 +12,8 @@ Il sert de source de vérité pour structurer, préserver et faire évoluer :
 - la documentation de MADSuite;
 - les recherches et notes de validation;
 - le contexte destiné aux agents IA;
-- la mémoire opérationnelle du studio.
+- la mémoire opérationnelle du studio;
+- l’évolution documentée des idées structurantes.
 
 > Nous ne construisons pas seulement des logiciels. Nous construisons un savoir qui grandit avec chaque projet.
 
@@ -30,7 +31,8 @@ Il doit permettre à une personne, à un collaborateur ou à un agent IA de comp
 - ce qui est en brouillon;
 - ce qui est archivé;
 - quelles règles doivent être respectées;
-- quels documents doivent être lus avant d’agir.
+- quels documents doivent être lus avant d’agir;
+- pourquoi une fondation a évolué.
 
 ---
 
@@ -41,6 +43,7 @@ La source documentaire active est la structure officielle située à la racine d
 ```text
 00-SYSTEME-MAD/
 01-FONDATIONS/
+02-EVOLUTION/
 02-GUIDE/
 03-STANDARDS/
 04-ADR/
@@ -77,8 +80,9 @@ Lecture minimale recommandée :
 3. `00-SYSTEME-MAD/decisions.md`
 4. `01-FONDATIONS/non-negociable.md`
 5. `00-SYSTEME-MAD/registry/REG-001-mad-registry.md`
-6. `03-STANDARDS/`
-7. `04-ADR/`
+6. `02-EVOLUTION/README.md`
+7. `03-STANDARDS/`
+8. `04-ADR/`
 
 Le registre canonique des objets officiels est disponible dans `00-SYSTEME-MAD/registry/registry-index.yaml`.
 
@@ -89,6 +93,7 @@ Le registre canonique des objets officiels est disponible dans `00-SYSTEME-MAD/r
 ```text
 00-SYSTEME-MAD/       Gouvernance, contexte IA, décisions, Registry et standards documentaires
 01-FONDATIONS/        Principes fondateurs et non négociables
+02-EVOLUTION/         Trajectoire et maturation des idées structurantes
 02-GUIDE/             Guide stratégique et opérationnel MAD DevOps
 03-STANDARDS/         Standards techniques, qualité, sécurité et architecture
 04-ADR/               Architecture Decision Records
@@ -114,6 +119,7 @@ Avant de modifier ou générer un document pour MAD DevOps ou MADSuite, un agent
 - `00-SYSTEME-MAD/ai-context.md`;
 - `00-SYSTEME-MAD/decisions.md`;
 - `00-SYSTEME-MAD/registry/registry-index.yaml` pour identifier les objets déjà enregistrés;
+- `02-EVOLUTION/README.md` lorsque la tâche modifie une fondation;
 - les standards applicables dans `03-STANDARDS/`;
 - les ADR applicables dans `04-ADR/`.
 
@@ -139,4 +145,4 @@ Les statuts reconnus sont :
 
 Le Système MAD existe pour réduire la dépendance à la mémoire individuelle, éviter la répétition des mêmes décisions, standardiser la qualité et capitaliser sur l’expérience acquise par MAD DevOps.
 
-La documentation doit rester claire, utile, maintenable et fidèle à la réalité du studio.
+La documentation doit rester claire, utile, maintenable, fidèle à la réalité du studio et capable de préserver le fil de l’évolution des idées.
