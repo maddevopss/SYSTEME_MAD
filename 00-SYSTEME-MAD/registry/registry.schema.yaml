@@ -11,6 +11,8 @@ required:
   - version
   - owner
   - path
+  - created_at
+  - updated_at
 properties:
   id:
     type: string
@@ -19,7 +21,7 @@ properties:
   type:
     type: string
     pattern: "^[A-Z]+$"
-    description: Type d'objet enregistré.
+    description: Type documentaire ou fonctionnel déclaré pour l'objet.
   title:
     type: string
     minLength: 1
@@ -51,21 +53,11 @@ properties:
     items:
       type: string
       minLength: 1
-  relations:
-    type: array
-    uniqueItems: true
-    items:
-      type: string
-      pattern: "^[A-Z]+-[0-9]{3,}$"
-  affects:
-    type: array
-    uniqueItems: true
-    items:
-      type: string
-      minLength: 1
   created_at:
     type: string
     format: date
+    description: Date de création initiale de l'objet dans le système.
   updated_at:
     type: string
     format: date
+    description: Date de dernière modification connue de l'objet.
