@@ -1,8 +1,8 @@
 ---
 Projet: SYSTEME_MAD
 Document: Charte des Bâtisseurs
-Version: 0.1
-Dernière révision: 2026-07-14
+Version: 0.2
+Dernière révision: 2026-07-15
 Statut: Proposition
 Auteur: Marc-André Dufour
 Langue source: Français
@@ -10,7 +10,9 @@ Langue source: Français
 
 # Charte des Bâtisseurs
 
-Cette charte guide les personnes qui contribuent au Canon vivant de SYSTEME_MAD.
+Cette charte guide les personnes qui contribuent au Canon de SYSTEME_MAD.
+
+Elle s’inscrit sous le principe de la [souveraineté des bâtisseurs](souverainete-des-batisseurs.md) : les bâtisseurs demeurent les auteurs, les décideurs et les responsables de la connaissance.
 
 ## 1. Nous construisons pour comprendre
 
