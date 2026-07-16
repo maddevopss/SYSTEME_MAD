@@ -1,14 +1,27 @@
 ---
 Projet: SYSTEME_MAD
 Document: Constitution — Index des principes fondateurs
-Version: 0.1
+Version: 0.2
 Dernière révision: 2026-07-15
 Statut: Proposition
 Auteur: Marc-André Dufour
+Assumée par: Marc-André Dufour
 Langue source: Français
 ---
 
 # Constitution de SYSTEME_MAD
+
+## Préambule
+
+SYSTEME_MAD est un lieu où les idées sont libres de naître, mais où aucune n'est dispensée de l'épreuve.
+
+Nous croyons que la curiosité fait naître les intuitions, que la rigueur les transforme en connaissances, et que seules les idées ayant résisté à une épreuve proportionnée à leur ambition peuvent devenir des fondations.
+
+Nous construisons lentement ce qui permettra ensuite de construire durablement.
+
+Nous ne cherchons pas à avoir raison. Nous cherchons à comprendre avec justesse, à bâtir avec cohérence et à transmettre avec transparence.
+
+> **Les idées naissent libres. Les fondations se méritent.**
 
 ## Rôle
 
@@ -16,7 +29,7 @@ Cette Constitution est la porte d’entrée des principes fondateurs de SYSTEME_
 
 Elle ne remplace pas les fondations, standards, ADR, guides ou registres. Elle indique où vivent les règles, précise leur rôle et permet aux bâtisseurs de comprendre l’ordre d’autorité du Canon.
 
-SYSTEME_MAD n’est pas l’auteur de la connaissance. Il fournit le cadre qui permet aux bâtisseurs de la produire, de la valider, de la relier et de la préserver.
+SYSTEME_MAD n’est pas l’auteur de la connaissance. Il fournit le cadre qui permet aux bâtisseurs de la produire, de la valider, de la relier, de l'assumer et de la préserver.
 
 ## Article I — Souveraineté des bâtisseurs
 
@@ -44,13 +57,14 @@ Références principales :
 
 ## Article III — Construction de la connaissance
 
-Les idées ne deviennent pas officielles par simple formulation. Elles suivent un cycle explicite de documentation, recherche, examen, validation et intégration.
+Les idées ne deviennent pas officielles par simple formulation. Elles suivent un cycle explicite de documentation, recherche, examen, épreuve, validation et intégration.
 
 Références principales :
 
 - [`01-FONDATIONS/cycle-construction-connaissances.md`](../../01-FONDATIONS/cycle-construction-connaissances.md)
 - [`01-FONDATIONS/convention-une-brique-une-pr.md`](../../01-FONDATIONS/convention-une-brique-une-pr.md)
 - [`13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`](../../13-RESSOURCES/research/03-madproof/000-cadre-madproof.md)
+- [`00-SYSTEME-MAD/governance/axiomes-fondateurs.md`](axiomes-fondateurs.md)
 
 ## Article IV — Sources d’autorité
 
@@ -102,18 +116,50 @@ Ils proposent et signalent. Ils ne déterminent pas seuls ce qui devient officie
 
 Toute contribution d’un assistant demeure soumise aux règles de gouvernance et à la validation des bâtisseurs.
 
+## Article VIII — Assomption
+
+Toute connaissance intégrée à SYSTEME_MAD doit être assumée par un bâtisseur identifiable.
+
+Assumer une connaissance ne signifie pas prétendre qu'elle est définitive. Cela signifie accepter la responsabilité de sa qualité, de sa portée, de ses limites et de son évolution.
+
+Aucun contenu ne peut devenir officiel au seul motif qu'il a été produit par un outil, une autorité ou une intelligence artificielle.
+
+## Article IX — Primauté des fondations
+
+Les produits sont des expressions temporaires des architectures. Les architectures reposent sur des connaissances vérifiées. Les connaissances respectent les règles méthodologiques et philosophiques du système.
+
+Une couche supérieure ne doit jamais redéfinir rétroactivement les fondations uniquement pour justifier son existence.
+
+## Article X — Héritage
+
+Chaque nouvelle brique doit préciser de quelles fondations elle dépend, ce qu'elle apporte et ce qu'elle rend possible.
+
+Chaque contribution doit laisser SYSTEME_MAD dans un meilleur état qu'elle ne l'a trouvé.
+
 ## Parcours de lecture constitutionnel
 
 Pour comprendre rapidement SYSTEME_MAD :
 
 1. lire cette Constitution;
-2. lire la souveraineté des bâtisseurs;
-3. lire la Charte des Bâtisseurs;
-4. lire les non-négociables;
-5. lire le cycle de construction des connaissances;
-6. consulter le Manifeste pour les règles documentaires;
-7. suivre ensuite les standards et ADR applicables au chantier.
+2. lire les axiomes fondateurs;
+3. lire la souveraineté des bâtisseurs;
+4. lire la Charte des Bâtisseurs;
+5. lire les non-négociables;
+6. lire le cycle de construction des connaissances;
+7. consulter le Manifeste pour les règles documentaires;
+8. suivre ensuite les standards et ADR applicables au chantier.
+
+Textes d'accueil et de transmission :
+
+- [`00-SYSTEME-MAD/governance/a-celui-qui-entre.md`](a-celui-qui-entre.md)
+- [`00-SYSTEME-MAD/governance/a-celui-qui-poursuivra.md`](a-celui-qui-poursuivra.md)
 
 ## Clause d’interprétation
 
 Cette Constitution cartographie les autorités existantes. En cas de conflit, le document officiel le plus spécifique et la décision la plus récente explicitement applicable prévalent, sous réserve du Manifeste et des non-négociables.
+
+## Signature
+
+**Fondateur de la démarche : Marc-André Dufour**
+
+La Constitution de SYSTEME_MAD est un document vivant. Elle évolue uniquement lorsque de meilleures raisons existent de la faire évoluer.
