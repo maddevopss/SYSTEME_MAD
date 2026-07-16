@@ -1,8 +1,8 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: Index recherche — MADPROOF
-Version: 1.1
-Dernière révision: 2026-07-14
+Version: 1.0
+Dernière révision: 2026-07-02
 Statut: Index officiel / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
 ---
@@ -48,7 +48,6 @@ Pour traiter un nouveau fichier brut de `docs/research/atrier` :
 |---|---|---|
 | `000-cadre-madproof.md` | Cadre général de validation scientifique, produit et éthique MADPROOF. | À maintenir |
 | `001-matrice-madproof-mvp-rd-clinique-interdit.md` | Matrice officielle MVP / R&D / Clinique / Interdit. | Officiel à valider |
-| `006-manifeste-trois-v-briques-connaissance.md` | Fondation des Trois V, des Briques de connaissance et du principe d’évolution. | Fondation officielle |
 | `999-registre-claims-madproof.md` | Registre opérationnel des claims MADPROOF. | Officiel à maintenir |
 | `SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md` | Template officiel de fiche claim MADPROOF. | Template officiel |
 | `SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md` | Checklist de validation d’un claim. | À maintenir |

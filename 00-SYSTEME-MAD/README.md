@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — 00-gouvernance
-Version: 1.1
-Dernière révision: 2026-07-15
+Version: 1.0
+Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -29,12 +29,10 @@ Cadre de gouvernance, principes, décisions et références fondatrices.
 | non-negociable.md | Officiel | Document de référence actif |
 | non-substitution-medical.md | À valider | Statut à confirmer |
 | yaml-standard.md | Officiel | Document de référence actif |
-| ../01-FONDATIONS/infrastructure-intellectuelle-mad.md | MADPROOF-R&D | Fondation candidate — Infrastructure Intellectuelle MAD |
 
 ## Notes
 
 - Document canonique: voir les fichiers en statut Officiel.
-- Fondation candidate: voir les fichiers en statut MADPROOF-R&D.
 - Brouillon actif: voir les fichiers en statut Brouillon.
 - Archive: voir les fichiers en statut Archive.
 - Template: voir les fichiers en statut Template.
