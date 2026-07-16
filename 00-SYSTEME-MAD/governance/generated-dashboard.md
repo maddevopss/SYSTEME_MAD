@@ -2,26 +2,26 @@
 Projet: MADSuite
 Document: Dashboard de gouvernance généré automatiquement
 Version: 1.0
-Dernière révision: 2026-07-15
+Dernière révision: 2026-07-16
 Statut: Officiel
 Auteur: GitHub Actions — SYSTEME_MAD
 ---
 
 # Dashboard de gouvernance généré
 
-> Généré automatiquement le 2026-07-15T15:33:12.830Z. Ne pas modifier manuellement ce fichier.
+> Généré automatiquement le 2026-07-16T11:51:54.717Z. Ne pas modifier manuellement ce fichier.
 
 ## Signal automatisé GitHub
 
-**15/40**
+**10/40**
 
 Ce signal couvre uniquement les données vérifiables automatiquement. Il ne remplace pas le Engineering Health Score complet, qui inclut aussi les tests, la documentation, la sécurité et la dette technique validés humainement.
 
 | Dimension | Résultat |
 | --- | ---: |
-| CI visibles et vertes | 13/20 |
+| CI visibles et vertes | 10/20 |
 | Backlog P0/P1 | 0/10 |
-| Hygiène des PR ouvertes | 2/5 |
+| Hygiène des PR ouvertes | 0/5 |
 | Protection de branche lisible par l’API | 0/5 |
 | Repos accessibles | 6/7 |
 
@@ -29,12 +29,12 @@ Ce signal couvre uniquement les données vérifiables automatiquement. Il ne rem
 
 | Repo | Accessible | Dernière CI | Workflow | PR ouvertes | P0 | P1 | P2 | Protection main |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
-| `bleeband/SYSTEME_MAD` | Oui | 🟢 success | [Docs quality smoke](https://github.com/bleeband/SYSTEME_MAD/actions/runs/29428252229) | 1 | 6 | 7 | 7 | non vérifiable |
-| `maddevopss/madsuite` | Oui | 🔴 failure | [Responsive Nightly Extended](https://github.com/maddevopss/madsuite/actions/runs/29403378962) | 0 | 0 | 0 | 0 | non vérifiable |
+| `bleeband/SYSTEME_MAD` | Oui | 🟡 in_progress | [Governance dashboard](https://github.com/bleeband/SYSTEME_MAD/actions/runs/29495966059) | 6 | 6 | 7 | 7 | non vérifiable |
+| `maddevopss/madsuite` | Oui | 🔴 failure | [Responsive Nightly Extended](https://github.com/maddevopss/madsuite/actions/runs/29486255317) | 0 | 0 | 0 | 0 | non vérifiable |
 | `maddevopss/madsuite-frontend` | Oui | 🟢 success | [Frontend Main CI](https://github.com/maddevopss/madsuite-frontend/actions/runs/29215157689) | 0 | 0 | 0 | 1 | non vérifiable |
 | `maddevopss/madsuite-backend` | Oui | 🔴 failure | [Backend PR Guards](https://github.com/maddevopss/madsuite-backend/actions/runs/29260901638) | 1 | 0 | 0 | 0 | non vérifiable |
 | `maddevopss/desktop-agent` | Oui | 🟢 success | [Desktop Agent Guards](https://github.com/maddevopss/desktop-agent/actions/runs/29174669156) | 2 | 0 | 0 | 0 | non vérifiable |
-| `maddevopss/e2e` | Oui | 🟢 success | [E2E CI](https://github.com/maddevopss/e2e/actions/runs/29208808650) | 0 | 0 | 0 | 0 | non vérifiable |
+| `maddevopss/e2e` | Oui | 🟢 success | [E2E CI](https://github.com/maddevopss/e2e/actions/runs/29443907051) | 0 | 0 | 0 | 0 | non vérifiable |
 | `bleeband/maddevops` | Non | ⚪ inconnu | Non accessible | 0 | 0 | 0 | 0 | non vérifiable |
 
 ## Totaux observés
@@ -42,7 +42,7 @@ Ce signal couvre uniquement les données vérifiables automatiquement. Il ne rem
 - P0 ouverts : **6**
 - P1 ouverts : **7**
 - P2 ouverts : **8**
-- PR ouvertes : **4**
+- PR ouvertes : **9**
 
 ## Limites
 
@@ -53,4 +53,4 @@ Ce signal couvre uniquement les données vérifiables automatiquement. Il ne rem
 
 ## Erreurs d’accès
 
-- `bleeband/maddevops` : /repos/bleeband/maddevops: HTTP 404 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/repos#get-a-repository","status":"404"}
+- `bleeband/maddevops` : /repos/bleeband/maddevops/issues?state=open&per_page=100: HTTP 404 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/issues/issues#list-repository-issues","status":"404"}
