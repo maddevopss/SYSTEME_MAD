@@ -72,20 +72,20 @@ Des niveaux secondaires peuvent être indiqués lorsque le document joue réelle
 
 ## 4. Relations conceptuelles
 
-Les relations suivantes constituent le vocabulaire initial du futur graphe de connaissances :
+Les relations suivantes constituent le vocabulaire initial du futur graphe de connaissances. Les libellés indiqués sont les clés YAML canoniques et doivent être utilisés avec exactement la même casse et les mêmes espaces :
 
-- `soutient` — fournit une justification ou une base à une autre brique;
-- `dépend_de` — nécessite une autre brique pour conserver son sens ou sa validité;
-- `complète` — ajoute une responsabilité distincte à une autre brique;
-- `spécialise` — applique une brique générale à un contexte plus précis;
-- `implémente` — concrétise un principe, une capacité, un pattern ou une architecture;
-- `évalue` — fournit des critères, tests ou preuves concernant une autre brique;
-- `remplace` — devient la source active à la place d’une autre brique;
-- `est_remplacé_par` — pointe vers la source active;
-- `contredit` — signale une incompatibilité non résolue;
-- `informe` — apporte du contexte sans créer de dépendance normative.
+- `Soutient` — fournit une justification ou une base à une autre brique;
+- `Dépend de` — nécessite une autre brique pour conserver son sens ou sa validité;
+- `Complète` — ajoute une responsabilité distincte à une autre brique;
+- `Spécialise` — applique une brique générale à un contexte plus précis;
+- `Implémente` — concrétise un principe, une capacité, un pattern ou une architecture;
+- `Évalue` — fournit des critères, tests ou preuves concernant une autre brique;
+- `Remplace` — devient la source active à la place d’une autre brique;
+- `Est remplacé par` — pointe vers la source active;
+- `Contredit` — signale une incompatibilité non résolue;
+- `Informe` — apporte du contexte sans créer de dépendance normative.
 
-Les relations doivent pointer vers des chemins stables ou des identifiants de registre lorsqu’ils existent.
+Les relations doivent pointer vers des chemins stables ou des identifiants de registre lorsqu’ils existent. Une relation dont la cible ne possède pas encore de chemin stable ou d’identifiant ne doit pas être inscrite sous forme de libellé libre.
 
 ## 5. Champs proposés
 
@@ -143,7 +143,7 @@ Les documents historiques ne doivent pas être modifiés mécaniquement. Leur cl
 
 ### 7.1 Une relation doit avoir un sens précis
 
-Ne pas utiliser `lié à` comme relation universelle lorsque `dépend_de`, `complète`, `spécialise` ou `implémente` décrit mieux le lien.
+Ne pas utiliser `Lié à` comme relation universelle lorsque `Dépend de`, `Complète`, `Spécialise` ou `Implémente` décrit mieux le lien.
 
 ### 7.2 Les dépendances doivent remonter vers le plus fondamental
 
@@ -183,15 +183,12 @@ Portée: "MADSuite"
 
 Dépend de:
   - "01-FONDATIONS/orientation-cognitive.md"
-Soutient:
-  - "Capacité de reprise après interruption"
-Implémente:
-  - "Principe de préservation du contexte"
-Dossier MADPROOF:
-  - "Recherche sur le resumption lag et la mémoire prospective"
+Soutient: []
+Implémente: []
+Dossier MADPROOF: []
 ```
 
-Cet exemple illustre la traçabilité attendue. Il ne canonise pas le pattern ni ses affirmations.
+Les relations `Soutient`, `Implémente` et `Dossier MADPROOF` demeurent vides tant que leurs cibles ne disposent pas d’un chemin stable ou d’un identifiant de registre. Cet exemple illustre la traçabilité attendue. Il ne canonise pas le pattern ni ses affirmations.
 
 ## 9. Adoption proposée
 
