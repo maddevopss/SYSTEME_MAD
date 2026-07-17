@@ -9,7 +9,7 @@ Auteur: GitHub Actions — SYSTEME_MAD
 
 # Dashboard de gouvernance généré
 
-> Généré automatiquement le 2026-07-17T15:20:16.209Z. Ne pas modifier manuellement ce fichier.
+> Généré automatiquement le 2026-07-17T15:38:37.124Z. Ne pas modifier manuellement ce fichier.
 
 ## Signal automatisé GitHub
 
@@ -32,7 +32,7 @@ Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-
 
 | Repo | Accessible | Dernière CI | Workflow | PR ouvertes | P0 | P1 | P2 | Protection main |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
-| `bleeband/SYSTEME_MAD` | Oui | 🟡 in_progress | [Governance dashboard](https://github.com/bleeband/SYSTEME_MAD/actions/runs/29591671006) | 14 | 6 | 7 | 7 | non vérifiable |
+| `bleeband/SYSTEME_MAD` | Oui | 🟡 in_progress | [Docs quality smoke](https://github.com/bleeband/SYSTEME_MAD/actions/runs/29592949571) | 13 | 6 | 7 | 7 | non vérifiable |
 | `maddevopss/madsuite` | Oui | 🔴 failure | [Responsive Nightly Extended](https://github.com/maddevopss/madsuite/actions/runs/29568885480) | 0 | 0 | 0 | 0 | non vérifiable |
 | `maddevopss/madsuite-frontend` | Oui | 🟢 success | [Frontend Main CI](https://github.com/maddevopss/madsuite-frontend/actions/runs/29518748914) | 0 | 0 | 0 | 1 | non vérifiable |
 | `maddevopss/madsuite-backend` | Oui | 🔴 failure | [Backend Main CI](https://github.com/maddevopss/madsuite-backend/actions/runs/29541629864) | 0 | 0 | 0 | 0 | non vérifiable |
@@ -45,7 +45,7 @@ Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-
 - P0 ouverts : **6**
 - P1 ouverts : **7**
 - P2 ouverts : **8**
-- PR ouvertes : **14**
+- PR ouvertes : **13**
 
 ## Limites
 
