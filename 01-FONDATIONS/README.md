@@ -1,11 +1,10 @@
 ---
-Titre: Index canonique des fondations
+Projet: MAD DevOps
+Document: Index canonique des fondations
+Version: 0.1
+Dernière révision: 2026-07-17
 Statut: À valider
-Version: 0.1.0
 Auteur: Marc-André Dufour
-Responsable: Gardien de SYSTEME_MAD
-Dernière mise à jour: 2026-07-16
-Portée: 01-FONDATIONS
 ---
 
 # Index canonique des fondations
