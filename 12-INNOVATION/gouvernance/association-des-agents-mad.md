@@ -250,6 +250,6 @@ Un agent est évalué selon :
 
 ## Statut
 
-Cette proposition est classée `À valider`.
+Cette proposition est classée `Brouillon`.
 
 Elle ne devient ni une fondation officielle ni une délégation d’autorité avant révision et acceptation explicite par l’Architecte MAD.
