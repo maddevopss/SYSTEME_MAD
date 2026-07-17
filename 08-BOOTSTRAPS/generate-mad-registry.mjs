@@ -54,17 +54,17 @@ function parseSource(yaml) {
       current = null;
       continue;
     }
-    if (section === "relation_types") {
-      const relationType = line.match(/^\s{2}-\s*(.+?)\s*$/);
-      if (relationType) relationTypes.push(cleanScalar(relationType[1]));
-      continue;
-    }
     const object = line.match(/^\s{2}-\s+id:\s*(.+?)\s*$/);
-    if (section === "objects" && object) {
+    if (object) {
       current = { id: cleanScalar(object[1]), tags: [], relations: [] };
       entries.push(current);
       currentRelation = null;
       section = "object";
+      continue;
+    }
+    if (section === "relation_types") {
+      const relationType = line.match(/^\s{2}-\s*(.+?)\s*$/);
+      if (relationType) relationTypes.push(cleanScalar(relationType[1]));
       continue;
     }
     if (!current) continue;
