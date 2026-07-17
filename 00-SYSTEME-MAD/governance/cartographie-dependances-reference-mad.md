@@ -47,15 +47,29 @@ Une implémentation peut informer l’évolution d’un principe par l’expéri
 
 ## 3. Carte d’autorité documentaire
 
+Les documents actuels ne déclarent pas encore tous directement les liens du parcours recommandé. La carte distingue donc les liens observables des relations de lecture proposées.
+
 ```text
 README.md
-  └─ oriente vers MANIFEST.md
-       └─ oriente vers la Constitution
-            ├─ reconnaît les sources d’autorité
-            ├─ encadre le registre
-            └─ oriente vers REFERENCE_MAD.md
-                 └─ présente la carte intellectuelle du corpus
+  └─ référence directement MANIFEST.md
+
+01-FONDATIONS/README.md
+  └─ propose le parcours de lecture suivant :
+       README.md
+         → MANIFEST.md
+         → 00-SYSTEME-MAD/governance/constitution.md
+         → REFERENCE_MAD.md
+         → 01-FONDATIONS/README.md
+
+00-SYSTEME-MAD/governance/constitution.md
+  ├─ reconnaît les sources d’autorité
+  └─ encadre le registre
+
+REFERENCE_MAD.md
+  └─ présente la carte intellectuelle du corpus
 ```
+
+Le parcours proposé facilite la compréhension, mais ne doit pas être interprété comme une chaîne de références directes tant que chaque document source ne déclare pas explicitement le lien correspondant.
 
 `00-SYSTEME-MAD/README.md` demeure l’index local du noyau de gouvernance.
 
@@ -64,15 +78,15 @@ README.md
 ### 4.1 Vision et philosophie
 
 ```text
-00-premier-bloc.md
-  ├─ informe mad-001.md
-  ├─ soutient non-negociable.md
-  └─ informe orientation-cognitive.md
+01-FONDATIONS/00-premier-bloc.md
+  ├─ informe 01-FONDATIONS/mad-001.md
+  ├─ soutient 01-FONDATIONS/non-negociable.md
+  └─ informe 01-FONDATIONS/orientation-cognitive.md
 
-mad-001.md
-  ├─ soutient non-negociable.md
-  ├─ informe charte-des-batisseurs.md
-  └─ informe modele-du-batisseur.md
+01-FONDATIONS/mad-001.md
+  ├─ soutient 01-FONDATIONS/non-negociable.md
+  ├─ informe 01-FONDATIONS/charte-des-batisseurs.md
+  └─ informe 01-FONDATIONS/modele-du-batisseur.md
 ```
 
 Interprétation prudente : le Premier Bloc et le manifeste partagent une direction humaine et cognitive, mais leurs responsabilités demeurent distinctes.
@@ -80,16 +94,16 @@ Interprétation prudente : le Premier Bloc et le manifeste partagent une directi
 ### 4.2 Principes de gouvernance
 
 ```text
-souverainete-des-batisseurs.md
-  ├─ soutient charte-des-batisseurs.md
-  └─ soutient modele-du-batisseur.md
+01-FONDATIONS/souverainete-des-batisseurs.md
+  ├─ soutient 01-FONDATIONS/charte-des-batisseurs.md
+  └─ soutient 01-FONDATIONS/modele-du-batisseur.md
 
-axiomes-fondateurs.md
-  ├─ soutient cycle-construction-connaissances.md
-  ├─ soutient inventaire-classement-reference-mad.md
-  └─ informe convention-une-brique-une-pr.md
+Axiomes fondateurs — cible conceptuelle à enregistrer
+  ├─ soutient 01-FONDATIONS/cycle-construction-connaissances.md
+  ├─ soutient 00-SYSTEME-MAD/governance/inventaire-classement-reference-mad.md
+  └─ informe 01-FONDATIONS/convention-une-brique-une-pr.md
 
-convention-une-brique-une-pr.md
+01-FONDATIONS/convention-une-brique-une-pr.md
   └─ encadre l’évolution de toutes les briques
 ```
 
@@ -98,13 +112,13 @@ La Charte, la Souveraineté et le Modèle du Bâtisseur ne doivent pas être fus
 ### 4.3 Capacité cognitive
 
 ```text
-00-premier-bloc.md
-  └─ informe orientation-cognitive.md
+01-FONDATIONS/00-premier-bloc.md
+  └─ informe 01-FONDATIONS/orientation-cognitive.md
 
-non-negociable.md
-  └─ contraint orientation-cognitive.md
+01-FONDATIONS/non-negociable.md
+  └─ contraint 01-FONDATIONS/orientation-cognitive.md
 
-orientation-cognitive.md
+01-FONDATIONS/orientation-cognitive.md
   ├─ soutient les capacités de repérage
   ├─ soutient la continuité cognitive
   ├─ informe les futurs patterns Ariane
@@ -116,17 +130,17 @@ La relation avec les patterns Ariane demeure candidate jusqu’à l’inventaire
 ### 4.4 Architectures de connaissances
 
 ```text
-infrastructure-intellectuelle-mad.md
+01-FONDATIONS/infrastructure-intellectuelle-mad.md
   ├─ dépend des axiomes fondateurs
   ├─ organise objets, relations, provenance et évolution
   ├─ soutient la Référence MAD comme graphe de connaissances
-  └─ complète infrastructure-de-connaissances-mad.md
+  └─ complète 01-FONDATIONS/infrastructure-de-connaissances-mad.md
 
-infrastructure-de-connaissances-mad.md
+01-FONDATIONS/infrastructure-de-connaissances-mad.md
   ├─ dépend des principes de gouvernance des connaissances
   ├─ fournit une couche de connaissances partagées
   ├─ est consommable par les domaines
-  └─ complète infrastructure-intellectuelle-mad.md
+  └─ complète 01-FONDATIONS/infrastructure-intellectuelle-mad.md
 ```
 
 Distinction protégée :
@@ -137,29 +151,33 @@ Distinction protégée :
 ### 4.5 Fondation de domaine SST
 
 ```text
-principes transversaux MAD
-  └─ spécialisent ecosysteme-sst.md
+Principes transversaux MAD — cible conceptuelle à enregistrer
+  └─ spécialisent 01-FONDATIONS/ecosysteme-sst.md
        └─ devrait soutenir de futures architectures et implémentations SST
 ```
 
-`ecosysteme-sst.md` est actuellement une fondation de domaine candidate. Son emplacement dans `01-FONDATIONS/` doit être réévalué sans remettre en cause la valeur de son contenu.
+`01-FONDATIONS/ecosysteme-sst.md` est actuellement une fondation de domaine candidate. Son emplacement dans `01-FONDATIONS/` doit être réévalué sans remettre en cause la valeur de son contenu.
 
 ## 5. Matrice initiale
 
+Les chemins ci-dessous sont relatifs à la racine du dépôt. Lorsqu’une cible conceptuelle ne possède pas encore de fichier ou d’identifiant stable, elle est explicitement marquée comme telle et ne doit pas être automatisée.
+
 | Source | Relation | Cible | Confiance | État |
-|---|---|---|---|---|
-| `README.md` | oriente vers | `MANIFEST.md` | Élevée | Observée |
-| `MANIFEST.md` | oriente vers | Constitution | Élevée | Observée |
-| Constitution | reconnaît | registre et sources d’autorité | Élevée | Observée |
+| --- | --- | --- | --- | --- |
+| `README.md` | référence directement | `MANIFEST.md` | Élevée | Observée |
+| `01-FONDATIONS/README.md` | propose un parcours vers | `00-SYSTEME-MAD/governance/constitution.md` | Élevée | Observée |
+| `01-FONDATIONS/README.md` | propose un parcours vers | `REFERENCE_MAD.md` | Élevée | Observée |
+| `00-SYSTEME-MAD/governance/constitution.md` | reconnaît | sources d’autorité et registre | Élevée | Observée |
 | `REFERENCE_MAD.md` | cartographie | corpus MAD | Élevée | Observée |
-| `00-premier-bloc.md` | informe | `orientation-cognitive.md` | Moyenne | À valider |
-| `mad-001.md` | soutient | `non-negociable.md` | Moyenne | À valider |
-| `souverainete-des-batisseurs.md` | soutient | Charte et Modèle du Bâtisseur | Élevée | À valider |
-| axiomes fondateurs | soutient | cycle de construction des connaissances | Élevée | À valider |
-| `orientation-cognitive.md` | informe | futurs patterns Ariane | Moyenne | Candidate |
-| IIM | complète | IKM | Élevée | À valider |
-| IKM | complète | IIM | Élevée | À valider |
-| principes transversaux | spécialisent | écosystème SST | Moyenne | À valider |
+| `01-FONDATIONS/00-premier-bloc.md` | informe | `01-FONDATIONS/orientation-cognitive.md` | Moyenne | À valider |
+| `01-FONDATIONS/mad-001.md` | soutient | `01-FONDATIONS/non-negociable.md` | Moyenne | À valider |
+| `01-FONDATIONS/souverainete-des-batisseurs.md` | soutient | `01-FONDATIONS/charte-des-batisseurs.md` | Élevée | À valider |
+| `01-FONDATIONS/souverainete-des-batisseurs.md` | soutient | `01-FONDATIONS/modele-du-batisseur.md` | Élevée | À valider |
+| cible conceptuelle : axiomes fondateurs | soutient | `01-FONDATIONS/cycle-construction-connaissances.md` | Élevée | À enregistrer |
+| `01-FONDATIONS/orientation-cognitive.md` | informe | cible conceptuelle : futurs patterns Ariane | Moyenne | Candidate |
+| `01-FONDATIONS/infrastructure-intellectuelle-mad.md` | complète | `01-FONDATIONS/infrastructure-de-connaissances-mad.md` | Élevée | À valider |
+| `01-FONDATIONS/infrastructure-de-connaissances-mad.md` | complète | `01-FONDATIONS/infrastructure-intellectuelle-mad.md` | Élevée | À valider |
+| cible conceptuelle : principes transversaux MAD | spécialisent | `01-FONDATIONS/ecosysteme-sst.md` | Moyenne | À enregistrer |
 
 ## 6. Trous de traçabilité identifiés
 
