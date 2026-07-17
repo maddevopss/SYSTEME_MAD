@@ -1,8 +1,10 @@
 ---
-titre: Le chantier n’est jamais terminé
-statut: Proposition à valider
-categorie: Fondation
-langue_source: fr
+Projet: MAD DevOps
+Document: Le chantier n’est jamais terminé
+Version: 0.1
+Dernière révision: 2026-07-17
+Statut: Proposition à valider
+Auteur: Marc-André Dufour
 ---
 
 # Le chantier n’est jamais terminé
