@@ -1,8 +1,10 @@
 ---
-titre: Le puzzle des connaissances
-statut: Proposition à valider
-categorie: Fondation
-langue_source: fr
+Projet: MAD DevOps
+Document: Le puzzle des connaissances
+Version: 0.1
+Dernière révision: 2026-07-17
+Statut: Proposition à valider
+Auteur: Marc-André Dufour
 ---
 
 # Le puzzle des connaissances
