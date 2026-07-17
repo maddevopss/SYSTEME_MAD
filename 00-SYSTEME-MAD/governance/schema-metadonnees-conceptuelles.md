@@ -1,11 +1,10 @@
 ---
-Titre: Schéma des métadonnées conceptuelles MAD
+Projet: MAD DevOps
+Document: Schéma des métadonnées conceptuelles MAD
+Version: 0.1
+Dernière révision: 2026-07-17
 Statut: À valider
-Version: 0.1.0
 Auteur: Marc-André Dufour
-Responsable: Gardien de SYSTEME_MAD
-Dernière mise à jour: 2026-07-16
-Portée: Référence MAD
 ---
 
 # Schéma des métadonnées conceptuelles MAD
