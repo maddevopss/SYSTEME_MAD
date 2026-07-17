@@ -3,7 +3,7 @@ Projet: SYSTEME_MAD
 Document: Association des Agents MAD
 Version: 0.1
 Dernière révision: 2026-07-17
-Statut: À valider
+Statut: Brouillon
 Auteur: Marc-André Dufour
 ---
 
