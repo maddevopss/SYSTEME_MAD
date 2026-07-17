@@ -1,0 +1,26 @@
+schema_version: "1.0"
+registry: MAD Registry Sources
+objects:
+  - id: REG-001
+    path: 00-SYSTEME-MAD/registry/REG-001-mad-registry.md
+    summary: Registre canonique des objets officiels du Système MAD.
+    tags:
+      - registry
+      - gouvernance
+      - fondation
+
+  - id: ADR-007
+    path: 04-ADR/ADR-007-mad-guardian-certification-continue.md
+    summary: Décision structurante introduisant MAD Guardian et ses profils de certification.
+    tags:
+      - guardian
+      - certification
+      - gouvernance
+
+  - id: STD-800
+    path: 03-STANDARDS/std-800-mad-guardian-quality-gates.md
+    summary: Standard des contrôles et états de validation utilisés par MAD Guardian.
+    tags:
+      - guardian
+      - quality-gates
+      - standard
