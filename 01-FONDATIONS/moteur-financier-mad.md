@@ -167,7 +167,12 @@ Cette fondation candidate pourra être réévaluée lorsque :
 
 ## Relation avec SYSTEME_MAD
 
-Le MFM pourrait éventuellement rejoindre une famille de moteurs spécialisés partageant certains principes de traçabilité, de contexte, de règles et de projections. Cette convergence reste une hypothèse à observer plutôt qu’une architecture à imposer.
+Le MFM est une fondation candidate en phase `MADPROOF-R&D`. Pour préserver la traçabilité, ce document devrait être lu en cohérence avec :
+
+- [`MANIFEST.md`](../MANIFEST.md)
+- [`01-FONDATIONS/README.md`](./README.md)
+- [`00-SYSTEME-MAD/ai-context.md`](../00-SYSTEME-MAD/ai-context.md)
+- [`00-SYSTEME-MAD/decisions.md`](../00-SYSTEME-MAD/decisions.md)
 
 Documents de gouvernance et d’index associés :
 
