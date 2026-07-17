@@ -1,8 +1,10 @@
 ---
-titre: Alphabet des bâtisseurs
-statut: Proposition à valider
-categorie: Fondation
-langue_source: fr
+Projet: MAD DevOps
+Document: Alphabet des bâtisseurs
+Version: 0.1
+Dernière révision: 2026-07-17
+Statut: Proposition à valider
+Auteur: Marc-André Dufour
 ---
 
 # Alphabet des bâtisseurs
