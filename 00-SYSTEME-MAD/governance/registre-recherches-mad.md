@@ -1,8 +1,10 @@
 ---
-titre: Registre des recherches MAD
-statut: Proposition
-categorie: Gouvernance
-langue: fr-CA
+Projet: MAD DevOps
+Document: Registre des recherches MAD
+Version: 0.1
+Dernière révision: 2026-07-17
+Statut: Proposition
+Auteur: Marc-André Dufour
 ---
 
 # Registre des recherches MAD
@@ -71,7 +73,9 @@ id: PUB-004
 titre: Recherche appel d’offres — suite
 domaine: contrats-publics
 format: pdf
+provenance: Recherche fournie par le bâtisseur
 date_reception: 2026-07-16
+derniere_revision: 2026-07-17
 
 etat: analyse_partielle
 couverture:
