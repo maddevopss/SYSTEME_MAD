@@ -217,6 +217,6 @@ Les trois terrains sont retenus comme candidats de recherche appliquée accessib
 
 1. saisie comptable interrompue ;
 2. apprentissage à distance fragmenté ;
-3. travail administratif multitâche.
+3. travail administratif fragmenté.
 
 Ils servent à préparer des prototypes et études pilotes prudents. Aucun résultat, calendrier, budget ou bénéfice produit n'est considéré acquis.
