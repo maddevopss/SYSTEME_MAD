@@ -1,6 +1,6 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
 title: MAD Registry Entry
-description: Schéma minimal d'une entrée du MAD Registry.
+description: Schéma d'une entrée du MAD Registry et de ses relations canoniques.
 type: object
 additionalProperties: false
 required:
@@ -29,6 +29,7 @@ properties:
     type: string
     enum:
       - Officiel
+      - Accepté
       - Brouillon
       - À valider
       - À fusionner
@@ -53,6 +54,29 @@ properties:
     items:
       type: string
       minLength: 1
+  relations:
+    type: array
+    uniqueItems: true
+    description: Relations sortantes de l'objet vers d'autres identifiants canoniques.
+    items:
+      type: object
+      additionalProperties: false
+      required:
+        - type
+        - target
+      properties:
+        type:
+          type: string
+          enum:
+            - depend_de
+            - met_en_oeuvre
+            - valide
+            - remplace
+            - derive_de
+            - associe_a
+        target:
+          type: string
+          pattern: "^[A-Z]+-[0-9]{3,}$"
   created_at:
     type: string
     format: date
