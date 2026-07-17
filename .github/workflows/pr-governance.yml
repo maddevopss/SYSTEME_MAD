@@ -30,6 +30,7 @@ jobs:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           HEAD_REF: ${{ github.head_ref }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
           PR_BODY: ${{ github.event.pull_request.body }}
           PR_DRAFT: ${{ github.event.pull_request.draft }}
         run: |
@@ -43,16 +44,17 @@ jobs:
           base = os.environ["BASE_SHA"]
           head = os.environ["HEAD_SHA"]
           head_ref = os.environ.get("HEAD_REF", "")
+          pr_author = os.environ.get("PR_AUTHOR", "")
           pr_body = os.environ.get("PR_BODY", "")
           is_draft = os.environ.get("PR_DRAFT", "false").lower() == "true"
 
           result = subprocess.run(
-              ["git", "diff", "--name-only", f"{base}...{head}"],
+              ["git", "diff", "--name-only", "-z", f"{base}...{head}"],
               check=True,
               capture_output=True,
               text=True,
           )
-          changed = [Path(line) for line in result.stdout.splitlines() if line.strip()]
+          changed = [Path(path) for path in result.stdout.split("\0") if path]
           errors = []
 
           if not is_draft:
@@ -67,10 +69,14 @@ jobs:
                       errors.append(f"Section manquante dans la PR prête à réviser : {section}")
 
           generated = Path("00-SYSTEME-MAD/governance/generated-dashboard.md")
-          if generated in changed and head_ref != "automation/governance-dashboard":
+          is_dashboard_automation = (
+              head_ref == "automation/governance-dashboard"
+              and pr_author == "github-actions[bot]"
+          )
+          if generated in changed and not is_dashboard_automation:
               errors.append(
                   "Le dashboard généré ne doit être modifié que par "
-                  "automation/governance-dashboard."
+                  "l’automatisation GitHub autorisée."
               )
 
           conflict_pattern = re.compile(r"^(<<<<<<<|=======|>>>>>>>)", re.MULTILINE)
@@ -83,10 +89,17 @@ jobs:
           text_suffixes = {
               ".md", ".txt", ".yml", ".yaml", ".json", ".js", ".mjs",
               ".cjs", ".ts", ".tsx", ".py", ".sh", ".ps1", ".toml",
+              ".pem", ".key", ".p8",
           }
 
           for path in changed:
-              if not path.exists() or path.suffix.lower() not in text_suffixes:
+              is_environment_file = path.name == ".env" or path.name.startswith(".env.")
+              is_text = (
+                  path.suffix.lower() in text_suffixes
+                  or path.name == ".envrc"
+                  or is_environment_file
+              )
+              if not path.exists() or not is_text:
                   continue
 
               content = path.read_text(encoding="utf-8", errors="replace")
