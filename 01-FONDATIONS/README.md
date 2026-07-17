@@ -76,6 +76,7 @@ Ce parcours facilite la compréhension. Il ne crée pas une hiérarchie juridiqu
 
 - [`infrastructure-intellectuelle-mad.md`](./infrastructure-intellectuelle-mad.md) — architecture de préservation, de provenance et de relations des connaissances; maturité actuelle : MADPROOF-R&D.
 - [`infrastructure-de-connaissances-mad.md`](./infrastructure-de-connaissances-mad.md) — couche de connaissances partagées consommable par les domaines; statut actuel : À valider.
+- [`moteur-financier-mad.md`](./moteur-financier-mad.md) — fondation candidate du Moteur financier MAD; maturité actuelle : MADPROOF-R&D.
 
 ### Fondation de domaine à réévaluer
 
