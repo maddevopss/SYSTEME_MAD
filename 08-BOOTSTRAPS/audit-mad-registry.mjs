@@ -16,8 +16,23 @@ function normalizeKey(value) {
   return value.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
+function normalizeStatus(value = "") {
+  const normalized = normalizeKey(value);
+  const aliases = new Map([
+    ["accepte", "officiel"],
+    ["adopte", "officiel"],
+    ["approved", "officiel"],
+    ["official", "officiel"],
+    ["draft", "brouillon"],
+    ["to validate", "a valider"],
+    ["deprecated", "deprecie"],
+    ["archived", "archive"]
+  ]);
+  return aliases.get(normalized) || normalized;
+}
+
 function cleanScalar(value = "") {
-  return value.trim().replace(/^(["'])(.*)\1$/, "$2");
+  return value.trim().replace(/^(^["'])(.*)\1$/, "$2");
 }
 
 function parseFrontmatter(content) {
@@ -108,11 +123,17 @@ for (const directory of OFFICIAL_DIRS) {
 }
 
 const documentsById = new Map();
-const duplicateDocumentIds = [];
 for (const document of documents) {
-  if (documentsById.has(document.id)) {
-    duplicateDocumentIds.push(`${document.id} : \`${documentsById.get(document.id).path}\` et \`${document.path}\``);
-  } else documentsById.set(document.id, document);
+  const matches = documentsById.get(document.id) || [];
+  matches.push(document);
+  documentsById.set(document.id, matches);
+}
+
+const duplicateDocumentIds = [];
+for (const [id, matches] of documentsById) {
+  if (matches.length > 1) {
+    duplicateDocumentIds.push(`${id} : ${matches.map((item) => `\`${item.path}\``).join("; ")}`);
+  }
 }
 
 const missingPaths = [];
@@ -126,31 +147,59 @@ for (const item of registered) {
     missingPaths.push(`${item.id} : champ \`path\` absent`);
     continue;
   }
-  try { await fs.access(path.join(ROOT, item.path)); } catch { missingPaths.push(`${item.id} : \`${item.path}\``); }
-  const document = documentsById.get(item.id);
-  if (document && document.path !== item.path) idPathMismatches.push(`${item.id} : registre \`${item.path}\`, document \`${document.path}\``);
-  if (document?.status && item.status && document.status !== item.status) statusMismatches.push(`${item.id} : registre \`${item.status}\`, document \`${document.status}\``);
+
+  try {
+    await fs.access(path.join(ROOT, item.path));
+  } catch {
+    missingPaths.push(`${item.id} : \`${item.path}\``);
+    continue;
+  }
+
+  const candidates = documentsById.get(item.id) || [];
+  const canonicalDocument = candidates.find((document) => document.path === item.path);
+
+  if (!canonicalDocument) {
+    const detectedPaths = candidates.length
+      ? candidates.map((document) => `\`${document.path}\``).join(", ")
+      : "aucun document portant cet identifiant";
+    idPathMismatches.push(`${item.id} : registre \`${item.path}\`; détection : ${detectedPaths}`);
+    continue;
+  }
+
+  if (
+    canonicalDocument.status
+    && item.status
+    && normalizeStatus(canonicalDocument.status) !== normalizeStatus(item.status)
+  ) {
+    statusMismatches.push(`${item.id} : registre \`${item.status}\`, document \`${canonicalDocument.status}\``);
+  }
 }
 
 for (const document of documents) {
-  if (!registeredById.has(document.id)) unregistered.push(`${document.id} — \`${document.path}\``);
+  const registeredItem = registeredById.get(document.id);
+  if (!registeredItem || registeredItem.path !== document.path) {
+    unregistered.push(`${document.id} — \`${document.path}\``);
+  }
   const absent = ["status", "version", "owner", "created_at", "updated_at"].filter((key) => !document[key]);
   if (absent.length) missingMetadata.push(`${document.id} — \`${document.path}\` : ${absent.join(", ")}`);
 }
 
 const hardErrors = [
   ...duplicateRegistryIds.map((id) => `Identifiant dupliqué dans le registre : ${id}`),
-  ...duplicateDocumentIds.map((item) => `Identifiant documentaire dupliqué : ${item}`),
   ...missingPaths.map((item) => `Chemin canonique invalide : ${item}`),
-  ...idPathMismatches.map((item) => `Chemin divergent : ${item}`),
-  ...statusMismatches.map((item) => `Statut divergent : ${item}`)
+  ...idPathMismatches.map((item) => `Chemin canonique divergent : ${item}`),
+  ...statusMismatches.map((item) => `Statut canonique divergent : ${item}`)
+];
+
+const migrationWarnings = [
+  ...duplicateDocumentIds.map((item) => `Collision documentaire historique : ${item}`)
 ];
 
 const generatedAt = new Date().toISOString();
 const report = `---
 Projet: Système MAD
 Document: Rapport généré d’intégrité du MAD Registry
-Version: 1.0
+Version: 1.1
 Dernière révision: ${generatedAt.slice(0, 10)}
 Statut: Officiel
 Auteur: Automatisation SYSTEME_MAD
@@ -164,13 +213,18 @@ Auteur: Automatisation SYSTEME_MAD
 
 - Entrées enregistrées : **${registered.length}**
 - Objets documentaires détectés : **${documents.length}**
-- Erreurs bloquantes : **${hardErrors.length}**
+- Erreurs canoniques bloquantes : **${hardErrors.length}**
+- Avertissements de migration : **${migrationWarnings.length}**
 - Objets non enregistrés : **${unregistered.length}**
 - Objets avec métadonnées incomplètes : **${missingMetadata.length}**
 
-## Erreurs bloquantes
+## Erreurs canoniques bloquantes
 
-${markdownList(hardErrors, "Aucune erreur bloquante détectée.")}
+${markdownList(hardErrors, "Aucune erreur canonique bloquante détectée.")}
+
+## Avertissements de migration
+
+${markdownList(migrationWarnings, "Aucun avertissement de migration détecté.")}
 
 ## Objets détectés mais non enregistrés
 
@@ -182,10 +236,12 @@ ${markdownList(missingMetadata, "Aucune métadonnée obligatoire manquante.")}
 
 ## Règle d’interprétation
 
-Les doublons d’identifiant, chemins inexistants, divergences de chemin canonique et divergences de statut sont bloquants. Les objets non enregistrés et les métadonnées incomplètes sont exposés comme dette de migration jusqu’à l’activation du mode strict.
+En mode progressif, seules les incohérences touchant directement une entrée canonique du Registry sont bloquantes : identifiant dupliqué dans l’index, chemin absent ou invalide, document canonique introuvable et statut réellement divergent. Les collisions entre documents historiques non enregistrés, les objets non enregistrés et les métadonnées incomplètes sont exposés comme dette de migration.
+
+Le mode \`--strict\` rend également bloquants les avertissements de migration, les objets non enregistrés et les métadonnées incomplètes.
 `;
 
 await fs.writeFile(REPORT_PATH, report, "utf8");
-console.log(`Registry audit: ${registered.length} enregistrés, ${documents.length} détectés, ${hardErrors.length} erreur(s), ${unregistered.length} non enregistré(s).`);
+console.log(`Registry audit: ${registered.length} enregistrés, ${documents.length} détectés, ${hardErrors.length} erreur(s) canonique(s), ${migrationWarnings.length} avertissement(s), ${unregistered.length} non enregistré(s).`);
 if (hardErrors.length) process.exit(1);
-if (process.argv.includes("--strict") && (unregistered.length || missingMetadata.length)) process.exit(2);
+if (process.argv.includes("--strict") && (migrationWarnings.length || unregistered.length || missingMetadata.length)) process.exit(2);
