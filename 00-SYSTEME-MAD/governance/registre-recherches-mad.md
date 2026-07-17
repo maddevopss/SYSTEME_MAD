@@ -41,30 +41,34 @@ Les domaines et préfixes devront être gouvernés par un référentiel unique a
 
 ## États officiels proposés
 
-```text
-Reçue
-À classer
-En analyse
-Analysée partiellement
-Analysée complètement
-À vérifier
-Validée MADPROOF
-Intégrée
-Remplacée
-Archivée
-```
+Les valeurs enregistrées utilisent des identifiants techniques stables. Les libellés français servent à l’affichage et à la documentation.
+
+| Valeur canonique | Libellé |
+|---|---|
+| `recue` | Reçue |
+| `a_classer` | À classer |
+| `en_analyse` | En analyse |
+| `analyse_partielle` | Analysée partiellement |
+| `analyse_complete` | Analysée complètement |
+| `a_verifier` | À vérifier |
+| `validee_madproof` | Validée MADPROOF |
+| `integree` | Intégrée |
+| `remplacee` | Remplacée |
+| `archivee` | Archivée |
+
+Aucune variante libre ne doit être créée lorsqu’une valeur canonique existe déjà.
 
 ## Règle de couverture
 
 > Une source ne peut jamais être marquée « analysée » sans indiquer la couverture réelle de l’analyse.
 
-Couvertures possibles :
+Valeurs canoniques proposées pour `couverture.type` :
 
-- sommaire seulement;
-- extraits ciblés;
-- pages précises;
-- lecture partielle avec pourcentage;
-- analyse complète à 100 %.
+- `sommaire_seulement`;
+- `extraits_cibles`;
+- `pages_precises`;
+- `lecture_partielle`;
+- `analyse_complete`.
 
 ## Fiche minimale
 
@@ -101,6 +105,39 @@ liens:
   - PUB-001
   - PSA-003
 ```
+
+## Vocabulaires contrôlés
+
+### `madproof.statut`
+
+Valeurs permises :
+
+- `non_commence`;
+- `en_cours`;
+- `non_termine`;
+- `a_verifier`;
+- `valide`;
+- `rejete`.
+
+### `madproof.confiance`
+
+Valeurs permises :
+
+- `indeterminee`;
+- `faible`;
+- `moyenne`;
+- `elevee`.
+
+### `integration.systeme_mad` et `integration.madsuite`
+
+Valeurs permises :
+
+- `non`;
+- `partielle`;
+- `oui`;
+- `sans_objet`.
+
+Ces champs utilisent des chaînes contrôlées plutôt que des booléens afin de représenter explicitement les états intermédiaires et les cas sans objet.
 
 ## Informations obligatoires
 
@@ -154,6 +191,7 @@ Le Registre devrait pouvoir produire au moins les indicateurs suivants :
 4. Toute analyse partielle demeure clairement marquée comme telle.
 5. Une intégration dans SYSTEME_MAD doit pointer vers les éléments réellement utilisés.
 6. Une source remplacée ou invalidée n’est pas supprimée : son historique est conservé.
+7. Les valeurs enregistrées doivent appartenir aux vocabulaires contrôlés définis dans ce document.
 
 ## Impact architectural
 
