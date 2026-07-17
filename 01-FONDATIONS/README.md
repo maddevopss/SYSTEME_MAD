@@ -59,13 +59,13 @@ Ce parcours facilite la compréhension. Il ne crée pas une hiérarchie juridiqu
 
 - [`mad-001.md`](./mad-001.md) — manifeste de MAD DevOps; statut actuel : Officiel.
 - [`charte-des-batisseurs.md`](./charte-des-batisseurs.md) — engagements culturels des bâtisseurs; statut actuel : Proposition.
-- [`modele-du-batisseur.md`](./modele-du-batisseur.md) — rôles, vertus et rites du bâtisseur; statut actuel : À valider.
+- [`modele-du-batisseur.md`](./modele-du-batisseur.md) — rôles, vertus et rites du bâtisseur; statut actuel : Proposition.
 
 ### Principes et gouvernance
 
 - [`non-negociable.md`](./non-negociable.md) — limites fondamentales; statut actuel : Officiel.
-- [`cycle-construction-connaissances.md`](./cycle-construction-connaissances.md) — cycle de maturation d’une brique; statut à confirmer.
-- [`convention-une-brique-une-pr.md`](./convention-une-brique-une-pr.md) — convention de changement; statut à confirmer.
+- [`cycle-construction-connaissances.md`](./cycle-construction-connaissances.md) — cycle de maturation d’une brique; statut actuel : Proposition.
+- [`convention-une-brique-une-pr.md`](./convention-une-brique-une-pr.md) — convention de changement; statut actuel : Proposition.
 - [`souverainete-des-batisseurs.md`](./souverainete-des-batisseurs.md) — principe d’autorité humaine; statut actuel : Proposition.
 
 ### Capacités soutenues
