@@ -169,6 +169,13 @@ Cette fondation candidate pourra être réévaluée lorsque :
 
 Le MFM pourrait éventuellement rejoindre une famille de moteurs spécialisés partageant certains principes de traçabilité, de contexte, de règles et de projections. Cette convergence reste une hypothèse à observer plutôt qu’une architecture à imposer.
 
+Documents de gouvernance et d’index associés :
+
+- [`README.md` (index des fondations)](README.md) ;
+- [`MANIFEST.md`](../MANIFEST.md) ;
+- [`00-SYSTEME-MAD/ai-context.md`](../00-SYSTEME-MAD/ai-context.md) ;
+- [`00-SYSTEME-MAD/decisions.md`](../00-SYSTEME-MAD/decisions.md).
+
 Le MFM doit être développé selon le pipeline de connaissance MAD :
 
 ```text
