@@ -72,7 +72,7 @@ Une décision structurante doit conserver :
 
 ## Livre des décisions
 
-La Chancellerie MAD devrait maintenir un Livre des décisions contenant les choix structurants du projet.
+La Chancellerie MAD devrait maintenir le Livre des décisions contenant les choix structurants du projet dans [`00-SYSTEME-MAD/decisions.md`](../decisions.md).
 
 Références proposées :
 
@@ -94,7 +94,7 @@ Une composante dont la mission ne peut pas être formulée clairement n’est pa
 
 ## Modèle de description des PR
 
-Toute PR structurante devrait contenir les sections suivantes :
+Toute PR structurante doit contenir les sections suivantes :
 
 ### Résumé
 
