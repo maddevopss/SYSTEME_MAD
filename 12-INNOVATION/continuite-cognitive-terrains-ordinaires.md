@@ -211,7 +211,7 @@ Les mesures subjectives et comportementales doivent rester séparées. Une perso
 - ne pas considérer un questionnaire interne comme un instrument validé ;
 - conserver les données, hypothèses et décisions de manière traçable.
 
-# Décision actuelle
+## Décision actuelle
 
 Les trois terrains sont retenus comme candidats de recherche appliquée accessibles :
 
