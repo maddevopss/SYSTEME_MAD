@@ -1,8 +1,10 @@
 ---
-titre: Conservatoire MAD
-statut: Fondation candidate
-categorie: Infrastructure intellectuelle
-langue: fr-CA
+Projet: MAD DevOps
+Document: Fondation — Conservatoire MAD
+Version: 0.1
+Dernière révision: 2026-07-17
+Statut: Fondation candidate
+Auteur: Marc-André Dufour
 ---
 
 # Conservatoire MAD
