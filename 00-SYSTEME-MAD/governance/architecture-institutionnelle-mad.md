@@ -1,8 +1,10 @@
 ---
-titre: Architecture institutionnelle de SYSTEME_MAD
-statut: Proposition
-categorie: Gouvernance
-langue: fr-CA
+Projet: MAD DevOps
+Document: Architecture institutionnelle de SYSTEME_MAD
+Version: 1.0
+Dernière révision: 2026-07-17
+Statut: Proposition
+Auteur: Marc-André Dufour
 ---
 
 # Architecture institutionnelle de SYSTEME_MAD
