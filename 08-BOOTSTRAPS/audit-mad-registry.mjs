@@ -32,7 +32,7 @@ function normalizeStatus(value = "") {
 }
 
 function cleanScalar(value = "") {
-  return value.trim().replace(/^(^["'])(.*)\1$/, "$2");
+  return value.trim().replace(/^(["'])(.*)\1$/, "$2");
 }
 
 function parseFrontmatter(content) {
