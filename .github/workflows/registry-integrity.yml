@@ -39,20 +39,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Check generated registry index
+      - name: Check generated registry artifacts
         run: node 08-BOOTSTRAPS/generate-mad-registry.mjs --check
 
       - name: Audit registry
         run: node 08-BOOTSTRAPS/audit-mad-registry.mjs
 
-      - name: Publish report in job summary
+      - name: Publish reports in job summary
         if: always()
-        run: cat 00-SYSTEME-MAD/registry/generated-integrity-report.md >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          cat 00-SYSTEME-MAD/registry/generated-integrity-report.md >> "$GITHUB_STEP_SUMMARY"
+          printf '\n---\n' >> "$GITHUB_STEP_SUMMARY"
+          cat 00-SYSTEME-MAD/registry/generated-relations-graph.md >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Upload integrity report
+      - name: Upload registry reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: mad-registry-integrity-report
-          path: 00-SYSTEME-MAD/registry/generated-integrity-report.md
+          name: mad-registry-reports
+          path: |
+            00-SYSTEME-MAD/registry/generated-integrity-report.md
+            00-SYSTEME-MAD/registry/generated-relations-graph.md
           if-no-files-found: error
