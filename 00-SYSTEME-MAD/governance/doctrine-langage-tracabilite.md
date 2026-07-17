@@ -1,8 +1,10 @@
 ---
-titre: Doctrine de langage et de traçabilité MAD
-statut: Proposition
-categorie: Gouvernance
-langue: fr-CA
+Projet: MAD DevOps
+Document: Doctrine de langage et de traçabilité MAD
+Version: 0.1
+Dernière révision: 2026-07-17
+Statut: Proposition
+Auteur: Marc-André Dufour
 ---
 
 # Doctrine de langage et de traçabilité MAD
