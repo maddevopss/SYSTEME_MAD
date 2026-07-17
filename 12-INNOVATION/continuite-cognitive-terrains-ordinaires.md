@@ -176,7 +176,7 @@ Un tableau de continuité affiche :
 
 Un Fil d'Ariane opérationnel dans MADSuite produisant un snapshot de reprise : où l'utilisateur était, pourquoi il y était et quoi faire maintenant.
 
-# Noyau commun de mesure
+## Noyau commun de mesure
 
 Les trois projets devraient partager un minimum commun :
 
