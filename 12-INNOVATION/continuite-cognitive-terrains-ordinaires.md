@@ -71,7 +71,7 @@ Un mécanisme de reprise dans MADSuite capable de rappeler la dernière entité,
 
 Aucune efficacité produit n'est présumée.
 
-# Projet 2 — Apprentissage à distance fragmenté
+## Projet 2 — Apprentissage à distance fragmenté
 
 ## Terrain
 
