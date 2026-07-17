@@ -156,15 +156,18 @@ Auteur: GitHub Actions — SYSTEME_MAD
 
 **${signal.score}/${signal.max}**
 
-Ce signal couvre uniquement les données vérifiables automatiquement. Il ne remplace pas le Engineering Health Score complet, qui inclut aussi les tests, la documentation, la sécurité et la dette technique validés humainement.
+Ce signal couvre uniquement les données vérifiables automatiquement. Il ne remplace pas l’Engineering Health Score complet, qui inclut aussi les tests, la documentation, la sécurité et la dette technique validés humainement.
 
-| Dimension | Résultat |
+Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-dessous.
+
+| Dimension notée | Résultat |
 | --- | ---: |
 | CI visibles et vertes | ${signal.ciPoints}/20 |
 | Backlog P0/P1 | ${signal.backlogPoints}/10 |
 | Hygiène des PR ouvertes | ${signal.prPoints}/5 |
 | Protection de branche lisible par l’API | ${signal.protectionPoints}/5 |
-| Repos accessibles | ${signal.accessible}/${signal.totalRepos} |
+
+**Couverture de la collecte, hors score : ${signal.accessible}/${signal.totalRepos} dépôts accessibles.**
 
 ## État des dépôts
 
