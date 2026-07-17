@@ -39,6 +39,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check generated registry index
+        run: node 08-BOOTSTRAPS/generate-mad-registry.mjs --check
+
       - name: Audit registry
         run: node 08-BOOTSTRAPS/audit-mad-registry.mjs
 
