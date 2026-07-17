@@ -15,15 +15,18 @@ Auteur: GitHub Actions — SYSTEME_MAD
 
 **10/40**
 
-Ce signal couvre uniquement les données vérifiables automatiquement. Il ne remplace pas le Engineering Health Score complet, qui inclut aussi les tests, la documentation, la sécurité et la dette technique validés humainement.
+Ce signal couvre uniquement les données vérifiables automatiquement. Il ne remplace pas l’Engineering Health Score complet, qui inclut aussi les tests, la documentation, la sécurité et la dette technique validés humainement.
 
-| Dimension | Résultat |
+Le score sur 40 est composé exclusivement des quatre dimensions suivantes :
+
+| Dimension du score | Résultat |
 | --- | ---: |
 | CI visibles et vertes | 10/20 |
 | Backlog P0/P1 | 0/10 |
 | Hygiène des PR ouvertes | 0/5 |
 | Protection de branche lisible par l’API | 0/5 |
-| Repos accessibles | 6/7 |
+
+**Couverture de collecte, hors score : 6/7 dépôts accessibles.**
 
 ## État des dépôts
 
