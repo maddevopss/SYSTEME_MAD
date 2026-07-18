@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Prompt agent — Implémentation Revenue Core MADSuite
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: Prêt à utiliser
 Auteur: Marc-André Dufour
 ---
@@ -44,9 +44,9 @@ Lire dans cet ordre :
 
 ```text
 SYSTEME_MAD/MANIFEST.md
-SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/registre-decisions-produit-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/index-global-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/registre-decisions-produit-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-revenue-core-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-033-validation-mvp-revenue-core-madsuite.md
 SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md
 SYSTEME_MAD/03-STANDARDS/std-104.md
