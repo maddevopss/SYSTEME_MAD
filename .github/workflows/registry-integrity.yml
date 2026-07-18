@@ -78,6 +78,9 @@ jobs:
       - name: Check registry MAD Health execution tracking P4.11
         run: node 08-BOOTSTRAPS/generate-mad-registry-health-execution.mjs --check
 
+      - name: Check registry MAD Health impact verification P4.12
+        run: node 08-BOOTSTRAPS/generate-mad-registry-health-impact.mjs --check
+
       - name: Audit registry
         run: node 08-BOOTSTRAPS/audit-mad-registry.mjs
 
@@ -94,6 +97,7 @@ jobs:
             00-SYSTEME-MAD/registry/generated-registry-health-decisions.md
             00-SYSTEME-MAD/registry/generated-registry-health-decision-ledger.md
             00-SYSTEME-MAD/registry/generated-registry-health-execution.md
+            00-SYSTEME-MAD/registry/generated-registry-health-impact.md
             00-SYSTEME-MAD/registry/generated-registry-radar.md
             00-SYSTEME-MAD/registry/generated-registry-architecture.md
             00-SYSTEME-MAD/registry/generated-integrity-report.md
@@ -140,6 +144,9 @@ jobs:
             00-SYSTEME-MAD/registry/registry-health-execution-ledger.json
             00-SYSTEME-MAD/registry/generated-registry-health-execution.md
             00-SYSTEME-MAD/registry/generated-registry-health-execution.json
+            00-SYSTEME-MAD/registry/registry-health-impact-ledger.json
+            00-SYSTEME-MAD/registry/generated-registry-health-impact.md
+            00-SYSTEME-MAD/registry/generated-registry-health-impact.json
             00-SYSTEME-MAD/registry/generated-registry-radar.md
             00-SYSTEME-MAD/registry/generated-registry-radar.json
             00-SYSTEME-MAD/registry/generated-registry-architecture.md

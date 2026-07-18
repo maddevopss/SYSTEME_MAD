@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "phase": "P4.12",
+  "generated_from": [
+    "generated-registry-health-execution.json",
+    "registry-health-impact-ledger.json"
+  ],
+  "methodology": {
+    "human_measurement_required": true,
+    "automatic_causality": "forbidden",
+    "verified_execution_is_impact": false
+  },
+  "execution_count": 3,
+  "impact_event_count": 0,
+  "valid_event_count": 0,
+  "invalid_event_count": 0,
+  "orphan_event_count": 0,
+  "counts": {
+    "Non mesurable": 3,
+    "À mesurer": 0,
+    "Amélioration démontrée": 0,
+    "Effet neutre": 0,
+    "Régression observée": 0,
+    "Résultat incertain": 0
+  },
+  "impacts": [
+    {
+      "decision_key": "DECISION|ACTION|AXIS_WATCH|canonical_maturity",
+      "target": "canonical_maturity",
+      "execution_status": "Non applicable",
+      "impact_status": "Non mesurable",
+      "evaluator": null,
+      "impact_date": null,
+      "measurement_method": null,
+      "result_summary": null,
+      "evidence_reference": null,
+      "before_value": null,
+      "after_value": null,
+      "unit": null,
+      "impact_event_key": null
+    },
+    {
+      "decision_key": "DECISION|ACTION|AXIS_WATCH|connection",
+      "target": "connection",
+      "execution_status": "Non applicable",
+      "impact_status": "Non mesurable",
+      "evaluator": null,
+      "impact_date": null,
+      "measurement_method": null,
+      "result_summary": null,
+      "evidence_reference": null,
+      "before_value": null,
+      "after_value": null,
+      "unit": null,
+      "impact_event_key": null
+    },
+    {
+      "decision_key": "DECISION|ACTION|HEALTH_WATCH|registry",
+      "target": "registry",
+      "execution_status": "Non applicable",
+      "impact_status": "Non mesurable",
+      "evaluator": null,
+      "impact_date": null,
+      "measurement_method": null,
+      "result_summary": null,
+      "evidence_reference": null,
+      "before_value": null,
+      "after_value": null,
+      "unit": null,
+      "impact_event_key": null
+    }
+  ],
+  "invalid_events": [],
+  "orphan_events": [],
+  "limitations": [
+    "No automatic causality",
+    "No evaluator inference",
+    "No proof authentication",
+    "No certification"
+  ]
+}
