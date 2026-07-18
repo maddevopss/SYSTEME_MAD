@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index global — MADSuite
-Version: 5.0
-Dernière révision: 2026-07-02
+Version: 5.1
+Dernière révision: 2026-07-18
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -37,9 +37,9 @@ Phrase directrice :
 SYSTEME_MAD/10-ROADMAP/roadmap-mvp-early-access-madsuite.md
 SYSTEME_MAD/10-ROADMAP/tickets-sprint-1-parcours-premiere-facture-madsuite.md
 SYSTEME_MAD/10-ROADMAP/analyse-repo-applicatif-madsuite-sprint-1.md
-SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-developpeur-mvp-early-access-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-developpeur-sprint-1-premiere-facture-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/prompt-pret-a-coller-agent-codeur-sprint-1-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/prompt-agent-developpeur-mvp-early-access-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/prompt-agent-developpeur-sprint-1-premiere-facture-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/prompt-pret-a-coller-agent-codeur-sprint-1-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-045-validation-mvp-early-access-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-046-validation-sprint-1-premiere-facture-madsuite.md
 ```
@@ -51,10 +51,10 @@ SYSTEME_MAD/09-CHECKLISTS/chk-046-validation-sprint-1-premiere-facture-madsuite.
 ```text
 SYSTEME_MAD/00-SYSTEME-MAD/ai-context.md
 SYSTEME_MAD/00-SYSTEME-MAD/ai-context-madsuite-madproof.md
-SYSTEME_MAD/01-PRODUIT/madsuite/README.md
-SYSTEME_MAD/01-PRODUIT/madsuite/registre-decisions-produit-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/README.md
+SYSTEME_MAD/02-GUIDE/madsuite/registre-decisions-produit-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-revenue-core-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-machine-a-clients-madsuite.md
 SYSTEME_MAD/05-PLAY/play-038-publication-page-publique-madsuite.md
 SYSTEME_MAD/05-PLAY/play-039-analyse-feedback-early-access-madsuite.md
 SYSTEME_MAD/05-PLAY/play-040-revue-mensuelle-early-access-madsuite.md

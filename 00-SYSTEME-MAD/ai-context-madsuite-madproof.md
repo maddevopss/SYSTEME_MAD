@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Contexte IA — MADSuite / MADPROOF
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -128,8 +128,8 @@ Formulation interdite :
 Documents liés :
 
 ```text
-SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md
-SYSTEME_MAD/01-PRODUIT/madsuite/mvp-mad-ariane-snapshot-reprise.md
+SYSTEME_MAD/02-GUIDE/madsuite/mad-ariane-fil-ariane-zero-effort.md
+SYSTEME_MAD/02-GUIDE/madsuite/mvp-mad-ariane-snapshot-reprise.md
 SYSTEME_MAD/09-CHECKLISTS/chk-017-validation-mvp-mad-ariane.md
 ```
 
