@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Validate critical documentation
         shell: bash
@@ -86,6 +88,86 @@ jobs:
               sys.exit(1)
 
           print("Docs quality smoke passed.")
+          PY
+
+      - name: Prevent legacy MADSuite path regressions
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          import subprocess
+          import sys
+
+          event_name = os.environ.get("GITHUB_EVENT_NAME", "")
+          event_path = Path(os.environ["GITHUB_EVENT_PATH"])
+          event = json.loads(event_path.read_text(encoding="utf-8"))
+
+          if event_name == "pull_request":
+              base = event["pull_request"]["base"]["sha"]
+              head = event["pull_request"]["head"]["sha"]
+          elif event_name == "push":
+              base = event.get("before")
+              head = event.get("after")
+          else:
+              head = subprocess.check_output(
+                  ["git", "rev-parse", "HEAD"], text=True
+              ).strip()
+              base = subprocess.check_output(
+                  ["git", "rev-parse", "HEAD^"], text=True
+              ).strip()
+
+          if not base or set(base) == {"0"}:
+              base = subprocess.check_output(
+                  ["git", "rev-list", "--max-parents=0", head], text=True
+              ).splitlines()[0]
+
+          diff = subprocess.check_output(
+              [
+                  "git",
+                  "diff",
+                  "--unified=0",
+                  base,
+                  head,
+                  "--",
+                  "*.md",
+                  "*.yml",
+                  "*.yaml",
+              ],
+              text=True,
+          )
+
+          forbidden = "01-PRODUIT/" + "madsuite/"
+          allowed_files = {
+              "00-SYSTEME-MAD/governance/audit-final-migration-madsuite-2026-07-18.md",
+          }
+
+          current_file = None
+          violations = []
+
+          for line in diff.splitlines():
+              if line.startswith("+++ b/"):
+                  current_file = line[6:]
+                  continue
+
+              if (
+                  current_file
+                  and current_file not in allowed_files
+                  and line.startswith("+")
+                  and not line.startswith("+++")
+                  and forbidden in line
+              ):
+                  violations.append((current_file, line[1:]))
+
+          if violations:
+              print("Legacy MADSuite path regression detected:")
+              for path, content in violations:
+                  print(f"- {path}: {content}")
+              print("Use SYSTEME_MAD/02-GUIDE/madsuite/ instead.")
+              sys.exit(1)
+
+          print("No new legacy MADSuite path reference detected.")
           PY
 
       - name: Audit local Markdown links
