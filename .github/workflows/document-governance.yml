@@ -1,0 +1,26 @@
+name: Document governance
+
+on:
+  pull_request:
+    branches: [main]
+    paths: ["**/*.md", "08-BOOTSTRAPS/audit-document-governance.py", ".github/workflows/document-governance.yml"]
+  push:
+    branches: [main]
+    paths: ["**/*.md", "08-BOOTSTRAPS/audit-document-governance.py", ".github/workflows/document-governance.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Auditer la cohérence documentaire
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: python 08-BOOTSTRAPS/audit-document-governance.py
