@@ -114,6 +114,16 @@ function renderMarkdown(a) {
   ].join("\n");
 }
 
+function stableJson(value) {
+  if (Array.isArray(value)) return value.map(stableJson);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(
+      Object.keys(value).sort().map((key) => [key, stableJson(value[key])])
+    );
+  }
+  return value;
+}
+
 const [healthText, historyText] = await Promise.all([
   fs.readFile(HEALTH_PATH, "utf8"),
   fs.readFile(HISTORY_PATH, "utf8")
@@ -135,12 +145,24 @@ const markdown = renderMarkdown(analysis);
 const json = renderJson(analysis);
 
 if (CHECK) {
-  const [currentMd, currentJson] = await Promise.all([
+  const [currentMd, currentJsonText] = await Promise.all([
     fs.readFile(MD_PATH, "utf8").catch(() => ""),
     fs.readFile(JSON_PATH, "utf8").catch(() => "")
   ]);
-  if (currentMd !== markdown || currentJson !== json) {
+
+  let jsonMatches = false;
+  try {
+    jsonMatches = JSON.stringify(stableJson(JSON.parse(currentJsonText))) === JSON.stringify(stableJson(JSON.parse(json)));
+  } catch {
+    jsonMatches = false;
+  }
+
+  const markdownMatches = currentMd.replace(/\s+$/, "") === markdown.replace(/\s+$/, "");
+
+  if (!markdownMatches || !jsonMatches) {
     console.error("Les tendances P4.6 ne sont pas synchronisées.");
+    console.error(`- Markdown : ${markdownMatches ? "synchronisé" : "divergent"}`);
+    console.error(`- JSON : ${jsonMatches ? "synchronisé" : "divergent"}`);
     console.error("Exécuter : node 08-BOOTSTRAPS/generate-mad-registry-health-trends.mjs");
     process.exit(1);
   }
