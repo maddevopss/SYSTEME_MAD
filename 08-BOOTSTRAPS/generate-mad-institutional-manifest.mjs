@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import crypto from 'node:crypto';
+import { execFileSync } from 'node:child_process';
 
 const root = process.cwd();
 const declarationPath = path.join(root, '00-SYSTEME-MAD/governance/institutional-release.json');
@@ -28,6 +28,10 @@ function parseFrontMatter(content) {
   return metadata;
 }
 
+function gitBlob(pathname) {
+  return execFileSync('git', ['hash-object', pathname], { encoding: 'utf8' }).trim();
+}
+
 const declarationErrors = [];
 if (!semver.test(declaration.institutional_version ?? '')) declarationErrors.push('version institutionnelle invalide');
 if (!['Proposition', 'Officiel', 'Archive', 'Déprécié'].includes(declaration.status)) declarationErrors.push('statut institutionnel invalide');
@@ -48,16 +52,14 @@ for (const item of declaration.documents ?? []) {
 
   const absolute = path.join(root, item.path ?? '');
   let metadata = null;
-  let sha256 = null;
-  let sizeBytes = null;
+  let gitBlobSha = null;
   if (!fs.existsSync(absolute)) {
     errors.push('document absent');
   } else if (path.extname(absolute).toLowerCase() !== '.md') {
     errors.push('document non Markdown');
   } else {
     const content = fs.readFileSync(absolute, 'utf8');
-    sizeBytes = Buffer.byteLength(content, 'utf8');
-    sha256 = crypto.createHash('sha256').update(content).digest('hex');
+    gitBlobSha = gitBlob(absolute);
     metadata = parseFrontMatter(content);
     if (!metadata) errors.push('en-tête YAML absent ou illisible');
     else {
@@ -77,8 +79,7 @@ for (const item of declaration.documents ?? []) {
     document_title: metadata?.Document ?? null,
     author: metadata?.Auteur ?? null,
     last_revision: metadata?.['Dernière révision'] ?? null,
-    sha256,
-    size_bytes: sizeBytes,
+    git_blob_sha: gitBlobSha,
     valid: errors.length === 0,
     errors
   });
@@ -104,7 +105,7 @@ const output = {
     human_declaration_required: true,
     automatic_inclusion: 'forbidden',
     automatic_publication: 'forbidden',
-    hash_algorithm: 'SHA-256'
+    hash_algorithm: 'Git blob SHA-1'
   },
   document_count: documents.length,
   valid_document_count: documents.filter(item => item.valid).length,
@@ -124,8 +125,8 @@ const output = {
 };
 
 const json = JSON.stringify(output, null, 2) + '\n';
-const rows = documents.map(item => `| \`${item.path}\` | ${item.actual_version ?? '—'} | ${item.actual_status ?? '—'} | ${item.valid ? 'Valide' : 'Invalide'} | \`${item.sha256 ?? '—'}\` |`);
-const md = `# Manifeste institutionnel SYSTEME_MAD — P5.1\n\n- Version institutionnelle : **${output.institutional_version}**\n- Statut : **${output.institutional_status}**\n- Commit de référence : \`${output.reference_commit}\`\n- Documents déclarés : **${output.document_count}**\n- Documents valides : **${output.valid_document_count}**\n- Documents invalides : **${output.invalid_document_count}**\n- Manifeste valide : **${output.manifest_valid ? 'oui' : 'non'}**\n\n| Document | Version | Statut | Validation | SHA-256 |\n|---|---|---|---|---|\n${rows.join('\n')}\n\n## Exclusions déclarées\n\n${exclusions.map(item => `- **${item.scope ?? '—'}** — ${item.reason ?? '—'}`).join('\n')}\n\n> Ce manifeste décrit un sous-ensemble institutionnel explicitement déclaré. Il ne transforme pas automatiquement la branche main en publication officielle.\n`;
+const rows = documents.map(item => `| \`${item.path}\` | ${item.actual_version ?? '—'} | ${item.actual_status ?? '—'} | ${item.valid ? 'Valide' : 'Invalide'} | \`${item.git_blob_sha ?? '—'}\` |`);
+const md = `# Manifeste institutionnel SYSTEME_MAD — P5.1\n\n- Version institutionnelle : **${output.institutional_version}**\n- Statut : **${output.institutional_status}**\n- Commit de référence : \`${output.reference_commit}\`\n- Documents déclarés : **${output.document_count}**\n- Documents valides : **${output.valid_document_count}**\n- Documents invalides : **${output.invalid_document_count}**\n- Manifeste valide : **${output.manifest_valid ? 'oui' : 'non'}**\n\n| Document | Version | Statut | Validation | Empreinte Git |\n|---|---|---|---|---|\n${rows.join('\n')}\n\n## Exclusions déclarées\n\n${exclusions.map(item => `- **${item.scope ?? '—'}** — ${item.reason ?? '—'}`).join('\n')}\n\n> Ce manifeste décrit un sous-ensemble institutionnel explicitement déclaré. Il ne transforme pas automatiquement la branche main en publication officielle.\n`;
 
 function normalize(text) { return text.replace(/\r\n/g, '\n').trimEnd() + '\n'; }
 function sameJson(file, expected) {
