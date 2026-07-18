@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: CHK-033 — Validation MVP Revenue Core MADSuite
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -21,9 +21,9 @@ Le Revenue Core doit permettre à un utilisateur de transformer son travail en f
 
 Avant d’utiliser cette checklist, lire :
 
-- `SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md`
-- `SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md`
-- `SYSTEME_MAD/01-PRODUIT/madsuite/registre-decisions-produit-madsuite.md`
+- `SYSTEME_MAD/02-GUIDE/madsuite/spec-revenue-core-madsuite.md`
+- `SYSTEME_MAD/02-GUIDE/madsuite/spec-machine-a-clients-madsuite.md`
+- `SYSTEME_MAD/02-GUIDE/madsuite/registre-decisions-produit-madsuite.md`
 - `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
 - `SYSTEME_MAD/03-STANDARDS/std-104.md`
 - `SYSTEME_MAD/03-STANDARDS/std-201.md`
