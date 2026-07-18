@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Template — Page Feedback Early Access MADSuite
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: Template
 Auteur: Marc-André Dufour
 ---
@@ -23,8 +23,8 @@ La page doit recueillir des retours utiles sur l’expérience réelle du produi
 SYSTEME_MAD/07-TEMPLATES/template-formulaire-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-sequence-courriels-early-access-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-035-validation-publication-page-publique-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-revenue-core-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-machine-a-clients-madsuite.md
 SYSTEME_MAD/03-STANDARDS/std-204.md
 ```
 
