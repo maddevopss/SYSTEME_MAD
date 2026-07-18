@@ -1,0 +1,19 @@
+schema_version: "1.0"
+registry: MAD Registry Traceability
+evidence_types:
+  - decision
+  - standard
+  - recherche
+  - test
+  - procedure
+confidence_levels:
+  - officiel
+  - valide
+  - provisoire
+traces:
+  - source: STD-800
+    relation: met_en_oeuvre
+    target: ADR-007
+    rationale: Le standard STD-800 formalise les contrôles et profils de certification continue adoptés par la décision ADR-007.
+    evidence_type: decision
+    confidence: officiel
