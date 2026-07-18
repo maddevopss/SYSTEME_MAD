@@ -1,6 +1,6 @@
 # Fichier généré automatiquement par 08-BOOTSTRAPS/generate-mad-registry.mjs.
 # Modifier registry-sources.yaml ou les métadonnées des documents sources, jamais ce fichier.
-schema_version: "1.0"
+schema_version: "1.1"
 registry: MAD Registry
 updated_at: 2026-07-13
 objects:
@@ -46,5 +46,8 @@ objects:
       - guardian
       - quality-gates
       - standard
+    relations:
+      - type: met_en_oeuvre
+        target: ADR-007
     created_at: 2026-07-13
     updated_at: 2026-07-13

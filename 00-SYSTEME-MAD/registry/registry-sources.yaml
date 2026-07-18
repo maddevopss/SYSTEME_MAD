@@ -1,5 +1,12 @@
-schema_version: "1.0"
+schema_version: "1.1"
 registry: MAD Registry Sources
+relation_types:
+  - depend_de
+  - met_en_oeuvre
+  - valide
+  - remplace
+  - derive_de
+  - associe_a
 objects:
   - id: REG-001
     path: 00-SYSTEME-MAD/registry/REG-001-mad-registry.md
@@ -24,3 +31,6 @@ objects:
       - guardian
       - quality-gates
       - standard
+    relations:
+      - type: met_en_oeuvre
+        target: ADR-007
