@@ -1,12 +1,12 @@
 ---
 Projet: Système MAD
-Document: Tableau de bord vivant du MAD Registry
+Document: Tableau de bord unifié du MAD Registry
 Version: 1.0
 Statut: Officiel
 Owner: Automatisation SYSTEME_MAD
 ---
 
-# Tableau de bord vivant du MAD Registry
+# Tableau de bord unifié du MAD Registry
 
 > Généré automatiquement à partir des sources canoniques. Ne pas modifier manuellement.
 
