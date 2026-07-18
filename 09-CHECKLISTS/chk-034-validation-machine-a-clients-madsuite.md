@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: CHK-034 — Validation Machine à clients MADSuite
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -21,9 +21,9 @@ Elle sert à vérifier la landing page, le message public, le signup, l’onboar
 
 Avant d’utiliser cette checklist, lire :
 
-- `SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md`
-- `SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md`
-- `SYSTEME_MAD/01-PRODUIT/madsuite/registre-decisions-produit-madsuite.md`
+- `SYSTEME_MAD/02-GUIDE/madsuite/spec-machine-a-clients-madsuite.md`
+- `SYSTEME_MAD/02-GUIDE/madsuite/spec-revenue-core-madsuite.md`
+- `SYSTEME_MAD/02-GUIDE/madsuite/registre-decisions-produit-madsuite.md`
 - `SYSTEME_MAD/09-CHECKLISTS/chk-033-validation-mvp-revenue-core-madsuite.md`
 - `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
 - `SYSTEME_MAD/03-STANDARDS/std-505.md`
