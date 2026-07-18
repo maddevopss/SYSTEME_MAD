@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Prompt agent développeur — Sprint 1 première facture MADSuite
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: Prêt à utiliser
 Auteur: Marc-André Dufour
 ---
@@ -34,10 +34,10 @@ Tu dois travailler petit, simple, stable et directement utile.
 
 Lis d’abord :
 
-1. SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md
+1. SYSTEME_MAD/02-GUIDE/madsuite/index-global-madsuite.md
 2. SYSTEME_MAD/10-ROADMAP/roadmap-mvp-early-access-madsuite.md
 3. SYSTEME_MAD/10-ROADMAP/tickets-sprint-1-parcours-premiere-facture-madsuite.md
-4. SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-developpeur-mvp-early-access-madsuite.md
+4. SYSTEME_MAD/02-GUIDE/madsuite/prompt-agent-developpeur-mvp-early-access-madsuite.md
 5. SYSTEME_MAD/09-CHECKLISTS/chk-045-validation-mvp-early-access-madsuite.md
 
 Si une idée contredit le découpage Sprint 1, le découpage Sprint 1 gagne.
