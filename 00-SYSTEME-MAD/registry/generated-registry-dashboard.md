@@ -1,7 +1,7 @@
 ---
 Projet: Système MAD
 Document: Tableau de bord unifié du MAD Registry
-Version: 1.0
+Version: 1.1
 Statut: Officiel
 Owner: Automatisation SYSTEME_MAD
 ---
@@ -18,6 +18,18 @@ Owner: Automatisation SYSTEME_MAD
 - Couverture de traçabilité : **100 %**
 - Objets isolés : **1**
 - Dernière mise à jour canonique : **2026-07-13**
+
+## Indicateurs avancés — P4.2
+
+| Indicateur | Valeur | Interprétation limitée |
+|---|---:|---|
+| Couverture de connexion | 67 % | Objets participant à au moins une relation |
+| Densité relationnelle | 17 % | Relations présentes parmi les relations dirigées possibles |
+| Preuves officielles | 100 % | Justifications classées `officiel` |
+| Preuves provisoires | 0 % | Justifications classées `provisoire` |
+| Degré sortant moyen | 0.33 | Relations sortantes moyennes par objet |
+
+> Ces indicateurs sont descriptifs. Ils ne constituent pas un score MAD Health.
 
 ## Répartition par type
 
@@ -56,6 +68,7 @@ Owner: Automatisation SYSTEME_MAD
 ## Artefacts de référence
 
 - [Index canonique](registry-index.yaml)
+- [Mesures structurées P4.2](generated-registry-metrics.json)
 - [Graphe des relations](generated-relations-graph.md)
 - [Rapport de traçabilité](generated-traceability.md)
 - [Chaînes de provenance](generated-provenance-chains.md)
