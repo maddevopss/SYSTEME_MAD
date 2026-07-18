@@ -10,7 +10,7 @@ from pathlib import Path
 from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
-LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
+LINK = re.compile(r"(?<!\\)!?\[[^\]]*\]\(([^)]+)\)")
 HEADING = re.compile(r"^#{1,6}\s+(.+?)\s*$")
 FENCE = re.compile(r"^\s*(`{3,}|~{3,})")
 EXCLUDED = {".git", "node_modules", ".venv", "venv"}
