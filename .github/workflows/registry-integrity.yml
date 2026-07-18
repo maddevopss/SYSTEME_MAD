@@ -66,6 +66,9 @@ jobs:
       - name: Check registry MAD Health alerts P4.7
         run: node 08-BOOTSTRAPS/generate-mad-registry-health-alerts.mjs --check
 
+      - name: Check registry MAD Health actions P4.8
+        run: node 08-BOOTSTRAPS/generate-mad-registry-health-actions.mjs --check
+
       - name: Audit registry
         run: node 08-BOOTSTRAPS/audit-mad-registry.mjs
 
@@ -78,6 +81,7 @@ jobs:
             00-SYSTEME-MAD/registry/generated-registry-health.md
             00-SYSTEME-MAD/registry/generated-registry-health-trends.md
             00-SYSTEME-MAD/registry/generated-registry-health-alerts.md
+            00-SYSTEME-MAD/registry/generated-registry-health-actions.md
             00-SYSTEME-MAD/registry/generated-registry-radar.md
             00-SYSTEME-MAD/registry/generated-registry-architecture.md
             00-SYSTEME-MAD/registry/generated-integrity-report.md
@@ -114,6 +118,8 @@ jobs:
             00-SYSTEME-MAD/registry/generated-registry-health-trends.json
             00-SYSTEME-MAD/registry/generated-registry-health-alerts.md
             00-SYSTEME-MAD/registry/generated-registry-health-alerts.json
+            00-SYSTEME-MAD/registry/generated-registry-health-actions.md
+            00-SYSTEME-MAD/registry/generated-registry-health-actions.json
             00-SYSTEME-MAD/registry/generated-registry-radar.md
             00-SYSTEME-MAD/registry/generated-registry-radar.json
             00-SYSTEME-MAD/registry/generated-registry-architecture.md
