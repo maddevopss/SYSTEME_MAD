@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: PLAY-040 — Revue mensuelle Early Access MADSuite
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -39,8 +39,8 @@ SYSTEME_MAD/07-TEMPLATES/template-rapport-mensuel-early-access-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-036-validation-rapport-mensuel-early-access-madsuite.md
 SYSTEME_MAD/05-PLAY/play-039-analyse-feedback-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-backlog-post-feedback-early-access-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/registre-decisions-produit-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-revenue-core-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/registre-decisions-produit-madsuite.md
 ```
 
 ---
@@ -171,7 +171,7 @@ Ne pas transformer la revue mensuelle en liste infinie.
 Avant d’ajouter une nouvelle orientation, vérifier :
 
 ```text
-SYSTEME_MAD/01-PRODUIT/madsuite/registre-decisions-produit-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/registre-decisions-produit-madsuite.md
 ```
 
 Classer chaque décision :
