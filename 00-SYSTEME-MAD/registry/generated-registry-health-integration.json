@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0",
+  "phase": "P4.15",
+  "generated_from": [
+    "generated-registry-health-promotion.json",
+    "registry-health-integration-ledger.json"
+  ],
+  "methodology": {
+    "approved_promotion_required": true,
+    "human_integration_required": true,
+    "automatic_pr": "forbidden",
+    "automatic_merge": "forbidden",
+    "automatic_document_change": "forbidden"
+  },
+  "promotion_count": 3,
+  "approved_promotion_count": 0,
+  "integration_event_count": 0,
+  "valid_event_count": 0,
+  "invalid_event_count": 0,
+  "orphan_event_count": 0,
+  "counts": {
+    "Non applicable": 3,
+    "En attente d’intégration": 0,
+    "Intégrée": 0,
+    "Intégration reportée": 0,
+    "Intégration annulée": 0,
+    "Remplacée": 0
+  },
+  "integrations": [
+    {
+      "decision_key": "DECISION|ACTION|AXIS_WATCH|canonical_maturity",
+      "target": "canonical_maturity",
+      "promotion_status": "Non applicable",
+      "integration_status": "Non applicable",
+      "integrator": null,
+      "integration_date": null,
+      "rationale": null,
+      "document_target": null,
+      "pull_request_reference": null,
+      "merge_commit": null,
+      "document_version": null,
+      "effective_date": null,
+      "replaced_by": null,
+      "event_key": null,
+      "automatic_pr_allowed": false,
+      "automatic_merge_allowed": false,
+      "automatic_document_change_allowed": false
+    },
+    {
+      "decision_key": "DECISION|ACTION|AXIS_WATCH|connection",
+      "target": "connection",
+      "promotion_status": "Non applicable",
+      "integration_status": "Non applicable",
+      "integrator": null,
+      "integration_date": null,
+      "rationale": null,
+      "document_target": null,
+      "pull_request_reference": null,
+      "merge_commit": null,
+      "document_version": null,
+      "effective_date": null,
+      "replaced_by": null,
+      "event_key": null,
+      "automatic_pr_allowed": false,
+      "automatic_merge_allowed": false,
+      "automatic_document_change_allowed": false
+    },
+    {
+      "decision_key": "DECISION|ACTION|HEALTH_WATCH|registry",
+      "target": "registry",
+      "promotion_status": "Non applicable",
+      "integration_status": "Non applicable",
+      "integrator": null,
+      "integration_date": null,
+      "rationale": null,
+      "document_target": null,
+      "pull_request_reference": null,
+      "merge_commit": null,
+      "document_version": null,
+      "effective_date": null,
+      "replaced_by": null,
+      "event_key": null,
+      "automatic_pr_allowed": false,
+      "automatic_merge_allowed": false,
+      "automatic_document_change_allowed": false
+    }
+  ],
+  "invalid_events": [],
+  "orphan_events": [],
+  "limitations": [
+    "No automatic PR",
+    "No automatic merge",
+    "No automatic document change",
+    "No remote proof verification",
+    "No integrator authentication",
+    "No certification"
+  ]
+}
