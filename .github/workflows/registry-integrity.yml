@@ -90,6 +90,9 @@ jobs:
       - name: Check registry MAD Health institutional integration P4.15
         run: node 08-BOOTSTRAPS/generate-mad-registry-health-integration.mjs --check
 
+      - name: Check institutional manifest P5.1
+        run: node 08-BOOTSTRAPS/generate-mad-institutional-manifest.mjs --check
+
       - name: Audit registry
         run: node 08-BOOTSTRAPS/audit-mad-registry.mjs
 
@@ -110,6 +113,7 @@ jobs:
             00-SYSTEME-MAD/registry/generated-registry-health-learning.md
             00-SYSTEME-MAD/registry/generated-registry-health-promotion.md
             00-SYSTEME-MAD/registry/generated-registry-health-integration.md
+            00-SYSTEME-MAD/governance/generated-institutional-manifest.md
             00-SYSTEME-MAD/registry/generated-registry-radar.md
             00-SYSTEME-MAD/registry/generated-registry-architecture.md
             00-SYSTEME-MAD/registry/generated-integrity-report.md
@@ -168,6 +172,9 @@ jobs:
             00-SYSTEME-MAD/registry/registry-health-integration-ledger.json
             00-SYSTEME-MAD/registry/generated-registry-health-integration.md
             00-SYSTEME-MAD/registry/generated-registry-health-integration.json
+            00-SYSTEME-MAD/governance/institutional-release.json
+            00-SYSTEME-MAD/governance/generated-institutional-manifest.md
+            00-SYSTEME-MAD/governance/generated-institutional-manifest.json
             00-SYSTEME-MAD/registry/generated-registry-radar.md
             00-SYSTEME-MAD/registry/generated-registry-radar.json
             00-SYSTEME-MAD/registry/generated-registry-architecture.md
