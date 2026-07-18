@@ -1,14 +1,19 @@
 ---
 Projet: Système MAD
 Document: Tableau de bord unifié du MAD Registry — P4.1
-Version: 1.0
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: À valider
-Owner: MAD DevOps
-created_at: 2026-07-17
-updated_at: 2026-07-17
+Auteur: Marc-André Dufour
 ---
 
 # Tableau de bord unifié du MAD Registry — P4.1
+
+## Contrat de référence
+
+La présente phase constitue la première implémentation du contrat défini dans [`registry-dashboard-contract-p4-0.md`](registry-dashboard-contract-p4-0.md).
+
+Elle doit respecter les principes de non-substitution, de déterminisme, de traçabilité, de reproductibilité, d’observabilité et d’extensibilité établis par P4.0.
 
 ## Objectif
 
@@ -17,6 +22,8 @@ La P4.1 rassemble dans une seule vue l’état opérationnel du registre canoniq
 ## Principe
 
 Le tableau de bord ne constitue pas une nouvelle source de vérité. Il est entièrement calculé à partir de `registry-index.yaml` et `registry-traceability.yaml`, puis fournit des accès directs aux rapports générés par les phases P0 à P3.2.
+
+Son autorité est entièrement héritée des sources canoniques à partir desquelles il est produit.
 
 ## Contenu de la P4.1
 
@@ -31,6 +38,8 @@ Le tableau de bord ne constitue pas une nouvelle source de vérité. Il est enti
 ## Contrôle
 
 La CI échoue lorsque `generated-registry-dashboard.md` n’est plus synchronisé avec les sources canoniques. Le tableau de bord est également publié en tête du résumé GitHub Actions et inclus dans les artefacts du registre.
+
+Cette première implémentation doit aussi demeurer régénérable, déterministe et entièrement explicable conformément au contrat P4.0.
 
 ## Limite volontaire
 
