@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — Knowledge Base
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -50,5 +50,5 @@ SYSTEME_MAD/06-KNOWLEDGE-BASE/glossaire-madsuite-madproof.md
 ## Liens utiles
 
 - `SYSTEME_MAD/MANIFEST.md`
-- `SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md`
+- `SYSTEME_MAD/02-GUIDE/madsuite/index-global-madsuite.md`
 - `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/README.md`
