@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Template — Page Démo MADSuite
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: Template
 Auteur: Marc-André Dufour
 ---
@@ -22,8 +22,8 @@ La page Démo doit montrer comment MADSuite aide un utilisateur à passer du tra
 ```text
 SYSTEME_MAD/05-PLAY/play-038-publication-page-publique-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-035-validation-publication-page-publique-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-machine-a-clients-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-revenue-core-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md
 ```
