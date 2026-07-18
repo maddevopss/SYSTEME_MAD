@@ -4,7 +4,7 @@ status: Actif
 type: Navigation
 owner: MAD DevOps
 created_at: 2026-07-12
-updated_at: 2026-07-12
+updated_at: 2026-07-18
 ---
 
 # Cartographie du dépôt SYSTEME_MAD
@@ -17,9 +17,9 @@ Cette carte fournit une vue rapide du dépôt et indique où commencer selon le 
 SYSTEME_MAD/
 ├── 00-SYSTEME-MAD/          Gouvernance, contexte IA, décisions et navigation
 ├── 01-FONDATIONS/           Engagements stables et limites non négociables
-├── 01-PRODUIT/              Références détaillées de produits
 ├── 02-PRODUIT/              Références produit complémentaires à consolider
 ├── 02-GUIDE/                Guide métier, commercial, produit et opérationnel
+│   └── madsuite/            Domaine spécialisé MADSuite
 ├── 03-STANDARDS/            Standards techniques et organisationnels
 ├── 04-ADR/                  Architecture Decision Records
 ├── 04-ARCHITECTURE/         Cartographies et plans d’architecture
@@ -50,7 +50,7 @@ SYSTEME_MAD/
 | Exécuter une procédure | `05-PLAY/README.md` |
 | Vérifier une exigence | `09-CHECKLISTS/README.md` |
 | Comprendre les priorités | `10-ROADMAP/README.md` |
-| Travailler sur MADSuite | `01-PRODUIT/madsuite/README.md` et `01-PRODUIT/madsuite/index-global-madsuite.md` |
+| Travailler sur MADSuite | `02-GUIDE/madsuite/README.md` et `02-GUIDE/madsuite/index-global-madsuite.md` |
 | Consulter les standards | `03-STANDARDS/README.md` |
 | Retrouver une ancienne version | `99-ARCHIVES/README.md` |
 
@@ -69,7 +69,7 @@ README.md
 ### Décision produit MADSuite
 
 ```text
-01-PRODUIT/madsuite/index-global-madsuite.md
+02-GUIDE/madsuite/index-global-madsuite.md
 → registre-decisions-produit-madsuite.md
 → spécification concernée
 → checklist ou play associé
@@ -97,7 +97,7 @@ README.md
 
 La carte rend visibles plusieurs chantiers sans présumer de leur solution :
 
-- clarifier la coexistence de `01-PRODUIT/` et `02-PRODUIT/`;
+- clarifier la responsabilité de `02-PRODUIT/` par rapport aux domaines spécialisés de `02-GUIDE/`;
 - corriger les identifiants dupliqués dans certaines séries de plays et checklists;
 - évaluer le sous-dossier `10-ROADMAP/10-ROADMAP/`;
 - qualifier ou regrouper les README d’archives;
@@ -111,6 +111,12 @@ Cette carte décrit la réalité du dépôt. Elle doit être mise à jour lorsqu
 Elle ne doit jamais décrire une structure souhaitée comme si elle existait déjà.
 
 ## Journal
+
+### 2026-07-18 — Réalignement MADSuite
+
+- retrait de l’ancienne zone `01-PRODUIT/` de la cartographie active;
+- ajout de MADSuite comme domaine spécialisé de `02-GUIDE/`;
+- mise à jour des parcours de navigation MADSuite.
 
 ### 2026-07-12 — Création
 
