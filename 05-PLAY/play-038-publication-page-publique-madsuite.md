@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: PLAY-038 — Publication d’une page publique MADSuite
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -34,11 +34,11 @@ Il s’applique aux pages de landing, prix, FAQ, démo, prévente, lancement, ai
 ## Documents à lire avant de commencer
 
 ```text
-SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/index-global-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-machine-a-clients-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-034-validation-machine-a-clients-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-machine-a-clients-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-revenue-core-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/prompt-agent-machine-a-clients-madsuite.md
 SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md
 ```
 
