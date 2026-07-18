@@ -1,0 +1,23 @@
+name: Markdown links
+
+on:
+  pull_request:
+    branches: [main]
+    paths: ["**/*.md", "08-BOOTSTRAPS/audit-markdown-links.py", "08-BOOTSTRAPS/audit-markdown-anchors.py", ".github/workflows/markdown-links.yml"]
+  push:
+    branches: [main]
+    paths: ["**/*.md", "08-BOOTSTRAPS/audit-markdown-links.py", "08-BOOTSTRAPS/audit-markdown-anchors.py", ".github/workflows/markdown-links.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Valider les fichiers liés
+        run: python 08-BOOTSTRAPS/audit-markdown-links.py
+      - name: Valider les ancres liées
+        run: python 08-BOOTSTRAPS/audit-markdown-anchors.py
