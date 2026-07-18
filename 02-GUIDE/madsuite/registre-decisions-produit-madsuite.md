@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Registre des décisions produit MADSuite
-Version: 1.1
-Dernière révision: 2026-07-02
+Version: 1.2
+Dernière révision: 2026-07-18
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -137,9 +137,9 @@ Créer une ADR si la décision :
 
 ## Liens principaux
 
-- `SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md`
-- `SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md`
-- `SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md`
+- `SYSTEME_MAD/02-GUIDE/madsuite/index-global-madsuite.md`
+- `SYSTEME_MAD/02-GUIDE/madsuite/spec-revenue-core-madsuite.md`
+- `SYSTEME_MAD/02-GUIDE/madsuite/spec-machine-a-clients-madsuite.md`
 - `SYSTEME_MAD/10-ROADMAP/madsuite-madproof-roadmap.md`
 - `SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md`
 - `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
