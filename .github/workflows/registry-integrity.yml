@@ -72,6 +72,9 @@ jobs:
       - name: Check registry MAD Health decisions P4.9
         run: node 08-BOOTSTRAPS/generate-mad-registry-health-decisions.mjs --check
 
+      - name: Check registry MAD Health decision ledger P4.10
+        run: node 08-BOOTSTRAPS/generate-mad-registry-health-decision-ledger.mjs --check
+
       - name: Audit registry
         run: node 08-BOOTSTRAPS/audit-mad-registry.mjs
 
@@ -86,6 +89,7 @@ jobs:
             00-SYSTEME-MAD/registry/generated-registry-health-alerts.md
             00-SYSTEME-MAD/registry/generated-registry-health-actions.md
             00-SYSTEME-MAD/registry/generated-registry-health-decisions.md
+            00-SYSTEME-MAD/registry/generated-registry-health-decision-ledger.md
             00-SYSTEME-MAD/registry/generated-registry-radar.md
             00-SYSTEME-MAD/registry/generated-registry-architecture.md
             00-SYSTEME-MAD/registry/generated-integrity-report.md
@@ -126,6 +130,9 @@ jobs:
             00-SYSTEME-MAD/registry/generated-registry-health-actions.json
             00-SYSTEME-MAD/registry/generated-registry-health-decisions.md
             00-SYSTEME-MAD/registry/generated-registry-health-decisions.json
+            00-SYSTEME-MAD/registry/registry-health-decision-ledger.json
+            00-SYSTEME-MAD/registry/generated-registry-health-decision-ledger.md
+            00-SYSTEME-MAD/registry/generated-registry-health-decision-ledger.json
             00-SYSTEME-MAD/registry/generated-registry-radar.md
             00-SYSTEME-MAD/registry/generated-registry-radar.json
             00-SYSTEME-MAD/registry/generated-registry-architecture.md

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "phase": "P4.10",
+  "policy": {
+    "append_only": true,
+    "human_authored": true,
+    "automatic_decision_forbidden": true,
+    "automatic_execution_forbidden": true
+  },
+  "entries": []
+}
