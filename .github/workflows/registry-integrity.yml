@@ -87,6 +87,9 @@ jobs:
       - name: Check registry MAD Health controlled promotion P4.14
         run: node 08-BOOTSTRAPS/generate-mad-registry-health-promotion.mjs --check
 
+      - name: Check registry MAD Health institutional integration P4.15
+        run: node 08-BOOTSTRAPS/generate-mad-registry-health-integration.mjs --check
+
       - name: Audit registry
         run: node 08-BOOTSTRAPS/audit-mad-registry.mjs
 
@@ -106,6 +109,7 @@ jobs:
             00-SYSTEME-MAD/registry/generated-registry-health-impact.md
             00-SYSTEME-MAD/registry/generated-registry-health-learning.md
             00-SYSTEME-MAD/registry/generated-registry-health-promotion.md
+            00-SYSTEME-MAD/registry/generated-registry-health-integration.md
             00-SYSTEME-MAD/registry/generated-registry-radar.md
             00-SYSTEME-MAD/registry/generated-registry-architecture.md
             00-SYSTEME-MAD/registry/generated-integrity-report.md
@@ -161,6 +165,9 @@ jobs:
             00-SYSTEME-MAD/registry/registry-health-promotion-ledger.json
             00-SYSTEME-MAD/registry/generated-registry-health-promotion.md
             00-SYSTEME-MAD/registry/generated-registry-health-promotion.json
+            00-SYSTEME-MAD/registry/registry-health-integration-ledger.json
+            00-SYSTEME-MAD/registry/generated-registry-health-integration.md
+            00-SYSTEME-MAD/registry/generated-registry-health-integration.json
             00-SYSTEME-MAD/registry/generated-registry-radar.md
             00-SYSTEME-MAD/registry/generated-registry-radar.json
             00-SYSTEME-MAD/registry/generated-registry-architecture.md
