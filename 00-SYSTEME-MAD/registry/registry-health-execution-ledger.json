@@ -1,0 +1,6 @@
+{
+  "schema_version": "1.0",
+  "phase": "P4.11",
+  "description": "Registre humain append-only des événements d’exécution MAD Health.",
+  "events": []
+}
