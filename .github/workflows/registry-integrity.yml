@@ -60,27 +60,40 @@ jobs:
       - name: Check registry MAD Health P4.5
         run: node 08-BOOTSTRAPS/generate-mad-registry-health.mjs --check
 
+      - name: Check registry MAD Health trends P4.6
+        run: node 08-BOOTSTRAPS/generate-mad-registry-health-trends.mjs --check
+
       - name: Audit registry
         run: node 08-BOOTSTRAPS/audit-mad-registry.mjs
 
       - name: Publish reports in job summary
         if: always()
+        shell: bash
         run: |
-          cat 00-SYSTEME-MAD/registry/generated-registry-dashboard.md >> "$GITHUB_STEP_SUMMARY"
-          printf '\n---\n' >> "$GITHUB_STEP_SUMMARY"
-          cat 00-SYSTEME-MAD/registry/generated-registry-health.md >> "$GITHUB_STEP_SUMMARY"
-          printf '\n---\n' >> "$GITHUB_STEP_SUMMARY"
-          cat 00-SYSTEME-MAD/registry/generated-registry-radar.md >> "$GITHUB_STEP_SUMMARY"
-          printf '\n---\n' >> "$GITHUB_STEP_SUMMARY"
-          cat 00-SYSTEME-MAD/registry/generated-registry-architecture.md >> "$GITHUB_STEP_SUMMARY"
-          printf '\n---\n' >> "$GITHUB_STEP_SUMMARY"
-          cat 00-SYSTEME-MAD/registry/generated-integrity-report.md >> "$GITHUB_STEP_SUMMARY"
-          printf '\n---\n' >> "$GITHUB_STEP_SUMMARY"
-          cat 00-SYSTEME-MAD/registry/generated-relations-graph.md >> "$GITHUB_STEP_SUMMARY"
-          printf '\n---\n' >> "$GITHUB_STEP_SUMMARY"
-          cat 00-SYSTEME-MAD/registry/generated-traceability.md >> "$GITHUB_STEP_SUMMARY"
-          printf '\n---\n' >> "$GITHUB_STEP_SUMMARY"
-          cat 00-SYSTEME-MAD/registry/generated-provenance-chains.md >> "$GITHUB_STEP_SUMMARY"
+          reports=(
+            00-SYSTEME-MAD/registry/generated-registry-dashboard.md
+            00-SYSTEME-MAD/registry/generated-registry-health.md
+            00-SYSTEME-MAD/registry/generated-registry-health-trends.md
+            00-SYSTEME-MAD/registry/generated-registry-radar.md
+            00-SYSTEME-MAD/registry/generated-registry-architecture.md
+            00-SYSTEME-MAD/registry/generated-integrity-report.md
+            00-SYSTEME-MAD/registry/generated-relations-graph.md
+            00-SYSTEME-MAD/registry/generated-traceability.md
+            00-SYSTEME-MAD/registry/generated-provenance-chains.md
+          )
+
+          first=true
+          for report in "${reports[@]}"; do
+            if [[ ! -f "$report" ]]; then
+              printf '\n> Rapport indisponible : `%s`\n' "$report" >> "$GITHUB_STEP_SUMMARY"
+              continue
+            fi
+            if [[ "$first" == false ]]; then
+              printf '\n---\n' >> "$GITHUB_STEP_SUMMARY"
+            fi
+            cat "$report" >> "$GITHUB_STEP_SUMMARY"
+            first=false
+          done
 
       - name: Upload registry reports
         if: always()
@@ -92,6 +105,9 @@ jobs:
             00-SYSTEME-MAD/registry/generated-registry-metrics.json
             00-SYSTEME-MAD/registry/generated-registry-health.md
             00-SYSTEME-MAD/registry/generated-registry-health.json
+            00-SYSTEME-MAD/registry/registry-health-history.json
+            00-SYSTEME-MAD/registry/generated-registry-health-trends.md
+            00-SYSTEME-MAD/registry/generated-registry-health-trends.json
             00-SYSTEME-MAD/registry/generated-registry-radar.md
             00-SYSTEME-MAD/registry/generated-registry-radar.json
             00-SYSTEME-MAD/registry/generated-registry-architecture.md
@@ -99,4 +115,4 @@ jobs:
             00-SYSTEME-MAD/registry/generated-relations-graph.md
             00-SYSTEME-MAD/registry/generated-traceability.md
             00-SYSTEME-MAD/registry/generated-provenance-chains.md
-          if-no-files-found: error
+          if-no-files-found: warn
