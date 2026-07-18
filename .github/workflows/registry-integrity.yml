@@ -45,6 +45,9 @@ jobs:
       - name: Check registry traceability
         run: node 08-BOOTSTRAPS/generate-mad-traceability.mjs --check
 
+      - name: Check registry provenance chains
+        run: node 08-BOOTSTRAPS/generate-mad-provenance.mjs --check
+
       - name: Audit registry
         run: node 08-BOOTSTRAPS/audit-mad-registry.mjs
 
@@ -56,6 +59,8 @@ jobs:
           cat 00-SYSTEME-MAD/registry/generated-relations-graph.md >> "$GITHUB_STEP_SUMMARY"
           printf '\n---\n' >> "$GITHUB_STEP_SUMMARY"
           cat 00-SYSTEME-MAD/registry/generated-traceability.md >> "$GITHUB_STEP_SUMMARY"
+          printf '\n---\n' >> "$GITHUB_STEP_SUMMARY"
+          cat 00-SYSTEME-MAD/registry/generated-provenance-chains.md >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload registry reports
         if: always()
@@ -66,4 +71,5 @@ jobs:
             00-SYSTEME-MAD/registry/generated-integrity-report.md
             00-SYSTEME-MAD/registry/generated-relations-graph.md
             00-SYSTEME-MAD/registry/generated-traceability.md
+            00-SYSTEME-MAD/registry/generated-provenance-chains.md
           if-no-files-found: error
