@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "phase": "P4.7",
+  "generated_from": [
+    "generated-registry-health.json",
+    "generated-registry-health-trends.json"
+  ],
+  "methodology": {
+    "global_severity": "highest active alert severity",
+    "compensation": "forbidden",
+    "priority": [
+      "Critique",
+      "Élevée",
+      "Modérée",
+      "Information"
+    ]
+  },
+  "overall_severity": "Modérée",
+  "alert_count": 3,
+  "counts": {
+    "Information": 0,
+    "Modérée": 3,
+    "Élevée": 0,
+    "Critique": 0
+  },
+  "current": {
+    "date": "2026-07-18",
+    "health_index": 67,
+    "status": "Sous surveillance",
+    "confidence": {
+      "value": 100,
+      "level": "Élevée",
+      "available_axes": 6,
+      "expected_axes": 6
+    },
+    "trend": "Base initiale",
+    "health_index_delta": 0
+  },
+  "alerts": [
+    {
+      "key": "AXIS_WATCH|canonical_maturity",
+      "rule": "AXIS_WATCH",
+      "severity": "Modérée",
+      "target": "canonical_maturity",
+      "message": "L’axe Maturité canonique est à surveiller.",
+      "evidence": {
+        "axis": "canonical_maturity",
+        "label": "Maturité canonique",
+        "value": 67
+      }
+    },
+    {
+      "key": "AXIS_WATCH|connection",
+      "rule": "AXIS_WATCH",
+      "severity": "Modérée",
+      "target": "connection",
+      "message": "L’axe Connexion est à surveiller.",
+      "evidence": {
+        "axis": "connection",
+        "label": "Connexion",
+        "value": 67
+      }
+    },
+    {
+      "key": "HEALTH_WATCH|registry",
+      "rule": "HEALTH_WATCH",
+      "severity": "Modérée",
+      "target": "registry",
+      "message": "Le diagnostic MAD Health demeure sous surveillance.",
+      "evidence": {
+        "status": "Sous surveillance",
+        "health_index": 67
+      }
+    }
+  ],
+  "limitations": [
+    "No external notification",
+    "No automatic issue creation",
+    "No Guardian recommendation",
+    "No prediction"
+  ]
+}
