@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — Roadmap
-Version: 1.7
-Dernière révision: 2026-07-11
+Version: 1.8
+Dernière révision: 2026-07-18
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -52,9 +52,9 @@ SYSTEME_MAD/05-PLAY/play-054-foundation-review.md
 SYSTEME_MAD/10-ROADMAP/roadmap-mvp-early-access-madsuite.md
 SYSTEME_MAD/10-ROADMAP/tickets-sprint-1-parcours-premiere-facture-madsuite.md
 SYSTEME_MAD/10-ROADMAP/analyse-repo-applicatif-madsuite-sprint-1.md
-SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-developpeur-mvp-early-access-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/prompt-agent-developpeur-sprint-1-premiere-facture-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/prompt-pret-a-coller-agent-codeur-sprint-1-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/prompt-agent-developpeur-mvp-early-access-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/prompt-agent-developpeur-sprint-1-premiere-facture-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/prompt-pret-a-coller-agent-codeur-sprint-1-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-045-validation-mvp-early-access-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-046-validation-sprint-1-premiere-facture-madsuite.md
 ```
@@ -74,7 +74,7 @@ SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md
 - Un checkpoint photographie un état; il ne crée ni règle, ni décision structurante, ni release.
 - Un dashboard synthétise l’état courant; il doit rester factuel, daté et relié aux sources officielles.
 - Une release documentaire fige une référence; elle ne crée pas automatiquement une nouvelle architecture ou un nouveau produit.
-- Ne pas y placer les spécifications produit détaillées : utiliser `01-PRODUIT/`.
+- Ne pas y placer les spécifications produit détaillées : utiliser `02-GUIDE/madsuite/` pour les documents spécialisés MADSuite.
 - Ne pas y placer les documents de recherche : utiliser `13-RESSOURCES/research/`.
 - Ne pas y placer les décisions structurantes : utiliser `04-ADR/`.
 - Relier tout document stratégique important à l’index global MADSuite lorsque pertinent.
@@ -83,7 +83,7 @@ SYSTEME_MAD/10-ROADMAP/registre-risques-madsuite-madproof.md
 
 ## Liens utiles
 
-- `SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md`
+- `SYSTEME_MAD/02-GUIDE/madsuite/index-global-madsuite.md`
 - `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/README.md`
 - `SYSTEME_MAD/03-STANDARDS/std-506.md`
 - `SYSTEME_MAD/05-PLAY/play-054-foundation-review.md`
