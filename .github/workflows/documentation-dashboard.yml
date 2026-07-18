@@ -1,0 +1,57 @@
+name: Documentation dashboard
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 10 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "**/*.md"
+      - "08-BOOTSTRAPS/generate-documentation-dashboard.py"
+      - ".github/workflows/documentation-dashboard.yml"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: documentation-dashboard
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Générer le tableau de bord documentaire
+        run: python 08-BOOTSTRAPS/generate-documentation-dashboard.py
+      - name: Valider le document généré
+        run: |
+          test -s 00-SYSTEME-MAD/governance/generated-documentation-dashboard.md
+          grep -q "Couverture des métadonnées" 00-SYSTEME-MAD/governance/generated-documentation-dashboard.md
+          grep -q "Documents à réviser" 00-SYSTEME-MAD/governance/generated-documentation-dashboard.md
+      - name: Créer ou actualiser la PR automatisée
+        env:
+          GH_TOKEN: ${{ secrets.MAD_GOVERNANCE_TOKEN || github.token }}
+        run: |
+          output="00-SYSTEME-MAD/governance/generated-documentation-dashboard.md"
+          if git diff --quiet -- "$output"; then
+            echo "Tableau de bord documentaire déjà à jour."
+            exit 0
+          fi
+          branch="automation/documentation-dashboard"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C "$branch"
+          git add "$output"
+          git commit -m "chore(governance): refresh documentation dashboard"
+          git push --force-with-lease origin "$branch"
+          existing=$(gh pr list --head "$branch" --base main --state open --json number --jq '.[0].number // empty')
+          if [ -z "$existing" ]; then
+            gh pr create --base main --head "$branch" --title "[AUTO] Actualiser le tableau de bord documentaire" --body "Mise à jour automatisée des indicateurs de qualité documentaire de SYSTEME_MAD."
+          else
+            echo "PR #$existing déjà ouverte et actualisée."
+          fi
