@@ -48,7 +48,7 @@ jobs:
       - name: Check registry provenance chains
         run: node 08-BOOTSTRAPS/generate-mad-provenance.mjs --check
 
-      - name: Check registry live dashboard
+      - name: Check registry live dashboard and P4.2 metrics
         run: node 08-BOOTSTRAPS/generate-mad-registry-dashboard.mjs --check
 
       - name: Audit registry
@@ -74,6 +74,7 @@ jobs:
           name: mad-registry-reports
           path: |
             00-SYSTEME-MAD/registry/generated-registry-dashboard.md
+            00-SYSTEME-MAD/registry/generated-registry-metrics.json
             00-SYSTEME-MAD/registry/generated-integrity-report.md
             00-SYSTEME-MAD/registry/generated-relations-graph.md
             00-SYSTEME-MAD/registry/generated-traceability.md
