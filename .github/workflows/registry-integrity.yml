@@ -51,6 +51,9 @@ jobs:
       - name: Check registry live dashboard and P4.2 metrics
         run: node 08-BOOTSTRAPS/generate-mad-registry-dashboard.mjs --check
 
+      - name: Check registry architecture P4.3
+        run: node 08-BOOTSTRAPS/generate-mad-registry-architecture.mjs --check
+
       - name: Audit registry
         run: node 08-BOOTSTRAPS/audit-mad-registry.mjs
 
@@ -58,6 +61,8 @@ jobs:
         if: always()
         run: |
           cat 00-SYSTEME-MAD/registry/generated-registry-dashboard.md >> "$GITHUB_STEP_SUMMARY"
+          printf '\n---\n' >> "$GITHUB_STEP_SUMMARY"
+          cat 00-SYSTEME-MAD/registry/generated-registry-architecture.md >> "$GITHUB_STEP_SUMMARY"
           printf '\n---\n' >> "$GITHUB_STEP_SUMMARY"
           cat 00-SYSTEME-MAD/registry/generated-integrity-report.md >> "$GITHUB_STEP_SUMMARY"
           printf '\n---\n' >> "$GITHUB_STEP_SUMMARY"
@@ -75,6 +80,7 @@ jobs:
           path: |
             00-SYSTEME-MAD/registry/generated-registry-dashboard.md
             00-SYSTEME-MAD/registry/generated-registry-metrics.json
+            00-SYSTEME-MAD/registry/generated-registry-architecture.md
             00-SYSTEME-MAD/registry/generated-integrity-report.md
             00-SYSTEME-MAD/registry/generated-relations-graph.md
             00-SYSTEME-MAD/registry/generated-traceability.md
