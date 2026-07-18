@@ -31,8 +31,8 @@ Owner: Automatisation SYSTEME_MAD
 
 | Statut | Objets |
 |---|---:|
-| Accepté | 1 |
 | À valider | 1 |
+| Accepté | 1 |
 | Officiel | 1 |
 
 ## Confiance des justifications
