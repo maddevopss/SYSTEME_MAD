@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: PLAY-039 — Analyse feedback Early Access MADSuite
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -42,9 +42,9 @@ Il s’applique aux retours provenant :
 SYSTEME_MAD/07-TEMPLATES/template-page-feedback-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-mini-sondage-feedback-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-analyse-feedback-early-access-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/registre-decisions-produit-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-revenue-core-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-machine-a-clients-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/registre-decisions-produit-madsuite.md
 ```
 
 ---
@@ -144,7 +144,7 @@ Actions possibles :
 Avant de créer une nouvelle décision, vérifier :
 
 ```text
-SYSTEME_MAD/01-PRODUIT/madsuite/registre-decisions-produit-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/registre-decisions-produit-madsuite.md
 ```
 
 ---
