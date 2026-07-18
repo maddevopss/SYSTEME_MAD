@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Roadmap MADSuite / MADPROOF
-Version: 0.1
-Dernière révision: 2026-07-02
+Version: 0.2
+Dernière révision: 2026-07-18
 Statut: Brouillon
 Auteur: Marc-André Dufour
 ---
@@ -101,13 +101,13 @@ Objectif : produire un snapshot de reprise qui répond à trois questions :
 Document produit principal :
 
 ```text
-SYSTEME_MAD/01-PRODUIT/madsuite/mvp-mad-ariane-snapshot-reprise.md
+SYSTEME_MAD/02-GUIDE/madsuite/mvp-mad-ariane-snapshot-reprise.md
 ```
 
 Document synthèse complémentaire :
 
 ```text
-SYSTEME_MAD/01-PRODUIT/madsuite/mad-ariane-fil-ariane-zero-effort.md
+SYSTEME_MAD/02-GUIDE/madsuite/mad-ariane-fil-ariane-zero-effort.md
 ```
 
 ## Axe 5 — Cognitive Engine V1
@@ -206,8 +206,8 @@ Priorités :
 
 | Document | Rôle |
 |---|---|
-| `SYSTEME_MAD/01-PRODUIT/madsuite/README.md` | Index produit MADSuite |
-| `SYSTEME_MAD/01-PRODUIT/madsuite/mvp-mad-ariane-snapshot-reprise.md` | Spécification MVP MAD Ariane |
+| `SYSTEME_MAD/02-GUIDE/madsuite/README.md` | Index produit MADSuite |
+| `SYSTEME_MAD/02-GUIDE/madsuite/mvp-mad-ariane-snapshot-reprise.md` | Spécification MVP MAD Ariane |
 | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/000-cadre-madproof.md` | Cadre MADPROOF consolidé |
 | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/002-matrice-claims-cognitifs-madsuite.md` | Matrice existante des claims cognitifs |
 | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md` | Registre opérationnel des claims |
@@ -221,6 +221,6 @@ Ce document doit rester une roadmap de pilotage.
 
 Les détails de recherche doivent demeurer dans `13-RESSOURCES/research/`.
 
-Les spécifications produit doivent demeurer dans `01-PRODUIT/madsuite/`.
+Les spécifications produit doivent demeurer dans `02-GUIDE/madsuite/`.
 
 Les checklists doivent demeurer dans `09-CHECKLISTS/`.
