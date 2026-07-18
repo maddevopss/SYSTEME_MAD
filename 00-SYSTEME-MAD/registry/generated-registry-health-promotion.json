@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "phase": "P4.14",
+  "generated_from": [
+    "generated-registry-health-learning.json",
+    "registry-health-promotion-ledger.json"
+  ],
+  "methodology": {
+    "human_review_required": true,
+    "automatic_promotion": "forbidden",
+    "automatic_document_change": "forbidden"
+  },
+  "learning_count": 3,
+  "proposed_rule_count": 0,
+  "promotion_event_count": 0,
+  "valid_event_count": 0,
+  "invalid_event_count": 0,
+  "orphan_event_count": 0,
+  "counts": {
+    "Non applicable": 3,
+    "À examiner": 0,
+    "Maintenue locale": 0,
+    "Expérimentation requise": 0,
+    "Promotion approuvée": 0,
+    "Promotion refusée": 0,
+    "Promotion reportée": 0
+  },
+  "promotions": [
+    {
+      "decision_key": "DECISION|ACTION|AXIS_WATCH|canonical_maturity",
+      "target": "canonical_maturity",
+      "learning_status": "Non applicable",
+      "promotion_status": "Non applicable",
+      "reviewer": null,
+      "review_date": null,
+      "rationale": null,
+      "document_target": null,
+      "change_type": null,
+      "evidence_reference": null,
+      "event_key": null,
+      "automatic_promotion_allowed": false,
+      "automatic_document_change_allowed": false
+    },
+    {
+      "decision_key": "DECISION|ACTION|AXIS_WATCH|connection",
+      "target": "connection",
+      "learning_status": "Non applicable",
+      "promotion_status": "Non applicable",
+      "reviewer": null,
+      "review_date": null,
+      "rationale": null,
+      "document_target": null,
+      "change_type": null,
+      "evidence_reference": null,
+      "event_key": null,
+      "automatic_promotion_allowed": false,
+      "automatic_document_change_allowed": false
+    },
+    {
+      "decision_key": "DECISION|ACTION|HEALTH_WATCH|registry",
+      "target": "registry",
+      "learning_status": "Non applicable",
+      "promotion_status": "Non applicable",
+      "reviewer": null,
+      "review_date": null,
+      "rationale": null,
+      "document_target": null,
+      "change_type": null,
+      "evidence_reference": null,
+      "event_key": null,
+      "automatic_promotion_allowed": false,
+      "automatic_document_change_allowed": false
+    }
+  ],
+  "invalid_events": [],
+  "orphan_events": [],
+  "limitations": [
+    "No automatic promotion",
+    "No automatic document change",
+    "No reviewer authentication",
+    "No certification"
+  ]
+}
