@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "phase": "P4.13",
+  "generated_from": [
+    "generated-registry-health-impact.json",
+    "registry-health-learning-ledger.json"
+  ],
+  "methodology": {
+    "human_qualification_required": true,
+    "automatic_generalization": "forbidden",
+    "automatic_standard_change": "forbidden"
+  },
+  "impact_count": 3,
+  "measurable_impact_count": 0,
+  "learning_event_count": 0,
+  "valid_event_count": 0,
+  "invalid_event_count": 0,
+  "orphan_event_count": 0,
+  "counts": {
+    "Non applicable": 3,
+    "À qualifier": 0,
+    "Observation": 0,
+    "Leçon locale": 0,
+    "Hypothèse transférable": 0,
+    "Règle proposée": 0,
+    "Non retenue": 0
+  },
+  "learnings": [
+    {
+      "decision_key": "DECISION|ACTION|AXIS_WATCH|canonical_maturity",
+      "target": "canonical_maturity",
+      "impact_status": "Non mesurable",
+      "learning_status": "Non applicable",
+      "author": null,
+      "learning_date": null,
+      "statement": null,
+      "scope": null,
+      "evidence_reference": null,
+      "proposed_document_target": null,
+      "event_key": null,
+      "automatic_generalization_allowed": false,
+      "automatic_standard_change_allowed": false
+    },
+    {
+      "decision_key": "DECISION|ACTION|AXIS_WATCH|connection",
+      "target": "connection",
+      "impact_status": "Non mesurable",
+      "learning_status": "Non applicable",
+      "author": null,
+      "learning_date": null,
+      "statement": null,
+      "scope": null,
+      "evidence_reference": null,
+      "proposed_document_target": null,
+      "event_key": null,
+      "automatic_generalization_allowed": false,
+      "automatic_standard_change_allowed": false
+    },
+    {
+      "decision_key": "DECISION|ACTION|HEALTH_WATCH|registry",
+      "target": "registry",
+      "impact_status": "Non mesurable",
+      "learning_status": "Non applicable",
+      "author": null,
+      "learning_date": null,
+      "statement": null,
+      "scope": null,
+      "evidence_reference": null,
+      "proposed_document_target": null,
+      "event_key": null,
+      "automatic_generalization_allowed": false,
+      "automatic_standard_change_allowed": false
+    }
+  ],
+  "invalid_events": [],
+  "orphan_events": [],
+  "limitations": [
+    "No automatic generalization",
+    "No automatic causality",
+    "No automatic standard change",
+    "No author authentication",
+    "No certification"
+  ]
+}
