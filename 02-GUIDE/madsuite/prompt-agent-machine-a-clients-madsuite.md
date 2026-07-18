@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Prompt agent — Machine à clients MADSuite
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: Prêt à utiliser
 Auteur: Marc-André Dufour
 ---
@@ -54,10 +54,10 @@ Lire dans cet ordre :
 
 ```text
 SYSTEME_MAD/MANIFEST.md
-SYSTEME_MAD/01-PRODUIT/madsuite/index-global-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/index-global-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-machine-a-clients-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-034-validation-machine-a-clients-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-revenue-core-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-033-validation-mvp-revenue-core-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-landing-page-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-faq-publique-madsuite.md
