@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "phase": "P5.1",
+  "institutional_version": "0.1.0",
+  "status": "Proposition",
+  "declared_at": "2026-07-18",
+  "declared_by": "Marc-André Dufour",
+  "reference_commit": "3674ebbcddbf2029f7f5e87595107412a79aaf7f",
+  "documents": [
+    {
+      "path": "MANIFEST.md",
+      "expected_version": "1.3",
+      "expected_status": "Officiel",
+      "role": "Autorité documentaire principale"
+    },
+    {
+      "path": "00-SYSTEME-MAD/governance/constitution.md",
+      "expected_version": "0.2",
+      "expected_status": "Proposition",
+      "role": "Index constitutionnel des principes fondateurs"
+    },
+    {
+      "path": "00-SYSTEME-MAD/yaml-standard.md",
+      "expected_version": "1.0",
+      "expected_status": "Officiel",
+      "role": "Standard des métadonnées documentaires"
+    },
+    {
+      "path": "00-SYSTEME-MAD/registry/registry-health-integration-p4-15.md",
+      "expected_version": "1.0.0",
+      "expected_status": "Proposition",
+      "role": "Fermeture du cycle institutionnel P4"
+    }
+  ],
+  "exclusions": [
+    {
+      "scope": "Autres documents du dépôt",
+      "reason": "P5.1 commence par un noyau institutionnel minimal; une inclusion future exige une déclaration explicite."
+    },
+    {
+      "scope": "Artefacts générés P4",
+      "reason": "Ils demeurent vérifiés par le registre, mais ne sont pas encore déclarés comme documents constitutifs de cette version."
+    }
+  ]
+}
