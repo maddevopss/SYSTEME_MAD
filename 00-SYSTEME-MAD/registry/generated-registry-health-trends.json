@@ -29,12 +29,42 @@
   "health_index_delta": 0,
   "trend": "Base initiale",
   "axis_changes": [
-    { "id": "traceability", "previous": null, "current": 100, "delta": null },
-    { "id": "connection", "previous": null, "current": 67, "delta": null },
-    { "id": "evidence_confidence", "previous": null, "current": 100, "delta": null },
-    { "id": "structural_integrity", "previous": null, "current": 100, "delta": null },
-    { "id": "canonical_maturity", "previous": null, "current": 67, "delta": null },
-    { "id": "document_completeness", "previous": null, "current": 100, "delta": null }
+    {
+      "id": "traceability",
+      "previous": null,
+      "current": 100,
+      "delta": null
+    },
+    {
+      "id": "connection",
+      "previous": null,
+      "current": 67,
+      "delta": null
+    },
+    {
+      "id": "evidence_confidence",
+      "previous": null,
+      "current": 100,
+      "delta": null
+    },
+    {
+      "id": "structural_integrity",
+      "previous": null,
+      "current": 100,
+      "delta": null
+    },
+    {
+      "id": "canonical_maturity",
+      "previous": null,
+      "current": 67,
+      "delta": null
+    },
+    {
+      "id": "document_completeness",
+      "previous": null,
+      "current": 100,
+      "delta": null
+    }
   ],
   "new_blockers": [],
   "resolved_blockers": [],
