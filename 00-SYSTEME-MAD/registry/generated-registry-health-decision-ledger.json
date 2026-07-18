@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "phase": "P4.10",
+  "generated_from": [
+    "generated-registry-health-decisions.json",
+    "registry-health-decision-ledger.json"
+  ],
+  "methodology": {
+    "reconciliation": "latest valid human entry per decision",
+    "human_decision_required": true,
+    "automatic_decision": "forbidden",
+    "automatic_execution": "forbidden"
+  },
+  "decision_count": 3,
+  "ledger_entry_count": 0,
+  "valid_entry_count": 0,
+  "invalid_entry_count": 0,
+  "orphan_entry_count": 0,
+  "counts": {
+    "À décider": 3,
+    "Acceptée": 0,
+    "Refusée": 0,
+    "Reportée": 0,
+    "Remplacée": 0
+  },
+  "decisions": [
+    {
+      "key": "DECISION|ACTION|AXIS_WATCH|canonical_maturity",
+      "action_key": "ACTION|AXIS_WATCH|canonical_maturity",
+      "alert_key": "AXIS_WATCH|canonical_maturity",
+      "rule": "AXIS_WATCH",
+      "target": "canonical_maturity",
+      "priority": "P2",
+      "status": "À décider",
+      "title": "Améliorer l’axe sous surveillance",
+      "proposed_action": "Identifier les éléments qui empêchent l’axe ciblé d’atteindre 80 %, appliquer une amélioration documentée puis remesurer.",
+      "rationale": "L’axe Maturité canonique est à surveiller.",
+      "verification": "L’axe ciblé progresse ou atteint le seuil robuste de 80 %.",
+      "decision_question": "Faut-il accepter, refuser, reporter ou remplacer l’action proposée pour canonical_maturity ?",
+      "decision_maker": null,
+      "decision_date": null,
+      "decision_rationale": null,
+      "automatic_approval_allowed": false,
+      "automatic_execution_allowed": false,
+      "evidence_reference": null,
+      "replacement_decision_key": null,
+      "ledger_event_key": null
+    },
+    {
+      "key": "DECISION|ACTION|AXIS_WATCH|connection",
+      "action_key": "ACTION|AXIS_WATCH|connection",
+      "alert_key": "AXIS_WATCH|connection",
+      "rule": "AXIS_WATCH",
+      "target": "connection",
+      "priority": "P2",
+      "status": "À décider",
+      "title": "Améliorer l’axe sous surveillance",
+      "proposed_action": "Identifier les éléments qui empêchent l’axe ciblé d’atteindre 80 %, appliquer une amélioration documentée puis remesurer.",
+      "rationale": "L’axe Connexion est à surveiller.",
+      "verification": "L’axe ciblé progresse ou atteint le seuil robuste de 80 %.",
+      "decision_question": "Faut-il accepter, refuser, reporter ou remplacer l’action proposée pour connection ?",
+      "decision_maker": null,
+      "decision_date": null,
+      "decision_rationale": null,
+      "automatic_approval_allowed": false,
+      "automatic_execution_allowed": false,
+      "evidence_reference": null,
+      "replacement_decision_key": null,
+      "ledger_event_key": null
+    },
+    {
+      "key": "DECISION|ACTION|HEALTH_WATCH|registry",
+      "action_key": "ACTION|HEALTH_WATCH|registry",
+      "alert_key": "HEALTH_WATCH|registry",
+      "rule": "HEALTH_WATCH",
+      "target": "registry",
+      "priority": "P2",
+      "status": "À décider",
+      "title": "Planifier un cycle d’amélioration ciblé",
+      "proposed_action": "Concentrer le prochain cycle de gouvernance sur les axes limitants avant de réévaluer MAD Health.",
+      "rationale": "Le diagnostic MAD Health demeure sous surveillance.",
+      "verification": "Une nouvelle mesure montre une progression d’au moins un axe limitant ou documente son maintien.",
+      "decision_question": "Faut-il accepter, refuser, reporter ou remplacer l’action proposée pour registry ?",
+      "decision_maker": null,
+      "decision_date": null,
+      "decision_rationale": null,
+      "automatic_approval_allowed": false,
+      "automatic_execution_allowed": false,
+      "evidence_reference": null,
+      "replacement_decision_key": null,
+      "ledger_event_key": null
+    }
+  ],
+  "invalid_entries": [],
+  "orphan_entries": [],
+  "limitations": [
+    "No identity authentication",
+    "No electronic signature",
+    "No automatic execution",
+    "No automatic issue creation",
+    "No certification"
+  ]
+}
