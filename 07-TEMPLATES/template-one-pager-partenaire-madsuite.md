@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Template — One-pager partenaire MADSuite
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: Template
 Auteur: Marc-André Dufour
 ---
@@ -23,8 +23,8 @@ Le document doit être clair, crédible et centré sur le produit réel.
 SYSTEME_MAD/07-TEMPLATES/template-rapport-partenaire-early-access-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-043-validation-rapport-partenaire-early-access-madsuite.md
 SYSTEME_MAD/07-TEMPLATES/template-synthese-executive-early-access-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-revenue-core-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-machine-a-clients-madsuite.md
 ```
 
 ---
