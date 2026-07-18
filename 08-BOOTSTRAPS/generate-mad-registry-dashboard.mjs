@@ -87,13 +87,13 @@ function render(objects, traces) {
   const lines = [
     "---",
     "Projet: Système MAD",
-    "Document: Tableau de bord vivant du MAD Registry",
+    "Document: Tableau de bord unifié du MAD Registry",
     "Version: 1.0",
     "Statut: Officiel",
     "Owner: Automatisation SYSTEME_MAD",
     "---",
     "",
-    "# Tableau de bord vivant du MAD Registry",
+    "# Tableau de bord unifié du MAD Registry",
     "",
     "> Généré automatiquement à partir des sources canoniques. Ne pas modifier manuellement.",
     "",
@@ -159,8 +159,8 @@ if (CHECK_MODE) {
     console.error("Exécuter : node 08-BOOTSTRAPS/generate-mad-registry-dashboard.mjs");
     process.exit(1);
   }
-  console.log("Registry dashboard check: tableau de bord synchronisé.");
+  console.log("Registry dashboard check: tableau de bord unifié synchronisé.");
 } else {
   await fs.writeFile(OUTPUT_PATH, generated, "utf8");
-  console.log("Registry dashboard generated.");
+  console.log("Registry unified dashboard generated.");
 }
