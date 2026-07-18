@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Template — Formulaire Early Access MADSuite
-Version: 1.0
-Dernière révision: 2026-07-02
+Version: 1.1
+Dernière révision: 2026-07-18
 Statut: Template
 Auteur: Marc-André Dufour
 ---
@@ -23,8 +23,8 @@ Il doit permettre de qualifier les premiers utilisateurs sans demander trop d’
 SYSTEME_MAD/07-TEMPLATES/template-page-lancement-early-access-madsuite.md
 SYSTEME_MAD/05-PLAY/play-038-publication-page-publique-madsuite.md
 SYSTEME_MAD/09-CHECKLISTS/chk-035-validation-publication-page-publique-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-machine-a-clients-madsuite.md
-SYSTEME_MAD/01-PRODUIT/madsuite/spec-revenue-core-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-machine-a-clients-madsuite.md
+SYSTEME_MAD/02-GUIDE/madsuite/spec-revenue-core-madsuite.md
 SYSTEME_MAD/03-STANDARDS/std-204.md
 SYSTEME_MAD/03-STANDARDS/std-506.md
 ```
