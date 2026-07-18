@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "phase": "P4.11",
+  "generated_from": [
+    "generated-registry-health-decision-ledger.json",
+    "registry-health-execution-ledger.json"
+  ],
+  "methodology": {
+    "reconciliation": "latest valid human execution event per accepted decision",
+    "automatic_execution": "forbidden",
+    "completion_is_verification": false
+  },
+  "decision_count": 3,
+  "accepted_decision_count": 0,
+  "execution_event_count": 0,
+  "valid_event_count": 0,
+  "invalid_event_count": 0,
+  "orphan_event_count": 0,
+  "counts": {
+    "Non applicable": 3,
+    "Non démarrée": 0,
+    "En cours": 0,
+    "Bloquée": 0,
+    "Terminée": 0,
+    "Vérifiée": 0,
+    "Abandonnée": 0
+  },
+  "executions": [
+    {
+      "decision_key": "DECISION|ACTION|AXIS_WATCH|canonical_maturity",
+      "priority": "P2",
+      "target": "canonical_maturity",
+      "decision_status": "À décider",
+      "execution_status": "Non applicable",
+      "actor": null,
+      "execution_date": null,
+      "note": null,
+      "evidence_reference": null,
+      "block_reason": null,
+      "verification_evidence": null,
+      "execution_event_key": null,
+      "automatic_execution_allowed": false
+    },
+    {
+      "decision_key": "DECISION|ACTION|AXIS_WATCH|connection",
+      "priority": "P2",
+      "target": "connection",
+      "decision_status": "À décider",
+      "execution_status": "Non applicable",
+      "actor": null,
+      "execution_date": null,
+      "note": null,
+      "evidence_reference": null,
+      "block_reason": null,
+      "verification_evidence": null,
+      "execution_event_key": null,
+      "automatic_execution_allowed": false
+    },
+    {
+      "decision_key": "DECISION|ACTION|HEALTH_WATCH|registry",
+      "priority": "P2",
+      "target": "registry",
+      "decision_status": "À décider",
+      "execution_status": "Non applicable",
+      "actor": null,
+      "execution_date": null,
+      "note": null,
+      "evidence_reference": null,
+      "block_reason": null,
+      "verification_evidence": null,
+      "execution_event_key": null,
+      "automatic_execution_allowed": false
+    }
+  ],
+  "invalid_events": [],
+  "orphan_events": [],
+  "limitations": [
+    "No automatic execution",
+    "No actor inference",
+    "No deadline inference",
+    "No proof authentication",
+    "No certification"
+  ]
+}
