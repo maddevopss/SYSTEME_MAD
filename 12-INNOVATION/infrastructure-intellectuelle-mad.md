@@ -175,7 +175,7 @@ Ce document ne propose pas :
 
 ## Relation avec le principe des briques
 
-L’infrastructure intellectuelle, si elle est un jour formalisée, devra respecter le principe des briques évolutives :
+L’infrastructure intellectuelle, si elle est un jour formalisée, devra respecter une construction par briques évolutives :
 
 - objets ciblés;
 - responsabilités distinctes;
@@ -198,6 +198,5 @@ L’infrastructure intellectuelle, si elle est un jour formalisée, devra respec
 - `README.md`
 - `MANIFEST.md`
 - `00-SYSTEME-MAD/registry/REG-001-mad-registry.md`
-- `01-FONDATIONS/principe-des-briques-evolutives.md`
 - `03-STANDARDS/std-006.md`
 - `13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
