@@ -59,4 +59,4 @@ Owner: Automatisation SYSTEME_MAD
 - [Graphe des relations](generated-relations-graph.md)
 - [Rapport de traçabilité](generated-traceability.md)
 - [Chaînes de provenance](generated-provenance-chains.md)
-- [Rapport d’intégrité](generated-integrity-report.md)
+- [Contrat d’intégrité P0](registry-integrity-p0.md)
