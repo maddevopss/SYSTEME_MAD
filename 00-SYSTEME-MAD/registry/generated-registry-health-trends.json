@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "phase": "P4.6",
+  "generated_from": [
+    "generated-registry-health.json",
+    "registry-health-history.json"
+  ],
+  "snapshot_count": 1,
+  "first_date": "2026-07-18",
+  "current": {
+    "date": "2026-07-18",
+    "health_index": 67,
+    "status": "Sous surveillance",
+    "confidence": {
+      "value": 100,
+      "level": "Élevée"
+    },
+    "axes": {
+      "traceability": 100,
+      "connection": 67,
+      "evidence_confidence": 100,
+      "structural_integrity": 100,
+      "canonical_maturity": 67,
+      "document_completeness": 100
+    },
+    "blockers": []
+  },
+  "previous": null,
+  "health_index_delta": 0,
+  "trend": "Base initiale",
+  "axis_changes": [
+    {
+      "id": "traceability",
+      "previous": null,
+      "current": 100,
+      "delta": null
+    },
+    {
+      "id": "connection",
+      "previous": null,
+      "current": 67,
+      "delta": null
+    },
+    {
+      "id": "evidence_confidence",
+      "previous": null,
+      "current": 100,
+      "delta": null
+    },
+    {
+      "id": "structural_integrity",
+      "previous": null,
+      "current": 100,
+      "delta": null
+    },
+    {
+      "id": "canonical_maturity",
+      "previous": null,
+      "current": 67,
+      "delta": null
+    },
+    {
+      "id": "document_completeness",
+      "previous": null,
+      "current": 100,
+      "delta": null
+    }
+  ],
+  "new_blockers": [],
+  "resolved_blockers": [],
+  "limitations": [
+    "No prediction",
+    "No Guardian recommendation",
+    "No automatic certification"
+  ]
+}

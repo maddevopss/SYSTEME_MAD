@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "phase": "P4.4",
+  "generated_from": [
+    "registry-index.yaml",
+    "registry-traceability.yaml"
+  ],
+  "composite_score": null,
+  "axes": [
+    {
+      "id": "traceability",
+      "label": "Traçabilité",
+      "value": 100,
+      "numerator": 1,
+      "denominator": 1,
+      "formula": "relations justifiées / relations canoniques",
+      "classification": "Robuste"
+    },
+    {
+      "id": "connection",
+      "label": "Connexion",
+      "value": 67,
+      "numerator": 2,
+      "denominator": 3,
+      "formula": "objets connectés / objets canoniques",
+      "classification": "À surveiller"
+    },
+    {
+      "id": "evidence_confidence",
+      "label": "Confiance des preuves",
+      "value": 100,
+      "numerator": 1,
+      "denominator": 1,
+      "formula": "preuves officielles ou valides / preuves enregistrées",
+      "classification": "Robuste"
+    },
+    {
+      "id": "structural_integrity",
+      "label": "Intégrité structurelle",
+      "value": 100,
+      "numerator": 1,
+      "denominator": 1,
+      "formula": "relations valides / relations canoniques; 0 % si un cycle existe",
+      "classification": "Robuste"
+    },
+    {
+      "id": "canonical_maturity",
+      "label": "Maturité canonique",
+      "value": 67,
+      "numerator": 2,
+      "denominator": 3,
+      "formula": "objets au statut mature / objets canoniques",
+      "classification": "À surveiller"
+    },
+    {
+      "id": "document_completeness",
+      "label": "Complétude documentaire",
+      "value": 100,
+      "numerator": 21,
+      "denominator": 21,
+      "formula": "champs obligatoires renseignés / champs obligatoires attendus",
+      "classification": "Robuste"
+    }
+  ],
+  "facts": {
+    "object_count": 3,
+    "relation_count": 1,
+    "trace_count": 1,
+    "isolated_objects": [
+      "REG-001"
+    ],
+    "broken_relations": [],
+    "cycles": []
+  },
+  "thresholds": {
+    "robust": {
+      "min": 80
+    },
+    "watch": {
+      "min": 60,
+      "max": 79
+    },
+    "fragile": {
+      "max": 59
+    }
+  },
+  "limitations": [
+    "No composite MAD Health score",
+    "No hidden weighting",
+    "No historical trend",
+    "No Guardian recommendation"
+  ]
+}

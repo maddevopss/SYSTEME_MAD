@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "phase": "P4.2",
+  "generated_from": [
+    "registry-index.yaml",
+    "registry-traceability.yaml"
+  ],
+  "scope": {
+    "object_count": 3,
+    "relation_count": 1,
+    "trace_count": 1
+  },
+  "metrics": {
+    "traceability_coverage_pct": 100,
+    "connected_objects_pct": 67,
+    "relation_density_pct": 17,
+    "official_evidence_pct": 100,
+    "provisional_evidence_pct": 0,
+    "average_out_degree": 0.33,
+    "isolated_objects": 1,
+    "missing_trace_relations": 0
+  },
+  "limitations": [
+    "Descriptive indicators only",
+    "No MAD Health score",
+    "No historical trend",
+    "No advanced centrality"
+  ]
+}
