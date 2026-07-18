@@ -1,0 +1,67 @@
+name: YAML front matter
+
+on:
+  pull_request:
+    branches: [main]
+    paths: ["**/*.md", ".github/workflows/yaml-frontmatter.yml"]
+  push:
+    branches: [main]
+    paths: ["**/*.md", ".github/workflows/yaml-frontmatter.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Valider les en-têtes YAML des documents gouvernés
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import os, subprocess, sys
+
+          root = Path.cwd()
+          required = ["Projet:", "Document:", "Version:", "Dernière révision:", "Statut:", "Auteur:"]
+          governed = {"00-SYSTEME-MAD", "02-GUIDE", "04-DECISIONS", "05-PLAY", "06-KNOWLEDGE-BASE", "07-TEMPLATES", "09-CHECKLISTS", "10-ROADMAP", "11-ARCHITECTURE", "12-STANDARDS", "13-RESSOURCES"}
+          excluded = {"README.md", "generated-dashboard.md"}
+
+          if os.getenv("GITHUB_EVENT_NAME") == "pull_request":
+              base = f"origin/{os.getenv('GITHUB_BASE_REF', 'main')}"
+              subprocess.run(["git", "fetch", "origin", os.getenv("GITHUB_BASE_REF", "main"), "--depth=1"], check=False)
+              raw = subprocess.check_output(["git", "diff", "--name-only", "--diff-filter=AM", f"{base}...HEAD"], text=True)
+          else:
+              raw = subprocess.check_output(["git", "ls-files", "*.md"], text=True)
+
+          errors = []
+          checked = 0
+          for name in raw.splitlines():
+              path = root / name
+              parts = Path(name).parts
+              if not path.exists() or path.suffix.lower() != ".md" or not parts or parts[0] not in governed or path.name in excluded or "archives" in {p.lower() for p in parts}:
+                  continue
+              checked += 1
+              content = path.read_text(encoding="utf-8")
+              if not content.startswith("---\n"):
+                  errors.append(f"{name}: en-tête YAML absent")
+                  continue
+              blocks = content.split("---", 2)
+              if len(blocks) < 3:
+                  errors.append(f"{name}: bloc YAML non fermé")
+                  continue
+              for field in required:
+                  if field not in blocks[1]:
+                      errors.append(f"{name}: champ manquant {field[:-1]}")
+
+          if errors:
+              print("Validation YAML échouée:")
+              for error in errors:
+                  print(f"- {error}")
+              sys.exit(1)
+          print(f"Validation YAML réussie: {checked} document(s) vérifié(s).")
+          PY
