@@ -1,10 +1,14 @@
 ---
-title: Cartographie du dépôt SYSTEME_MAD
-status: Actif
-type: Navigation
-owner: MAD DevOps
+Projet: SYSTEME_MAD
+Document: Cartographie du dépôt SYSTEME_MAD
+Version: 1.0
+Dernière révision: 2026-07-19
+Statut: Actif
+Auteur: MAD DevOps
+Type: Navigation
+Owner: MAD DevOps
 created_at: 2026-07-12
-updated_at: 2026-07-18
+updated_at: 2026-07-19
 ---
 
 # Cartographie du dépôt SYSTEME_MAD
