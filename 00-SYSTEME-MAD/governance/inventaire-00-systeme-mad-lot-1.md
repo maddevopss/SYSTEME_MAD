@@ -1,7 +1,7 @@
 ---
 Projet: SYSTEME_MAD
 Document: Inventaire institutionnel — 00-SYSTEME-MAD — lot 1
-Version: 0.2
+Version: 0.3
 Dernière révision: 2026-07-19
 Statut: À valider
 Auteur: MAD DevOps
@@ -19,7 +19,7 @@ Ce document est un relevé de collecte. Il ne constitue ni une classification fi
 
 Ce premier lot couvre les principaux points d’entrée, objets de gouvernance et artefacts de Registry déjà identifiés avec un niveau de confiance suffisant.
 
-La version 0.2 ajoute les vérifications directes effectuées sur les documents d’autorité déjà présents. Elle ne crée aucune nouvelle structure documentaire.
+La version 0.3 ajoute la vérification directe des sources, de l’index et de plusieurs contrats et artefacts du MAD Registry. Elle ne crée aucune nouvelle structure documentaire.
 
 ## Registre de collecte
 
@@ -35,12 +35,12 @@ La version 0.2 ajoute les vérifications directes effectuées sur les documents 
 | INV-00-008 | Mandat de l’inventaire institutionnel phase 1 | `00-SYSTEME-MAD/governance/inventaire-institutionnel-phase-1.md` | Mandat de campagne | Officiel | Définit le périmètre, la méthode, les champs, les garde-fous et les critères de complétude | Tous les lots d’inventaire | Source de contrôle de la phase 1 |
 | INV-00-009 | Rapport d’audit de l’autorité constitutionnelle R1 | `00-SYSTEME-MAD/governance/rapport-audit-autorite-constitution-r1-2026-07-19.md` | Rapport d’audit | À vérifier | Évalue l’autorité, la cohérence ou l’application de la Constitution | Constitution, gouvernance, architecture institutionnelle | Document daté; portée temporelle à préserver |
 | INV-00-010 | Dashboard de gouvernance généré | `00-SYSTEME-MAD/governance/generated-dashboard.md` | Artefact généré | Officiel, généré | Fournit un signal automatisé sur les dépôts, CI, backlog, PR et protection de branche | Workflow de gouvernance, dépôts MAD | Ne pas éditer manuellement; nature non normative |
-| INV-00-011 | MAD Registry | `00-SYSTEME-MAD/registry/REG-001-mad-registry.md` | Fondation de gouvernance et définition du registre canonique | À valider | Définit l’identité, le type, le statut, la version, le propriétaire, le chemin et la chronologie des objets officiels | Manifeste, schéma, index, sources et générateurs du Registry | Périmètre confirmé : métadonnées seulement, sans relations; critères de passage à `Officiel` à réévaluer |
-| INV-00-012 | Index généré du MAD Registry | `00-SYSTEME-MAD/registry/registry-index.yaml` | Index canonique généré | Généré | Expose les objets actuellement admis au Registry | `registry-sources.yaml`, métadonnées sources, générateur | Couverture actuelle partielle; ne pas éditer directement |
-| INV-00-013 | Sources du MAD Registry | `00-SYSTEME-MAD/registry/registry-sources.yaml` | Source de génération | À vérifier | Définit les objets admis ou candidats utilisés pour produire l’index | Index généré, générateur, objets officiels | Autorité technique importante à documenter |
-| INV-00-014 | Traçabilité générée | `00-SYSTEME-MAD/registry/generated-traceability.md` | Artefact généré | Généré | Rend visibles les relations entre objets du Registry | Index, relations Registry | Ne pas confondre avec une politique de citation complète ni avec la cartographie conceptuelle |
-| INV-00-015 | Tendances de santé du Registry | `00-SYSTEME-MAD/registry/registry-health-trends-p4-6.md` | Rapport ou suivi de santé | À vérifier | Suit l’évolution de la qualité ou de la santé du Registry | Registry, contrôles automatisés | Nature temporelle et statut à confirmer |
-| INV-00-016 | Dashboard unifié du Registry | `00-SYSTEME-MAD/registry/registry-unified-dashboard-p4-1.md` | Tableau de bord | À vérifier | Agrège les signaux de gouvernance ou de qualité du Registry | Registry, métriques, contrôles | Risque de recouvrement avec le dashboard de gouvernance |
+| INV-00-011 | MAD Registry | `00-SYSTEME-MAD/registry/REG-001-mad-registry.md` | Fondation de gouvernance et définition du registre canonique | À valider | Définit l’identité, le type, le statut, la version, le propriétaire, le chemin et la chronologie des objets officiels | Manifeste, schéma, index, sources et générateurs du Registry | Périmètre confirmé; le document affirme exclure les relations, alors que la mise en œuvre actuelle en porte déjà : contradiction de périmètre à résoudre |
+| INV-00-012 | Index généré du MAD Registry | `00-SYSTEME-MAD/registry/registry-index.yaml` | Index canonique généré | Généré | Expose les trois objets actuellement admis et une relation déclarée | `registry-sources.yaml`, documents sources, générateur | Ne pas éditer directement; couverture limitée à `REG-001`, `ADR-007` et `STD-800`; statut hétérogène des objets correctement conservé |
+| INV-00-013 | Sources du MAD Registry | `00-SYSTEME-MAD/registry/registry-sources.yaml` | Source éditable de génération | Non déclaré | Déclare les objets, résumés, étiquettes et relations consommés par le générateur | Index généré, documents sources, générateur | Autorité technique confirmée; aucune métadonnée documentaire; contient six types de relations non alignés explicitement sur le schéma conceptuel |
+| INV-00-014 | Traçabilité générée | `00-SYSTEME-MAD/registry/generated-traceability.md` | Rapport généré | Officiel | Rend visible la justification d’une relation canonique du Registry | Index, sources, mécanisme de traçabilité | Artefact calculé et non source normative; son statut `Officiel` décrit vraisemblablement la validité de la vue, mais doit être distingué d’une doctrine officielle |
+| INV-00-015 | Contrat des tendances MAD Health P4.6 | `00-SYSTEME-MAD/registry/registry-health-trends-p4-6.md` | Contrat fonctionnel de sous-phase | À valider | Définit snapshots, comparaison temporelle, invariants, artefacts et contrôle CI des tendances de santé | Santé du Registry, historique JSON, générateurs, CI | Ce n’est pas un rapport de tendance : c’est un contrat d’implémentation; rôle corrigé dans l’inventaire |
+| INV-00-016 | Tableau de bord unifié du Registry P4.1 | `00-SYSTEME-MAD/registry/registry-unified-dashboard-p4-1.md` | Contrat d’implémentation du tableau de bord | À valider | Définit une vue dérivée de l’état opérationnel du Registry, de sa traçabilité et de sa provenance | Contrat P4.0, index, traçabilité, rapports générés | Ne recouvre pas le dashboard général de gouvernance : périmètre Registry uniquement et non-substitution explicitement déclarée |
 | INV-00-017 | Constitution de SYSTEME_MAD | `00-SYSTEME-MAD/governance/constitution.md` | Autorité constitutionnelle | Officiel | Définit les principes supérieurs, l’ordre des autorités, les responsabilités et les limites du système | Fondations, Manifeste, Registry, standards, ADR, gouvernance | Rôle et primauté confirmés; distingue explicitement Constitution et Manifeste |
 | INV-00-018 | Architecture documentaire de SYSTEME_MAD | `00-SYSTEME-MAD/governance/architecture-documentaire.md` | Carte de responsabilités documentaires | Découverte | Explique les grandes zones et leurs responsabilités sans imposer de réorganisation immédiate | Manifeste, Méthode MAD, inventaires, zones du dépôt | Contenu pertinent, mais en-tête non conforme au standard YAML officiel et plusieurs chemins historiques à réévaluer |
 | INV-00-019 | Standard YAML documentaire | `00-SYSTEME-MAD/yaml-standard.md` | Standard documentaire | Officiel | Définit l’en-tête YAML obligatoire des fichiers Markdown officiels | Manifeste, standards documentaires, checklists | Autorité confirmée; plusieurs documents de gouvernance utilisent encore un autre format de métadonnées |
@@ -59,16 +59,65 @@ Elle précise également que :
 - une décision récente ne peut contredire silencieusement une autorité supérieure;
 - le statut YAML demeure déterminant.
 
-### Registry et relations
+### Registry : source, index et vues dérivées
 
-Le document `REG-001` limite explicitement le Registry aux métadonnées d’identité, de statut, de version, de propriété, de chemin et de chronologie.
+La chaîne technique observée est :
 
-Les dépendances et relations conceptuelles appartiennent déjà à :
+```text
+Documents sources
+  + registry-sources.yaml
+        ↓ génération
+registry-index.yaml
+        ↓ consommation
+rapports, traçabilité, tableaux de bord et diagnostics générés
+```
 
-- `00-SYSTEME-MAD/governance/cartographie-dependances-reference-mad.md`;
-- `00-SYSTEME-MAD/governance/schema-metadonnees-conceptuelles.md`.
+Les responsabilités sont distinctes :
 
-Aucun second registre relationnel, graphe ou vocabulaire parallèle ne doit être créé.
+- `registry-sources.yaml` est la source éditable d’admission et de relations techniques;
+- `registry-index.yaml` est l’index généré et ne doit jamais être modifié directement;
+- les rapports et tableaux de bord héritent leur autorité des sources canoniques;
+- les contrats P4.x décrivent des capacités et invariants, mais ne sont pas eux-mêmes des états générés.
+
+### Contradiction de périmètre dans REG-001
+
+`REG-001` déclare que les relations ne relèvent pas du Registry. Pourtant :
+
+- `registry-sources.yaml` définit six types de relations;
+- `STD-800` déclare une relation `met_en_oeuvre` vers `ADR-007`;
+- `registry-index.yaml` transporte cette relation;
+- `generated-traceability.md` la qualifie de relation canonique et justifiée.
+
+Deux interprétations demeurent possibles :
+
+1. le texte de `REG-001` décrit une version initiale aujourd’hui dépassée par les phases suivantes;
+2. les relations techniques ont été ajoutées sans mise à jour du contrat fondateur.
+
+L’inventaire ne tranche pas encore. Une prochaine correction devra soit mettre `REG-001` à jour, soit clarifier qu’un composant distinct porte ces relations.
+
+### Deux vocabulaires relationnels à rapprocher
+
+Le Registry utilise actuellement :
+
+- `depend_de`;
+- `met_en_oeuvre`;
+- `valide`;
+- `remplace`;
+- `derive_de`;
+- `associe_a`.
+
+Le schéma conceptuel utilise notamment :
+
+- `Dépend de`;
+- `Implémente`;
+- `Évalue`;
+- `Remplace`;
+- `Informe`;
+- `Soutient`;
+- `Complète`;
+- `Spécialise`.
+
+Ces vocabulaires ne doivent pas être fusionnés mécaniquement. Il faut d’abord déterminer si le premier est un vocabulaire technique sérialisé du second ou un modèle distinct. En l’état, leur correspondance n’est pas documentée.
 
 ### Métadonnées documentaires
 
@@ -86,7 +135,8 @@ Des écarts sont déjà confirmés :
 - `decisions.md` utilise une date comme valeur de `Document`;
 - `architecture-documentaire.md` utilise les clés anglaises `title`, `status`, `type`, `owner`, `created_at`, `updated_at`;
 - `REG-001-mad-registry.md` mélange le standard officiel et des champs anglais;
-- `inventaire-classement-reference-mad.md` utilise un schéma conceptuel distinct.
+- `inventaire-classement-reference-mad.md` utilise un schéma conceptuel distinct;
+- `registry-sources.yaml` ne porte aucune métadonnée documentaire, ce qui peut être légitime pour une source technique non Markdown.
 
 Ces écarts doivent être classés avant correction : certains peuvent être des métadonnées techniques légitimes, d’autres une dette de normalisation.
 
@@ -101,17 +151,21 @@ Ces écarts doivent être classés avant correction : certains peuvent être des
 7. La Constitution, le Manifeste et le Registry déclarent déjà des responsabilités distinctes; leurs liens doivent être rendus visibles dans les inventaires et points d’entrée.
 8. L’architecture documentaire contient des observations historiques utiles, mais plusieurs zones et chemins mentionnés doivent être comparés à la structure actuelle avant toute adaptation.
 9. La normalisation YAML ne peut pas être appliquée mécaniquement : il faut distinguer métadonnées documentaires officielles, métadonnées techniques du Registry et métadonnées conceptuelles candidates.
+10. La chaîne source → index → vues dérivées du Registry est claire et cohérente.
+11. Le recouvrement supposé entre dashboard général de gouvernance et dashboard unifié du Registry n’est pas confirmé : leurs périmètres sont distincts.
+12. Le contrat fondateur `REG-001` et l’implémentation relationnelle actuelle ne décrivent plus exactement le même périmètre.
+13. Le vocabulaire relationnel technique du Registry et le vocabulaire conceptuel de la Référence MAD doivent être rapprochés, sans créer un troisième vocabulaire.
 
 ## Anomalies et questions ouvertes
 
 - métadonnée `Document` erronée dans `decisions.md`;
 - frontière entre décisions générales et ADR à expliciter;
 - rôle dérivé de `ai-context.md` à déclarer plus clairement;
-- statut `À valider` de `REG-001` à confronter à ses critères d’acceptation actuels;
+- statut `À valider` et périmètre de `REG-001` à confronter à l’implémentation actuelle;
 - en-tête de `architecture-documentaire.md` incompatible avec le standard officiel;
 - coexistence de trois familles de métadonnées : standard documentaire, Registry technique et schéma conceptuel;
+- absence de correspondance documentée entre les deux vocabulaires relationnels existants;
 - couverture très partielle du Registry par rapport au patrimoine visible;
-- possible recouvrement entre tableaux de bord de gouvernance et de Registry;
 - relations normatives encore implicites entre Constitution, cœur stable, protocoles, doctrine et Registry;
 - documents datés à préserver comme preuves historiques sans les traiter automatiquement comme règles permanentes.
 
@@ -127,11 +181,12 @@ Ces écarts doivent être classés avant correction : certains peuvent être des
 
 ## Suite du lot
 
-La prochaine passe doit vérifier les sources et artefacts du Registry, puis compléter systématiquement les autres fichiers et sous-répertoires de `00-SYSTEME-MAD/`.
+La prochaine passe doit compléter systématiquement les autres fichiers et sous-répertoires de `00-SYSTEME-MAD/`, en particulier les schémas, contrats et rapports du Registry qui ne possèdent pas encore de fiche.
 
-Les premières PR correctives ne devront être préparées qu’après cette vérification, en commençant par les anomalies à faible risque et à responsabilité déjà claire :
+Les premières PR correctives ne devront être préparées qu’après cette collecte, en commençant par les anomalies à faible risque et à responsabilité déjà claire :
 
 1. métadonnées de `decisions.md`;
 2. clarification du rôle opérationnel de `ai-context.md`;
 3. qualification de l’en-tête de `architecture-documentaire.md`;
-4. réévaluation documentée du statut de `REG-001`.
+4. réévaluation documentée du statut et du périmètre de `REG-001`;
+5. documentation de la correspondance entre les vocabulaires relationnels existants.
