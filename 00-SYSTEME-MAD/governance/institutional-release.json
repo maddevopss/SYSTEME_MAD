@@ -15,9 +15,9 @@
     },
     {
       "path": "00-SYSTEME-MAD/governance/constitution.md",
-      "expected_version": "0.2",
-      "expected_status": "Proposition",
-      "role": "Index constitutionnel des principes fondateurs"
+      "expected_version": "1.0",
+      "expected_status": "Officiel",
+      "role": "Autorité constitutionnelle des principes fondateurs"
     },
     {
       "path": "00-SYSTEME-MAD/yaml-standard.md",
