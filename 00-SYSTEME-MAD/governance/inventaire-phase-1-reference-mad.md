@@ -1,10 +1,11 @@
 ---
-Titre: Inventaire de la Référence MAD — Phase 1
-Statut: À valider
+Projet: SYSTEME_MAD
+Document: Inventaire de la Référence MAD — Phase 1
 Version: 0.1.0
+Dernière révision: 2026-07-19
+Statut: À valider
 Auteur: Marc-André Dufour
 Responsable: Gardien de SYSTEME_MAD
-Dernière mise à jour: 2026-07-16
 Portée: Points d’entrée, gouvernance fondatrice et 01-FONDATIONS
 Méthode: 00-SYSTEME-MAD/governance/inventaire-classement-reference-mad.md
 ---
