@@ -1,11 +1,21 @@
 ---
 Projet: MAD DevOps
-Document: 2026-06-28
-Version: 1.0
-Dernière révision: 2026-06-30
+Document: Registre des décisions générales de MAD DevOps
+Version: 1.1
+Dernière révision: 2026-07-19
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
+
+# Registre des décisions générales de MAD DevOps
+
+## Rôle
+
+Ce registre conserve les décisions générales de positionnement, d’identité, de communication et d’orientation du studio.
+
+Il ne remplace pas les ADR. Une décision qui modifie l’architecture, les pratiques, les standards ou la gouvernance de SYSTEME_MAD doit être documentée dans `04-ADR/`, conformément à la Constitution et au Manifeste documentaire.
+
+Les décisions historiques ci-dessous sont conservées dans leur formulation d’origine. Leur numérotation hétérogène constitue une dette documentaire à traiter séparément afin de préserver la provenance.
 
 ## 2026-06-28
 
@@ -88,5 +98,3 @@ Dans toute la documentation et les communications de MAD DevOps, nous privilégi
 Nous évitons les superlatifs et les promesses exagérées. Nous préférons inspirer confiance par la qualité de nos explications, de notre travail et de nos résultats plutôt que par des slogans ou des affirmations difficilement démontrables.
 
 ---
-
-
