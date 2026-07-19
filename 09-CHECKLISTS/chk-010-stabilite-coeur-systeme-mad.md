@@ -1,9 +1,9 @@
 ---
 Projet: SYSTEME_MAD
 Document: Checklist de stabilisation du cœur de SYSTEME_MAD
-Version: 0.1
+Version: 1.0
 Dernière révision: 2026-07-19
-Statut: Proposition
+Statut: Officiel
 Auteur: Marc-André Dufour
 Assumée par: Marc-André Dufour
 Langue source: Français
