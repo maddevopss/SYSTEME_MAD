@@ -17,7 +17,7 @@ Owner: Automatisation SYSTEME_MAD
 - Relations justifiées : **1**
 - Couverture de traçabilité : **100 %**
 - Objets isolés : **1**
-- Dernière mise à jour canonique : **2026-07-13**
+- Dernière mise à jour canonique : **2026-07-19**
 
 ## Indicateurs avancés — P4.2
 
