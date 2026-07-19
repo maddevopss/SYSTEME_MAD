@@ -1,15 +1,28 @@
 ---
 Projet: MAD DevOps
-Document: AI_CONTEXT.md
-Version: 1.1
-Dernière révision: 2026-07-02
+Document: Contexte opérationnel destiné aux agents IA
+Version: 1.2
+Dernière révision: 2026-07-19
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
 
-# AI_CONTEXT.md
+# Contexte opérationnel destiné aux agents IA
 
-> Ce document sert de mémoire de référence pour tous les travaux concernant MAD DevOps et MADSuite.
+> Ce document fournit une vue opérationnelle dérivée pour les travaux concernant MAD DevOps et MADSuite.
+
+## Rôle et limites d’autorité
+
+Ce document aide les agents à retrouver rapidement le contexte utile avant d’analyser, rédiger ou modifier un contenu.
+
+Il synthétise des éléments déjà portés par les fondations, le Manifeste, les décisions, les standards, les ADR et les documents spécialisés. Il ne remplace aucune de ces autorités et ne doit pas être utilisé pour créer silencieusement une nouvelle mission, doctrine, décision ou règle de gouvernance.
+
+En cas de contradiction ou d’incertitude :
+
+1. consulter la Constitution et le Manifeste;
+2. consulter les fondations, décisions, standards ou ADR applicables;
+3. privilégier le document officiel le plus spécifique et la décision la plus récente compatible avec les autorités supérieures;
+4. signaler explicitement l’écart au lieu de l’arbitrer silencieusement.
 
 ---
 
