@@ -1,8 +1,8 @@
 ---
 Projet: Système MAD
 Document: Contrat du Radar MAD Registry — P4.4
-Version: 1.0
-Dernière révision: 2026-07-18
+Version: 1.1
+Dernière révision: 2026-07-19
 Statut: À valider
 Auteur: Marc-André Dufour
 ---
@@ -11,7 +11,15 @@ Auteur: Marc-André Dufour
 
 ## Objectif
 
-P4.4 transforme les mesures P4.2 et la structure P4.3 en une lecture stratégique multidimensionnelle du MAD Registry. Le Radar MAD doit rendre visibles les zones robustes, les zones à surveiller et les zones fragiles sans produire de score global ni masquer les dimensions faibles derrière une moyenne.
+P4.4 transforme les mesures P4.2 et la structure P4.3 en une lecture multidimensionnelle du périmètre actuellement enrôlé dans le MAD Registry. Le Radar MAD doit rendre visibles les zones robustes, les zones à surveiller et les zones fragiles sans produire de score global ni masquer les dimensions faibles derrière une moyenne.
+
+## Rôle et limites d’autorité
+
+Le Radar est une projection descriptive et calculée. Il ne constitue ni une évaluation stratégique globale de SYSTEME_MAD, ni une certification, ni une décision institutionnelle.
+
+Ses résultats décrivent uniquement les objets et relations présents dans les sources canoniques du Registry au moment de la génération. Une dimension absente, un objet non enrôlé ou une relation non déclarée demeure hors de son champ d’observation.
+
+Les termes `Robuste`, `À surveiller` et `Fragile` sont des classes de lecture opérationnelles. Ils ne qualifient pas à eux seuls la valeur, la validité scientifique, la criticité métier ou la maturité globale d’un document ou du dépôt.
 
 ## Sources canoniques
 
@@ -39,7 +47,7 @@ Il ne modifie aucune source et n’infère aucune relation.
 - **À surveiller** : valeur de 60 % à 79 %;
 - **Fragile** : valeur inférieure à 60 %.
 
-Ces seuils servent uniquement à faciliter la lecture. Ils ne constituent ni une certification ni une vérité absolue.
+Ces seuils servent uniquement à faciliter la lecture du périmètre observé. Ils ne constituent ni une certification ni une vérité absolue.
 
 ## Invariants
 
@@ -53,8 +61,10 @@ Ces seuils servent uniquement à faciliter la lecture. Ils ne constituent ni une
 
 ## Artefacts générés
 
-- `generated-registry-radar.md` : lecture stratégique destinée aux humains;
+- `generated-registry-radar.md` : lecture multidimensionnelle destinée aux humains;
 - `generated-registry-radar.json` : données structurées destinées aux outils futurs.
+
+Ces artefacts sont des projections générées sans autorité normative autonome.
 
 ## Contrôle CI
 
@@ -83,3 +93,8 @@ P4.4 n’introduit pas :
 - les zones fortes et faibles sont visibles sans score composite;
 - les formules et limites sont documentées;
 - les artefacts sont vérifiés et publiés par la CI.
+
+## Historique documentaire
+
+- **1.0 — 2026-07-18** : contrat initial du Radar MAD Registry.
+- **1.1 — 2026-07-19** : clarification du périmètre observé, du caractère descriptif des classes et de l’absence d’autorité autonome.
