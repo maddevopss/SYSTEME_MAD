@@ -1,9 +1,9 @@
 ---
 Projet: SYSTEME_MAD
 Document: Contrat de stabilité du cœur de SYSTEME_MAD
-Version: 0.1
+Version: 1.0
 Dernière révision: 2026-07-19
-Statut: Proposition
+Statut: Officiel
 Auteur: Marc-André Dufour
 Assumée par: Marc-André Dufour
 Langue source: Français
@@ -36,13 +36,14 @@ Le présent contrat ne recrée pas les responsabilités existantes. Il les relie
 
 | Responsabilité | Propriétaire principal |
 | --- | --- |
-| Constitution | `00-SYSTEME-MAD/governance/constitution.md` |
-| Registre et autorité documentaire | `00-SYSTEME-MAD/registry/REG-001-mad-registry.md` |
-| Métadonnées | `00-SYSTEME-MAD/yaml-standard.md` |
+| Principes fondateurs et ordre d'autorité | `00-SYSTEME-MAD/governance/constitution.md` |
+| Règles opérationnelles de structure, navigation et usage documentaire | `MANIFEST.md` |
+| Registre, identité et métadonnées des documents | `00-SYSTEME-MAD/registry/REG-001-mad-registry.md` |
+| Standard des métadonnées | `00-SYSTEME-MAD/yaml-standard.md` |
 | Fondations | `01-FONDATIONS/` |
 | Construction des connaissances | `01-FONDATIONS/cycle-construction-connaissances.md` |
 | MADPROOF | `13-RESSOURCES/research/03-madproof/000-cadre-madproof.md` |
-| Canon | `00-SYSTEME-MAD/governance/canon-memoire-institutionnelle-mad.md` |
+| Canon et reconnaissance institutionnelle | `00-SYSTEME-MAD/governance/canon-memoire-institutionnelle-mad.md` |
 | Relations entre briques | `00-SYSTEME-MAD/governance/cartographie-dependances-reference-mad.md` |
 | Protection du référentiel | `00-SYSTEME-MAD/governance/mad-guardian.md` |
 
