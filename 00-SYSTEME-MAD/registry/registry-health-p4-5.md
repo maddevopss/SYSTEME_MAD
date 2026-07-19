@@ -1,8 +1,8 @@
 ---
 Projet: Système MAD
 Document: Contrat MAD Health du Registry — P4.5
-Version: 1.0
-Dernière révision: 2026-07-18
+Version: 1.1
+Dernière révision: 2026-07-19
 Statut: À valider
 Auteur: Marc-André Dufour
 ---
@@ -11,7 +11,15 @@ Auteur: Marc-André Dufour
 
 ## Objectif
 
-P4.5 transforme le Radar multidimensionnel P4.4 en un état de santé synthétique, conservateur et explicable du MAD Registry. MAD Health doit permettre de répondre rapidement à la question « le registre est-il sain, sous surveillance, fragile ou indéterminé? » sans masquer une faiblesse derrière une moyenne avantageuse.
+P4.5 transforme le Radar multidimensionnel P4.4 en un état synthétique, conservateur et explicable du périmètre actuellement enrôlé dans le MAD Registry. MAD Health permet de répondre rapidement à la question « quel état calculé ressort des axes observés? » sans masquer une faiblesse derrière une moyenne avantageuse.
+
+## Rôle et limites d’autorité
+
+MAD Health est un diagnostic technique dérivé. Il ne constitue ni une certification, ni une preuve de qualité globale, ni un verdict sur SYSTEME_MAD, ni une décision institutionnelle.
+
+Les états `Sain`, `Sous surveillance`, `Fragile`, `Critique` et `Indéterminé` décrivent uniquement le résultat des règles P4.5 appliquées aux axes disponibles du Radar. Ils ne qualifient pas directement la valeur scientifique, juridique, métier ou stratégique des documents observés.
+
+La confiance du diagnostic mesure la disponibilité numérique des axes. Elle ne mesure ni la validité scientifique des formules, ni la fiabilité absolue des sources, ni la complétude du dépôt.
 
 ## Source canonique
 
@@ -45,7 +53,7 @@ La confiance correspond à la proportion d’axes possédant une valeur numériq
 - **Moyenne** : 80 % à 99 %;
 - **Faible** : moins de 80 %.
 
-La confiance décrit la complétude du diagnostic. Elle ne bonifie jamais l’indice de santé.
+La confiance décrit la complétude technique du diagnostic. Elle ne bonifie jamais l’indice et ne constitue pas une validation du modèle.
 
 ## Signaux obligatoires
 
@@ -76,6 +84,8 @@ MAD Health doit publier :
 - `generated-registry-health.md` : diagnostic lisible par les humains;
 - `generated-registry-health.json` : diagnostic structuré destiné aux outils futurs.
 
+Ces artefacts sont des projections calculées sans autorité normative autonome.
+
 ## Contrôle CI
 
 Le workflow `registry-integrity.yml` doit :
@@ -104,3 +114,8 @@ P4.5 n’introduit pas :
 - les blocages structurels prévalent sur l’indice;
 - la confiance est calculée séparément de la santé;
 - les artefacts sont reproductibles, vérifiés et publiés par la CI.
+
+## Historique documentaire
+
+- **1.0 — 2026-07-18** : contrat initial MAD Health.
+- **1.1 — 2026-07-19** : clarification du caractère technique du diagnostic, de la portée des états et du sens de la confiance.
