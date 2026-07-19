@@ -119,6 +119,17 @@ Le schéma conceptuel utilise notamment :
 
 Ces vocabulaires ne doivent pas être fusionnés mécaniquement. Il faut d’abord déterminer si le premier est un vocabulaire technique sérialisé du second ou un modèle distinct. En l’état, leur correspondance n’est pas documentée.
 
+### Distinction entre autorité normative et autorité de projection
+
+Le statut `Officiel` de `generated-traceability.md` ne devrait pas être interprété comme une autorité doctrinale autonome. Ce rapport est une projection officielle d’un état calculé à partir de sources canoniques.
+
+Cette distinction devra être confirmée dans les conventions documentaires :
+
+- **autorité normative** : le document crée ou porte une règle;
+- **autorité de projection** : le document restitue fidèlement un état calculé sans créer la règle qu’il expose.
+
+Cette observation ne crée pas un nouveau statut. Elle identifie une différence de fonction à exprimer avec les mécanismes existants.
+
 ### Métadonnées documentaires
 
 Le standard YAML officiel exige les clés suivantes :
@@ -155,6 +166,7 @@ Ces écarts doivent être classés avant correction : certains peuvent être des
 11. Le recouvrement supposé entre dashboard général de gouvernance et dashboard unifié du Registry n’est pas confirmé : leurs périmètres sont distincts.
 12. Le contrat fondateur `REG-001` et l’implémentation relationnelle actuelle ne décrivent plus exactement le même périmètre.
 13. Le vocabulaire relationnel technique du Registry et le vocabulaire conceptuel de la Référence MAD doivent être rapprochés, sans créer un troisième vocabulaire.
+14. Les artefacts générés peuvent être officiels comme projections fiables sans devenir des autorités normatives autonomes.
 
 ## Anomalies et questions ouvertes
 
@@ -166,6 +178,7 @@ Ces écarts doivent être classés avant correction : certains peuvent être des
 - coexistence de trois familles de métadonnées : standard documentaire, Registry technique et schéma conceptuel;
 - absence de correspondance documentée entre les deux vocabulaires relationnels existants;
 - couverture très partielle du Registry par rapport au patrimoine visible;
+- distinction entre autorité normative et projection officielle non encore exprimée clairement;
 - relations normatives encore implicites entre Constitution, cœur stable, protocoles, doctrine et Registry;
 - documents datés à préserver comme preuves historiques sans les traiter automatiquement comme règles permanentes.
 
