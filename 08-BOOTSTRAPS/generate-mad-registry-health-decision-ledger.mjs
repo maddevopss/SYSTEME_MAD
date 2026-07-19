@@ -93,9 +93,18 @@ const output = {
 };
 
 const rows = reconciled.map(item => `| ${item.priority} | ${item.target} | ${item.status} | ${item.decision_maker ?? '—'} | ${item.decision_date ?? '—'} |`).join('\n');
-const markdown = normalizeMd(`# Registre des décisions MAD Health — P4.10
+const markdown = normalizeMd(`---
+Projet: Système MAD
+Document: Registre des décisions MAD Health généré — P4.10
+Version: 1.0
+Dernière révision: ${decisions.current?.date ?? 'Indéterminée'}
+Statut: Généré
+Auteur: Automatisation SYSTEME_MAD
+---
 
-> Vue réconciliée. Une absence d’entrée humaine maintient le dossier à \`À décider\`.
+# Registre des décisions MAD Health — P4.10
+
+> Vue réconciliée générée automatiquement. Ne pas modifier manuellement. Une absence d’entrée humaine maintient le dossier à \`À décider\`.
 
 ## Synthèse
 
