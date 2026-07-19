@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
   "phase": "P5.1",
-  "institutional_version": "0.1.0",
-  "status": "Proposition",
-  "declared_at": "2026-07-18",
+  "institutional_version": "1.0.0",
+  "status": "Officiel",
+  "declared_at": "2026-07-19",
   "declared_by": "Marc-André Dufour",
-  "reference_commit": "3674ebbcddbf2029f7f5e87595107412a79aaf7f",
+  "reference_commit": "caf41671005771ca20ff72549a6f42b7aab10997",
   "documents": [
     {
       "path": "MANIFEST.md",
@@ -15,9 +15,9 @@
     },
     {
       "path": "00-SYSTEME-MAD/governance/constitution.md",
-      "expected_version": "0.2",
-      "expected_status": "Proposition",
-      "role": "Index constitutionnel des principes fondateurs"
+      "expected_version": "1.0",
+      "expected_status": "Officiel",
+      "role": "Autorité constitutionnelle des principes fondateurs"
     },
     {
       "path": "00-SYSTEME-MAD/yaml-standard.md",
@@ -26,20 +26,56 @@
       "role": "Standard des métadonnées documentaires"
     },
     {
-      "path": "00-SYSTEME-MAD/registry/registry-health-integration-p4-15.md",
-      "expected_version": "1.0.0",
-      "expected_status": "Proposition",
-      "role": "Fermeture du cycle institutionnel P4"
+      "path": "00-SYSTEME-MAD/governance/contrat-stabilite-coeur-systeme-mad.md",
+      "expected_version": "1.0",
+      "expected_status": "Officiel",
+      "role": "Contrat définissant la signification et les limites de la stabilité"
+    },
+    {
+      "path": "09-CHECKLISTS/chk-010-stabilite-coeur-systeme-mad.md",
+      "expected_version": "1.0",
+      "expected_status": "Officiel",
+      "role": "Contrôles de maintien du cœur stable"
+    },
+    {
+      "path": "00-SYSTEME-MAD/governance/registre-preuves-ci-coeur-systeme-mad.md",
+      "expected_version": "1.0",
+      "expected_status": "Officiel",
+      "role": "Registre consolidé des preuves CI applicables au cœur"
+    },
+    {
+      "path": "00-SYSTEME-MAD/governance/perimetre-officiel-coeur-stable-v1.md",
+      "expected_version": "1.0",
+      "expected_status": "Officiel",
+      "role": "Définition officielle du périmètre stable publié"
+    },
+    {
+      "path": "00-SYSTEME-MAD/governance/declaration-stabilite-coeur-v1.md",
+      "expected_version": "1.0",
+      "expected_status": "Officiel",
+      "role": "Déclaration finale STABLE — VERSION 1"
     }
   ],
   "exclusions": [
     {
-      "scope": "Autres documents du dépôt",
-      "reason": "P5.1 commence par un noyau institutionnel minimal; une inclusion future exige une déclaration explicite."
+      "scope": "Produits et implémentations",
+      "reason": "MADSuite, les dépôts d’exécution et les implémentations techniques conservent leurs propres cycles de validation et de versionnement."
     },
     {
-      "scope": "Artefacts générés P4",
-      "reason": "Ils demeurent vérifiés par le registre, mais ne sont pas encore déclarés comme documents constitutifs de cette version."
+      "scope": "Domaines métier",
+      "reason": "Les contenus métier ne sont pas inclus automatiquement dans le cœur institutionnel stable."
+    },
+    {
+      "scope": "Recherches non stabilisées et continuité cognitive",
+      "reason": "Les recherches, hypothèses et construits en développement demeurent soumis à MADPROOF et à une promotion explicite."
+    },
+    {
+      "scope": "Fondations candidates",
+      "reason": "Une fondation candidate n’entre dans le périmètre stable qu’après audit, décision et inclusion explicite."
+    },
+    {
+      "scope": "Autres documents du dépôt",
+      "reason": "Seuls les documents déclarés dans cette composition représentent la version institutionnelle du cœur stable v1."
     }
   ]
 }

@@ -1,9 +1,9 @@
 ---
 Projet: SYSTEME_MAD
 Document: Constitution — Index des principes fondateurs
-Version: 0.2
-Dernière révision: 2026-07-15
-Statut: Proposition
+Version: 1.0
+Dernière révision: 2026-07-19
+Statut: Officiel
 Auteur: Marc-André Dufour
 Assumée par: Marc-André Dufour
 Langue source: Français
@@ -25,9 +25,11 @@ Nous ne cherchons pas à avoir raison. Nous cherchons à comprendre avec justess
 
 ## Rôle
 
-Cette Constitution est la porte d’entrée des principes fondateurs de SYSTEME_MAD.
+Cette Constitution est la référence supérieure des principes fondateurs de SYSTEME_MAD.
 
-Elle ne remplace pas les fondations, standards, ADR, guides ou registres. Elle indique où vivent les règles, précise leur rôle et permet aux bâtisseurs de comprendre l’ordre d’autorité du Canon.
+Elle définit l'ordre général des responsabilités, des autorités et des limites du système. Elle ne remplace pas les fondations, standards, ADR, guides, registres ou procédures documentaires : ces documents conservent leur responsabilité propre, à condition de respecter la présente Constitution.
+
+Le Manifeste demeure le propriétaire des règles opérationnelles de structure, de navigation et d'usage documentaire du dépôt. La Constitution prévaut lorsqu'un conflit porte sur un principe fondateur, une responsabilité fondamentale, un non-négociable ou une limite d'autorité.
 
 SYSTEME_MAD n’est pas l’auteur de la connaissance. Il fournit le cadre qui permet aux bâtisseurs de la produire, de la valider, de la relier, de l'assumer et de la préserver.
 
@@ -55,6 +57,8 @@ Références principales :
 - [`01-FONDATIONS/orientation-cognitive.md`](../../01-FONDATIONS/orientation-cognitive.md)
 - [`01-FONDATIONS/infrastructure-intellectuelle-mad.md`](../../01-FONDATIONS/infrastructure-intellectuelle-mad.md)
 
+La référence à une fondation candidate dans la présente Constitution ne la rend pas automatiquement officielle. Son statut propre demeure déterminant.
+
 ## Article III — Construction de la connaissance
 
 Les idées ne deviennent pas officielles par simple formulation. Elles suivent un cycle explicite de documentation, recherche, examen, épreuve, validation et intégration.
@@ -68,15 +72,18 @@ Références principales :
 
 ## Article IV — Sources d’autorité
 
-L’autorité documentaire suit l’ordre général suivant :
+L’autorité générale suit l’ordre suivant :
 
-1. le Manifeste et les règles de gouvernance applicables;
-2. les fondations et non-négociables;
-3. les standards;
-4. les ADR;
-5. les guides et playbooks;
-6. les connaissances de référence;
-7. les roadmaps et explorations non stabilisées.
+1. la présente Constitution, pour les principes fondateurs, responsabilités fondamentales, non-négociables et limites d’autorité;
+2. les fondations et non-négociables officiels, dans leur domaine;
+3. le Manifeste et les règles de gouvernance applicables, pour l’organisation et l’usage documentaire;
+4. les standards;
+5. les ADR;
+6. les guides et playbooks;
+7. les connaissances de référence;
+8. les roadmaps et explorations non stabilisées.
+
+Un document plus spécifique conserve son autorité dans son domaine lorsqu'il respecte les niveaux supérieurs. Une décision plus récente ne peut contredire silencieusement la Constitution; elle doit déclencher un amendement explicite ou être considérée incompatible.
 
 Le statut YAML de chaque document demeure déterminant. Un document `Proposition`, `Brouillon` ou `À valider` ne possède pas la même autorité qu’un document `Officiel`.
 
@@ -136,6 +143,21 @@ Chaque nouvelle brique doit préciser de quelles fondations elle dépend, ce qu'
 
 Chaque contribution doit laisser SYSTEME_MAD dans un meilleur état qu'elle ne l'a trouvé.
 
+## Article XI — Amendement constitutionnel
+
+Toute modification de la présente Constitution exige :
+
+1. une pull request dédiée;
+2. une justification explicite du changement;
+3. une analyse des impacts sur les fondations, le Manifeste, le Canon, le Registry et les documents dépendants;
+4. une décision assumée par un bâtisseur identifiable;
+5. une conservation traçable de l'historique;
+6. la réussite des contrôles documentaires applicables.
+
+Un assistant peut rechercher, proposer, rédiger ou vérifier un amendement, mais ne peut ni l'assumer ni l'officialiser seul.
+
+Une modification qui change seulement la formulation sans altérer le sens peut suivre une révision documentaire normale. Toute modification du sens, de l'ordre d'autorité, des responsabilités ou des non-négociables constitue un amendement constitutionnel.
+
 ## Parcours de lecture constitutionnel
 
 Pour comprendre rapidement SYSTEME_MAD :
@@ -156,10 +178,14 @@ Textes d'accueil et de transmission :
 
 ## Clause d’interprétation
 
-Cette Constitution cartographie les autorités existantes. En cas de conflit, le document officiel le plus spécifique et la décision la plus récente explicitement applicable prévalent, sous réserve du Manifeste et des non-négociables.
+En cas de conflit de principe, la présente Constitution prévaut.
+
+Dans un domaine particulier, le document officiel le plus spécifique et la décision la plus récente explicitement applicable prévalent, à condition de respecter la Constitution et les non-négociables.
+
+Lorsqu'une contradiction réelle est constatée, elle doit être déclarée et résolue explicitement. Elle ne peut être masquée par une interprétation implicite, un changement de procédure ou une décision produit.
 
 ## Signature
 
 **Fondateur de la démarche : Marc-André Dufour**
 
-La Constitution de SYSTEME_MAD est un document vivant. Elle évolue uniquement lorsque de meilleures raisons existent de la faire évoluer.
+La Constitution de SYSTEME_MAD est un document vivant. Elle évolue uniquement lorsque de meilleures raisons existent de la faire évoluer, selon le mécanisme d'amendement défini ci-dessus.

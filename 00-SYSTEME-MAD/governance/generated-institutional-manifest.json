@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0",
   "phase": "P5.1",
-  "institutional_version": "0.1.0",
-  "institutional_status": "Proposition",
-  "declared_at": "2026-07-18",
+  "institutional_version": "1.0.0",
+  "institutional_status": "Officiel",
+  "declared_at": "2026-07-19",
   "declared_by": "Marc-André Dufour",
-  "reference_commit": "3674ebbcddbf2029f7f5e87595107412a79aaf7f",
+  "reference_commit": "caf41671005771ca20ff72549a6f42b7aab10997",
   "generated_from": "00-SYSTEME-MAD/governance/institutional-release.json",
   "methodology": {
     "human_declaration_required": true,
@@ -13,10 +13,10 @@
     "automatic_publication": "forbidden",
     "hash_algorithm": "Git blob SHA-1"
   },
-  "document_count": 4,
-  "valid_document_count": 4,
+  "document_count": 8,
+  "valid_document_count": 8,
   "invalid_document_count": 0,
-  "exclusion_count": 2,
+  "exclusion_count": 5,
   "declaration_errors": [],
   "documents": [
     {
@@ -35,15 +35,15 @@
     },
     {
       "path": "00-SYSTEME-MAD/governance/constitution.md",
-      "role": "Index constitutionnel des principes fondateurs",
-      "expected_version": "0.2",
-      "actual_version": "0.2",
-      "expected_status": "Proposition",
-      "actual_status": "Proposition",
+      "role": "Autorité constitutionnelle des principes fondateurs",
+      "expected_version": "1.0",
+      "actual_version": "1.0",
+      "expected_status": "Officiel",
+      "actual_status": "Officiel",
       "document_title": "Constitution — Index des principes fondateurs",
       "author": "Marc-André Dufour",
-      "last_revision": "2026-07-15",
-      "git_blob_sha": "6d99b1cce55fb6299bc2d76c9d362425e500739b",
+      "last_revision": "2026-07-19",
+      "git_blob_sha": "a85834776a49daf72d81c337c2dc1d6d5c27c5e5",
       "valid": true,
       "errors": []
     },
@@ -62,29 +62,100 @@
       "errors": []
     },
     {
-      "path": "00-SYSTEME-MAD/registry/registry-health-integration-p4-15.md",
-      "role": "Fermeture du cycle institutionnel P4",
-      "expected_version": "1.0.0",
-      "actual_version": "1.0.0",
-      "expected_status": "Proposition",
-      "actual_status": "Proposition",
-      "document_title": "Intégration institutionnelle MAD Health — P4.15",
+      "path": "00-SYSTEME-MAD/governance/contrat-stabilite-coeur-systeme-mad.md",
+      "role": "Contrat définissant la signification et les limites de la stabilité",
+      "expected_version": "1.0",
+      "actual_version": "1.0",
+      "expected_status": "Officiel",
+      "actual_status": "Officiel",
+      "document_title": "Contrat de stabilité du cœur de SYSTEME_MAD",
       "author": "Marc-André Dufour",
-      "last_revision": "2026-07-18",
-      "git_blob_sha": "55861f3279088b1bcb140a1f630f898ecea9843c",
+      "last_revision": "2026-07-19",
+      "git_blob_sha": "85b5c391b473819c9e5f8d9394098c8f90e5ad4f",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "09-CHECKLISTS/chk-010-stabilite-coeur-systeme-mad.md",
+      "role": "Contrôles de maintien du cœur stable",
+      "expected_version": "1.0",
+      "actual_version": "1.0",
+      "expected_status": "Officiel",
+      "actual_status": "Officiel",
+      "document_title": "Checklist de stabilisation du cœur de SYSTEME_MAD",
+      "author": "Marc-André Dufour",
+      "last_revision": "2026-07-19",
+      "git_blob_sha": "648a06f026c3a1ba9ab15d7ee817de916b14a81d",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "00-SYSTEME-MAD/governance/registre-preuves-ci-coeur-systeme-mad.md",
+      "role": "Registre consolidé des preuves CI applicables au cœur",
+      "expected_version": "1.0",
+      "actual_version": "1.0",
+      "expected_status": "Officiel",
+      "actual_status": "Officiel",
+      "document_title": "Registre des preuves CI du cœur de SYSTEME_MAD",
+      "author": "Marc-André Dufour",
+      "last_revision": "2026-07-19",
+      "git_blob_sha": "afe7bcee085eb0cbad594184c3c0dbf0df23d71f",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "00-SYSTEME-MAD/governance/perimetre-officiel-coeur-stable-v1.md",
+      "role": "Définition officielle du périmètre stable publié",
+      "expected_version": "1.0",
+      "actual_version": "1.0",
+      "expected_status": "Officiel",
+      "actual_status": "Officiel",
+      "document_title": "Périmètre officiel du cœur stable v1",
+      "author": "Marc-André Dufour",
+      "last_revision": "2026-07-19",
+      "git_blob_sha": "42f6dd4b10063bf564b7285dbe309f12a662467c",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "path": "00-SYSTEME-MAD/governance/declaration-stabilite-coeur-v1.md",
+      "role": "Déclaration finale STABLE — VERSION 1",
+      "expected_version": "1.0",
+      "actual_version": "1.0",
+      "expected_status": "Officiel",
+      "actual_status": "Officiel",
+      "document_title": "Déclaration de stabilité du cœur — version 1",
+      "author": "Marc-André Dufour",
+      "last_revision": "2026-07-19",
+      "git_blob_sha": "f8e62772a5836cd5454507c7f0082655c3e9a3b2",
       "valid": true,
       "errors": []
     }
   ],
   "exclusions": [
     {
-      "scope": "Autres documents du dépôt",
-      "reason": "P5.1 commence par un noyau institutionnel minimal; une inclusion future exige une déclaration explicite.",
+      "scope": "Produits et implémentations",
+      "reason": "MADSuite, les dépôts d’exécution et les implémentations techniques conservent leurs propres cycles de validation et de versionnement.",
       "valid": true
     },
     {
-      "scope": "Artefacts générés P4",
-      "reason": "Ils demeurent vérifiés par le registre, mais ne sont pas encore déclarés comme documents constitutifs de cette version.",
+      "scope": "Domaines métier",
+      "reason": "Les contenus métier ne sont pas inclus automatiquement dans le cœur institutionnel stable.",
+      "valid": true
+    },
+    {
+      "scope": "Recherches non stabilisées et continuité cognitive",
+      "reason": "Les recherches, hypothèses et construits en développement demeurent soumis à MADPROOF et à une promotion explicite.",
+      "valid": true
+    },
+    {
+      "scope": "Fondations candidates",
+      "reason": "Une fondation candidate n’entre dans le périmètre stable qu’après audit, décision et inclusion explicite.",
+      "valid": true
+    },
+    {
+      "scope": "Autres documents du dépôt",
+      "reason": "Seuls les documents déclarés dans cette composition représentent la version institutionnelle du cœur stable v1.",
       "valid": true
     }
   ],
