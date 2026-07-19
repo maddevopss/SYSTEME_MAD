@@ -2,8 +2,9 @@
 Projet: Système MAD
 Document: Graphe généré des relations du MAD Registry
 Version: 1.0
+Dernière révision: 2026-07-19
 Statut: Officiel
-Owner: Automatisation SYSTEME_MAD
+Auteur: Automatisation SYSTEME_MAD
 ---
 
 # Graphe des relations du MAD Registry
