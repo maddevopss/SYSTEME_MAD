@@ -1,10 +1,12 @@
 ---
-Titre: Infrastructure de Connaissances MAD
+Projet: Système MAD
+Document: Infrastructure de Connaissances MAD
+Version: 0.1.0
+Dernière révision: 2026-07-19
 Statut: À valider
 Auteur: Marc-André Dufour
 Gardien: SYSTEME_MAD
 Portée: Fondation transversale
-Version: 0.1.0
 ---
 
 # Infrastructure de Connaissances MAD (IKM)
