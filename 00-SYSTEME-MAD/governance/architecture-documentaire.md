@@ -1,15 +1,21 @@
 ---
-title: Architecture documentaire de SYSTEME_MAD
-status: Découverte
-type: Gouvernance documentaire
-owner: MAD DevOps
-created_at: 2026-07-12
-updated_at: 2026-07-12
+Projet: SYSTEME_MAD
+Document: Architecture documentaire de SYSTEME_MAD
+Version: 1.1
+Dernière révision: 2026-07-19
+Statut: Découverte
+Auteur: MAD DevOps
 ---
 
 # Architecture documentaire de SYSTEME_MAD
 
 Ce document explique la logique des grandes zones du dépôt sans imposer immédiatement une réorganisation physique.
+
+## Rôle et portée
+
+Cette architecture est une carte descriptive des responsabilités documentaires observées dans le dépôt. Son statut `Découverte` signifie qu’elle soutient l’analyse et la consolidation en cours, mais qu’elle ne crée pas à elle seule une nouvelle règle de gouvernance, une migration ou une autorité supérieure.
+
+En cas d’écart avec la Constitution, le Manifeste, un standard officiel ou un ADR applicable, ces autorités prévalent. Les chemins et dettes mentionnés dans ce document doivent être revérifiés contre la structure actuelle avant toute correction.
 
 ## Principe
 
@@ -94,6 +100,13 @@ L’inventaire du 12 juillet 2026 révèle notamment :
 Ces constats ouvrent un chantier de consolidation. Ils ne justifient pas, seuls, une suppression ou un déplacement.
 
 ## Journal
+
+### 2026-07-19 — Qualification documentaire
+
+- en-tête aligné sur le standard YAML officiel;
+- statut `Découverte` conservé;
+- portée descriptive et limites d’autorité explicitées;
+- aucune zone ni dette historique requalifiée sans vérification supplémentaire.
 
 ### 2026-07-12 — Création
 
