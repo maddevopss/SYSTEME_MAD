@@ -167,13 +167,15 @@ function renderMermaid(objects) {
 function render(objects, analysis) {
   const relationCount = objects.reduce((total, object) => total + object.relations.length, 0);
   const maxLevel = Math.max(0, ...[...analysis.levels.values()].filter((value) => Number.isInteger(value)));
+  const updatedAt = objects.map((object) => object.updated_at).filter(Boolean).sort().at(-1) || "Inconnue";
   const lines = [
     "---",
     "Projet: Système MAD",
     "Document: Vue d’architecture du MAD Registry — P4.3",
     "Version: 1.0",
+    `Dernière révision: ${updatedAt}`,
     "Statut: Officiel",
-    "Owner: Automatisation SYSTEME_MAD",
+    "Auteur: Automatisation SYSTEME_MAD",
     "---",
     "",
     "# Vue d’architecture du MAD Registry — P4.3",
