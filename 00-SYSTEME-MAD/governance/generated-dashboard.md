@@ -2,18 +2,18 @@
 Projet: MADSuite
 Document: Dashboard de gouvernance généré automatiquement
 Version: 1.0
-Dernière révision: 2026-07-18
+Dernière révision: 2026-07-19
 Statut: Officiel
 Auteur: GitHub Actions — SYSTEME_MAD
 ---
 
 # Dashboard de gouvernance généré
 
-> Généré automatiquement le 2026-07-18T11:16:33.902Z. Ne pas modifier manuellement ce fichier.
+> Généré automatiquement le 2026-07-19T11:20:28.548Z. Ne pas modifier manuellement ce fichier.
 
 ## Signal automatisé GitHub
 
-**14/40**
+**17/40**
 
 Ce signal couvre uniquement les données vérifiables automatiquement. Il ne remplace pas l’Engineering Health Score complet, qui inclut aussi les tests, la documentation, la sécurité et la dette technique validés humainement.
 
@@ -21,7 +21,7 @@ Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-
 
 | Dimension notée | Résultat |
 | --- | ---: |
-| CI visibles et vertes | 10/20 |
+| CI visibles et vertes | 13/20 |
 | Backlog P0/P1 | 0/10 |
 | Hygiène des PR ouvertes | 4/5 |
 | Protection de branche lisible par l’API | 0/5 |
@@ -32,12 +32,12 @@ Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-
 
 | Repo | Accessible | Dernière CI | Workflow | PR ouvertes | P0 | P1 | P2 | Protection main |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
-| `bleeband/SYSTEME_MAD` | Oui | 🟡 in_progress | [Governance dashboard](https://github.com/bleeband/SYSTEME_MAD/actions/runs/29642273235) | 1 | 6 | 7 | 7 | non vérifiable |
-| `maddevopss/madsuite` | Oui | 🔴 failure | [Responsive Nightly Extended](https://github.com/maddevopss/madsuite/actions/runs/29638057151) | 0 | 0 | 0 | 0 | non vérifiable |
+| `bleeband/SYSTEME_MAD` | Oui | 🟡 in_progress | [Governance dashboard](https://github.com/bleeband/SYSTEME_MAD/actions/runs/29684944704) | 0 | 6 | 7 | 7 | non vérifiable |
+| `maddevopss/madsuite` | Oui | 🔴 failure | [Responsive Nightly Extended](https://github.com/maddevopss/madsuite/actions/runs/29680919063) | 0 | 0 | 0 | 0 | non vérifiable |
 | `maddevopss/madsuite-frontend` | Oui | 🟢 success | [Frontend Main CI](https://github.com/maddevopss/madsuite-frontend/actions/runs/29518748914) | 0 | 0 | 0 | 1 | non vérifiable |
-| `maddevopss/madsuite-backend` | Oui | 🔴 failure | [Backend Main CI](https://github.com/maddevopss/madsuite-backend/actions/runs/29541629864) | 0 | 0 | 0 | 0 | non vérifiable |
-| `maddevopss/desktop-agent` | Oui | 🟢 success | [Desktop Agent CI](https://github.com/maddevopss/desktop-agent/actions/runs/29541522444) | 0 | 0 | 0 | 0 | non vérifiable |
-| `maddevopss/e2e` | Oui | 🟢 success | [E2E CI](https://github.com/maddevopss/e2e/actions/runs/29443907051) | 0 | 0 | 0 | 0 | non vérifiable |
+| `maddevopss/madsuite-backend` | Oui | 🟢 success | [Backend Main Guards](https://github.com/maddevopss/madsuite-backend/actions/runs/29668263343) | 0 | 0 | 0 | 0 | non vérifiable |
+| `maddevopss/desktop-agent` | Oui | 🟢 success | [Desktop Agent Guards](https://github.com/maddevopss/desktop-agent/actions/runs/29667976170) | 2 | 0 | 0 | 0 | non vérifiable |
+| `maddevopss/e2e` | Oui | 🟢 success | [E2E CI](https://github.com/maddevopss/e2e/actions/runs/29669991161) | 0 | 0 | 0 | 0 | non vérifiable |
 | `bleeband/maddevops` | Non | ⚪ inconnu | Non accessible | 0 | 0 | 0 | 0 | non vérifiable |
 
 ## Totaux observés
@@ -45,7 +45,7 @@ Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-
 - P0 ouverts : **6**
 - P1 ouverts : **7**
 - P2 ouverts : **8**
-- PR ouvertes : **1**
+- PR ouvertes : **2**
 
 ## Limites
 
