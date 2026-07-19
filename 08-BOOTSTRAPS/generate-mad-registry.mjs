@@ -180,13 +180,15 @@ function renderGraph(entries) {
   const relations = entries.flatMap((entry) => entry.relations.map((relation) => ({ source: entry.id, ...relation })));
   const connected = new Set(relations.flatMap((relation) => [relation.source, relation.target]));
   const orphans = entries.map((entry) => entry.id).filter((id) => !connected.has(id));
+  const updatedAt = entries.map((entry) => entry.updated_at).filter(Boolean).sort().at(-1) || "Inconnue";
   const lines = [
     "---",
     "Projet: Système MAD",
     "Document: Graphe généré des relations du MAD Registry",
     "Version: 1.0",
+    `Dernière révision: ${updatedAt}`,
     "Statut: Officiel",
-    "Owner: Automatisation SYSTEME_MAD",
+    "Auteur: Automatisation SYSTEME_MAD",
     "---",
     "",
     "# Graphe des relations du MAD Registry",
