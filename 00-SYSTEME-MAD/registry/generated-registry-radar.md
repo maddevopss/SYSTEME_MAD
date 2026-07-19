@@ -2,8 +2,9 @@
 Projet: Système MAD
 Document: Radar stratégique du MAD Registry — P4.4
 Version: 1.0
+Dernière révision: 2026-07-19
 Statut: Officiel
-Owner: Automatisation SYSTEME_MAD
+Auteur: Automatisation SYSTEME_MAD
 ---
 
 # Radar stratégique du MAD Registry — P4.4
