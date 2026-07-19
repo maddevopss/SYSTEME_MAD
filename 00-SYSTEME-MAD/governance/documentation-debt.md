@@ -1,10 +1,14 @@
 ---
-title: Registre de dette documentaire
-status: Brouillon
-type: Gouvernance
-owner: MAD DevOps
+Projet: SYSTEME_MAD
+Document: Registre de dette documentaire
+Version: 1.0
+Dernière révision: 2026-07-19
+Statut: Brouillon
+Auteur: MAD DevOps
+Type: Gouvernance
+Owner: MAD DevOps
 created_at: 2026-07-12
-updated_at: 2026-07-12
+updated_at: 2026-07-19
 ---
 
 # Registre de dette documentaire

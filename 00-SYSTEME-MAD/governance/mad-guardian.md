@@ -2,11 +2,13 @@
 Projet: MAD DevOps
 Document: MAD Guardian — Mécanisme de certification continue proportionnelle
 Version: 1.0
+Dernière révision: 2026-07-19
 Statut: Officiel
+Auteur: MAD DevOps
 Type: Gouvernance
 Owner: MAD DevOps
 created_at: 2026-07-13
-updated_at: 2026-07-13
+updated_at: 2026-07-19
 ---
 
 # MAD Guardian — Mécanisme de certification continue proportionnelle
