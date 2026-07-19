@@ -11,6 +11,10 @@ function clean(value = "") {
   return value.trim().replace(/^(["'])(.*)\1$/, "$2");
 }
 
+function parseRegistryUpdatedAt(text) {
+  return clean(text.match(/^updated_at:\s*(.+?)\s*$/m)?.[1] || "Inconnue");
+}
+
 function parseIndex(text) {
   const relations = [];
   let source = null;
@@ -90,7 +94,7 @@ function validate(relations, traces, evidenceTypes, confidenceLevels) {
   if (missing.length) throw new Error(`Relation(s) sans traçabilité : ${missing.map(key).join(", ")}`);
 }
 
-function render(relations, traces) {
+function render(relations, traces, updatedAt) {
   const official = traces.filter((trace) => trace.confidence === "officiel").length;
   const valid = traces.filter((trace) => trace.confidence === "valide").length;
   const provisional = traces.filter((trace) => trace.confidence === "provisoire").length;
@@ -99,8 +103,9 @@ function render(relations, traces) {
     "Projet: Système MAD",
     "Document: Rapport généré de traçabilité du MAD Registry",
     "Version: 1.0",
+    `Dernière révision: ${updatedAt}`,
     "Statut: Officiel",
-    "Owner: Automatisation SYSTEME_MAD",
+    "Auteur: Automatisation SYSTEME_MAD",
     "---",
     "",
     "# Traçabilité du MAD Registry",
@@ -133,10 +138,11 @@ function render(relations, traces) {
 
 const indexText = await fs.readFile(INDEX_PATH, "utf8");
 const traceText = await fs.readFile(TRACE_PATH, "utf8");
+const updatedAt = parseRegistryUpdatedAt(indexText);
 const relations = parseIndex(indexText);
 const { traces, evidenceTypes, confidenceLevels } = parseTraceability(traceText);
 validate(relations, traces, evidenceTypes, confidenceLevels);
-const generated = render(relations, traces);
+const generated = render(relations, traces, updatedAt);
 
 if (CHECK_MODE) {
   const current = await fs.readFile(REPORT_PATH, "utf8").catch(() => "");
