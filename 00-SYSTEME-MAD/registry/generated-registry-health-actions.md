@@ -2,8 +2,9 @@
 Projet: Système MAD
 Document: MAD Health Actions — P4.8
 Version: 1.0
+Dernière révision: 2026-07-18
 Statut: Officiel
-Owner: Automatisation SYSTEME_MAD
+Auteur: Automatisation SYSTEME_MAD
 ---
 
 # MAD Health Actions — P4.8
