@@ -2,10 +2,15 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 const ROOT = process.cwd();
+const INDEX_PATH = path.join(ROOT, "00-SYSTEME-MAD/registry/registry-index.yaml");
 const RADAR_PATH = path.join(ROOT, "00-SYSTEME-MAD/registry/generated-registry-radar.json");
 const MARKDOWN_PATH = path.join(ROOT, "00-SYSTEME-MAD/registry/generated-registry-health.md");
 const JSON_PATH = path.join(ROOT, "00-SYSTEME-MAD/registry/generated-registry-health.json");
 const CHECK_MODE = process.argv.includes("--check");
+
+function registryRevision(indexText) {
+  return indexText.match(/^updated_at:\s*(.+?)\s*$/m)?.[1] || "Inconnue";
+}
 
 function healthStatus(index, complete, blockers) {
   if (blockers.length) return "Critique";
@@ -79,7 +84,7 @@ function statusIcon(status) {
   }[status] || "❔";
 }
 
-function renderMarkdown(analysis) {
+function renderMarkdown(analysis, updatedAt) {
   const indexText = analysis.health_index === null ? "Indisponible" : `${analysis.health_index} %`;
   const blockerLines = analysis.blockers.length
     ? analysis.blockers.map((blocker) => `- 🛑 ${blocker.type === "cycle" ? "Cycle" : "Référence cassée"} : \`${blocker.detail}\`.`)
@@ -90,8 +95,9 @@ function renderMarkdown(analysis) {
     "Projet: Système MAD",
     "Document: Diagnostic MAD Health du Registry — P4.5",
     "Version: 1.0",
+    `Dernière révision: ${updatedAt}`,
     "Statut: Officiel",
-    "Owner: Automatisation SYSTEME_MAD",
+    "Auteur: Automatisation SYSTEME_MAD",
     "---",
     "",
     "# Diagnostic MAD Health du Registry — P4.5",
@@ -186,9 +192,13 @@ function renderJson(analysis) {
   }, null, 2)}\n`;
 }
 
-const radar = JSON.parse(await fs.readFile(RADAR_PATH, "utf8"));
+const [indexText, radarText] = await Promise.all([
+  fs.readFile(INDEX_PATH, "utf8"),
+  fs.readFile(RADAR_PATH, "utf8")
+]);
+const radar = JSON.parse(radarText);
 const analysis = analyse(radar);
-const markdown = renderMarkdown(analysis);
+const markdown = renderMarkdown(analysis, registryRevision(indexText));
 const json = renderJson(analysis);
 
 if (CHECK_MODE) {
