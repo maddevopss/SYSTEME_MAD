@@ -2,8 +2,9 @@
 Projet: Système MAD
 Document: Chaînes générées de provenance du MAD Registry
 Version: 1.0
+Dernière révision: 2026-07-19
 Statut: Officiel
-Owner: Automatisation SYSTEME_MAD
+Auteur: Automatisation SYSTEME_MAD
 ---
 
 # Chaînes de provenance du MAD Registry

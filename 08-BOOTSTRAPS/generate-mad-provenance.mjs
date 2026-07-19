@@ -12,6 +12,10 @@ function clean(value = "") {
   return value.trim().replace(/^(\"|')(.*)\1$/, "$2");
 }
 
+function parseRegistryUpdatedAt(text) {
+  return clean(text.match(/^updated_at:\s*(.+?)\s*$/m)?.[1] || "Inconnue");
+}
+
 function parseIndex(text) {
   const objects = new Map();
   let current = null;
@@ -129,7 +133,7 @@ function renderChain(chain, objects) {
   return lines;
 }
 
-function render(objects, edges) {
+function render(objects, edges, updatedAt) {
   const adjacency = new Map([...objects.keys()].map((id) => [id, []]));
   const reverse = new Map([...objects.keys()].map((id) => [id, []]));
   const incoming = new Map([...objects.keys()].map((id) => [id, 0]));
@@ -153,8 +157,9 @@ function render(objects, edges) {
     "Projet: Système MAD",
     "Document: Chaînes générées de provenance du MAD Registry",
     "Version: 1.0",
+    `Dernière révision: ${updatedAt}`,
     "Statut: Officiel",
-    "Owner: Automatisation SYSTEME_MAD",
+    "Auteur: Automatisation SYSTEME_MAD",
     "---",
     "",
     "# Chaînes de provenance du MAD Registry",
@@ -203,10 +208,11 @@ function render(objects, edges) {
 
 const indexText = await fs.readFile(INDEX_PATH, "utf8");
 const traceText = await fs.readFile(TRACE_PATH, "utf8");
+const updatedAt = parseRegistryUpdatedAt(indexText);
 const objects = parseIndex(indexText);
 const traces = parseTraceability(traceText);
 const edges = buildEdges(objects, traces);
-const generated = render(objects, edges);
+const generated = render(objects, edges, updatedAt);
 
 if (CHECK_MODE) {
   const current = await fs.readFile(OUTPUT_PATH, "utf8").catch(() => "");
