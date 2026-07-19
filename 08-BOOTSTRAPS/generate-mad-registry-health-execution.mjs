@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const registry = path.join(root, '00-SYSTEME-MAD', 'registry');
 const decisionsPath = path.join(registry, 'generated-registry-health-decision-ledger.json');
+const metadataPath = path.join(registry, 'generated-registry-health-decisions.json');
 const ledgerPath = path.join(registry, 'registry-health-execution-ledger.json');
 const jsonPath = path.join(registry, 'generated-registry-health-execution.json');
 const markdownPath = path.join(registry, 'generated-registry-health-execution.md');
@@ -14,6 +15,7 @@ const check = process.argv.includes('--check');
 
 const readJson = (file) => JSON.parse(fs.readFileSync(file, 'utf8'));
 const decisions = readJson(decisionsPath);
+const metadata = readJson(metadataPath);
 const ledger = readJson(ledgerPath);
 const allowedStatuses = new Set(['Non démarrée', 'En cours', 'Bloquée', 'Terminée', 'Vérifiée', 'Abandonnée']);
 const decisionMap = new Map(decisions.decisions.map((decision) => [decision.key, decision]));
@@ -97,7 +99,39 @@ const output = {
 
 const json = `${JSON.stringify(output, null, 2)}\n`;
 const rows = tracked.map((item) => `| \`${item.decision_key}\` | ${item.priority} | ${item.decision_status} | ${item.execution_status} | ${item.actor ?? '—'} |`).join('\n');
-const markdown = `# Suivi d’exécution MAD Health — P4.11\n\n> Généré automatiquement. Une décision acceptée ne constitue jamais une exécution automatique.\n\n## Synthèse\n\n- Décisions suivies : **${output.decision_count}**\n- Décisions acceptées : **${output.accepted_decision_count}**\n- Événements humains : **${output.execution_event_count}**\n- Événements invalides : **${output.invalid_event_count}**\n- Événements orphelins : **${output.orphan_event_count}**\n\n## États\n\n| Décision | Priorité | Décision | Exécution | Acteur |\n|---|---:|---|---|---|\n${rows || '| — | — | — | — | — |'}\n\n## Garde-fous\n\n- Aucune exécution n’est déduite d’une décision.\n- \`Terminée\` ne signifie pas \`Vérifiée\`.\n- Aucun acteur, délai ou résultat n’est inventé.\n`;
+const markdown = `---
+Projet: Système MAD
+Document: Suivi d’exécution MAD Health généré — P4.11
+Version: 1.0
+Dernière révision: ${metadata.current?.date ?? 'Indéterminée'}
+Statut: Généré
+Auteur: Automatisation SYSTEME_MAD
+---
+
+# Suivi d’exécution MAD Health — P4.11
+
+> Généré automatiquement. Ne pas modifier manuellement. Une décision acceptée ne constitue jamais une exécution automatique.
+
+## Synthèse
+
+- Décisions suivies : **${output.decision_count}**
+- Décisions acceptées : **${output.accepted_decision_count}**
+- Événements humains : **${output.execution_event_count}**
+- Événements invalides : **${output.invalid_event_count}**
+- Événements orphelins : **${output.orphan_event_count}**
+
+## États
+
+| Décision | Priorité | Décision | Exécution | Acteur |
+|---|---:|---|---|---|
+${rows || '| — | — | — | — | — |'}
+
+## Garde-fous
+
+- Aucune exécution n’est déduite d’une décision.
+- \`Terminée\` ne signifie pas \`Vérifiée\`.
+- Aucun acteur, délai ou résultat n’est inventé.
+`;
 
 const normalize = (value) => value.replace(/\r\n/g, '\n').trimEnd() + '\n';
 const sameJson = (file, expected) => {
