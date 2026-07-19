@@ -28,14 +28,37 @@ jobs:
 
           root = Path.cwd()
           required = ["Projet:", "Document:", "Version:", "Dernière révision:", "Statut:", "Auteur:"]
-          governed = {"00-SYSTEME-MAD", "02-GUIDE", "04-DECISIONS", "05-PLAY", "06-KNOWLEDGE-BASE", "07-TEMPLATES", "09-CHECKLISTS", "10-ROADMAP", "11-ARCHITECTURE", "12-STANDARDS", "13-RESSOURCES"}
+          governed = {
+              "00-SYSTEME-MAD",
+              "01-FONDATIONS",
+              "02-GUIDE",
+              "03-STANDARDS",
+              "04-ADR",
+              "05-PLAY",
+              "06-KNOWLEDGE-BASE",
+              "07-TEMPLATES",
+              "08-BOOTSTRAPS",
+              "09-CHECKLISTS",
+              "10-ROADMAP",
+              "11-ACADEMY",
+              "12-INNOVATION",
+              "13-RESSOURCES",
+          }
           excluded = {"README.md", "generated-dashboard.md"}
+          workflow_path = ".github/workflows/yaml-frontmatter.yml"
 
           if os.getenv("GITHUB_EVENT_NAME") == "pull_request":
               base_ref = os.getenv("GITHUB_BASE_REF", "main")
               base = f"origin/{base_ref}"
               subprocess.run(["git", "fetch", "origin", base_ref], check=True)
-              raw = subprocess.check_output(["git", "diff", "--name-only", "--diff-filter=AM", f"{base}...HEAD"], text=True)
+              changed = subprocess.check_output(
+                  ["git", "diff", "--name-only", "--diff-filter=AM", f"{base}...HEAD"],
+                  text=True,
+              ).splitlines()
+              if workflow_path in changed:
+                  raw = subprocess.check_output(["git", "ls-files", "*.md"], text=True)
+              else:
+                  raw = "\n".join(changed)
           else:
               raw = subprocess.check_output(["git", "ls-files", "*.md"], text=True)
 
