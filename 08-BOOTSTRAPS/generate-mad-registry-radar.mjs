@@ -213,7 +213,7 @@ function analyse(objects, traces) {
   };
 }
 
-function renderMarkdown(analysis) {
+function renderMarkdown(analysis, updatedAt) {
   const robust = analysis.axes.filter((axis) => axis.classification === "Robuste");
   const watch = analysis.axes.filter((axis) => axis.classification === "À surveiller");
   const fragile = analysis.axes.filter((axis) => axis.classification === "Fragile");
@@ -226,8 +226,9 @@ function renderMarkdown(analysis) {
     "Projet: Système MAD",
     "Document: Radar stratégique du MAD Registry — P4.4",
     "Version: 1.0",
+    `Dernière révision: ${updatedAt}`,
     "Statut: Officiel",
-    "Owner: Automatisation SYSTEME_MAD",
+    "Auteur: Automatisation SYSTEME_MAD",
     "---",
     "",
     "# Radar stratégique du MAD Registry — P4.4",
@@ -299,8 +300,10 @@ const [indexText, traceText] = await Promise.all([
   fs.readFile(INDEX_PATH, "utf8"),
   fs.readFile(TRACE_PATH, "utf8")
 ]);
-const analysis = analyse(parseIndex(indexText), parseTraces(traceText));
-const markdown = renderMarkdown(analysis);
+const objects = parseIndex(indexText);
+const analysis = analyse(objects, parseTraces(traceText));
+const updatedAt = objects.map((object) => object.updated_at).filter(Boolean).sort().at(-1) || "Inconnue";
+const markdown = renderMarkdown(analysis, updatedAt);
 const json = renderJson(analysis);
 
 if (CHECK_MODE) {
