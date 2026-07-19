@@ -1,11 +1,11 @@
 ---
 Projet: Système MAD
 Document: Relations canoniques du MAD Registry — P2
-Version: 1.0
+Version: 1.1
+Dernière révision: 2026-07-19
 Statut: À valider
-Owner: MAD DevOps
+Auteur: MAD DevOps
 created_at: 2026-07-17
-updated_at: 2026-07-17
 ---
 
 # Relations canoniques du MAD Registry — P2
@@ -13,6 +13,19 @@ updated_at: 2026-07-17
 ## Objectif
 
 La P2 ajoute un graphe minimal et vérifiable entre les objets officiellement enrôlés dans le MAD Registry. Elle ne transforme pas encore le dépôt complet en graphe et n’invente aucune relation pour les documents historiques.
+
+## Rôle et limites d’autorité
+
+Ce document est le contrat technique de la phase P2 pour les relations stockées dans le MAD Registry.
+
+Il définit :
+
+- les types de relations permis dans les sources du Registry;
+- leur orientation;
+- les contrôles de cohérence applicables;
+- les artefacts techniques qui en dérivent.
+
+Il ne définit pas à lui seul le vocabulaire conceptuel complet de la Référence MAD, n’établit pas la validité scientifique d’une relation et ne remplace ni REG-001 ni le contrat de traçabilité P3.1. En cas de divergence, REG-001 borne la mission du Registry et P3.1 porte la justification ainsi que le niveau de confiance des relations déclarées.
 
 ## Types de relations autorisés
 
@@ -52,8 +65,17 @@ La génération échoue lorsqu’elle détecte :
 - `generated-relations-graph.md` présente les relations et les objets encore sans relation;
 - la CI vérifie les deux artefacts avant l’audit d’intégrité P0.
 
+Les artefacts générés sont des projections techniques. Ils n’acquièrent pas une autorité normative indépendante de leurs sources et de leurs contrats.
+
 ## Règle progressive
 
 Un objet sans relation n’est pas une erreur. Il est présenté comme objet isolé afin de rendre la dette de modélisation visible sans bloquer la migration du dépôt.
 
 Une relation doit être ajoutée uniquement lorsqu’elle exprime un lien réel, stable et défendable entre deux objets canoniques.
+
+## Historique
+
+| Date | Auteur | Changement |
+|---|---|---|
+| 2026-07-17 | MAD DevOps | Création du contrat technique P2 |
+| 2026-07-19 | MAD DevOps | En-tête normalisé et limites d’autorité explicitées sans modification du vocabulaire relationnel |
