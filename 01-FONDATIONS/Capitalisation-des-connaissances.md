@@ -1,3 +1,12 @@
+---
+Projet: Système MAD
+Document: Principes de capitalisation cognitive et de proportionnalité
+Version: 0.1.0
+Dernière révision: 2026-07-19
+Statut: À valider
+Auteur: Marc-André Dufour
+---
+
 Principe de capitalisation cognitive
 
 Toute connaissance validée doit devenir un actif réutilisable de l'écosystème MAD.
