@@ -1,10 +1,11 @@
 ---
-Titre: Inventaire de classement de la Référence MAD
-Statut: À valider
+Projet: SYSTEME_MAD
+Document: Inventaire de classement de la Référence MAD
 Version: 0.1.0
+Dernière révision: 2026-07-19
+Statut: À valider
 Auteur: Marc-André Dufour
 Responsable: Gardien de SYSTEME_MAD
-Dernière mise à jour: 2026-07-16
 ---
 
 # Inventaire de classement de la Référence MAD
