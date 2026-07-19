@@ -2,8 +2,9 @@
 Projet: Système MAD
 Document: Diagnostic MAD Health du Registry — P4.5
 Version: 1.0
+Dernière révision: 2026-07-19
 Statut: Officiel
-Owner: Automatisation SYSTEME_MAD
+Auteur: Automatisation SYSTEME_MAD
 ---
 
 # Diagnostic MAD Health du Registry — P4.5
