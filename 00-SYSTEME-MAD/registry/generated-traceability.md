@@ -2,8 +2,9 @@
 Projet: Système MAD
 Document: Rapport généré de traçabilité du MAD Registry
 Version: 1.0
+Dernière révision: 2026-07-19
 Statut: Officiel
-Owner: Automatisation SYSTEME_MAD
+Auteur: Automatisation SYSTEME_MAD
 ---
 
 # Traçabilité du MAD Registry
