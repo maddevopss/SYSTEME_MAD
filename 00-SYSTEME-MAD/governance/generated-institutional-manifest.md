@@ -1,3 +1,12 @@
+---
+Projet: SYSTEME_MAD
+Document: Manifeste institutionnel généré — P5.1
+Version: 0.1.0
+Dernière révision: 2026-07-18
+Statut: Proposition
+Auteur: Marc-André Dufour
+---
+
 # Manifeste institutionnel SYSTEME_MAD — P5.1
 
 - Version institutionnelle : **0.1.0**
