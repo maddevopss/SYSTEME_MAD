@@ -32,8 +32,9 @@ jobs:
           excluded = {"README.md", "generated-dashboard.md"}
 
           if os.getenv("GITHUB_EVENT_NAME") == "pull_request":
-              base = f"origin/{os.getenv('GITHUB_BASE_REF', 'main')}"
-              subprocess.run(["git", "fetch", "origin", os.getenv("GITHUB_BASE_REF", "main"), "--depth=1"], check=False)
+              base_ref = os.getenv("GITHUB_BASE_REF", "main")
+              base = f"origin/{base_ref}"
+              subprocess.run(["git", "fetch", "origin", base_ref], check=True)
               raw = subprocess.check_output(["git", "diff", "--name-only", "--diff-filter=AM", f"{base}...HEAD"], text=True)
           else:
               raw = subprocess.check_output(["git", "ls-files", "*.md"], text=True)
