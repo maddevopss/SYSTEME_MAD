@@ -1,8 +1,8 @@
 ---
 Projet: Système MAD
 Document: Contrat architectural du Dashboard MAD Registry — P4.0
-Version: 1.0
-Dernière révision: 2026-07-18
+Version: 1.1
+Dernière révision: 2026-07-19
 Statut: À valider
 Auteur: Marc-André Dufour
 ---
@@ -72,7 +72,9 @@ Le Dashboard doit rendre visibles les informations nécessaires pour comprendre 
 
 Les sous-phases P4.x peuvent ajouter de nouvelles vues et mesures sans rompre les invariants du présent contrat.
 
-## 6. Exigences normatives
+## 6. Exigences proposées
+
+Les exigences ci-dessous constituent le contrat cible soumis à validation. Tant que le présent document conserve le statut `À valider`, elles servent de critères d’évaluation pour les sous-phases P4.x sans acquérir, à elles seules, une autorité institutionnelle supérieure à REG-001, aux décisions adoptées ou aux standards officiels applicables.
 
 - **P4-STD-001** — Le Dashboard ne doit pas devenir une source canonique.
 - **P4-STD-002** — Toute donnée affichée doit provenir de sources canoniques ou d’un calcul déterministe documenté.
@@ -85,7 +87,7 @@ Les sous-phases P4.x peuvent ajouter de nouvelles vues et mesures sans rompre le
 
 ## 7. Invariants
 
-Les invariants suivants s’appliquent à toutes les phases P4.x :
+Les invariants suivants constituent les contraintes cibles applicables à toutes les phases P4.x pendant la validation du contrat :
 
 1. la source canonique demeure extérieure au Dashboard;
 2. aucune modification manuelle du Dashboard généré n’est normative;
@@ -95,7 +97,18 @@ Les invariants suivants s’appliquent à toutes les phases P4.x :
 6. une extension ne doit pas invalider silencieusement une mesure existante;
 7. les limites et incertitudes doivent être explicites.
 
-## 8. Architecture logique
+## 8. Rôle et limites d’autorité
+
+P4.0 est un contrat architectural candidat pour la famille P4. Il organise et rend vérifiables les engagements techniques du Dashboard, mais ne crée pas une source canonique supplémentaire et ne remplace pas REG-001.
+
+Son statut `À valider` signifie que :
+
+- ses exigences peuvent être utilisées pour vérifier la cohérence des implémentations P4.x;
+- leur adoption institutionnelle définitive reste soumise au processus de gouvernance applicable;
+- un artefact généré conforme à P4.0 demeure une projection dérivée;
+- aucune formulation du présent contrat ne doit être interprétée comme une promotion implicite au statut `Officiel`.
+
+## 9. Architecture logique
 
 ```text
 Sources canoniques
@@ -113,7 +126,7 @@ CI, résumé GitHub Actions et interfaces futures
 
 Le moteur du Dashboard est un lecteur et un transformateur déterministe. Il ne possède aucun droit d’écriture sur les sources canoniques.
 
-## 9. Contrat des sorties
+## 10. Contrat des sorties
 
 Chaque sortie du Dashboard doit exposer, lorsque pertinent :
 
@@ -128,7 +141,7 @@ Chaque sortie du Dashboard doit exposer, lorsque pertinent :
 
 Les formats initiaux autorisés sont Markdown et résumé GitHub Actions. Des formats structurés ou interactifs pourront être ajoutés dans les phases ultérieures.
 
-## 10. Contrat CI
+## 11. Contrat CI
 
 La CI doit au minimum vérifier :
 
@@ -141,7 +154,7 @@ La CI doit au minimum vérifier :
 
 Une divergence doit provoquer un échec explicite et actionnable.
 
-## 11. Roadmap P4
+## 12. Roadmap P4
 
 - **P4.0** — Contrat architectural du Dashboard;
 - **P4.1** — Tableau de bord unifié;
@@ -153,9 +166,9 @@ Une divergence doit provoquer un échec explicite et actionnable.
 
 Chaque sous-phase doit respecter le présent contrat et documenter les exigences supplémentaires qu’elle introduit.
 
-## 12. Règle générale des phases `.0`
+## 13. Règle générale proposée des phases `.0`
 
-Toute nouvelle capacité architecturale de SYSTEME_MAD doit commencer par une phase `.0` définissant son contrat avant son implémentation.
+Le présent contrat propose que toute nouvelle capacité architecturale de SYSTEME_MAD commence par une phase `.0` définissant son contrat avant son implémentation.
 
 Le cycle attendu est :
 
@@ -169,15 +182,24 @@ Px.1 — Première implémentation
 Px.2+ — Évolutions contrôlées
 ```
 
-Cette règle vise à empêcher que l’implémentation définisse implicitement l’architecture après coup.
+Cette règle vise à empêcher que l’implémentation définisse implicitement l’architecture après coup. Sa généralisation au-delà de la famille P4 doit être confirmée par une décision de gouvernance distincte.
 
-## 13. Critères d’acceptation de P4.0
+## 14. Critères d’acceptation de P4.0
 
 P4.0 est considérée comme acceptée lorsque :
 
 - sa vision et sa mission sont approuvées;
 - ses sources canoniques sont identifiées;
-- ses principes et invariants sont reconnus comme normatifs;
+- ses principes et invariants sont reconnus comme applicables;
 - son contrat de sortie et son contrat CI sont applicables;
 - P4.1 référence explicitement P4.0;
 - les futures phases P4.x peuvent être évaluées contre ce contrat.
+
+Le présent document demeure `À valider` tant que cette acceptation n’a pas été formalisée.
+
+## 15. Historique
+
+| Date | Auteur | Changement |
+|---|---|---|
+| 2026-07-18 | Marc-André Dufour | Création du contrat architectural P4.0 |
+| 2026-07-19 | Marc-André Dufour | Qualification de l’autorité des exigences et de la règle générale des phases `.0`, sans promotion de statut |
