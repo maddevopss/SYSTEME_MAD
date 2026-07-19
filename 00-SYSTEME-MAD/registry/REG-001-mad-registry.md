@@ -2,11 +2,9 @@
 Projet: Système MAD
 Document: REG-001 — MAD Registry
 Version: 1.1
+Dernière révision: 2026-07-19
 Statut: À valider
-Type: Fondation de gouvernance
-Owner: MAD DevOps
-created_at: 2026-07-13
-updated_at: 2026-07-19
+Auteur: MAD DevOps
 ---
 
 # REG-001 — MAD Registry
