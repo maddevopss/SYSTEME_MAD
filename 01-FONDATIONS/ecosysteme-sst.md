@@ -1,10 +1,12 @@
 ---
-Titre: Écosystème SST
+Projet: Système MAD
+Document: Écosystème SST — Santé, sécurité et prévention
+Version: 0.1.0
+Dernière révision: 2026-07-19
 Statut: À valider
 Auteur: Marc-André Dufour
 Gardien: SYSTEME_MAD
 Portée: Fondation d’écosystème métier
-Version: 0.1.0
 ---
 
 # Écosystème SST — Santé, sécurité et prévention

@@ -1,8 +1,12 @@
 ---
-titre: Les trois questions de l’orientation
-statut: Proposition à valider
-categorie: Fondation
-langue_source: fr
+Projet: Système MAD
+Document: Les trois questions de l’orientation
+Version: 0.1.0
+Dernière révision: 2026-07-19
+Statut: À valider
+Auteur: Marc-André Dufour
+Catégorie: Fondation
+Langue source: fr
 ---
 
 # Les trois questions de l’orientation
