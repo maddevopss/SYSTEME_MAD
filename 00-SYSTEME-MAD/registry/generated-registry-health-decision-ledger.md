@@ -1,6 +1,15 @@
+---
+Projet: Système MAD
+Document: Registre des décisions MAD Health généré — P4.10
+Version: 1.0
+Dernière révision: 2026-07-18
+Statut: Généré
+Auteur: Automatisation SYSTEME_MAD
+---
+
 # Registre des décisions MAD Health — P4.10
 
-> Vue réconciliée. Une absence d’entrée humaine maintient le dossier à `À décider`.
+> Vue réconciliée générée automatiquement. Ne pas modifier manuellement. Une absence d’entrée humaine maintient le dossier à `À décider`.
 
 ## Synthèse
 
