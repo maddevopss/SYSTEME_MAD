@@ -2,8 +2,9 @@
 Projet: Système MAD
 Document: Tableau de bord unifié du MAD Registry
 Version: 1.1
+Dernière révision: 2026-07-19
 Statut: Officiel
-Owner: Automatisation SYSTEME_MAD
+Auteur: Automatisation SYSTEME_MAD
 ---
 
 # Tableau de bord unifié du MAD Registry
@@ -17,7 +18,7 @@ Owner: Automatisation SYSTEME_MAD
 - Relations justifiées : **1**
 - Couverture de traçabilité : **100 %**
 - Objets isolés : **1**
-- Dernière mise à jour canonique : **2026-07-13**
+- Dernière mise à jour canonique : **2026-07-19**
 
 ## Indicateurs avancés — P4.2
 

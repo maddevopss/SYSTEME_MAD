@@ -2,7 +2,7 @@
 # Modifier registry-sources.yaml ou les métadonnées des documents sources, jamais ce fichier.
 schema_version: "1.1"
 registry: MAD Registry
-updated_at: 2026-07-13
+updated_at: 2026-07-19
 objects:
   - id: ADR-007
     type: ADR
@@ -23,7 +23,7 @@ objects:
     type: REG
     title: MAD Registry
     status: À valider
-    version: "1.0"
+    version: "1.1"
     owner: MAD DevOps
     path: 00-SYSTEME-MAD/registry/REG-001-mad-registry.md
     summary: Registre canonique des objets officiels du Système MAD.
@@ -32,7 +32,7 @@ objects:
       - gouvernance
       - fondation
     created_at: 2026-07-13
-    updated_at: 2026-07-13
+    updated_at: 2026-07-19
 
   - id: STD-800
     type: STD
