@@ -2,8 +2,9 @@
 Projet: Système MAD
 Document: Alertes MAD Health — P4.7
 Version: 1.0
+Dernière révision: 2026-07-18
 Statut: Officiel
-Owner: Automatisation SYSTEME_MAD
+Auteur: Automatisation SYSTEME_MAD
 ---
 
 # Alertes MAD Health — P4.7
