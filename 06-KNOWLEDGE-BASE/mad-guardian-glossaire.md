@@ -2,7 +2,9 @@
 Projet: MAD DevOps
 Document: MAD Guardian — Glossaire et définitions réutilisables
 Version: 1.0
+Dernière révision: 2026-07-13
 Statut: Officiel
+Auteur: MAD DevOps
 Type: Knowledge Base
 Owner: MAD DevOps
 created_at: 2026-07-13

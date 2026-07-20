@@ -2,7 +2,7 @@
 Projet: MAD DevOps
 Document: CHK-014 — Audit chaine commerciale MAD DevOps
 Version: 1.0
-Derniere revision: 2026-06-30
+Dernière révision: 2026-06-30
 Statut: Officiel
 Auteur: Marc-Andre Dufour
 ---

@@ -1,3 +1,12 @@
+---
+Projet: Système MAD
+Document: Fiche de poste — Gardien du référentiel MAD
+Version: 0.1
+Dernière révision: 2026-07-20
+Statut: Brouillon
+Auteur: MAD DevOps
+---
+
 # Fiche de poste — Gardien du référentiel MAD
 
 > **Statut :** Brouillon de gouvernance

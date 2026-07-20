@@ -2,7 +2,7 @@
 Projet: MAD DevOps
 Document: Guide implementation manuelle — Lot 1 MAD Ariane
 Version: 1.0
-Derniere revision: 2026-07-01
+Dernière révision: 2026-07-01
 Statut: Brouillon controle
 Auteur: Marc-Andre Dufour
 ---

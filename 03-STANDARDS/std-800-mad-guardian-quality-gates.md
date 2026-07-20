@@ -2,7 +2,9 @@
 Projet: MAD DevOps
 Document: STD-800 — MAD Guardian — Quality Gates et profils de certification
 Version: 1.0
+Dernière révision: 2026-07-13
 Statut: Officiel
+Auteur: MAD DevOps
 Type: Standard
 Owner: MAD DevOps
 created_at: 2026-07-13
