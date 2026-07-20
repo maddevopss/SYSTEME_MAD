@@ -7,12 +7,14 @@ import process from 'node:process';
 const root = process.cwd();
 const registry = path.join(root, '00-SYSTEME-MAD/registry');
 const executionPath = path.join(registry, 'generated-registry-health-execution.json');
+const metadataPath = path.join(registry, 'generated-registry-health-decisions.json');
 const ledgerPath = path.join(registry, 'registry-health-impact-ledger.json');
 const jsonPath = path.join(registry, 'generated-registry-health-impact.json');
 const mdPath = path.join(registry, 'generated-registry-health-impact.md');
 const check = process.argv.includes('--check');
 
 const execution = JSON.parse(fs.readFileSync(executionPath, 'utf8'));
+const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
 const ledger = JSON.parse(fs.readFileSync(ledgerPath, 'utf8'));
 const allowed = new Set(['Amélioration démontrée', 'Effet neutre', 'Régression observée', 'Résultat incertain']);
 const decisionKeys = new Set(execution.executions.map((item) => item.decision_key));
@@ -75,7 +77,31 @@ const output = {
 };
 
 const json = `${JSON.stringify(output, null, 2)}\n`;
-const lines = ['# Vérification d’impact MAD Health — P4.12', '', `- Exécutions suivies : **${output.execution_count}**`, `- Constats humains : **${output.impact_event_count}**`, `- Améliorations démontrées : **${counts['Amélioration démontrée']}**`, `- À mesurer : **${counts['À mesurer']}**`, `- Non mesurables : **${counts['Non mesurable']}**`, '', '## Impacts', '', '| Cible | Exécution | Impact | Preuve |', '|---|---|---|---|'];
+const lines = [
+  '---',
+  'Projet: Système MAD',
+  'Document: Vérification d’impact MAD Health générée — P4.12',
+  'Version: 1.0',
+  `Dernière révision: ${metadata.current?.date ?? 'Indéterminée'}`,
+  'Statut: Généré',
+  'Auteur: Automatisation SYSTEME_MAD',
+  '---',
+  '',
+  '# Vérification d’impact MAD Health — P4.12',
+  '',
+  '> Généré automatiquement. Ne pas modifier manuellement.',
+  '',
+  `- Exécutions suivies : **${output.execution_count}**`,
+  `- Constats humains : **${output.impact_event_count}**`,
+  `- Améliorations démontrées : **${counts['Amélioration démontrée']}**`,
+  `- À mesurer : **${counts['À mesurer']}**`,
+  `- Non mesurables : **${counts['Non mesurable']}**`,
+  '',
+  '## Impacts',
+  '',
+  '| Cible | Exécution | Impact | Preuve |',
+  '|---|---|---|---|'
+];
 for (const item of impacts) lines.push(`| ${item.target} | ${item.execution_status} | ${item.impact_status} | ${item.evidence_reference ?? '—'} |`);
 lines.push('', '> Une exécution vérifiée ne constitue pas automatiquement une amélioration démontrée.', '');
 const markdown = lines.join('\n');
