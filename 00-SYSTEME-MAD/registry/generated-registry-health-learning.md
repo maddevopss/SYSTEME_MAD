@@ -1,4 +1,15 @@
+---
+Projet: Système MAD
+Document: Boucle d’apprentissage MAD Health générée — P4.13
+Version: 1.0
+Dernière révision: 2026-07-18
+Statut: Généré
+Auteur: Automatisation SYSTEME_MAD
+---
+
 # Boucle d’apprentissage MAD Health — P4.13
+
+> Généré automatiquement. Ne pas modifier manuellement.
 
 - Impacts suivis : **3**
 - Impacts mesurables : **0**
