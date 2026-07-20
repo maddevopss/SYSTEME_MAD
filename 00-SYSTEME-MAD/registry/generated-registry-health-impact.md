@@ -1,4 +1,15 @@
+---
+Projet: Système MAD
+Document: Vérification d’impact MAD Health générée — P4.12
+Version: 1.0
+Dernière révision: 2026-07-18
+Statut: Généré
+Auteur: Automatisation SYSTEME_MAD
+---
+
 # Vérification d’impact MAD Health — P4.12
+
+> Généré automatiquement. Ne pas modifier manuellement.
 
 - Exécutions suivies : **3**
 - Constats humains : **0**
