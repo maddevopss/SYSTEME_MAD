@@ -4,6 +4,7 @@ import path from 'node:path';
 const root = process.cwd();
 const dir = path.join(root, '00-SYSTEME-MAD/registry');
 const impactPath = path.join(dir, 'generated-registry-health-impact.json');
+const metadataPath = path.join(dir, 'generated-registry-health-decisions.json');
 const ledgerPath = path.join(dir, 'registry-health-learning-ledger.json');
 const jsonPath = path.join(dir, 'generated-registry-health-learning.json');
 const mdPath = path.join(dir, 'generated-registry-health-learning.md');
@@ -12,6 +13,7 @@ const allowed = new Set(['Observation', 'Leçon locale', 'Hypothèse transférab
 const measured = new Set(['Amélioration démontrée', 'Effet neutre', 'Régression observée', 'Résultat incertain']);
 const iso = /^\d{4}-\d{2}-\d{2}$/;
 const impact = JSON.parse(fs.readFileSync(impactPath, 'utf8'));
+const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
 const ledger = JSON.parse(fs.readFileSync(ledgerPath, 'utf8'));
 const known = new Map(impact.impacts.map((item) => [item.decision_key, item]));
 const seen = new Set();
@@ -73,7 +75,32 @@ const output = {
 };
 const json = `${JSON.stringify(output, null, 2)}\n`;
 const rows = learnings.map((item) => `| \`${item.target}\` | ${item.impact_status} | ${item.learning_status} | ${item.author ?? '—'} |`).join('\n');
-const md = `# Boucle d’apprentissage MAD Health — P4.13\n\n- Impacts suivis : **${output.impact_count}**\n- Impacts mesurables : **${output.measurable_impact_count}**\n- Apprentissages à qualifier : **${counts['À qualifier']}**\n- Règles proposées : **${counts['Règle proposée']}**\n- Entrées invalides : **${invalid.length}**\n- Entrées orphelines : **${orphan.length}**\n\n| Cible | Impact | Apprentissage | Auteur |\n|---|---|---|---|\n${rows}\n\n> Aucun résultat n’est généralisé et aucun standard n’est modifié automatiquement.\n`;
+const md = `---
+Projet: Système MAD
+Document: Boucle d’apprentissage MAD Health générée — P4.13
+Version: 1.0
+Dernière révision: ${metadata.current?.date ?? 'Indéterminée'}
+Statut: Généré
+Auteur: Automatisation SYSTEME_MAD
+---
+
+# Boucle d’apprentissage MAD Health — P4.13
+
+> Généré automatiquement. Ne pas modifier manuellement.
+
+- Impacts suivis : **${output.impact_count}**
+- Impacts mesurables : **${output.measurable_impact_count}**
+- Apprentissages à qualifier : **${counts['À qualifier']}**
+- Règles proposées : **${counts['Règle proposée']}**
+- Entrées invalides : **${invalid.length}**
+- Entrées orphelines : **${orphan.length}**
+
+| Cible | Impact | Apprentissage | Auteur |
+|---|---|---|---|
+${rows}
+
+> Aucun résultat n’est généralisé et aucun standard n’est modifié automatiquement.
+`;
 const normalize = (value) => value.replace(/\r\n/g, '\n').trimEnd() + '\n';
 if (check) {
   const oldJson = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
