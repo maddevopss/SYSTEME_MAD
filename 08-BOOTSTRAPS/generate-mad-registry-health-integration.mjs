@@ -4,12 +4,14 @@ import path from 'node:path';
 const root = process.cwd();
 const registry = path.join(root, '00-SYSTEME-MAD/registry');
 const promotionPath = path.join(registry, 'generated-registry-health-promotion.json');
+const metadataPath = path.join(registry, 'generated-registry-health-decisions.json');
 const ledgerPath = path.join(registry, 'registry-health-integration-ledger.json');
 const jsonPath = path.join(registry, 'generated-registry-health-integration.json');
 const mdPath = path.join(registry, 'generated-registry-health-integration.md');
 const check = process.argv.includes('--check');
 
 const promotion = JSON.parse(fs.readFileSync(promotionPath, 'utf8'));
+const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
 const ledger = JSON.parse(fs.readFileSync(ledgerPath, 'utf8'));
 const validStatuses = new Set(['Intégrée', 'Intégration reportée', 'Intégration annulée', 'Remplacée']);
 const known = new Map(promotion.promotions.map(item => [item.decision_key, item]));
@@ -98,7 +100,32 @@ const output = {
 
 const json = JSON.stringify(output, null, 2) + '\n';
 const rows = integrations.map(i => `| \`${i.target}\` | ${i.promotion_status} | ${i.integration_status} | ${i.document_target ?? '—'} | ${i.document_version ?? '—'} |`);
-const md = `# Intégration institutionnelle MAD Health — P4.15\n\n- Promotions suivies : **${output.promotion_count}**\n- Promotions approuvées : **${output.approved_promotion_count}**\n- Intégrations effectives : **${counts['Intégrée']}**\n- En attente d’intégration : **${counts['En attente d’intégration']}**\n- Entrées invalides : **${invalid.length}**\n- Entrées orphelines : **${orphan.length}**\n\n| Cible | Promotion | Intégration | Document | Version |\n|---|---|---|---|---|\n${rows.join('\n')}\n\n> Une promotion approuvée ne devient institutionnelle qu’après une intégration humaine, traçable et déclarée.\n`;
+const md = `---
+Projet: Système MAD
+Document: Intégration institutionnelle MAD Health générée — P4.15
+Version: 1.0
+Dernière révision: ${metadata.current?.date ?? 'Indéterminée'}
+Statut: Généré
+Auteur: Automatisation SYSTEME_MAD
+---
+
+# Intégration institutionnelle MAD Health — P4.15
+
+> Généré automatiquement. Ne pas modifier manuellement.
+
+- Promotions suivies : **${output.promotion_count}**
+- Promotions approuvées : **${output.approved_promotion_count}**
+- Intégrations effectives : **${counts['Intégrée']}**
+- En attente d’intégration : **${counts['En attente d’intégration']}**
+- Entrées invalides : **${invalid.length}**
+- Entrées orphelines : **${orphan.length}**
+
+| Cible | Promotion | Intégration | Document | Version |
+|---|---|---|---|---|
+${rows.join('\n')}
+
+> Une promotion approuvée ne devient institutionnelle qu’après une intégration humaine, traçable et déclarée.
+`;
 
 function normalize(text) { return text.replace(/\r\n/g, '\n').trimEnd() + '\n'; }
 function sameJson(file, expected) {
