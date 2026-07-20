@@ -1,9 +1,10 @@
-title: Continuité Cognitive — cadre intégrateur MADPROOF
-status: MADPROOF-R&D
-type: Guide
-owner: Marc-André Dufour
-created_at: 2026-07-16
-updated_at: 2026-07-16
+---
+Projet: SYSTEME_MAD
+Document: Continuité Cognitive — cadre intégrateur MADPROOF
+Version: 1.0
+Dernière révision: 2026-07-16
+Statut: MADPROOF-R&D
+Auteur: Marc-André Dufour
 ---
 
 # Continuité Cognitive — cadre intégrateur MADPROOF
