@@ -1,4 +1,15 @@
+---
+Projet: Système MAD
+Document: Promotion contrôlée MAD Health générée — P4.14
+Version: 1.0
+Dernière révision: 2026-07-18
+Statut: Généré
+Auteur: Automatisation SYSTEME_MAD
+---
+
 # Promotion contrôlée MAD Health — P4.14
+
+> Généré automatiquement. Ne pas modifier manuellement.
 
 - Apprentissages suivis : **3**
 - Règles proposées : **0**
