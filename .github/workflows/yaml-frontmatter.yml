@@ -46,8 +46,10 @@ jobs:
           }
           excluded = {"README.md", "generated-dashboard.md"}
           workflow_path = ".github/workflows/yaml-frontmatter.yml"
+          registry_pattern = "00-SYSTEME-MAD/registry/generated-*.md"
+          event = os.getenv("GITHUB_EVENT_NAME")
 
-          if os.getenv("GITHUB_EVENT_NAME") == "pull_request":
+          if event == "pull_request":
               base_ref = os.getenv("GITHUB_BASE_REF", "main")
               base = f"origin/{base_ref}"
               subprocess.run(["git", "fetch", "origin", base_ref], check=True)
@@ -56,11 +58,20 @@ jobs:
                   text=True,
               ).splitlines()
               if workflow_path in changed:
-                  raw = subprocess.check_output(["git", "ls-files", "*.md"], text=True)
+                  raw = subprocess.check_output(["git", "ls-files", registry_pattern], text=True)
+              else:
+                  raw = "\n".join(changed)
+          elif event == "push":
+              changed = subprocess.check_output(
+                  ["git", "diff", "--name-only", "--diff-filter=AM", "HEAD^", "HEAD"],
+                  text=True,
+              ).splitlines()
+              if workflow_path in changed:
+                  raw = subprocess.check_output(["git", "ls-files", registry_pattern], text=True)
               else:
                   raw = "\n".join(changed)
           else:
-              raw = subprocess.check_output(["git", "ls-files", "*.md"], text=True)
+              raw = subprocess.check_output(["git", "ls-files", registry_pattern], text=True)
 
           errors = []
           checked = 0
