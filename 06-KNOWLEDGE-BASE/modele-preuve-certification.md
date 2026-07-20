@@ -1,3 +1,12 @@
+---
+Projet: Système MAD
+Document: Modèle de preuve de certification
+Version: 1.0
+Dernière révision: 2026-07-20
+Statut: À valider
+Auteur: MAD DevOps
+---
+
 
 Par exemple :
 

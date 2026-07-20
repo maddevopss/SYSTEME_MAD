@@ -2,7 +2,9 @@
 Projet: MAD DevOps
 Document: Roadmap — MAD Guardian
 Version: 1.0
+Dernière révision: 2026-07-13
 Statut: À valider
+Auteur: MAD DevOps
 Type: Roadmap
 Owner: MAD DevOps
 created_at: 2026-07-13

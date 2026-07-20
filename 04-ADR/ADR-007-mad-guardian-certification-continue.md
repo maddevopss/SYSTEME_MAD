@@ -2,7 +2,9 @@
 Projet: MAD DevOps
 Document: ADR-007 — Adoption de MAD Guardian comme mécanisme de certification continue proportionnelle
 Version: 1.0
+Dernière révision: 2026-07-13
 Statut: Accepté
+Auteur: MAD DevOps
 Type: Architecture Decision Record
 Owner: MAD DevOps
 created_at: 2026-07-13

@@ -27,6 +27,7 @@ jobs:
           import os, subprocess, sys
 
           root = Path.cwd()
+          # Le validateur balaie tout le corpus lorsqu'il est lui-même modifié.
           required = ["Projet:", "Document:", "Version:", "Dernière révision:", "Statut:", "Auteur:"]
           governed = {
               "00-SYSTEME-MAD",
@@ -46,7 +47,6 @@ jobs:
           }
           excluded = {"README.md", "generated-dashboard.md"}
           workflow_path = ".github/workflows/yaml-frontmatter.yml"
-          registry_pattern = "00-SYSTEME-MAD/registry/generated-*.md"
           event = os.getenv("GITHUB_EVENT_NAME")
 
           if event == "pull_request":
@@ -58,7 +58,7 @@ jobs:
                   text=True,
               ).splitlines()
               if workflow_path in changed:
-                  raw = subprocess.check_output(["git", "ls-files", registry_pattern], text=True)
+                  raw = subprocess.check_output(["git", "ls-files", "*.md"], text=True)
               else:
                   raw = "\n".join(changed)
           elif event == "push":
@@ -67,11 +67,11 @@ jobs:
                   text=True,
               ).splitlines()
               if workflow_path in changed:
-                  raw = subprocess.check_output(["git", "ls-files", registry_pattern], text=True)
+                  raw = subprocess.check_output(["git", "ls-files", "*.md"], text=True)
               else:
                   raw = "\n".join(changed)
           else:
-              raw = subprocess.check_output(["git", "ls-files", registry_pattern], text=True)
+              raw = subprocess.check_output(["git", "ls-files", "*.md"], text=True)
 
           errors = []
           checked = 0

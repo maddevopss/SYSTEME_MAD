@@ -1,3 +1,12 @@
+---
+Projet: Système MAD
+Document: Snapshot de certification MADPROOF — 2026-07-07
+Version: 1.0
+Dernière révision: 2026-07-20
+Statut: Historique
+Auteur: MAD DevOps
+---
+
 
 ---
 Projet: MADSuite

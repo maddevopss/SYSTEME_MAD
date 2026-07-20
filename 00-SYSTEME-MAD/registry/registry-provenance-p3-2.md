@@ -2,10 +2,12 @@
 Projet: Système MAD
 Document: Chaînes de provenance du MAD Registry — P3.2
 Version: 1.0
+Dernière révision: 2026-07-20
 Statut: À valider
+Auteur: MAD DevOps
 Owner: MAD DevOps
 created_at: 2026-07-17
-updated_at: 2026-07-17
+updated_at: 2026-07-20
 ---
 
 # Chaînes de provenance du MAD Registry — P3.2
