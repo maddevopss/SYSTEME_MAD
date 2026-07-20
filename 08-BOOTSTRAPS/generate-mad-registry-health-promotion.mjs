@@ -4,12 +4,14 @@ import path from 'node:path';
 const root = process.cwd();
 const registry = path.join(root, '00-SYSTEME-MAD/registry');
 const learningPath = path.join(registry, 'generated-registry-health-learning.json');
+const metadataPath = path.join(registry, 'generated-registry-health-decisions.json');
 const ledgerPath = path.join(registry, 'registry-health-promotion-ledger.json');
 const jsonPath = path.join(registry, 'generated-registry-health-promotion.json');
 const mdPath = path.join(registry, 'generated-registry-health-promotion.md');
 const check = process.argv.includes('--check');
 
 const learning = JSON.parse(fs.readFileSync(learningPath, 'utf8'));
+const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
 const ledger = JSON.parse(fs.readFileSync(ledgerPath, 'utf8'));
 const validStatuses = new Set(['Maintenue locale', 'Expérimentation requise', 'Promotion approuvée', 'Promotion refusée', 'Promotion reportée']);
 const changeTypes = new Set(['Règle', 'Standard', 'Guide', 'ADR', 'Autre']);
@@ -82,7 +84,31 @@ const output = {
 
 const json = JSON.stringify(output, null, 2) + '\n';
 const rows = promotions.map(p => `| \`${p.target}\` | ${p.learning_status} | ${p.promotion_status} | ${p.document_target ?? '—'} |`);
-const md = `# Promotion contrôlée MAD Health — P4.14\n\n- Apprentissages suivis : **${output.learning_count}**\n- Règles proposées : **${output.proposed_rule_count}**\n- Promotions approuvées : **${counts['Promotion approuvée']}**\n- Entrées invalides : **${invalid.length}**\n- Entrées orphelines : **${orphan.length}**\n\n| Cible | Apprentissage | Promotion | Document ciblé |\n|---|---|---|---|\n${rows.join('\n')}\n\n> Aucune promotion ni modification documentaire n’est automatique.\n`;
+const md = `---
+Projet: Système MAD
+Document: Promotion contrôlée MAD Health générée — P4.14
+Version: 1.0
+Dernière révision: ${metadata.current?.date ?? 'Indéterminée'}
+Statut: Généré
+Auteur: Automatisation SYSTEME_MAD
+---
+
+# Promotion contrôlée MAD Health — P4.14
+
+> Généré automatiquement. Ne pas modifier manuellement.
+
+- Apprentissages suivis : **${output.learning_count}**
+- Règles proposées : **${output.proposed_rule_count}**
+- Promotions approuvées : **${counts['Promotion approuvée']}**
+- Entrées invalides : **${invalid.length}**
+- Entrées orphelines : **${orphan.length}**
+
+| Cible | Apprentissage | Promotion | Document ciblé |
+|---|---|---|---|
+${rows.join('\n')}
+
+> Aucune promotion ni modification documentaire n’est automatique.
+`;
 
 function normalize(text) { return text.replace(/\r\n/g, '\n').trimEnd() + '\n'; }
 function sameJson(file, expected) {
