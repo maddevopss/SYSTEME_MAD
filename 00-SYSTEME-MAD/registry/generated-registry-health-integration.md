@@ -1,4 +1,15 @@
+---
+Projet: Système MAD
+Document: Intégration institutionnelle MAD Health générée — P4.15
+Version: 1.0
+Dernière révision: 2026-07-18
+Statut: Généré
+Auteur: Automatisation SYSTEME_MAD
+---
+
 # Intégration institutionnelle MAD Health — P4.15
+
+> Généré automatiquement. Ne pas modifier manuellement.
 
 - Promotions suivies : **3**
 - Promotions approuvées : **0**
