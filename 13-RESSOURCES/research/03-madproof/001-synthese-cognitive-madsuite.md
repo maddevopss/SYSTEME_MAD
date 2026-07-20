@@ -1,74 +1,82 @@
 ---
-Projet: MAD DevOps
-Document: Synthese MADPROOF — Cognition MADSuite
+Projet: MADSuite
+Document: Synthèse MADPROOF — Cognition MADSuite
 Version: 1.0
-Derniere revision: 2026-07-01
-Statut: A valider
-Auteur: Marc-Andre Dufour
+Dernière révision: 2026-07-01
+Statut: À valider
+Auteur: Marc-André Dufour
 ---
 
-# Synthese MADPROOF — Cognition MADSuite
+# Synthèse MADPROOF — Cognition MADSuite
 
 ## Objectif
 
-Ce document synthetise les axes de conception cognitive MADSuite avec prudence.
+Ce document synthétise les axes de conception cognitive de MADSuite avec prudence.
 
-Il sert a distinguer les fondations prudentes, les hypotheses R&D, les formulations acceptables, les formulations a eviter et les validations necessaires.
+Il sert à distinguer les fondations prudentes, les hypothèses R&D, les formulations acceptables, les formulations à éviter et les validations nécessaires.
 
 ---
 
 ## Positionnement central
 
 ```text
-MADSuite est une technologie d assistance cognitive non medicale.
-Elle vise a soutenir la clarte, la reprise, l organisation et la reduction de friction.
+MADSuite est une technologie d’assistance cognitive non médicale.
+Elle vise à soutenir la clarté, la reprise, l’organisation et la réduction de friction.
 ```
 
+Ce positionnement est une orientation produit prudente. Il ne constitue ni une revendication médicale ni une preuve d’efficacité scientifique.
+
 ---
 
-## Axes conserves
+## Axes conservés
 
-| Axe | Statut | Decision |
+| Axe | Statut | Décision |
 |---|---|---|
-| Assistance cognitive non medicale | MADPROOF-Fondation | Garder |
-| Accessibilite cognitive | MADPROOF-Fondation | Garder |
-| Charge cognitive et reduction de friction | MADPROOF-Fondation | Garder avec prudence |
-| Reprise apres interruption | MADPROOF-R&D | Garder comme hypothese produit |
-| MAD Ariane / snapshot de reprise | MADPROOF-R&D fort | Garder, validation requise |
-| Context-aware sans camera | MADPROOF-R&D | Garder comme architecture exploratoire |
-| Camera dans le MVP | A supprimer | Exclure par defaut |
+| Assistance cognitive non médicale | Fondation produit prudente | Garder |
+| Accessibilité cognitive | Fondation produit prudente | Garder |
+| Charge cognitive et réduction de friction | Orientation de conception | Garder avec prudence |
+| Reprise après interruption | MADPROOF-R&D | Garder comme hypothèse produit |
+| MAD Ariane / snapshot de reprise | MADPROOF-R&D | Garder, validation requise |
+| Context-aware sans caméra | MADPROOF-R&D | Garder comme architecture exploratoire |
+| Caméra dans le MVP | Exclu du périmètre actuel | Ne pas intégrer par défaut |
+
+Aucune ligne de ce tableau ne doit être interprétée comme une validation clinique, scientifique ou causale.
 
 ---
 
-## Decisions produit
+## Décisions produit
 
-- Traitement local par defaut lorsque possible.
+- Traitement local par défaut lorsque possible.
 - Transparence des suggestions.
-- Controle utilisateur sur les aides.
-- Consentement progressif et revocable.
-- Minimisation des donnees.
-- Pas de camera dans le MVP.
-- Pas de promesse medicale.
+- Contrôle utilisateur sur les aides.
+- Consentement progressif et révocable.
+- Minimisation des données.
+- Pas de caméra dans le MVP.
+- Pas de promesse médicale.
 
 ---
 
-## Validations necessaires
+## Validations nécessaires
 
-Avant communication externe forte, valider :
+Avant toute communication externe forte, valider :
 
-- utilite percue;
-- acceptabilite;
-- absence d effet intrusif;
-- clarte des suggestions;
-- sentiment de controle;
-- impact reel sur la reprise operationnelle.
+- l’utilité perçue;
+- l’acceptabilité;
+- l’absence d’effet intrusif;
+- la clarté des suggestions;
+- le sentiment de contrôle;
+- l’impact réel sur la reprise opérationnelle.
+
+Ces validations doivent distinguer les mesures subjectives, comportementales et opérationnelles.
 
 ---
 
 ## Verdict MADPROOF
 
 ```text
-Fondation produit : solide si formulee prudemment.
-Hypotheses R&D : fortes mais a valider.
-Architecture MVP : sans camera, utilisateur en controle.
+Fondation produit : plausible si formulée prudemment.
+Hypothèses R&D : prometteuses, mais à valider.
+Architecture MVP : sans caméra, utilisateur en contrôle.
 ```
+
+Le présent document est une synthèse de recherche à valider. Il ne remplace ni les sources primaires, ni un protocole expérimental, ni une décision institutionnelle d’adoption.
