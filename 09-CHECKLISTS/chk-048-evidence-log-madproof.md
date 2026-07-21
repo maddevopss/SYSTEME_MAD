@@ -1,8 +1,8 @@
 ---
 Projet: MADSuite
 Document: CHK-048 — Evidence log MADPROOF
-Version: 1.3
-Dernière révision: 2026-07-08
+Version: 1.4
+Dernière révision: 2026-07-21
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -49,9 +49,15 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 | 2026-07-08 | `madsuite-backend` | `Backend Guards` | Vert observé | `maddevopss/madsuite-backend#34` | Check utilisable pour branch protection P0 |
 | 2026-07-08 | `madsuite-backend` | `Backend CI / Guard, lint, syntax, tests and security checks` | Vert observé | `maddevopss/madsuite-backend#34`; merge `540b5ddf45edec6319bc99fbc1e4abefba4e3439` | Issue CI backend `bleeband/SYSTEME_MAD#46` fermée |
 | 2026-07-08 | `SYSTEME_MAD` | `Docs quality smoke` | Rouge observé sur PR invalide | `bleeband/SYSTEME_MAD#50` | Confirme que le workflow détecte YAML invalide; blocage branch protection à vérifier après application |
-| | `madsuite-frontend` | `Frontend CI / Guard, lint, test and build` | À observer / check réel identifié | `maddevopss/madsuite-frontend#14` | À exiger dans branch protection P0 |
-| | `e2e` | CI | À observer | | |
-| | `desktop-agent` | CI | À observer | | |
+| 2026-07-21 | `madsuite-backend` | `Backend PR Guards` | Vert observé | https://github.com/maddevopss/madsuite-backend/actions/runs/29832701132 | PR `maddevopss/madsuite-backend#89`; commit testé `fc539a93a917bf3ae3bd1cd6f4eb6e0e3d8332a5` |
+| 2026-07-21 | `madsuite-backend` | `Backup Restore P0 Proof` | Vert observé | https://github.com/maddevopss/madsuite-backend/actions/runs/29832701094 | Preuve de restauration exécutée sur la PR #89 |
+| 2026-07-21 | `madsuite-backend` | `Backend PR CI` | Vert observé | https://github.com/maddevopss/madsuite-backend/actions/runs/29832701076 | CI principale backend verte sur la PR #89 |
+| 2026-07-20 | `madsuite-frontend` | `Frontend PR CI` | Vert observé | https://github.com/maddevopss/madsuite-frontend/actions/runs/29764604182 | PR `maddevopss/madsuite-frontend#46`; commit testé `6814579c80ae92bcb0a15b175054b77ed613fbd8` |
+| 2026-07-20 | `e2e` | `Responsive E2E Smoke` | Vert observé | https://github.com/maddevopss/e2e/actions/runs/29778302732 | PR `maddevopss/e2e#25`; commit testé `2e186d5f8d3932cabaff4639e4378e8f9302d372` |
+| 2026-07-20 | `e2e` | `Full-stack authenticated E2E` | Vert observé | https://github.com/maddevopss/e2e/actions/runs/29778302708 | Parcours authentifié et preuve multi-tenant P0 exécutés avec succès |
+| 2026-07-20 | `e2e` | `E2E CI` | Vert observé | https://github.com/maddevopss/e2e/actions/runs/29778302678 | CI E2E principale verte sur la PR #25 |
+| 2026-07-21 | `desktop-agent` | `Desktop Agent Guards` | Vert observé | https://github.com/maddevopss/desktop-agent/actions/runs/29843257911 | PR `maddevopss/desktop-agent#38`; commit testé `8e2dd74925e51f806d19bd57ef28a065c1acc63a` |
+| 2026-07-21 | `desktop-agent` | `Desktop Agent CI` | Vert observé | https://github.com/maddevopss/desktop-agent/actions/runs/29843257929 | CI principale desktop-agent verte sur la PR #38 |
 
 ---
 
@@ -107,4 +113,4 @@ Après chaque preuve ajoutée ici :
 
 ## Statut actuel
 
-Statut : **P0 branch protection prêt à appliquer, CI backend verte, script d’application ajouté, preuves terrain branch protection à remplir**.
+Statut : **CI GitHub Actions verte observée et consignée pour le backend, le frontend, E2E et le desktop-agent; validations locales encore à exécuter**.
