@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-048 — Evidence log MADPROOF
-Version: 1.4
+Version: 1.5
 Dernière révision: 2026-07-21
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -35,10 +35,10 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 
 | Date | Repo | Commande | Résultat | Preuve / lien / note | Action |
 |---|---|---|---|---|---|
-| | `madsuite-backend` | `npm run check:backend` | À faire | | |
-| | `madsuite-frontend` | `npm run check:frontend` | À faire | | |
-| | `e2e` | `npm run check:e2e` | À faire | | |
-| | `desktop-agent` | `npm run check:desktop` | À faire | | |
+| 2026-07-21 | `madsuite-backend` | `npm run check:backend` | Succès observé | Exécution locale Windows; gardes, tests de sécurité ciblés et lint réussis; notamment 3 suites et 20 tests de sécurité réussis dans la sortie finale | Validation locale consignée |
+| 2026-07-21 | `madsuite-frontend` | `npm run check:frontend` | Succès observé | Gardes, lint, 60 suites et 308 tests réussis; build Vite réussi | Validation effectuée sur arbre de travail modifié; ne pas confondre avec une preuve sur clone propre |
+| 2026-07-21 | `e2e` | `npm run check:e2e` | Succès observé | Gardes réussies; 30 tests publics responsives réussis sur Chromium desktop/mobile et WebKit mobile | `debug.log` non suivi observé dans l’arbre local; validation fonctionnelle néanmoins verte |
+| 2026-07-21 | `desktop-agent` | `npm run check:desktop` | Succès avec avertissement | Gardes, syntaxe, 5 suites et 53 tests réussis; 1 test ignoré; avertissement `MaxListenersExceededWarning` sur les listeners `SIGTERM` | Suivi ouvert : `maddevopss/desktop-agent#39` |
 
 ---
 
@@ -86,6 +86,7 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 | Date | Domaine | Exception | Raison | Durée | Suivi |
 |---|---|---|---|---|---|
 | 2026-07-08 | Branch protection GitHub | Application UI/API non effectuée par l’assistant | Les outils disponibles permettent la création d’issues, fichiers et PR, mais pas la modification directe des règles Branch protection | Temporaire — jusqu’à application manuelle ou automatisation autorisée | `bleeband/SYSTEME_MAD#32`; script préparé `08-BOOTSTRAPS/apply-branch-protection-p0.sh` |
+| 2026-07-21 | Validation locale desktop-agent | `MaxListenersExceededWarning` malgré un code de sortie réussi | Plusieurs listeners `SIGTERM` sont enregistrés pendant les tests | Temporaire — dette de tests non bloquante pour la preuve locale | `maddevopss/desktop-agent#39` |
 
 ---
 
@@ -113,4 +114,4 @@ Après chaque preuve ajoutée ici :
 
 ## Statut actuel
 
-Statut : **CI GitHub Actions verte observée et consignée pour le backend, le frontend, E2E et le desktop-agent; validations locales encore à exécuter**.
+Statut : **CI distante et validations locales vertes observées pour le backend, le frontend, E2E et le desktop-agent; avertissement de listeners desktop-agent suivi séparément**.
