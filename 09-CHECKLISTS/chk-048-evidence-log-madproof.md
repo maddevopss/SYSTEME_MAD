@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-048 — Evidence log MADPROOF
-Version: 1.5
+Version: 1.6
 Dernière révision: 2026-07-21
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -73,6 +73,14 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 
 ---
 
+## Evidence log — taxonomie GitHub
+
+| Date | Portée | Vérification | Résultat | Preuve / note | Action |
+|---|---|---|---|---|---|
+| 2026-07-21 | `SYSTEME_MAD`, `madsuite-backend`, `madsuite-frontend`, `e2e`, `desktop-agent` | Présence des 32 labels structurés définis par `CHK-049` | Conforme sur les cinq dépôts | Vérification locale avec `gh label list`; tous les labels obligatoires `type`, `area`, `priority`, `status` et `source` sont présents sur chaque dépôt; les labels additionnels historiques sont conservés | Issue `bleeband/SYSTEME_MAD#38`; taxonomie appliquée selon `PLAY-045` |
+
+---
+
 ## Evidence log — release
 
 | Date | Issue release | PLAY-041 | CHK-045 | Résultat final | Note |
@@ -114,4 +122,4 @@ Après chaque preuve ajoutée ici :
 
 ## Statut actuel
 
-Statut : **CI distante et validations locales vertes observées pour le backend, le frontend, E2E et le desktop-agent; avertissement de listeners desktop-agent suivi séparément**.
+Statut : **CI distante et validations locales vertes observées pour le backend, le frontend, E2E et le desktop-agent; taxonomie GitHub structurée confirmée sur les cinq dépôts; avertissement de listeners desktop-agent suivi séparément**.
