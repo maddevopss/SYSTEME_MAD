@@ -1,8 +1,8 @@
 ---
 Projet: MADSuite
 Document: CHK-043 — PR review et CODEOWNERS MADPROOF
-Version: 1.0
-Dernière révision: 2026-07-05
+Version: 1.1
+Dernière révision: 2026-07-21
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -42,7 +42,7 @@ Rendre chaque PR vérifiable rapidement :
 | `maddevopss/madsuite-backend` | Appliqué | Appliqué | Complété |
 | `maddevopss/madsuite-frontend` | Appliqué | Appliqué | Complété |
 | `maddevopss/e2e` | Appliqué | Appliqué | Complété |
-| `maddevopss/desktop-agent` | Appliqué | À appliquer manuellement si requis | Partiel |
+| `maddevopss/desktop-agent` | Appliqué | Appliqué — `.github/CODEOWNERS`, PR #40 | Complété |
 | `bleeband/SYSTEME_MAD` | À faire si PR workflow utilisé | À faire si PR workflow utilisé | Optionnel |
 
 ---
@@ -165,4 +165,4 @@ Cette couche est complète lorsque :
 
 ## Statut actuel
 
-Statut : **appliqué partiel, desktop CODEOWNERS à finaliser manuellement si requis**.
+Statut : **appliqué sur les quatre dépôts d’exécution; CODEOWNERS desktop-agent confirmé par `maddevopss/desktop-agent#40`**.
