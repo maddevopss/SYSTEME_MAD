@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: KB-007 — Railway, Vercel et Neon
-Version: 1.0
-Dernière révision: 2026-06-30
+Version: 1.1
+Dernière révision: 2026-07-22
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -11,9 +11,29 @@ Auteur: Marc-André Dufour
 
 ## Rôle de la fiche
 
-Cette fiche regroupe les repères d’usage de Railway, Vercel et Neon dans les projets MAD DevOps.
+Cette fiche conserve les repères d’usage de Railway, Vercel et Neon dans les projets MAD DevOps.
 
-Elle sert à clarifier le rôle de chaque plateforme dans une architecture Web ou SaaS légère.
+Elle décrit une architecture hébergée sur des plateformes gérées. Elle ne constitue plus l’architecture de production actuelle de MADSuite depuis le 22 juillet 2026.
+
+Pour l’architecture de production en vigueur, consulter :
+
+- `06-KNOWLEDGE-BASE/008-infrastructure-production-madsuite-vps.md`;
+- `05-PLAY/play-012-acces-ssh-vps-ovh.md`.
+
+---
+
+## Statut dans MADSuite
+
+Depuis le 22 juillet 2026, `madsuite.ca` est hébergé sur un VPS OVHcloud contrôlé par MAD DevOps.
+
+La combinaison Vercel, Railway et Neon demeure :
+
+- une option d’architecture possible;
+- une référence historique;
+- une solution utile pour des prototypes, des essais ou des environnements secondaires;
+- une solution de repli possible si elle est explicitement approuvée.
+
+Elle ne doit plus être présentée comme l’architecture de production officielle de MADSuite.
 
 ---
 
@@ -21,44 +41,45 @@ Elle sert à clarifier le rôle de chaque plateforme dans une architecture Web o
 
 ### Vercel
 
-Vercel est principalement utilisé pour :
+Vercel peut être utilisé pour :
 
-- frontend;
-- sites Web;
+- interfaces Web;
+- sites publics;
 - applications React;
-- previews de déploiement;
-- hébergement rapide d’interfaces.
+- aperçus de déploiement;
+- environnements temporaires.
 
 ### Railway
 
-Railway est principalement utilisé pour :
+Railway peut être utilisé pour :
 
-- backend;
-- API;
+- serveurs applicatifs;
+- interfaces de programmation;
 - services Node.js;
-- jobs simples;
+- tâches planifiées simples;
 - environnements de déploiement rapides.
 
 ### Neon
 
-Neon est principalement utilisé pour :
+Neon peut être utilisé pour :
 
 - PostgreSQL hébergé;
-- base de données serverless;
-- projets SaaS légers;
-- environnements de développement, staging ou production.
+- environnements de développement ou d’essai;
+- prototypes;
+- architecture gérée à faible charge opérationnelle.
 
 ---
 
 ## Bonnes pratiques MAD DevOps
 
-- Séparer clairement frontend, backend et base de données.
+- Séparer clairement l’interface, le serveur applicatif et la base de données.
 - Documenter les variables d’environnement importantes.
-- Vérifier les URLs entre frontend et backend.
-- Ne pas mélanger les environnements test et production.
+- Vérifier les adresses entre l’interface et le serveur.
+- Ne pas mélanger les environnements d’essai et de production.
 - Garder une trace des services utilisés.
 - Prévoir une validation après chaque déploiement.
-- Documenter les limites du plan gratuit ou d’entrée de gamme.
+- Documenter les limites du forfait utilisé.
+- Identifier clairement si une plateforme gérée est officielle, temporaire, secondaire ou historique.
 
 ---
 
@@ -68,7 +89,7 @@ Neon est principalement utilisé pour :
 
 Les erreurs fréquentes viennent souvent de :
 
-- mauvaise URL d’API;
+- mauvaise adresse du serveur applicatif;
 - variable manquante;
 - mauvais environnement;
 - service externe non configuré;
@@ -78,33 +99,23 @@ Les erreurs fréquentes viennent souvent de :
 
 Après un déploiement, vérifier :
 
-- frontend accessible;
-- backend accessible;
-- connexion backend/base de données;
-- route de santé ou route principale;
-- logs récents;
+- interface accessible;
+- serveur applicatif accessible;
+- connexion à la base de données;
+- route de santé;
+- journaux récents;
 - parcours utilisateur minimal.
 
 ### Coûts et limites
 
-Les plateformes simples permettent d’aller vite, mais il faut surveiller :
+Les plateformes gérées permettent d’aller vite, mais il faut surveiller :
 
-- limites de plan;
+- limites du forfait;
 - sommeil ou redémarrage des services;
 - stockage;
 - performance;
-- coûts lorsque l’usage augmente.
-
----
-
-## Questions utiles
-
-- Quel service héberge le frontend ?
-- Quel service héberge le backend ?
-- Quelle base de données est utilisée ?
-- Les variables sont-elles documentées ?
-- Les URLs correspondent-elles au bon environnement ?
-- Comment valider que le déploiement fonctionne ?
+- coûts lorsque l’usage augmente;
+- dépendance envers un fournisseur externe.
 
 ---
 
@@ -118,12 +129,10 @@ Les plateformes simples permettent d’aller vite, mais il faut surveiller :
 
 ---
 
-## Note MADSuite
+## Décision MADSuite
 
-Pour MADSuite, une architecture simple peut utiliser :
+L’architecture officielle de production de MADSuite est désormais documentée séparément afin d’éviter toute confusion entre :
 
-- Vercel pour le frontend;
-- Railway pour le backend;
-- Neon pour PostgreSQL.
-
-Cette combinaison doit rester bien documentée afin d’éviter les confusions d’environnement.
+- l’état actuel;
+- les solutions historiques;
+- les options futures.
