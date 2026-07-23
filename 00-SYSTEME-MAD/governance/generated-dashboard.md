@@ -2,14 +2,14 @@
 Projet: MADSuite
 Document: Dashboard de gouvernance généré automatiquement
 Version: 1.0
-Dernière révision: 2026-07-22
+Dernière révision: 2026-07-23
 Statut: Officiel
 Auteur: GitHub Actions — SYSTEME_MAD
 ---
 
 # Dashboard de gouvernance généré
 
-> Généré automatiquement le 2026-07-22T12:01:20.109Z. Ne pas modifier manuellement ce fichier.
+> Généré automatiquement le 2026-07-23T12:00:49.057Z. Ne pas modifier manuellement ce fichier.
 
 ## Signal automatisé GitHub
 
@@ -32,9 +32,9 @@ Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-
 
 | Repo | Accessible | Dernière CI | Workflow | PR ouvertes | P0 | P1 | P2 | Protection main |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
-| `bleeband/SYSTEME_MAD` | Oui | 🟡 in_progress | [Governance dashboard](https://github.com/bleeband/SYSTEME_MAD/actions/runs/29917933635) | 0 | 0 | 6 | 0 | non vérifiable |
-| `maddevopss/madsuite` | Oui | 🔴 failure | [Responsive Nightly Extended](https://github.com/maddevopss/madsuite/actions/runs/29907892351) | 0 | 0 | 0 | 0 | non vérifiable |
-| `maddevopss/madsuite-frontend` | Oui | 🟢 success | [Frontend Main CI](https://github.com/maddevopss/madsuite-frontend/actions/runs/29764738535) | 0 | 0 | 0 | 1 | non vérifiable |
+| `bleeband/SYSTEME_MAD` | Oui | 🟡 in_progress | [Governance dashboard](https://github.com/bleeband/SYSTEME_MAD/actions/runs/30005284642) | 0 | 0 | 6 | 0 | non vérifiable |
+| `maddevopss/madsuite` | Oui | 🔴 failure | [Responsive Nightly Extended](https://github.com/maddevopss/madsuite/actions/runs/29995121287) | 0 | 0 | 0 | 0 | non vérifiable |
+| `maddevopss/madsuite-frontend` | Oui | 🟢 success | [Frontend Main CI](https://github.com/maddevopss/madsuite-frontend/actions/runs/29952243700) | 0 | 0 | 0 | 1 | non vérifiable |
 | `maddevopss/madsuite-backend` | Oui | 🟢 success | [Backend Main CI](https://github.com/maddevopss/madsuite-backend/actions/runs/29832921366) | 0 | 0 | 0 | 0 | non vérifiable |
 | `maddevopss/desktop-agent` | Oui | 🟢 success | [Desktop Agent CI](https://github.com/maddevopss/desktop-agent/actions/runs/29852655206) | 0 | 0 | 0 | 0 | non vérifiable |
 | `maddevopss/e2e` | Oui | 🟢 success | [E2E CI](https://github.com/maddevopss/e2e/actions/runs/29778617914) | 0 | 0 | 0 | 0 | non vérifiable |
@@ -56,4 +56,4 @@ Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-
 
 ## Erreurs d’accès
 
-- `bleeband/maddevops` : /repos/bleeband/maddevops: HTTP 404 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/repos#get-a-repository","status":"404"}
+- `bleeband/maddevops` : /repos/bleeband/maddevops/issues?state=open&per_page=100: HTTP 404 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/issues/issues#list-repository-issues","status":"404"}
