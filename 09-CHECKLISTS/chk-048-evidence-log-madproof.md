@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: CHK-048 — Evidence log MADPROOF
-Version: 1.8
+Version: 1.9
 Dernière révision: 2026-07-23
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -58,6 +58,8 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 | 2026-07-23 | `madsuite-backend` | `Backend PR Guards` | Rouge observé | https://github.com/maddevopss/madsuite-backend/actions/runs/30047445438 | PR contrôlée `maddevopss/madsuite-backend#99`; commit testé `cb416c5d77ef0d715e1d9e2b3d0a1eafbe3c9a47`; fichier `.env.madproof-test` volontairement interdit |
 | 2026-07-23 | `madsuite-backend` | `Backend PR CI` | Rouge observé | https://github.com/maddevopss/madsuite-backend/actions/runs/30047445663 | PR #99 fermée sans fusion; branche distante supprimée après constat du blocage |
 | 2026-07-20 | `madsuite-frontend` | `Frontend PR CI` | Vert observé | https://github.com/maddevopss/madsuite-frontend/actions/runs/29764604182 | PR `maddevopss/madsuite-frontend#46`; commit testé `6814579c80ae92bcb0a15b175054b77ed613fbd8` |
+| 2026-07-23 | `madsuite-frontend` | `Frontend PR CI` | Vert observé | https://github.com/maddevopss/madsuite-frontend/actions/runs/30034100356 | PR verte `maddevopss/madsuite-frontend#57`; commit testé `61617341f3a7ecba224b2c7ed446f3104f1f707a`; fusion `c9cbadc83b2bd1a86394e203971aab997fd95b63` |
+| 2026-07-23 | `madsuite-frontend` | `Frontend PR CI` | Rouge observé | https://github.com/maddevopss/madsuite-frontend/actions/runs/30047928956 | PR contrôlée `maddevopss/madsuite-frontend#58`; commit testé `1f8d28f80bda55d8c22d80380b5998c45d35e2ae`; fichier `.env.madproof-test` volontairement interdit; PR fermée sans fusion et branche supprimée |
 | 2026-07-20 | `e2e` | `Responsive E2E Smoke` | Vert observé | https://github.com/maddevopss/e2e/actions/runs/29778302732 | PR `maddevopss/e2e#25`; commit testé `2e186d5f8d3932cabaff4639e4378e8f9302d372` |
 | 2026-07-20 | `e2e` | `Full-stack authenticated E2E` | Vert observé | https://github.com/maddevopss/e2e/actions/runs/29778302708 | Parcours authentifié et preuve multi-tenant P0 exécutés avec succès |
 | 2026-07-20 | `e2e` | `E2E CI` | Vert observé | https://github.com/maddevopss/e2e/actions/runs/29778302678 | CI E2E principale verte sur la PR #25 |
@@ -72,7 +74,7 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 |---|---|---|---|---|---|
 | 2026-07-08 | `SYSTEME_MAD` | `main` | P0 prêt — script d’application ajouté | À faire | Issue centrale `bleeband/SYSTEME_MAD#32`; check requis `Docs quality smoke`; script `08-BOOTSTRAPS/apply-branch-protection-p0.sh` |
 | 2026-07-23 | `madsuite-backend` | `main` | Protection P0 validée par preuve verte et rouge | Réussi | PR verte `maddevopss/madsuite-backend#98` fusionnée après checks requis verts; PR rouge contrôlée `maddevopss/madsuite-backend#99` bloquée par `Backend PR Guards` et `Backend PR CI`, puis fermée sans fusion; issue `maddevopss/madsuite-backend#30` régularisée par preuve observable |
-| 2026-07-08 | `madsuite-frontend` | `main` | P0 prêt — check identifié | À faire | Issue repo `maddevopss/madsuite-frontend#14`; check requis `Frontend CI / Guard, lint, test and build` |
+| 2026-07-23 | `madsuite-frontend` | `main` | Protection P0 validée par preuve verte et rouge | Réussi | PR verte `maddevopss/madsuite-frontend#57` fusionnée après `Frontend PR CI` vert; PR rouge contrôlée `maddevopss/madsuite-frontend#58` bloquée par `Frontend PR CI`, puis fermée sans fusion; issue `maddevopss/madsuite-frontend#14` régularisée par preuve observable |
 | | `e2e` | `main` | P1 ensuite | À faire | Hors fermeture P0 immédiate |
 | | `desktop-agent` | `main` | P1 ensuite | À faire | Hors fermeture P0 immédiate |
 
@@ -127,4 +129,4 @@ Après chaque preuve ajoutée ici :
 
 ## Statut actuel
 
-Statut : **CI distante et validations locales vertes observées pour le backend, le frontend, E2E et le desktop-agent; protection `main` du backend validée par la PR verte #98 et la PR rouge contrôlée #99; taxonomie GitHub structurée confirmée sur les cinq dépôts; avertissement de listeners desktop-agent suivi séparément**.
+Statut : **CI distante et validations locales vertes observées pour le backend, le frontend, E2E et le desktop-agent; protections `main` du backend et du frontend validées chacune par une PR verte fusionnée et une PR rouge contrôlée bloquée; taxonomie GitHub structurée confirmée sur les cinq dépôts; avertissement de listeners desktop-agent suivi séparément**.
