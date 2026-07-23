@@ -1,8 +1,8 @@
 ---
 Projet: MADSuite
 Document: CHK-048 — Evidence log MADPROOF
-Version: 1.6
-Dernière révision: 2026-07-21
+Version: 1.7
+Dernière révision: 2026-07-23
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -36,6 +36,7 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 | Date | Repo | Commande | Résultat | Preuve / lien / note | Action |
 |---|---|---|---|---|---|
 | 2026-07-21 | `madsuite-backend` | `npm run check:backend` | Succès observé | Exécution locale Windows; gardes, tests de sécurité ciblés et lint réussis; notamment 3 suites et 20 tests de sécurité réussis dans la sortie finale | Validation locale consignée |
+| 2026-07-23 | `madsuite-backend` | `npm ci`; `npm audit --omit=dev`; `npm test -- --runInBand`; `npm run test:security -- --runInBand` | Succès observé | Prisma Client 7.9.0 généré; audit de production à 0 vulnérabilité; 100 suites et 517 tests réussis; 3 suites et 20 tests de sécurité réussis; `main` synchronisée et arbre propre | Preuve verte post-merge de `maddevopss/madsuite-backend#98` consignée |
 | 2026-07-21 | `madsuite-frontend` | `npm run check:frontend` | Succès observé | Gardes, lint, 60 suites et 308 tests réussis; build Vite réussi | Validation effectuée sur arbre de travail modifié; ne pas confondre avec une preuve sur clone propre |
 | 2026-07-21 | `e2e` | `npm run check:e2e` | Succès observé | Gardes réussies; 30 tests publics responsives réussis sur Chromium desktop/mobile et WebKit mobile | `debug.log` non suivi observé dans l’arbre local; validation fonctionnelle néanmoins verte |
 | 2026-07-21 | `desktop-agent` | `npm run check:desktop` | Succès avec avertissement | Gardes, syntaxe, 5 suites et 53 tests réussis; 1 test ignoré; avertissement `MaxListenersExceededWarning` sur les listeners `SIGTERM` | Suivi ouvert : `maddevopss/desktop-agent#39` |
@@ -52,6 +53,8 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 | 2026-07-21 | `madsuite-backend` | `Backend PR Guards` | Vert observé | https://github.com/maddevopss/madsuite-backend/actions/runs/29832701132 | PR `maddevopss/madsuite-backend#89`; commit testé `fc539a93a917bf3ae3bd1cd6f4eb6e0e3d8332a5` |
 | 2026-07-21 | `madsuite-backend` | `Backup Restore P0 Proof` | Vert observé | https://github.com/maddevopss/madsuite-backend/actions/runs/29832701094 | Preuve de restauration exécutée sur la PR #89 |
 | 2026-07-21 | `madsuite-backend` | `Backend PR CI` | Vert observé | https://github.com/maddevopss/madsuite-backend/actions/runs/29832701076 | CI principale backend verte sur la PR #89 |
+| 2026-07-23 | `madsuite-backend` | `Backend PR Guards` | Vert observé | https://github.com/maddevopss/madsuite-backend/actions/runs/30046536476 | PR `maddevopss/madsuite-backend#98`; commit testé `931a29a271a41030f9dcaa20c37fa1fb70ac3460` |
+| 2026-07-23 | `madsuite-backend` | `Backend PR CI` | Vert observé | https://github.com/maddevopss/madsuite-backend/actions/runs/30046536503 | PR #98 fusionnée dans `main`; merge `93c7701f4ac4cd09bf5ebac56cdca651eb0999b2` |
 | 2026-07-20 | `madsuite-frontend` | `Frontend PR CI` | Vert observé | https://github.com/maddevopss/madsuite-frontend/actions/runs/29764604182 | PR `maddevopss/madsuite-frontend#46`; commit testé `6814579c80ae92bcb0a15b175054b77ed613fbd8` |
 | 2026-07-20 | `e2e` | `Responsive E2E Smoke` | Vert observé | https://github.com/maddevopss/e2e/actions/runs/29778302732 | PR `maddevopss/e2e#25`; commit testé `2e186d5f8d3932cabaff4639e4378e8f9302d372` |
 | 2026-07-20 | `e2e` | `Full-stack authenticated E2E` | Vert observé | https://github.com/maddevopss/e2e/actions/runs/29778302708 | Parcours authentifié et preuve multi-tenant P0 exécutés avec succès |
@@ -66,7 +69,7 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 | Date | Repo | Branche | Règle appliquée | Test de blocage rouge | Note |
 |---|---|---|---|---|---|
 | 2026-07-08 | `SYSTEME_MAD` | `main` | P0 prêt — script d’application ajouté | À faire | Issue centrale `bleeband/SYSTEME_MAD#32`; check requis `Docs quality smoke`; script `08-BOOTSTRAPS/apply-branch-protection-p0.sh` |
-| 2026-07-08 | `madsuite-backend` | `main` | P0 prêt — CI revenue verte | À faire | Issue repo `maddevopss/madsuite-backend#30`; checks requis `Backend Guards` + `Backend CI / Guard, lint, syntax, tests and security checks` |
+| 2026-07-23 | `madsuite-backend` | `main` | Chemin de merge vert validé | À faire | PR `maddevopss/madsuite-backend#98` fusionnée après réussite de `Backend PR Guards` et `Backend PR CI`; preuve rouge bloquée toujours requise avant fermeture de `maddevopss/madsuite-backend#30` |
 | 2026-07-08 | `madsuite-frontend` | `main` | P0 prêt — check identifié | À faire | Issue repo `maddevopss/madsuite-frontend#14`; check requis `Frontend CI / Guard, lint, test and build` |
 | | `e2e` | `main` | P1 ensuite | À faire | Hors fermeture P0 immédiate |
 | | `desktop-agent` | `main` | P1 ensuite | À faire | Hors fermeture P0 immédiate |
@@ -122,4 +125,4 @@ Après chaque preuve ajoutée ici :
 
 ## Statut actuel
 
-Statut : **CI distante et validations locales vertes observées pour le backend, le frontend, E2E et le desktop-agent; taxonomie GitHub structurée confirmée sur les cinq dépôts; avertissement de listeners desktop-agent suivi séparément**.
+Statut : **CI distante et validations locales vertes observées pour le backend, le frontend, E2E et le desktop-agent; chemin de merge vert de la protection `main` du backend validé par la PR #98; preuve de blocage rouge du backend encore requise; taxonomie GitHub structurée confirmée sur les cinq dépôts; avertissement de listeners desktop-agent suivi séparément**.
