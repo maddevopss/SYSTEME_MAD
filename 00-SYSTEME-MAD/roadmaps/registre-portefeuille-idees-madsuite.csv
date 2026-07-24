@@ -1,0 +1,37 @@
+id,idee,programme,etat
+MAD-I001,Gestion des prospects et pipeline commercial,Croissance,Planifie
+MAD-I002,Automatisation marketing,Croissance,Dependant
+MAD-I003,Decouverte structuree du besoin,Croissance,Planifie
+MAD-I004,SMS,Croissance,Dependant
+MAD-I005,KPI et tableau de pilotage,Croissance,Planifie
+MAD-I006,Routine de pilotage hebdomadaire,Croissance,Planifie
+MAD-I007,Support client,Support,Planifie
+MAD-I008,Assistance a distance,Support,Experimental
+MAD-I009,Partage natif mobile,Support,Planifie
+MAD-I010,Continuite cognitive,Cognitif,Planifie
+MAD-I011,Snapshot cognitif sans effort,Cognitif,Experimental
+MAD-I012,Calm Computing,Cognitif,Planifie
+MAD-I013,Accessibilite et personnalisation,Cognitif,Planifie
+MAD-I014,Coffre-fort du travailleur,Souverainete,Experimental
+MAD-I015,Localisation intelligente,Cognitif,Recherche
+MAD-I016,Sante cognitive,Cognitif,Recherche
+MAD-I017,Plateforme d experiences cognitives,Laboratoire,Recherche
+MAD-I018,Achats et approvisionnement,Operations,Dependant
+MAD-I019,Inventaire temps reel,Operations,Dependant
+MAD-I020,Rapprochement a trois documents,Operations,Dependant
+MAD-I021,MRP et ordonnancement,Operations,Recherche
+MAD-I022,Passeport numerique des choses,Operations,Experimental
+MAD-I023,Comptabilite evenementielle,Finance,Dependant
+MAD-I024,Conformite fiscale Quebec,Finance,Dependant
+MAD-I025,Calculateur de subventions,Finance,Recherche
+MAD-I026,Politique de confidentialite,Gouvernance,Planifie
+MAD-I027,Passkeys,Securite,Planifie
+MAD-I028,Gestion de licences,Securite,Recherche
+MAD-I029,SHIELD prevention proactive,Securite,Experimental
+MAD-I030,Agent negociateur de delais,Laboratoire,Recherche
+MAD-I031,Preuve de travail infalsifiable,Laboratoire,Recherche
+MAD-I032,Appels d offres citoyens CivicChain,Laboratoire,Recherche
+MAD-I033,Recherche active d etudes contradictoires,Laboratoire,Recherche
+MAD-I034,IA locale et fonctions hors ligne,Laboratoire,Experimental
+MAD-I035,Squelette CRUD generique,Architecture,A absorber
+MAD-I036,Concepts non classes du lot a-definir,Gouvernance,A trier
