@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Validation locale préalable — customer_growth
-Version: 1.0
-Dernière révision: 2026-07-23
+Version: 1.1
+Dernière révision: 2026-07-24
 Statut: Proposition
 Auteur: Marc-André Dufour
 ---
@@ -12,6 +12,25 @@ Auteur: Marc-André Dufour
 ## But
 
 Confirmer les conventions réelles de la branche `main` du backend avant la première PR applicative.
+
+## État au 24 juillet 2026
+
+L’accès au poste local n’est temporairement pas disponible. Les validations ci-dessous restent donc inscrites comme tâches bloquantes, sans empêcher l’analyse distante du dépôt.
+
+Déjà confirmé à distance ou par CI :
+
+- le backend compile;
+- les 101 suites et 521 tests sont verts;
+- le lint a été réparé et fusionné par la PR backend #101;
+- aucun changement applicatif `customer_growth` n’a encore été introduit.
+
+À reprendre dès que l’accès local revient :
+
+- synchroniser `main` après la PR backend #101;
+- confirmer le prochain numéro de migration disponible;
+- confirmer les conventions RLS actives dans l’environnement local;
+- relever les signatures exactes des services canoniques;
+- exécuter la matrice complète build, lint et tests sur le poste local.
 
 ## LOCAL — Backend
 
