@@ -17,6 +17,7 @@ jobs:
   governance:
     name: PR governance
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
