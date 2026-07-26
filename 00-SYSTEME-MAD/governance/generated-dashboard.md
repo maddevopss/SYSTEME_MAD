@@ -9,7 +9,7 @@ Auteur: GitHub Actions — SYSTEME_MAD
 
 # Dashboard de gouvernance généré
 
-> Généré automatiquement le 2026-07-26T15:08:04.110Z. Ne pas modifier manuellement ce fichier.
+> Généré automatiquement le 2026-07-26T16:09:14.339Z. Ne pas modifier manuellement ce fichier.
 
 ## Signal automatisé GitHub
 
@@ -32,7 +32,7 @@ Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-
 
 | Repo | Accessible | Dernière CI | Workflow | PR ouvertes | P0 | P1 | P2 | Protection main |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
-| `bleeband/SYSTEME_MAD` | Oui | 🟡 in_progress | [Governance dashboard](https://github.com/bleeband/SYSTEME_MAD/actions/runs/30207546332) | 0 | 0 | 6 | 0 | non vérifiable |
+| `bleeband/SYSTEME_MAD` | Oui | 🟡 in_progress | [Registry integrity](https://github.com/bleeband/SYSTEME_MAD/actions/runs/30209755225) | 2 | 0 | 6 | 0 | non vérifiable |
 | `maddevopss/madsuite` | Oui | 🔴 failure | [Responsive Nightly Extended](https://github.com/maddevopss/madsuite/actions/runs/30195995190) | 0 | 0 | 0 | 0 | non vérifiable |
 | `maddevopss/madsuite-frontend` | Oui | 🟢 success | [Frontend Main CI](https://github.com/maddevopss/madsuite-frontend/actions/runs/30138236102) | 0 | 0 | 0 | 1 | non vérifiable |
 | `maddevopss/madsuite-backend` | Oui | 🟢 success | [Backend Main CI](https://github.com/maddevopss/madsuite-backend/actions/runs/30183979248) | 0 | 0 | 0 | 0 | non vérifiable |
@@ -45,7 +45,7 @@ Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-
 - P0 ouverts : **0**
 - P1 ouverts : **6**
 - P2 ouverts : **1**
-- PR ouvertes : **1**
+- PR ouvertes : **3**
 
 ## Limites
 
@@ -56,4 +56,4 @@ Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-
 
 ## Erreurs d’accès
 
-- `bleeband/maddevops` : /repos/bleeband/maddevops/issues?state=open&per_page=100: HTTP 404 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/issues/issues#list-repository-issues","status":"404"}
+- `bleeband/maddevops` : /repos/bleeband/maddevops: HTTP 404 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/repos#get-a-repository","status":"404"}
