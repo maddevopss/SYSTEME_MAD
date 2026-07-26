@@ -3,22 +3,6 @@ name: Registry integrity
 on:
   pull_request:
     branches: [main]
-    paths:
-      - "00-SYSTEME-MAD/**"
-      - "01-FONDATIONS/**"
-      - "02-GUIDE/**"
-      - "03-STANDARDS/**"
-      - "04-ADR/**"
-      - "05-PLAY/**"
-      - "06-KNOWLEDGE-BASE/**"
-      - "07-TEMPLATES/**"
-      - "08-BOOTSTRAPS/**"
-      - "09-CHECKLISTS/**"
-      - "10-ROADMAP/**"
-      - "11-ACADEMY/**"
-      - "12-INNOVATION/**"
-      - "13-RESSOURCES/**"
-      - ".github/workflows/registry-integrity.yml"
   push:
     branches: [main]
   workflow_dispatch:
