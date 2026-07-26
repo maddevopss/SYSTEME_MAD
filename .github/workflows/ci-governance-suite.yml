@@ -32,8 +32,8 @@ jobs:
       - name: Tester l’orchestrateur
         run: python 08-BOOTSTRAPS/test-run-ci-governance-suite.py
 
-      - name: Exécuter les audits disponibles
-        run: python 08-BOOTSTRAPS/run-ci-governance-suite.py --timeout 120
+      - name: Exécuter tous les audits contractuels
+        run: python 08-BOOTSTRAPS/run-ci-governance-suite.py --timeout 120 --require-all
 
       - name: Publier le rapport
         if: always()
