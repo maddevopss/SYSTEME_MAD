@@ -32,10 +32,10 @@ Ces audits vérifient la structure versionnée du dépôt. Ils ne remplacent pas
 
 - [Registre officiel des workflows](../registre-workflows-ci.md);
 - [Procédure obligatoire de changement CI](../procedure-changement-ci.md);
-- [Cartographie de la chaîne CI](cartographie-ci.md);
-- [Audit permanent de la chaîne CI](audit-permanent-ci.md);
-- [Guide de traitement des incidents CI](guide-incidents-ci.md);
-- [Checklist de maintenance CI](checklist-maintenance-ci.md);
+- [Cartographie de la chaîne CI](../cartographie-ci.md);
+- [Audit permanent de la chaîne CI](../audit-ci-permanent.md);
+- [Guide de traitement des incidents CI](../guide-incidents-ci.md);
+- [Checklist de maintenance CI](../../../09-CHECKLISTS/chk-044-maintenance-ci-systeme-mad.md);
 - [Constat de fermeture du cycle de gouvernance CI](constat-fermeture-cycle-ci.md).
 
 ## Entrées GitHub normalisées
