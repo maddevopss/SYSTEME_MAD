@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "required_sections": [
+    "## Intention",
+    "## Changements principaux",
+    "## Vérifications effectuées",
+    "## Risques et points à surveiller"
+  ],
+  "automations": [
+    {
+      "workflow": ".github/workflows/governance-dashboard.yml",
+      "branch": "automation/governance-dashboard",
+      "output": "00-SYSTEME-MAD/governance/generated-dashboard.md",
+      "title": "[AUTO] Actualiser le dashboard de gouvernance"
+    },
+    {
+      "workflow": ".github/workflows/documentation-dashboard.yml",
+      "branch": "automation/documentation-dashboard",
+      "output": "00-SYSTEME-MAD/governance/generated-documentation-dashboard.md",
+      "title": "[AUTO] Actualiser le tableau de bord documentaire"
+    }
+  ]
+}
