@@ -1,5 +1,6 @@
 name: Governance dashboard
 
+# Le corps de la PR automatisée doit rester aligné sur le gabarit de gouvernance.
 on:
   workflow_dispatch:
   schedule:
@@ -58,6 +59,41 @@ jobs:
           fi
 
           branch="automation/governance-dashboard"
+          body_file="$(mktemp)"
+          trap 'rm -f "$body_file"' EXIT
+
+          cat > "$body_file" <<'EOF'
+          ## Intention
+
+          Actualiser automatiquement les signaux GitHub observables du tableau de bord de gouvernance, sans présenter cet instantané comme une validation humaine complète de la santé d’ingénierie.
+
+          ## Changements principaux
+
+          - mise à jour automatisée de `00-SYSTEME-MAD/governance/generated-dashboard.md`;
+          - rafraîchissement des états CI, du nombre de pull requests ouvertes et des enjeux observables;
+          - conservation de la distinction entre signal automatisé et Engineering Health Score complet;
+          - aucune modification fonctionnelle de MADSuite ni des règles institutionnelles.
+
+          ## Vérifications effectuées
+
+          - modification limitée au tableau de bord généré;
+          - branche autorisée `automation/governance-dashboard`;
+          - auteur autorisé `github-actions[bot]`;
+          - génération et validation du document exécutées par le workflow dédié;
+          - aucune modification manuelle d’un autre document, d’un secret ou d’un code applicatif.
+
+          ## Risques et points à surveiller
+
+          - les données représentent un instantané et peuvent évoluer après la génération;
+          - les dépôts inaccessibles ou les protections non lisibles demeurent non vérifiables;
+          - une donnée automatisée peut nécessiter une interprétation humaine;
+          - le Engineering Health Score complet ne doit pas être considéré comme validé par cette PR seule.
+
+          ## Portée
+
+          Cette PR actualise seulement le tableau de bord de gouvernance généré automatiquement.
+          EOF
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git switch -C "$branch"
@@ -71,7 +107,10 @@ jobs:
               --base main \
               --head "$branch" \
               --title "[AUTO] Actualiser le dashboard de gouvernance" \
-              --body "Mise à jour automatisée des signaux GitHub observables. Le Engineering Health Score complet demeure soumis à validation humaine."
+              --body-file "$body_file"
           else
-            echo "PR #$existing_pr déjà ouverte et mise à jour."
+            gh pr edit "$existing_pr" \
+              --title "[AUTO] Actualiser le dashboard de gouvernance" \
+              --body-file "$body_file"
+            echo "PR #$existing_pr déjà ouverte et description remise en conformité."
           fi
