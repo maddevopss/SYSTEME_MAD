@@ -4,14 +4,17 @@
 from __future__ import annotations
 
 import importlib.util
+import sys
 import tempfile
 import unittest
 from pathlib import Path
 
 SCRIPT = Path(__file__).with_name("run-ci-governance-suite.py")
-SPEC = importlib.util.spec_from_file_location("ci_governance_suite", SCRIPT)
+MODULE_NAME = "ci_governance_suite"
+SPEC = importlib.util.spec_from_file_location(MODULE_NAME, SCRIPT)
 assert SPEC and SPEC.loader
 MODULE = importlib.util.module_from_spec(SPEC)
+sys.modules[MODULE_NAME] = MODULE
 SPEC.loader.exec_module(MODULE)
 
 
