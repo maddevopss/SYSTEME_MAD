@@ -1,0 +1,45 @@
+name: CI governance suite
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-governance-suite-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    name: CI governance suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Tester l’orchestrateur
+        run: python 08-BOOTSTRAPS/test-run-ci-governance-suite.py
+
+      - name: Exécuter les audits disponibles
+        run: python 08-BOOTSTRAPS/run-ci-governance-suite.py --timeout 120
+
+      - name: Publier le rapport
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-governance-report
+          path: artifacts/ci-governance/
+          if-no-files-found: error
+          retention-days: 14
