@@ -18,6 +18,7 @@ jobs:
   audit:
     name: MAD Registry integrity
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout
