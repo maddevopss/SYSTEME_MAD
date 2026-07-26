@@ -1,5 +1,6 @@
 name: Governance dashboard
 
+# Le corps de la PR automatisée doit rester aligné sur le gabarit de gouvernance.
 on:
   workflow_dispatch:
   schedule:
