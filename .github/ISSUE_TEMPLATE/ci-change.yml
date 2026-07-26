@@ -1,0 +1,69 @@
+name: Proposition de changement CI
+about: Préparer une modification de workflow, de contrôle requis ou d’automatisation
+labels: ["ci", "governance"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Toute modification de la chaîne CI doit préserver les contrats de contrôles requis, appliquer le moindre privilège et fournir un plan de retour arrière.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Catégorie
+      options:
+        - Contrôle requis
+        - Contrôle documentaire ciblé
+        - Automatisation créant une pull request
+        - Permissions GitHub
+        - Déclencheurs ou filtres
+        - Délais et concurrence
+        - Protection de branche distante
+        - Autre
+    validations:
+      required: true
+  - type: textarea
+    id: intention
+    attributes:
+      label: Intention
+      description: Quel problème concret le changement doit-il résoudre?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Portée prévue
+      description: Workflows, scripts, contrats, documents, secrets ou réglages distants concernés.
+    validations:
+      required: true
+  - type: textarea
+    id: invariants
+    attributes:
+      label: Invariants à préserver
+      description: Noms requis, déclenchement sur toutes les PR, permissions minimales, délais, concurrence, artefacts, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Plan de vérification
+      description: Tests locaux, exécution réelle, scénarios négatifs et preuves attendues.
+    validations:
+      required: true
+  - type: textarea
+    id: rollback
+    attributes:
+      label: Plan de retour arrière
+      description: Expliquer comment restaurer rapidement l’état antérieur sans rendre un contrôle requis fantôme.
+    validations:
+      required: true
+  - type: checkboxes
+    id: contract
+    attributes:
+      label: Engagements
+      options:
+        - label: Les noms des contrôles requis ne seront pas changés sans migration coordonnée.
+          required: true
+        - label: Toute nouvelle permission d’écriture sera justifiée explicitement.
+          required: true
+        - label: Le registre et la documentation CI seront mis à jour dans la même livraison.
+          required: true

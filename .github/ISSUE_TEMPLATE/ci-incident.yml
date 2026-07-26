@@ -1,0 +1,67 @@
+name: Incident CI
+about: Signaler un contrôle absent, bloqué, instable ou incohérent
+labels: ["ci", "incident"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Utiliser ce formulaire pour un incident touchant GitHub Actions, un contrôle requis, une automatisation ou la protection de branche.
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Gravité
+      options:
+        - P0 — fusion ou sécurité bloquée à grande échelle
+        - P1 — contrôle requis absent, rouge ou incohérent
+        - P2 — automatisation dégradée sans blocage immédiat
+        - P3 — amélioration ou anomalie mineure
+    validations:
+      required: true
+  - type: input
+    id: workflow
+    attributes:
+      label: Workflow ou contrôle concerné
+      placeholder: PR governance, Docs quality smoke, MAD Registry integrity…
+    validations:
+      required: true
+  - type: input
+    id: run
+    attributes:
+      label: Exécution ou pull request liée
+      placeholder: URL GitHub Actions ou numéro de PR
+  - type: textarea
+    id: observed
+    attributes:
+      label: Comportement observé
+      description: Décrire les faits, sans supposer la cause.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportement attendu
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact opérationnel
+      description: Fusions bloquées, statut fantôme, PR dupliquée, permission excessive, donnée générée en dérive, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Preuves disponibles
+      description: Journaux, captures, SHA, noms exacts des jobs, étapes échouées et heure observée.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Vérifications initiales
+      options:
+        - label: Je n’ai pas contourné un contrôle requis pour débloquer la fusion.
+          required: true
+        - label: Je n’ai publié aucun secret ou jeton dans ce rapport.
+          required: true

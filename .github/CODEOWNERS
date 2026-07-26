@@ -16,3 +16,15 @@
 
 # CI / GitHub governance
 /.github/ @bleeband
+/.github/workflows/ @bleeband
+/.github/ISSUE_TEMPLATE/ @bleeband
+/.github/PULL_REQUEST_TEMPLATE/ @bleeband
+/.github/*contract.json @bleeband
+/.github/workflow-policy.json @bleeband
+/08-BOOTSTRAPS/audit-*ci*.py @bleeband
+/08-BOOTSTRAPS/audit-required-checks-contract.py @bleeband
+/08-BOOTSTRAPS/audit-workflow-policy.py @bleeband
+/08-BOOTSTRAPS/audit-automation-pr-contract.py @bleeband
+/00-SYSTEME-MAD/governance/ci/ @bleeband
+/00-SYSTEME-MAD/governance/registre-workflows-ci.md @bleeband
+/00-SYSTEME-MAD/governance/procedure-changement-ci.md @bleeband
