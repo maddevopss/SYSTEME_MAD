@@ -1,5 +1,6 @@
 name: Documentation dashboard
 
+# Le corps de la PR automatisée doit rester aligné sur le gabarit de gouvernance.
 on:
   workflow_dispatch:
   schedule:
@@ -17,11 +18,13 @@ permissions:
 
 concurrency:
   group: documentation-dashboard
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   generate:
+    name: Generate documentation dashboard
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
@@ -42,7 +45,43 @@ jobs:
             echo "Tableau de bord documentaire déjà à jour."
             exit 0
           fi
+
           branch="automation/documentation-dashboard"
+          body_file="$(mktemp)"
+          trap 'rm -f "$body_file"' EXIT
+
+          cat > "$body_file" <<'EOF'
+          ## Intention
+
+          Actualiser automatiquement les indicateurs de qualité documentaire de SYSTEME_MAD sans remplacer la revue humaine des documents gouvernés.
+
+          ## Changements principaux
+
+          - mise à jour automatisée de `00-SYSTEME-MAD/governance/generated-documentation-dashboard.md`;
+          - recalcul de la couverture des métadonnées et des documents à réviser;
+          - conservation de la distinction entre signal automatisé et validation institutionnelle;
+          - aucune modification fonctionnelle de MADSuite.
+
+          ## Vérifications effectuées
+
+          - modification limitée au tableau de bord documentaire généré;
+          - branche autorisée `automation/documentation-dashboard`;
+          - génération et validation du document exécutées par le workflow dédié;
+          - présence des sections `Couverture des métadonnées` et `Documents à réviser` vérifiée;
+          - aucun secret ni code applicatif modifié.
+
+          ## Risques et points à surveiller
+
+          - les indicateurs représentent un instantané du corpus;
+          - une anomalie détectée automatiquement peut nécessiter une interprétation humaine;
+          - les règles de gouvernance documentaire doivent rester alignées avec le générateur;
+          - une PR automatisée existante sera remise en conformité à chaque exécution.
+
+          ## Portée
+
+          Cette PR actualise seulement le tableau de bord documentaire généré automatiquement.
+          EOF
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git switch -C "$branch"
@@ -51,7 +90,14 @@ jobs:
           git push --force-with-lease origin "$branch"
           existing=$(gh pr list --head "$branch" --base main --state open --json number --jq '.[0].number // empty')
           if [ -z "$existing" ]; then
-            gh pr create --base main --head "$branch" --title "[AUTO] Actualiser le tableau de bord documentaire" --body "Mise à jour automatisée des indicateurs de qualité documentaire de SYSTEME_MAD."
+            gh pr create \
+              --base main \
+              --head "$branch" \
+              --title "[AUTO] Actualiser le tableau de bord documentaire" \
+              --body-file "$body_file"
           else
-            echo "PR #$existing déjà ouverte et actualisée."
+            gh pr edit "$existing" \
+              --title "[AUTO] Actualiser le tableau de bord documentaire" \
+              --body-file "$body_file"
+            echo "PR #$existing déjà ouverte et description remise en conformité."
           fi
