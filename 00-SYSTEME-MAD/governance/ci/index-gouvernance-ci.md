@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Index de gouvernance de la chaîne CI
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-07-26
 Statut: Officiel
 Auteur: MAD DevOps
@@ -21,18 +21,22 @@ Cet index constitue le point d’entrée humain pour comprendre, modifier, véri
 
 - `08-BOOTSTRAPS/audit-required-checks-contract.py`;
 - `08-BOOTSTRAPS/audit-workflow-policy.py`;
-- `08-BOOTSTRAPS/audit-automation-pr-contract.py`.
+- `08-BOOTSTRAPS/audit-automation-pr-contract.py`;
+- `08-BOOTSTRAPS/run-ci-governance-suite.py` : orchestration stricte et rapport consolidé.
+
+La suite consolidée exige désormais la présence de tous les audits contractuels. Un audit absent, échoué ou expiré entraîne l’échec du contrôle.
 
 Ces audits vérifient la structure versionnée du dépôt. Ils ne remplacent pas la vérification de la protection distante de la branche `main`.
 
 ## Références institutionnelles publiées
 
 - [Registre officiel des workflows](../registre-workflows-ci.md);
-- [Procédure obligatoire de changement CI](../procedure-changement-ci.md).
-
-## Dossier opérationnel en cours de publication
-
-La cartographie détaillée, l’audit permanent, le guide de traitement des incidents et la checklist de maintenance sont regroupés dans la PR #405. Ils seront ajoutés à cet index seulement après leur présence effective sur `main`, afin que l’index ne publie jamais de lien vers un document absent.
+- [Procédure obligatoire de changement CI](../procedure-changement-ci.md);
+- [Cartographie de la chaîne CI](../cartographie-ci.md);
+- [Audit permanent de la chaîne CI](../audit-ci-permanent.md);
+- [Guide de traitement des incidents CI](../guide-incidents-ci.md);
+- [Checklist de maintenance CI](../../../09-CHECKLISTS/chk-044-maintenance-ci-systeme-mad.md);
+- [Constat de fermeture du cycle de gouvernance CI](constat-fermeture-cycle-ci.md).
 
 ## Entrées GitHub normalisées
 
