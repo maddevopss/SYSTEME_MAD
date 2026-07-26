@@ -20,12 +20,13 @@ permissions:
 
 concurrency:
   group: governance-dashboard
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   generate:
     name: Generate governance dashboard
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout
