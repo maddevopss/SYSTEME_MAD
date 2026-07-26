@@ -1,7 +1,7 @@
 ---
 Projet: MADSuite
 Document: Index de gouvernance de la chaîne CI
-Version: 1.0
+Version: 1.1
 Dernière révision: 2026-07-26
 Statut: Officiel
 Auteur: MAD DevOps
@@ -25,20 +25,20 @@ Cet index constitue le point d’entrée humain pour comprendre, modifier, véri
 
 Ces audits vérifient la structure versionnée du dépôt. Ils ne remplacent pas la vérification de la protection distante de la branche `main`.
 
-## Références institutionnelles
+## Références institutionnelles publiées
 
-- `00-SYSTEME-MAD/governance/registre-workflows-ci.md` : inventaire officiel des workflows;
-- `00-SYSTEME-MAD/governance/procedure-changement-ci.md` : procédure obligatoire de modification;
-- `00-SYSTEME-MAD/governance/ci/cartographie-ci.md` : couches, dépendances et responsabilités;
-- `00-SYSTEME-MAD/governance/ci/audit-permanent-ci.md` : état de référence attendu;
-- `00-SYSTEME-MAD/governance/ci/guide-incidents-ci.md` : diagnostic et fermeture des incidents;
-- `00-SYSTEME-MAD/governance/ci/checklist-maintenance-ci.md` : vérifications avant et après fusion.
+- [Registre officiel des workflows](../registre-workflows-ci.md);
+- [Procédure obligatoire de changement CI](../procedure-changement-ci.md).
+
+## Dossier opérationnel en cours de publication
+
+La cartographie détaillée, l’audit permanent, le guide de traitement des incidents et la checklist de maintenance sont regroupés dans la PR #405. Ils seront ajoutés à cet index seulement après leur présence effective sur `main`, afin que l’index ne publie jamais de lien vers un document absent.
 
 ## Entrées GitHub normalisées
 
 - formulaire **Incident CI** pour un contrôle absent, bloqué ou incohérent;
 - formulaire **Proposition de changement CI** pour préparer une évolution;
-- gabarit de pull request **ci-change.md** pour conserver les preuves de livraison.
+- [gabarit de pull request pour un changement CI](../../../.github/PULL_REQUEST_TEMPLATE/ci-change.md) pour conserver les preuves de livraison.
 
 ## Contrôles requis protégés
 
