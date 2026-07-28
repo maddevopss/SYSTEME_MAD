@@ -1,39 +1,44 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import json
+import os
 import re
 import sys
 from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
 REGISTRY = Path("00-SYSTEME-MAD/governance/madsuite-sync-registry.json")
 REQUIRED_REPOSITORIES = {"backend", "frontend", "e2e", "desktopAgent", "governance"}
 ALLOWED_STATUSES = {"planned", "in_progress", "blocked", "closed"}
 SHA_PATTERN = re.compile(r"^[0-9a-f]{40}$")
 REPOSITORY_PATTERN = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
+API_ROOT = "https://api.github.com"
 
 
 def fail(message: str) -> None:
     print(f"- {message}")
 
 
-def validate() -> list[str]:
-    errors: list[str] = []
+def load_registry() -> tuple[dict, list[str]]:
     if not REGISTRY.exists():
-        return [f"Registre absent : {REGISTRY}"]
-
+        return {}, [f"Registre absent : {REGISTRY}"]
     try:
-        payload = json.loads(REGISTRY.read_text(encoding="utf-8"))
+        return json.loads(REGISTRY.read_text(encoding="utf-8")), []
     except json.JSONDecodeError as exc:
-        return [f"JSON invalide dans {REGISTRY}: {exc}"]
+        return {}, [f"JSON invalide dans {REGISTRY}: {exc}"]
 
+
+def validate_structure(payload: dict) -> list[str]:
+    errors: list[str] = []
     if payload.get("schemaVersion") != 1:
         errors.append("schemaVersion doit être égal à 1.")
 
     deliveries = payload.get("deliveries")
     if not isinstance(deliveries, list) or not deliveries:
-        errors.append("deliveries doit contenir au moins une livraison.")
-        return errors
+        return errors + ["deliveries doit contenir au moins une livraison."]
 
     seen_ids: set[str] = set()
     for index, delivery in enumerate(deliveries, start=1):
@@ -94,7 +99,9 @@ def validate() -> list[str]:
                 errors.append(f"{prefix}: validation.{field} obligatoire.")
 
         evidence = validation.get("evidence")
-        if not isinstance(evidence, list) or not evidence or not all(isinstance(item, str) and item.strip() for item in evidence):
+        if not isinstance(evidence, list) or not evidence or not all(
+            isinstance(item, str) and item.strip() for item in evidence
+        ):
             errors.append(f"{prefix}: validation.evidence doit contenir des preuves textuelles.")
 
         if status == "closed":
@@ -102,19 +109,87 @@ def validate() -> list[str]:
                 if isinstance(entry, dict) and entry.get("required") is True:
                     if not entry.get("pullRequest") or not entry.get("commit"):
                         errors.append(f"{prefix}/{key}: une livraison fermée exige PR et commit.")
-
     return errors
 
 
+def github_json(path: str, token: str) -> dict:
+    request = Request(
+        f"{API_ROOT}{path}",
+        headers={
+            "Accept": "application/vnd.github+json",
+            "Authorization": f"Bearer {token}",
+            "User-Agent": "SYSTEME_MAD-sync-guard",
+            "X-GitHub-Api-Version": "2022-11-28",
+        },
+    )
+    with urlopen(request, timeout=15) as response:
+        return json.load(response)
+
+
+def validate_remote(payload: dict, token: str) -> list[str]:
+    errors: list[str] = []
+    for delivery in payload.get("deliveries", []):
+        if delivery.get("status") != "closed":
+            continue
+        delivery_id = delivery.get("id", "sans-id")
+        for key, entry in delivery.get("repositories", {}).items():
+            if not isinstance(entry, dict) or entry.get("required") is not True:
+                continue
+            repository = entry["repository"]
+            pr_number = entry["pullRequest"]
+            commit = entry["commit"]
+            prefix = f"{delivery_id}/{key}"
+            try:
+                pr = github_json(f"/repos/{repository}/pulls/{pr_number}", token)
+                if pr.get("merged_at") is None:
+                    errors.append(f"{prefix}: PR #{pr_number} non fusionnée.")
+                remote_merge_commit = pr.get("merge_commit_sha")
+                if remote_merge_commit != commit:
+                    errors.append(
+                        f"{prefix}: commit déclaré {commit} différent du commit de fusion "
+                        f"GitHub {remote_merge_commit}."
+                    )
+                remote_commit = github_json(f"/repos/{repository}/commits/{commit}", token)
+                if remote_commit.get("sha") != commit:
+                    errors.append(f"{prefix}: commit {commit} non confirmé par GitHub.")
+            except HTTPError as exc:
+                errors.append(f"{prefix}: GitHub HTTP {exc.code} pendant la vérification distante.")
+            except (URLError, TimeoutError, json.JSONDecodeError) as exc:
+                errors.append(f"{prefix}: vérification GitHub impossible ({exc}).")
+    return errors
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Valide le registre de synchronisation MADSuite.")
+    parser.add_argument(
+        "--remote",
+        action="store_true",
+        help="Confirme les PR et commits avec l’API GitHub.",
+    )
+    return parser.parse_args()
+
+
 def main() -> int:
-    errors = validate()
+    args = parse_args()
+    payload, errors = load_registry()
+    if not errors:
+        errors.extend(validate_structure(payload))
+
+    if args.remote and not errors:
+        token = os.environ.get("GITHUB_TOKEN", "").strip()
+        if not token:
+            errors.append("GITHUB_TOKEN obligatoire avec --remote.")
+        else:
+            errors.extend(validate_remote(payload, token))
+
     if errors:
         print("MADSuite synchronization guard failed:")
         for error in errors:
             fail(error)
         return 1
 
-    print(f"MADSuite synchronization guard passed: {REGISTRY}")
+    mode = "structure et preuves GitHub" if args.remote else "structure"
+    print(f"MADSuite synchronization guard passed ({mode}): {REGISTRY}")
     return 0
 
 
