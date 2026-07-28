@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/bleeband/SYSTEME_MAD/.github/schemas/madsuite-sync-registry.schema.json",
+  "title": "Registre de synchronisation MADSuite",
+  "type": "object",
+  "required": ["schemaVersion", "deliveries"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "const": 1 },
+    "deliveries": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/delivery" }
+    }
+  },
+  "$defs": {
+    "repositoryEntry": {
+      "type": "object",
+      "required": ["required", "repository"],
+      "properties": {
+        "required": { "type": "boolean" },
+        "repository": { "type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$" },
+        "pullRequest": { "type": "integer", "minimum": 1 },
+        "commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "reason": { "type": "string", "minLength": 1 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "required": { "const": true } }, "required": ["required"] },
+          "then": { "required": ["pullRequest", "commit"] },
+          "else": { "required": ["reason"] }
+        }
+      ],
+      "additionalProperties": false
+    },
+    "delivery": {
+      "type": "object",
+      "required": ["id", "title", "status", "repositories", "validation"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "status": { "enum": ["planned", "in_progress", "blocked", "closed"] },
+        "repositories": {
+          "type": "object",
+          "required": ["backend", "frontend", "e2e", "desktopAgent", "governance"],
+          "additionalProperties": false,
+          "properties": {
+            "backend": { "$ref": "#/$defs/repositoryEntry" },
+            "frontend": { "$ref": "#/$defs/repositoryEntry" },
+            "e2e": { "$ref": "#/$defs/repositoryEntry" },
+            "desktopAgent": { "$ref": "#/$defs/repositoryEntry" },
+            "governance": { "$ref": "#/$defs/repositoryEntry" }
+          }
+        },
+        "validation": {
+          "type": "object",
+          "required": ["environment", "rollback", "evidence"],
+          "additionalProperties": false,
+          "properties": {
+            "environment": { "type": "string", "minLength": 1 },
+            "rollback": { "type": "string", "minLength": 1 },
+            "evidence": {
+              "type": "array",
+              "minItems": 1,
+              "items": { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    }
+  }
+}
