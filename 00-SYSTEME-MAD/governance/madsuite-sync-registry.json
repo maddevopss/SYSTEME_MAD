@@ -16,7 +16,7 @@
           "required": true,
           "repository": "maddevopss/madsuite-frontend",
           "pullRequest": 175,
-          "commit": "0479ce69518286e59bd9290943ff4062bbdb2ee6"
+          "commit": "78784590da6f62cf14726ebfee9a4745c5f36e2d"
         },
         "e2e": {
           "required": true,
