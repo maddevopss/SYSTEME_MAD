@@ -4,7 +4,8 @@
   "required_job_keys": ["runs-on:", "timeout-minutes:"],
   "write_permission_allowlist": [
     ".github/workflows/governance-dashboard.yml",
-    ".github/workflows/documentation-dashboard.yml"
+    ".github/workflows/documentation-dashboard.yml",
+    ".github/workflows/submit-madsuite-sync.yml"
   ],
   "maximum_timeout_minutes": 30,
   "forbidden_permissions": [
@@ -18,6 +19,7 @@
   ],
   "automation_workflows": [
     ".github/workflows/governance-dashboard.yml",
-    ".github/workflows/documentation-dashboard.yml"
+    ".github/workflows/documentation-dashboard.yml",
+    ".github/workflows/submit-madsuite-sync.yml"
   ]
 }
