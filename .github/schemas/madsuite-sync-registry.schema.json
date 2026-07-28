@@ -42,6 +42,7 @@
         "id": { "type": "string", "minLength": 1 },
         "title": { "type": "string", "minLength": 1 },
         "status": { "enum": ["planned", "in_progress", "blocked", "closed"] },
+        "corrects": { "type": "string", "minLength": 1 },
         "repositories": {
           "type": "object",
           "required": ["backend", "frontend", "e2e", "desktopAgent", "governance"],
