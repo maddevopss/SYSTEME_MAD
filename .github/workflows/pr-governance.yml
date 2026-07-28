@@ -25,6 +25,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Validate MADSuite synchronization registry
+        run: python .github/scripts/guard-madsuite-sync.py
+
       - name: Inspect pull request governance
         shell: bash
         env:
