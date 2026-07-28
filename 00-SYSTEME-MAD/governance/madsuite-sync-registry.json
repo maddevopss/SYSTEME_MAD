@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "deliveries": [
+    {
+      "id": "business-modules-151-175",
+      "title": "Consolidation des modules métier",
+      "status": "closed",
+      "repositories": {
+        "backend": {
+          "required": true,
+          "repository": "maddevopss/madsuite-backend",
+          "pullRequest": 458,
+          "commit": "e43ba3b62c977fc65384181d274e2f6f61457be5"
+        },
+        "frontend": {
+          "required": true,
+          "repository": "maddevopss/madsuite-frontend",
+          "pullRequest": 175,
+          "commit": "0479ce69518286e59bd9290943ff4062bbdb2ee6"
+        },
+        "e2e": {
+          "required": true,
+          "repository": "maddevopss/e2e",
+          "pullRequest": 74,
+          "commit": "0f45566d9019349a62fce569336d280592b67ecc"
+        },
+        "desktopAgent": {
+          "required": false,
+          "repository": "maddevopss/desktop-agent",
+          "reason": "Aucune surface de bureau requise pour cette livraison."
+        },
+        "governance": {
+          "required": true,
+          "repository": "bleeband/SYSTEME_MAD",
+          "pullRequest": 412,
+          "commit": "6d75cd5ab4ede72df17ab50451c04fdefb2653b5"
+        }
+      },
+      "validation": {
+        "environment": "GitHub Actions",
+        "rollback": "Revenir aux commits de base de chaque dépôt et désactiver les routes de modules concernées.",
+        "evidence": [
+          "Frontend #175 fusionnée",
+          "Backend #458 fusionnée",
+          "E2E #74 fusionnée",
+          "SYSTEME_MAD #412 fusionnée"
+        ]
+      }
+    }
+  ]
+}
