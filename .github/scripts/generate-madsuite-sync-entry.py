@@ -48,10 +48,17 @@ def build_delivery(source: dict) -> dict:
     delivery_id = str(source.get("id", "")).strip()
     title = str(source.get("title", "")).strip()
     status = str(source.get("status", "planned")).strip()
+    corrects = source.get("corrects")
     if not delivery_id or not title:
         raise ValueError("id et title sont obligatoires.")
     if status not in {"planned", "in_progress", "blocked", "closed"}:
         raise ValueError(f"status invalide : {status}")
+    if corrects is not None:
+        corrects = str(corrects).strip()
+        if not corrects:
+            raise ValueError("corrects doit être un identifiant non vide.")
+        if corrects == delivery_id:
+            raise ValueError("une livraison ne peut pas se corriger elle-même.")
 
     repositories = source.get("repositories")
     if not isinstance(repositories, dict):
@@ -71,19 +78,20 @@ def build_delivery(source: dict) -> dict:
     if not isinstance(evidence, list) or not evidence or not all(str(item).strip() for item in evidence):
         raise ValueError("validation.evidence doit contenir au moins une preuve.")
 
-    return {
+    delivery = {
         "id": delivery_id,
         "title": title,
         "status": status,
-        "repositories": {
-            key: normalize_repository(key, repositories[key]) for key in REQUIRED_KEYS
-        },
+        "repositories": {key: normalize_repository(key, repositories[key]) for key in REQUIRED_KEYS},
         "validation": {
             "environment": environment,
             "rollback": rollback,
             "evidence": [str(item).strip() for item in evidence],
         },
     }
+    if corrects is not None:
+        delivery["corrects"] = corrects
+    return delivery
 
 
 def append_delivery(registry: dict, delivery: dict) -> dict:
