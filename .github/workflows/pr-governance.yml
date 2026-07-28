@@ -28,6 +28,9 @@ jobs:
       - name: Test MADSuite synchronization guard
         run: python -m unittest discover -s .github/tests -p 'test_*.py' -v
 
+      - name: Test MADSuite synchronization generator
+        run: python .github/scripts/test_generate_madsuite_sync_entry.py -v
+
       - name: Validate MADSuite synchronization registry
         env:
           GITHUB_TOKEN: ${{ github.token }}
