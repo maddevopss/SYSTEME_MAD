@@ -1,0 +1,43 @@
+{
+  "id": "identifiant-livraison",
+  "title": "Titre de la livraison",
+  "status": "planned",
+  "repositories": {
+    "backend": {
+      "required": true,
+      "repository": "maddevopss/madsuite-backend",
+      "pullRequest": 1,
+      "commit": "0000000000000000000000000000000000000000"
+    },
+    "frontend": {
+      "required": true,
+      "repository": "maddevopss/madsuite-frontend",
+      "pullRequest": 1,
+      "commit": "0000000000000000000000000000000000000000"
+    },
+    "e2e": {
+      "required": true,
+      "repository": "maddevopss/e2e",
+      "pullRequest": 1,
+      "commit": "0000000000000000000000000000000000000000"
+    },
+    "desktopAgent": {
+      "required": false,
+      "repository": "maddevopss/desktop-agent",
+      "reason": "Expliquer pourquoi l’agent de bureau n’est pas requis."
+    },
+    "governance": {
+      "required": true,
+      "repository": "bleeband/SYSTEME_MAD",
+      "pullRequest": 1,
+      "commit": "0000000000000000000000000000000000000000"
+    }
+  },
+  "validation": {
+    "environment": "Environnement de validation",
+    "rollback": "Procédure de retour arrière",
+    "evidence": [
+      "Preuve vérifiable de validation"
+    ]
+  }
+}
