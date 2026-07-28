@@ -1,0 +1,123 @@
+name: Submit MADSuite synchronization
+
+on:
+  workflow_dispatch:
+    inputs:
+      delivery_json:
+        description: "Objet JSON complet décrivant la livraison MADSuite"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: submit-madsuite-sync-${{ github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    name: Generate and submit synchronization entry
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Materialize delivery descriptor
+        env:
+          DELIVERY_JSON: ${{ inputs.delivery_json }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          payload = json.loads(os.environ["DELIVERY_JSON"])
+          Path("delivery.json").write_text(
+              json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          PY
+
+      - name: Append delivery to registry
+        run: >-
+          python .github/scripts/generate-madsuite-sync-entry.py
+          delivery.json --append
+
+      - name: Validate registry and remote evidence
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python .github/scripts/guard-madsuite-sync.py --remote
+
+      - name: Resolve delivery metadata
+        id: delivery
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          import re
+
+          payload = json.load(open("delivery.json", encoding="utf-8"))
+          delivery_id = str(payload["id"]).strip()
+          safe_id = re.sub(r"[^a-z0-9._-]+", "-", delivery_id.lower()).strip("-")
+          if not safe_id:
+              raise SystemExit("Identifiant de livraison inutilisable pour une branche Git.")
+          print(f"id={delivery_id}")
+          print(f"safe_id={safe_id}")
+          print(f"title={str(payload['title']).strip()}")
+          PY
+
+      - name: Commit registry update
+        env:
+          BRANCH: automation/madsuite-sync-${{ steps.delivery.outputs.safe_id }}-${{ github.run_id }}
+        run: |
+          rm delivery.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$BRANCH"
+          git add 00-SYSTEME-MAD/governance/madsuite-sync-registry.json
+          git commit -m "docs(governance): enregistrer ${{ steps.delivery.outputs.id }}"
+          git push --set-upstream origin "$BRANCH"
+
+      - name: Open governance pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BRANCH: automation/madsuite-sync-${{ steps.delivery.outputs.safe_id }}-${{ github.run_id }}
+          DELIVERY_ID: ${{ steps.delivery.outputs.id }}
+          DELIVERY_TITLE: ${{ steps.delivery.outputs.title }}
+        run: |
+          cat > pr-body.md <<EOF
+          ## Intention
+
+          Enregistrer officiellement la livraison inter-dépôts \`${DELIVERY_ID}\` dans le registre de synchronisation MADSuite.
+
+          ## Changements principaux
+
+          - ajout de la livraison \`${DELIVERY_ID}\`;
+          - titre déclaré : ${DELIVERY_TITLE};
+          - normalisation automatique par le générateur officiel;
+          - vérification distante des PR et commits déclarés.
+
+          ## Vérifications effectuées
+
+          - génération déterministe de l’entrée;
+          - absence d’identifiant dupliqué;
+          - validation structurelle du registre;
+          - confirmation des preuves GitHub pour toute livraison fermée.
+
+          ## Risques et points à surveiller
+
+          - vérifier humainement que la portée fonctionnelle décrite correspond bien aux PR référencées;
+          - le registre demeure la preuve de coordination et ne remplace pas les validations propres à chaque dépôt.
+          EOF
+
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "docs(governance): enregistrer ${DELIVERY_ID}" \
+            --body-file pr-body.md
