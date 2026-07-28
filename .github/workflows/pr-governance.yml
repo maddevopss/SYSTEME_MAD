@@ -31,6 +31,16 @@ jobs:
       - name: Test MADSuite synchronization generator
         run: python .github/scripts/test_generate_madsuite_sync_entry.py -v
 
+      - name: Validate MADSuite synchronization transition
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git show "${BASE_SHA}:00-SYSTEME-MAD/governance/madsuite-sync-registry.json" \
+            > /tmp/madsuite-sync-registry.base.json
+          python .github/scripts/guard-madsuite-sync-transition.py \
+            /tmp/madsuite-sync-registry.base.json \
+            00-SYSTEME-MAD/governance/madsuite-sync-registry.json
+
       - name: Validate MADSuite synchronization registry
         env:
           GITHUB_TOKEN: ${{ github.token }}
