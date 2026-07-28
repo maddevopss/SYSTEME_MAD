@@ -8,11 +8,11 @@ Il sert de source de vérité pour structurer, préserver et faire évoluer :
 - les décisions importantes;
 - les standards de qualité;
 - les playbooks opérationnels;
-- les templates réutilisables;
+- les modèles réutilisables;
 - la documentation de MADSuite;
 - les recherches et notes de validation;
 - le contexte destiné aux agents IA;
-- la mémoire opérationnelle du studio.
+- la mémoire opérationnelle et institutionnelle du studio.
 
 > Nous ne construisons pas seulement des logiciels. Nous construisons un savoir qui grandit avec chaque projet.
 
@@ -22,7 +22,7 @@ Il sert de source de vérité pour structurer, préserver et faire évoluer :
 
 Le Système MAD n’est pas un simple dossier de documents.
 
-C’est l’OS documentaire de MAD DevOps : il définit comment le studio pense, décide, conçoit, développe, documente, sécurise et améliore ses solutions numériques.
+C’est le système documentaire de MAD DevOps : il définit comment le studio pense, décide, conçoit, développe, documente, sécurise et améliore ses solutions numériques.
 
 Il doit permettre à une personne, à un collaborateur ou à un agent IA de comprendre rapidement :
 
@@ -30,7 +30,30 @@ Il doit permettre à une personne, à un collaborateur ou à un agent IA de comp
 - ce qui est en brouillon;
 - ce qui est archivé;
 - quelles règles doivent être respectées;
-- quels documents doivent être lus avant d’agir.
+- quels documents doivent être lus avant d’agir;
+- quelles capacités sont construites, certifiées ou seulement prévues.
+
+---
+
+## État institutionnel de MADSuite
+
+Le premier cycle de fondation de MADSuite V1 est constaté dans la gouvernance de ce dépôt. Les quatre dépôts principaux disposent d’une fermeture structurée fusionnée :
+
+```text
+maddevopss/madsuite-backend
+maddevopss/madsuite-frontend
+maddevopss/e2e
+maddevopss/desktop-agent
+```
+
+Cette fondation ne signifie pas que MADSuite est terminé ou figé. Elle établit que les grands modules et les systèmes transversaux disposent désormais d’une base documentée, vérifiable et prête à évoluer par consolidation, intégration et exploitation continue.
+
+La cartographie officielle et les statuts courants sont maintenus dans :
+
+```text
+00-SYSTEME-MAD/repos.md
+00-SYSTEME-MAD/governance/constat-fondations-madsuite-v1-2026-07-27.md
+```
 
 ---
 
@@ -87,19 +110,19 @@ Le registre canonique des objets officiels est disponible dans `00-SYSTEME-MAD/r
 ## Structure principale
 
 ```text
-00-SYSTEME-MAD/       Gouvernance, contexte IA, décisions, Registry et standards documentaires
+00-SYSTEME-MAD/       Gouvernance, contexte IA, décisions, registre et standards documentaires
 01-FONDATIONS/        Principes fondateurs et non négociables
 02-GUIDE/             Guide stratégique et opérationnel MAD DevOps
 03-STANDARDS/         Standards techniques, qualité, sécurité et architecture
-04-ADR/               Architecture Decision Records
+04-ADR/               Décisions d’architecture
 05-PLAY/              Playbooks opérationnels
 06-KNOWLEDGE-BASE/    Base de connaissances technique
 07-TEMPLATES/         Modèles réutilisables
 08-BOOTSTRAPS/        Scripts et documents d’initialisation
-09-CHECKLISTS/        Checklists de validation
+09-CHECKLISTS/        Listes de validation
 10-ROADMAP/           Backlog, progression et feuille de route
 11-ACADEMY/           Notes d’apprentissage et formation interne
-12-INNOVATION/        Idées, explorations et pistes R&D
+12-INNOVATION/        Idées, explorations et pistes de recherche et développement
 13-RESSOURCES/        Ressources de marque, légales, recherche et actifs
 99-ARCHIVES/          Documents historiques ou remplacés
 ```
@@ -115,7 +138,7 @@ Avant de modifier ou générer un document pour MAD DevOps ou MADSuite, un agent
 - `00-SYSTEME-MAD/decisions.md`;
 - `00-SYSTEME-MAD/registry/registry-index.yaml` pour identifier les objets déjà enregistrés;
 - les standards applicables dans `03-STANDARDS/`;
-- les ADR applicables dans `04-ADR/`.
+- les décisions applicables dans `04-ADR/`.
 
 Un agent IA ne doit pas traiter un document archivé comme une source officielle, sauf si la demande le précise explicitement.
 
