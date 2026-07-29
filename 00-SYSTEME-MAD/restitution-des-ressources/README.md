@@ -79,20 +79,22 @@ Une ressource n'est pas considérée comme restituée uniquement parce que le sy
 5. la preuve disponible;
 6. les limites connues.
 
-## Documents prévus
+## Feuille de route documentaire
 
-| Document | Rôle | Statut initial |
-|---|---|---|
-| `manifeste.md` | Énoncer la vision et les principes directeurs | Proposition |
-| `vocabulaire-canonique.md` | Définir les termes de la fondation | Proposition |
-| `principe-temps-restitue.md` | Formaliser le principe du temps rendu | Proposition |
-| `restitution-attention.md` | Encadrer la protection et la restitution de l'attention | À produire |
-| `restitution-charge-cognitive.md` | Relier l'effort cognitif à la continuité cognitive | À produire |
-| `restitution-confiance.md` | Relier confiance, preuve et explicabilité | À produire |
-| `restitution-autonomie.md` | Encadrer l'assistance sans dépendance artificielle | À produire |
-| `indice-restitution-mad.md` | Proposer une méthode de mesure transversale | À rechercher |
-| `grille-evaluation.md` | Évaluer les fonctionnalités et services | À produire |
-| `programme-recherche.md` | Documenter hypothèses, protocoles et résultats | À produire |
+Les prochains travaux prévus portent sur :
+
+- un manifeste de la restitution;
+- un vocabulaire canonique;
+- un principe du temps restitué;
+- la restitution de l'attention;
+- la restitution de la charge cognitive;
+- la restitution de la confiance;
+- la restitution de l'autonomie;
+- un indice de restitution MAD;
+- une grille d'évaluation;
+- un programme de recherche.
+
+Cette feuille de route n'indexe aucun document absent. Chaque document sera ajouté et indexé uniquement dans la PR qui le crée.
 
 ## Critère de promotion
 
