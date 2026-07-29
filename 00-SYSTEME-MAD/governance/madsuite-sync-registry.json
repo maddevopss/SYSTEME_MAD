@@ -47,6 +47,52 @@
           "SYSTEME_MAD #412 fusionnée"
         ]
       }
+    },
+    {
+      "id": "accounting-controlled-remediation-2026-07-28",
+      "title": "Correction comptable contrôlée et prouvée",
+      "status": "in_progress",
+      "repositories": {
+        "backend": {
+          "required": true,
+          "repository": "maddevopss/madsuite-backend",
+          "pullRequest": 463,
+          "commit": "6821ccd68c0cb0c58bbcf8321237201f2477ab4a"
+        },
+        "frontend": {
+          "required": true,
+          "repository": "maddevopss/madsuite-frontend",
+          "pullRequest": 179,
+          "commit": "4ac160b56c8f207bbdf644e86e6c88e06fff6317"
+        },
+        "e2e": {
+          "required": true,
+          "repository": "maddevopss/e2e",
+          "pullRequest": 78,
+          "commit": "6b722ddfd314da2cac146be03c6faf8eba9785f3"
+        },
+        "desktopAgent": {
+          "required": false,
+          "repository": "maddevopss/desktop-agent",
+          "reason": "Aucune surface locale, collecte ou intégration de l’agent de bureau n’est touchée."
+        },
+        "governance": {
+          "required": false,
+          "repository": "bleeband/SYSTEME_MAD",
+          "reason": "La présente PR prépare l’inscription candidate. La fermeture finale sera constatée après fusion des trois dépôts d’exécution avec leurs commits de fusion réels."
+        }
+      },
+      "validation": {
+        "environment": "GitHub Actions et environnement E2E isolé avec PostgreSQL",
+        "rollback": "Fermer les PR candidates avant fusion; après fusion, désactiver les routes de correction et publier une livraison corrective sans supprimer les écritures comptables existantes.",
+        "evidence": [
+          "Backend #463 expose prévisualisation et application administratives",
+          "Frontend #179 exige justification et confirmation humaine",
+          "E2E #78 crée et résout une anomalie réelle de 42,50 $ CA",
+          "Le registre financier demeure append-only",
+          "La livraison reste en cours jusqu’à disponibilité des commits de fusion exacts"
+        ]
+      }
     }
   ]
 }
