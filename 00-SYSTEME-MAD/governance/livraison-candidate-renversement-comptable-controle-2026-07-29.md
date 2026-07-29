@@ -1,17 +1,19 @@
 ---
 Projet: MADSuite
-Document: Livraison candidate — Renversement comptable contrôlé
-Version: 1.0
+Document: Livraison fermée — Renversement comptable contrôlé
+Version: 1.1
 Dernière révision: 2026-07-29
-Statut: En cours
+Statut: Fermé
 Auteur: Marc-André Dufour
 ---
 
-# Livraison candidate — Renversement comptable contrôlé
+# Livraison fermée — Renversement comptable contrôlé
 
 ## Objet
 
 Cette livraison encadre la contrepassation d’une écriture publiée sans modifier ni supprimer l’historique comptable. Le système prépare, explique et prouve le renversement; une personne autorisée demeure l’autorité finale.
+
+La livraison est fermée après fusion des blocs backend, frontend, E2E et gouvernance candidate, avec inscription de leurs commits de fusion exacts.
 
 ## Capacités livrées
 
@@ -39,16 +41,17 @@ Le résultat expose l’état initial, l’état final, l’auteur, la justifica
 
 Le scénario E2E crée et publie une écriture réelle de 84,25 $ CA, prévisualise les lignes inversées, refuse une application non confirmée, applique le renversement confirmé, vérifie les liens puis exige un refus HTTP 409 lors d’une seconde tentative.
 
-## Pull requests candidates
+## Pull requests fusionnées
 
-| Dépôt | Pull request | Commit | État |
+| Dépôt | Pull request | Commit de fusion | État |
 |---|---:|---|---|
 | Backend | #464 | `b9f1de7dddecbd70af45cd0c5db244030a01b7e8` | fusionnée |
 | Frontend | #180 | `5663109577d9997bf02432c9e5c30f06ad81be3b` | fusionnée |
-| E2E | #79 | `7da75cfdb6904ad4a3c77fb6a8415e90df8f78c2` | candidate |
+| E2E | #79 | `dedbb10b98cc52825c6072dd7165b50a73620bd3` | fusionnée |
+| Gouvernance candidate | #427 | `34da4744089fd51a6de336f90c6e39287c5c8ef9` | fusionnée |
 | Agent de bureau | non concerné | — | aucune surface locale touchée |
 
-## Invariants
+## Invariants confirmés
 
 - aucune écriture publiée n’est modifiée ou supprimée;
 - la prévisualisation ne produit aucune mutation;
@@ -57,23 +60,23 @@ Le scénario E2E crée et publie une écriture réelle de 84,25 $ CA, prévisual
 - chaque renversement est idempotent;
 - un second renversement est refusé;
 - les écritures demeurent limitées à l’organisation active;
-- la fermeture dépend d’une preuve E2E réelle.
+- la preuve E2E réelle est fusionnée.
 
 ## Repli
 
-Avant fusion de #79, la PR peut être fermée sans modifier l’état officiel. Après fusion, une régression doit être corrigée par une nouvelle PR et une nouvelle livraison corrective. Les surfaces de renversement peuvent être désactivées sans supprimer les écritures déjà publiées.
+Une régression doit être corrigée par une nouvelle PR et une nouvelle livraison corrective. Les surfaces de renversement peuvent être désactivées sans supprimer les écritures déjà publiées ni réécrire l’historique.
 
-## Critères de fermeture
+## Fermeture
 
-La livraison pourra passer à `closed` lorsque :
+La livraison est déclarée fermée parce que :
 
-- #464 et #180 demeurent fusionnées et vertes;
-- #79 est fusionnée après exécution réussie de `npm run test:accounting-reversal`;
-- les commits de fusion exacts remplacent les commits candidats;
+- #464 et #180 sont fusionnées;
+- #79 est fusionnée avec le scénario `npm run test:accounting-reversal`;
+- les commits de fusion exacts sont inscrits;
 - la preuve avant/après est conservée;
-- la seconde tentative est réellement refusée;
+- la seconde tentative est refusée;
 - le registre financier demeure append-only;
-- la gouvernance candidate est fusionnée et assumée humainement.
+- la gouvernance candidate #427 est fusionnée et assumée humainement.
 
 ## Assomption
 

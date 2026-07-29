@@ -99,7 +99,7 @@
     {
       "id": "accounting-controlled-reversal-2026-07-29",
       "title": "Renversement comptable contrôlé et prouvé",
-      "status": "in_progress",
+      "status": "closed",
       "repositories": {
         "backend": {
           "required": true,
@@ -117,7 +117,7 @@
           "required": true,
           "repository": "maddevopss/e2e",
           "pullRequest": 79,
-          "commit": "7da75cfdb6904ad4a3c77fb6a8415e90df8f78c2"
+          "commit": "dedbb10b98cc52825c6072dd7165b50a73620bd3"
         },
         "desktopAgent": {
           "required": false,
@@ -125,21 +125,23 @@
           "reason": "Aucune surface locale, collecte ou intégration de l’agent de bureau n’est touchée."
         },
         "governance": {
-          "required": false,
+          "required": true,
           "repository": "bleeband/SYSTEME_MAD",
-          "reason": "La présente PR prépare l’inscription candidate. La fermeture finale suivra la fusion et la preuve du scénario E2E #79."
+          "pullRequest": 427,
+          "commit": "34da4744089fd51a6de336f90c6e39287c5c8ef9"
         }
       },
       "validation": {
         "environment": "GitHub Actions et environnement E2E isolé avec PostgreSQL",
-        "rollback": "Fermer #79 avant fusion; après fusion, désactiver les surfaces de renversement et publier une livraison corrective sans supprimer les écritures existantes.",
+        "rollback": "Désactiver les surfaces de renversement et publier une livraison corrective sans supprimer ni modifier les écritures existantes.",
         "evidence": [
           "Backend #464 fusionnée avec confirmation humaine obligatoire",
           "Frontend #180 fusionnée avec prévisualisation et preuve",
-          "E2E #79 candidate avec écriture réelle de 84,25 $ CA",
+          "E2E #79 fusionnée avec écriture réelle de 84,25 $ CA",
+          "SYSTEME_MAD #427 fusionnée",
           "Les écritures publiées demeurent append-only",
-          "Un second renversement doit être refusé",
-          "La livraison reste en cours jusqu’au commit de fusion E2E exact"
+          "Un second renversement est refusé",
+          "La livraison est fermée avec les commits de fusion exacts"
         ]
       }
     }
