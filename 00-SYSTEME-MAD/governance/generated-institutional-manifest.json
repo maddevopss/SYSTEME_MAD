@@ -36,14 +36,14 @@
     {
       "path": "00-SYSTEME-MAD/governance/constitution.md",
       "role": "Autorité constitutionnelle des principes fondateurs",
-      "expected_version": "1.0",
-      "actual_version": "1.0",
+      "expected_version": "1.1",
+      "actual_version": "1.1",
       "expected_status": "Officiel",
       "actual_status": "Officiel",
       "document_title": "Constitution — Index des principes fondateurs",
       "author": "Marc-André Dufour",
-      "last_revision": "2026-07-19",
-      "git_blob_sha": "a85834776a49daf72d81c337c2dc1d6d5c27c5e5",
+      "last_revision": "2026-07-29",
+      "git_blob_sha": "d1545024479d307efda6331154b109f2122d12c7",
       "valid": true,
       "errors": []
     },
