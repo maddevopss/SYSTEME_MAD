@@ -51,25 +51,25 @@
     {
       "id": "accounting-controlled-remediation-2026-07-28",
       "title": "Correction comptable contrôlée et prouvée",
-      "status": "in_progress",
+      "status": "closed",
       "repositories": {
         "backend": {
           "required": true,
           "repository": "maddevopss/madsuite-backend",
           "pullRequest": 463,
-          "commit": "6821ccd68c0cb0c58bbcf8321237201f2477ab4a"
+          "commit": "0195ebcbe1b7ba5aa2b0dbeffb6949b3790904fb"
         },
         "frontend": {
           "required": true,
           "repository": "maddevopss/madsuite-frontend",
           "pullRequest": 179,
-          "commit": "4ac160b56c8f207bbdf644e86e6c88e06fff6317"
+          "commit": "a88f377dc9883132481097624763067a05cf9130"
         },
         "e2e": {
           "required": true,
           "repository": "maddevopss/e2e",
           "pullRequest": 78,
-          "commit": "6b722ddfd314da2cac146be03c6faf8eba9785f3"
+          "commit": "b5c82028381021f9b3b6801f438f869184787685"
         },
         "desktopAgent": {
           "required": false,
@@ -77,20 +77,22 @@
           "reason": "Aucune surface locale, collecte ou intégration de l’agent de bureau n’est touchée."
         },
         "governance": {
-          "required": false,
+          "required": true,
           "repository": "bleeband/SYSTEME_MAD",
-          "reason": "La présente PR prépare l’inscription candidate. La fermeture finale sera constatée après fusion des trois dépôts d’exécution avec leurs commits de fusion réels."
+          "pullRequest": 425,
+          "commit": "ed3ed10adb7a6b41bb4e902db26892cf7c265b7f"
         }
       },
       "validation": {
         "environment": "GitHub Actions et environnement E2E isolé avec PostgreSQL",
-        "rollback": "Fermer les PR candidates avant fusion; après fusion, désactiver les routes de correction et publier une livraison corrective sans supprimer les écritures comptables existantes.",
+        "rollback": "Désactiver les routes de correction et publier une livraison corrective sans supprimer les écritures comptables existantes.",
         "evidence": [
-          "Backend #463 expose prévisualisation et application administratives",
-          "Frontend #179 exige justification et confirmation humaine",
-          "E2E #78 crée et résout une anomalie réelle de 42,50 $ CA",
+          "Backend #463 fusionnée et contrôles verts",
+          "Frontend #179 fusionnée et contrôles verts",
+          "E2E #78 fusionnée avec scénario réel de 42,50 $ CA",
+          "SYSTEME_MAD #425 fusionnée",
           "Le registre financier demeure append-only",
-          "La livraison reste en cours jusqu’à disponibilité des commits de fusion exacts"
+          "La confirmation humaine demeure obligatoire"
         ]
       }
     }
