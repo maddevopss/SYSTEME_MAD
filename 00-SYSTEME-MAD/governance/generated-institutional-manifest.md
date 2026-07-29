@@ -20,7 +20,7 @@ Auteur: Marc-André Dufour
 | Document | Version | Statut | Validation | Empreinte Git |
 |---|---|---|---|---|
 | `MANIFEST.md` | 1.3 | Officiel | Valide | `192a0caec193eda3326b7b0801c62796d98534b1` |
-| `00-SYSTEME-MAD/governance/constitution.md` | 1.0 | Officiel | Valide | `a85834776a49daf72d81c337c2dc1d6d5c27c5e5` |
+| `00-SYSTEME-MAD/governance/constitution.md` | 1.1 | Officiel | Valide | `d1545024479d307efda6331154b109f2122d12c7` |
 | `00-SYSTEME-MAD/yaml-standard.md` | 1.0 | Officiel | Valide | `5451652e790e583f052180de8d5495e24e4c0eda` |
 | `00-SYSTEME-MAD/governance/contrat-stabilite-coeur-systeme-mad.md` | 1.0 | Officiel | Valide | `85b5c391b473819c9e5f8d9394098c8f90e5ad4f` |
 | `09-CHECKLISTS/chk-010-stabilite-coeur-systeme-mad.md` | 1.0 | Officiel | Valide | `648a06f026c3a1ba9ab15d7ee817de916b14a81d` |
