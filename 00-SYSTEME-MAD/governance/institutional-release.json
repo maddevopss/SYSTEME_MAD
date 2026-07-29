@@ -15,7 +15,7 @@
     },
     {
       "path": "00-SYSTEME-MAD/governance/constitution.md",
-      "expected_version": "1.0",
+      "expected_version": "1.1",
       "expected_status": "Officiel",
       "role": "Autorité constitutionnelle des principes fondateurs"
     },
