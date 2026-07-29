@@ -1,8 +1,8 @@
 ---
 Projet: SYSTEME_MAD
 Document: Constitution — Index des principes fondateurs
-Version: 1.0
-Dernière révision: 2026-07-19
+Version: 1.1
+Dernière révision: 2026-07-29
 Statut: Officiel
 Auteur: Marc-André Dufour
 Assumée par: Marc-André Dufour
@@ -70,6 +70,26 @@ Références principales :
 - [`13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`](../../13-RESSOURCES/research/03-madproof/000-cadre-madproof.md)
 - [`00-SYSTEME-MAD/governance/axiomes-fondateurs.md`](axiomes-fondateurs.md)
 
+## Article III bis — Fondations émergentes
+
+Une fondation émergente est une proposition structurée dont la portée pourrait devenir fondatrice, mais dont la solidité, la généralité ou les preuves demeurent insuffisantes pour une promotion officielle.
+
+Ce statut permet d’organiser la recherche, les définitions, les relations, les limites et les essais sans accorder prématurément une autorité fondatrice.
+
+Une fondation émergente :
+
+1. conserve un statut documentaire non officiel, notamment `Proposition`, `Brouillon` ou `À valider`;
+2. formule explicitement ses hypothèses, sa portée, ses exclusions et ses incertitudes;
+3. distingue les principes proposés des connaissances établies;
+4. prévoit des conditions de validation, de révision et d’abandon;
+5. conserve les résultats négatifs, neutres, contradictoires ou non reproduits;
+6. ne peut imposer une obligation aux fondations, aux produits ou aux bâtisseurs;
+7. ne peut être présentée comme une certification, une vérité établie ou une propriété démontrée.
+
+La promotion d’une fondation émergente exige une décision explicite, une preuve proportionnée à son ambition, une analyse de compatibilité avec le Canon et une assomption par un bâtisseur identifiable.
+
+Une proposition qui ne résiste pas à l’épreuve doit être révisée, rétrogradée, archivée ou abandonnée. Son ancienneté, son volume documentaire, son usage commercial ou sa popularité ne constituent jamais une preuve suffisante.
+
 ## Article IV — Sources d’autorité
 
 L’autorité générale suit l’ordre suivant :
@@ -81,7 +101,7 @@ L’autorité générale suit l’ordre suivant :
 5. les ADR;
 6. les guides et playbooks;
 7. les connaissances de référence;
-8. les roadmaps et explorations non stabilisées.
+8. les fondations émergentes, roadmaps et explorations non stabilisées.
 
 Un document plus spécifique conserve son autorité dans son domaine lorsqu'il respecte les niveaux supérieurs. Une décision plus récente ne peut contredire silencieusement la Constitution; elle doit déclencher un amendement explicite ou être considérée incompatible.
 
