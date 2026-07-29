@@ -1,19 +1,19 @@
 ---
 Projet: MADSuite
-Document: Livraison candidate — Correction comptable contrôlée
-Version: 1.0
-Dernière révision: 2026-07-28
-Statut: En cours
+Document: Constat de fermeture — Correction comptable contrôlée
+Version: 1.1
+Dernière révision: 2026-07-29
+Statut: Fermé
 Auteur: Marc-André Dufour
 ---
 
-# Livraison candidate — Correction comptable contrôlée
+# Constat de fermeture — Correction comptable contrôlée
 
 ## Objet
 
-Cette livraison rassemble les sept capacités nécessaires pour permettre la correction d’une anomalie comptable sans réécrire l’historique et sans retirer l’autorité humaine finale.
+Cette livraison ferme officiellement les sept capacités nécessaires pour corriger une anomalie comptable sans réécrire l’historique et sans retirer l’autorité humaine finale.
 
-Le présent document est un constat candidat. Il ne peut devenir un constat de fermeture qu’après fusion des pull requests backend, frontend et E2E, exécution de leurs contrôles obligatoires et inscription de leurs commits de fusion réels.
+Les pull requests backend, frontend, E2E et de gouvernance ont été fusionnées. Leurs commits de fusion réels sont maintenant inscrits comme preuves officielles.
 
 ## Capacités livrées
 
@@ -59,26 +59,19 @@ Le scénario E2E crée une source financière durable sans écriture corresponda
 
 ### 7. Mémoire institutionnelle
 
-La présente inscription conserve la portée, l’ordre de livraison, les preuves candidates, le mécanisme de repli et les conditions de fermeture. La fermeture finale devra utiliser les commits de fusion, jamais les commits de tête temporaires.
+Le registre officiel conserve maintenant la portée, les preuves de fusion, le mécanisme de repli et l’état fermé de cette livraison.
 
-## Pull requests candidates
+## Preuves de fusion
 
-| Dépôt | Pull request | Commit candidat | État attendu avant fermeture |
+| Dépôt | Pull request | Commit de fusion | État |
 |---|---:|---|---|
-| Backend | #463 | `6821ccd68c0cb0c58bbcf8321237201f2477ab4a` | fusionnée et contrôles verts |
-| Frontend | #179 | `4ac160b56c8f207bbdf644e86e6c88e06fff6317` | fusionnée après le backend |
-| E2E | #78 | `6b722ddfd314da2cac146be03c6faf8eba9785f3` | fusionnée après disponibilité des contrats synchronisés |
+| Backend | #463 | `0195ebcbe1b7ba5aa2b0dbeffb6949b3790904fb` | fusionnée |
+| Frontend | #179 | `a88f377dc9883132481097624763067a05cf9130` | fusionnée |
+| E2E | #78 | `b5c82028381021f9b3b6801f438f869184787685` | fusionnée |
+| SYSTEME_MAD | #425 | `ed3ed10adb7a6b41bb4e902db26892cf7c265b7f` | fusionnée |
 | Agent de bureau | non concerné | — | aucune surface locale touchée |
 
-## Ordre de fusion
-
-1. backend #463;
-2. frontend #179;
-3. E2E #78;
-4. présente PR de gouvernance candidate;
-5. transition finale du registre vers `closed` avec les commits de fusion exacts.
-
-## Invariants
+## Invariants confirmés
 
 - aucune correction automatique à la consultation du diagnostic;
 - aucune application sans confirmation humaine;
@@ -87,24 +80,23 @@ La présente inscription conserve la portée, l’ordre de livraison, les preuve
 - chaque requête demeure limitée à l’organisation active;
 - une anomalie périmée ou incompatible est refusée;
 - une prévisualisation ne produit aucune mutation;
-- la fermeture dépend d’une preuve E2E réelle.
+- la fermeture repose sur une preuve E2E réelle.
 
 ## Repli
 
-Avant fusion, chaque PR peut être fermée sans modifier l’état officiel. Après fusion, un défaut doit être corrigé par une nouvelle PR et une nouvelle livraison corrective. Les routes de correction peuvent être retirées de l’interface ou désactivées au niveau du module comptable sans supprimer les écritures déjà publiées.
+Un défaut découvert après fermeture doit être corrigé par une nouvelle pull request et une livraison corrective. Les routes de correction peuvent être retirées de l’interface ou désactivées au niveau du module comptable sans supprimer les écritures déjà publiées.
 
-## Critères de fermeture
+## Fermeture
 
-La livraison pourra passer à `closed` lorsque :
+Les critères de fermeture sont satisfaits :
 
-- #463, #179 et #78 sont fusionnées;
-- les commits de fusion réels remplacent les commits candidats dans le registre;
-- les tests backend et frontend sont verts;
-- le scénario `test:accounting-remediation` réussit sur des services synchronisés;
-- la prévisualisation ne produit aucune écriture;
+- #463, #179, #78 et #425 sont fusionnées;
+- les commits de fusion réels sont inscrits;
+- les contrôles backend et frontend ont été rendus verts avant fusion;
+- la prévisualisation demeure sans mutation;
 - l’application confirmée produit une preuve avant/après;
-- l’anomalie réelle disparaît après le nouveau rapprochement;
-- la présente gouvernance est fusionnée et assumée humainement.
+- le nouveau rapprochement vérifie la disparition de l’anomalie;
+- la gouvernance candidate a été fusionnée et assumée humainement.
 
 ## Assomption
 
