@@ -95,6 +95,53 @@
           "La confirmation humaine demeure obligatoire"
         ]
       }
+    },
+    {
+      "id": "accounting-controlled-reversal-2026-07-29",
+      "title": "Renversement comptable contrôlé et prouvé",
+      "status": "in_progress",
+      "repositories": {
+        "backend": {
+          "required": true,
+          "repository": "maddevopss/madsuite-backend",
+          "pullRequest": 464,
+          "commit": "b9f1de7dddecbd70af45cd0c5db244030a01b7e8"
+        },
+        "frontend": {
+          "required": true,
+          "repository": "maddevopss/madsuite-frontend",
+          "pullRequest": 180,
+          "commit": "5663109577d9997bf02432c9e5c30f06ad81be3b"
+        },
+        "e2e": {
+          "required": true,
+          "repository": "maddevopss/e2e",
+          "pullRequest": 79,
+          "commit": "7da75cfdb6904ad4a3c77fb6a8415e90df8f78c2"
+        },
+        "desktopAgent": {
+          "required": false,
+          "repository": "maddevopss/desktop-agent",
+          "reason": "Aucune surface locale, collecte ou intégration de l’agent de bureau n’est touchée."
+        },
+        "governance": {
+          "required": false,
+          "repository": "bleeband/SYSTEME_MAD",
+          "reason": "La présente PR prépare l’inscription candidate. La fermeture finale suivra la fusion et la preuve du scénario E2E #79."
+        }
+      },
+      "validation": {
+        "environment": "GitHub Actions et environnement E2E isolé avec PostgreSQL",
+        "rollback": "Fermer #79 avant fusion; après fusion, désactiver les surfaces de renversement et publier une livraison corrective sans supprimer les écritures existantes.",
+        "evidence": [
+          "Backend #464 fusionnée avec confirmation humaine obligatoire",
+          "Frontend #180 fusionnée avec prévisualisation et preuve",
+          "E2E #79 candidate avec écriture réelle de 84,25 $ CA",
+          "Les écritures publiées demeurent append-only",
+          "Un second renversement doit être refusé",
+          "La livraison reste en cours jusqu’au commit de fusion E2E exact"
+        ]
+      }
     }
   ]
 }
