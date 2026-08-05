@@ -68,6 +68,12 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 | 2026-07-21 | `desktop-agent` | `Desktop Agent Guards` | Vert observé | https://github.com/maddevopss/desktop-agent/actions/runs/29843257911 | PR `maddevopss/desktop-agent#38`; commit testé `8e2dd74925e51f806d19bd57ef28a065c1acc63a` |
 | 2026-07-21 | `desktop-agent` | `Desktop Agent CI` | Vert observé | https://github.com/maddevopss/desktop-agent/actions/runs/29843257929 | CI principale desktop-agent verte sur la PR #38 |
 
+| 2026-08-05 | `madsuite-backend` | Statut post-merge du commit `df1f2117f21ae4ef5149eb461c2dea3700f01674` | Succès observé | Statut externe Railway `success` | Preuve post-merge confirmée |
+| 2026-08-05 | `madsuite-frontend` | Statut post-merge du commit `7aee8daa183bdee44514eb693e23bb00eb371e98` | Succès observé | Statut externe Vercel `success` | Preuve post-merge confirmée |
+| 2026-08-05 | `e2e` | Statut post-merge du commit `271690bacc8b59f9840589d36ba0643152e5f6e0` | Exception — aucun statut | Aucun statut combiné ni run post-merge exploitable observé | Suivi conservé dans `SYSTEME_MAD#42`; issue non fermable |
+| 2026-08-05 | `desktop-agent` | Statut post-merge du commit `e899c7d6ac5ee89310f169a786a7a75466b8c922` | Exception — aucun statut | Aucun statut combiné ni run post-merge exploitable observé | Suivi conservé dans `SYSTEME_MAD#42`; issue non fermable |
+| 2026-08-05 | `SYSTEME_MAD` | Statut post-merge du commit `962f73906ace5ae041f2b90895c56ff5eee14799` | Exception — aucun statut | Aucun statut combiné ni run post-merge exploitable observé | Suivi conservé dans `SYSTEME_MAD#42`; issue non fermable |
+
 ---
 
 ## Evidence log — branch protection
