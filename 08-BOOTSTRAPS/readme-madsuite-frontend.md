@@ -24,7 +24,7 @@ Ce dépôt contient l’interface Web de MADSuite : landing, authentification, t
 La source de vérité documentaire du projet est :
 
 ```text
-bleeband/SYSTEME_MAD
+maddevopss/SYSTEME_MAD
 ```
 
 Avant de modifier une règle structurante, une décision produit, un texte lié à MADSuite, un écran cognitif, un claim utilisateur ou une logique sensible, consulter :

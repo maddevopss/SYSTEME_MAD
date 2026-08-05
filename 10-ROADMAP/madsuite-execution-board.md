@@ -27,7 +27,7 @@ Il sert à suivre :
 
 ## Principe de pilotage
 
-La documentation officielle reste dans `bleeband/SYSTEME_MAD`.
+La documentation officielle reste dans `maddevopss/SYSTEME_MAD`.
 
 Les changements de code, tests, UI, API et packaging sont exécutés dans les dépôts spécialisés.
 
@@ -65,10 +65,10 @@ Chaque chantier doit avoir :
 
 | Chantier | Dépôt responsable | Statut | Preuve attendue | Issue | Prochaine action |
 |---|---|---|---|---|---|
-| Cartographie officielle des dépôts | `bleeband/SYSTEME_MAD` | Complété | `SYSTEME_MAD/00-SYSTEME-MAD/repos.md` | N/A | Réviser à chaque création ou migration de repo |
+| Cartographie officielle des dépôts | `maddevopss/SYSTEME_MAD` | Complété | `SYSTEME_MAD/00-SYSTEME-MAD/repos.md` | N/A | Réviser à chaque création ou migration de repo |
 | README officiel backend | `maddevopss/madsuite-backend` | Complété | `maddevopss/madsuite-backend/README.md` | `#1` fermée | Maintenir avec le code réel |
 | README officiel frontend | `maddevopss/madsuite-frontend` | Complété | `maddevopss/madsuite-frontend/README.md` | `#2` fermée | Maintenir avec le code réel |
-| Décision séparation `e2e` et `desktop-agent` | `bleeband/SYSTEME_MAD` | Complété | `ADR-004-separation-repos-execution-madsuite.md` | N/A | Maintenir l’ADR si la stratégie change |
+| Décision séparation `e2e` et `desktop-agent` | `maddevopss/SYSTEME_MAD` | Complété | `ADR-004-separation-repos-execution-madsuite.md` | N/A | Maintenir l’ADR si la stratégie change |
 | Statut repo `e2e` | `maddevopss/e2e` | Complété | `maddevopss/e2e/README.md` | `#3` fermée | Maintenir les checks E2E |
 | Statut repo `desktop-agent` | `maddevopss/desktop-agent` | Complété | `maddevopss/desktop-agent/README.md` | `#4` fermée | Maintenir garde-fous MADPROOF |
 
@@ -91,7 +91,7 @@ Chaque chantier doit avoir :
 
 | Chantier | Dépôt responsable | Statut | Preuve attendue | Issue | Prochaine action |
 |---|---|---|---|---|---|
-| Plan P2 hardening | `bleeband/SYSTEME_MAD` | Complété | `SYSTEME_MAD/10-ROADMAP/madsuite-p2-hardening-board.md` | N/A | Maintenir le plan à jour |
+| Plan P2 hardening | `maddevopss/SYSTEME_MAD` | Complété | `SYSTEME_MAD/10-ROADMAP/madsuite-p2-hardening-board.md` | N/A | Maintenir le plan à jour |
 | `.env.example` backend | `maddevopss/madsuite-backend` | Complété | `maddevopss/madsuite-backend/.env.example` | `#10` fermée | Valider contre le code réel à l’audit CI/env |
 | `.env.example` frontend | `maddevopss/madsuite-frontend` | Complété | `maddevopss/madsuite-frontend/.env.example` | `#11` fermée | Valider contre le code réel à l’audit CI/env |
 | README E2E | `maddevopss/e2e` | Complété | `maddevopss/e2e/README.md` | `#12` fermée | Maintenir avec les checks E2E |
@@ -108,22 +108,22 @@ Chaque chantier doit avoir :
 
 | Issue | Repo de suivi | Priorité | Statut |
 |---|---|---|---|
-| `#1` — Appliquer README officiel backend MADSuite | `bleeband/SYSTEME_MAD` | P0 | Fermée |
-| `#2` — Appliquer README officiel frontend MADSuite | `bleeband/SYSTEME_MAD` | P0 | Fermée |
-| `#3` — Initialiser ou réserver explicitement le repo e2e | `bleeband/SYSTEME_MAD` | P0 | Fermée |
-| `#4` — Initialiser ou réserver explicitement le repo desktop-agent | `bleeband/SYSTEME_MAD` | P0 | Fermée |
-| `#5` — Audit MADPROOF du code réel MADSuite | `bleeband/SYSTEME_MAD` | P1 | Fermée |
-| `#6` — Audit et plan de réactivation ESLint frontend | `bleeband/SYSTEME_MAD` | P1 | Fermée |
-| `#7` — Audit CI, tests et build multi-repo | `bleeband/SYSTEME_MAD` | P1 | Fermée |
-| `#8` — Vérifier cohérence modules frontend/backend | `bleeband/SYSTEME_MAD` | P1 | Fermée |
-| `#9` — Ajouter politique SECURITY minimale aux repos publics | `bleeband/SYSTEME_MAD` | P1 | Fermée |
-| `#10` — Appliquer `.env.example` backend MADSuite | `bleeband/SYSTEME_MAD` | P2 | Fermée |
-| `#11` — Appliquer `.env.example` frontend MADSuite | `bleeband/SYSTEME_MAD` | P2 | Fermée |
-| `#12` — Appliquer README minimal au repo e2e | `bleeband/SYSTEME_MAD` | P2 | Fermée |
-| `#13` — Appliquer README minimal au repo desktop-agent | `bleeband/SYSTEME_MAD` | P2 | Fermée |
-| `#14` — Remplir la matrice CI/CD multi-repo CHK-040 | `bleeband/SYSTEME_MAD` | P2 | Fermée |
-| `#15` — Appliquer PLAY-041 release Web/API MADSuite | `bleeband/SYSTEME_MAD` | P2 | Ouverte — dry run complété |
-| `#16` — Appliquer PLAY-042 initialisation repos d’exécution | `bleeband/SYSTEME_MAD` | P2 | Fermée |
+| `#1` — Appliquer README officiel backend MADSuite | `maddevopss/SYSTEME_MAD` | P0 | Fermée |
+| `#2` — Appliquer README officiel frontend MADSuite | `maddevopss/SYSTEME_MAD` | P0 | Fermée |
+| `#3` — Initialiser ou réserver explicitement le repo e2e | `maddevopss/SYSTEME_MAD` | P0 | Fermée |
+| `#4` — Initialiser ou réserver explicitement le repo desktop-agent | `maddevopss/SYSTEME_MAD` | P0 | Fermée |
+| `#5` — Audit MADPROOF du code réel MADSuite | `maddevopss/SYSTEME_MAD` | P1 | Fermée |
+| `#6` — Audit et plan de réactivation ESLint frontend | `maddevopss/SYSTEME_MAD` | P1 | Fermée |
+| `#7` — Audit CI, tests et build multi-repo | `maddevopss/SYSTEME_MAD` | P1 | Fermée |
+| `#8` — Vérifier cohérence modules frontend/backend | `maddevopss/SYSTEME_MAD` | P1 | Fermée |
+| `#9` — Ajouter politique SECURITY minimale aux repos publics | `maddevopss/SYSTEME_MAD` | P1 | Fermée |
+| `#10` — Appliquer `.env.example` backend MADSuite | `maddevopss/SYSTEME_MAD` | P2 | Fermée |
+| `#11` — Appliquer `.env.example` frontend MADSuite | `maddevopss/SYSTEME_MAD` | P2 | Fermée |
+| `#12` — Appliquer README minimal au repo e2e | `maddevopss/SYSTEME_MAD` | P2 | Fermée |
+| `#13` — Appliquer README minimal au repo desktop-agent | `maddevopss/SYSTEME_MAD` | P2 | Fermée |
+| `#14` — Remplir la matrice CI/CD multi-repo CHK-040 | `maddevopss/SYSTEME_MAD` | P2 | Fermée |
+| `#15` — Appliquer PLAY-041 release Web/API MADSuite | `maddevopss/SYSTEME_MAD` | P2 | Ouverte — dry run complété |
+| `#16` — Appliquer PLAY-042 initialisation repos d’exécution | `maddevopss/SYSTEME_MAD` | P2 | Fermée |
 | À créer — Appliquer branch protection MADPROOF par repo | Repos concernés | P0/P1 | À faire |
 
 ---

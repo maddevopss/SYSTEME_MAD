@@ -9,7 +9,7 @@ set -euo pipefail
 # - Exécuter depuis Git Bash, WSL, macOS/Linux ou tout shell bash compatible
 #
 # Repos ciblés P0 :
-# - bleeband/SYSTEME_MAD
+# - maddevopss/SYSTEME_MAD
 # - maddevopss/madsuite-backend
 # - maddevopss/madsuite-frontend
 #
@@ -124,11 +124,11 @@ JSON
 }
 JSON
 
-  apply_protection "bleeband/SYSTEME_MAD" "${tmpdir}/systeme-mad.json"
+  apply_protection "maddevopss/SYSTEME_MAD" "${tmpdir}/systeme-mad.json"
   apply_protection "maddevopss/madsuite-backend" "${tmpdir}/backend.json"
   apply_protection "maddevopss/madsuite-frontend" "${tmpdir}/frontend.json"
 
-  verify_protection "bleeband/SYSTEME_MAD"
+  verify_protection "maddevopss/SYSTEME_MAD"
   verify_protection "maddevopss/madsuite-backend"
   verify_protection "maddevopss/madsuite-frontend"
 

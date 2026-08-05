@@ -26,7 +26,7 @@ Auth simple → Organisation simple → Client → Projet → Temps manuel → F
 Les dépôts accessibles via le connecteur GitHub sont :
 
 ```text
-bleeband/SYSTEME_MAD
+maddevopss/SYSTEME_MAD
 bleeband/maddevops
 ```
 

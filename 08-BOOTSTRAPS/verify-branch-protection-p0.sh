@@ -16,7 +16,7 @@ set -euo pipefail
 # les convertisse en chemins Windows comme `C:/Program Files/Git/repos/...`.
 
 repos=(
-  "bleeband/SYSTEME_MAD"
+  "maddevopss/SYSTEME_MAD"
   "maddevopss/madsuite-backend"
   "maddevopss/madsuite-frontend"
 )

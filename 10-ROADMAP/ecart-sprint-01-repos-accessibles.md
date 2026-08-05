@@ -23,7 +23,7 @@ Client -> Projet -> Temps -> Facture -> PDF -> Valeur visible
 
 | Dépôt | Rôle observé | Statut |
 |---|---|---|
-| `bleeband/SYSTEME_MAD` | Documentation, standards, roadmap, MADPROOF | Accessible |
+| `maddevopss/SYSTEME_MAD` | Documentation, standards, roadmap, MADPROOF | Accessible |
 | `bleeband/maddevops` | Site vitrine MAD DevOps statique | Accessible |
 
 Aucun dépôt SaaS applicatif MADSuite complet n’est visible dans les dépôts accessibles au moment de cette analyse.

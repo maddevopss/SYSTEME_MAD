@@ -22,7 +22,7 @@ Il sert de référence pour éviter les faux positifs de qualité : un pipeline 
 | `maddevopss/e2e` | Tests Playwright et workflows GitHub Actions E2E. |
 | `maddevopss/madsuite-frontend` | Application frontend buildée et lancée en preview local dans la CI responsive. |
 | `maddevopss/madsuite-backend` | Backend à intégrer dans la prochaine phase pour générer une session connectée fiable. |
-| `bleeband/SYSTEME_MAD` | Source documentaire de vérité. |
+| `maddevopss/SYSTEME_MAD` | Source documentaire de vérité. |
 
 ## 3. État actuel validé
 

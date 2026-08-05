@@ -54,7 +54,7 @@ Le workflow utilise en priorité le secret `MAD_GOVERNANCE_TOKEN`, puis `github.
 Pour couvrir les dépôts privés ou lire leurs protections de branche, `MAD_GOVERNANCE_TOKEN` doit avoir au minimum :
 
 - lecture des métadonnées, issues, PR et Actions sur les dépôts surveillés;
-- écriture du contenu et des PR sur `bleeband/SYSTEME_MAD`.
+- écriture du contenu et des PR sur `maddevopss/SYSTEME_MAD`.
 
 Une réponse 403 ou 404 sur la protection de branche est enregistrée comme `non vérifiable`, jamais comme conformité.
 

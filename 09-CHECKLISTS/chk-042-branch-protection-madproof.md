@@ -48,7 +48,7 @@ La protection de branche doit rendre obligatoire :
 | `maddevopss/madsuite-frontend` | `main` | P0 |
 | `maddevopss/e2e` | `main` | P1 |
 | `maddevopss/desktop-agent` | `main` | P1 |
-| `bleeband/SYSTEME_MAD` | `main` | P0 gouvernance |
+| `maddevopss/SYSTEME_MAD` | `main` | P0 gouvernance |
 
 ---
 
@@ -214,7 +214,7 @@ npm run build:ci
 
 ## Règle recommandée — SYSTEME_MAD
 
-Repo : `bleeband/SYSTEME_MAD`
+Repo : `maddevopss/SYSTEME_MAD`
 
 Pattern :
 

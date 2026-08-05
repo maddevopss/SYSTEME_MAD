@@ -22,7 +22,7 @@ Agent desktop officiel de MADSuite.
 La source de vérité documentaire du projet est :
 
 ```text
-bleeband/SYSTEME_MAD
+maddevopss/SYSTEME_MAD
 ```
 
 Documents liés :

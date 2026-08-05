@@ -13,7 +13,7 @@ Auteur: Marc-André Dufour
 
 Vérifier, après application, que la branch protection MADPROOF P0 est active sur les trois repos minimum :
 
-- `bleeband/SYSTEME_MAD`;
+- `maddevopss/SYSTEME_MAD`;
 - `maddevopss/madsuite-backend`;
 - `maddevopss/madsuite-frontend`.
 
@@ -63,7 +63,7 @@ STATUS: PASS
 
 ## Checks obligatoires attendus
 
-### `bleeband/SYSTEME_MAD`
+### `maddevopss/SYSTEME_MAD`
 
 ```text
 Docs quality smoke
@@ -103,7 +103,7 @@ Pour chaque repo P0, le script vérifie :
 Après exécution, copier la sortie complète dans :
 
 ```text
-bleeband/SYSTEME_MAD#32
+maddevopss/SYSTEME_MAD#32
 ```
 
 Puis mettre à jour :
@@ -129,7 +129,7 @@ Créer ou mettre à jour une issue par repo en échec :
 
 - `maddevopss/madsuite-backend#30` pour le backend;
 - `maddevopss/madsuite-frontend#14` pour le frontend;
-- `bleeband/SYSTEME_MAD#32` pour SYSTEME_MAD.
+- `maddevopss/SYSTEME_MAD#32` pour SYSTEME_MAD.
 
 Corriger la règle GitHub puis relancer :
 
@@ -141,7 +141,7 @@ bash 08-BOOTSTRAPS/verify-branch-protection-p0.sh
 
 ## Statut de fermeture P0
 
-L’issue `bleeband/SYSTEME_MAD#32` peut être fermée seulement si :
+L’issue `maddevopss/SYSTEME_MAD#32` peut être fermée seulement si :
 
 1. les trois repos affichent `STATUS: PASS`;
 2. la sortie complète est copiée dans l’issue;

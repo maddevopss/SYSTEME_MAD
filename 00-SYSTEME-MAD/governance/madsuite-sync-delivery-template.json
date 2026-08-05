@@ -28,7 +28,7 @@
     },
     "governance": {
       "required": true,
-      "repository": "bleeband/SYSTEME_MAD",
+      "repository": "maddevopss/SYSTEME_MAD",
       "pullRequest": 1,
       "commit": "0000000000000000000000000000000000000000"
     }

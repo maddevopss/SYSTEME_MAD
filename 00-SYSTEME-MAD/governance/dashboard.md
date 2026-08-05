@@ -17,7 +17,7 @@ Auteur: Marc-André Dufour
 
 | Dépôt | Santé | État |
 | --- | --- | --- |
-| `bleeband/SYSTEME_MAD` | 🟢 | Gouvernance active; P0 validé |
+| `maddevopss/SYSTEME_MAD` | 🟢 | Gouvernance active; P0 validé |
 | `maddevopss/madsuite` | 🟢 | CI agrégateur corrigée |
 | `maddevopss/madsuite-frontend` | 🟢 | Guards, tests et build verts |
 | `maddevopss/madsuite-backend` | 🟢 | CI et guards stabilisés |

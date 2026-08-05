@@ -32,7 +32,7 @@
         },
         "governance": {
           "required": true,
-          "repository": "bleeband/SYSTEME_MAD",
+          "repository": "maddevopss/SYSTEME_MAD",
           "pullRequest": 412,
           "commit": "6d75cd5ab4ede72df17ab50451c04fdefb2653b5"
         }
@@ -78,7 +78,7 @@
         },
         "governance": {
           "required": true,
-          "repository": "bleeband/SYSTEME_MAD",
+          "repository": "maddevopss/SYSTEME_MAD",
           "pullRequest": 425,
           "commit": "ed3ed10adb7a6b41bb4e902db26892cf7c265b7f"
         }
@@ -126,7 +126,7 @@
         },
         "governance": {
           "required": true,
-          "repository": "bleeband/SYSTEME_MAD",
+          "repository": "maddevopss/SYSTEME_MAD",
           "pullRequest": 427,
           "commit": "34da4744089fd51a6de336f90c6e39287c5c8ef9"
         }

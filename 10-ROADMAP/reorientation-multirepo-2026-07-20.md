@@ -17,7 +17,7 @@ SYSTEME_MAD demeure la source de vérité documentaire, institutionnelle et MADP
 
 | Dépôt | Responsabilité principale | Hors portée |
 |---|---|---|
-| `bleeband/SYSTEME_MAD` | gouvernance, décisions, standards, preuves, roadmap | code d’exécution applicatif |
+| `maddevopss/SYSTEME_MAD` | gouvernance, décisions, standards, preuves, roadmap | code d’exécution applicatif |
 | `maddevopss/madsuite` | orientation publique et orchestration légère | duplication frontend/backend |
 | `maddevopss/madsuite-frontend` | interface React/Vite et orchestration UI | logique métier sensible |
 | `maddevopss/madsuite-backend` | API, sécurité, données, règles métier | décisions institutionnelles |
