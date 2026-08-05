@@ -5,6 +5,7 @@ import argparse
 import json
 import os
 import re
+import subprocess
 import sys
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -126,8 +127,32 @@ def github_json(path: str, token: str) -> dict:
         return json.load(response)
 
 
+def validate_local_commit(commit: str, prefix: str) -> list[str]:
+    errors: list[str] = []
+    exists = subprocess.run(
+        ["git", "cat-file", "-e", f"{commit}^{{commit}}"],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        check=False,
+    )
+    if exists.returncode != 0:
+        return [f"{prefix}: commit local {commit} introuvable."]
+
+    ancestor = subprocess.run(
+        ["git", "merge-base", "--is-ancestor", commit, "HEAD"],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        check=False,
+    )
+    if ancestor.returncode != 0:
+        errors.append(f"{prefix}: commit {commit} non intégré à HEAD.")
+    return errors
+
+
 def validate_remote(payload: dict, token: str) -> list[str]:
     errors: list[str] = []
+    current_repository = os.environ.get("GITHUB_REPOSITORY", "").strip().lower()
+
     for delivery in payload.get("deliveries", []):
         if delivery.get("status") != "closed":
             continue
@@ -139,6 +164,11 @@ def validate_remote(payload: dict, token: str) -> list[str]:
             pr_number = entry["pullRequest"]
             commit = entry["commit"]
             prefix = f"{delivery_id}/{key}"
+
+            if current_repository and repository.lower() == current_repository:
+                errors.extend(validate_local_commit(commit, prefix))
+                continue
+
             try:
                 pr = github_json(f"/repos/{repository}/pulls/{pr_number}", token)
                 if pr.get("merged_at") is None:
