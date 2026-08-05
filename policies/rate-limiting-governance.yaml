@@ -1,0 +1,421 @@
+# Rate Limiting & Abuse Prevention Governance Policies
+# Stage 6 PR H - Multi-tenant Financial/HR/Payroll Platform
+
+governance:
+  system: "rate-limiting-abuse-prevention"
+  stage: "stage6-pr-h"
+  version: "1.0.0"
+  scope:
+    - backend-api
+    - frontend-client
+    - desktop-agent
+    - multi-tenant-isolation
+
+policies:
+  rate_limit_enforcement:
+    name: "Global Rate Limiting Enforcement"
+    description: "Rate limit policies for API protection and abuse prevention"
+    requirements:
+      - "All API endpoints must be covered by rate limiting policies"
+      - "Global policies must be enforced across all server instances"
+      - "Exempt user lists must be maintained for special cases"
+      - "Burst capacity must be configured based on endpoint characteristics"
+    validation:
+      - endpoint_pattern_regex_validation
+      - requests_per_window_validation
+      - burst_capacity_consistency_check
+      - exempt_user_list_audit_trail
+    enforcement_type:
+      - strict: "Block request, return 429"
+      - soft: "Log warning, allow request"
+      - warning: "Log warning, rate limit at higher threshold"
+    audit:
+      - policy_creation_timestamp
+      - policy_modification_history
+      - enforcement_decisions
+      - limit_exceeded_events
+
+  abuse_detection:
+    name: "Abuse Detection & Alert Management"
+    description: "Detect and track abusive behavior across 7 threat types"
+    threat_types:
+      brute_force:
+        description: "Multiple failed login attempts"
+        indicators:
+          - multiple_failed_logins: 10+
+          - time_window: "1 minute"
+          - severity: "high"
+      credential_stuffing:
+        description: "Rapid login attempts with different credentials"
+        indicators:
+          - rapid_credentials: 20+
+          - time_window: "5 minutes"
+          - severity: "critical"
+      bot_activity:
+        description: "Automated request patterns"
+        indicators:
+          - identical_user_agent: true
+          - request_timing_precision: "milliseconds"
+          - severity: "medium"
+      ddos:
+        description: "Distributed Denial of Service"
+        indicators:
+          - request_spike: "500%+"
+          - unique_sources: 1000+
+          - severity: "critical"
+      api_abuse:
+        description: "API endpoint flooding or misuse"
+        indicators:
+          - burst_requests: 1000+
+          - endpoint_specific: true
+          - severity: "high"
+      spam:
+        description: "Repeated content submission"
+        indicators:
+          - duplicate_content: 50+
+          - submission_rate: "high"
+          - severity: "low"
+      scraping:
+        description: "Systematic data extraction"
+        indicators:
+          - sequential_access: true
+          - data_volume: "large"
+          - severity: "medium"
+    detection_methods:
+      - rate_limit_exceeded
+      - pattern_matching
+      - behavioral_analysis
+      - anomaly_detection
+      - heuristic_scoring
+    response_actions:
+      - alert_recording
+      - entity_blocking
+      - ip_access_control
+      - request_queuing
+      - escalation
+
+  entity_blocking:
+    name: "Entity Blocking Policy"
+    description: "Block users, IPs, or API keys based on abuse alerts"
+    block_types:
+      temporary:
+        duration_range: "1 minute to 24 hours"
+        use_cases:
+          - rate_limit_exceeded
+          - failed_login_attempts
+          - unusual_pattern_detected
+        auto_unblock: true
+      permanent:
+        use_cases:
+          - critical_ddos_attack
+          - malware_distribution
+          - coordinated_attack
+        auto_unblock: false
+        manual_review: true
+    tracking:
+      - block_reason
+      - block_timestamp
+      - block_duration
+      - unblock_timestamp
+      - unblock_reason
+    audit:
+      - who_initiated_block
+      - approval_workflow
+      - evidence_chain
+      - reversal_procedure
+
+  ip_access_control:
+    name: "IP Allowlist/Blocklist Management"
+    description: "Fine-grained IP-based access control"
+    list_types:
+      allowlist:
+        description: "Only allow requests from listed IPs"
+        use_cases:
+          - internal_office_networks
+          - trusted_partner_ips
+          - monitoring_service_ips
+        precedence: higher
+      blocklist:
+        description: "Block requests from listed IPs"
+        use_cases:
+          - known_malicious_ips
+          - botnet_ranges
+          - compromised_networks
+        precedence: lower
+    addressing:
+      individual_ips:
+        format: "192.168.1.1"
+        applicability: "single host"
+      cidr_ranges:
+        format: "10.0.0.0/8"
+        applicability: "network segments"
+      endpoints:
+        specific: true
+        patterns: "regex"
+    expiration:
+      permanent: "no expiry date"
+      temporary: "configurable duration"
+      auto_cleanup: "expired entries removed daily"
+
+  traffic_anomaly_detection:
+    name: "Traffic Anomaly Detection"
+    description: "Detect unusual traffic patterns and DDoS attacks"
+    anomaly_types:
+      traffic_spike:
+        detection: "baseline vs peak RPS comparison"
+        threshold: "300%+ increase"
+        severity: "high"
+      unusual_pattern:
+        detection: "deviation from historical pattern"
+        metrics:
+          - request_distribution
+          - endpoint_access_patterns
+          - user_behavior_clustering
+        severity: "medium"
+      distributed_attack:
+        detection: "multiple source IPs, coordinated requests"
+        indicators:
+          - unique_sources: 100+
+          - synchronized_timing: true
+        severity: "critical"
+      slow_attack:
+        detection: "gradual resource exhaustion"
+        timeframe: "hours"
+        severity: "medium"
+      resource_exhaustion:
+        detection: "CPU/memory/connection limits approached"
+        metrics:
+          - cpu_utilization
+          - memory_usage
+          - active_connections
+        severity: "high"
+    mitigation:
+      rate_limit_increase:
+        adaptive: true
+        cooldown_period: "1 hour"
+      ip_blocking:
+        automatic: false
+        manual_review: true
+      captcha_challenges:
+        probability: "10-50%"
+        threshold: "medium+ severity"
+      circuit_breaker:
+        threshold: "critical severity"
+        recovery_time: "5-10 minutes"
+
+  bot_detection:
+    name: "Bot Detection & Management"
+    description: "Identify and track bot activity"
+    bot_types:
+      search_engine:
+        examples: ["Googlebot", "Bingbot", "Yandex"]
+        action: "allowed"
+        confidence_threshold: 0.95
+      monitoring:
+        examples: ["UptimeBot", "Pingdom", "StatusCake"]
+        action: "allowed"
+        confidence_threshold: 0.90
+      malicious:
+        examples: ["CurlBot", "WgetBot", "Unknown"]
+        action: "blocked"
+        confidence_threshold: 0.75
+      scraper:
+        examples: ["Scrapy", "BeautifulSoup", "Selenium"]
+        action: "rate_limited"
+        confidence_threshold: 0.80
+      unknown:
+        classification: "pending_analysis"
+        action: "monitor"
+        confidence_threshold: 0.50
+    detection_methods:
+      ua_parsing:
+        priority: "high"
+        accuracy: "85-95%"
+      behavioral_analysis:
+        priority: "high"
+        indicators:
+          - request_timing
+          - payload_patterns
+          - header_consistency
+      ip_reputation:
+        priority: "medium"
+        data_sources:
+          - abuse_ipdb
+          - spamhaus
+          - custom_feeds
+      pattern_matching:
+        priority: "medium"
+        patterns:
+          - common_bot_signatures
+          - malicious_payloads
+          - exploit_attempts
+    cryptographic_signatures:
+      algorithm: "sha256"
+      components:
+        - source_ip
+        - user_agent
+        - timestamp
+      uniqueness: "bot tracking and fingerprinting"
+
+  request_queuing:
+    name: "Request Queuing Policy"
+    description: "Queue rate-limited requests for later processing"
+    queue_strategy:
+      fifo: "First-In-First-Out by default"
+      priority_override: "higher priority requests processed first"
+      priority_levels: "10 (highest) to -10 (lowest)"
+    processing:
+      exponential_backoff: true
+      initial_delay: "1 second"
+      max_delay: "30 seconds"
+      retry_limit: "10 attempts"
+      timeout: "configurable"
+    queue_limits:
+      max_queue_size: "10000 requests"
+      per_user_max: "100 requests"
+      per_ip_max: "500 requests"
+    metadata:
+      tracking:
+        - queue_entry_time
+        - retry_count
+        - original_request_info
+        - queue_position
+      statistics:
+        - avg_wait_time
+        - success_rate
+        - failure_rate
+
+  organization_isolation:
+    name: "Multi-Tenant Rate Limit Isolation"
+    description: "Ensure rate limits are per-organization and isolated"
+    requirements:
+      - "Rate limit policies scoped to organization"
+      - "Tracking records isolated by organization"
+      - "Abuse alerts per-organization"
+      - "IP controls per-organization"
+      - "No cross-organization leakage"
+    foreign_keys:
+      rate_limit_policies:
+        - organization_id
+      rate_limit_tracking:
+        - organization_id
+      abuse_detection_alerts:
+        - organization_id
+      ip_access_control:
+        - organization_id
+      traffic_anomaly_detection:
+        - organization_id
+      bot_detection_records:
+        - organization_id
+      throttle_queue:
+        - organization_id
+    row_level_security:
+      enabled: true
+      policy_level: "organization_id"
+      enforcement: "database level"
+
+  client_side_limiting:
+    name: "Client-Side Rate Limiting"
+    description: "Frontend and desktop agent rate limiting"
+    frontend:
+      capabilities:
+        - local_request_tracking
+        - queue_management
+        - ui_alert_display
+        - abuse_pattern_detection
+      hooks:
+        - useRateLimit
+        - useLocalRateLimit
+      services:
+        - RateLimitService
+        - AbuseDetectionService
+      components:
+        - RateLimitAlert
+        - RequestQueueStatus
+        - RateLimitIndicator
+    desktop_agent:
+      capabilities:
+        - rate_limit_header_processing
+        - request_queueing
+        - endpoint_blocking
+        - event_emission
+      event_types:
+        - rateLimited
+        - rateLimitUpdated
+        - requestQueued
+        - queuedRequestProcessed
+        - queuedRequestFailed
+        - endpointBlocked
+        - queueProcessingComplete
+
+monitoring:
+  metrics:
+    - current_limited_entities
+    - rate_limit_violations_per_org
+    - abuse_alert_frequency
+    - queue_processing_time
+    - bot_detection_accuracy
+    - traffic_anomaly_detection_rate
+  dashboards:
+    - rate_limit_status
+    - abuse_detection_overview
+    - traffic_anomalies
+    - bot_detection_trends
+  alert_triggers:
+    - critical_abuse_alert_received
+    - ddos_detected
+    - unusual_spike_percentage_gt_500
+    - queue_length_exceeds_limit
+    - false_positive_rate_high
+    - system_response_degradation
+
+compliance:
+  audit_trail:
+    required_fields:
+      - timestamp
+      - organization_id
+      - user_id_or_ip
+      - action
+      - reason
+      - result
+  retention:
+    rate_limit_tracking: "30 days rolling"
+    abuse_alerts: "90 days minimum"
+    ip_access_control: "permanent"
+    traffic_anomalies: "7 days rolling"
+    bot_records: "30 days rolling"
+    request_queue: "logs only, 7 days"
+  review_requirements:
+    permanent_blocks: "monthly review"
+    escalated_alerts: "within 24 hours"
+    false_positives: "immediate investigation"
+
+testing:
+  requirements:
+    backend_integration_tests: "80+ test cases"
+    frontend_unit_tests: "comprehensive coverage"
+    e2e_scenarios: "20+ integration tests"
+    load_testing: "simulate sustained rate limiting"
+    chaos_engineering: "test failure scenarios"
+  coverage_targets:
+    unit_tests: ">90%"
+    integration_tests: "all major paths"
+    e2e_tests: "critical user journeys"
+
+deployment:
+  prerequisites:
+    - database_migration_completed
+    - summary_views_created
+    - api_endpoints_deployed
+    - frontend_components_deployed
+    - e2e_tests_passing
+  validation:
+    - rate_limit_headers_present
+    - 429_responses_correct
+    - queue_processing_working
+    - alerts_displaying
+    - blocked_ips_working
+  rollback:
+    - database_migration_reversible
+    - feature_flag_disable_available
+    - 30_minute_rollback_window
