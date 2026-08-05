@@ -33,7 +33,7 @@ Elle couvre :
 ## Repos couverts
 
 ```text
-bleeband/SYSTEME_MAD
+maddevopss/SYSTEME_MAD
 bleeband/maddevops
 maddevopss/madsuite-frontend
 maddevopss/madsuite-backend
@@ -62,7 +62,7 @@ maddevopss/desktop-agent
 
 | Repo | Build | Test | Lint | Guards | Dépendances | Branch protection | Env / secrets | CI | Statut |
 |---|---|---|---|---|---|---|---|---|---|
-| `bleeband/SYSTEME_MAD` | N/A | Docs QA manuel | YAML/Markdown manuel | N/A | À surveiller manuellement | À appliquer selon CHK-042 | Interne / à surveiller | Non requis | Source de vérité active |
+| `maddevopss/SYSTEME_MAD` | N/A | Docs QA manuel | YAML/Markdown manuel | N/A | À surveiller manuellement | À appliquer selon CHK-042 | Interne / à surveiller | Non requis | Source de vérité active |
 | `bleeband/maddevops` | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | À vérifier | Hors scope immédiat MADSuite produit |
 | `maddevopss/madsuite-frontend` | `npm run build` | `npm test -- --watchAll=false` | `npm run lint` | gitignore, hygiene, modules API | Dependabot npm + Actions | À appliquer selon CHK-042 | `.env.example` autorisé; secrets `VITE_*` interdits | `.github/workflows/ci.yml` | Guards + Dependabot appliqués, branch protection à appliquer |
 | `maddevopss/madsuite-backend` | `node -c server.js`; build TS à clarifier | `npm test`; `npm run test:security` | `npm run lint` | gitignore, hygiene, routes, organisation routes | Dependabot npm + Actions | À appliquer selon CHK-042 | `.env.example` autorisé; `.env` bloqué | `.github/workflows/ci.yml` avec Postgres service | Guards + Dependabot appliqués, branch protection à appliquer |

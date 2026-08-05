@@ -22,7 +22,7 @@ Dépôt officiel des tests end-to-end MADSuite.
 La source de vérité documentaire du projet est :
 
 ```text
-bleeband/SYSTEME_MAD
+maddevopss/SYSTEME_MAD
 ```
 
 Documents liés :

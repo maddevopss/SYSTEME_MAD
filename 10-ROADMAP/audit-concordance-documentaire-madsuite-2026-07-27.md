@@ -15,7 +15,7 @@ Vérifier que les README et les documents centraux décrivent fidèlement l’é
 
 ## Périmètre examiné
 
-- `bleeband/SYSTEME_MAD`;
+- `maddevopss/SYSTEME_MAD`;
 - `maddevopss/madsuite-backend`;
 - `maddevopss/madsuite-frontend`;
 - `maddevopss/e2e`;

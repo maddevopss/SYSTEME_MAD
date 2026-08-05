@@ -24,7 +24,7 @@ MADSuite est considéré **MADPROOF-READY+ verrouillé côté GitHub** au 2026-0
 
 ## Périmètre certifié
 
-- `bleeband/SYSTEME_MAD`
+- `maddevopss/SYSTEME_MAD`
 - `maddevopss/madsuite-frontend`
 - `maddevopss/madsuite-backend`
 - `maddevopss/e2e`

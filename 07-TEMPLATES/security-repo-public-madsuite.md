@@ -93,7 +93,7 @@ Please allow reasonable time for review and remediation before public disclosure
 The official governance source for MADSuite is:
 
 ```text
-bleeband/SYSTEME_MAD
+maddevopss/SYSTEME_MAD
 ```
 
 Relevant documents:

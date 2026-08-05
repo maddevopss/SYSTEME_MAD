@@ -99,7 +99,7 @@ Le statut global ne peut pas devenir “validé” tant que les points suivants 
 
 ## P0 actif — Branch protection
 
-Issue centrale : `bleeband/SYSTEME_MAD#32`.
+Issue centrale : `maddevopss/SYSTEME_MAD#32`.
 
 Script d’application préparé :
 
@@ -109,7 +109,7 @@ Script d’application préparé :
 
 Repos P0 minimum :
 
-- `bleeband/SYSTEME_MAD`;
+- `maddevopss/SYSTEME_MAD`;
 - `maddevopss/madsuite-backend`;
 - `maddevopss/madsuite-frontend`.
 

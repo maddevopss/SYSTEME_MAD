@@ -25,11 +25,11 @@ Il sert de référence pour :
 
 ## Principe directeur
 
-`bleeband/SYSTEME_MAD` est le dépôt gardien.
+`maddevopss/SYSTEME_MAD` est le dépôt gardien.
 
 Les autres dépôts sont des dépôts d’exécution, d’implémentation, de vitrine ou de validation.
 
-Lorsqu’un doute existe entre un document produit local et une règle officielle du Système MAD, la règle située dans la structure officielle du dépôt `bleeband/SYSTEME_MAD` prévaut, sauf ADR contraire.
+Lorsqu’un doute existe entre un document produit local et une règle officielle du Système MAD, la règle située dans la structure officielle du dépôt `maddevopss/SYSTEME_MAD` prévaut, sauf ADR contraire.
 
 ---
 
@@ -37,7 +37,7 @@ Lorsqu’un doute existe entre un document produit local et une règle officiell
 
 | Dépôt | Visibilité | Rôle | Statut | Priorité |
 |---|---|---|---|---|
-| `bleeband/SYSTEME_MAD` | Privé | Source de vérité documentaire, gouvernance, standards, ADR, playbooks, MADPROOF, roadmap et mémoire institutionnelle | Actif; constat des fondations MADSuite V1 fusionné | P0 |
+| `maddevopss/SYSTEME_MAD` | Privé | Source de vérité documentaire, gouvernance, standards, ADR, playbooks, MADPROOF, roadmap et mémoire institutionnelle | Actif; constat des fondations MADSuite V1 fusionné | P0 |
 
 ### Responsabilités
 
@@ -56,7 +56,7 @@ Ce dépôt conserve :
 
 ### Règle d’usage
 
-Avant de modifier un dépôt de développement, vérifier les règles applicables dans le dépôt `bleeband/SYSTEME_MAD`, notamment :
+Avant de modifier un dépôt de développement, vérifier les règles applicables dans le dépôt `maddevopss/SYSTEME_MAD`, notamment :
 
 ```text
 MANIFEST.md
@@ -102,7 +102,7 @@ Les dépôts publics ne doivent pas contenir :
 - fragments confidentiels issus de la recherche MADPROOF;
 - informations pouvant exposer l’architecture de sécurité de production.
 
-Les éléments sensibles restent dans `bleeband/SYSTEME_MAD` ou dans un espace privé contrôlé.
+Les éléments sensibles restent dans `maddevopss/SYSTEME_MAD` ou dans un espace privé contrôlé.
 
 ---
 
@@ -112,7 +112,7 @@ Avant de modifier un dépôt de développement, un agent IA doit :
 
 1. identifier le dépôt cible;
 2. vérifier si la demande touche MADSuite, MADPROOF, l’IA, la cognition, la sécurité ou la gouvernance;
-3. lire les documents officiels applicables dans `bleeband/SYSTEME_MAD`;
+3. lire les documents officiels applicables dans `maddevopss/SYSTEME_MAD`;
 4. éviter de créer une nouvelle règle locale si une règle centrale existe déjà;
 5. ne jamais traiter un dépôt de développement comme source de vérité documentaire principale;
 6. signaler les écarts entre le code et la documentation officielle;
@@ -125,7 +125,7 @@ Avant de modifier un dépôt de développement, un agent IA doit :
 
 | Décision | Statut | Impact |
 |---|---|---|
-| `bleeband/SYSTEME_MAD` est la source documentaire officielle | Accepté | Toute règle centrale doit y être conservée |
+| `maddevopss/SYSTEME_MAD` est la source documentaire officielle | Accepté | Toute règle centrale doit y être conservée |
 | MADSuite est non médical | Accepté | Les dépôts frontend, backend et desktop doivent respecter les garde-fous MADPROOF |
 | Les affirmations MADSuite passent par MADPROOF | Accepté | Aucun texte produit ne doit promettre un effet clinique ou mesurer un état mental réel |
 | Les dépôts `e2e` et `desktop-agent` sont des dépôts d’exécution séparés | Accepté | Voir `ADR-004-separation-repos-execution-madsuite.md` |

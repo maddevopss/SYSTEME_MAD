@@ -31,7 +31,7 @@ Merge direct main ≠ discipline produit
 
 | Repo | Rôle | Protection requise |
 |---|---|---|
-| `bleeband/SYSTEME_MAD` | Gouvernance/source de vérité | Revue/docs contrôlées |
+| `maddevopss/SYSTEME_MAD` | Gouvernance/source de vérité | Revue/docs contrôlées |
 | `maddevopss/madsuite-backend` | Backend/API/données | Obligatoire |
 | `maddevopss/madsuite-frontend` | Web app/UI | Obligatoire |
 | `maddevopss/desktop-agent` | Agent local/Electron | Obligatoire si distribué |

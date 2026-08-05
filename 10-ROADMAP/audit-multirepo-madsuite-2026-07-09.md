@@ -21,7 +21,7 @@ Tracer l’état réel des principaux dépôts MADSuite après fermeture des blo
 - `maddevopss/e2e`
 - `maddevopss/madsuite`
 - `bleeband/maddevops`
-- `bleeband/SYSTEME_MAD`
+- `maddevopss/SYSTEME_MAD`
 
 ## Synthèse
 

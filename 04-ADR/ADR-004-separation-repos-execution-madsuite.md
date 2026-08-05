@@ -26,7 +26,7 @@ MADSuite évolue maintenant avec plusieurs surfaces techniques :
 - documentation officielle;
 - gouvernance MADPROOF.
 
-Le Système MAD définit déjà une source documentaire officielle dans `bleeband/SYSTEME_MAD`.
+Le Système MAD définit déjà une source documentaire officielle dans `maddevopss/SYSTEME_MAD`.
 
 Les dépôts de développement doivent maintenant être clairement séparés pour éviter :
 
@@ -45,7 +45,7 @@ MADSuite est organisé autour de dépôts spécialisés.
 
 | Dépôt | Rôle officiel |
 |---|---|
-| `bleeband/SYSTEME_MAD` | Source de vérité documentaire, standards, ADR, MADPROOF, roadmap et gouvernance |
+| `maddevopss/SYSTEME_MAD` | Source de vérité documentaire, standards, ADR, MADPROOF, roadmap et gouvernance |
 | `maddevopss/madsuite-frontend` | Interface Web MADSuite |
 | `maddevopss/madsuite-backend` | API, logique métier, données, sécurité, jobs, intégrations |
 | `maddevopss/e2e` | Tests end-to-end, scénarios critiques et validation multi-surface |
