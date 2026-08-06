@@ -104,3 +104,5 @@ Le corpus demeure une source de recherche à analyser. Les éléments admissible
 8. IA et souveraineté.
 
 Chaque lot devra recevoir son propre rapport de preuve et son propre verdict MADPROOF.
+
+<!-- ci-trigger: PR-477 2026-08-06 -->
