@@ -199,3 +199,5 @@ Ce standard ne :
 
 Le standard peut guider les futurs modules après adaptation au design system réellement utilisé et validation par revue frontend/accessibilité.
 
+
+<!-- ci-trigger: PR-480 2026-08-06 -->
