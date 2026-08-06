@@ -140,7 +140,7 @@ Une intégration produit exige une décision séparée, des tests ciblés et une
 ## 11. Références internes
 
 - `13-RESSOURCES/research/03-madproof/000-cadre-madproof.md`
-- `13-RESSOURCES/research/03-madproof/010-continuite-cognitive-cadre-conceptuel.md`
+- `13-RESSOURCES/research/02-rd-hypotheses/001-mad-ariane-snapshot-reprise.md`
 - `13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md`
 - `09-CHECKLISTS/chk-032-validation-claim-madproof.md`
 
