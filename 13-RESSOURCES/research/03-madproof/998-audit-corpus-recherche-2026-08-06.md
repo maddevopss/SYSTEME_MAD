@@ -104,7 +104,3 @@ Le corpus demeure une source de recherche à analyser. Les éléments admissible
 8. IA et souveraineté.
 
 Chaque lot devra recevoir son propre rapport de preuve et son propre verdict MADPROOF.
-
-## 8. Prochaine action
-
-Traiter en premier le lot 02 — Cognition / continuité cognitive, car il touche directement MADSuite et exige l’application stricte de la position non médicale et du registre des claims MADPROOF.
