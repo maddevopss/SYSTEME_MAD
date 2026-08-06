@@ -151,3 +151,5 @@ Cette PR ne constitue ni une étude de mobilité, ni une certification d'interop
 - Revue juridique québécoise requise pour les claims réglementaires et contractuels.
 - CHK-032 requise avant tout claim public.
 
+
+<!-- ci-trigger: PR-483 2026-08-06 -->
