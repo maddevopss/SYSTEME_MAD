@@ -102,3 +102,4 @@ Il ne constitue toutefois ni une norme comptable, ni un avis fiscal, ni une preu
 ## Limites
 
 Ce document n’est ni un avis comptable, fiscal ou juridique, ni une certification, ni une preuve de conformité, ni une validation scientifique, ni une spécification prête à coder.
+
