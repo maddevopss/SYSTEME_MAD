@@ -1,3 +1,11 @@
+---
+Projet: SYSTÈME_MAD / MADPROOF
+Document: Verdict documentaire de recherche
+Version: 1.0
+Dernière révision: 2026-08-06
+Statut: R&D / base de conception sous conditions
+Auteur: MAD DevOps
+---
 # Verdict MADPROOF — Lot 04 : comptabilité, fiscalité, ERP et opérations
 
 > **ID document :** 04-COMPTA-MADPROOF-2026-08-06  
