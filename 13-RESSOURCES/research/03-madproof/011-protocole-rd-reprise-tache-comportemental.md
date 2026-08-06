@@ -2,9 +2,9 @@
 Projet: MADSuite / MAD DevOps
 Document: Protocole R&D comportemental de reprise de tâche
 Version: 1.0
-Date: 2026-08-06
+Dernière révision: 2026-08-06
 Statut: R&D — non médical — non officiel produit
-Propriétaire: MAD DevOps
+Auteur: MAD DevOps
 ---
 
 # Protocole R&D comportemental de reprise de tâche
