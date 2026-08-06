@@ -120,3 +120,4 @@ Ce verdict ne remplace pas une recherche juridique à jour, une opinion professi
 - **Tests :** aucun test produit ou juridique exécuté.
 - **Preuves :** 6 documents Drive lus; sources primaires listées ci-dessus.
 - **Validations :** revues spécialisées requises avant fusion ou implémentation.
+
