@@ -130,3 +130,5 @@ La fonction ne peut passer en staging que si la checklist associée est remplie,
 
 Toute implémentation réelle exige une validation du flux, des fournisseurs réseau, des permissions, de l’isolation organisationnelle et des obligations applicables au contexte d’utilisation.
 
+
+<!-- ci-trigger: PR-482 2026-08-06 -->
