@@ -184,3 +184,5 @@ Une intégration produit exige une décision séparée, des tests ciblés et une
 ## Limites
 
 Ce document n’est ni une étude scientifique, ni un protocole clinique, ni une approbation éthique, ni une preuve d’efficacité, ni une spécification produit finale.
+
+<!-- ci-trigger: PR-488 2026-08-06 -->
