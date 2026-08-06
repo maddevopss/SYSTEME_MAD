@@ -144,3 +144,5 @@ Le lot demeure classé **R&D / base de conception sous conditions / à validatio
 
 Ce verdict n’est ni un audit de sécurité, ni une certification, ni un avis juridique, ni une revue systématique. Les documents originaux demeurent dans Google Drive et n’ont pas été modifiés.
 
+
+<!-- ci-trigger: PR-481 2026-08-06 -->
