@@ -121,3 +121,5 @@ Ce verdict ne remplace pas une recherche juridique à jour, une opinion professi
 - **Preuves :** 6 documents Drive lus; sources primaires listées ci-dessus.
 - **Validations :** revues spécialisées requises avant fusion ou implémentation.
 
+
+<!-- ci-trigger: PR-486 2026-08-06 -->
