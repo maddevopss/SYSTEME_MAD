@@ -198,3 +198,4 @@ Ce standard ne :
 **MADPROOF-ENGINEERING-RD : admissible sous conditions.**
 
 Le standard peut guider les futurs modules après adaptation au design system réellement utilisé et validation par revue frontend/accessibilité.
+
