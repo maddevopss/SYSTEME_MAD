@@ -150,3 +150,4 @@ Cette PR ne constitue ni une étude de mobilité, ni une certification d'interop
 - Revue technique géospatiale requise avant standard canonique.
 - Revue juridique québécoise requise pour les claims réglementaires et contractuels.
 - CHK-032 requise avant tout claim public.
+
