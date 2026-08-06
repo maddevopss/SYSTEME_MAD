@@ -122,3 +122,5 @@ Le lot est conservé comme **ressource de recherche technique et base de concept
 ## 10. Limites
 
 Ce verdict n’est ni une revue systématique, ni une certification d’accessibilité, ni une validation juridique, fiscale, médicale, géospatiale ou commerciale. Les documents originaux demeurent dans Google Drive et n’ont pas été modifiés.
+
+<!-- ci-trigger: PR-479 2026-08-06 -->
