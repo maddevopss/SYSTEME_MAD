@@ -197,3 +197,4 @@ Aucune.
 Ce rapport n’est ni une revue systématique, ni une validation scientifique,
 médicale, juridique, cryptographique, commerciale ou de sécurité. Les documents
 sources demeurent des recherches et des propositions exploratoires.
+
