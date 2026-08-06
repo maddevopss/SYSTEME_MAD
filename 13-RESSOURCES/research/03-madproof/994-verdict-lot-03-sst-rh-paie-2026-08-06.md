@@ -117,3 +117,4 @@ La Loi 25 ne transforme pas un système en système conforme par la seule prése
 ## Prochaine étape
 
 Traiter séparément les lacunes concrètes qui pourraient devenir des standards techniques MAD : modèle d’autorisation RH/SST/paie, matrice de minimisation des données et protocole de revue humaine des alertes.
+
