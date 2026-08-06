@@ -97,3 +97,5 @@ Créer un protocole R&D séparé pour tester un indicateur comportemental de rep
 - comparaison avec et sans point de reprise choisi par l’utilisateur.
 
 Le protocole ne devra pas utiliser de caméra, microphone, biométrie ou inférence médicale.
+
+<!-- ci-trigger: PR-478 2026-08-06 -->
