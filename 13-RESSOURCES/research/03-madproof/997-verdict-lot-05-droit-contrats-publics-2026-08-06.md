@@ -1,3 +1,11 @@
+---
+Projet: SYSTÈME_MAD / MADPROOF
+Document: Verdict documentaire de recherche
+Version: 1.0
+Dernière révision: 2026-08-06
+Statut: R&D / base de conception sous conditions
+Auteur: MAD DevOps
+---
 # Verdict MADPROOF — lot 05 — droit, vie privée, propriété intellectuelle et contrats publics
 
 > **ID document :** 05-MADPROOF-DROIT-CONTRATS-2026-08-06  
