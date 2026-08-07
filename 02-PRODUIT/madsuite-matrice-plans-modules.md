@@ -1,175 +1,95 @@
 ---
 Projet: MADSuite
 Document: Matrice officielle — Plans, modules et accès
-Version: 0.2
-Dernière révision: 2026-07-05
-Statut: Brouillon contrôlé
+Version: 1.0
+Dernière révision: 2026-08-07
+Statut: Décision produit approuvée — implémentation à valider
 Auteur: Marc-André Dufour
 ---
 
 # Matrice officielle — Plans, modules et accès
 
-## Rôle du document
+## Rôle
 
-Ce document définit la vérité produit attendue pour les plans, les modules visibles et les accès associés.
+Cette matrice est la source produit de référence pour le packaging MADSuite. Les clés techniques doivent rester identiques dans les registres backend et frontend.
 
-Il sert à éviter :
+## Décision commerciale
 
-- les modules fantômes;
-- les accès incohérents;
-- les différences non expliquées entre frontend et backend;
-- les organisations admin incomplètes;
-- les upgrades forcés ou confus;
-- les décisions de code non documentées.
+| Plan | Prix CAD/mois | Positionnement | Modules inclus |
+|---|---:|---|---|
+| Free | 0 $ | Découverte durable | dashboard, clients, projects, time_tracking |
+| Trial | 14 jours gratuits | Essai complet du Solo, sans carte obligatoire | Modules Free + invoices |
+| Solo | 15,99 $ | Travailleur autonome | Modules Free + invoices |
+| Pro | 39,99 $ | Petite équipe / PME | Solo + reports, kiosk_punch |
+| Enterprise | Sur devis | Besoins avancés | Packaging contractuel, sans accès automatique aux modules internes |
+| Admin / Internal | Interne MAD | Validation, support et exploitation | Modules nécessaires, incluant les modules internes autorisés |
 
----
+Les prix sont des valeurs de lancement et pourront être révisés après validation de la valeur, des coûts d’exploitation et des retours clients.
 
-## Principe directeur
+## Modules optionnels
 
-Un module MADSuite doit avoir une décision claire :
+Les add-ons sont disponibles pour les plans solo, pro, enterprise et les plans internes autorisés. Ils ne sont jamais activés sans action explicite de l’organisation.
 
-```text
-Module → plan inclus → activation → limite → CTA → exception admin
-```
+| Clé | Produit | Prix de référence CAD/mois | Statut |
+|---|---|---:|---|
+| estimates | Soumissions | 5 $ | Add-on |
+| quotes | Devis | 5 $ | Add-on |
+| expenses | Dépenses | 5 $ | Add-on |
+| calcul_km | Calcul KM / GPS | 5 $ | Add-on |
+| kiosk_km | Kiosque kilométrage | 5 $ | Add-on |
+| payments | Paiements | Frais fournisseur seulement | Add-on |
+| billing_assistant | Assistant facturation | 10 $ | Add-on, non médical |
+| activity_intelligence | Intelligence d’activité | 10 $ | Add-on, non médical |
 
-Si cette chaîne n’existe pas, le module reste en statut **à cadrer**.
+## Modules internes et MADPROOF
 
----
+Les modules suivants restent internes ou soumis à activation explicite : cognitive_engine, desktop_agent et les modules de gouvernance interne. Ils ne sont pas inclus automatiquement dans les plans commerciaux.
 
-## Plans de référence
+- Le moteur cognitif ne prend aucune décision à la place de l’utilisateur.
+- L’agent desktop exige un consentement clair, révocable et traçable.
+- Aucun module cognitif ne doit être présenté comme médical.
+- Un compte administrateur client n’obtient pas automatiquement les modules internes MAD.
 
-| Plan | Rôle | Usage | Statut |
-|---|---|---|---|
-| Trial | Découverte du produit | Essai initial contrôlé | À valider |
-| Solo | Travailleur autonome | Gestion client/projet/temps/facture | À valider |
-| Pro | Petite équipe / PME | Collaboration légère et rapports | À valider |
-| Admin / Internal | Usage interne MAD | Validation complète et support | À valider |
-| Enterprise / Custom | Plus tard | Cas avancés / sur mesure | Reporté |
+## Règles d’affichage
 
----
-
-## Modules core
-
-Les modules core sont les modules nécessaires pour que MADSuite livre sa valeur minimale.
-
-| Module key | Nom produit | Rôle | Trial | Solo | Pro | Admin/Internal | Statut |
-|---|---|---|---|---|---|---|---|
-| `clients` | Clients | Base commerciale | Inclus | Inclus | Inclus | Inclus | Core |
-| `projects` | Projets | Organisation du travail | Inclus | Inclus | Inclus | Inclus | Core |
-| `time_tracking` | Suivi du temps | Valeur centrale | Inclus | Inclus | Inclus | Inclus | Core |
-| `invoices` | Factures | Monétisation client | Inclus limité | Inclus | Inclus | Inclus | Core |
-
----
-
-## Modules business
-
-| Module key | Nom produit | Rôle | Trial | Solo | Pro | Admin/Internal | Statut |
-|---|---|---|---|---|---|---|---|
-| `estimates` | Soumissions | Avant-vente | Aperçu ou limité | Optionnel | Inclus | Inclus | À valider |
-| `quotes` | Devis | Conversion vers facture | Aperçu ou limité | Optionnel | Inclus | Inclus | À valider |
-| `reports` | Rapports | Vision gestion | Limité | Optionnel | Inclus | Inclus | À valider |
-| `payments` | Paiements | Encaissement / Stripe | Optionnel | Optionnel | Inclus ou optionnel | Inclus | À valider |
-| `expenses` | Dépenses | Suivi des coûts | Non inclus | Optionnel | Inclus ou optionnel | Inclus | À valider |
-
----
-
-## Modules assistance / intelligence
-
-| Module key | Nom produit | Rôle | Trial | Solo | Pro | Admin/Internal | Statut MADPROOF |
-|---|---|---|---|---|---|---|---|
-| `billing_assistant` | Assistant facturation | Reformulation opérationnelle | Limité | Optionnel | Inclus ou optionnel | Inclus | Non médical |
-| `activity_intelligence` | Intelligence d’activité | Aide organisationnelle | Non inclus par défaut | Optionnel | Optionnel | Inclus | Non médical |
-| `cognitive_engine` | Moteur cognitif | Assistance opérationnelle | Non inclus par défaut | Optionnel explicite | Optionnel explicite | Inclus test | MADPROOF strict |
-| `desktop_agent` | Agent desktop | Capture volontaire contexte travail | Non inclus par défaut | Optionnel | Optionnel | Inclus test | Consentement requis |
-
----
-
-## Modules opérationnels / legacy
-
-Ces clés existent dans le code ou l’interface actuelle, mais ne doivent pas être confondues avec les modules produit principaux.
-
-| Module key | Rôle | Statut |
-|---|---|---|
-| `dashboard` | Surface UI principale | Legacy/UI |
-| `timesheet` | Ancienne clé liée au suivi du temps | Legacy, équivalent opérationnel de `time_tracking` |
-| `kiosk_punch` | Kiosque punch | Opérationnel |
-| `calcul_km` | Calcul kilométrage | Opérationnel / add-on |
-| `kiosk_km` | Kiosque kilométrage | Opérationnel / add-on |
-
----
-
-## Alignement code actuel
-
-| Couche | Fichier | Statut |
-|---|---|---|
-| Backend registry | `maddevopss/madsuite-backend/src/config/modules.js` | Aligné avec matrice brouillon + legacy conservé |
-| Backend tests | `maddevopss/madsuite-backend/src/test/modulesRegistry.test.js` | Ajouté |
-| Backend check | `maddevopss/madsuite-backend/package.json` → `npm run test:modules` | Ajouté dans `check:backend` |
-| Frontend registry helpers | `maddevopss/madsuite-frontend/src/api/modules.api.js` | Aligné helpers/diagnostics |
-| Frontend tests | `maddevopss/madsuite-frontend/src/api/modules.helpers.test.js` | Ajouté |
-| Frontend guard | `maddevopss/madsuite-frontend/scripts/guard-modules-api.js` | Durci |
-
----
-
-## Règles d’affichage frontend
-
-| Situation | Comportement attendu |
+| Situation | Comportement |
 |---|---|
-| Module inclus et actif | Afficher comme disponible |
-| Module inclus mais inactif | Afficher activation admin si permis |
-| Module optionnel | Afficher CTA clair sans pression |
-| Module non inclus | Afficher verrou sobre ou masquer selon contexte |
-| Module core manquant | Afficher alerte admin |
-| Module inconnu retourné par API | Afficher alerte admin |
-| Utilisateur non-admin | Ne pas exposer diagnostics techniques |
+| Inclus et actif | Disponible |
+| Inclus mais inactif | Activation admin si applicable |
+| Add-on non actif | CTA clair, sans pression |
+| Non inclus | Verrou ou indication d’upgrade |
+| Module core manquant | Diagnostic visible aux admins |
+| Module inconnu | Diagnostic admin; aucune casse UI |
+| Non-admin | Aucun détail technique de diagnostic |
 
----
+ModuleGate est une garde d’expérience utilisateur. Toute route sensible reste protégée par le backend.
 
-## Règles backend attendues
+## Clés reconnues
 
-| Règle | Attente |
-|---|---|
-| Source de vérité modules | Registre backend unique |
-| Source de vérité plan | Organisation / subscription |
-| Activation module | Route protégée admin/org |
-| Modules cognitifs | Consentement explicite requis avant exposition forte |
-| Admin/Internal | Doit permettre validation complète du produit |
-| Module inconnu | Ne doit pas casser l’UI; doit être diagnosticable |
-| Clé legacy | Doit être documentée, pas cachée |
+Core : clients, projects, time_tracking, invoices.
 
----
+Business : estimates, quotes, reports, payments, expenses.
 
-## Exceptions admin/internal
+Assistance : billing_assistant, activity_intelligence, cognitive_engine, desktop_agent.
 
-Le plan Admin/Internal sert à tester et opérer MADSuite. Il doit avoir accès aux modules nécessaires pour :
+Legacy/opérationnel : dashboard, timesheet, kiosk_punch, calcul_km, kiosk_km.
 
-- valider les parcours produit;
-- diagnostiquer les incohérences;
-- tester les upgrades;
-- vérifier les modules cognitifs en mode non médical;
-- supporter les clients.
+## Règles de gouvernance
 
-Il ne doit pas devenir un passe-droit silencieux : toute différence avec les plans clients doit être documentée.
+- Le backend est l’autorité d’accès; le frontend ne fait qu’afficher l’état.
+- Les clés inconnues sont diagnosticables et ne doivent pas provoquer d’erreur d’interface.
+- Les clés legacy restent documentées jusqu’à migration explicite.
+- Toute modification de packaging doit mettre à jour cette matrice, les registres et les tests ciblés.
+- Enterprise ne donne pas implicitement accès aux modules internes.
+- Les plans internes sont séparés des plans commerciaux.
 
----
+## État de validation
 
-## Décisions à finaliser
-
-| Décision | Statut |
-|---|---|
-| Limites exactes Trial | À définir |
-| Prix / packaging Solo | À définir |
-| Prix / packaging Pro | À définir |
-| Modules optionnels facturables | À définir |
-| Comportement UI des modules non inclus | À définir |
-| Activation cognitive engine | À cadrer MADPROOF |
-| Desktop agent en production | À cadrer consentement / privacy |
-| Migration éventuelle `timesheet` → `time_tracking` | À planifier prudemment |
-
----
-
-## Statut actuel
-
-Statut : **brouillon contrôlé — backend/frontend alignés sur une base traçable, validation locale/CI requise**.
-
-Ce document ne marque pas les plans comme finalisés. Il fixe la structure pour éviter le bordel pendant la validation P3.
+- [x] Décision Trial, Solo et Pro
+- [x] Add-ons accessibles à Solo et Pro
+- [x] Règles Admin/Internal
+- [x] Règles cognitives et desktop agent
+- [x] Règles UI des modules non inclus
+- [x] Alignement initial des clés backend/frontend
+- [ ] Validation CI des tests ciblés
+- [ ] Preuve finale CHK-052 et fermeture de l’issue #40

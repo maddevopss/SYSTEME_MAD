@@ -1,9 +1,9 @@
 ---
 Projet: MADSuite
 Document: CHK-052 — P3 Plans, modules et subscriptions
-Version: 1.9
-Dernière révision: 2026-07-05
-Statut: Brouillon contrôlé
+Version: 2.0
+Dernière révision: 2026-08-07
+Statut: Décision produit approuvée — validation CI en attente
 Auteur: Marc-André Dufour
 ---
 
@@ -37,12 +37,12 @@ Cette checklist sert à vérifier que l’implémentation frontend/backend reste
 
 | Question | Décision requise |
 |---|---|
-| Quels plans existent officiellement ? | Brouillon créé dans la matrice |
-| Quels modules sont inclus par plan ? | Brouillon créé dans la matrice |
-| Quel plan a l’organisation admin ? | À définir |
-| Quels modules doivent être visibles en admin ? | Brouillon créé dans la matrice |
-| Que voit un utilisateur sans module actif ? | À définir |
-| Que voit un utilisateur en essai ? | À définir |
+| Quels plans existent officiellement ? | Free, Trial, Solo, Pro, Enterprise, Admin/Internal |
+| Quels modules sont inclus par plan ? | Matrice v1.0 finalisée |
+| Quel plan a l’organisation admin ? | Admin/Internal, séparé des plans commerciaux |
+| Quels modules doivent être visibles en admin ? | Modules nécessaires, internes autorisés et diagnostics |
+| Que voit un utilisateur sans module actif ? | Verrou ou CTA clair, sans erreur brute |
+| Que voit un utilisateur en essai ? | 14 jours, accès temporaire au packaging Solo |
 
 ---
 
@@ -50,11 +50,11 @@ Cette checklist sert à vérifier que l’implémentation frontend/backend reste
 
 | Plan | Usage probable | Statut |
 |---|---|---|
-| Free / Trial | Découverte contrôlée | À cadrer |
-| Solo | Travailleur autonome | À cadrer |
-| Pro | PME / équipe légère | À cadrer |
-| Admin / Internal | Organisation interne MAD | À cadrer |
-| Enterprise / Custom | Plus tard | À reporter |
+| Free | Découverte durable | Décidé |\n| Trial | 14 jours, accès Solo | Décidé |
+| Solo | Travailleur autonome — 15,99 $ CAD/mois | Décidé |
+| Pro | PME / équipe légère — 39,99 $ CAD/mois | Décidé |
+| Admin / Internal | Organisation interne MAD | Décidé |
+| Enterprise / Custom | Sur devis, sans modules internes implicites | Décidé |
 
 ---
 
@@ -291,4 +291,15 @@ Plan → modules inclus → limites → CTA upgrade → exceptions admin
 
 ## Statut actuel
 
-Statut : **cadrage P3 préparé, accès modules backend/frontend durci, validation locale/CI requise**.
+## Décision produit consignée
+
+- Trial : 14 jours gratuits, packaging Solo temporaire.
+- Solo : 15,99 $ CAD/mois, factures incluses.
+- Pro : 39,99 $ CAD/mois, rapports et kiosque Punch inclus.
+- Add-ons : accessibles à Solo et Pro, activation explicite.
+- Admin/Internal : réservé à MAD et aux comptes plateforme autorisés.
+- Cognitive engine et desktop agent : consentement et MADPROOF requis.
+
+## Statut actuel
+
+Statut : **matrice v1.0 finalisée; implémentation backend/frontend créée; validations ciblées CI et preuve CHK-052 restantes**.
