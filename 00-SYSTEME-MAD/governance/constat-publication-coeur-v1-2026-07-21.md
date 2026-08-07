@@ -54,7 +54,7 @@ SYSTEME_MAD — Cœur stable v1.0.0
 URL officielle :
 
 ```text
-https://github.com/maddevopss/SYSTEME_MAD/releases/tag/coeur-v1.0.0
+https://github.com/bleeband/SYSTEME_MAD/releases/tag/coeur-v1.0.0
 ```
 
 État constaté :

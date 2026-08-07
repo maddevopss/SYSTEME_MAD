@@ -24,7 +24,7 @@ Ce dépôt contient l’API, la logique métier, les migrations, les jobs, la s�
 La source de vérité documentaire du projet est :
 
 ```text
-maddevopss/SYSTEME_MAD
+bleeband/SYSTEME_MAD
 ```
 
 Avant de modifier une règle structurante, une décision d’architecture, un claim MADSuite, une fonctionnalité cognitive ou un comportement de sécurité, consulter :

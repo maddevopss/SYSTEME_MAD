@@ -19,7 +19,7 @@ def valid_source() -> dict:
         "frontend": {"required": True, "repository": "maddevopss/madsuite-frontend", "pullRequest": 2, "commit": sha},
         "e2e": {"required": True, "repository": "maddevopss/e2e", "pullRequest": 3, "commit": sha},
         "desktopAgent": {"required": False, "repository": "maddevopss/desktop-agent", "reason": "Non concerné."},
-        "governance": {"required": True, "repository": "maddevopss/SYSTEME_MAD", "pullRequest": 4, "commit": sha},
+        "governance": {"required": True, "repository": "bleeband/SYSTEME_MAD", "pullRequest": 4, "commit": sha},
     }
     return {
         "id": "delivery-test",

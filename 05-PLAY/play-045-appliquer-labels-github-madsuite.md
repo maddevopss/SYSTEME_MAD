@@ -24,7 +24,7 @@ SYSTEME_MAD/09-CHECKLISTS/chk-049-github-label-taxonomy-madsuite.md
 ## Repos concernés
 
 ```text
-maddevopss/SYSTEME_MAD
+bleeband/SYSTEME_MAD
 maddevopss/madsuite-backend
 maddevopss/madsuite-frontend
 maddevopss/e2e
@@ -110,7 +110,7 @@ gh label create "source: audit" --color "5319e7" --description "Vient d’un aud
 
 ```powershell
 $repos = @(
-  "maddevopss/SYSTEME_MAD",
+  "bleeband/SYSTEME_MAD",
   "maddevopss/madsuite-backend",
   "maddevopss/madsuite-frontend",
   "maddevopss/e2e",

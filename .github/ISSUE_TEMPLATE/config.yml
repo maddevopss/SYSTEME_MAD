@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
   - name: Documentation de gouvernance CI
-    url: https://github.com/maddevopss/SYSTEME_MAD/tree/main/00-SYSTEME-MAD/governance/ci
+    url: https://github.com/bleeband/SYSTEME_MAD/tree/main/00-SYSTEME-MAD/governance/ci
     about: Consulter les contrats, procédures, audits et guides avant de déclarer un changement.

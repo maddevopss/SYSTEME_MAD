@@ -38,7 +38,7 @@ Repos liés :
 ```text
 maddevopss/madsuite-frontend
 maddevopss/e2e
-maddevopss/SYSTEME_MAD
+bleeband/SYSTEME_MAD
 ```
 
 ## 3. Niveaux de priorité

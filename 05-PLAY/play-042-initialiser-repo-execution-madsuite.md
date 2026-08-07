@@ -87,7 +87,7 @@ docs/
 Le README doit inclure :
 
 ```text
-La source de vérité documentaire du projet est maddevopss/SYSTEME_MAD.
+La source de vérité documentaire du projet est bleeband/SYSTEME_MAD.
 ```
 
 Et pointer vers :
