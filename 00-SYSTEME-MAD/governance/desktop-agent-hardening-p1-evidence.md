@@ -11,7 +11,7 @@ Auteur: Marc-André Dufour
 
 ## Référence
 
-- Enjeu directeur : `maddevopss/SYSTEME_MAD#82`
+- Enjeu directeur : `bleeband/SYSTEME_MAD#82`
 - Dépôt d’exécution : `maddevopss/desktop-agent`
 - Niveau : P1 — sécurité, vie privée, testabilité et distribution
 

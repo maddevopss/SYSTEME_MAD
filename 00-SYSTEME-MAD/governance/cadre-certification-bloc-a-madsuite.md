@@ -42,7 +42,7 @@ La certification du bloc A couvre :
 | `maddevopss/madsuite-backend` | #472 | matrice backend exécutable dans Jest |
 | `maddevopss/madsuite-frontend` | #184 | matrice mobile, accessibilité et états d’interface |
 | `maddevopss/e2e` | #83 | porte transversale sur environnement isolé |
-| `maddevopss/SYSTEME_MAD` | présente PR | cadre, critères et décision finale |
+| `bleeband/SYSTEME_MAD` | présente PR | cadre, critères et décision finale |
 
 ## Critères de refus
 

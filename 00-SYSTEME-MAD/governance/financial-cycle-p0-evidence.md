@@ -11,7 +11,7 @@ Auteur: Marc-André Dufour
 
 ## Intention
 
-Consigner sans exagération les preuves automatisées associées à l’issue `maddevopss/SYSTEME_MAD#78` : facture, événement Stripe, paiement, ledger, audit, réconciliation et métriques.
+Consigner sans exagération les preuves automatisées associées à l’issue `bleeband/SYSTEME_MAD#78` : facture, événement Stripe, paiement, ledger, audit, réconciliation et métriques.
 
 Une pull request ouverte représente une preuve proposée. Elle ne devient une preuve acquise qu’après fusion et réussite des vérifications CI applicables.
 

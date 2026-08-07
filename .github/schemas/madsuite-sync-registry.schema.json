@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/maddevopss/SYSTEME_MAD/.github/schemas/madsuite-sync-registry.schema.json",
+  "$id": "https://github.com/bleeband/SYSTEME_MAD/.github/schemas/madsuite-sync-registry.schema.json",
   "title": "Registre de synchronisation MADSuite",
   "type": "object",
   "required": ["schemaVersion", "deliveries"],

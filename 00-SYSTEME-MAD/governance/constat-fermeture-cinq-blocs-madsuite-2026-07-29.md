@@ -95,7 +95,7 @@ Travaux de fermeture :
 - fondations serveur : `maddevopss/madsuite-backend#439`;
 - raccordement visible à `main` : `maddevopss/madsuite-frontend#183`;
 - preuve de bout en bout et garde de conservation : `maddevopss/e2e#82`;
-- constat institutionnel antérieur : `maddevopss/SYSTEME_MAD#410`.
+- constat institutionnel antérieur : `bleeband/SYSTEME_MAD#410`.
 
 **État proposé : en validation jusqu’à la fusion verte des PR `#183` et `#82`.**
 

@@ -17,7 +17,7 @@ Fournir un registre vérifiable pour fermer les issues #32 et #43 sans transform
 
 | Dépôt | Branche | Protection requise | Preuve à joindre | Statut |
 | --- | --- | --- | --- | --- |
-| `maddevopss/SYSTEME_MAD` | `main` | PR obligatoire, checks requis, poussée directe interdite | capture ou réponse API datée | À valider |
+| `bleeband/SYSTEME_MAD` | `main` | PR obligatoire, checks requis, poussée directe interdite | capture ou réponse API datée | À valider |
 | `maddevopss/madsuite-backend` | `main` | PR obligatoire, checks backend requis | capture ou réponse API datée | À valider |
 | `maddevopss/madsuite-frontend` | `main` | PR obligatoire, checks frontend requis | capture ou réponse API datée | À valider |
 | `maddevopss/e2e` | `main` | PR obligatoire, checks E2E requis | capture ou réponse API datée | À valider |

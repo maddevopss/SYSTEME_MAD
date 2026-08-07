@@ -28,7 +28,7 @@ Une livraison complète doit relier quatre preuves :
 | Frontend | `maddevopss/madsuite-frontend` | Parcours utilisateur, navigation et présentation |
 | E2E | `maddevopss/e2e` | Preuve inter-dépôts sur navigateur et API réelle |
 | Agent de bureau | `maddevopss/desktop-agent` | Capture locale, intégration système et mises à jour signées |
-| Référentiel | `maddevopss/SYSTEME_MAD` | Règles, décisions, preuves et état institutionnel |
+| Référentiel | `bleeband/SYSTEME_MAD` | Règles, décisions, preuves et état institutionnel |
 
 ## 3. Matrice minimale avant fusion finale
 

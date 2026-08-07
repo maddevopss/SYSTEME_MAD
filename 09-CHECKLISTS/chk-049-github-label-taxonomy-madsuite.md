@@ -110,7 +110,7 @@ Une issue devrait avoir au minimum :
 
 Cette taxonomie s’applique à :
 
-- `maddevopss/SYSTEME_MAD`;
+- `bleeband/SYSTEME_MAD`;
 - `maddevopss/madsuite-backend`;
 - `maddevopss/madsuite-frontend`;
 - `maddevopss/e2e`;

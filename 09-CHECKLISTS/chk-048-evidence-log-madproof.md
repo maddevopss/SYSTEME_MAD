@@ -48,10 +48,10 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 | Date | Repo | Workflow | Résultat | Lien run | Action |
 |---|---|---|---|---|---|
 | 2026-07-08 | `madsuite-backend` | `Backend Guards` | Vert observé | `maddevopss/madsuite-backend#34` | Check utilisable pour branch protection P0 |
-| 2026-07-08 | `madsuite-backend` | `Backend CI / Guard, lint, syntax, tests and security checks` | Vert observé | `maddevopss/madsuite-backend#34`; merge `540b5ddf45edec6319bc99fbc1e4abefba4e3439` | Issue CI backend `maddevopss/SYSTEME_MAD#46` fermée |
-| 2026-07-08 | `SYSTEME_MAD` | `Docs quality smoke` | Rouge observé sur PR invalide | `maddevopss/SYSTEME_MAD#50` | Ancienne preuve : le workflow devenait rouge, mais le merge restait disponible avant activation correcte de la protection |
-| 2026-07-23 | `SYSTEME_MAD` | `YAML front matter` | Vert observé | https://github.com/maddevopss/SYSTEME_MAD/actions/runs/30048130116 | PR verte `maddevopss/SYSTEME_MAD#322`; commit testé `d9f15bc640220c7a24f3e5178ff103b74ba83612`; fusion `8148c3e8f92698832feeb2bfa9db171ed4ace6fb` |
-| 2026-07-23 | `SYSTEME_MAD` | `YAML front matter` | Rouge observé | https://github.com/maddevopss/SYSTEME_MAD/actions/runs/30048506356 | PR contrôlée `maddevopss/SYSTEME_MAD#323`; commit testé `f4508bae6f53b7b474f14261a1aa088308852363`; document sans en-tête YAML; merge bloqué puis PR fermée sans fusion |
+| 2026-07-08 | `madsuite-backend` | `Backend CI / Guard, lint, syntax, tests and security checks` | Vert observé | `maddevopss/madsuite-backend#34`; merge `540b5ddf45edec6319bc99fbc1e4abefba4e3439` | Issue CI backend `bleeband/SYSTEME_MAD#46` fermée |
+| 2026-07-08 | `SYSTEME_MAD` | `Docs quality smoke` | Rouge observé sur PR invalide | `bleeband/SYSTEME_MAD#50` | Ancienne preuve : le workflow devenait rouge, mais le merge restait disponible avant activation correcte de la protection |
+| 2026-07-23 | `SYSTEME_MAD` | `YAML front matter` | Vert observé | https://github.com/bleeband/SYSTEME_MAD/actions/runs/30048130116 | PR verte `bleeband/SYSTEME_MAD#322`; commit testé `d9f15bc640220c7a24f3e5178ff103b74ba83612`; fusion `8148c3e8f92698832feeb2bfa9db171ed4ace6fb` |
+| 2026-07-23 | `SYSTEME_MAD` | `YAML front matter` | Rouge observé | https://github.com/bleeband/SYSTEME_MAD/actions/runs/30048506356 | PR contrôlée `bleeband/SYSTEME_MAD#323`; commit testé `f4508bae6f53b7b474f14261a1aa088308852363`; document sans en-tête YAML; merge bloqué puis PR fermée sans fusion |
 | 2026-07-21 | `madsuite-backend` | `Backend PR Guards` | Vert observé | https://github.com/maddevopss/madsuite-backend/actions/runs/29832701132 | PR `maddevopss/madsuite-backend#89`; commit testé `fc539a93a917bf3ae3bd1cd6f4eb6e0e3d8332a5` |
 | 2026-07-21 | `madsuite-backend` | `Backup Restore P0 Proof` | Vert observé | https://github.com/maddevopss/madsuite-backend/actions/runs/29832701094 | Preuve de restauration exécutée sur la PR #89 |
 | 2026-07-21 | `madsuite-backend` | `Backend PR CI` | Vert observé | https://github.com/maddevopss/madsuite-backend/actions/runs/29832701076 | CI principale backend verte sur la PR #89 |
@@ -68,19 +68,13 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 | 2026-07-21 | `desktop-agent` | `Desktop Agent Guards` | Vert observé | https://github.com/maddevopss/desktop-agent/actions/runs/29843257911 | PR `maddevopss/desktop-agent#38`; commit testé `8e2dd74925e51f806d19bd57ef28a065c1acc63a` |
 | 2026-07-21 | `desktop-agent` | `Desktop Agent CI` | Vert observé | https://github.com/maddevopss/desktop-agent/actions/runs/29843257929 | CI principale desktop-agent verte sur la PR #38 |
 
-| 2026-08-05 | `madsuite-backend` | Statut post-merge du commit `df1f2117f21ae4ef5149eb461c2dea3700f01674` | Succès observé | Statut externe Railway `success` | Preuve post-merge confirmée |
-| 2026-08-05 | `madsuite-frontend` | Statut post-merge du commit `7aee8daa183bdee44514eb693e23bb00eb371e98` | Succès observé | Statut externe Vercel `success` | Preuve post-merge confirmée |
-| 2026-08-05 | `e2e` | Statut post-merge du commit `271690bacc8b59f9840589d36ba0643152e5f6e0` | Exception — aucun statut | Aucun statut combiné ni run post-merge exploitable observé | Suivi conservé dans `SYSTEME_MAD#42`; issue non fermable |
-| 2026-08-05 | `desktop-agent` | Statut post-merge du commit `e899c7d6ac5ee89310f169a786a7a75466b8c922` | Exception — aucun statut | Aucun statut combiné ni run post-merge exploitable observé | Suivi conservé dans `SYSTEME_MAD#42`; issue non fermable |
-| 2026-08-05 | `SYSTEME_MAD` | Statut post-merge du commit `962f73906ace5ae041f2b90895c56ff5eee14799` | Exception — aucun statut | Aucun statut combiné ni run post-merge exploitable observé | Suivi conservé dans `SYSTEME_MAD#42`; issue non fermable |
-
 ---
 
 ## Evidence log — branch protection
 
 | Date | Repo | Branche | Règle appliquée | Test de blocage rouge | Note |
 |---|---|---|---|---|---|
-| 2026-07-23 | `SYSTEME_MAD` | `main` | Protection P0 validée par preuve verte et rouge | Réussi | PR verte `maddevopss/SYSTEME_MAD#322` fusionnée après six gardes documentaires verts; PR rouge contrôlée `maddevopss/SYSTEME_MAD#323` bloquée par `YAML front matter`, puis fermée sans fusion; le nom réel du garde bloquant remplace l’ancienne référence unique à `Docs quality smoke` |
+| 2026-07-23 | `SYSTEME_MAD` | `main` | Protection P0 validée par preuve verte et rouge | Réussi | PR verte `bleeband/SYSTEME_MAD#322` fusionnée après six gardes documentaires verts; PR rouge contrôlée `bleeband/SYSTEME_MAD#323` bloquée par `YAML front matter`, puis fermée sans fusion; le nom réel du garde bloquant remplace l’ancienne référence unique à `Docs quality smoke` |
 | 2026-07-23 | `madsuite-backend` | `main` | Protection P0 validée par preuve verte et rouge | Réussi | PR verte `maddevopss/madsuite-backend#98` fusionnée après checks requis verts; PR rouge contrôlée `maddevopss/madsuite-backend#99` bloquée par `Backend PR Guards` et `Backend PR CI`, puis fermée sans fusion; issue `maddevopss/madsuite-backend#30` régularisée par preuve observable |
 | 2026-07-23 | `madsuite-frontend` | `main` | Protection P0 validée par preuve verte et rouge | Réussi | PR verte `maddevopss/madsuite-frontend#57` fusionnée après `Frontend PR CI` vert; PR rouge contrôlée `maddevopss/madsuite-frontend#58` bloquée par `Frontend PR CI`, puis fermée sans fusion; issue `maddevopss/madsuite-frontend#14` régularisée par preuve observable |
 | | `e2e` | `main` | P1 ensuite | À faire | Hors fermeture P0 immédiate |
@@ -92,7 +86,7 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 
 | Date | Portée | Vérification | Résultat | Preuve / note | Action |
 |---|---|---|---|---|---|
-| 2026-07-21 | `SYSTEME_MAD`, `madsuite-backend`, `madsuite-frontend`, `e2e`, `desktop-agent` | Présence des 32 labels structurés définis par `CHK-049` | Conforme sur les cinq dépôts | Vérification locale avec `gh label list`; tous les labels obligatoires `type`, `area`, `priority`, `status` et `source` sont présents sur chaque dépôt; les labels additionnels historiques sont conservés | Issue `maddevopss/SYSTEME_MAD#38`; taxonomie appliquée selon `PLAY-045` |
+| 2026-07-21 | `SYSTEME_MAD`, `madsuite-backend`, `madsuite-frontend`, `e2e`, `desktop-agent` | Présence des 32 labels structurés définis par `CHK-049` | Conforme sur les cinq dépôts | Vérification locale avec `gh label list`; tous les labels obligatoires `type`, `area`, `priority`, `status` et `source` sont présents sur chaque dépôt; les labels additionnels historiques sont conservés | Issue `bleeband/SYSTEME_MAD#38`; taxonomie appliquée selon `PLAY-045` |
 
 ---
 
@@ -108,7 +102,7 @@ Il devient `Validé` lorsqu’une preuve réelle est observée et notée.
 
 | Date | Domaine | Exception | Raison | Durée | Suivi |
 |---|---|---|---|---|---|
-| 2026-07-08 | Branch protection GitHub | Application UI/API non effectuée par l’assistant | Les outils disponibles permettaient la création d’issues, fichiers et PR, mais pas la modification directe des règles Branch protection | Levée pour le périmètre P0 — preuves terrain obtenues le 2026-07-23 | `maddevopss/SYSTEME_MAD#32`; backend et frontend régularisés par preuves vertes et rouges |
+| 2026-07-08 | Branch protection GitHub | Application UI/API non effectuée par l’assistant | Les outils disponibles permettaient la création d’issues, fichiers et PR, mais pas la modification directe des règles Branch protection | Levée pour le périmètre P0 — preuves terrain obtenues le 2026-07-23 | `bleeband/SYSTEME_MAD#32`; backend et frontend régularisés par preuves vertes et rouges |
 | 2026-07-21 | Validation locale desktop-agent | `MaxListenersExceededWarning` malgré un code de sortie réussi | Plusieurs listeners `SIGTERM` sont enregistrés pendant les tests | Temporaire — dette de tests non bloquante pour la preuve locale | `maddevopss/desktop-agent#39` |
 
 ---

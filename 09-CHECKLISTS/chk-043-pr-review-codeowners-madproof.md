@@ -43,7 +43,7 @@ Rendre chaque PR vérifiable rapidement :
 | `maddevopss/madsuite-frontend` | Appliqué | Appliqué | Complété |
 | `maddevopss/e2e` | Appliqué | Appliqué | Complété |
 | `maddevopss/desktop-agent` | Appliqué | Appliqué — `.github/CODEOWNERS`, PR #40 | Complété |
-| `maddevopss/SYSTEME_MAD` | À faire si PR workflow utilisé | À faire si PR workflow utilisé | Optionnel |
+| `bleeband/SYSTEME_MAD` | À faire si PR workflow utilisé | À faire si PR workflow utilisé | Optionnel |
 
 ---
 

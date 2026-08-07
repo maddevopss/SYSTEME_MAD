@@ -49,7 +49,7 @@ maddevopss/madsuite-frontend
 Documentation source de vérité :
 
 ```text
-maddevopss/SYSTEME_MAD
+bleeband/SYSTEME_MAD
 ```
 
 ## 4. Décision à implémenter
