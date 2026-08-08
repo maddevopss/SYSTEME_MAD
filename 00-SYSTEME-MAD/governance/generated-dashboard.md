@@ -9,11 +9,11 @@ Auteur: GitHub Actions — SYSTEME_MAD
 
 # Dashboard de gouvernance généré
 
-> Généré automatiquement le 2026-08-07T11:04:37.220Z. Ne pas modifier manuellement ce fichier.
+> Généré automatiquement le 2026-08-07T22:05:01.179Z. Ne pas modifier manuellement ce fichier.
 
 ## Signal automatisé GitHub
 
-**19/40**
+**16/40**
 
 Ce signal couvre uniquement les données vérifiables automatiquement. Il ne remplace pas l’Engineering Health Score complet, qui inclut aussi les tests, la documentation, la sécurité et la dette technique validés humainement.
 
@@ -21,7 +21,7 @@ Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-
 
 | Dimension notée | Résultat |
 | --- | ---: |
-| CI visibles et vertes | 13/20 |
+| CI visibles et vertes | 10/20 |
 | Backlog P0/P1 | 2/10 |
 | Hygiène des PR ouvertes | 4/5 |
 | Protection de branche lisible par l’API | 0/5 |
@@ -32,10 +32,10 @@ Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-
 
 | Repo | Accessible | Dernière CI | Workflow | PR ouvertes | P0 | P1 | P2 | Protection main |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
-| `maddevopss/SYSTEME_MAD` | Oui | 🟡 in_progress | [Governance dashboard](https://github.com/maddevopss/SYSTEME_MAD/actions/runs/31172606928) | 1 | 0 | 4 | 0 | non vérifiable |
+| `bleeband/SYSTEME_MAD` | Oui | 🟡 in_progress | [Document governance](https://github.com/maddevopss/SYSTEME_MAD/actions/runs/31222511488) | 0 | 0 | 4 | 0 | non vérifiable |
 | `maddevopss/madsuite` | Oui | 🔴 failure | [Responsive Nightly Extended](https://github.com/maddevopss/madsuite/actions/runs/31160740462) | 0 | 0 | 0 | 0 | non vérifiable |
-| `maddevopss/madsuite-frontend` | Oui | 🟢 success | [Frontend Main CI](https://github.com/maddevopss/madsuite-frontend/actions/runs/31138359714) | 0 | 0 | 0 | 0 | non vérifiable |
-| `maddevopss/madsuite-backend` | Oui | 🟢 success | [Backend Main CI](https://github.com/maddevopss/madsuite-backend/actions/runs/31144887339) | 0 | 0 | 0 | 0 | non vérifiable |
+| `maddevopss/madsuite-frontend` | Oui | 🟢 success | [Frontend Main CI](https://github.com/maddevopss/madsuite-frontend/actions/runs/31220356799) | 0 | 0 | 0 | 0 | non vérifiable |
+| `maddevopss/madsuite-backend` | Oui | 🔴 failure | [Backup Restore P0 Proof](https://github.com/maddevopss/madsuite-backend/actions/runs/31221203676) | 1 | 0 | 0 | 0 | non vérifiable |
 | `maddevopss/desktop-agent` | Oui | 🟢 success | [Desktop Agent CI](https://github.com/maddevopss/desktop-agent/actions/runs/31037912053) | 0 | 0 | 0 | 0 | non vérifiable |
 | `maddevopss/e2e` | Oui | 🟢 success | [E2E CI](https://github.com/maddevopss/e2e/actions/runs/31037820102) | 0 | 0 | 0 | 0 | non vérifiable |
 | `bleeband/maddevops` | Non | ⚪ inconnu | Non accessible | 0 | 0 | 0 | 0 | non vérifiable |
