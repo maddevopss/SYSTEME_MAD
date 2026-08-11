@@ -1,3 +1,12 @@
+---
+Projet: SYSTEME_MAD
+Document: Décisions de récupération MADSuite 106-109
+Version: 1.0.0
+Dernière révision: 2026-08-11
+Statut: Décision fermée
+Auteur: MAD DevOps
+---
+
 # MADSuite — Décisions de récupération 2026-08-11
 
 > **Statut :** DÉCISION FERMÉE
