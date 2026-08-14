@@ -2,8 +2,9 @@
 Projet: MAD DevOps
 Document: Registre de provenance - lot addon
 Version: 1.0
-Derniere revision: 2026-08-13
+Dernière révision: 2026-08-13
 Statut: Proposition
+Auteur: Marc-André Dufour
 ---
 
 # Registre de provenance - lot addon
@@ -13,7 +14,8 @@ Statut: Proposition
 Ce registre relie chaque source brute du lot `addon` a une seule destination
 canonique. Il ne promeut aucune proposition au statut de module implemente.
 
-Source archivee: `../../99-ARCHIVES/addon-2026-07-23/traiter-code.zip`  
+Source archivee: `../../99-ARCHIVES/addon-2026-07-23/traiter-code.zip`
+
 SHA-256: `fddf6cc0873865a0e29dd58da488c0ff27c66401d7bd715d3f3a50b6411250d1`
 
 ## Correspondance source -> idee canonique

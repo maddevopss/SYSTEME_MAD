@@ -1,3 +1,12 @@
+---
+Projet: SYSTEME_MAD
+Document: Protocole d'essais addon - local seulement
+Version: 1.0
+Dernière révision: 2026-08-14
+Statut: Proposition
+Auteur: Marc-André Dufour
+---
+
 # Protocole d'essais addon - local seulement
 
 Ce protocole couvre les essais limites livres depuis le lot `addon` :
