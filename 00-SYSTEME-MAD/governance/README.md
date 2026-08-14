@@ -20,6 +20,8 @@ Ce dossier constitue le centre de commandement de gouvernance des dépôts MADSu
 - [Dette et risques](./debt-and-risks.md)
 - [Roadmap de gouvernance](./roadmap.md)
 - [Registre des dépôts surveillés](./repos.json)
+- [Registre de provenance addon](./registre-provenance-addon-2026-08-13.md)
+- [Protocole des essais addon locaux](./protocole-essais-addon-test-only.md)
 
 ## Sources opérationnelles
 
