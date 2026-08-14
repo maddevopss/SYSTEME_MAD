@@ -33,6 +33,12 @@ Historique documentaire conservé pour traçabilité.
 | boot-003.md | Archive | Archive documentaire conservée |
 | readme-handbook-archive-2026-06-30.md | Archive | Archive documentaire conservée |
 
+## Archive addon
+
+| Fichier | Statut | Role |
+|---|---|---|
+| addon-2026-07-23/ | Archive | Lot brut de 36 propositions; ZIP conserve avec empreinte SHA-256 |
+
 ## Notes
 
 - Document canonique: voir les fichiers en statut Officiel.
