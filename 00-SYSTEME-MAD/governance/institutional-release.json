@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0",
   "phase": "P5.1",
-  "institutional_version": "1.0.0",
+  "institutional_version": "1.1.0",
   "status": "Officiel",
-  "declared_at": "2026-07-19",
+  "declared_at": "2026-08-16",
   "declared_by": "Marc-André Dufour",
-  "reference_commit": "caf41671005771ca20ff72549a6f42b7aab10997",
+  "reference_commit": "abe5fd656ba7c607863fd394ff0d970591bf61bb",
   "documents": [
     {
       "path": "MANIFEST.md",
-      "expected_version": "1.3",
+      "expected_version": "1.4",
       "expected_status": "Officiel",
       "role": "Autorité documentaire principale"
     },
@@ -21,7 +21,7 @@
     },
     {
       "path": "00-SYSTEME-MAD/yaml-standard.md",
-      "expected_version": "1.0",
+      "expected_version": "1.1",
       "expected_status": "Officiel",
       "role": "Standard des métadonnées documentaires"
     },
