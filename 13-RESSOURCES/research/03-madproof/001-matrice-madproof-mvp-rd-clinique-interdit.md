@@ -1,9 +1,10 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: Matrice MADPROOF — MVP / R&D / Clinique / Interdit
-Version: 1.0
-Dernière révision: 2026-07-02
-Statut: Officiel à valider / MADPROOF-GOVERNANCE
+Version: 1.1
+Dernière révision: 2026-08-16
+Statut: Officiel
+Classification: MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
 ---
 
@@ -26,7 +27,7 @@ Elle permet de distinguer :
 Pas MADPROOF = pas officiel.
 ```
 
-Un élément ne doit pas sortir de `docs/research/atrier` sans classification MADPROOF.
+Un élément issu d’une zone de travail temporaire ou d’une source brute archivée ne doit pas être promu dans le corpus actif sans classification MADPROOF.
 
 ## 3. Catégories principales
 
@@ -292,7 +293,7 @@ Un élément est **À reformuler** si l’idée est acceptable mais la formulati
 | Mesure contractuelle automatique | À vérifier / validation terrain |
 | Promesse de précision garantie | Interdit |
 
-## 13. Processus de tri depuis `atrier`
+## 13. Processus de tri depuis une source brute
 
 Pour chaque fichier brut :
 
@@ -303,7 +304,7 @@ Pour chaque fichier brut :
 5. Reformuler les claims trop forts.
 6. Supprimer les claims interdits.
 7. Produire un résumé MADPROOF.
-8. Ranger dans le bon dossier `SYSTEME_MAD/...`.
+8. Ranger le résumé dans le dossier canonique approprié sous `13-RESSOURCES/research/` ou dans la zone produit/gouvernance concernée.
 9. Mettre à jour TODO/roadmap si action produit.
 
 ## 14. Template court de décision
