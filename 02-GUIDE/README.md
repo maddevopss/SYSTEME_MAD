@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index — Guides
-Version: 6.4
-Dernière révision: 2026-07-01
+Version: 6.5
+Dernière révision: 2026-08-16
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -120,6 +120,11 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - `base-operationnelle-mad-devops.md`
 - `base-uiux-accessible-cognitive-mad-devops.md`
 
+### MADSuite — produit et packaging
+
+- [`05-madsuite.md`](./05-madsuite.md) — vision et positionnement général de MADSuite.
+- [`madsuite-matrice-plans-modules.md`](./madsuite-matrice-plans-modules.md) — décision produit sur les plans, modules et accès; statut d’implémentation encore à valider.
+
 ### Pilotage fondateur
 
 - `synthese-pilotage-fondateur-quotidien.md`
@@ -141,6 +146,7 @@ Un guide explique un positionnement, une logique d’usage, un parcours ou une m
 - Utiliser ensuite les templates, playbooks et checklists liés.
 - Garder les guides courts lorsque l’objectif est opérationnel.
 - Utiliser la recherche du repo pour retrouver un guide précis non listé dans les sections prioritaires.
+- Respecter le statut propre des documents listés; leur présence dans cet index ne les promeut pas automatiquement à `Officiel`.
 
 ---
 
