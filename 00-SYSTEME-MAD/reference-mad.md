@@ -1,10 +1,10 @@
 ---
-Titre: Référence MAD
+Projet: SYSTEME_MAD
+Document: Référence MAD — point d’entrée intellectuel
+Version: 0.2.0
+Dernière révision: 2026-08-16
 Statut: À valider
-Version: 0.1.0
 Auteur: Marc-André Dufour
-Responsable: Gardien de SYSTEME_MAD
-Dernière mise à jour: 2026-07-16
 ---
 
 # La Référence MAD
@@ -16,6 +16,8 @@ La Référence MAD est le point d’entrée intellectuel de `SYSTEME_MAD`.
 Elle n’ajoute pas une nouvelle structure concurrente au dépôt et ne remplace pas les documents canoniques existants. Elle permet de comprendre comment les différentes briques du système se relient : vision, philosophie, gouvernance, principes, connaissances, recherche, architectures, standards et implémentations.
 
 > La Référence MAD n’est pas une proclamation d’autorité. C’est un corpus vivant qui aspire à devenir une référence par la qualité de ses preuves, la clarté de ses limites et la cohérence de ses constructions.
+
+Son emplacement sous `00-SYSTEME-MAD/` est officialisé par ADR-017. Son contenu demeure `À valider` tant qu’une promotion distincte n’en décide pas autrement.
 
 ## Proposition centrale
 
@@ -163,28 +165,34 @@ La Référence MAD doit demeurer :
 
 ## Relation avec la structure actuelle
 
-La structure officielle du dépôt demeure celle définie dans `README.md` et `MANIFEST.md`.
+La structure officielle du dépôt demeure celle définie dans `README.md`, `MANIFEST.md`, ADR-001 et ADR-017.
 
 La Référence s’appuie notamment sur :
 
-- `00-SYSTEME-MAD/` pour la gouvernance, les décisions et le registre;
+- `00-SYSTEME-MAD/` pour la gouvernance, les décisions, l’évolution institutionnelle et le registre;
 - `01-FONDATIONS/` pour les principes fondateurs et non négociables;
-- `02-EVOLUTION/` pour la trajectoire des idées;
+- `00-SYSTEME-MAD/evolution/` pour la trajectoire documentée des idées devenues institutionnelles;
 - `03-STANDARDS/` pour les règles applicables;
 - `04-ADR/` pour les décisions d’architecture;
 - `06-KNOWLEDGE-BASE/` pour les connaissances techniques;
 - `10-ROADMAP/` pour les travaux planifiés;
 - `12-INNOVATION/` pour les explorations et la R&D;
-- `13-RESSOURCES/` pour les recherches et actifs de référence.
+- `13-RESSOURCES/` pour les recherches et actifs de référence;
+- `21-METHODE_MAD/` pour les objets méthodologiques et leur maturation;
+- `22-VALIDATIONS/` pour les validations versionnées et les preuves contextualisées.
 
-Une réorganisation éventuelle du dépôt devra être préparée par inventaire, matrice de correspondance, détection des doublons et ADR. Aucun déplacement massif ne doit être déduit du présent document.
+Toute réorganisation future du dépôt doit être préparée par inventaire, matrice de correspondance, détection des doublons et ADR lorsque la structure officielle change.
 
 ## Prochaine étape
 
-Après l’intégration des briques fondatrices en attente, produire un inventaire de classement qui relie chaque document existant à son niveau principal dans la Référence MAD.
-
-Cet inventaire devra précéder toute migration physique des dossiers.
+Poursuivre l’inventaire de classement afin de reclasser progressivement les derniers dossiers périphériques sans perdre leur provenance ni créer de source concurrente.
 
 ## Formule directrice
 
 > Nous ne promettons pas un monde sans complexité. Nous construisons des systèmes qui aident à conserver le fil à travers cette complexité.
+
+## Références
+
+- `04-ADR/ADR-001-architecture-depot-systeme-mad.md`
+- `04-ADR/ADR-017-architecture-documentaire-et-corpus-specialises.md`
+- `00-SYSTEME-MAD/governance/inventaire-classement-racine-2026-08-16.md`

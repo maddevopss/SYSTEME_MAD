@@ -1,10 +1,10 @@
 ---
-title: Méthode MAD
-status: Actif
-type: Point d’entrée
-owner: MAD DevOps
-created_at: 2026-07-12
-updated_at: 2026-07-12
+Projet: SYSTEME_MAD
+Document: Index — Méthode MAD
+Version: 1.1
+Dernière révision: 2026-08-16
+Statut: Officiel
+Auteur: MAD DevOps
 ---
 
 # Méthode MAD
@@ -19,6 +19,14 @@ Elle repose sur quatre gestes :
 - 🛤️ **Avancer** sans perdre le contexte.
 
 > **La complexité est parfois inévitable. La confusion ne l’est pas.**
+
+## Statut dans SYSTEME_MAD
+
+`21-METHODE_MAD/` est un corpus spécialisé officiel reconnu par `ADR-017`.
+
+Cette reconnaissance officialise le **cadre de classement et de maturation**, pas chaque proposition interne.
+
+Les statuts `Observation`, `Découverte`, `Validation`, `Fondation` et `Patrimoine` décrivent la maturité des objets de la méthode. Ils ne remplacent pas les statuts documentaires globaux de SYSTEME_MAD.
 
 ## Commencer ici
 
@@ -43,6 +51,24 @@ Elle repose sur quatre gestes :
 | `E-` | Expérience | Décrit une confrontation au réel. |
 | `I-` | Invariant | Décrit ce qui devrait rester vrai à travers les contextes. |
 | `S-` | Standard | Définit comment organiser ou documenter la méthode. |
+
+Les identifiants `S-*` sont des standards **internes à la Méthode MAD**. Ils ne remplacent pas les standards globaux `STD-*` de `03-STANDARDS/`.
+
+## Gouvernance des métadonnées
+
+Le présent README utilise le YAML canonique SYSTEME_MAD.
+
+Les objets internes utilisent un schéma spécialisé défini par les standards de la Méthode MAD, conformément à l’exception gouvernée par ADR-017 et STD-006.
+
+Un objet interne doit notamment conserver :
+
+- un identifiant stable;
+- un type;
+- un statut de maturité;
+- une date de création et de mise à jour;
+- ses relations, limites et preuves attendues selon son type.
+
+Toute règle destinée à devenir obligatoire pour tout SYSTEME_MAD doit être promue explicitement vers le corpus canonique.
 
 ## Maturité
 
@@ -76,7 +102,8 @@ Cette structure est volontairement minimale et évoluera par petites PR traçabl
 - une idée incertaine reste une observation ou une hypothèse;
 - un nouveau bloc suit `S-001`;
 - chaque objet expose ses limites et ses relations;
-- la méthode préserve son histoire au lieu de la réécrire.
+- la méthode préserve son histoire au lieu de la réécrire;
+- un standard interne n’est pas promu implicitement en standard global.
 
 ## Instruments MAD
 
@@ -89,3 +116,9 @@ La Méthode MAD est appliquée et confrontée au réel par plusieurs instruments
 - `MAD Cortex` — compréhension de l’état d’un projet logiciel.
 
 Ces instruments ne prouvent pas automatiquement la méthode. Ils constituent ses terrains d’observation, d’expérimentation et d’apprentissage.
+
+## Références de gouvernance
+
+- `04-ADR/ADR-017-architecture-documentaire-et-corpus-specialises.md`
+- `00-SYSTEME-MAD/yaml-standard.md`
+- `03-STANDARDS/std-006.md`

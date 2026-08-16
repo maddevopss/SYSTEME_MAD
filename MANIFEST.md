@@ -1,8 +1,8 @@
 ---
 Projet: Système MAD
 Document: Manifeste documentaire officiel
-Version: 1.3
-Dernière révision: 2026-07-07
+Version: 1.4
+Dernière révision: 2026-08-16
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -21,7 +21,9 @@ Il sert également de point d’entrée prioritaire pour les agents IA.
 
 ## Source officielle
 
-La source documentaire officielle est la structure située à la racine de ce dépôt :
+### Corpus documentaire canonique
+
+La source documentaire canonique est :
 
 ```text
 00-SYSTEME-MAD/
@@ -41,9 +43,20 @@ La source documentaire officielle est la structure située à la racine de ce d�
 99-ARCHIVES/
 ```
 
-Lorsqu’un document existe à plusieurs endroits, la version située dans la structure officielle prévaut, sauf indication contraire explicite dans ce manifeste ou dans une ADR.
+### Corpus spécialisés officiels
 
-Les fichiers situés hors de cette structure sont considérés comme périphériques, transitoires ou techniques.
+ADR-017 reconnaît également :
+
+```text
+21-METHODE_MAD/
+22-VALIDATIONS/
+```
+
+Ces corpus possèdent des schémas internes spécialisés. Leur présence dans une zone officielle n’accorde pas automatiquement une autorité globale à chaque objet interne; leur maturité, niveau, date et portée doivent être respectés.
+
+Lorsqu’un document existe à plusieurs endroits, la version située dans la structure officielle et dont le statut est le plus autoritatif prévaut, sauf indication contraire explicite dans ce manifeste ou dans une ADR.
+
+Les fichiers documentaires situés hors de cette architecture sont considérés comme périphériques, transitoires ou techniques.
 
 ---
 
@@ -57,7 +70,15 @@ Les fichiers situés hors de cette structure sont considérés comme périphéri
 4. `00-SYSTEME-MAD/decisions.md`
 5. `01-FONDATIONS/non-negociable.md`
 
-### Lecture pour produire ou modifier un document
+### Lecture intellectuelle et méthodologique
+
+1. `00-SYSTEME-MAD/reference-mad.md`
+2. `21-METHODE_MAD/README.md`
+3. `22-VALIDATIONS/README.md`
+
+La Référence MAD est actuellement `À valider`; elle ne remplace pas les documents officiels applicables.
+
+### Lecture pour produire ou modifier un document canonique
 
 1. `MANIFEST.md`
 2. `00-SYSTEME-MAD/yaml-standard.md`
@@ -66,6 +87,14 @@ Les fichiers situés hors de cette structure sont considérés comme périphéri
 5. Le dossier concerné par la modification
 6. Les standards applicables dans `03-STANDARDS/`
 7. Les ADR applicables dans `04-ADR/`
+
+### Lecture pour modifier un objet spécialisé
+
+1. `MANIFEST.md`
+2. `04-ADR/ADR-017-architecture-documentaire-et-corpus-specialises.md`
+3. le README du corpus concerné;
+4. le standard local du type d’objet;
+5. `03-STANDARDS/std-006.md` pour les règles transversales non remplacées par l’exception spécialisée.
 
 ### Lecture pour une passe qualité documentaire
 
@@ -100,11 +129,11 @@ Les fichiers situés hors de cette structure sont considérés comme périphéri
 ## Structure officielle
 
 ```text
-00-SYSTEME-MAD/       Gouvernance, contexte IA, décisions et standards documentaires
+00-SYSTEME-MAD/       Gouvernance, contexte IA, décisions, évolution institutionnelle et registre
 01-FONDATIONS/        Principes fondateurs et non négociables
 02-GUIDE/             Guide stratégique et opérationnel MAD DevOps
 03-STANDARDS/         Standards techniques, qualité, sécurité et architecture
-04-ADR/               Architecture Decision Records
+04-ADR/               Architecture Decision Records et décisions structurantes
 05-PLAY/              Playbooks opérationnels
 06-KNOWLEDGE-BASE/    Base de connaissances technique
 07-TEMPLATES/         Modèles réutilisables
@@ -114,6 +143,8 @@ Les fichiers situés hors de cette structure sont considérés comme périphéri
 11-ACADEMY/           Notes d’apprentissage et formation interne
 12-INNOVATION/        Idées, explorations et pistes R&D
 13-RESSOURCES/        Ressources de marque, légales, recherche et actifs
+21-METHODE_MAD/       Corpus spécialisé de méthode et maturation intellectuelle
+22-VALIDATIONS/       Corpus spécialisé de validations et preuves contextualisées
 99-ARCHIVES/          Documents historiques ou remplacés
 ```
 
@@ -123,9 +154,13 @@ Les fichiers situés hors de cette structure sont considérés comme périphéri
 
 ### `00-SYSTEME-MAD/`
 
-Contient les règles de gouvernance documentaire, le contexte IA, les décisions générales et les standards de fonctionnement du système.
+Contient les règles de gouvernance documentaire, le contexte IA, les décisions générales, l’évolution institutionnelle, le registre et les standards de fonctionnement du système.
 
 À lire avant tout travail transversal.
+
+Le sous-dossier `00-SYSTEME-MAD/evolution/` conserve la trajectoire documentée d’une idée ou d’une position ayant changé au fil des validations. Il ne remplace ni l’ADR qui porte la décision, ni la fondation qui porte la règle actuelle.
+
+`00-SYSTEME-MAD/reference-mad.md` constitue un point d’entrée intellectuel actuellement `À valider`; son emplacement est canonique, mais son statut doit être respecté.
 
 ### `01-FONDATIONS/`
 
@@ -139,9 +174,11 @@ Contient le guide stratégique et opérationnel MAD DevOps : identité, communic
 
 ### `03-STANDARDS/`
 
-Contient les standards obligatoires ou recommandés.
+Contient les standards obligatoires ou recommandés à portée globale.
 
-Un standard doit être clair, applicable et relié à des pratiques concrètes.
+Un standard `STD-*` doit être clair, applicable et relié à des pratiques concrètes.
+
+Un standard interne `S-*` de `21-METHODE_MAD/` ne devient pas global sans promotion explicite dans cette zone.
 
 ### `04-ADR/`
 
@@ -175,7 +212,7 @@ Les scripts temporaires doivent être déplacés ici ou archivés après usage.
 
 Contient les checklists de validation.
 
-Une checklist doit permettre de vérifier rapidement un niveau de qualité ou de conformité.
+Une checklist décrit ce qui doit être vérifié. Elle ne constitue pas à elle seule une preuve qu’une vérification a été exécutée.
 
 ### `10-ROADMAP/`
 
@@ -183,7 +220,7 @@ Contient le backlog, la progression, les idées futures et la feuille de route.
 
 ### `11-ACADEMY/`
 
-Contient les contenus d’apprentissage ou de formation interne.
+Contient les contenus d’apprentissage ou de formation interne lorsqu’ils sont utilisés.
 
 ### `12-INNOVATION/`
 
@@ -193,11 +230,40 @@ Contient les explorations, hypothèses, pistes R&D et concepts non stabilisés.
 
 Contient les ressources de marque, actifs, éléments légaux et documents de recherche consolidés.
 
+### `21-METHODE_MAD/`
+
+Corpus spécialisé officiel de méthode, observations, hypothèses, expériences, invariants, blocs et standards internes.
+
+Ses objets utilisent un cycle de maturité propre. Ce cycle ne remplace pas les statuts documentaires globaux.
+
+Les règles de métadonnées spécialisées sont définies par ADR-017, le standard YAML et les standards locaux du corpus.
+
+### `22-VALIDATIONS/`
+
+Corpus spécialisé officiel de validations versionnées.
+
+Une validation relie une affirmation à un contexte, un scénario, une date et des preuves. Les niveaux `V0` à `V4` décrivent la profondeur de la validation, pas une certification permanente.
+
 ### `99-ARCHIVES/`
 
 Contient les documents historiques, remplacés ou conservés uniquement pour référence.
 
 Un document archivé ne doit pas être utilisé comme source officielle sans mention explicite.
+
+---
+
+## Métadonnées documentaires
+
+Le YAML canonique est défini par `00-SYSTEME-MAD/yaml-standard.md` et STD-006.
+
+Les documents canoniques et les README de corpus spécialisés utilisent les champs minimaux SYSTEME_MAD.
+
+ADR-017 autorise des schémas internes spécialisés uniquement pour :
+
+- les objets de `21-METHODE_MAD/`;
+- les validations `V-*` de `22-VALIDATIONS/`.
+
+Toute nouvelle exception nécessite une ADR.
 
 ---
 
@@ -213,11 +279,13 @@ Un document archivé ne doit pas être utilisé comme source officielle sans men
 | Archive | Document historique | Lecture seulement |
 | Déprécié | Document remplacé | Ne pas utiliser comme référence |
 
+Les statuts de maturité ou niveaux locaux d’un corpus spécialisé ne doivent pas être confondus avec ce tableau.
+
 ---
 
 ## Règles de modification
 
-1. Ne pas créer de nouveau document officiel sans en-tête YAML conforme.
+1. Ne pas créer de nouveau document canonique officiel sans en-tête YAML conforme.
 2. Ne pas dupliquer un document existant sans raison documentée.
 3. Ne pas modifier un document `Officiel` de façon majeure sans vérifier les décisions liées.
 4. Déplacer les anciens documents vers `99-ARCHIVES/` plutôt que les laisser en concurrence avec les documents actifs.
@@ -226,6 +294,8 @@ Un document archivé ne doit pas être utilisé comme source officielle sans men
 7. Éviter les promesses exagérées, les superlatifs inutiles et les affirmations non vérifiées.
 8. Utiliser `STD-006` et `CHK-002` pour toute passe qualité documentaire.
 9. Utiliser `STD-506` et `CHK-032` pour tout claim MADSuite / MADPROOF sensible.
+10. Ne pas créer de nouveau corpus spécialisé ni de nouveau schéma documentaire local sans ADR.
+11. Ne pas promouvoir implicitement un objet spécialisé vers une règle globale.
 
 ---
 
@@ -243,7 +313,8 @@ Avant de produire, corriger ou réorganiser un document, un agent IA doit :
 8. Ne pas utiliser `99-ARCHIVES/` comme source principale.
 9. Respecter les statuts documentaires.
 10. Signaler les doublons au lieu de les amplifier.
-11. Préserver le ton MAD DevOps : professionnel, humain, simple et crédible.
+11. Lire le README et le standard local avant de modifier un objet de `21-METHODE_MAD/` ou `22-VALIDATIONS/`.
+12. Préserver le ton MAD DevOps : professionnel, humain, simple et crédible.
 
 ---
 
@@ -268,6 +339,13 @@ Les formulations doivent rester prudentes :
 
 Les documents suivants sont prioritaires pour la cohérence du système :
 
-- `README.md`
-- `MANIFEST.md`
-- `00-SYSTEME-MAD/ai-context.md`
+- `README.md`;
+- `MANIFEST.md`;
+- `00-SYSTEME-MAD/ai-context.md`;
+- `00-SYSTEME-MAD/yaml-standard.md`;
+- `00-SYSTEME-MAD/reference-mad.md`;
+- `03-STANDARDS/std-006.md`;
+- `04-ADR/ADR-001-architecture-depot-systeme-mad.md`;
+- `04-ADR/ADR-017-architecture-documentaire-et-corpus-specialises.md`;
+- `21-METHODE_MAD/README.md`;
+- `22-VALIDATIONS/README.md`.
