@@ -10,6 +10,12 @@ portee: SYSTEME_MAD
 dependances:
   - MAD-GOV-CODE-001
 remplace: null
+Projet: MAD DevOps
+Document: Charte de pérennité de SYSTEME_MAD
+Version: 0.1.0
+Dernière révision: 2026-08-15
+Statut: Brouillon conceptuel
+Auteur: bleeband
 ---
 
 # Charte de pérennité de SYSTEME_MAD

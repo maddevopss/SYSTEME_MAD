@@ -1,3 +1,12 @@
+---
+Projet: MAD DevOps
+Document: Cadre conceptuel du Graphe institutionnel MAD
+Version: 0.1.0
+Dernière révision: 2026-08-15
+Statut: Brouillon conceptuel
+Auteur: bleeband
+---
+
 # Cadre conceptuel du Graphe institutionnel MAD
 
 > **Statut :** Brouillon conceptuel  

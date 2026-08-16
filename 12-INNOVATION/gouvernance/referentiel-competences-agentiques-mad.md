@@ -1,3 +1,12 @@
+---
+Projet: MAD DevOps
+Document: Référentiel des compétences agentiques MAD
+Version: 0.1.0
+Dernière révision: 2026-08-15
+Statut: Brouillon de gouvernance
+Auteur: bleeband
+---
+
 # Référentiel des compétences agentiques MAD
 
 > Statut : Brouillon de gouvernance

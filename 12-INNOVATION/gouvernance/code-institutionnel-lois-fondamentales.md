@@ -10,6 +10,12 @@ portee: SYSTEME_MAD
 dependances:
   - MAD-GOV-GRAPHE-001
 remplace: null
+Projet: MAD DevOps
+Document: Code institutionnel MAD — Lois fondamentales
+Version: 0.1.0
+Dernière révision: 2026-08-15
+Statut: Brouillon conceptuel
+Auteur: bleeband
 ---
 
 # Code institutionnel MAD — Lois fondamentales
