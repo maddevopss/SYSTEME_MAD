@@ -116,12 +116,12 @@ Parmi les documents structurants du corpus :
 | Document | Zone | Rôle |
 |---|---|---|
 | `00-index-sources.md` | racine `research/` | Index transversal des sources et statuts. |
-| `001-assistance-cognitive-tdah.md` | `01-fondations-prudentes/` | Fondation prudente pour l’assistance cognitive non médicale. |
-| `001-mad-ariane-snapshot-reprise.md` | `02-rd-hypotheses/` | Hypothèse R&D du snapshot de reprise. |
-| `002-jitai-context-aware-sans-camera.md` | `02-rd-hypotheses/` | Hypothèse R&D context-aware sans caméra. |
-| `000-cadre-madproof.md` | `03-madproof/` | Cadre MADPROOF de gouvernance des claims. |
-| `999-registre-claims-madproof.md` | `03-madproof/` | Registre des claims et de leur statut. |
-| `compatibilite-web-apis-fallbacks.md` | `04-standards-web/` | Recherche de compatibilité et fallbacks Web. |
+| `01-fondations-prudentes/001-assistance-cognitive-tdah.md` | `01-fondations-prudentes/` | Fondation prudente pour l’assistance cognitive non médicale. |
+| `02-rd-hypotheses/001-mad-ariane-snapshot-reprise.md` | `02-rd-hypotheses/` | Hypothèse R&D du snapshot de reprise. |
+| `02-rd-hypotheses/002-jitai-context-aware-sans-camera.md` | `02-rd-hypotheses/` | Hypothèse R&D context-aware sans caméra. |
+| `03-madproof/000-cadre-madproof.md` | `03-madproof/` | Cadre MADPROOF de gouvernance des claims. |
+| `03-madproof/999-registre-claims-madproof.md` | `03-madproof/` | Registre des claims et de leur statut. |
+| `04-standards-web/compatibilite-web-apis-fallbacks.md` | `04-standards-web/` | Recherche de compatibilité et fallbacks Web. |
 
 La présence d’un document dans cette table facilite la navigation; elle ne modifie pas son statut propre.
 
