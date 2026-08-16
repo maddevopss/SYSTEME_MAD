@@ -93,7 +93,7 @@ Les résumés sont les sorties consolidées; les sources brutes restent en archi
 
 ## 6. MAD Ariane — références actuellement présentes
 
-Les anciens chemins `01-PRODUIT/madsuite/...` autrefois cités par cet index n’existent plus dans l’architecture actuelle. Ils ne doivent pas être recréés comme destinations fantômes.
+Les anciens chemins produit historiques autrefois cités par cet index n’existent plus dans l’architecture actuelle. Ils ne doivent pas être recréés comme destinations fantômes.
 
 Les références MAD Ariane actuellement présentes et pertinentes pour le corpus sont :
 
