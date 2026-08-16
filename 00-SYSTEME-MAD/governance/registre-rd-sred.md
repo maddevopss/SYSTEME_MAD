@@ -1,9 +1,10 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: Registre R&D — Preuves, incertitudes et essais
-Version: 1.0
-Dernière révision: 2026-07-02
-Statut: Brouillon opérationnel / MADPROOF-R&D
+Version: 1.1
+Dernière révision: 2026-08-16
+Statut: Brouillon
+Classification: MADPROOF-R&D
 Auteur: Marc-André Dufour / MAD DevOps
 ---
 
