@@ -1,9 +1,10 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: Registre opérationnel des claims MADPROOF
-Version: 1.0
-Dernière révision: 2026-07-02
-Statut: Registre officiel à maintenir / MADPROOF-GOVERNANCE
+Version: 1.1
+Dernière révision: 2026-08-16
+Statut: Officiel
+Classification: MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
 ---
 
@@ -24,14 +25,18 @@ Chaque claim doit être classé selon :
 
 Le but est d’éviter les formulations imprudentes, médicalisées, fiscales non validées, juridiquement risquées, impossibles à prouver ou contraires à la charte éthique.
 
+Le statut `Officiel` s’applique au registre comme mécanisme de gouvernance. Il ne signifie pas que chaque claim est validé : chaque ligne conserve sa catégorie, son niveau de preuve et sa décision propres.
+
 ## 2. Documents de référence
 
 Ce registre doit être maintenu avec :
 
-- `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/001-matrice-madproof-mvp-rd-clinique-interdit.md`
-- `SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md`
-- `SYSTEME_MAD/09-CHECKLISTS/chk-032-validation-claim-madproof.md`
-- `SYSTEME_MAD/05-PLAY/play-037-ajouter-ou-corriger-claim-madproof.md`
+- `13-RESSOURCES/research/03-madproof/001-matrice-madproof-mvp-rd-clinique-interdit.md`
+- `07-TEMPLATES/template-claim-madproof.md`
+- `09-CHECKLISTS/chk-032-validation-claim-madproof.md`
+- `05-PLAY/play-037-ajouter-ou-corriger-claim-madproof.md`
+
+La zone brute historique de la campagne `atrier` est conservée sous `99-ARCHIVES/recherche-brute-pre-madproof-2026-07-02/`. Elle sert uniquement à la provenance et n’est pas un registre actif de claims.
 
 ## 3. Catégories officielles
 
@@ -88,7 +93,7 @@ Les prochains ajouts doivent couvrir :
 Chaque nouvel ajout doit utiliser le template :
 
 ```text
-SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md
+07-TEMPLATES/template-claim-madproof.md
 ```
 
 ## 6. Template rapide d’entrée registre
@@ -103,14 +108,16 @@ Le registre doit être mis à jour quand :
 
 - une nouvelle fonctionnalité cognitive est ajoutée;
 - une page marketing utilise un claim scientifique;
-- une source de recherche est intégrée;
+- une source de recherche est intégrée ou promue depuis une zone de travail temporaire;
 - un module IA est ajouté;
 - une métrique utilisateur est renommée;
 - un wording médical ou psychologique apparaît;
 - un claim légal, fiscal, sécurité ou conformité apparaît;
 - un test utilisateur invalide une hypothèse;
 - une nouvelle ADR modifie la doctrine produit;
-- un document sort de `docs/research/atrier`.
+- une source brute archivée donne lieu à un nouveau résumé ou document MADPROOF actif.
+
+Les sources brutes historiques restent sous `99-ARCHIVES/` pour provenance; elles ne doivent pas être réintroduites comme bac de travail actif.
 
 ## 8. Règle finale
 
