@@ -1,9 +1,10 @@
 ---
 Projet: MAD DevOps / Système MAD
 Document: Modèle de menace — assistance distante
-Version: 1.0
-Dernière révision: 2026-08-06
-Statut: À valider / MADPROOF-SECURITY-REMOTE-ASSISTANCE
+Version: 1.1
+Dernière révision: 2026-08-16
+Statut: À valider
+Classification: MADPROOF-SECURITY-REMOTE-ASSISTANCE
 Auteur: MAD DevOps
 ---
 
@@ -92,7 +93,7 @@ Le relais réseau ne doit pas être considéré comme une preuve d’identité d
 - [ ] Indicateur permanent pendant la session.
 - [ ] Permissions séparées pour voir, contrôler et transférer.
 - [ ] Capture, enregistrement, caméra, microphone et keylogging désactivés par défaut.
-- [ ] Aucune collecte de contenu d’écran dans les logs.
+- [ ] Aucune collecte de contenu écran dans les logs.
 - [ ] Rétention documentée et suppression automatique des artefacts temporaires.
 - [ ] Export ou suppression traité selon les exigences applicables, sans prétendre à une conformité automatique.
 
