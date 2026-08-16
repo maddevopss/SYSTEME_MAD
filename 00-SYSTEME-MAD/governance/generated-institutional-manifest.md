@@ -1,17 +1,17 @@
 ---
 Projet: SYSTEME_MAD
 Document: Manifeste institutionnel généré — P5.1
-Version: 1.0.0
-Dernière révision: 2026-07-19
+Version: 1.1.0
+Dernière révision: 2026-08-16
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
 
 # Manifeste institutionnel SYSTEME_MAD — P5.1
 
-- Version institutionnelle : **1.0.0**
+- Version institutionnelle : **1.1.0**
 - Statut : **Officiel**
-- Commit de référence : `caf41671005771ca20ff72549a6f42b7aab10997`
+- Commit de référence : `abe5fd656ba7c607863fd394ff0d970591bf61bb`
 - Documents déclarés : **8**
 - Documents valides : **8**
 - Documents invalides : **0**
@@ -19,9 +19,9 @@ Auteur: Marc-André Dufour
 
 | Document | Version | Statut | Validation | Empreinte Git |
 |---|---|---|---|---|
-| `MANIFEST.md` | 1.3 | Officiel | Valide | `192a0caec193eda3326b7b0801c62796d98534b1` |
+| `MANIFEST.md` | 1.4 | Officiel | Valide | `c2da74d912918040106ad31e79026db2b8514567` |
 | `00-SYSTEME-MAD/governance/constitution.md` | 1.1 | Officiel | Valide | `d1545024479d307efda6331154b109f2122d12c7` |
-| `00-SYSTEME-MAD/yaml-standard.md` | 1.0 | Officiel | Valide | `5451652e790e583f052180de8d5495e24e4c0eda` |
+| `00-SYSTEME-MAD/yaml-standard.md` | 1.1 | Officiel | Valide | `74059d5e1774b36c9d35eec197a8c071d3662870` |
 | `00-SYSTEME-MAD/governance/contrat-stabilite-coeur-systeme-mad.md` | 1.0 | Officiel | Valide | `85b5c391b473819c9e5f8d9394098c8f90e5ad4f` |
 | `09-CHECKLISTS/chk-010-stabilite-coeur-systeme-mad.md` | 1.0 | Officiel | Valide | `648a06f026c3a1ba9ab15d7ee817de916b14a81d` |
 | `00-SYSTEME-MAD/governance/registre-preuves-ci-coeur-systeme-mad.md` | 1.0 | Officiel | Valide | `afe7bcee085eb0cbad594184c3c0dbf0df23d71f` |

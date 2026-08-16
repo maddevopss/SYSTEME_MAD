@@ -1,8 +1,8 @@
 ---
 Projet: MAD DevOps
 Document: Index canonique des fondations
-Version: 0.1
-Dernière révision: 2026-07-17
+Version: 0.2
+Dernière révision: 2026-08-16
 Statut: À valider
 Auteur: Marc-André Dufour
 ---
@@ -28,7 +28,7 @@ MANIFEST.md
   ↓
 00-SYSTEME-MAD/governance/constitution.md
   ↓
-REFERENCE_MAD.md
+00-SYSTEME-MAD/reference-mad.md
   ↓
 01-FONDATIONS/README.md
 ```
@@ -130,7 +130,7 @@ Cet index décrit l’état actuel du corpus. Il ne promeut aucun document, ne t
 
 ## 7. Sources de gouvernance associées
 
-- [`../REFERENCE_MAD.md`](../REFERENCE_MAD.md)
+- [`../00-SYSTEME-MAD/reference-mad.md`](../00-SYSTEME-MAD/reference-mad.md)
 - [`../00-SYSTEME-MAD/governance/constitution.md`](../00-SYSTEME-MAD/governance/constitution.md)
 - [`../00-SYSTEME-MAD/governance/inventaire-classement-reference-mad.md`](../00-SYSTEME-MAD/governance/inventaire-classement-reference-mad.md)
 - [`../00-SYSTEME-MAD/governance/inventaire-phase-1-reference-mad.md`](../00-SYSTEME-MAD/governance/inventaire-phase-1-reference-mad.md)

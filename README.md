@@ -31,7 +31,7 @@ Il doit permettre à une personne, à un collaborateur ou à un agent IA de comp
 - ce qui est archivé;
 - quelles règles doivent être respectées;
 - quels documents doivent être lus avant d’agir;
-- quelles capacités sont construites, certifiées ou seulement prévues.
+- quelles capacités sont construites, validées ou seulement prévues.
 
 ---
 
@@ -59,7 +59,7 @@ La cartographie officielle et les statuts courants sont maintenus dans :
 
 ## Source officielle
 
-La source documentaire active est la structure officielle située à la racine de ce dépôt :
+Le corpus documentaire canonique est :
 
 ```text
 00-SYSTEME-MAD/
@@ -79,15 +79,16 @@ La source documentaire active est la structure officielle située à la racine d
 99-ARCHIVES/
 ```
 
-Les fichiers situés hors de cette structure doivent être considérés comme :
+ADR-017 reconnaît également deux corpus spécialisés officiels :
 
-- fichiers techniques de dépôt;
-- documents importés;
-- ressources de transition;
-- archives temporaires;
-- fichiers à classer.
+```text
+21-METHODE_MAD/
+22-VALIDATIONS/
+```
 
-Lorsqu’un doute existe entre deux documents, le fichier situé dans la structure officielle prévaut, sauf indication contraire dans le manifeste.
+Les fichiers documentaires situés hors de cette architecture doivent être considérés comme périphériques, techniques, transitoires ou à classer, sauf décision explicite contraire dans une ADR.
+
+Lorsqu’un doute existe entre deux documents, la version située dans la structure officielle et dont le statut est le plus autoritatif prévaut, sauf indication contraire explicite.
 
 ---
 
@@ -103,6 +104,12 @@ Lecture minimale recommandée :
 6. `03-STANDARDS/`
 7. `04-ADR/`
 
+Pour comprendre le modèle intellectuel et la maturation des preuves :
+
+- `00-SYSTEME-MAD/reference-mad.md` — point d’entrée intellectuel, actuellement `À valider`;
+- `21-METHODE_MAD/README.md` — méthode et objets spécialisés;
+- `22-VALIDATIONS/README.md` — validations versionnées et preuves contextualisées.
+
 Le registre canonique des objets officiels est disponible dans `00-SYSTEME-MAD/registry/registry-index.yaml`.
 
 ---
@@ -110,11 +117,11 @@ Le registre canonique des objets officiels est disponible dans `00-SYSTEME-MAD/r
 ## Structure principale
 
 ```text
-00-SYSTEME-MAD/       Gouvernance, contexte IA, décisions, registre et standards documentaires
+00-SYSTEME-MAD/       Gouvernance, contexte IA, décisions, évolution institutionnelle et registre
 01-FONDATIONS/        Principes fondateurs et non négociables
 02-GUIDE/             Guide stratégique et opérationnel MAD DevOps
 03-STANDARDS/         Standards techniques, qualité, sécurité et architecture
-04-ADR/               Décisions d’architecture
+04-ADR/               Décisions d’architecture et de gouvernance structurante
 05-PLAY/              Playbooks opérationnels
 06-KNOWLEDGE-BASE/    Base de connaissances technique
 07-TEMPLATES/         Modèles réutilisables
@@ -124,8 +131,12 @@ Le registre canonique des objets officiels est disponible dans `00-SYSTEME-MAD/r
 11-ACADEMY/           Notes d’apprentissage et formation interne
 12-INNOVATION/        Idées, explorations et pistes de recherche et développement
 13-RESSOURCES/        Ressources de marque, légales, recherche et actifs
+21-METHODE_MAD/       Corpus spécialisé de méthode, observations, hypothèses et maturation
+22-VALIDATIONS/       Corpus spécialisé de validations versionnées et preuves contextualisées
 99-ARCHIVES/          Documents historiques ou remplacés
 ```
+
+Les corpus `21` et `22` sont gouvernés par ADR-017. Leurs schémas internes spécialisés ne remplacent pas le YAML canonique du reste du dépôt.
 
 ---
 
@@ -140,13 +151,20 @@ Avant de modifier ou générer un document pour MAD DevOps ou MADSuite, un agent
 - les standards applicables dans `03-STANDARDS/`;
 - les décisions applicables dans `04-ADR/`.
 
-Un agent IA ne doit pas traiter un document archivé comme une source officielle, sauf si la demande le précise explicitement.
+Pour `21-METHODE_MAD/` ou `22-VALIDATIONS/`, l’agent doit aussi lire le README et le standard local applicable avant de modifier un objet spécialisé.
+
+Un agent IA ne doit pas :
+
+- traiter un document archivé comme une source officielle, sauf demande explicite;
+- confondre maturité d’un objet `B-*` avec statut documentaire global;
+- confondre niveau `V0` à `V4` avec une certification permanente;
+- transformer un standard interne `S-*` en standard global `STD-*` sans promotion explicite.
 
 ---
 
 ## Statuts documentaires
 
-Les statuts reconnus sont :
+Les statuts reconnus pour le corpus canonique sont :
 
 - `Officiel` : source de vérité active;
 - `Brouillon` : document en travail;
@@ -155,6 +173,17 @@ Les statuts reconnus sont :
 - `Template` : modèle réutilisable;
 - `Archive` : document historique;
 - `Déprécié` : document remplacé, conservé pour référence.
+
+Les corpus spécialisés peuvent posséder des statuts ou niveaux locaux définis par leur schéma. Ces valeurs ne remplacent pas les statuts canoniques.
+
+---
+
+## Architecture documentaire
+
+- ADR-001 définit la fondation de l’architecture du dépôt.
+- ADR-017 formalise les corpus spécialisés, l’évolution institutionnelle sous `00-SYSTEME-MAD/evolution/` et le reclassement de la Référence MAD.
+
+Toute nouvelle zone documentaire racine exige une décision explicite et une mise à jour du manifeste.
 
 ---
 

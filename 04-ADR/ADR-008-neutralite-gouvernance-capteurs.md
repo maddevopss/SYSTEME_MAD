@@ -1,8 +1,8 @@
 ---
 Projet: MADSuite
 Document: ADR-008 — Neutralité et gouvernance des capteurs
-Version: 1.0
-Dernière révision: 2026-07-14
+Version: 1.1
+Dernière révision: 2026-08-16
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -61,5 +61,5 @@ Toute fonctionnalité utilisant un capteur doit disposer avant implémentation :
 ## Références
 
 - `01-FONDATIONS/gouvernance-capteurs.md`
-- `02-EVOLUTION/EVOLUTION-001-gouvernance-capteurs.md`
+- `00-SYSTEME-MAD/evolution/EVOLUTION-001-gouvernance-capteurs.md`
 - `00-SYSTEME-MAD/ai-context-madsuite-madproof.md`
