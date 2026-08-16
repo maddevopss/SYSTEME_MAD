@@ -1,7 +1,7 @@
 ---
 Projet: SYSTEME_MAD
 Document: Inventaire de classement documentaire — racine du dépôt
-Version: 1.1
+Version: 1.2
 Dernière révision: 2026-08-16
 Statut: Officiel
 Auteur: Marc-André Dufour
@@ -13,113 +13,70 @@ Auteur: Marc-André Dufour
 
 Documenter les écarts entre la structure réelle de `main` et l'architecture documentaire officielle, conserver les décisions de classement et empêcher les migrations physiques non justifiées.
 
-Cet inventaire applique la règle de la Référence MAD : inventaire, matrice de correspondance, détection des doublons et décision explicite avant réorganisation.
+## Architecture reconnue
 
-## Référence canonique après ADR-017
+Le corpus canonique reste `00` à `13` + `99-ARCHIVES`. ADR-017 reconnaît en plus `21-METHODE_MAD/` et `22-VALIDATIONS/` comme corpus spécialisés officiels.
 
-Le corpus documentaire canonique reconnaît :
-
-- `00-SYSTEME-MAD/`;
-- `01-FONDATIONS/`;
-- `02-GUIDE/`;
-- `03-STANDARDS/`;
-- `04-ADR/`;
-- `05-PLAY/`;
-- `06-KNOWLEDGE-BASE/`;
-- `07-TEMPLATES/`;
-- `08-BOOTSTRAPS/`;
-- `09-CHECKLISTS/`;
-- `10-ROADMAP/`;
-- `11-ACADEMY/` lorsqu'utilisé;
-- `12-INNOVATION/`;
-- `13-RESSOURCES/`;
-- `99-ARCHIVES/`.
-
-ADR-017 reconnaît également deux corpus spécialisés officiels :
-
-- `21-METHODE_MAD/`;
-- `22-VALIDATIONS/`.
-
-Les dossiers documentaires hors de cette architecture doivent être justifiés, reclassés, qualifiés comme techniques ou archivés.
+Les autres dossiers documentaires de racine doivent être reclassés, archivés ou explicitement qualifiés comme ressources techniques.
 
 ## Matrice de classement
 
-| Élément observé | Nature constatée | Verdict | Destination / état |
-|---|---|---|---|
-| ancien `02-ARCHITECTURE/` | Lot `customer_growth` pré-implémentation du 2026-07-24 | Archivé | `99-ARCHIVES/customer-growth-preimplementation-2026-07-24/architecture/` |
-| ancien `03-SPECIFICATIONS/customer-growth-contrat-api-v1.md` | Contrat proposé avant implémentation | Archivé | paquet historique `customer_growth` |
-| ancien `04-SECURITE/customer-growth-securite-tests-v1.md` | Sécurité/tests proposés avant promotion | Archivé | paquet historique `customer_growth` |
-| ancien `09-CHECKLISTS/chk-050-validation-locale-customer-growth.md` | Checklist préalable à la première PR applicative | Archivé | paquet historique `customer_growth` |
-| ancien `docs/STAGE6_GOVERNANCE_CLOSURE.md` | Rapport ponctuel avec claims absolus datés | Archivé | `99-ARCHIVES/governance-stage6-2026-08-03/` |
-| ancien `recherche/` | Zone brute non officielle; mission MADPROOF terminée | Archivé | `99-ARCHIVES/recherche-brute-pre-madproof-2026-07-02/` |
-| ancien `02-EVOLUTION/` | Registre de trajectoire intellectuelle | Reclassé par ADR-017 | `00-SYSTEME-MAD/evolution/` |
-| `02-PRODUIT/` | Source produit active pour plans/modules | Reclasser | destination canonique produit à fixer; ne pas archiver automatiquement |
-| `04-ARCHITECTURE/` | Matrices et plans d'architecture datés, plusieurs `À valider` | Revue requise | vérifier actualité puis reclasser/archiver document par document |
-| `04-DECISIONS/` | Registre de décisions institutionnelles distinct des ADR | Reclasser | destination gouvernance à fixer; préserver DEC-003 |
-| `04-SECURITE/modele-menace-assistance-distante-v1.md` | Baseline de menace actuelle liée à ADR-016 | Reclasser actif | destination canonique sécurité à fixer |
-| `06-OPERATIONS-INTERNES/` | Registre R&D/SR&ED prudent et actif | Reclasser actif | destination canonique opération/R&D à fixer |
-| `21-METHODE_MAD/` | Corpus méthodologique spécialisé | Formalisé par ADR-017 | corpus spécialisé officiel |
-| `22-VALIDATIONS/` | Corpus de validations et preuves contextualisées | Formalisé par ADR-017 | corpus spécialisé officiel |
-| `policies/` | Configuration technique YAML consommable par automatisation | Technique | périphérique technique explicitement toléré |
-| ancien `REFERENCE_MAD.md` | Point d'entrée intellectuel `À valider` | Reclassé par ADR-017 | `00-SYSTEME-MAD/reference-mad.md` |
+| Élément observé | Verdict | Destination / état |
+|---|---|---|
+| ancien `02-ARCHITECTURE/` | Archivé | `99-ARCHIVES/customer-growth-preimplementation-2026-07-24/architecture/` |
+| ancien `03-SPECIFICATIONS/customer-growth-contrat-api-v1.md` | Archivé | paquet historique `customer_growth` |
+| ancien `04-SECURITE/customer-growth-securite-tests-v1.md` | Archivé | paquet historique `customer_growth` |
+| ancien `09-CHECKLISTS/chk-050-validation-locale-customer-growth.md` | Archivé | paquet historique `customer_growth` |
+| ancien `docs/STAGE6_GOVERNANCE_CLOSURE.md` | Archivé | `99-ARCHIVES/governance-stage6-2026-08-03/` |
+| ancien `recherche/` | Archivé | `99-ARCHIVES/recherche-brute-pre-madproof-2026-07-02/` |
+| ancien `02-EVOLUTION/` | Reclassé | `00-SYSTEME-MAD/evolution/` |
+| ancien `REFERENCE_MAD.md` | Reclassé | `00-SYSTEME-MAD/reference-mad.md` |
+| `21-METHODE_MAD/` | Formalisé | corpus spécialisé officiel par ADR-017 |
+| `22-VALIDATIONS/` | Formalisé | corpus spécialisé officiel par ADR-017 |
+| ancien `02-PRODUIT/madsuite-matrice-plans-modules.md` | Reclasser actif | `02-GUIDE/madsuite-matrice-plans-modules.md` |
+| ancien `04-ARCHITECTURE/` | Archiver | `99-ARCHIVES/madsuite-architecture-proposals-2026-07-04/` |
+| ancien `04-DECISIONS/` | Reclasser | `00-SYSTEME-MAD/governance/decisions/` |
+| ancien `04-SECURITE/modele-menace-assistance-distante-v1.md` | Reclasser actif | `06-KNOWLEDGE-BASE/madsuite-modele-menace-assistance-distante-v1.md` |
+| ancien `06-OPERATIONS-INTERNES/registre-rd-sred.md` | Reclasser actif | `00-SYSTEME-MAD/governance/registre-rd-sred.md` |
+| `policies/` | Technique | périphérique technique explicitement toléré par ADR-017 / MANIFEST |
 
 ## Wave 1 — terminée
 
-La première vague a été fusionnée par la PR #507.
+PR #507 : archivage des zones transitoires et de la recherche brute déjà traitée.
 
-Elle a :
+## Wave 2 — terminée
 
-1. archivé le lot pré-implémentation `customer_growth`;
-2. archivé le rapport Stage 6;
-3. archivé la zone brute `recherche/`;
-4. mis à jour la roadmap `atrier` vers le nouvel emplacement.
+PR #508 : formalisation de l'architecture étendue, déplacement d'ÉVOLUTION et de la Référence MAD, reconnaissance de `21` et `22`, concordance du manifeste institutionnel 1.1.0.
 
-Aucun blob historique n'a été perdu.
+## Wave 3 — reclassification des actifs spécialisés
 
-## Wave 2 — architecture officielle
+La troisième vague applique les décisions suivantes :
 
-ADR-017 décide :
-
-1. `21-METHODE_MAD/` devient un corpus spécialisé officiel;
-2. `22-VALIDATIONS/` devient un corpus spécialisé officiel;
-3. `02-EVOLUTION/` est déplacé vers `00-SYSTEME-MAD/evolution/` pour éliminer la collision avec `02-GUIDE/`;
-4. `REFERENCE_MAD.md` est déplacé vers `00-SYSTEME-MAD/reference-mad.md`;
-5. le YAML canonique demeure la règle générale;
-6. les schémas spécialisés sont autorisés uniquement dans des corpus approuvés par ADR et gouvernés localement;
-7. `README.md`, `MANIFEST.md`, le standard YAML et STD-006 sont alignés avec cette architecture.
+1. la matrice plans/modules MADSuite demeure active et rejoint `02-GUIDE/`;
+2. les deux documents `04-ARCHITECTURE` du 4 juillet deviennent une archive historique, car l'un est un snapshot backend périmé et l'autre une proposition non finalisée;
+3. `DEC-003` demeure une décision officielle de provenance mais rejoint la gouvernance institutionnelle; aucune nouvelle décision structurelle ne doit utiliser `DEC-*` à la place d'une ADR;
+4. le modèle de menace assistance distante demeure actif et rejoint la Knowledge Base;
+5. le registre R&D/SR&ED demeure un brouillon opérationnel prudent et rejoint la gouvernance;
+6. `policies/` reste une ressource de configuration technique et n'est pas transformé en corpus documentaire.
 
 ## Règles de non-régression
 
-- ne perdre aucun blob historique;
-- ne promouvoir aucune archive en source active;
-- ne modifier aucun contenu métier pendant un simple déplacement;
-- mettre à jour les références actives lorsqu'une migration change un chemin;
-- distinguer statut documentaire, maturité méthodologique et niveau de validation;
-- une PR = une responsabilité principale;
-- faire passer les contrôles YAML, liens Markdown, gouvernance documentaire et registre avant fusion.
+- préserver le contenu et la provenance lors d'un reclassement;
+- archiver les snapshots périmés plutôt que les corriger comme s'ils avaient toujours décrit l'état actuel;
+- ne pas transformer une proposition historique en décision appliquée;
+- garder les décisions structurantes futures dans `04-ADR/`;
+- conserver les statuts réels des documents actifs;
+- mettre à jour les index nécessaires à leur retrouvabilité.
 
-## Prochaines vagues
+## Wave 4 — qualité interne
 
-### Wave 3 — reclassification des actifs spécialisés
+Prochaine passe :
 
-À examiner :
-
-- `02-PRODUIT/`;
-- `04-ARCHITECTURE/`;
-- `04-DECISIONS/`;
-- `04-SECURITE/`;
-- `06-OPERATIONS-INTERNES/`;
-- `policies/` comme ressource technique documentée.
-
-### Wave 4 — doublons et obsolescence interne
-
-Passer les dossiers officiels au peigne fin pour :
-
-- responsabilités concurrentes;
-- statuts périmés;
-- index ne reflétant plus la structure réelle;
-- documents remplacés restés actifs;
-- chemins et références historiques devenus faux.
+- doublons de responsabilités dans les dossiers canoniques;
+- statuts périmés ou non normalisés;
+- index qui ne correspondent plus à la structure réelle;
+- chemins textuels historiques devenus faux;
+- documents officiels dont le contenu est manifestement dépassé par les dépôts d'exécution.
 
 ## Références
 
