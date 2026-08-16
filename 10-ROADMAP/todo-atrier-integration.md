@@ -1,8 +1,8 @@
 ---
 Projet: MADSuite / MAD DevOps
 Document: TODO — Intégration consolidée du dossier atrier
-Version: 6.0
-Dernière révision: 2026-07-02
+Version: 6.1
+Dernière révision: 2026-08-16
 Statut: Mission complète / MADPROOF-GOVERNANCE
 Auteur: Marc-André Dufour / MAD DevOps
 ---
@@ -15,15 +15,15 @@ Auteur: Marc-André Dufour / MAD DevOps
 MISSION MADPROOF ATRIER — COMPLETE
 ```
 
-Le dossier :
+La zone brute historique est désormais conservée dans :
 
 ```text
-docs/research/atrier
+99-ARCHIVES/recherche-brute-pre-madproof-2026-07-02/docs/research/atrier
 ```
 
-reste une zone brute non officielle.
+Elle reste non officielle.
 
-Les informations utiles ont été extraites, classées, reformulées et transférées dans `SYSTEME_MAD/...`.
+Les informations utiles ont été extraites, classées, reformulées et transférées dans les zones actives de `SYSTEME_MAD`.
 
 ## 2. Règle centrale permanente
 
@@ -34,20 +34,20 @@ Pas MADPROOF = pas officiel.
 Pipeline obligatoire pour tout futur ajout brut :
 
 ```text
-atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> intégration SYSTEME_MAD
+zone brute non officielle -> analyse MADPROOF -> résumé propre -> classification -> TODO -> intégration SYSTEME_MAD
 ```
 
 ## 3. Fondation MADPROOF — terminé
 
 | Action | Fichier | Statut |
 |---|---|---|
-| Matrice MADPROOF | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/001-matrice-madproof-mvp-rd-clinique-interdit.md` | Fait |
-| Template claim | `SYSTEME_MAD/07-TEMPLATES/template-claim-madproof.md` | Fait |
-| Registre claims | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md` | Fait |
-| Index MADPROOF | `SYSTEME_MAD/13-RESSOURCES/research/03-madproof/README.md` | Fait |
-| README `atrier` | `docs/research/atrier/README.md` | Fait |
-| Inventaire final `atrier` | `SYSTEME_MAD/10-ROADMAP/inventaire-final-atrier-madproof.md` | Fait |
-| Rapport final | `SYSTEME_MAD/10-ROADMAP/rapport-final-integration-atrier-madproof.md` | Fait |
+| Matrice MADPROOF | `13-RESSOURCES/research/03-madproof/001-matrice-madproof-mvp-rd-clinique-interdit.md` | Fait |
+| Template claim | `07-TEMPLATES/template-claim-madproof.md` | Fait |
+| Registre claims | `13-RESSOURCES/research/03-madproof/999-registre-claims-madproof.md` | Fait |
+| Index MADPROOF | `13-RESSOURCES/research/03-madproof/README.md` | Fait |
+| README archive brute | `99-ARCHIVES/recherche-brute-pre-madproof-2026-07-02/docs/research/atrier/README.md` | Fait |
+| Inventaire final `atrier` | `10-ROADMAP/inventaire-final-atrier-madproof.md` | Fait |
+| Rapport final | `10-ROADMAP/rapport-final-integration-atrier-madproof.md` | Fait |
 
 ## 4. Blocs traités
 
@@ -64,8 +64,8 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 
 ## 5. Décisions confirmées
 
-- [x] `docs/research/atrier` reste une zone brute non officielle.
-- [x] Les documents validés sortent vers `SYSTEME_MAD/...`.
+- [x] La zone brute historique est archivée sous `99-ARCHIVES/` et reste non officielle.
+- [x] Les documents validés sortent vers les zones actives de `SYSTEME_MAD`.
 - [x] Les fonctions de surveillance invasive restent exclues du MVP cognitif.
 - [x] Le géospatial reste un module futur séparé.
 - [x] Fiscalité/droit restent internes et nécessitent validation professionnelle.
@@ -92,7 +92,7 @@ atrier -> analyse MADPROOF -> résumé propre -> classification -> TODO -> inté
 
 Le système MADPROOF est la couche de gouvernance documentaire du projet.
 
-Le dossier `atrier` n’est pas une source officielle.
+L’archive brute n’est pas une source officielle.
 
 ```text
 ARCHIVE BRUTE CONSERVÉE — OFFICIALISATION TERMINÉE
