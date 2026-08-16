@@ -1,9 +1,10 @@
 ---
 Projet: MADSuite
 Document: Matrice officielle — Plans, modules et accès
-Version: 1.0
-Dernière révision: 2026-08-07
-Statut: Décision produit approuvée — implémentation à valider
+Version: 1.1
+Dernière révision: 2026-08-16
+Statut: À valider
+Décision produit: Approuvée
 Auteur: Marc-André Dufour
 ---
 
