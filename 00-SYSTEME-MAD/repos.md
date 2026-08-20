@@ -1,8 +1,8 @@
 ---
 Projet: Système MAD
 Document: Cartographie officielle des dépôts MAD
-Version: 1.3
-Dernière révision: 2026-07-27
+Version: 1.4
+Dernière révision: 2026-08-20
 Statut: Officiel
 Auteur: Marc-André Dufour
 ---
@@ -75,6 +75,7 @@ MANIFEST.md
 | Dépôt | Visibilité observée | Rôle officiel | Statut actuel | Priorité d’évolution |
 |---|---|---|---|---|
 | `bleeband/maddevops` | Privé | Dépôt MAD DevOps, vitrine et ressources studio selon contenu réel | Actif, rôle à préciser davantage | Documenter clairement la frontière vitrine, exploitation et ressources |
+| `maddevopss/madsuite` | Public | Dépôt intégrateur : orchestration locale, Compose, épingles de sous-modules et smoke checks | Actif; les surfaces d'exécution sont des sous-modules épinglés | Promouvoir seulement des révisions déjà validées dans leurs dépôts propriétaires |
 | `maddevopss/madsuite-frontend` | Public | Interface web MADSuite | Fondation et certification frontend V1 fusionnées | Consolider les parcours, l’accessibilité, la performance et la cohérence avec les contrats backend |
 | `maddevopss/madsuite-backend` | Public | API, logique métier, données, sécurité et intégrations MADSuite | Fondation backend V1 fusionnée; isolation multi-organisation renforcée | Consolider les grands modules, leurs intégrations, l’exploitation et les preuves |
 | `maddevopss/e2e` | Public | Validation de bout en bout MADSuite | Fondation et certification E2E V1 fusionnées | Maintenir les parcours critiques et étendre la couverture des intégrations entre modules |
@@ -129,6 +130,7 @@ Avant de modifier un dépôt de développement, un agent IA doit :
 | MADSuite est non médical | Accepté | Les dépôts frontend, backend et desktop doivent respecter les garde-fous MADPROOF |
 | Les affirmations MADSuite passent par MADPROOF | Accepté | Aucun texte produit ne doit promettre un effet clinique ou mesurer un état mental réel |
 | Les dépôts `e2e` et `desktop-agent` sont des dépôts d’exécution séparés | Accepté | Voir `ADR-004-separation-repos-execution-madsuite.md` |
+| `madsuite` intègre les dépôts d'exécution par sous-modules Git épinglés | Accepté | Voir `ADR-018-integrateur-madsuite-sous-modules.md` |
 | Les fondations MADSuite V1 sont constatées institutionnellement | Accepté | Les quatre dépôts principaux sont en évolution continue, non en construction initiale |
 
 ---
@@ -152,6 +154,7 @@ La hiérarchie officielle est :
 ```text
 SYSTEME_MAD = source de vérité, gouvernance et mémoire institutionnelle
 maddevops = vitrine ou exécution studio selon cadrage
+madsuite = intégrateur, orchestration et versions épinglées
 madsuite-frontend = interface produit certifiée V1
 madsuite-backend = API, métier, sécurité et données fondés V1
 madsuite-e2e = validation de bout en bout certifiée V1
