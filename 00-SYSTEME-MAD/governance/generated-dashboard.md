@@ -2,14 +2,14 @@
 Projet: MADSuite
 Document: Dashboard de gouvernance généré automatiquement
 Version: 1.0
-Dernière révision: 2026-08-21
+Dernière révision: 2026-08-22
 Statut: Officiel
 Auteur: GitHub Actions — SYSTEME_MAD
 ---
 
 # Dashboard de gouvernance généré
 
-> Généré automatiquement le 2026-08-21T10:43:49.881Z. Ne pas modifier manuellement ce fichier.
+> Généré automatiquement le 2026-08-22T10:36:41.711Z. Ne pas modifier manuellement ce fichier.
 
 ## Signal automatisé GitHub
 
@@ -32,10 +32,10 @@ Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-
 
 | Repo | Accessible | Dernière CI | Workflow | PR ouvertes | P0 | P1 | P2 | Protection main |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
-| `bleeband/SYSTEME_MAD` | Oui | 🟡 in_progress | [Governance dashboard](https://github.com/maddevopss/SYSTEME_MAD/actions/runs/32473945136) | 0 | 0 | 4 | 0 | non vérifiable |
-| `maddevopss/madsuite` | Oui | 🔴 failure | [Responsive Nightly Extended](https://github.com/maddevopss/madsuite/actions/runs/32459675606) | 0 | 0 | 0 | 0 | non vérifiable |
-| `maddevopss/madsuite-frontend` | Oui | 🟢 success | [Frontend Main CI](https://github.com/maddevopss/madsuite-frontend/actions/runs/32433692884) | 0 | 0 | 0 | 0 | non vérifiable |
-| `maddevopss/madsuite-backend` | Oui | 🟢 success | [Backend Full Regression](https://github.com/maddevopss/madsuite-backend/actions/runs/32463773527) | 0 | 0 | 0 | 0 | non vérifiable |
+| `bleeband/SYSTEME_MAD` | Oui | 🟡 in_progress | [Governance dashboard](https://github.com/maddevopss/SYSTEME_MAD/actions/runs/32568050440) | 0 | 0 | 4 | 0 | non vérifiable |
+| `maddevopss/madsuite` | Oui | 🔴 failure | [Responsive Nightly Extended](https://github.com/maddevopss/madsuite/actions/runs/32559747468) | 0 | 0 | 0 | 0 | non vérifiable |
+| `maddevopss/madsuite-frontend` | Oui | 🟢 success | [Frontend Main CI](https://github.com/maddevopss/madsuite-frontend/actions/runs/32524748731) | 0 | 0 | 0 | 0 | non vérifiable |
+| `maddevopss/madsuite-backend` | Oui | 🟢 success | [Backend Full Regression](https://github.com/maddevopss/madsuite-backend/actions/runs/32562112816) | 0 | 0 | 0 | 0 | non vérifiable |
 | `maddevopss/desktop-agent` | Oui | 🟢 success | [Desktop Agent Guards](https://github.com/maddevopss/desktop-agent/actions/runs/32433297833) | 0 | 0 | 0 | 0 | non vérifiable |
 | `maddevopss/e2e` | Oui | 🟢 success | [E2E CI](https://github.com/maddevopss/e2e/actions/runs/32433297515) | 0 | 0 | 0 | 0 | non vérifiable |
 | `bleeband/maddevops` | Non | ⚪ inconnu | Non accessible | 0 | 0 | 0 | 0 | non vérifiable |
@@ -56,4 +56,4 @@ Le score sur 40 est composé exclusivement des quatre dimensions pondérées ci-
 
 ## Erreurs d’accès
 
-- `bleeband/maddevops` : /repos/bleeband/maddevops: HTTP 404 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/repos/repos#get-a-repository","status":"404"}
+- `bleeband/maddevops` : /repos/bleeband/maddevops/issues?state=open&per_page=100: HTTP 404 {"message":"Not Found","documentation_url":"https://docs.github.com/rest/issues/issues#list-repository-issues","status":"404"}
